@@ -4,6 +4,7 @@ if(!config.tasks.scsslint) return
 var gulp         = require('gulp')
 var path         = require('path')
 var scsslint     = require('gulp-scss-lint')
+var cache        = require('gulp-cached')
 
 var paths = {
   src:    path.join(config.root.src, config.tasks.scsslint.src, '/**/*.{' + config.tasks.scsslint.extensions + '}'),
@@ -17,6 +18,7 @@ var scssLintTask = function () {
       '!src/stylesheets/vendor/**/*.scss', // these files are ignored as they are vendor files
       '!src/stylesheets/trumps/*.scss' // these files are ignored as they are hackey trump files
     ])
+    .pipe(cache('scsslint'))
     .pipe(scsslint({
       'maxBuffer': 807200,
       'config': paths.config,
