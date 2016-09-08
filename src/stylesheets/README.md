@@ -83,17 +83,17 @@ The naming convention for classes is based on [SUIT.CSS](https://github.com/suit
 
 ### Objects
 
-Syntax: o-[xxs-|xl-|sm-|md-|lg-|xl-|xxl-]&lt;ObjectName&gt;[-decendentName][--modifierName]
+Syntax: o-&lt;ObjectName&gt;[Xxs|Xs|Sm|Md|Lg|Xl|Xxl][-decendentName][--modifierName]
 
 Object class names consist of:
 
 * Object prefix (o-)                - **Mandatory**     - *to easily distinguish between Object classes and Component classes (which don't have a prefix)*
-* Responsive utility (sm-)          - **Not Mandatory** - *corresponds to the responsive breakpoints defined in the Settings folder*
 * Object name (ObjectName)          - **Mandatory**     - *must be pascal case*
+* Responsive utility (Sm)           - **Not Mandatory** - *corresponds to the responsive breakpoints defined in the Settings folder*
 * Descendant name (-descendantName) - **Not Mandatory** - *is attached to a decendant node of an object - must be camel case*
 * Modifier name (--modifierName)    - **Not Mandatory** - *modifies the presentation of the base component in some form - must be camel case*
 
-Example object class name: **o-lg-Media-figure--wide**
+Example object class name: **o-GridSm-cell--wide**
 
 ### Components
 
