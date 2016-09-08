@@ -47,7 +47,7 @@ scss/
 |   |   |-- component.close.scss        # More simple components can be kept in their own file
 |-- |-- objects/
 |   |   |-- media/                      # Object are layout specific components
-|   |   |   |-- component.media.scss    # Component styles
+|   |   |   |-- object.media.scss       # Object styles
 |   ... 
 |-- trumps/                             # Utilities, helpers, overrides and browser hacks
 |   |-- trumps.typography.scss          # typography utilities like .t-nobr or .t-textCenter
