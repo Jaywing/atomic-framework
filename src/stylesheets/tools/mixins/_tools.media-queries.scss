@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------------
+
+// Tools: Media Queries
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   14/06/2016
+////
+
+/// Helper mixins for media queries, used in conjuection with the
+/// `sass-mq` media query library
+
+@mixin xxs {
+  @include mq($from: map-get($g-mq-breakpoints, 'xxs')) {
+    @content
+  }
+}
+
+@mixin xs {
+  @include mq($from: map-get($g-mq-breakpoints, 'xs')) {
+    @content
+  }
+}
+
+@mixin sm {
+  @include mq($from: map-get($g-mq-breakpoints, 'sm')) {
+    @content
+  }
+}
+
+@mixin md {
+  @include mq($from: map-get($g-mq-breakpoints, 'md')) {
+    @content
+  }
+}
+
+@mixin lg {
+  @include mq($from: map-get($g-mq-breakpoints, 'lg')) {
+    @content
+  }
+}
+
+@mixin xl {
+  @include mq($from: map-get($g-mq-breakpoints, 'xl')) {
+    @content
+  }
+}
+
+@mixin xxl {
+  @include mq($from: map-get($g-mq-breakpoints, 'xxl')) {
+    @content
+  }
+}

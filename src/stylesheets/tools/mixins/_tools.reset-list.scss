@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------
+
+// Tools: reset-list
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Resets bullets, padding and margin from lists
+///
+/// @example scss - Usage
+/// .list-element {
+///   @include reset-list;
+/// }
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

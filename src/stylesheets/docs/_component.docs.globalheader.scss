@@ -1,0 +1,19 @@
+$doc-globalheader-bg: $c-jaywing-dark;
+
+.docs-GlobalHeader {
+  background: $doc-globalheader-bg;
+
+  .Button--hover:hover,
+  .Button--hover:focus {
+    background: $c-light-15;
+    color: $c-dark-15;
+  }
+
+  .is-active {
+    > .Button--hover {
+      background: $c-light;
+      color: $c-dark;
+    }
+  }
+
+}

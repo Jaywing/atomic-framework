@@ -1,0 +1,16 @@
+// ----------------------------------------------------------------------
+
+// Components: Button Hover
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  02/09/2016
+////
+
+
+.Button--hover {
+  @include color-swap-on-hover(transparent, inherit, $g-trans-link-speed, true);
+}

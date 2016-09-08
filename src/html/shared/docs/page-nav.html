@@ -1,0 +1,24 @@
+
+{% macro navItem(id, title, active='index', ready=false) %}
+  <li class="Nav-item{% if id == active %} is-active{% endif %}">
+    {% if ready %}<a href="{{id}}.html" class="Nav-link">{{title}}</a>{% else %}<span class="Nav-link textMuted">{{title}}</span>{% endif %}
+  </li>
+{% endmacro %}
+
+<nav class="Nav">
+  <ul>
+
+    {% for cat in docs_pages %}
+
+      <li class="Nav-item Nav-header">{{ cat.category }}</li>
+
+      {% for comp in cat.items %}
+        {% if comp.section == sectionid %}
+          {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+        {% endif %}
+      {% endfor %}
+
+    {% endfor %}
+
+  </ul>
+</nav>

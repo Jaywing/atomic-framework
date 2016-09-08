@@ -1,0 +1,34 @@
+// ----------------------------------------------------------------------
+
+// Tools: center-block
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+////
+
+/// Centres an element horizontally within its parent.
+///
+/// @param {Number (With Unit)} $width [false]
+/// Sets the `width` of the element.
+///
+/// @example scss - Basic usage
+///   .my-block {
+///     @include center-block;
+///   }
+///
+/// @example scss - Usage with parameter
+///   .my-other-block {
+///     @include center-block(15em);
+///   }
+
+
+@mixin center-block ($max-width: false) {
+  margin-left: auto;
+  margin-right: auto;
+  @if $max-width {
+    max-width: $max-width;
+  }
+}

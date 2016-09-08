@@ -1,2 +1,9 @@
-node_modules/
 .idea/
+.DS_Store
+.sass-cache
+.publish
+public
+Desktop.ini
+node_modules
+**/generated/_generated.icons.sass
+npm-debug.log

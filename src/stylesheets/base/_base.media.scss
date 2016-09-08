@@ -1,0 +1,28 @@
+// ----------------------------------------------------------------------
+
+// Elements: media
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jt
+/// @create   01/09/2016
+////
+
+
+img {
+  vertical-align: middle;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+

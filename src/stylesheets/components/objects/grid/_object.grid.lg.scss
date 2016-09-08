@@ -1,0 +1,159 @@
+// Name:            Grid Large
+// Description:     Defines styles for flexbox based grid layout for large devices (960px +).
+//
+// Component:       `o-GridLg`
+//
+// Sub-objects:     `o-Grid-cell`
+//
+// Modifiers:       `o-GridLg--reverse`
+//                  `o-GridLg--1of2`
+//                  `o-GridLg--1of3`
+//                  `o-GridLg--1of4`
+//                  `o-GridLg--gutters`
+//                  `o-GridLg--guttersLg`
+//                  `o-GridLg--guttersXl`
+//
+//
+// Markup:
+//
+// <!-- o-Grid -->
+// <div class="o-Grid o-GridLg o-GridLg--1of3">
+//   <div class="o-Grid-cell">...</div>
+//   <div class="o-Grid-cell">...</div>
+//   <div class="o-Grid-cell">...</div>
+// </div>
+//
+// ========================================================================
+
+
+// Breakpoints
+// ========================================================================
+
+@include lg {
+
+  .o-GridLg {
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--fit {
+
+      > .o-Grid-cell {
+        flex: 1;
+      }
+    }
+
+    &--full {
+
+      > .o-Grid-cell {
+        flex: 0 0 100%;
+      }
+    }
+
+    &--1of2 {
+
+      > .o-Grid-cell {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--1of3 {
+
+      > .o-Grid-cell {
+        flex: 0 0 33.3333%;
+      }
+    }
+
+    &--1of4 {
+
+      > .o-Grid-cell {
+        flex: 0 0 25%;
+      }
+    }
+
+    &--1of5 {
+
+      > .o-Grid-cell {
+        flex: 0 0 20%;
+      }
+    }
+
+    &--2of5 {
+
+      > .o-Grid-cell {
+        flex: 0 0 40%;
+      }
+    }
+
+    &--3of5 {
+
+      > .o-Grid-cell {
+        flex: 0 0 60%;
+      }
+    }
+
+    &--4of5 {
+
+      > .o-Grid-cell {
+        flex: 0 0 80%;
+      }
+    }
+
+    &--1of6 {
+
+      > .o-Grid-cell {
+        flex: 0 0 16.666%;
+      }
+    }
+
+    &--5of6 {
+
+      > .o-Grid-cell {
+        flex: 0 0 83.333%;
+      }
+    }
+
+    &--1of10 {
+
+      > .o-Grid-cell {
+        flex: 0 0 10%;
+      }
+    }
+
+    &--9of10 {
+
+      > .o-Grid-cell {
+        flex: 0 0 90%;
+      }
+    }
+
+    // Gutters
+    // ========================================================================
+    &--gutters {
+      margin: 0 -($grid-gutter/2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter/2;
+      }
+    }
+
+    &--guttersLg {
+      margin: 0 -($grid-gutter-lg/2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter-lg/2;
+      }
+    }
+
+    &--guttersXl {
+      margin: 0 -($grid-gutter-xl/2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter-xl/2;
+      }
+    }
+
+  }
+
+}

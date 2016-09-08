@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------
+
+// Elements: Blockquote
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   17/06/2016
+////
+
+/// Unclassed blockquotes and cites
+
+
+$bq-margin: $g-spacing 0;
+
+blockquote {
+
+  @include trim-child-margins;
+
+  margin: $bq-margin;
+
+}
+

@@ -1,0 +1,129 @@
+// ----------------------------------------------------------------------
+
+// Generic: Base
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+// Base styles for HTML and BODY elements
+$base-bg-color:     $c-light;
+$base-text-color:   $c-dark;
+$base-font-family:  $g-font-sans;
+$base-font-weight:  $g-weight-normal;
+// Highlighted Text colors
+$base-highlight-bg:           $c-primary-pale;
+$base-highlight-color:        $base-text-color;
+$base-input-highlight-bg:     $c-very-strong-trans-dark;
+$base-input-highlight-color:  $base-text-color;
+
+$body-antialiased: $g-body-antialiased;
+$body-no-horizontal-scroll: $g-body-no-horizontal-scroll;
+
+
+// Border-box for everything!
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $base-bg-color;
+  color: $base-text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+}
+
+body {
+
+  @include body-copy; // set up default font size
+
+  min-height: 100%;
+
+  // optimise font rendering - set this in settings.global.scss
+  @if $body-antialiased {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @if $body-no-horizontal-scroll {
+    // disable horizontal scroll
+    overflow-x: hidden;
+  }
+
+  @include xxs {
+    &:before {
+      content: 'xxs';
+    }
+  }
+
+  @include xs {
+    &:before {
+      content: 'xs';
+    }
+  }
+
+  @include sm {
+    &:before {
+      content: 'sm';
+    }
+  }
+
+  @include md {
+    &:before {
+      content: 'md';
+    }
+  }
+
+  @include lg {
+    &:before {
+      content: 'lg';
+    }
+  }
+
+  @include xl {
+    &:before {
+      content: 'xl';
+    }
+  }
+
+  @include xxl {
+    &:before {
+      content: 'xxl';
+    }
+  }
+  
+  // Expose css breakpoints to javascript
+  // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+  &:before {
+    content: 'base';
+    display: none;
+  }
+}
+
+// Highlighted text colors
+@include selection {
+  background-color: $base-highlight-bg;
+  color: $base-highlight-color;
+}
+
+input,
+textarea {
+  @include selection(true) {
+    background: $base-input-highlight-bg;
+    color: $base-input-highlight-color;
+  }
+}

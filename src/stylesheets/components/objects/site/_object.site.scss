@@ -1,0 +1,102 @@
+// Name:            Site
+// Description:     Defines styles for site base layout.
+//                  Sticky the footer to the bottom of the page
+//                  when there is not enough content for a scrollbar.
+//
+// Component:       `o-Site`
+//
+// Sub-objects:     `o-Site-header`
+//                  `o-Site-content`
+//                  `o-Site-footer`
+//
+// Modifiers:       `o-Site--full`
+//
+//
+// Markup:
+//
+// <!-- o-Site -->
+// <body class="o-Site">
+//    <header class="o-Site-header">...</header>
+//    <main class="o-Site-content">...</main>
+//    <footer class="o-Site-footer">...</footer>
+// </body>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$site-content-padding: $g-spacer-lg;
+$site-content-padding-md: $g-spacer-xxl;
+
+
+// ========================================================================
+// Component: Site
+// ========================================================================
+
+
+// *
+// * 1. Avoid the IE 10-11 `min-height` bug.
+// * 2. Set `flex-shrink` to `0` to prevent some browsers from
+// *    letting these items shrink to smaller than their content's default
+// *    minimum size. See http://bit.ly/1Mn35US for details.
+// * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+// *
+
+.o-Site {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100%; // 1, 3 */
+}
+
+.o-Site-header,
+.o-Site-footer {
+  flex: none; // 2 */
+}
+
+.o-Site-content {
+  flex: 1 0 auto; // 2 */
+  padding: $site-content-padding 0 0;
+  width: 100%;
+}
+
+.o-Site-content::after {
+  content: '\00a0'; // &nbsp; */
+  display: block;
+  margin-top: $site-content-padding;
+  height: 0;
+  visibility: hidden;
+}
+
+
+// Breakpoints
+// ========================================================================
+
+@include md {
+
+  .o-Site-content {
+    padding-top: $site-content-padding-md;
+  }
+
+  .o-Site-content::after {
+    margin-top: $site-content-padding-md;
+  }
+
+}
+
+
+// Modifier: o-Site--full
+// ========================================================================
+
+.o-Site--full {
+  .o-Site-content {
+    padding: 0;
+  }
+
+  .o-Site-content::after {
+    content: none;
+  }
+}

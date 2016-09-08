@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------------
+
+// Components: Button Secondary Theme
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  20/06/2016
+////
+
+$button-secondary-bg-color:         $c-dark-15;
+$button-secondary-color:            $c-light;
+
+$button-secondary-bg-color-hover:   lighten($button-secondary-bg-color, 7.5%);
+$button-secondary-color-hover:      $button-secondary-color;
+
+$button-secondary-bg-color-active:  lighten($button-secondary-bg-color-hover, 7.5%);
+$button-secondary-color-active:     $button-secondary-color;
+
+$button-secondary-trans-speed:      $button-trans-speed;
+
+
+.Button--secondary {
+  @include color-swap-on-hover(
+          $button-secondary-color $button-secondary-bg-color,
+          $button-secondary-color-hover $button-secondary-bg-color-hover,
+          $button-secondary-trans-speed
+  );
+  &:active {
+    background-color: $button-secondary-bg-color-active;
+    color: $button-secondary-color-active;
+  }
+}

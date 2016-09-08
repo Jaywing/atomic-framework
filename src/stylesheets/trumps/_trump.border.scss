@@ -1,0 +1,32 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Border
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  13/06/2016
+////
+
+
+// Border helpers
+// *      .radius
+// *      .round
+// *      .circle
+
+$radius:  $g-border-radius !default;
+$round:   $g-round-radius !default;
+$circle:  $g-circular-radius !default;
+
+
+.radius {
+  border-radius: $radius !important;
+}
+.round {
+  border-radius: $round !important;
+}
+.circle {
+  border-radius: $circle !important;
+}

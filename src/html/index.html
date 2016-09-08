@@ -1,0 +1,22 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'index' %}
+
+{% extends 'layouts/application.html' %}
+
+{% block metaTitle %}Atomic - A front-end starter kit by Jaywing{% endblock %}
+
+{% block main %}
+  <h1>Welcome to Atomic</h1>
+  <h2>Jaywing's front-end starter kit and component repository</h2>
+<button id="button">Click me!</button><br><br>
+  <a href="docs/" class="Button Button--primary">Check out the docs</a><br><br>
+{% endblock %}
+
+{% block javascript %}
+  <script src="javascripts/app.js"></script>
+{% endblock %}

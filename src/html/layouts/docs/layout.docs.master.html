@@ -1,0 +1,63 @@
+{% from 'macros/helpers.html' import sprite %}
+
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Jaywing"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+
+  <!-- standard styles - hidden from < ie10 -->
+  <!--[if ! lte IE 9]><!-->
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/docs.css"> <!-- documentation specific styles
+  <!--<![endif]-->
+  <!-- generic fall back stylesheet for old ie versions -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"><![endif]-->
+
+  {% include "shared/app-icons.html" %}
+
+  {% block head %}{% endblock %}
+
+</head>
+<body class="o-Site">
+
+  <header role="banner" class="o-Site-header docs-GlobalHeader">
+    {% include "shared/docs/section-nav.html" %}
+  </header>
+
+  <main class="o-Site-content">
+  {% block main %}
+    <div class="o-Container o-Container--centered">
+
+      <div class="o-Grid o-GridMd--reverse o-GridMd--gutters o-GridXl--guttersXl">
+
+        <article class="o-Grid-cell">
+          {% block content %}
+
+          {% endblock %}
+        </article>
+
+        <section class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6">
+          {% include "shared/docs/page-nav.html" %}
+        </section>
+
+      </div>
+
+    </div>
+
+  {% endblock %}
+  </main>
+
+  <footer role="contentinfo" class="o-Site-footer">
+    <div class="o-Container o-Container--centered">
+      <p>Made with ♥ at <a href="http://jaywing.com">JAYWING</a></p>
+    </div>
+  </footer>
+
+  {% block javascript %}{% endblock %}
+
+</body>
+</html>

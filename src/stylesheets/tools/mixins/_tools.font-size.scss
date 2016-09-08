@@ -1,0 +1,91 @@
+// ----------------------------------------------------------------------
+
+// Tools: font-size
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   14/06/2016
+////
+
+/// Helper mixins for font-sizes used in conjuction with the
+/// `gel-typography` library.
+///
+/// @example scss
+///   .MyHero {
+///     @include canon-bold;
+///   }
+
+@mixin canon {
+  @include gel-typography('canon');
+}
+
+@mixin canon-bold {
+  @include gel-typography('canon-bold');
+}
+
+@mixin trafalgar {
+  @include gel-typography('trafalgar');
+}
+
+@mixin trafalgar-bold {
+  @include gel-typography('trafalgar-bold');
+}
+
+@mixin double-pica {
+  @include gel-typography('double-pica');
+}
+
+@mixin double-pica-bold {
+  @include gel-typography('double-pica-bold');
+}
+
+@mixin great-primer {
+  @include gel-typography('great-primer');
+}
+
+@mixin great-primer-bold {
+  @include gel-typography('great-primer-bold');
+}
+
+@mixin pica {
+  @include gel-typography('pica');
+}
+
+@mixin pica-bold {
+  @include gel-typography('pica-bold');
+}
+
+@mixin long-primer {
+  @include gel-typography('long-primer');
+}
+
+@mixin long-primer-bold {
+  @include gel-typography('long-primer-bold');
+}
+
+@mixin brevier {
+  @include gel-typography('brevier');
+}
+
+@mixin brevier-bold {
+  @include gel-typography('brevier-bold');
+}
+
+@mixin minion {
+  @include gel-typography('minion');
+}
+
+@mixin minion-bold {
+  @include gel-typography('minion-bold');
+}
+
+@mixin body-copy {
+  @include gel-typography('body-copy');
+}
+
+@mixin body-copy-bold {
+  @include gel-typography('body-copy-bold');
+}

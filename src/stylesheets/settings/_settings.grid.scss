@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------
+
+// Settings: Grid
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+
+// settings for flexbox grid;
+
+// Grid mixin needs `zero: 0px` in this file, we would prefer just `0`.
+// scss-lint:disable ZeroUnit
+$grid-breakpoints: (
+  zero: 0px, // needs to have 'px' unit for mixin to work (even though throws a warning in the linter
+  sm:   map-get($g-mq-breakpoints, sm),
+  md:   map-get($g-mq-breakpoints, md),
+  lg:   map-get($g-mq-breakpoints, lg),
+  xl:   map-get($g-mq-breakpoints, xl),
+  xxl:  map-get($g-mq-breakpoints, xxl)
+);
+
+$grid-columns: 12;
+$grid-gutter-width: $g-spacer;
+
+$container-max-widths: ( // max widths for .container--fixed class
+    xs: 460px,
+    sm: 615px,
+    md: 720px,
+    lg: 930px,
+    xl: 1140px,
+    xxl:1280px
+);

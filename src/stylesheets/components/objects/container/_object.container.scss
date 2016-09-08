@@ -1,0 +1,25 @@
+
+$container-max-width: $g-site-max-width;
+$container-side-padding: $g-spacer;
+
+
+.o-Container {
+  @include clearfix;
+  max-width: $container-max-width;
+  padding-left: $container-side-padding;
+  padding-right: $container-side-padding;
+}
+
+.o-Container--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.o-Container--fluid {
+  max-width: 100%;
+}
+
+.o-Container--collapse {
+  padding-left: 0;
+  padding-right: 0;
+}

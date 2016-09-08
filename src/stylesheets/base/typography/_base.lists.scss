@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------
+
+// Elements: Lists
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   16/06/2016
+////
+
+/// Styles for all unclassed lists
+$list-margin-bottom:      $g-spacer;
+$list-margin-side:        $g-spacer-lg;
+$list-nested-margin-side: $g-spacer-lg;
+$dt-font-weight: $g-weight-bold;
+
+
+ul,
+ol,
+dl {
+  margin-bottom: $list-margin-bottom;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin-left: $list-margin-side;
+
+  & & {
+    margin-left: $list-nested-margin-side;
+    margin-bottom: 0;
+  }
+}
+
+dl {
+
+  dt {
+    font-weight: $dt-font-weight;
+  }
+}

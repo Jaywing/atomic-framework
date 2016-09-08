@@ -1,0 +1,91 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Typography
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  13/06/2016
+////
+
+// *  Contents:
+// *    .textNoWrap
+// *    .textBreak
+// *    .textTruncate
+// *    .textCenter
+// *    .textLeft
+// *    .textRight
+// *    .textJustify
+// *    .textMuted
+// *    .textHide
+// *    .textLowercase
+// *    .textUppercase
+// *    .textCapitalize
+// *    .textLinkReset
+
+/* typography helpers */
+// Usage: <p>Lorem ipsum dolor <span class="textNoWrap">sit amet</span></p>
+.textNoWrap {
+  white-space: nowrap !important;
+}
+
+.textBreak {
+  word-wrap: break-word !important;
+}
+
+.textTruncate {
+  max-width: 100%;
+  overflow: hidden;
+  textoverflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.textCenter {
+  text-align: center !important;
+}
+
+.textLeft   {
+  text-align: left !important;
+}
+
+.textRight  {
+  text-align: right !important;
+}
+
+.textJustify {
+  text-align: justify !important;
+}
+
+.textMuted {
+  opacity: 0.6 !important;
+}
+
+.textHide { // hidden text by making it transparent
+  @include hide-text;
+}
+
+.textLowercase {
+  text-transform: lowercase !important;
+}
+
+.textUppercase {
+  text-transform: uppercase !important;
+}
+
+.textCapitalize {
+  text-transform: capitalize !important;
+}
+
+.textLinkReset, // make a link look like standard text
+.textLinkReset a,
+.textLinkReset:hover,
+.textLinkReset:focus,
+.textLinkReset a:hover,
+.textLinkReset a:focus
+{
+  color: inherit !important;
+  text-decoration: none !important;
+}

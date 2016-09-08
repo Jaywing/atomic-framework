@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------
+
+// Components: Button Definition
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  20/06/2016
+////
+
+$button-margin:     0 $g-spacer-xs $g-spacer-xs 0;
+$button-padding:    ($g-spacer * .85) $g-spacer; // button gets the same vertical padding as input to maintain a consistent height
+$button-min-width:  $g-min-touch-size;
+
+.Button {
+  cursor: pointer;
+  display: inline-block;
+
+  min-height: 1em;
+  border: 0;
+  line-height: 1;
+  vertical-align: baseline;
+
+  min-width: $button-min-width;
+  margin: $button-margin;
+  padding: $button-padding;
+}

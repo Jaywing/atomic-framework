@@ -1,0 +1,28 @@
+
+{% macro navbarItem(id, title, active, ready) %}
+<li class="Menu-item{% if id == active %} is-active{% endif %}">
+  <a href="/docs/{{id}}" class="Button Button--hover Button--primary">{{title}}</a>
+</li>
+{% endmacro %}
+
+<nav class="o-Container o-Container--centered">
+  <ul class="Menu">
+    <li><a href="/docs/"><img src="/images/docs/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li>
+
+    {% for section in docs_sections %}
+      {{navbarItem(section.id, section.title, sectionid, section.ready)}}
+    {% endfor %}
+
+  </ul>
+</nav>
+
+<!--
+<nav class="o-Container o-Container--centered">
+  <ul>
+    <li><a href="/docs/"><img src="/images/docs/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li>
+    <li><a href="/docs/get-started" class="Button Button--hover Button--primary">Get Started</a></li>
+    <li><a href="/docs/core" class="Button Button--hover Button--primary">Core</a></li>
+    <li><a href="/docs/roadmap" class="Button Button--hover Button--primary">Roadmap</a></li>
+  </ul>
+</nav>
+-->

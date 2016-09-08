@@ -1,0 +1,15 @@
+
+.Demo {
+  background: rgba(0,0,0,.05);
+  padding: $g-spacer $g-spacer 0;
+  display: block;
+  min-width: 100%;
+
+  &:after {
+    content: '\00a0';
+    display: block;
+    margin-top: 1em;
+    height: 0;
+    visibility: hidden;
+  }
+}

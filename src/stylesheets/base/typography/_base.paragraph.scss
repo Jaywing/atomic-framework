@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------
+
+// Elements: Paragraph
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   27/06/2016
+////
+
+// Base styles for paragraph
+
+$para-margin: $g-spacer 0;
+
+p {
+  @include trim-child-margins;
+  margin: $para-margin;
+}

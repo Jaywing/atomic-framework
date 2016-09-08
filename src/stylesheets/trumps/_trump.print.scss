@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Print
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  13/06/2016
+////
+
+/* print helpers */
+@media print {
+
+  // * Print visibility classes
+  // *     .print-hide
+  // *     .print-only
+
+  .printHide {
+    display: none !important;
+  }
+
+  .printOnly {
+    display: block !important;
+  }
+
+  table.printOnly {
+    display: table !important;
+  }
+
+  thead.printOnly {
+    display: table-header-group !important;
+  }
+
+  tbody.printOnly {
+    display: table-row-group !important;
+  }
+
+  tr.printOnly {
+    display: table-row !important;
+  }
+
+  td.printOnly {
+    display: table-cell !important;
+  }
+
+  th.printOnly {
+    display: table-cell !important;
+  }
+}

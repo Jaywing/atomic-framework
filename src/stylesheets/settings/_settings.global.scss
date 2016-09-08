@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------------
+
+// Settings: Global
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+
+$g-base-font-size:   16px;
+$g-base-line-height: 24px;
+
+$g-site-max-width: 1200px;
+
+$g-scrollbar-width: 17px;
+$g-min-touch-size:  44px;
+
+$g-text-direction: ltr;
+
+$g-body-antialiased: true;
+$g-body-no-horizontal-scroll: true;
+
+// CSS Debugging - coloured borders around elements
+$css-debug-outline: false;
+$css-debug-depth:   false;
+
+// GEL settings (typography) - https://github.com/bbc/gel-typography
+$gel-namespace:      '';                // removes the 'gel-' prefix
+$gel-base-font-size: $g-base-font-size; // set the gel base font-size to equal ours

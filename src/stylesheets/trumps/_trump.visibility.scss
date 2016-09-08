@@ -1,0 +1,54 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Visibility
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  13/06/2016
+////
+
+
+// *  Contents:
+// *    .hide
+// *    .show
+// *    .invisible
+// *    .visible
+// *    .srOnly
+// *    .srOnly--focusable
+// *    .printOnly
+
+/* visibility helpers */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+// screen readers only
+.srOnly {
+  @include hide-visually;
+}
+
+// allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
+.srOnly--focusable:active,
+.srOnly--focusable:focus {
+  @include hide-visually(true);
+}
+
+// Print visibility class
+.printOnly {
+  display: none !important;
+}

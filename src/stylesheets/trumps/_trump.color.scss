@@ -1,0 +1,86 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Color
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  13/06/2016
+////
+
+// *  To be used for rapid (in browser) prototyping only, should be refactored into the
+// *  component styles and this partial should be removed for production
+// *
+//    Colour helpers
+// *      .colorDark
+// *      .colorLight
+// *      .colorPrimary
+// *      .colorSecondary
+// *      .colorHighlight
+// *      .colorError
+// *      .colorSuccess
+// *      .bgDark
+// *      .bgLight
+// *      .bgPrimary
+// *      .bgSecondary
+// *      .bgHighlight
+// *      .bgError
+// *      .bgSuccess
+
+// Generates classes for every color in $c-palette. Eg: .c-black, .c-purple;
+@include generate-color-classes;
+
+
+.colorDark {
+  color: $c-dark !important;
+}
+
+.colorLight {
+  color: $c-light !important;
+}
+
+.colorPrimary {
+  color: $c-primary !important;
+}
+
+.colorSecondary {
+  color: $c-secondary !important;
+}
+
+.colorHighlight {
+  color: $c-highlight !important;
+}
+
+.colorError {
+  color: $c-error !important;
+}
+
+.colorSuccess {
+  color: $c-success !important;
+}
+
+.bgDark {
+  background-color: $c-dark !important;
+}
+
+.bgLight {
+  background-color: $c-light !important;
+}
+
+.bgSecondary {
+  background-color: $c-secondary !important;
+}
+
+.bgHighlight {
+  background-color: $c-highlight !important;
+}
+
+.bgError {
+  background-color: $c-error !important;
+}
+
+.bgSuccess {
+  background-color: $c-success !important;
+}

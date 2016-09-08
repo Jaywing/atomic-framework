@@ -1,0 +1,41 @@
+// ----------------------------------------------------------------------
+
+// Tools: link-complex
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   14/06/2016
+////
+
+/// When you only want part of the link underlined on hover/focus.
+/// Eg. a link with an icon.
+///
+/// @example scss
+///   .iconLink {
+///     @include link-complex;
+///   }
+///
+/// @example html
+///   <a href="#"><i class="icon"></i> <u>this part gets underlines</u></a>
+
+
+@mixin link-complex {
+  text-decoration: none;
+
+  > u {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    > u {
+      text-decoration: underline;
+    }
+  }
+
+}

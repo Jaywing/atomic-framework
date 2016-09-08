@@ -1,0 +1,31 @@
+@include sm {
+  .o-SizeSm--full {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .o-SizeSm--1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+
+  .o-SizeSm--1of3 {
+    width: 33.3333% !important;
+    flex: none !important;
+  }
+
+  .o-SizeSm--2of3 {
+    width: 66.6667% !important;
+    flex: none !important;
+  }
+
+  .o-SizeSm--1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+
+  .o-SizeSm--3of4 {
+    width: 75% !important;
+    flex: none !important;
+  }
+}

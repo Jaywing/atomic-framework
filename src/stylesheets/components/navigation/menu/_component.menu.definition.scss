@@ -1,0 +1,88 @@
+
+
+// Variables
+// ========================================================================
+
+$menu-margin: $g-spacer 0;
+
+$menu-item-padding: $g-spacer-xs $g-spacer-sm;
+$menu-item-divider-size: 0;
+$menu-item-divider-bg: transparent;
+
+// ========================================================================
+// Component: Menu
+// ========================================================================
+
+.Menu {
+  @include trim-child-margins;
+  @include clearfix;
+
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+  // Sub-Menu
+  .Menu {
+    margin: 0;
+
+    &:not(.Menu--vertical) > .Menu {
+      display: flex;
+    }
+  }
+
+}
+
+// Menu-item
+// ========================================================================
+.Menu:not(.Menu--vertical) {
+  > .Menu-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Menu-item {
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+  tap-highlight-color: transparent;
+  flex: 0 0 auto;
+  user-select: none;
+  padding: $menu-item-padding;
+
+  // Border / divider
+  &:before {
+    background: $menu-item-divider-bg;
+    width: $menu-item-divider-size;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  // Text content
+  &--text,
+  > p {
+    @include trim-child-margins;
+
+    &:only-child {
+      user-select: text;
+      line-height: $base-line-height;
+    }
+
+  }
+
+  // Button
+  .Button {
+    margin: 0;
+  }
+
+  // Header
+  &--header {
+    margin: 0;
+  }
+
+}

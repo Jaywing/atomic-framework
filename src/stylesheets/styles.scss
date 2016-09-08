@@ -1,0 +1,75 @@
+@charset 'utf-8';
+
+// ****************************************************
+//
+//  ATOMIC by Jaywing
+//
+//                                 \         .  ./
+//                             \      .:";'.:.."   /
+//                                 (M^^.^~~:.'").
+//                           -   (/  .    . . \ \)  -
+//    O                         ((| :. ~ ^  :. .|))
+//   |\\                     -   (\- |  \ /  |  /)  -
+//   |  T                         -\  \     /  /-
+//  / \[_]..........................\  \   /  /
+//
+//  F R O N T   E N D   S T A R T E R   K I T
+//
+// *****************************************************
+
+// ----------------------------------------------------------------------
+
+// Global Stylesheet Index
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  08/06/2016
+////
+
+
+// * Import Settings
+@import 'settings/settings';   // global variables
+
+// * Import Tools
+@import 'tools/tools';      // Mixins, functions and placeholders
+
+// * Import Generic
+@import 'normalize'; // served from node_modules
+@import 'generic/generic.fonts';
+@import 'generic/generic.base';
+
+// * Import Elements
+@import 'base/base'; // Un-classed common common
+
+// * Import Icons (from the generated font)
+@import 'generated/generated.icons';
+
+// * Import Objects
+@import 'components/objects/site/object.site';
+@import 'components/objects/container/object.container';
+@import 'components/objects/grid/object.grid';
+@import 'components/objects/size/object.size';
+@import 'components/objects/section/object.section';
+@import 'components/objects/media/object.media';
+
+
+// * Import Components  // Custom UI building blocks
+@import 'components/common/button/component.button';
+
+@import 'components/navigation/nav/component.nav';
+@import 'components/navigation/menu/component.menu';
+
+// * import Trumps      // Helper classes, hacks and browser fixes
+// @import 'trumps/trump.border';
+// @import 'trumps/trump.color';
+// @import 'trumps/trump.typography';
+// @import 'trumps/trump.visibility';
+// @import 'trumps/trump.font-size';
+// @import 'trumps/trump.grid';
+// @import 'trumps/trump.misc';
+// @import 'trumps/trump.shame'; // Oooh! You are naughty!!
+@import 'trumps/trump.debug'; // turn on in global settings (enables coloured borders round common)
+@import 'trumps/trump.print'; // includes html5 boilerplate print styles

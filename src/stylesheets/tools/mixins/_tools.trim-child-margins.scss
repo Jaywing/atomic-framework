@@ -1,0 +1,32 @@
+// ----------------------------------------------------------------------
+
+// Tools: trim-child-margins
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  07/07/2016
+////
+
+/// Resets bullets, padding and margin from lists
+///
+/// @example scss - Usage
+/// .list-element {
+///   margin: 1rem auto;
+///   @include trim-child-margins;
+/// }
+
+
+@mixin trim-child-margins {
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}

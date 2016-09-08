@@ -1,0 +1,85 @@
+// ----------------------------------------------------------------------
+
+// Elements: Inline
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @create   16/06/2016
+////
+
+/// Inline typography styles eg. strong, em, abbr... ect
+///
+/// Comment out any non used items. (be careful not to comment out
+/// anything that can be added in a wysiwyg editor.)s
+
+$code-bg:             $c-light-15;
+$code-font-family:    $g-font-monospace;
+$hr-width:  100%;
+$hr-border: 1px solid $c-very-strong-trans-dark;
+$hr-margin: $g-spacer auto;
+$strong-font-weight:  $g-weight-bold;
+$small-font-size:     80%;
+
+
+abbr {
+
+  &[title] {
+    border-bottom-style: dashed;
+  }
+}
+
+b {
+  font-weight: normal;
+}
+
+cite {
+  @include brevier;
+
+  font-style: italic;
+
+  &:before {
+    content: '- ';
+  }
+}
+
+code {
+  background: $code-bg;
+  font-family: $code-font-family;
+  display: inline-block;
+  padding: 0 .2rem;
+}
+
+hr {
+  max-width: $hr-width;
+  height: 0;
+  border: 0;
+  border-bottom: $hr-border;
+  margin: $hr-margin;
+  clear: both;
+}
+
+i {
+  font-style: normal;
+}
+
+pre {
+  display: block;
+
+  code {
+    display: block;
+    overflow-x: auto;
+    padding: $g-spacer-sm;
+  }
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+u {
+  text-decoration: none;
+}
+
