@@ -15,7 +15,7 @@ var svgSpriteTask = function() {
   }
 
   return gulp.src(settings.src)
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(svgstore())
     .pipe(gulp.dest(settings.dest))
     .pipe(browserSync.stream())
