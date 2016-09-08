@@ -10,13 +10,19 @@
 
     {% for cat in docs_pages %}
 
-      <li class="Nav-item Nav-header">{{ cat.category }}</li>
+      {% if cat.section == sectionid %}
 
-      {% for comp in cat.items %}
-        {% if comp.section == sectionid %}
-          {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+        {% if cat.category != "" %}
+          <li class="Nav-item Nav-header">{{ cat.category }}</li>
         {% endif %}
-      {% endfor %}
+
+        {% for comp in cat.items %}
+          {% if comp.section == sectionid %}
+            {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+          {% endif %}
+        {% endfor %}
+
+      {% endif %}
 
     {% endfor %}
 

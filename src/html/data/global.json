@@ -7,6 +7,7 @@
   "docs_pages": [
     {
       "category": "Defaults",
+      "section": "core",
       "items": [
         { "id": "base", "title": "Base", "section": "core", "ready": true },
         { "id": "breakpoints", "title": "Breakpoints", "section": "core", "ready": false },
@@ -16,6 +17,7 @@
     },
     {
       "category": "Objects",
+      "section": "core",
       "items": [
         { "id": "site", "title": "Site", "section": "core", "ready": true },
         { "id": "container", "title": "Container", "section": "core", "ready": true },
@@ -27,11 +29,19 @@
     },
     {
       "category": "Navigation",
+      "section": "core",
       "items": [
         { "id": "menu", "title": "Menu", "section": "core", "ready": false },
         { "id": "breadcrumb", "title": "Breadcrumb", "section": "core", "ready": false },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
+      ]
+    },
+    {
+      "category": "",
+      "section": "getting-started",
+      "items": [
+        { "id": "index", "title": "Installation", "section": "getting-started", "ready": true }
       ]
     }
   ]
