@@ -1,0 +1,92 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'environment' %}
+{% set sectionid = 'getting-started' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Atomic: Getting started{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Dev environment</h1>
+<p class="Article-lead">An overview of the technologies and tasks used</p>
+
+
+<h2>Technology stack</h2>
+
+<p>The following technologies are used in conjunction with <strong>Gulp.js</strong> as a task runner on a <strong>Node.js</strong> platform.</p>
+
+<table><thead>
+<tr>
+  <th>Features</th>
+  <th>Tools Used</th>
+</tr>
+</thead><tbody>
+<tr>
+  <td><strong>CSS</strong></td>
+  <td><a href="http://sass-lang.com/">Sass</a> (<a href="http://sass-lang.com/libsass">Libsass</a> via <a href="https://github.com/sass/node-sass">node-sass</a>), <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, <a href="https://github.com/ben-eb/cssnano">CSSNano</a>, Source Maps, <a href="https://www.npmjs.com/package/gulp-scss-lint">scss-lint</a>, <a href="https://www.npmjs.com/package/gulp-uncss">uncss</a></td>
+</tr>
+<tr>
+  <td><strong>JavaScript</strong></td>
+  <td>ES6 with <a href="http://babeljs.io/">Babel</a> and <a href="http://webpack.github.io/">Webpack</a>, <a href="https://github.com/adametry/gulp-eslint">ESlint</a></td>
+</tr>
+<tr>
+  <td><strong>HTML</strong></td>
+  <td><a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>, <a href="https://github.com/colynb/gulp-data">gulp-data</a>, or bring your own</td>
+</tr>
+<tr>
+  <td><strong>Images</strong></td>
+  <td>Compression with <a href="https://www.npmjs.com/package/gulp-imagemin">imagemin</a></td>
+</tr>
+<tr>
+  <td><strong>Icons</strong></td>
+  <td>Auto-generated <a href="https://github.com/w0rm/gulp-svgstore">SVG Sprites</a> and/or <a href="https://www.npmjs.com/package/gulp-iconfont">Icon Fonts</a></td>
+</tr>
+<tr>
+  <td><strong>Fonts</strong></td>
+  <td>Folder and <code>.sass</code> mixin for including WebFonts</td>
+</tr>
+<tr>
+  <td><strong>Live Updating</strong></td>
+  <td><a href="http://www.browsersync.io/">BrowserSync</a>, <a href="https://github.com/webpack/webpack-dev-middleware">Webpack Dev Middleware</a>, <a href="https://github.com/glenjamin/webpack-hot-middleware">Webpack Hot Middleware</a></td>
+</tr>
+<tr>
+  <td><strong>Production Builds</strong></td>
+  <td>JS and CSS are <a href="https://github.com/terinjokes/gulp-uglify">uglified</a> and <a href="http://cssnano.co/">minified</a>, <a href="https://github.com/sindresorhus/gulp-rev">filename md5 hashing (reving)</a>, <a href="https://github.com/jaysalvat/gulp-sizereport">file size reporting</a>, local production <a href="http://expressjs.com/">Express</a> server for testing builds.</td>
+</tr>
+<tr>
+  <td><strong>JS Testing</strong></td>
+  <td><a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://mochajs.org/">Mocha</a>, <a href="http://chaijs.com/">Chai</a>, and <a href="http://sinonjs.org/">Sinon</a>, Example <a href="https://travis-ci.org/">Travis CI</a> integration</td>
+</tr>
+<tr>
+  <td><strong>Deployment</strong></td>
+  <td>Quickly deploy <code>public</code> folder to gh-pages with <a href="https://github.com/shinnn/gulp-gh-pages"><code>gulp-gh-pages</code></a></td>
+</tr>
+</tbody></table>
+
+<h2>Configuration</h2>
+
+<p>Directory and top level settings are conveniently exposed in <strong>gulpfile.js/config.json</strong>. Use this file to update paths to match the directory structure of your project, and to adjust task options.</p>
+<p>All task configuration objects have src and dest directories specified. These are relative to root.src and root.dest respectively. Each configuration also has an extensions array. This is used for file watching, and file deleting/replacing.</p>
+<p><em>If there is a feature you do not wish to use on your project, simply delete the configuration, and the task will be skipped.</em></p>
+<p>Not all configuration is exposed here. For advanced task configuration, you can always edit the tasks themselves in <strong>gulpfile.js/tasks</strong>.</p>
+
+<h2>Start compiling, serving, and watching files</h2>
+<pre><code>npm run gulp</code></pre>
+<p>(Or <code>gulp</code> or <code>npm start</code> or <code>npm run development</code>)</p>
+<p>This runs gulp from ./node_modules/bin, using the version installed with this project, rather than a globally installed instance. All commands in the package.json scripts work this way. The gulp command runs the default task, defined in gulpfile.js/tasks/default.js.</p>
+<p>All files will compile in development mode (uncompressed with source maps). BrowserSync will serve up files to localhost:3000 and will stream live changes to the code and assets to all connected browsers. Don't forget about the additional BrowserSync tools available on localhost:3001!.</p>
+
+<h2>Asset task details</h2>
+<p>A README.md with details about each asset task are available in their respective folders in the src directory.</p>
+
+{% endblock %}
+
+{% block javascript %}
+<!--<script src="javascripts/app.js"></script>-->
+{% endblock %}

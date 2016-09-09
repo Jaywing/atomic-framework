@@ -47,7 +47,7 @@ npm start
 Features | Tools Used
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps, [scss-lint](https://www.npmjs.com/package/gulp-scss-lint), [uncss](https://www.npmjs.com/package/gulp-uncss)
-**JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/), [eslint](https://www.npmjs.com/package/gulp-eslint)
+**JavaScript** | ES6 with [Babel](http://babeljs.io/) and [Webpack](http://webpack.github.io/), [eslint](https://www.npmjs.com/package/gulp-eslint)
 **HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
 **Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)

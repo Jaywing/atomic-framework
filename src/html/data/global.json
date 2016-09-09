@@ -6,6 +6,20 @@
   ],
   "docs_pages": [
     {
+      "category": "",
+      "section": "getting-started",
+      "items": [
+        { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
+        { "id": "environment", "title": "Dev environment", "section": "getting-started", "ready": true },
+        { "id": "structure", "title": "File structure", "section": "getting-started", "ready": false },
+        { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": false },
+        { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": false },
+        { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },
+        { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false },
+        { "id": "linting", "title": "Linting", "section": "getting-started", "ready": false }
+      ]
+    },
+    {
       "category": "Defaults",
       "section": "core",
       "items": [
@@ -35,13 +49,6 @@
         { "id": "breadcrumb", "title": "Breadcrumb", "section": "core", "ready": false },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
-      ]
-    },
-    {
-      "category": "",
-      "section": "getting-started",
-      "items": [
-        { "id": "index", "title": "Installation", "section": "getting-started", "ready": true }
       ]
     }
   ]
