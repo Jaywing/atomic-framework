@@ -30,7 +30,7 @@ Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](ht
 
 ## Installation
 
-If you haven't already, install the scss_lint ruby gem.
+If you haven't already, install the scss-lint ruby gem.
 
 ```bash
 gem install scss_lint
