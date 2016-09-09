@@ -19,6 +19,24 @@ Bringing together a growing a set of common re-usable components aimed at standa
 The technical architecture is based on [Gulp Starter](https://github.com/vigetlabs/gulp-starter) by [Viget](https://www.viget.com).
 Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure.
 
+## Requirements
+
+* Node.js (developed using v5.11.1). Install NVM to manag enode versions
+* Npm (developed using v2.14.12)
+* Gulp.js (developed using v3.9.1)
+* Sass 3.4.20+ (developed using v3.4.22)
+* Ruby 2.0.0+ (developed using v2.0.0)
+* scss_lint (Ruby gem)
+
+## Installation
+
+If you haven't already, install the scss_lint ruby gem.
+
+```bash
+gem install scss_lint
+```
+then
+
 ```bash
 git clone https://github.com/jaywing/atomic.git MyApp
 cd MyApp
