@@ -101,11 +101,11 @@ Syntax: &lt;ComponentName&gt;[-decendentName][--modifierName]
 
 Components class names consist of:
 
-* Component name (ObjectName)       - **Mandatory**     - *must be pascal case*
+* Component name (ComponentName)    - **Mandatory**     - *must be pascal case*
 * Descendant name (-descendantName) - **Not Mandatory** - *is attached to a decendant node of an object - must be camel case*
 * Modifier name (--modifierName)    - **Not Mandatory** - *modifies the presentation of the base component in some form - must be camel case*
 
-Example component class name: **o-lg-Media-figure--wide**
+Example component class name: **Media-figure--wide**
 
 ### Trumps
 

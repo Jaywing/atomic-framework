@@ -74,6 +74,12 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "pngCompress": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["png"]
+    },
+
     "fonts": {
       "src": "fonts",
       "dest": "fonts",

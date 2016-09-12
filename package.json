@@ -52,6 +52,7 @@
     "gulp-import-css": "^0.1.2",
     "gulp-notify": "2.2.0",
     "gulp-nunjucks-render": "2.0.0",
+    "gulp-pngquant": "^1.0.10",
     "gulp-rename": "1.2.2",
     "gulp-rev": "7.0.0",
     "gulp-rev-napkin": "0.1.0",
