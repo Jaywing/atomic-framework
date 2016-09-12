@@ -53,7 +53,7 @@ $menu-item-divider-bg: transparent;
   padding: $menu-item-padding;
 
   // Border / divider
-  &:before {
+  &::before {
     background: $menu-item-divider-bg;
     width: $menu-item-divider-size;
     position: absolute;

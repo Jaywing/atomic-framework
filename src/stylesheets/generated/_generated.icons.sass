@@ -10,7 +10,7 @@
   font-style: normal
 
 =icon($content: '')
-  &:before
+  &::before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
     content: $content
@@ -33,7 +33,7 @@ $icon-cancel: "\EA01"
   +icon($icon-cancel)
     @content
 // Expose as class
-.icon.-cancel:before
+.icon.-cancel::before
   content: $icon-cancel
 
 // Save variable
@@ -43,7 +43,7 @@ $icon-facebook: "\EA02"
   +icon($icon-facebook)
     @content
 // Expose as class
-.icon.-facebook:before
+.icon.-facebook::before
   content: $icon-facebook
 
 // Save variable
@@ -53,7 +53,7 @@ $icon-instagram: "\EA03"
   +icon($icon-instagram)
     @content
 // Expose as class
-.icon.-instagram:before
+.icon.-instagram::before
   content: $icon-instagram
 
 // Save variable
@@ -63,7 +63,7 @@ $icon-jaywing: "\EA04"
   +icon($icon-jaywing)
     @content
 // Expose as class
-.icon.-jaywing:before
+.icon.-jaywing::before
   content: $icon-jaywing
 
 // Save variable
@@ -73,7 +73,7 @@ $icon-twitter: "\EA05"
   +icon($icon-twitter)
     @content
 // Expose as class
-.icon.-twitter:before
+.icon.-twitter::before
   content: $icon-twitter
 
 

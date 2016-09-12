@@ -21,7 +21,7 @@ Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](ht
 
 ## Requirements
 
-* Node.js (developed using v5.11.1). Install NVM to manag enode versions
+* Node.js (developed using v5.11.1). Install NVM to manage node versions
 * Npm (developed using v2.14.12)
 * Gulp.js (developed using v3.9.1)
 * Sass 3.4.20+ (developed using v3.4.22)
