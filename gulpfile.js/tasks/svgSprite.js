@@ -15,7 +15,10 @@ var svgSpriteTask = function() {
   }
 
   return gulp.src(settings.src)
-    .pipe(imagemin())
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    })) // Optimize
     .pipe(svgstore())
     .pipe(gulp.dest(settings.dest))
     .pipe(browserSync.stream())
