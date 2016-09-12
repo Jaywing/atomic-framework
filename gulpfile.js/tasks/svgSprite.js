@@ -6,6 +6,7 @@ var gulp        = require('gulp')
 var imagemin    = require('gulp-imagemin')
 var svgstore    = require('gulp-svgstore')
 var path        = require('path')
+var pngquant    = require('imagemin-pngquant')
 
 var svgSpriteTask = function() {
 
