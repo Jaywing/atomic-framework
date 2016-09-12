@@ -9,7 +9,7 @@
 //                  `o-Site-content`
 //                  `o-Site-footer`
 //
-// Modifiers:       `o-Site--full`
+// Modifiers:       `o-Site--collapse`
 //
 //
 // Markup:
@@ -88,10 +88,10 @@ $site-content-padding-md: $g-spacer-xxl;
 }
 
 
-// Modifier: o-Site--full
+// Modifier: o-Site--collapse
 // ========================================================================
 
-.o-Site--full {
+.o-Site--collapse {
   .o-Site-content {
     padding: 0;
   }
