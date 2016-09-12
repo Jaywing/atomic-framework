@@ -62,7 +62,7 @@ $sidebar-gutter: $g-spacer;
   }
 
   .o-Sidebar--gutter {
-    margin: -($sidebar-gutter) 0 $sidebar-gutter -($sidebar-gutter);
+    margin: -($sidebar-gutter) 0 $sidebar-gutter - ($sidebar-gutter);
 
     > .o-Sidebar-content {
       padding: $sidebar-gutter 0 0 $sidebar-gutter;

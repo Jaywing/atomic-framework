@@ -40,7 +40,7 @@ cite {
 
   font-style: italic;
 
-  &:before {
+  &::before {
     content: '- ';
   }
 }

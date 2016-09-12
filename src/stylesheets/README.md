@@ -4,7 +4,7 @@
 scss/
 |-- settings/                           # global variables
 |   |-- settings.global.scss            # global base line variables (font size, line-height etc.)
-|   |-- settings.colors.scss            # define color palette and assign to globa variables
+|   |-- settings.colors.scss            # define color palette and assign to global variables
 |   |-- settings.media-queries.scss     # define media query settings
 |   |-- settings.z-index.scss           # define z-index levels to be used globally
 |   ...

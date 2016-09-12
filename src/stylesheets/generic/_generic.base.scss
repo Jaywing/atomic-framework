@@ -65,50 +65,50 @@ body {
   }
 
   @include xxs {
-    &:before {
+    &::before {
       content: 'xxs';
     }
   }
 
   @include xs {
-    &:before {
+    &::before {
       content: 'xs';
     }
   }
 
   @include sm {
-    &:before {
+    &::before {
       content: 'sm';
     }
   }
 
   @include md {
-    &:before {
+    &::before {
       content: 'md';
     }
   }
 
   @include lg {
-    &:before {
+    &::before {
       content: 'lg';
     }
   }
 
   @include xl {
-    &:before {
+    &::before {
       content: 'xl';
     }
   }
 
   @include xxl {
-    &:before {
+    &::before {
       content: 'xxl';
     }
   }
   
   // Expose css breakpoints to javascript
   // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
-  &:before {
+  &::before {
     content: 'base';
     display: none;
   }
