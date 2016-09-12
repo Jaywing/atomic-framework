@@ -62,6 +62,11 @@ Make sure Node installed. I recommend using [NVM](https://github.com/creationix/
 
 This has been tested on Node `0.12.x` - `5.11.1`.
 
+If you haven't already, install (ruby 2.0 if you haven't already) the scss_lint ruby gem.
+```bash
+gem install scss_lint
+```
+
 #### Install Dependencies
 ```bash
 npm install
