@@ -12,7 +12,7 @@
         { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
         { "id": "environment", "title": "Dev environment", "section": "getting-started", "ready": true },
         { "id": "file-structure", "title": "File structure", "section": "getting-started", "ready": true },
-        { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": false },
+        { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": true },
         { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": false },
         { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },
         { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false },

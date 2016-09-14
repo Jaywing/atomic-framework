@@ -12,15 +12,13 @@ scss/
 |   |-- vendor.jqueryui.scss            # eg. of a vendor specific file
 |   ...
 |-- tools/                              # global mixins, functions, helpers
-|   |-- libs/                           # third party mixin libraries
-|   |   |-- bourbon/                    # bourbon.io mixin library
+|   |-- libs/                           # third party mixin libraries (includes bourbon, sass-mq, gel-typography, gel-sass-tools
 |   |   ...
 |   |-- mixins/                         # custom mixins (authored by us)
 |   |   |-- tools.center-block.scss
 |   |   |-- tools.hide-visually.scss
 |   |   ... 
 |-- generic/                            # high level global styles eg. box-sizing, reset, fonts, html & body etc.
-|   |-- generic.normalize.scss          # Normalize reset
 |   |-- generic.fonts.scss              # Importing any custom fonts
 |   |-- generic.base.scss               # Settings for HTML and BODY elements
 |   ... 
@@ -119,17 +117,29 @@ Example trump class name: **textCenter**
 
 ### State class names
 
-Syntax: ComponentName|o-ObjectName.is-|has-<stateName>
+Syntax: [ComponentName|o-ObjectName][--is|--has]-<stateName>
 
 State class names must always be used as joining classes to components or objects. 
 This means that the same state names can be used in multiple contexts, but every component must define its own styles for the state (as they are scoped to the component).
 
 State class names consist of:
 
-* State prefix (is-|has-) - **Mandatory** - *Describes the type of state (eg. is-active or has-focus)*
-* State name (stateName)  - **Mandatory** - *must be camel case*
+* **Component/object name (o-ObjectName)** - *Mandatory* - must be pascal case
+* **State prefix (--is)** - *Mandatory* - can be 'is' or 'has' (is-active or has-children)
+* **State name (active)** - *Mandatory* - descriptive title (eg. active)
 
-Example state class name: **.NavBar.is-active**
+Example state class name: **.NavBar--is-active**
+
+
+### Theme class names
+
+Syntax: th-&lt;ComponentName&gt;
+
+To keep a separation between structural styles and presentational styles, it recommended to use theme classes to attach presentational styles to.
+
+This is to make it easier to re-skin, or make style adjustments.
+
+
 
 ## Coding style
 
@@ -178,7 +188,7 @@ Example state class name: **.NavBar.is-active**
   }
   
   // State classes
-  &.is-active {
+  &--is-active {
     color: $color-active;
   }
 }
