@@ -1,1 +1,1 @@
-export default (string) => `${string}!`
+export default (string) => `!${string}!`

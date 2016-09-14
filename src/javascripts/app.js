@@ -13,6 +13,7 @@ const alertAsyncMessage = function() {
 
 }
 
+
 console.log(`
   asset references like this one:
     images/gulp.png

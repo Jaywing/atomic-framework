@@ -11,7 +11,7 @@
       "items": [
         { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
         { "id": "environment", "title": "Dev environment", "section": "getting-started", "ready": true },
-        { "id": "structure", "title": "File structure", "section": "getting-started", "ready": false },
+        { "id": "file-structure", "title": "File structure", "section": "getting-started", "ready": true },
         { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": false },
         { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": false },
         { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },

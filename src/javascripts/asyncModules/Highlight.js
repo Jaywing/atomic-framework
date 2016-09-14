@@ -7,5 +7,6 @@ export default class Highlight {
 
   doit() {
     this.el.classList.add('highlight')
+    console.log('added highlight class')
   }
 }
