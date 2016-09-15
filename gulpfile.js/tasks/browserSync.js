@@ -21,6 +21,8 @@ var browserSyncTask = function() {
 
   var server = config.tasks.browserSync.proxy || config.tasks.browserSync.server;
 
+  console.log('!! ' + webpackConfig.output.publicPath );
+
   server.middleware = [
     require('webpack-dev-middleware')(compiler, {
       stats: 'errors-only',

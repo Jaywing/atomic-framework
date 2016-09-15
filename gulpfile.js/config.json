@@ -23,7 +23,7 @@
 
     "js": {
       "src": "javascripts",
-      "dest": "javascripts",
+      "dest": "/javascripts",
       "extractSharedJs": false,
       "entries": {
         "app": ["./app.js"],

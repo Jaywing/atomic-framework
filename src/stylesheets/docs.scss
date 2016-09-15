@@ -23,8 +23,10 @@
 
 @import 'vendor/vendor.highlight';
 
+@import 'components/navigation/bookmarks/component.bookmarks';
 @import 'docs/component.docs.globalheader';
 @import 'docs/component.docs.demo';
+
 
 @import 'trumps/trump.grid';
 @import 'trumps/trump.typography';

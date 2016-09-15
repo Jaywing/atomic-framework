@@ -13,10 +13,19 @@
 {% block main %}
   <h1>Welcome to Atomic</h1>
   <h2>Jaywing's front-end starter kit and component repository</h2>
+  <p data-module="Highlight">Highlight me!</p>
+  <div class="Bookmarks" data-module="Bookmarks">
+    <ul class="Bookmarks-menu">
+      <li><a href="#section:file-structure">File structure</a></li>
+      <li><a href="#section:gulp-tasks">Gulp tasks</a></li>
+      <li><a href="#section:naming-conventions">Naming conventions</a></li>
+      <li><a href="#section:coding-style">Coding style</a></li>
+    </ul>
+  </div>
 <button id="button">Click me!</button><br><br>
   <a href="docs/" class="Button Button--primary">Check out the docs</a><br><br>
 {% endblock %}
 
 {% block javascript %}
-  <script src="javascripts/app.js"></script>
+  <script src="/javascripts/app.js"></script>
 {% endblock %}

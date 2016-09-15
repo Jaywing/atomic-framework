@@ -1,0 +1,51 @@
+.Bookmarks {
+
+  .Bookmarks-menu {
+    @include reset-list;
+  }
+
+  .Bookmarks-toggler {
+    display: none;
+  }
+
+}
+
+.js-Bookmarks {
+  position: fixed;
+  top: $g-spacer-sm;
+  right: $g-spacer;
+  text-align: right;
+
+  .Bookmarks-toggler {
+    display: inline-block;
+    color: $c-dark-15;
+    background: rgba(#fff, .5);
+    margin-top: 2px;
+    border: 1px solid $c-dark-30;
+  }
+
+  .Bookmarks-menu {
+    transition: all 0.3s ease-in;
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    background: rgba(#fff, .75);
+    border: 1px solid transparent;
+    margin: 6px $g-spacer-xs;
+  }
+
+  &.Bookmarks--is-active {
+
+    .Bookmarks-toggler {
+      background: #fff;
+      color: $c-dark;
+    }
+
+    .Bookmarks-menu {
+      max-height: 400px;
+      border-color: $c-dark-30;
+      padding: $g-spacer-sm;
+    }
+  }
+
+}
