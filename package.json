@@ -98,6 +98,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "normalize.css": "^4.0.0"
+    "normalize.css": "^4.0.0",
+    "sticky-js": "^1.0.7"
   }
 }
