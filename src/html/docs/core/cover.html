@@ -1,0 +1,95 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'cover' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Cover | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Cover</h1>
+<p class="Article-lead">Expand images or videos to cover their entire container.</p>
+
+<p>This component allows you to create fullscreen teasers using images, objects or even iframes. Regardless what kind of element, it will always be centered vertically and horizontally and cover its container without losing its proportions.</p>
+<p>You can use this component for responsive videos.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="textLinkReset">Usage</a></h2>
+
+<p>The Cover component is applied differently, depending on whether you are using a background image, an object or an iframe.</p>
+
+<h3>Background images</h3>
+<p>To make a background image cover it's container, use the modifier <code>o-Cover--bg</code>.</p>
+
+<div class="docs-example">
+  <div class="o-Cover o-Cover--bg" style="height: 300px; background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
+</div>
+
+<div class="doc-code scrollXauto">
+  <pre><code class="xml">&lt;div class=&quot;o-Cover o-Cover--bg&quot;&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+
+<h3>Videos</h3>
+<p>To make a video cover it's container, use the modifier <code>o-Cover--bg</code>.</p>
+
+<div class="docs-example">
+  <div class="o-Cover" style="height: 300px;">
+    <video class="o-Cover-object" width="600" height="400" autoplay="" loop="" muted="" controls="">
+      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+    </video>
+  </div>
+</div>
+
+<div class="doc-code scrollXauto">
+  <pre><code class="xml">&lt;div class=&quot;o-Cover&quot;&gt;
+  &lt;video class=&quot;o-Cover-object&quot; width=&quot;&quot; height=&quot;&quot;&gt;
+    &lt;source src=&quot;&quot; type=&quot;&quot;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h3>Responsive video</h3>
+<h4>Standard video</h4>
+<div class="docs-example">
+  <div class="o-Cover o-Cover--video">
+    <iframe class="o-Cover-object" width="560" height="315" src="https://www.youtube.com/embed/1Tko1G6XRiQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="docs-code scrollXauto">
+  <pre><code class="xml">&lt;div class=&quot;o-Cover o-Cover--video&quot;&gt;
+  &lt;iframe class=&quot;o-Cover-object&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1Tko1G6XRiQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Widescreen video</h4>
+<div class="docs-example">
+  <div class="o-Cover o-Cover--videoWide">
+    <div class="o-Cover-object">
+      <iframe src="https://player.vimeo.com/video/67476280?color=9a151b&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="docs-code">
+  <pre><code>&lt;div class=&quot;o-Cover o-Cover--videoWide&quot;&gt;
+  &lt;div class=&quot;o-Cover-object&quot;&gt;
+    &lt;iframe src=&quot;https://player.vimeo.com/video/67476280?color=9a151b&amp;title=0&amp;byline=0&amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<!--<script src="javascripts/app.js"></script>-->
+{% endblock %}

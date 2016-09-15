@@ -10,7 +10,7 @@
   font-style: normal
 
 =icon($content: '')
-  &::before
+  &:before
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
     content: $content
@@ -27,53 +27,703 @@
   +icon
 
 // Save variable
-$icon-cancel: "\EA01"
+$icon-archive: "\EA01"
 // Save mixin
-=icon--cancel
-  +icon($icon-cancel)
+=icon--archive
+  +icon($icon-archive)
     @content
 // Expose as class
-.icon.-cancel::before
-  content: $icon-cancel
+.icon.-archive:before
+  content: $icon-archive
 
 // Save variable
-$icon-facebook: "\EA02"
+$icon-arrow-down: "\EA02"
 // Save mixin
-=icon--facebook
-  +icon($icon-facebook)
+=icon--arrow-down
+  +icon($icon-arrow-down)
     @content
 // Expose as class
-.icon.-facebook::before
-  content: $icon-facebook
+.icon.-arrow-down:before
+  content: $icon-arrow-down
 
 // Save variable
-$icon-instagram: "\EA03"
+$icon-arrow-left: "\EA03"
 // Save mixin
-=icon--instagram
-  +icon($icon-instagram)
+=icon--arrow-left
+  +icon($icon-arrow-left)
     @content
 // Expose as class
-.icon.-instagram::before
-  content: $icon-instagram
+.icon.-arrow-left:before
+  content: $icon-arrow-left
 
 // Save variable
-$icon-jaywing: "\EA04"
+$icon-arrow-right: "\EA04"
 // Save mixin
-=icon--jaywing
-  +icon($icon-jaywing)
+=icon--arrow-right
+  +icon($icon-arrow-right)
     @content
 // Expose as class
-.icon.-jaywing::before
-  content: $icon-jaywing
+.icon.-arrow-right:before
+  content: $icon-arrow-right
 
 // Save variable
-$icon-twitter: "\EA05"
+$icon-arrow-up: "\EA05"
 // Save mixin
-=icon--twitter
-  +icon($icon-twitter)
+=icon--arrow-up
+  +icon($icon-arrow-up)
     @content
 // Expose as class
-.icon.-twitter::before
-  content: $icon-twitter
+.icon.-arrow-up:before
+  content: $icon-arrow-up
+
+// Save variable
+$icon-bell: "\EA06"
+// Save mixin
+=icon--bell
+  +icon($icon-bell)
+    @content
+// Expose as class
+.icon.-bell:before
+  content: $icon-bell
+
+// Save variable
+$icon-calendar: "\EA07"
+// Save mixin
+=icon--calendar
+  +icon($icon-calendar)
+    @content
+// Expose as class
+.icon.-calendar:before
+  content: $icon-calendar
+
+// Save variable
+$icon-camera: "\EA08"
+// Save mixin
+=icon--camera
+  +icon($icon-camera)
+    @content
+// Expose as class
+.icon.-camera:before
+  content: $icon-camera
+
+// Save variable
+$icon-cart: "\EA09"
+// Save mixin
+=icon--cart
+  +icon($icon-cart)
+    @content
+// Expose as class
+.icon.-cart:before
+  content: $icon-cart
+
+// Save variable
+$icon-chart: "\EA0A"
+// Save mixin
+=icon--chart
+  +icon($icon-chart)
+    @content
+// Expose as class
+.icon.-chart:before
+  content: $icon-chart
+
+// Save variable
+$icon-check: "\EA0B"
+// Save mixin
+=icon--check
+  +icon($icon-check)
+    @content
+// Expose as class
+.icon.-check:before
+  content: $icon-check
+
+// Save variable
+$icon-chevron-down: "\EA0C"
+// Save mixin
+=icon--chevron-down
+  +icon($icon-chevron-down)
+    @content
+// Expose as class
+.icon.-chevron-down:before
+  content: $icon-chevron-down
+
+// Save variable
+$icon-chevron-left: "\EA0D"
+// Save mixin
+=icon--chevron-left
+  +icon($icon-chevron-left)
+    @content
+// Expose as class
+.icon.-chevron-left:before
+  content: $icon-chevron-left
+
+// Save variable
+$icon-ei-chevron-right: "\EA0E"
+// Save mixin
+=icon--ei-chevron-right
+  +icon($icon-ei-chevron-right)
+    @content
+// Expose as class
+.icon.-ei-chevron-right:before
+  content: $icon-ei-chevron-right
+
+// Save variable
+$icon-ei-chevron-up: "\EA0F"
+// Save mixin
+=icon--ei-chevron-up
+  +icon($icon-ei-chevron-up)
+    @content
+// Expose as class
+.icon.-ei-chevron-up:before
+  content: $icon-ei-chevron-up
+
+// Save variable
+$icon-ei-clock: "\EA10"
+// Save mixin
+=icon--ei-clock
+  +icon($icon-ei-clock)
+    @content
+// Expose as class
+.icon.-ei-clock:before
+  content: $icon-ei-clock
+
+// Save variable
+$icon-ei-close-o: "\EA11"
+// Save mixin
+=icon--ei-close-o
+  +icon($icon-ei-close-o)
+    @content
+// Expose as class
+.icon.-ei-close-o:before
+  content: $icon-ei-close-o
+
+// Save variable
+$icon-ei-close: "\EA12"
+// Save mixin
+=icon--ei-close
+  +icon($icon-ei-close)
+    @content
+// Expose as class
+.icon.-ei-close:before
+  content: $icon-ei-close
+
+// Save variable
+$icon-ei-comment: "\EA13"
+// Save mixin
+=icon--ei-comment
+  +icon($icon-ei-comment)
+    @content
+// Expose as class
+.icon.-ei-comment:before
+  content: $icon-ei-comment
+
+// Save variable
+$icon-ei-credit-card: "\EA14"
+// Save mixin
+=icon--ei-credit-card
+  +icon($icon-ei-credit-card)
+    @content
+// Expose as class
+.icon.-ei-credit-card:before
+  content: $icon-ei-credit-card
+
+// Save variable
+$icon-ei-envelope: "\EA15"
+// Save mixin
+=icon--ei-envelope
+  +icon($icon-ei-envelope)
+    @content
+// Expose as class
+.icon.-ei-envelope:before
+  content: $icon-ei-envelope
+
+// Save variable
+$icon-ei-exclamation: "\EA16"
+// Save mixin
+=icon--ei-exclamation
+  +icon($icon-ei-exclamation)
+    @content
+// Expose as class
+.icon.-ei-exclamation:before
+  content: $icon-ei-exclamation
+
+// Save variable
+$icon-ei-external-link: "\EA17"
+// Save mixin
+=icon--ei-external-link
+  +icon($icon-ei-external-link)
+    @content
+// Expose as class
+.icon.-ei-external-link:before
+  content: $icon-ei-external-link
+
+// Save variable
+$icon-ei-eye: "\EA18"
+// Save mixin
+=icon--ei-eye
+  +icon($icon-ei-eye)
+    @content
+// Expose as class
+.icon.-ei-eye:before
+  content: $icon-ei-eye
+
+// Save variable
+$icon-ei-gear: "\EA19"
+// Save mixin
+=icon--ei-gear
+  +icon($icon-ei-gear)
+    @content
+// Expose as class
+.icon.-ei-gear:before
+  content: $icon-ei-gear
+
+// Save variable
+$icon-ei-heart: "\EA1A"
+// Save mixin
+=icon--ei-heart
+  +icon($icon-ei-heart)
+    @content
+// Expose as class
+.icon.-ei-heart:before
+  content: $icon-ei-heart
+
+// Save variable
+$icon-ei-image: "\EA1B"
+// Save mixin
+=icon--ei-image
+  +icon($icon-ei-image)
+    @content
+// Expose as class
+.icon.-ei-image:before
+  content: $icon-ei-image
+
+// Save variable
+$icon-ei-like: "\EA1C"
+// Save mixin
+=icon--ei-like
+  +icon($icon-ei-like)
+    @content
+// Expose as class
+.icon.-ei-like:before
+  content: $icon-ei-like
+
+// Save variable
+$icon-ei-link: "\EA1D"
+// Save mixin
+=icon--ei-link
+  +icon($icon-ei-link)
+    @content
+// Expose as class
+.icon.-ei-link:before
+  content: $icon-ei-link
+
+// Save variable
+$icon-ei-location: "\EA1E"
+// Save mixin
+=icon--ei-location
+  +icon($icon-ei-location)
+    @content
+// Expose as class
+.icon.-ei-location:before
+  content: $icon-ei-location
+
+// Save variable
+$icon-ei-lock: "\EA1F"
+// Save mixin
+=icon--ei-lock
+  +icon($icon-ei-lock)
+    @content
+// Expose as class
+.icon.-ei-lock:before
+  content: $icon-ei-lock
+
+// Save variable
+$icon-ei-minus: "\EA20"
+// Save mixin
+=icon--ei-minus
+  +icon($icon-ei-minus)
+    @content
+// Expose as class
+.icon.-ei-minus:before
+  content: $icon-ei-minus
+
+// Save variable
+$icon-ei-navicon: "\EA21"
+// Save mixin
+=icon--ei-navicon
+  +icon($icon-ei-navicon)
+    @content
+// Expose as class
+.icon.-ei-navicon:before
+  content: $icon-ei-navicon
+
+// Save variable
+$icon-ei-paperclip: "\EA22"
+// Save mixin
+=icon--ei-paperclip
+  +icon($icon-ei-paperclip)
+    @content
+// Expose as class
+.icon.-ei-paperclip:before
+  content: $icon-ei-paperclip
+
+// Save variable
+$icon-ei-pencil: "\EA23"
+// Save mixin
+=icon--ei-pencil
+  +icon($icon-ei-pencil)
+    @content
+// Expose as class
+.icon.-ei-pencil:before
+  content: $icon-ei-pencil
+
+// Save variable
+$icon-ei-play: "\EA24"
+// Save mixin
+=icon--ei-play
+  +icon($icon-ei-play)
+    @content
+// Expose as class
+.icon.-ei-play:before
+  content: $icon-ei-play
+
+// Save variable
+$icon-ei-plus: "\EA25"
+// Save mixin
+=icon--ei-plus
+  +icon($icon-ei-plus)
+    @content
+// Expose as class
+.icon.-ei-plus:before
+  content: $icon-ei-plus
+
+// Save variable
+$icon-ei-pointer: "\EA26"
+// Save mixin
+=icon--ei-pointer
+  +icon($icon-ei-pointer)
+    @content
+// Expose as class
+.icon.-ei-pointer:before
+  content: $icon-ei-pointer
+
+// Save variable
+$icon-ei-question: "\EA27"
+// Save mixin
+=icon--ei-question
+  +icon($icon-ei-question)
+    @content
+// Expose as class
+.icon.-ei-question:before
+  content: $icon-ei-question
+
+// Save variable
+$icon-ei-redo: "\EA28"
+// Save mixin
+=icon--ei-redo
+  +icon($icon-ei-redo)
+    @content
+// Expose as class
+.icon.-ei-redo:before
+  content: $icon-ei-redo
+
+// Save variable
+$icon-ei-refresh: "\EA29"
+// Save mixin
+=icon--ei-refresh
+  +icon($icon-ei-refresh)
+    @content
+// Expose as class
+.icon.-ei-refresh:before
+  content: $icon-ei-refresh
+
+// Save variable
+$icon-ei-retweet: "\EA2A"
+// Save mixin
+=icon--ei-retweet
+  +icon($icon-ei-retweet)
+    @content
+// Expose as class
+.icon.-ei-retweet:before
+  content: $icon-ei-retweet
+
+// Save variable
+$icon-ei-sc-facebook: "\EA2B"
+// Save mixin
+=icon--ei-sc-facebook
+  +icon($icon-ei-sc-facebook)
+    @content
+// Expose as class
+.icon.-ei-sc-facebook:before
+  content: $icon-ei-sc-facebook
+
+// Save variable
+$icon-ei-sc-github: "\EA2C"
+// Save mixin
+=icon--ei-sc-github
+  +icon($icon-ei-sc-github)
+    @content
+// Expose as class
+.icon.-ei-sc-github:before
+  content: $icon-ei-sc-github
+
+// Save variable
+$icon-ei-sc-google-plus: "\EA2D"
+// Save mixin
+=icon--ei-sc-google-plus
+  +icon($icon-ei-sc-google-plus)
+    @content
+// Expose as class
+.icon.-ei-sc-google-plus:before
+  content: $icon-ei-sc-google-plus
+
+// Save variable
+$icon-ei-sc-instagram: "\EA2E"
+// Save mixin
+=icon--ei-sc-instagram
+  +icon($icon-ei-sc-instagram)
+    @content
+// Expose as class
+.icon.-ei-sc-instagram:before
+  content: $icon-ei-sc-instagram
+
+// Save variable
+$icon-ei-sc-linkedin: "\EA2F"
+// Save mixin
+=icon--ei-sc-linkedin
+  +icon($icon-ei-sc-linkedin)
+    @content
+// Expose as class
+.icon.-ei-sc-linkedin:before
+  content: $icon-ei-sc-linkedin
+
+// Save variable
+$icon-ei-sc-odnoklassniki: "\EA30"
+// Save mixin
+=icon--ei-sc-odnoklassniki
+  +icon($icon-ei-sc-odnoklassniki)
+    @content
+// Expose as class
+.icon.-ei-sc-odnoklassniki:before
+  content: $icon-ei-sc-odnoklassniki
+
+// Save variable
+$icon-ei-sc-pinterest: "\EA31"
+// Save mixin
+=icon--ei-sc-pinterest
+  +icon($icon-ei-sc-pinterest)
+    @content
+// Expose as class
+.icon.-ei-sc-pinterest:before
+  content: $icon-ei-sc-pinterest
+
+// Save variable
+$icon-ei-sc-skype: "\EA32"
+// Save mixin
+=icon--ei-sc-skype
+  +icon($icon-ei-sc-skype)
+    @content
+// Expose as class
+.icon.-ei-sc-skype:before
+  content: $icon-ei-sc-skype
+
+// Save variable
+$icon-ei-sc-soundcloud: "\EA33"
+// Save mixin
+=icon--ei-sc-soundcloud
+  +icon($icon-ei-sc-soundcloud)
+    @content
+// Expose as class
+.icon.-ei-sc-soundcloud:before
+  content: $icon-ei-sc-soundcloud
+
+// Save variable
+$icon-ei-sc-telegram: "\EA34"
+// Save mixin
+=icon--ei-sc-telegram
+  +icon($icon-ei-sc-telegram)
+    @content
+// Expose as class
+.icon.-ei-sc-telegram:before
+  content: $icon-ei-sc-telegram
+
+// Save variable
+$icon-ei-sc-tumblr: "\EA35"
+// Save mixin
+=icon--ei-sc-tumblr
+  +icon($icon-ei-sc-tumblr)
+    @content
+// Expose as class
+.icon.-ei-sc-tumblr:before
+  content: $icon-ei-sc-tumblr
+
+// Save variable
+$icon-ei-sc-twitter: "\EA36"
+// Save mixin
+=icon--ei-sc-twitter
+  +icon($icon-ei-sc-twitter)
+    @content
+// Expose as class
+.icon.-ei-sc-twitter:before
+  content: $icon-ei-sc-twitter
+
+// Save variable
+$icon-ei-sc-vimeo: "\EA37"
+// Save mixin
+=icon--ei-sc-vimeo
+  +icon($icon-ei-sc-vimeo)
+    @content
+// Expose as class
+.icon.-ei-sc-vimeo:before
+  content: $icon-ei-sc-vimeo
+
+// Save variable
+$icon-ei-sc-vk: "\EA38"
+// Save mixin
+=icon--ei-sc-vk
+  +icon($icon-ei-sc-vk)
+    @content
+// Expose as class
+.icon.-ei-sc-vk:before
+  content: $icon-ei-sc-vk
+
+// Save variable
+$icon-ei-sc-youtube: "\EA39"
+// Save mixin
+=icon--ei-sc-youtube
+  +icon($icon-ei-sc-youtube)
+    @content
+// Expose as class
+.icon.-ei-sc-youtube:before
+  content: $icon-ei-sc-youtube
+
+// Save variable
+$icon-ei-search: "\EA3A"
+// Save mixin
+=icon--ei-search
+  +icon($icon-ei-search)
+    @content
+// Expose as class
+.icon.-ei-search:before
+  content: $icon-ei-search
+
+// Save variable
+$icon-ei-share-apple: "\EA3B"
+// Save mixin
+=icon--ei-share-apple
+  +icon($icon-ei-share-apple)
+    @content
+// Expose as class
+.icon.-ei-share-apple:before
+  content: $icon-ei-share-apple
+
+// Save variable
+$icon-ei-share-google: "\EA3C"
+// Save mixin
+=icon--ei-share-google
+  +icon($icon-ei-share-google)
+    @content
+// Expose as class
+.icon.-ei-share-google:before
+  content: $icon-ei-share-google
+
+// Save variable
+$icon-ei-spinner-2: "\EA3D"
+// Save mixin
+=icon--ei-spinner-2
+  +icon($icon-ei-spinner-2)
+    @content
+// Expose as class
+.icon.-ei-spinner-2:before
+  content: $icon-ei-spinner-2
+
+// Save variable
+$icon-ei-spinner-3: "\EA3E"
+// Save mixin
+=icon--ei-spinner-3
+  +icon($icon-ei-spinner-3)
+    @content
+// Expose as class
+.icon.-ei-spinner-3:before
+  content: $icon-ei-spinner-3
+
+// Save variable
+$icon-ei-spinner: "\EA3F"
+// Save mixin
+=icon--ei-spinner
+  +icon($icon-ei-spinner)
+    @content
+// Expose as class
+.icon.-ei-spinner:before
+  content: $icon-ei-spinner
+
+// Save variable
+$icon-ei-star: "\EA40"
+// Save mixin
+=icon--ei-star
+  +icon($icon-ei-star)
+    @content
+// Expose as class
+.icon.-ei-star:before
+  content: $icon-ei-star
+
+// Save variable
+$icon-ei-tag: "\EA41"
+// Save mixin
+=icon--ei-tag
+  +icon($icon-ei-tag)
+    @content
+// Expose as class
+.icon.-ei-tag:before
+  content: $icon-ei-tag
+
+// Save variable
+$icon-ei-trash: "\EA42"
+// Save mixin
+=icon--ei-trash
+  +icon($icon-ei-trash)
+    @content
+// Expose as class
+.icon.-ei-trash:before
+  content: $icon-ei-trash
+
+// Save variable
+$icon-ei-trophy: "\EA43"
+// Save mixin
+=icon--ei-trophy
+  +icon($icon-ei-trophy)
+    @content
+// Expose as class
+.icon.-ei-trophy:before
+  content: $icon-ei-trophy
+
+// Save variable
+$icon-ei-undo: "\EA44"
+// Save mixin
+=icon--ei-undo
+  +icon($icon-ei-undo)
+    @content
+// Expose as class
+.icon.-ei-undo:before
+  content: $icon-ei-undo
+
+// Save variable
+$icon-ei-unlock: "\EA45"
+// Save mixin
+=icon--ei-unlock
+  +icon($icon-ei-unlock)
+    @content
+// Expose as class
+.icon.-ei-unlock:before
+  content: $icon-ei-unlock
+
+// Save variable
+$icon-ei-user: "\EA46"
+// Save mixin
+=icon--ei-user
+  +icon($icon-ei-user)
+    @content
+// Expose as class
+.icon.-ei-user:before
+  content: $icon-ei-user
 
 

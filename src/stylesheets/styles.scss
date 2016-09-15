@@ -41,6 +41,8 @@
 @import 'generic/generic.fonts';
 @import 'generic/generic.base';
 
+// * Import Vendor
+
 // * Import Elements
 @import 'base/base'; // Un-classed common common
 
@@ -54,6 +56,7 @@
 @import 'components/objects/size/object.size';
 @import 'components/objects/section/object.section';
 @import 'components/objects/media/object.media';
+@import 'components/objects/cover/object.cover';
 
 
 // * Import Components  // Custom UI building blocks

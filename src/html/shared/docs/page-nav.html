@@ -1,3 +1,5 @@
+{% from 'macros/helpers.html' import sprite %}
+
 
 {% macro navItem(id, title, active='index', ready=false) %}
   <li class="Nav-item{% if id == active %} is-active{% endif %}">
@@ -6,6 +8,7 @@
 {% endmacro %}
 
 <nav class="Nav" data-module="Sticky">
+
   <ul>
 
     {% for cat in docs_pages %}
@@ -13,7 +16,7 @@
       {% if cat.section == sectionid %}
 
         {% if cat.category != "" %}
-          <li class="Nav-item Nav-header">{{ cat.category }}</li>
+          <li class="Nav-item Nav-header">{{ cat.category }} <i class="icon -ei-arrow-right"></i></li>
         {% endif %}
 
         {% for comp in cat.items %}
