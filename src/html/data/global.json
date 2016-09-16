@@ -24,7 +24,7 @@
       "items": [
         { "id": "base", "title": "Base", "section": "core", "ready": true },
         { "id": "breakpoints", "title": "Breakpoints", "section": "core", "ready": true },
-        { "id": "font-sizes", "title": "Font sizes", "section": "core", "ready": false },
+        { "id": "font-sizes", "title": "Font sizes", "section": "core", "ready": true },
         { "id": "print", "title": "Print", "section": "core", "ready": true }
       ]
     },

@@ -99,7 +99,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "es6y-throttle": "^1.0.1",
     "normalize.css": "^4.0.0",
-    "sticky-js": "^1.0.7"
+    "sticky-js": "^1.0.7",
+    "throttle-factory": "^1.0.0"
   }
 }

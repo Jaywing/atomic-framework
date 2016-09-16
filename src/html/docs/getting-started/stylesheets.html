@@ -18,15 +18,16 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="Bookmarks" data-module="Bookmarks">
   <ul class="Bookmarks-menu">
-    <li><a href="#">Top</a><icon name="ei-sc-github" size="s" /></li>
+    <li><a href="#">Top</a></li>
     <li><a href="#section:file-structure">File structure</a></li>
     <li><a href="#section:gulp-tasks">Gulp tasks</a></li>
     <li><a href="#section:naming-conventions">Naming conventions</a></li>
     <li><a href="#section:coding-style">Coding style</a></li>
+    <li><a href="#section:browser-strategy">Browser strategy</a></li>
   </ul>
 </div>
 
-<h2 id="section:file-structure"><a href="#section:file-structure" class="textLinkReset">File structure</a></h2>
+<h2 id="section:file-structure"><a href="#section:file-structure" class="textLinkReset">Sass file structure</a></h2>
 
 <div class="scrollXauto">
 <pre>
@@ -269,7 +270,6 @@ If a number clearly has strong meaning, that's a use case for variablising* as w
 <p><small>* new word</small></p>
 
 <h3>Mixins</h3>
-
 <ul>
   <li>Mixins that output selectors should be capital-case: @mixin GridBuilder</li>
   <li>Mixins that output only properties should be camel-case: @mixin borderBox</li>
@@ -279,8 +279,10 @@ If a number clearly has strong meaning, that's a use case for variablising* as w
 
 <h3>SCSS Lint</h3>
 <p>Atomic comes with a <a href="https://www.npmjs.com/package/gulp-scss-lint">SCSS linter</a> built in. You can view the configuration options in the <code>lint.yml</code> in the root of stylesheet.</p>
-<p>Any errors or warning will be log on the console and in a json file called <code>scssReport.json</code> in the logs folder on the project root.</p>
+<p>Any errors or warnings will be logged on the console and in a json file called <code>scssReport.json</code> in the logs folder on the project root.</p>
 
+<h2 id="section:browser-strategy"><a href="#section:browser-strategy" class="textLinkReset">Browser strategy</a></h2>
+<p>Atomic is set up to serve older versions of IE (< v10) a separate universal stylesheet.</p>
 
 
 {% endblock %}

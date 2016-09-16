@@ -64,6 +64,13 @@ body {
     overflow-x: hidden;
   }
 
+  // Expose css breakpoints to javascript
+  // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+  &::before {
+    content: 'base';
+    display: none;
+  }
+
   @include xxs {
     &::before {
       content: 'xxs';
@@ -104,13 +111,6 @@ body {
     &::before {
       content: 'xxl';
     }
-  }
-  
-  // Expose css breakpoints to javascript
-  // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
-  &::before {
-    content: 'base';
-    display: none;
   }
 }
 
