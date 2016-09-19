@@ -66,6 +66,13 @@ body {
 
   // Expose css breakpoints to javascript
   // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+  @include mq($until: map-get($mq-breakpoints, 'xxs')) {
+    &::before {
+      content: 'base';
+      display: none;
+    }
+  }
+
   @include xxs {
     &::before {
       content: 'xxs';
@@ -108,12 +115,6 @@ body {
     }
   }
 
-  @include mq($from: 0, $until: map-get($mq-breakpoints, 'xxs')) {
-    &::before {
-      content: 'base';
-      display: none;
-    }
-  }
 }
 
 // Highlighted text colors

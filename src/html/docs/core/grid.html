@@ -268,6 +268,68 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
+<h4>Equal size column layouts</h4>
+<h5>1 of 2</h5>
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters o-Grid--1of2 textCenter">
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
+<h5>1 of 3</h5>
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters o-Grid--1of3 textCenter">
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
+<h5>1 of 4</h5>
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters o-Grid--1of4 textCenter">
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+
+  </div>
+
+</div>
+
 <hr class="Article-divider">
 
 <h3>Markup</h3>
@@ -283,7 +345,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3 id="section:classes"><a href="#section:classes" class="textLinkReset">Classes</a></h3>
 
-<div class="">
+<div class="scrollXauto">
   <table class="Table">
     <thead>
     <tr>
@@ -301,52 +363,52 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <tr>
       <th class="textLeft"><code>.o-Grid--full</code></th>
       <td>Stacks all grid cells (ready to be over-ridden with responsive modifiers)</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--flexCells</code></th>
       <td>All grid cells will fill the available vertical space (vertical alignment)</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--top</code></th>
       <td>Vertically aligns all grid cells to the top</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--bottom</code></th>
       <td>Vertically aligns all grid cells to the bottom</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--center</code></th>
       <td>Vertically aligns all grid cells to the center</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--justifyCenter</code></th>
       <td>Horizontally aligns the grid cells to the center</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--reserve</code></th>
       <td>Reverses the order of the grid cells</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--1of2</code></th>
       <td>Divides grid cells into 2 columns per row</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--1of3</code></th>
       <td>Divides grid cells into 3 columns per row</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid--1of4</code></th>
       <td>Divides grid cells into 4 columns per row</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Component modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-GridSm</code></th>
@@ -381,22 +443,22 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <tr>
       <th class="textLeft"><code>.o-Grid-cell--top</code></th>
       <td>Vertically aligns individual grid cell to the top</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Sub-element modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid-cell--bottom</code></th>
       <td>Vertically aligns individual grid cell to the bottom</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Sub-element modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid-cell--center</code></th>
       <td>Vertically aligns individual grid cell to the centre</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Sub-element modifier</td>
     </tr>
     <tr>
       <th class="textLeft"><code>.o-Grid-cell--autoSize</code></th>
       <td>Instructs the individual grid cell to fill the available space</td>
-      <td class="textRight">Modifier</td>
+      <td class="textRight">Sub-element modifier</td>
     </tr>
     </tbody>
   </table>

@@ -1,6 +1,6 @@
-
 $container-max-width: $g-site-max-width;
 $container-side-padding: $g-spacer;
+$container-thin-max-width: 800px;
 
 
 .o-Container {
@@ -26,4 +26,8 @@ $container-side-padding: $g-spacer;
 
 .o-Container--absolute {
   position: relative;
+}
+
+.o-Container--thin {
+  max-width: $container-thin-max-width;
 }

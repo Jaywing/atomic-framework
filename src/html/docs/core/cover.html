@@ -38,7 +38,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 
 <h3>Videos</h3>
-<p>To make a video cover it's container, use the modifier <code>o-Cover--bg</code>.</p>
+<p>To make a video cover it's container, use the <code>o-Cover-object</code> sub-element on the video tag.</p>
 
 <div class="docs-example">
   <div class="o-Cover" style="height: 300px;">
@@ -86,6 +86,47 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     &lt;iframe src=&quot;https://player.vimeo.com/video/67476280?color=9a151b&amp;title=0&amp;byline=0&amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+</div>
+
+<h3>Classes</h3>
+
+<div class="scrollXauto">
+  <table class="Table">
+    <thead>
+    <tr>
+      <th class="o-Size--1of4 textLeft">Class</th>
+      <th class="textLeft">Description</th>
+      <th class="textRight o-Size--1of5">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th class="textLeft"><code>.o-Cover</code></th>
+      <td>Sets overflow to hidden</td>
+      <td class="textRight">Component</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Cover--bg</code></th>
+      <td>Makes a background image cover the containing area</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Cover--video</code></th>
+      <td>Sets the vertical padding on the containing element to 67.5% (youtube video) and makes the sub-element fit and maintain the aspect ratio</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Cover--videoWide</code></th>
+      <td>As above but with a padding of 56.34% (vimeo videos).</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Cover-object</code></th>
+      <td>The element that has to cover the container.</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 
 {% endblock %}
