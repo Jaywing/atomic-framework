@@ -1,4 +1,5 @@
 {
+  "version": "0.0.1",
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
@@ -36,7 +37,7 @@
         { "id": "container", "title": "Container", "section": "core", "ready": true },
         { "id": "grid", "title": "Grid", "section": "core", "ready": true },
         { "id": "size", "title": "Size", "section": "core", "ready": true },
-        { "id": "section", "title": "Section", "section": "core", "ready": false },
+        { "id": "section", "title": "Section", "section": "core", "ready": true },
         { "id": "media", "title": "Media", "section": "core", "ready": true },
         { "id": "cover", "title": "Cover", "section": "core", "ready": true }
       ]

@@ -1,6 +1,21 @@
 $section-padding: $g-spacer-lg 0;
+$section-tall-padding: $g-spacer-xxl 0;
+$section-short-padding: $g-spacer-sm 0;
 
 .o-Section {
   padding: $section-padding;
+
+  &--collapse {
+    padding: 0;
+  }
+
+  &--tall {
+    padding: $section-tall-padding;
+  }
+
+  &--short {
+    padding: $section-short-padding;
+  }
+
 }
 
