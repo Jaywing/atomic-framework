@@ -28,46 +28,20 @@ $cover-video-wide-ratio: 56.34%;
 // 1 */
 .o-Cover {
   overflow: hidden;
-}
 
-.o-Cover-object {
-  // 2 */
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  // 3 */
-  max-width: none;
-  // 4 */
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// Background image always covers and centers its element
-.o-Cover--bg {
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.o-Cover--video,
-.o-Cover--videoWide {
-  @include trim-child-margins;
-
-  position: relative;
-  margin: $cover-video-margin;
-  height: 0;
-  padding-bottom: $cover-video-ratio;
-
-  .o-Cover-object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate(0, 0);
+  &-object {
+    // 2 */
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    // 3 */
+    max-width: none;
+    // 4 */
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     > iframe,
     > object,
@@ -78,9 +52,35 @@ $cover-video-wide-ratio: 56.34%;
       height: 100%;
     }
   }
-}
 
-.o-Cover--videoWide {
-  padding-bottom: $cover-video-wide-ratio;
-}
+  &--bg {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
+  &--video,
+  &--videoWide {
+    @include trim-child-margins;
+
+    position: relative;
+    margin: $cover-video-margin;
+    height: 0;
+    padding-bottom: $cover-video-ratio;
+
+    > .o-Cover-object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translate(0, 0);
+
+    }
+  }
+
+  &--videoWide {
+    padding-bottom: $cover-video-wide-ratio;
+  }
+
+}

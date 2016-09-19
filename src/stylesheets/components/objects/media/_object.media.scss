@@ -53,11 +53,11 @@ $media-golden-sml:  $g-golden-sm;
       width: $media-golden-sml;
     }
   }
-}
 
-.o-Media-body {
-  flex: 1;
-  margin-top: 0;
+  &-body {
+    flex: 1;
+    margin-top: 0;
+  }
 }
 
 .o-Media-figure {

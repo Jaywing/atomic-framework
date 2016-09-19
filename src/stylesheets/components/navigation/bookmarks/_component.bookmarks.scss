@@ -1,10 +1,10 @@
 .Bookmarks {
 
-  .Bookmarks-menu {
+  &-menu {
     @include reset-list;
   }
 
-  .Bookmarks-toggler {
+  &-toggler {
     display: none;
   }
 

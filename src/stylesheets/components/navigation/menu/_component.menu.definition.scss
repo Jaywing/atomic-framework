@@ -31,16 +31,17 @@ $menu-item-divider-bg: transparent;
     }
   }
 
+  &:not(.Menu--vertical) {
+    > .Menu-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
 }
 
 // Menu-item
 // ========================================================================
-.Menu:not(.Menu--vertical) {
-  > .Menu-item {
-    display: flex;
-    align-items: center;
-  }
-}
 
 .Menu-item {
   position: relative;

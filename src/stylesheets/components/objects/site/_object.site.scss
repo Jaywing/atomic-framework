@@ -50,25 +50,26 @@ $site-content-padding-md: $g-spacer-xxl;
   -webkit-box-direction: normal;
   flex-direction: column;
   min-height: 100%; // 1, 3 */
-}
 
-.o-Site-header,
-.o-Site-footer {
-  flex: none; // 2 */
-}
+  &-header,
+  &-footer {
+    flex: none; // 2 */
+  }
 
-.o-Site-content {
-  flex: 1 0 auto; // 2 */
-  padding: $site-content-padding 0 0;
-  width: 100%;
-}
+  &-content {
+    flex: 1 0 auto; // 2 */
+    padding: $site-content-padding 0 0;
+    width: 100%;
 
-.o-Site-content::after {
-  content: '\00a0'; // &nbsp; */
-  display: block;
-  margin-top: $site-content-padding;
-  height: 0;
-  visibility: hidden;
+    &::after {
+      content: '\00a0'; // &nbsp; */
+      display: block;
+      margin-top: $site-content-padding;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
 }
 
 
