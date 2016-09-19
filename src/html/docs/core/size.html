@@ -1,0 +1,409 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'size' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Size | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Size</h1>
+<p class="Article-lead">Responsive component for determining widths</p>
+
+<p>A utility object that can be combined with other object to determine widths. By default it accommodates up to 10 grid columns. You set different widths for different break points using the responsive modifiers.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="textLinkReset">Usage</a></h2>
+
+<h3>Classes</h3>
+<table class="Table textLeft" width="100%">
+  <thead>
+  <tr>
+    <th class="o-Size--1of3">Class</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>o-Size--full</th>
+    <td>Fills 100% of the available width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-Size--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-Size--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of5</th>
+    <td>Fifth width</td>
+  </tr>
+  <tr>
+    <th>o-Size--2of5</th>
+    <td>2 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-Size--3of5</th>
+    <td>3 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-Size--4of5</th>
+    <td>4 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of6</th>
+    <td>Sixth width</td>
+  </tr>
+  <tr>
+    <th>o-Size--5of6</th>
+    <td>5 Sixths width</td>
+  </tr>
+  <tr>
+    <th>o-Size--1of10</th>
+    <td>Tenth width</td>
+  </tr>
+  <tr>
+    <th>o-Size--9of10</th>
+    <td>9 Tenths width</td>
+  </tr>
+  </tbody>
+</table>
+
+<h4>Demo</h4>
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters textCenter">
+    <div class="o-Grid-cell o-Size--1of2">
+      <div class="Demo">
+        1 of 2
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--1of2">
+      <div class="Demo">
+        1 of 2
+      </div>
+    </div>
+  </div>
+
+  <div class="o-Grid o-Grid--gutters textCenter">
+    <div class="o-Grid-cell o-Size--1of3">
+      <div class="Demo">
+        1 of 3
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--1of3">
+      <div class="Demo">
+        1 of 3
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--1of3">
+      <div class="Demo">
+        1 of 3
+      </div>
+    </div>
+  </div>
+
+  <div class="o-Grid o-Grid--gutters textCenter">
+    <div class="o-Grid-cell o-Size--1of4">
+      <div class="Demo">
+        1 of 4
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--1of10">
+      <div class="Demo">
+        1 of 10
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--2of5">
+      <div class="Demo">
+        2 of 5
+      </div>
+    </div>
+    <div class="o-Grid-cell o-Size--1of4">
+      <div class="Demo">
+        1 of 4
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Responsive modifiers</h3>
+
+<table class="Table textLeft" width="100%">
+  <thead>
+  <tr>
+    <th class="o-Size--1of3">Class</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>o-SizeSm--full</th>
+    <td>Fills 100% of the available width from 'sm' breakpoint (640px) and upwards</td>
+  </tr>
+  <tr>
+    <th>o-SizeSm--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-SizeSm--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-SizeSm--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-SizeSm--1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-SizeSm--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--full</th>
+    <td>Fills 100% of the available width from 'md' breakpoint (768px) and upwards</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--1of5</th>
+    <td>Fifth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--2of5</th>
+    <td>2 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--3of5</th>
+    <td>3 fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--4of5</th>
+    <td>4 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--1of6</th>
+    <td>Sixt width</td>
+  </tr>
+  <tr>
+    <th>o-SizeMd--5of6</th>
+    <td>5 Sixths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--full</th>
+    <td>Fills 100% of the available width from 'lg' breakpoint (960px) and upwards</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of5</th>
+    <td>Fifth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--2of5</th>
+    <td>2 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--3of5</th>
+    <td>3 fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--4of5</th>
+    <td>4 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of6</th>
+    <td>Sixth width width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--5of6</th>
+    <td>5 Sixths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--1of10</th>
+    <td>Tenth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeLg--9of10</th>
+    <td>9 Tenths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--full</th>
+    <td>Fills 100% of the available width from 'xl' breakpoint (1180px) and upwards</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl-1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--1of5</th>
+    <td>Fifth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--2of5</th>
+    <td>2 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--3of5</th>
+    <td>3 fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--4of5</th>
+    <td>4 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--1of6</th>
+    <td>Sixth width width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--5of6</th>
+    <td>5 Sixths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--1of10</th>
+    <td>Tenth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXl--9of10</th>
+    <td>9 Tenths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--full</th>
+    <td>Fills 100% of the available width from 'xxl' breakpoint (1400px) and upwards</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--1of2</th>
+    <td>Half width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--1of3</th>
+    <td>Third width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--2of3</th>
+    <td>2 thirds width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl-1of4</th>
+    <td>Quarter width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--3of4</th>
+    <td>3 quarters width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXx--1of5</th>
+    <td>Fifth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--2of5</th>
+    <td>2 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--3of5</th>
+    <td>3 fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--4of5</th>
+    <td>4 Fifths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--1of6</th>
+    <td>Sixth width width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--5of6</th>
+    <td>5 Sixths width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--1of10</th>
+    <td>Tenth width</td>
+  </tr>
+  <tr>
+    <th>o-SizeXxl--9of10</th>
+    <td>9 Tenths width</td>
+  </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

@@ -35,7 +35,7 @@
         { "id": "site", "title": "Site", "section": "core", "ready": true },
         { "id": "container", "title": "Container", "section": "core", "ready": true },
         { "id": "grid", "title": "Grid", "section": "core", "ready": true },
-        { "id": "size", "title": "Size", "section": "core", "ready": false },
+        { "id": "size", "title": "Size", "section": "core", "ready": true },
         { "id": "section", "title": "Section", "section": "core", "ready": false },
         { "id": "media", "title": "Media", "section": "core", "ready": false },
         { "id": "cover", "title": "Cover", "section": "core", "ready": true }
