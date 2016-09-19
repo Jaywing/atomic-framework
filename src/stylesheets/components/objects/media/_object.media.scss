@@ -57,11 +57,14 @@ $media-golden-sml:  $g-golden-sm;
   &-body {
     flex: 1;
     margin-top: 0;
+    padding-bottom: $media-spacing;
   }
+
 }
 
 .o-Media-figure {
   padding-right: $media-spacing;
+  padding-bottom: $media-spacing;
 
   .o-Media--reverse &,
   .o-Media--alternate:nth-of-type(even) & {
@@ -73,5 +76,12 @@ $media-golden-sml:  $g-golden-sm;
     img {
       vertical-align: middle;
     }
+  }
+}
+
+.o-Media--collapse {
+  > .o-Media-figure,
+  > .o-Media-body {
+    padding: 0;
   }
 }

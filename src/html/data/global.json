@@ -37,7 +37,7 @@
         { "id": "grid", "title": "Grid", "section": "core", "ready": true },
         { "id": "size", "title": "Size", "section": "core", "ready": true },
         { "id": "section", "title": "Section", "section": "core", "ready": false },
-        { "id": "media", "title": "Media", "section": "core", "ready": false },
+        { "id": "media", "title": "Media", "section": "core", "ready": true },
         { "id": "cover", "title": "Cover", "section": "core", "ready": true }
       ]
     },
