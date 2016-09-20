@@ -35,9 +35,13 @@ $c-palette: (
 $c-dark:      map-get($c-palette, black);
 $c-dark-15:   lighten($c-dark, 15%);
 $c-dark-30:   lighten($c-dark, 30%);
+$c-dark-50:   lighten($c-dark, 50%);
+$c-dark-75:   lighten($c-dark, 75%);
 $c-light:     map-get($c-palette, white);
 $c-light-15:  darken($c-light, 15%);
 $c-light-30:  darken($c-light, 30%);
+$c-light-50:  darken($c-light, 50%);
+$c-light-75:  darken($c-light, 75%);
 
 $c-primary:       map-get($c-palette, blue);
 $c-primary-light: lighten($c-primary, 15%);
