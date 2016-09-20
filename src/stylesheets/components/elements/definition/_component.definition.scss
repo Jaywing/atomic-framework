@@ -5,35 +5,58 @@
 
 $dl-margin: $g-spacer 0;
 
-$dd-margin: 0 0 0 0;
-$dd-font-style: normal;
-$dd-font-weight: bold;
+$dt-margin: $g-spacer 0 $g-spacer-sm 0;
+$dt-font-style: normal;
+$dt-font-weight: bold;
 
-$dt-margin: 0 0 $g-spacer;
-$dt-font-style: italic;
-$dt-font-weight: normal;
+$dd-margin: 0 0 $g-spacer-xs $g-spacer-xl;
+$dd-last-child-margin: 0 0 $g-spacer 0;
+$dd-font-style: italic;
+$dd-font-weight: normal;
+$dd-display: list-item;
+$dd-list-style: disc;
 
-dl {
+.Definition {
   margin: $dl-margin;
-
-  dd {
-    margin: $dd-margin;
-    font-style: $dd-font-style;
-    font-weight: $dd-font-weight;
-
-    @include md() {
-      float: left;
-
-      &::after {
-        content: '-';
-        padding: 0 $g-spacer-xs;
-      }
-    }
-  }
 
   dt {
     margin: $dt-margin;
     font-style: $dt-font-style;
     font-weight: $dt-font-weight;
+  }
+
+  dd {
+    margin: $dd-margin;
+    font-style: $dd-font-style;
+    font-weight: $dd-font-weight;
+    display: $dd-display;
+    list-style: $dd-list-style;
+  }
+}
+
+//Horizontal list variant
+.Definition--horizontal {
+  @include clearfix;
+
+  dt {
+    margin: 0;
+    float: left;
+    width: 5rem;
+    margin-right: 1rem;
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:after {
+      content: ':';
+      padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
+    }
+  }
+
+  dd {
+    margin: 0;
+    list-style: none;
+    padding-left: 6rem;
   }
 }
