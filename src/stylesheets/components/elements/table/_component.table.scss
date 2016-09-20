@@ -7,24 +7,25 @@ $table-tr-background: $c-dark-75;
 $table-cell-padding: $g-spacer-sm;
 $table-cell-padding-sm: $g-spacer-xs;
 
+$table-caption-font-size: .9rem;
+$table-caption-font-style: italic;
+
 .Table {
   width: 100%;
   border-collapse: collapse;
 
-  display: inline-block;
-  overflow-x: auto;
-  white-space: nowrap;
-  max-width: 100%;
-
   caption {
     text-align: left;
+    font-size: $table-caption-font-size;
+    font-style: $table-caption-font-style;
   }
 
   th {
     font-weight: $table-th-font-weight;
   }
 
-  td, th {
+  td,
+  th {
     padding: $table-cell-padding;
     border-bottom: $table-border;
     text-align: left;
@@ -40,15 +41,22 @@ $table-cell-padding-sm: $g-spacer-xs;
 
 .Table--condensed {
 
-  td, th {
+  td,
+  th {
     padding: $table-cell-padding-sm;
   }
 }
 
-// Responsive
 .Table--yaxis {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   overflow: hidden;
+
+  caption {
+    display: flex;
+    flex: 0 1 100%;
+  }
 
   thead {
     display: flex;
@@ -58,6 +66,8 @@ $table-cell-padding-sm: $g-spacer-xs;
 
   tbody {
     display: flex;
+    flex: 1;
+    width: 100%;
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
@@ -70,13 +80,11 @@ $table-cell-padding-sm: $g-spacer-xs;
     flex-direction: column;
     min-width: min-content;
     flex-shrink: 0;
+    flex: 1;
+    white-space: nowrap;
   }
 
   td {
     border-left: 0;
-
-    &:not(:last-child) {
-      border-bottom: 0;
-    }
   }
 }
