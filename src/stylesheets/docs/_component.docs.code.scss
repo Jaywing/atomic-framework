@@ -1,0 +1,26 @@
+.docs-code {
+  @extend %docs-block;
+
+  > pre {
+    max-height: 350px;
+    overflow: auto;
+  }
+
+  &--cmd {
+    &::before {
+      content: 'Command line';
+    }
+  }
+
+  &--scss {
+    &::before {
+      content: 'Scss';
+    }
+  }
+
+  &--html {
+    &::before {
+      content: 'HTML';
+    }
+  }
+}

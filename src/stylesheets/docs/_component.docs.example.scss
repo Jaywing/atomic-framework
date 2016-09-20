@@ -1,0 +1,26 @@
+%docs-block {
+  margin: $g-spacer-xl 0 $g-spacer;
+  position: relative;
+
+  &::before {
+    @include minion-bold;
+    position: absolute;
+    top: -($g-spacer);
+    left: 0;
+    color: $c-dark-15;
+    text-transform: capitalize;
+  }
+}
+
+
+.docs-example {
+  @extend %docs-block;
+
+  border: 2px solid rgba(0, 0, 0, .1);
+  background: rgba(0,0,0,.05);
+  padding: $g-spacer-sm;
+
+  &::before {
+    content: 'Example';
+  }
+}
