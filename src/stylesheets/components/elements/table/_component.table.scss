@@ -1,5 +1,3 @@
-$table-th-background: $c-dark-30;
-$table-th-color: $c-light;
 $table-th-font-weight: $g-weight-bold;
 $table-border-width: 1px;
 $table-border-style: solid;
@@ -7,8 +5,9 @@ $table-border-color: $c-dark-50;
 $table-border: $table-border-width $table-border-style $table-border-color;
 $table-tr-background: $c-dark-75;
 $table-cell-padding: $g-spacer-sm;
+$table-cell-padding-sm: $g-spacer-xs;
 
-table {
+.Table {
   width: 100%;
   border-collapse: collapse;
 
@@ -16,27 +15,38 @@ table {
   overflow-x: auto;
   white-space: nowrap;
   max-width: 100%;
-}
-/* Zebra striping */
-tr:nth-of-type(odd) {
-  background: $table-tr-background;
+
+  caption {
+    text-align: left;
+  }
+
+  th {
+    font-weight: $table-th-font-weight;
+  }
+
+  td, th {
+    padding: $table-cell-padding;
+    border-bottom: $table-border;
+    text-align: left;
+  }
 }
 
-th {
-  background: $table-th-background;
-  color: $table-th-color;
-  font-weight: $table-th-font-weight;
+.Table--striped {
+
+  tr:nth-of-type(odd) {
+    background: $table-tr-background;
+  }
 }
 
-td, th {
-  padding: $table-cell-padding;
-  border: $table-border;
-  text-align: left;
-}
+.Table--condensed {
 
+  td, th {
+    padding: $table-cell-padding-sm;
+  }
+}
 
 // Responsive
-.Table-vertical {
+.Table--yaxis {
   display: flex;
   overflow: hidden;
 
