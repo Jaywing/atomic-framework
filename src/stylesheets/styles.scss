@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 // ****************************************************
 //
@@ -30,27 +30,27 @@
 ////
 
 
-// * Import Settings
+// * Settings
 @import 'settings/settings';   // global variables
 
-// * Import Tools
+// * Tools
 @import 'tools/tools';      // Mixins, functions and placeholders
 
-// * Import Generic
+// * Generic
 @import 'normalize'; // served from node_modules
 @import 'generic/generic.fonts';
 @import 'generic/generic.base';
 
-// * Import Vendor
+// * Vendor
 
-// * Import Elements
+
+// * Default (base) elements
 @import 'base/base'; // Un-classed common common
-@import 'components/elements/definition/component.definition';
 
-// * Import Icons (from the generated font)
+// * Icons (from the generated font)
 @import 'generated/generated.icons';
 
-// * Import Objects
+// * Objects
 @import 'components/objects/site/object.site';
 @import 'components/objects/container/object.container';
 @import 'components/objects/grid/object.grid';
@@ -59,14 +59,21 @@
 @import 'components/objects/media/object.media';
 @import 'components/objects/cover/object.cover';
 
+// * Element Components
+@import 'components/elements/definition/component.definition';
+@import 'components/elements/list/component.list';
 
-// * Import Components  // Custom UI building blocks
+// * Common Components
 @import 'components/common/button/component.button';
+
+// * Navigation Components
 @import 'components/navigation/nav/component.nav';
 @import 'components/navigation/menu/component.menu';
 
+// * Module Components
 
-// * import Trumps      // Helper classes, hacks and browser fixes
+
+// * Trumps      // Helper classes, hacks and browser fixes
 // @import 'trumps/trump.border';
 // @import 'trumps/trump.color';
 // @import 'trumps/trump.typography';
