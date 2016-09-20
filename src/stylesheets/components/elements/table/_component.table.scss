@@ -34,7 +34,7 @@ $table-caption-font-style: italic;
 
 .Table--striped {
 
-  tr:nth-of-type(odd) {
+  tbody tr:nth-of-type(odd) {
     background: $table-tr-background;
   }
 }
