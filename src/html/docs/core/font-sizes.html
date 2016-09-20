@@ -23,6 +23,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <p>Our approach to font sizes is inspired by <a href="http://www.bbc.co.uk/gel/guidelines/typography">BBC's gel typography guidelines</a>.</p>
   <p>We use a single type hierarchy that is scaled to work across all devices. We change type sizes based on screen size and device capabilities, such as whether it has a touch screen.</p>
 
+  <p>Settings for the default font-sizes can be found in <code>stylesheets/settings/_settings.font-sizes.scss</code>.</p>
+
   <div class="docs-example">
     <img src="/images/docs/font-sizes.png" alt="Example of our font size hierarchy">
   </div>
@@ -133,7 +135,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <h2 id="section:mixins"><a herf="#section:mixins" class="textLinkReset">Mixins</a></h2>
   <p>For each font-size there is a mixin to make it easy for you to set font-sizes.</p>
   <div class="docs-code docs-code--scss">
-    <pre><code class="scss">.Element {
+    <pre><code class="css">.Element {
   @include trafalgar;
 }</code></pre>
 
