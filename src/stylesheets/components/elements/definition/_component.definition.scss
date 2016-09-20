@@ -1,0 +1,39 @@
+//
+//  Defined List
+//  @author anthony.fisher@jaywing.com
+//
+
+$dl-margin: $g-spacer 0;
+
+$dd-margin: 0 0 0 0;
+$dd-font-style: normal;
+$dd-font-weight: bold;
+
+$dt-margin: 0 0 $g-spacer;
+$dt-font-style: italic;
+$dt-font-weight: normal;
+
+dl {
+  margin: $dl-margin;
+
+  dd {
+    margin: $dd-margin;
+    font-style: $dd-font-style;
+    font-weight: $dd-font-weight;
+
+    @include md() {
+      float: left;
+
+      &::after {
+        content: '-';
+        padding: 0 $g-spacer-xs;
+      }
+    }
+  }
+
+  dt {
+    margin: $dt-margin;
+    font-style: $dt-font-style;
+    font-weight: $dt-font-weight;
+  }
+}

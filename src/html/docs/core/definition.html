@@ -1,0 +1,34 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'definition' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Definition | Atomic: Elements{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Definition</h1>
+<p class="Article-lead">A list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs). <cite><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/dl">https://developer.mozilla.org/en/docs/Web/HTML/Element/dl</a></cite></p>
+
+<dl>
+  <dd>Mint</dd>
+  <dt>A refreshing herb.</dt>
+  <dd>Shark</dd>
+  <dt>A swimming predator.</dt>
+  <dd>Water</dd>
+  <dt>A liquid comprising of 2 hydrogen atoms and one oxygen atom.</dt>
+  <dd>Penguin</dd>
+  <dt>A flightless bird often associated with the arctic but also found in temperate climates.</dt>
+</dl>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

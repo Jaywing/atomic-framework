@@ -49,7 +49,7 @@
         { "id": "list", "title": "List", "section": "core", "ready": false },
         { "id": "table", "title": "Table", "section": "core", "ready": false },
         { "id": "form", "title": "Form", "section": "core", "ready": false },
-        { "id": "definition", "title": "Definition", "section": "core", "ready": false }
+        { "id": "definition", "title": "Definition", "section": "core", "ready": true }
       ]
     },
     {
