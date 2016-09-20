@@ -1,0 +1,33 @@
+$table-th-font-weight: $g-weight-bold;
+
+$table-border-width: 1px;
+$table-border-style: solid;
+$table-border-color: $c-very-strong-trans-dark;
+$table-border: $table-border-width $table-border-style $table-border-color;
+
+$table-cell-padding: $g-spacer-sm;
+
+$table-caption-font-size: .9rem;
+$table-caption-font-style: italic;
+
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+    text-align: left;
+    font-size: $table-caption-font-size;
+    font-style: $table-caption-font-style;
+  }
+
+  th {
+    font-weight: $table-th-font-weight;
+  }
+
+  td,
+  th {
+    padding: $table-cell-padding;
+    border-bottom: $table-border;
+    text-align: left;
+  }
+}
