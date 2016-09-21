@@ -24,7 +24,7 @@ dl {
     @include md() {
       float: left;
 
-      &::after {
+      &:after {
         content: '-';
         padding: 0 $g-spacer-xs;
       }
@@ -36,4 +36,5 @@ dl {
     font-style: $dt-font-style;
     font-weight: $dt-font-weight;
   }
+
 }
