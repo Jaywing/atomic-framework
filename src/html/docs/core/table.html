@@ -14,12 +14,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Table</h1>
-<p class="Article-lead">Tables tables tables.</p>
+<p class="Article-lead">Easily create nicely looking tables, which come in different styles.</p>
 
 <hr class="Article-divider">
 
 <h2>Usage</h2>
 
+<h3>Basic table (.Table)</h3>
 <div class="docs-example">
   <table class="Table">
     <caption>Caption</caption>
@@ -30,6 +31,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         <th>Table Heading</th>
       </tr>
     </thead>
+    <tfoot>
+      <tr>
+        <td>Table footer</td>
+        <td>Table footer</td>
+        <td>Table footer</td>
+      </tr>
+    </tfoot>
     <tbody>
       <tr>
         <td>Table Data</td>
@@ -48,7 +56,65 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-code docs-code--html">
   <pre><code class="html">
     &lt;table class="Table"&gt;
-      &lt;caption&gt;Caption&lt;/caption&gt;
+      &lt;caption&gt;...&lt;/caption&gt;
+      &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/tfoot&gt;
+      &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  </code></pre>
+</div>
+
+<h3>Modifiers</h3>
+
+<h4>Divider (.Table--divider)</h4>
+<div class="docs-example">
+  <table class="Table Table--divider">
+    <caption>Caption</caption>
+    <thead>
+    <tr>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table footer</td>
+      <td>Table footer</td>
+      <td>Table footer</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;table class="Table Table--divider"&gt;
+      &lt;caption&gt;...&lt;/caption&gt;
       &lt;thead&gt;
       &lt;tr&gt;
         &lt;th&gt;Table Heading&lt;/th&gt;
@@ -62,8 +128,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     &lt;/table&gt;
   </code></pre>
 </div>
-
-<h3>Modifiers</h3>
 
 <h4>Table striped</h4>
 
