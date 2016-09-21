@@ -87,3 +87,9 @@ $menu-item-divider-bg: transparent;
   }
 
 }
+
+@element ".docs-example .Menu" and (max-width: 650px) {
+  .docs-example .Menu {
+    background: blue;
+  }
+}

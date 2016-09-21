@@ -99,6 +99,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eqcss": "^1.2.2",
     "es6y-throttle": "^1.0.1",
     "normalize.css": "^4.0.0",
     "sticky-js": "^1.0.7",

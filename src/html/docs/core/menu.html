@@ -1,0 +1,36 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'menu' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Menu | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Menu</h1>
+<p class="Article-lead"></p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="textLinkReset">Usage</a></h2>
+
+<div class="docs-example">
+  <nav>
+    <ul class="Menu">
+      <li>Menu item</li>
+    </ul>
+  </nav>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

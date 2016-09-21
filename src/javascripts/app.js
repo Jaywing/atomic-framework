@@ -1,6 +1,7 @@
 import './asyncModules'
 import exclaimify from './exclaimify'
 import breakpoint from './breakpoint'
+import eqcss from 'eqcss'
 
 const Button = document.getElementById('button')
 const AlertAsyncMessage = function() {
