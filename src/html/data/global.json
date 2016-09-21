@@ -48,7 +48,7 @@
       "items": [
         { "id": "list", "title": "List", "section": "core", "ready": true },
         { "id": "table", "title": "Table", "section": "core", "ready": true },
-        { "id": "form", "title": "Form", "section": "core", "ready": false },
+        { "id": "form", "title": "Form", "section": "core", "ready": true },
         { "id": "definition", "title": "Definition", "section": "core", "ready": true }
       ]
     },

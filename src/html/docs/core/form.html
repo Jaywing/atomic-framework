@@ -1,0 +1,29 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'form' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Form | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Form</h1>
+<p class="Article-lead">Forms are forms.</p>
+
+<hr class="Article-divider">
+
+<h2>Usage</h2>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}
