@@ -24,7 +24,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
   <form class="Form">
-
     <fieldset>
       <legend>Form legend</legend>
       <input type="text" placeholder="Text input">
@@ -36,8 +35,25 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <button class="Button">Button</button>
       <label><input type="checkbox"> Checkbox</label>
     </fieldset>
+  </form>
+</div>
 
-</form>
+<h4>Validation states</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <legend>Form legend</legend>
+      <input type="text" placeholder="Text input">
+      <input type="password" placeholder="Password input">
+      <select>
+        <option>Option 01</option>
+        <option>Option 02</option>
+      </select>
+      <button class="Button">Button</button>
+      <label><input type="checkbox"> Checkbox</label>
+    </fieldset>
+  </form>
 </div>
 
 {% endblock %}
