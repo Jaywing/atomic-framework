@@ -1,0 +1,49 @@
+.Form {
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  legend {
+    display: block;
+    width: 100%;
+    padding: 0 0 $g-spacer;
+    line-height: 2;
+    &:after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=search],
+  input[type=tel],
+  input[type=number],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=date],
+  input[type=month],
+  input[type=time],
+  input[type=week],
+  input[type=color],
+  select,
+  textarea {
+    height: 30px;
+    max-width: 100%;
+    padding: $g-spacer;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+  }
+
+  input:not([type=radio]):not([type=checkbox]),
+  select {
+    vertical-align: middle;
+  }
+}
