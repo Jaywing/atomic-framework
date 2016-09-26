@@ -10,9 +10,10 @@ $doc-globalheader-bg: $c-jaywing-dark;
   }
 
   .is-active {
-    > .Button--hover {
+    > .Button {
       background: $c-light;
       color: $c-dark;
+      font-weight: $g-weight-normal;
     }
   }
 

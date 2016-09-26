@@ -1,13 +1,21 @@
 
-
 // Variables
 // ========================================================================
 
 $menu-margin: $g-spacer 0;
+$menu-margin-nested: $g-spacer;
 
-$menu-item-padding: $g-spacer-xs $g-spacer-sm;
+$menu-item-padding: $g-spacer-sm;
 $menu-item-divider-size: 0;
 $menu-item-divider-bg: transparent;
+$menu-item-active-font-weight: $g-weight-bold;
+
+$menu-link-padding: $g-spacer-sm;
+$menu-link-font-weight: $g-weight-normal;
+
+$menu-title-padding: $g-spacer-sm;
+$menu-title-font-weight: $g-weight-bold;
+
 
 // ========================================================================
 // Component: Menu
@@ -15,81 +23,55 @@ $menu-item-divider-bg: transparent;
 
 .Menu {
   @include trim-child-margins;
-  @include clearfix;
+  @include reset-list;
 
+  margin: $menu-margin -($menu-item-padding);
+  width: 100%;
   display: flex;
-  margin: 0;
-  list-style: none;
-  padding: 0;
+  flex-wrap: nowrap;
+  align-items: center;
 
-  // Sub-Menu
-  .Menu {
-    margin: 0;
-
-    &:not(.Menu--vertical) > .Menu {
-      display: flex;
-    }
+  input,
+  a,
+  button {
+    margin-bottom: 0;
   }
 
-  &:not(.Menu--vertical) {
+  // Alignment modifiers
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--expanded {
+
     > .Menu-item {
-      display: flex;
-      align-items: center;
+      flex: 1 1 0;
     }
+
   }
 
 }
-
-// Menu-item
-// ========================================================================
 
 .Menu-item {
-  position: relative;
-  vertical-align: middle;
-  line-height: 1;
-  text-decoration: none;
-  tap-highlight-color: transparent;
   flex: 0 0 auto;
-  user-select: none;
   padding: $menu-item-padding;
 
-  // Border / divider
-  &::before {
-    background: $menu-item-divider-bg;
-    width: $menu-item-divider-size;
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    height: 100%;
+  &.is-active {
+    font-weight: $menu-item-active-font-weight;
   }
-
-  // Text content
-  &--text,
-  > p {
-    @include trim-child-margins;
-
-    &:only-child {
-      user-select: text;
-      line-height: $base-line-height;
-    }
-
-  }
-
-  // Button
-  .Button {
-    margin: 0;
-  }
-
-  // Header
-  &--header {
-    margin: 0;
-  }
-
 }
 
-@element ".docs-example .Menu" and (max-width: 650px) {
-  .docs-example .Menu {
-    background: blue;
-  }
+.Menu-link {
+  display: block;
+  padding: $menu-link-padding;
+}
+
+.Menu-title {
+  display: block;
+  padding: $menu-title-padding;
+  font-weight: $menu-title-font-weight;
 }

@@ -1,3 +1,5 @@
+import $ from 'domtastic';
+
 export default class Bookmarks {
 
   constructor(el) {
@@ -8,19 +10,19 @@ export default class Bookmarks {
 
   init() {
     this.injectToggler()
-    this.el.classList.add('js-Bookmarks')
+    $(this.el).addClass('js-Bookmarks');
     console.log('bookmarks initiated')
   }
 
   injectToggler() {
-    this.el.innerHTML = this.toggler + this.el.innerHTML
-    this.toggler = document.getElementById('bookmarks-toggler')
-    this.toggler.addEventListener('click', this.toggleBookmarksMenu)
+    $(this.el).html(this.toggler + this.el.innerHTML)
+    this.toggler = $('bookmarks-toggler')
+    this.toggler.on('click', this.toggleBookmarksMenu)
   }
 
   toggleBookmarksMenu(e) {
     e.preventDefault()
-    this.parentNode.classList.toggle('Bookmarks--is-active')
+    $(this.parentNode).toggleClass('Bookmarks--is-active')
   }
 
 }

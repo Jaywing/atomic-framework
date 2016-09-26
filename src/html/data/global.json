@@ -3,7 +3,7 @@
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
-    { "id": "roadmap", "title": "Roadmap", "ready": true }
+    { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
     {
@@ -57,7 +57,7 @@
       "category": "Navigation",
       "section": "core",
       "items": [
-        { "id": "menu", "title": "Menu", "section": "core", "ready": false },
+        { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumb", "title": "Breadcrumb", "section": "core", "ready": false },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
@@ -74,6 +74,13 @@
         { "id": "badge", "title": "Badge", "section": "core", "ready": false },
         { "id": "alert", "title": "Alert", "section": "core", "ready": false },
         { "id": "overlay", "title": "Overlay", "section": "core", "ready": false }
+      ]
+    },
+    {
+      "category": "Modules",
+      "section": "core",
+      "items": [
+        { "id": "cookie-msg", "title": "Cookie message", "section": "core", "ready": false }
       ]
     }
   ]

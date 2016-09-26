@@ -1,0 +1,34 @@
+$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm;
+$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm;
+
+
+.Menu--vertical {
+  flex-wrap: wrap;
+
+  .Menu-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .Menu-link {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: $menu-vertical-link-padding;
+  }
+
+  .Menu-title {
+    padding: $menu-vertical-title-padding;
+  }
+
+  // Nested
+  .Menu {
+    margin-left: $menu-margin-nested;
+    margin-top: 0;
+
+    &--flush {
+      margin-left: 0;
+    }
+  }
+
+}

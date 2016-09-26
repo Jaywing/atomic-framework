@@ -1,10 +1,9 @@
 $table-border: 1px solid $c-very-strong-trans-dark;
 
 .Table--divider {
-  tr {
 
-    td {
-      border-top: $table-border;
-    }
+  td,
+  th {
+    border-top: $table-border;
   }
 }
