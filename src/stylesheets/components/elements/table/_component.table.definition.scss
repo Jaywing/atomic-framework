@@ -8,7 +8,8 @@ $table-caption-font-style: italic;
   width: 100%;
   border-collapse: collapse;
 
-  caption, tfoot {
+  caption,
+  tfoot {
     @include minion;
     text-align: left;
     font-style: $table-caption-font-style;

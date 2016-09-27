@@ -7,6 +7,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'menu' %}
 {% set sectionid = 'core' %}
 
+{% from 'macros/helpers.html' import icon %}
+
 {% extends 'layouts/docs/layout.docs.master.html' %}
 
 {% block metaTitle %}Menu | Atomic: Core{% endblock %}
@@ -14,7 +16,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Menu</h1>
-<p class="Article-lead"></p>
+<p class="Article-lead">Our flexible menu component makes it easy to build many common navigation patterns.</p>
 
 <hr>
 
@@ -239,7 +241,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 
 <div class="scrollXauto">
-  <table class="Table Table--striped Table--divider">
+  <table class="Table Table--striped">
     <thead>
     <tr>
       <th class="o-Size--1of4 textLeft">Class</th>
@@ -306,6 +308,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </tbody>
   </table>
 </div>
+
+<span class="icon -close"></span>
 
 {% endblock %}
 

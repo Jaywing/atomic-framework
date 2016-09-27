@@ -21,7 +21,7 @@
     text-transform: none
     @content
 
-.icon
+.Icon
   +icon
 
 {% for icon in icons -%}
@@ -32,7 +32,7 @@ $icon-{{icon.name}}: "\{{icon.code}}"
   +icon($icon-{{icon.name}})
     @content
 // Expose as class
-.icon.-{{icon.name}}:before
+.Icon--{{icon.name}}:before
   content: $icon-{{icon.name}}
 
 {% endfor %}
