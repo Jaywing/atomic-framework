@@ -1,0 +1,23 @@
+$button-error-bg: $c-error;
+$button-error-color: $c-light;
+$button-error-hover-bg: darken($button-error-bg, 10%);
+$button-error-trans-speed: $g-trans-link-speed;
+
+.Button--error {
+
+  border-color: $button-error-bg;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-error-color $button-error-bg,
+            $button-error-color $button-error-hover-bg,
+            $button-error-trans-speed
+    );
+  }
+
+  &[disabled] {
+    background: lighten($button-error-bg, 15%);
+    color: rgba($button-error-color, 0.8);
+  }
+
+}

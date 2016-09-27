@@ -28,7 +28,7 @@ $c-palette: (
   teal:   #2fcde0,
   amber:  #f9c000,
   red:    #dd2228,
-  green:  #49ca86
+  green:  #0b9444
 );
 
 // Global color variables
@@ -45,7 +45,7 @@ $c-light-75:  darken($c-light, 75%);
 
 $c-primary:       map-get($c-palette, blue);
 $c-primary-light: lighten($c-primary, 15%);
-$c-primary-pale:  lighten($c-primary, 85%);
+$c-primary-pale:  lighten($c-primary, 35%);
 $c-primary-dark:  darken($c-primary, 15%);
 
 $c-secondary:       map-get($c-palette, purple);

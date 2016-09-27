@@ -23,13 +23,24 @@ $button-primary-trans-speed:      $button-trans-speed;
 
 
 .Button--primary {
-  @include color-swap-on-hover(
-          $button-primary-color $button-primary-bg-color,
-          $button-primary-color-hover $button-primary-bg-color-hover,
-          $button-primary-trans-speed
-  );
-  &:active {
-    background-color: $button-primary-bg-color-active;
-    color: $button-primary-color-active;
+
+  border-color: $button-primary-bg-color;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-primary-color $button-primary-bg-color,
+            $button-primary-color-hover $button-primary-bg-color-hover,
+            $button-primary-trans-speed
+    );
+    &:active {
+      background-color: $button-primary-bg-color-active;
+      color: $button-primary-color-active;
+    }
   }
+
+  &[disabled] {
+    background: lighten($button-primary-bg-color, 15%);
+    color: rgba($button-primary-color, .65);
+  }
+
 }

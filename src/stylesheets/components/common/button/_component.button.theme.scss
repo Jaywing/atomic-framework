@@ -27,11 +27,14 @@ $button-color-active:     $c-dark;
 
 
 .Button {
-  @include color-swap-on-hover(
-          $button-color $button-bg-color,
-          $button-color-hover $button-bg-color-hover,
-          $button-trans-speed
-  );
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-color $button-bg-color,
+            $button-color-hover $button-bg-color-hover,
+            $button-trans-speed
+    );
+  }
   text-align: center;
   text-decoration: none;
   font-family: $button-font-family;
@@ -41,6 +44,10 @@ $button-color-active:     $c-dark;
   &:active {
     background-color: $button-bg-color-active;
     color: $button-color-active;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
   }
 
 }

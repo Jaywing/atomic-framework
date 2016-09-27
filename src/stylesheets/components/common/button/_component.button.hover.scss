@@ -10,7 +10,14 @@
 /// @created  02/09/2016
 ////
 
+$button-hover-hover-bg: $c-light-30;
 
 .Button--hover {
-  @include color-swap-on-hover(transparent, inherit, $g-trans-link-speed, true);
+  &:not([disabled]) {
+    @include color-swap-on-hover(transparent, $button-hover-hover-bg, $g-trans-link-speed, true);
+  }
+
+  &[disabled] {
+    background: transparent;
+  }
 }

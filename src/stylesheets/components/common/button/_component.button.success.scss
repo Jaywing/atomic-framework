@@ -1,0 +1,23 @@
+$button-success-bg: $c-success;
+$button-success-color: $c-light;
+$button-success-hover-bg: darken($button-success-bg, 10%);
+
+
+.Button--success {
+
+  border-color: $button-success-bg;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-secondary-color $button-success-bg,
+            $button-secondary-color-hover $button-success-hover-bg,
+            $button-secondary-trans-speed
+    );
+  }
+
+  &[disabled] {
+    background: lighten($button-success-bg, 15%);
+    color: rgba($button-success-color, 0.8);
+  }
+
+}

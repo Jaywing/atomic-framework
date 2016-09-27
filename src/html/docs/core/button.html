@@ -1,0 +1,91 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% from 'macros/helpers.html' import icon %}
+
+{% set pageid = 'button' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Container | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Button</h1>
+<p class="Article-lead">Easily create versatile buttons in a variety of styles.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section:usage"><a href="section:usage" class="textLinkReset">Usage</a></h2>
+
+<div class="docs-example">
+  <a href="#" class="Button">Link</a>
+  <button class="Button">Button</button>
+  <button class="Button" disabled>Disabled</button>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;Button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;Button&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+</div>
+
+<h3>Sizing modifiers</h3>
+
+<div class="docs-example">
+  <a href="#" class="Button Button--xs">Extra small</a>
+  <a href="#" class="Button Button--sm">Small</a>
+  <a href="#" class="Button">Standard</a>
+  <a href="#" class="Button Button--lg">Large</a>
+  <a href="#" class="Button Button--xl">Extra Large</a>
+  <a href="#" class="Button Button--block">Block button</a>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button Button--xs&quot;&gt;Extra small&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--sm&quot;&gt;Small&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button&quot;&gt;Standard&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--lg&quot;&gt;Large&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--xl&quot;&gt;Extra Large&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--block&quot;&gt;Block button&lt;/a&gt;</code></pre>
+</div>
+
+<h3>Priority modifiers</h3>
+
+<div class="docs-example">
+  <a href="#" class="Button Button--primary">Primary</a>
+  <a href="#" class="Button Button--secondary">Secondary</a>
+  <a href="#" class="Button Button--basic">Basic</a>
+  <a href="#" class="Button Button--hover">Hover</a>
+  <a href="#" class="Button Button--link">Link</a>
+  <a href="#" class="Button Button--success">Success</a>
+  <a href="#" class="Button Button--error">Error</a>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button Button--primary&quot;&gt;Primary&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--secondary&quot;&gt;Secondary&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--basic&quot;&gt;Basic&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--hover&quot;&gt;Hover&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--link&quot;&gt;Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--success&quot;&gt;Success&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--error&quot;&gt;Error&lt;/a&gt;</code></pre>
+</div>
+
+<h3>Icon buttons</h3>
+<div class="docs-example">
+  <a href="#" class="Button Button--icon">{{ icon('gear') }}</a>
+  <a href="#" class="Button Button--wIcon">Dropdown {{ icon('chevron-down') }}</a>
+</div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

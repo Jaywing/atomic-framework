@@ -67,7 +67,7 @@
       "category": "Common",
       "section": "core",
       "items": [
-        { "id": "button", "title": "Button", "section": "core", "ready": false },
+        { "id": "button", "title": "Button", "section": "core", "ready": true },
         { "id": "icon", "title": "Icon", "section": "core", "ready": true },
         { "id": "panel", "title": "Panel", "section": "core", "ready": false },
         { "id": "close", "title": "Close", "section": "core", "ready": false },

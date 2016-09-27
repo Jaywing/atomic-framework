@@ -21,9 +21,12 @@ $link-visited-hover-color:  $c-secondary-dark;
 
 $link-trans-speed:  $g-trans-link-speed;
 
+$link-underline: underline;
+
 
 a {
   @include color-swap-on-hover($link-color, $link-hover-color, $link-trans-speed);
+  text-decoration: $link-underline;
 }
 
 @if $link-visited {
