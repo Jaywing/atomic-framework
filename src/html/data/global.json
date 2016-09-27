@@ -3,7 +3,7 @@
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
-    { "id": "roadmap", "title": "Roadmap", "ready": true }
+    { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
     {
@@ -16,7 +16,8 @@
         { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": true },
         { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": false },
         { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },
-        { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false }
+        { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false },
+        { "id": "support", "title": "Browser & device support", "section": "getting-started", "ready": false }
       ]
     },
     {
@@ -48,7 +49,7 @@
       "items": [
         { "id": "list", "title": "List", "section": "core", "ready": true },
         { "id": "table", "title": "Table", "section": "core", "ready": true },
-        { "id": "form", "title": "Form", "section": "core", "ready": false },
+        { "id": "form", "title": "Form", "section": "core", "ready": true },
         { "id": "definition", "title": "Definition", "section": "core", "ready": true }
       ]
     },
@@ -56,7 +57,7 @@
       "category": "Navigation",
       "section": "core",
       "items": [
-        { "id": "menu", "title": "Menu", "section": "core", "ready": false },
+        { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumb", "title": "Breadcrumb", "section": "core", "ready": false },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
@@ -67,13 +68,90 @@
       "section": "core",
       "items": [
         { "id": "button", "title": "Button", "section": "core", "ready": false },
-        { "id": "icon", "title": "Icon", "section": "core", "ready": false },
+        { "id": "icon", "title": "Icon", "section": "core", "ready": true },
         { "id": "panel", "title": "Panel", "section": "core", "ready": false },
         { "id": "close", "title": "Close", "section": "core", "ready": false },
         { "id": "badge", "title": "Badge", "section": "core", "ready": false },
         { "id": "alert", "title": "Alert", "section": "core", "ready": false },
         { "id": "overlay", "title": "Overlay", "section": "core", "ready": false }
       ]
+    },
+    {
+      "category": "Modules",
+      "section": "core",
+      "items": [
+        { "id": "cookie-msg", "title": "Cookie message", "section": "core", "ready": false }
+      ]
     }
+  ],
+  "icons": [
+    { "id": "archive" },
+    { "id": "arrow-down" },
+    { "id": "arrow-left" },
+    { "id": "arrow-right" },
+    { "id": "arrow-up" },
+    { "id": "bell" },
+    { "id": "calendar" },
+    { "id": "camera" },
+    { "id": "cart" },
+    { "id": "chart" },
+    { "id": "check" },
+    { "id": "chevron-down" },
+    { "id": "chevron-left" },
+    { "id": "chevron-right" },
+    { "id": "chevron-up" },
+    { "id": "clock" },
+    { "id": "close" },
+    { "id": "close-o" },
+    { "id": "comment" },
+    { "id": "credit-card" },
+    { "id": "envelope" },
+    { "id": "exclamation" },
+    { "id": "external-link" },
+    { "id": "eye" },
+    { "id": "gear" },
+    { "id": "heart" },
+    { "id": "image" },
+    { "id": "like" },
+    { "id": "link" },
+    { "id": "location" },
+    { "id": "lock" },
+    { "id": "minus" },
+    { "id": "navicon" },
+    { "id": "paperclip" },
+    { "id": "pencil" },
+    { "id": "play" },
+    { "id": "plus" },
+    { "id": "pointer" },
+    { "id": "question" },
+    { "id": "redo" },
+    { "id": "refresh" },
+    { "id": "retweet" },
+    { "id": "sc-facebook" },
+    { "id": "sc-github" },
+    { "id": "sc-google-plus" },
+    { "id": "sc-instagram" },
+    { "id": "sc-linkedin" },
+    { "id": "sc-pinterest" },
+    { "id": "sc-skype" },
+    { "id": "sc-soundcloud" },
+    { "id": "sc-telegram" },
+    { "id": "sc-tumblr" },
+    { "id": "sc-twitter" },
+    { "id": "sc-vimeo" },
+    { "id": "sc-youtube" },
+    { "id": "search" },
+    { "id": "share-apple" },
+    { "id": "share-google" },
+    { "id": "spinner" },
+    { "id": "spinner-2" },
+    { "id": "spinner-3" },
+    { "id": "star" },
+    { "id": "tag" },
+    { "id": "trash" },
+    { "id": "trophy" },
+    { "id": "undo" },
+    { "id": "unlock" },
+    { "id": "user" }
   ]
 }

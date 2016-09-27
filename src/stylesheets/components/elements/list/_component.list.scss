@@ -1,36 +1,3 @@
-$list-block-spacing: $g-spacer-sm;
-$list-border: 1px solid $c-very-strong-trans-dark;
-
-%list-block-border {
-  border: $list-border;
-  border-bottom: 0;
-}
-
-.List {
-  @include reset-list;
-}
-
-.List--block {
-  border-bottom: $list-border;
-
-  a {
-    display: block;
-    padding: $list-block-spacing;
-    text-decoration: none;
-  }
-
-  > li {
-    @extend %list-block-border;
-
-    padding: $list-block-spacing;
-
-    > a {
-      margin: -($list-block-spacing); // reset container padding
-    }
-  }
-
-  > a {
-    @extend %list-block-border;
-  }
-
-}
+@import 'component.list.definition';
+@import 'component.list.block';
+@import 'component.list.divider';

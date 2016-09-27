@@ -48,7 +48,7 @@
 @import 'base/base'; // Un-classed common common
 
 // * Icons (from the generated font)
-@import 'generated/generated.icons';
+//@import 'generated/generated.icons'; // not needed - use svgSprite
 
 // * Objects
 @import 'components/objects/site/object.site';
@@ -63,9 +63,11 @@
 @import 'components/elements/definition/component.definition';
 @import 'components/elements/list/component.list';
 @import 'components/elements/table/component.table';
+@import 'components/elements/form/component.form';
 
 // * Common Components
 @import 'components/common/button/component.button';
+@import 'components/common/icon/component.icon';
 
 // * Navigation Components
 @import 'components/navigation/nav/component.nav';

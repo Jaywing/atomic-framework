@@ -1,29 +1,30 @@
-{% from 'macros/helpers.html' import sprite %}
-
 
 {% macro navItem(id, title, active='index', ready=false) %}
-  <li class="Nav-item{% if id == active %} is-active{% endif %}">
-    {% if ready %}<a href="{{id}}.html" class="Nav-link">{{title}}</a>{% else %}<span class="Nav-link textMuted">{{title}}</span>{% endif %}
+  <li class="Menu-item{% if id == active %} is-active{% endif %}">
+    <a{% if ready %} href="{{id}}.html" class="Menu-link"{% else %} class="Menu-link textMuted"{% endif %}>{{title}}</a>
   </li>
 {% endmacro %}
 
-<nav class="Nav" data-module="Sticky">
+<nav data-module="Sticky">
 
-  <ul>
+  <ul class="Menu Menu--vertical">
 
     {% for cat in docs_pages %}
 
       {% if cat.section == sectionid %}
 
-        {% if cat.category != "" %}
-          <li class="Nav-item Nav-header">{{ cat.category }}</li>
-        {% endif %}
-
-        {% for comp in cat.items %}
-          {% if comp.section == sectionid %}
-            {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+        <li class="Menu-item">
+          {% if cat.category != "" %}<strong class="Menu-title">{{ cat.category }}</strong>{% endif %}
+          {% if cat.items %}
+            <ul class="Menu Menu--vertical Menu--flush">
+              {% for comp in cat.items %}
+                {% if comp.section == sectionid %}
+                  {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+                {% endif %}
+              {% endfor %}
+            </ul>
           {% endif %}
-        {% endfor %}
+        </li>
 
       {% endif %}
 

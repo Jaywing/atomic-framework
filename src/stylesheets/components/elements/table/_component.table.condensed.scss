@@ -1,0 +1,9 @@
+$table-condensed-cell-padding: $g-spacer-xs;
+
+.Table--condensed {
+
+  td,
+  th {
+    padding: $table-condensed-cell-padding;
+  }
+}

@@ -3,15 +3,16 @@
   background: rgba(0, 0, 0, .05);
 
   &--bordered {
-    border: 1px solid rgba(0,0,0,.25);
+    border: 1px solid rgba(0, 0, 0, .25);
+
     > * {
-      border: 1px solid rgba(0,0,0,.5);
+      border: 1px solid rgba(0, 0, 0, .5);
     }
   }
 
   &--parent {
     > * {
-      background: rgba(0,0,0,.05);
+      background: rgba(0, 0, 0, .05);
     }
   }
 }

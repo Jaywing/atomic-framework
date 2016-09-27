@@ -1,0 +1,14 @@
+$list-divider-border: $list-border;
+$list-divider-padding: $g-spacer-xs 0;
+
+.List--divider {
+
+  > li {
+    border-bottom: $list-divider-border;
+    padding: $list-divider-padding;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

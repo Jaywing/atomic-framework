@@ -14,7 +14,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">List</h1>
-<p class="Article-lead"></p>
+<p class="Article-lead">Easily create nicely looking lists, which come in different styles</p>
 
 <hr>
 
@@ -84,7 +84,21 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
+<h4>List divider (.List--divider)</h4>
 
+<div class="docs-example">
+  <ul class="List List--divider">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;ul class=&quot;List List--divider&quot;&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
 
 {% endblock %}
 

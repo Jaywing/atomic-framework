@@ -32,6 +32,7 @@
     "chai": "3.5.0",
     "compression": "1.6.1",
     "del": "2.2.0",
+    "domtastic": "^0.12.1",
     "express": "4.13.4",
     "gel-sass-tools": "^1.1.0",
     "gel-typography": "^2.0.2",
@@ -99,6 +100,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eqcss": "^1.2.2",
     "es6y-throttle": "^1.0.1",
     "normalize.css": "^4.0.0",
     "sticky-js": "^1.0.7",

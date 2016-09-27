@@ -1,0 +1,41 @@
+$icon-size-sm:  18px;
+$icon-size:     25px;
+$icon-size-lg:  44px;
+$icon-size-xl:  60px;
+$icon-size-xxl: 88px;
+
+$icon-spin-ani-time: 1.25s;
+$icon-spin-ani-type: ease;
+
+.Icon {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  vertical-align: middle;
+
+  &--lg {
+    width: $icon-size-lg;
+    height: $icon-size-lg;
+  }
+
+  &--sm {
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+
+  &--xl {
+    width: $icon-size-xl;
+    height: $icon-size-xl;
+  }
+
+  &--xxl {
+    width: $icon-size-xxl;
+    height: $icon-size-xxl;
+  }
+
+  &--spin {
+    display: inline-block;
+    animation: spin $icon-spin-ani-time infinite $icon-spin-ani-type;
+  }
+
+}

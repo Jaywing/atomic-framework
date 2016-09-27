@@ -39,4 +39,8 @@ dl {
   dt {
     font-weight: $dt-font-weight;
   }
+
+  dd {
+    margin: 0;
+  }
 }
