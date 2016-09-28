@@ -1,0 +1,30 @@
+//Horizontal DL
+$ddh-margin: 0 0 $g-spacer-sm;
+$ddh-delimiter-padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
+
+//Horizontal list variant
+.Definition--horizontal {
+  @include clearfix;
+
+  dt {
+    margin: 0;
+    float: left;
+    width: 5rem;
+    margin-right: 1rem;
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::after {
+      content: ':';
+      padding: $ddh-delimiter-padding;
+    }
+  }
+
+  dd {
+    margin: $ddh-margin;
+    list-style: none;
+    padding-left: 6rem;
+  }
+}
