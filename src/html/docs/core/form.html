@@ -202,13 +202,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <div class="Form-row">
         <span class="Form-label">Radio input</span>
         <div class="Form-controls">
-          <input type="radio" id="Form-s-r">
+          <input type="radio" id="Form-s-r" name="radio">
           <label for="Form-s-r">Radio</label>
           <br>
-          <input type="radio" id="Form-s-r1">
+          <input type="radio" id="Form-s-r1" name="radio">
           <label for="Form-s-r1">1</label>
-          <label><input type="radio"> 2</label>
-          <label><input type="radio"> 3</label>
+          <label><input type="radio" name="radio"> 2</label>
+          <label><input type="radio" name="radio"> 3</label>
         </div>
       </div>
       <div class="Form-row">
@@ -277,13 +277,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <div class="Form-row">
         <span class="Form-label">Radio input</span>
         <div class="Form-controls">
-          <input type="radio" id="Form-s-r">
+          <input type="radio" id="Form-s-r" name="radio">
           <label for="Form-s-r">Radio</label>
           <br>
-          <input type="radio" id="Form-s-r1">
+          <input type="radio" id="Form-s-r1" name="radio">
           <label for="Form-s-r1">1</label>
-          <label><input type="radio"> 2</label>
-          <label><input type="radio"> 3</label>
+          <label><input type="radio" name="radio"> 2</label>
+          <label><input type="radio" name="radio"> 3</label>
         </div>
       </div>
       <div class="Form-row">
@@ -377,15 +377,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <div class="Form-icon">
-      {{ icon('calendar') }}
+      {{ icon('calendar', '0 0 1 1', 'Icon--sm') }}
       <input type="text" placeholder="">
     </div>
     <div class="Form-icon">
-      {{ icon('gear') }}
+      {{ icon('gear', '0 0 1 1', 'Icon--sm') }}
       <input type="text" placeholder="">
     </div>
     <div class="Form-icon Form-icon--flip">
-      {{ icon('gear') }}
+      {{ icon('gear', '0 0 1 1', 'Icon--sm') }}
       <input type="text" placeholder="">
     </div>
   </form>
