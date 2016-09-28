@@ -26,7 +26,7 @@ $button-error-trans-speed: $g-trans-link-speed;
 
   &[disabled] {
     background: lighten($button-error-bg, 15%);
-    color: rgba($button-error-color, 0.8);
+    color: rgba($button-error-color, .8);
   }
 
   svg {
