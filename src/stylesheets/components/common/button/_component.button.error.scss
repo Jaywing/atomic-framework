@@ -15,9 +15,22 @@ $button-error-trans-speed: $g-trans-link-speed;
     );
   }
 
+  &.is-active {
+    background: darken($button-error-hover-bg, 5%);
+
+    &:hover,
+    &:focus {
+      background: darken($button-error-hover-bg, 5%);
+    }
+  }
+
   &[disabled] {
     background: lighten($button-error-bg, 15%);
     color: rgba($button-error-color, 0.8);
+  }
+
+  svg {
+    fill: $button-error-color;
   }
 
 }

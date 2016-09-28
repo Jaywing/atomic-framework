@@ -11,13 +11,24 @@
 ////
 
 $button-hover-hover-bg: $c-light-30;
+$button-hover-color: $base-text-color;
 
 .Button--hover {
   &:not([disabled]) {
     @include color-swap-on-hover(transparent, $button-hover-hover-bg, $g-trans-link-speed, true);
   }
 
+  &.is-active {
+    background: darken($button-hover-hover-bg, 10%);
+
+    &:hover,
+    &:focus {
+      background: darken($button-hover-hover-bg, 10%);
+    }
+  }
+
   &[disabled] {
     background: transparent;
+    color: rgba($button-hover-color, .65);
   }
 }

@@ -32,7 +32,19 @@ $button-primary-trans-speed:      $button-trans-speed;
             $button-primary-color-hover $button-primary-bg-color-hover,
             $button-primary-trans-speed
     );
+
     &:active {
+      background-color: $button-primary-bg-color-active;
+      color: $button-primary-color-active;
+    }
+  }
+
+  &.is-active {
+    background-color: $button-primary-bg-color-active;
+    color: $button-primary-color-active;
+
+    &:hover,
+    &:focus {
       background-color: $button-primary-bg-color-active;
       color: $button-primary-color-active;
     }
@@ -41,6 +53,10 @@ $button-primary-trans-speed:      $button-trans-speed;
   &[disabled] {
     background: lighten($button-primary-bg-color, 15%);
     color: rgba($button-primary-color, .65);
+  }
+
+  svg {
+    fill: $button-primary-color;
   }
 
 }

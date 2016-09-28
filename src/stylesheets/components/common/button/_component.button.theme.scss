@@ -22,7 +22,7 @@ $button-color:            $c-dark-30;
 $button-bg-color-hover:   lighten($c-light-30, 5%);
 $button-color-hover:      $c-dark-15;
 
-$button-bg-color-active:  darken($button-bg-color-hover, 5%);
+$button-bg-color-active:  darken($button-bg-color-hover, 20%);
 $button-color-active:     $c-dark;
 
 
@@ -41,13 +41,24 @@ $button-color-active:     $c-dark;
   font-weight: $button-font-weight;
   border-radius: $button-radius;
 
-  &:active {
+  &:active,
+  &.is-active {
     background-color: $button-bg-color-active;
     color: $button-color-active;
+
+    &:hover,
+    &:focus {
+      background-color: $button-bg-color-active;
+      color: $button-color-active;
+    }
   }
 
   &[disabled] {
     cursor: not-allowed;
+  }
+
+  svg {
+    fill: $button-color;
   }
 
 }

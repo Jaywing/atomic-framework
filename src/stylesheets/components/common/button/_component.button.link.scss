@@ -16,4 +16,8 @@ $button-link-underline: $link-underline;
     color: lighten($button-link-color, 15%);
     text-decoration: none;
   }
+
+  svg {
+    fill: $button-link-color;
+  }
 }
