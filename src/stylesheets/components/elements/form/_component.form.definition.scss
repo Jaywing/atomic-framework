@@ -116,6 +116,10 @@ $form-label-weight: $g-weight-bold;
   }
 }
 
+.Form-width-1-1 {
+  width: 100%;
+}
+
 @include md {
   .Form-horizontal {
 

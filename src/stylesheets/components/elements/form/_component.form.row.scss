@@ -1,0 +1,5 @@
+$form-row-margin: $g-spacer 0 0 0;
+
+.Form-row + .Form-row {
+  margin: $form-row-margin;
+}
