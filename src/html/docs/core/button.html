@@ -106,7 +106,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Loading submit button</h4>
 <p>The button module can also be used with the '.Button--loading' component modifier to create a button that, when clicked shows a loading spinner icon. After this the button can not be toggled back.</p>
 <div class="docs-example">
-  <button class="Button Button--loading Button--primary" data-module="Button">
+  <button class="Button Button--loading Button--primary" data-module="Button" data-button-once>
     <span class="Button-text">Submit me</span>
     {{ icon('spinner', '0 0 1 1', 'Icon--spin') }}
   </button>

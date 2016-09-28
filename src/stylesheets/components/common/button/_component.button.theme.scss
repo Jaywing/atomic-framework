@@ -27,6 +27,11 @@ $button-color-active:     $c-dark;
 
 
 .Button {
+  text-align: center;
+  text-decoration: none;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  border-radius: $button-radius;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
@@ -35,11 +40,6 @@ $button-color-active:     $c-dark;
             $button-trans-speed
     );
   }
-  text-align: center;
-  text-decoration: none;
-  font-family: $button-font-family;
-  font-weight: $button-font-weight;
-  border-radius: $button-radius;
 
   &:active,
   &.is-active {

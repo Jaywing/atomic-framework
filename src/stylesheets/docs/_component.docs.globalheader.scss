@@ -5,17 +5,21 @@ $doc-globalheader-bg: $c-jaywing-dark;
 
   .Button--hover {
     margin: 0;
+  }
 
-    &:not([disabled]) {
+  .Button--hover:not([disabled]) {
 
-      color: $c-light-15;
+    color: $c-light-15;
 
-      &:hover,
-      &:focus {
-        background: $c-light-15;
-        color: $c-dark-15;
-      }
+    &:hover,
+    &:focus {
+      background: $c-light-15;
+      color: $c-dark-15;
     }
+  }
+
+  .Button--hover[disabled] {
+    color: rgba($c-light, .33);
   }
 
   .is-active {
