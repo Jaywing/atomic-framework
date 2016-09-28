@@ -4,6 +4,8 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
+{% from 'macros/helpers.html' import icon %}
+
 {% set pageid = 'form' %}
 {% set sectionid = 'core' %}
 
@@ -39,21 +41,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;form class="Form"&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Form legend&lt;/legend&gt;
-        &lt;input type="text" placeholder="Text input"&gt;
-        &lt;input type="password" placeholder="Password input"&gt;
-        &lt;select&gt;
-          &lt;option&gt;Option 01&lt;/option&gt;
-          &lt;option&gt;Option 02&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;button class="Button">Button&lt;/button&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Checkbox&lt;/label&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  </code></pre>
+<pre><code class="html">&lt;form class="Form"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Form legend&lt;/legend&gt;
+    &lt;input type="text" placeholder="Text input"&gt;
+    &lt;input type="password" placeholder="Password input"&gt;
+    &lt;select&gt;
+      &lt;option&gt;Option 01&lt;/option&gt;
+      &lt;option&gt;Option 02&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button class="Button">Button&lt;/button&gt;
+    &lt;label&gt;&lt;input type="checkbox"&gt; Checkbox&lt;/label&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
 <h4>Rows</h4>
@@ -85,19 +85,17 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;form class="Form"&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;...&lt;/legend&gt;
-        &lt;div class="Form-row"&gt;
-          ...
-        &lt;/div&gt;
-        &lt;div class="Form-row"&gt;
-          ...
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  </code></pre>
+<pre><code class="html">&lt;form class="Form"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;...&lt;/legend&gt;
+    &lt;div class="Form-row"&gt;
+      ...
+    &lt;/div&gt;
+    &lt;div class="Form-row"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
 <h2>Control states</h2>
@@ -117,9 +115,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;input type="text" placeholder="" disabled"&gt;
-  </code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" disabled"&gt;</code></pre>
 </div>
 
 <h4>Validation states</h4>
@@ -134,10 +130,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;input type="text" placeholder="Form-danger" class="Form-danger"&gt;
-    &lt;input type="text" placeholder="Form-success" class="Form-success"&gt;
-  </code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="Form-danger" class="Form-danger"&gt;
+&lt;input type="text" placeholder="Form-success" class="Form-success"&gt;</code></pre>
 </div>
 
 <h2>Control modifiers</h2>
@@ -153,9 +147,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;input type="text" placeholder="" class="Form-blank"&gt;
-  </code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="Form-blank"&gt;</code></pre>
 </div>
 
 <h4>Width modifiers</h4>
@@ -163,15 +155,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <input type="text" placeholder="Text input" class="Form-width-1-1">
+      <input type="text" placeholder="width-100" class="Form-width-100">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
-  </code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="Form-width-100"&gt;</code></pre>
 </div>
 
 <h2>Layout modifiers</h2>
@@ -241,16 +231,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;form class="Form Form-stacked"&gt;
-      &lt;fieldset&gt;
-        &lt;div class="Form-row"&gt;
-          &lt;label class="Form-label"&gt;...&lt;/label&gt;
-          &lt;div class="Form-controls"&gt;...&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  </code></pre>
+<pre><code class="html">&lt;form class="Form Form-stacked"&gt;
+  &lt;fieldset&gt;
+    &lt;div class="Form-row"&gt;
+      &lt;label class="Form-label"&gt;...&lt;/label&gt;
+      &lt;div class="Form-controls"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
 <h4>Form horizontal</h4>
@@ -318,39 +306,37 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;form class="Form Form-horizontal"&gt;
-      &lt;fieldset&gt;
-        &lt;div class="Form-row"&gt;
-          &lt;label class="Form-label"&gt;...&lt;/label&gt;
-          &lt;div class="Form-controls"&gt;...&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  </code></pre>
+<pre><code class="html">&lt;form class="Form Form-horizontal"&gt;
+  &lt;fieldset&gt;
+    &lt;div class="Form-row"&gt;
+      &lt;label class="Form-label"&gt;...&lt;/label&gt;
+      &lt;div class="Form-controls"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
-<h4>Form and grid</h4>
+<h2>Form and grid</h2>
 
 <div class="docs-example">
   <form class="Form">
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell o-Size--1of2">
-        <input type="text" placeholder="50" class="Form-width-1-1">
+        <input type="text" placeholder="50" class="Form-width-100">
       </div>
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-width-1-1">
+        <input type="text" placeholder="Auto" class="Form-width-100">
       </div>
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-width-1-1">
+        <input type="text" placeholder="Auto" class="Form-width-100">
       </div>
     </div>
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-width-1-1">
+        <input type="text" placeholder="Auto" class="Form-width-100">
       </div>
       <div class="o-Grid-cell o-Size--1of3">
-        <select class="Form-width-1-1">
+        <select class="Form-width-100">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
@@ -360,32 +346,56 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">
-    &lt;form class="Form"&gt;
-      &lt;div class="o-Grid o-Grid--gutters"&gt;
-        &lt;div class="o-Grid-cell o-Size--1of2"&gt;
-          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
-        &lt;/div&gt;
-        &lt;div class="o-Grid-cell"&gt;
-          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
-        &lt;/div&gt;
-        &lt;div class="o-Grid-cell"&gt;
-          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="o-Grid o-Grid--gutters"&gt;
-        &lt;div class="o-Grid-cell"&gt;
-          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
-        &lt;/div&gt;
-        &lt;div class="o-Grid-cell o-Size--1of3"&gt;
-          &lt;select class="Form-width-1-1"&gt;
-            &lt;option&gt;Option 01&lt;/option&gt;
-            &lt;option&gt;Option 02&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  </code></pre>
+<pre><code class="html">&lt;form class="Form"&gt;
+  &lt;div class="o-Grid o-Grid--gutters"&gt;
+    &lt;div class="o-Grid-cell o-Size--1of2"&gt;
+      &lt;input type="text" placeholder="" class="Form-width-100"&gt;
+    &lt;/div&gt;
+    &lt;div class="o-Grid-cell"&gt;
+      &lt;input type="text" placeholder="" class="Form-width-100"&gt;
+    &lt;/div&gt;
+    &lt;div class="o-Grid-cell"&gt;
+      &lt;input type="text" placeholder="" class="Form-width-100"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="o-Grid o-Grid--gutters"&gt;
+    &lt;div class="o-Grid-cell"&gt;
+      &lt;input type="text" placeholder="" class="Form-width-100"&gt;
+    &lt;/div&gt;
+    &lt;div class="o-Grid-cell o-Size--1of3"&gt;
+      &lt;select class="Form-width-100"&gt;
+        &lt;option&gt;Option 01&lt;/option&gt;
+        &lt;option&gt;Option 02&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+<h2>Form and icons</h2>
+
+<div class="docs-example">
+  <form class="Form">
+    <div class="Form-icon">
+      {{ icon('calendar') }}
+      <input type="text" placeholder="">
+    </div>
+    <div class="Form-icon">
+      {{ icon('gear') }}
+      <input type="text" placeholder="">
+    </div>
+    <div class="Form-icon Form-icon--flip">
+      {{ icon('gear') }}
+      <input type="text" placeholder="">
+    </div>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class="Form-icon"&gt;
+  &#123;{ icon('calendar') }&#125;
+  &lt;input type="text" placeholder=""&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 {% endblock %}
