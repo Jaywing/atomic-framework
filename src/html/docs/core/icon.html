@@ -24,6 +24,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>Drop icon svgs in the 'icon' folder in 'src' and they are automatically added to the sprite, it's location is indexed with a reference that matches its filename.</p>
 
+<p>You need to add the helper macro to the top of your HTML.</p>
+
+<pre><code class="html">&#123;% from 'macros/helpers.html' import icon %&#125;</code></pre>
+
 <p>You can then use 'icon' macro (located in the 'src/html/macros/helpers.html' file.</p>
 
 <div class="docs-code">
