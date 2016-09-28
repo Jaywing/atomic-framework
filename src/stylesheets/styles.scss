@@ -48,7 +48,7 @@
 @import 'base/base'; // Un-classed common common
 
 // * Icons (from the generated font)
-@import 'generated/generated.icons';
+//@import 'generated/generated.icons'; // not needed - use svgSprite
 
 // * Objects
 @import 'components/objects/site/object.site';
@@ -67,6 +67,7 @@
 
 // * Common Components
 @import 'components/common/button/component.button';
+@import 'components/common/icon/component.icon';
 
 // * Navigation Components
 @import 'components/navigation/nav/component.nav';
@@ -79,7 +80,7 @@
 // @import 'trumps/trump.border';
 // @import 'trumps/trump.color';
 // @import 'trumps/trump.typography';
-// @import 'trumps/trump.visibility';
+@import 'trumps/trump.visibility';
 // @import 'trumps/trump.font-size';
 // @import 'trumps/trump.grid';
 // @import 'trumps/trump.misc';

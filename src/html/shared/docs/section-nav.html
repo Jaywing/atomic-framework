@@ -2,9 +2,9 @@
 {% macro navbarItem(id, title, active, ready) %}
 <li class="Menu-item{% if id == active %} is-active{% endif %}">
   {% if ready %}
-    <a href="/docs/{{id}}" class="Button Button--hover Button--primary">{{title}}</a>
+    <a href="/docs/{{id}}" class="Button Button--hover">{{title}}</a>
   {% else %}
-    <span class="Button Button--hover Button--disabled">{{title}}</span>
+    <button class="Button Button--hover" disabled>{{title}}</button>
   {% endif %}
 </li>
 {% endmacro %}

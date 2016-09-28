@@ -39,13 +39,25 @@
 
 // screen readers only
 .srOnly {
-  @include hide-visually;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 // allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
 .srOnly--focusable:active,
 .srOnly--focusable:focus {
-  @include hide-visually(true);
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 
 // Print visibility class

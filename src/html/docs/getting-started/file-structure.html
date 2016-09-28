@@ -16,8 +16,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h1 class="Article-title">File structure</h1>
 <p class="Article-lead">An overview of the top-level file structure of Atomic</p>
 
-<pre>
-gulpfile.js/       # directory for all gulp tasks and settings
+<div class="docs-example">
+<pre>gulpfile.js/       # directory for all gulp tasks and settings
 |-- lib/           # library of helper scripts and setting for gulp tasks
 |-- tasks/         # each gulp task has its own script in here
 |-- config.json    # main config file for gulp tasks, if a task has no config in here, it wont run
@@ -30,9 +30,8 @@ src/               # directory for all the projects source files
 |-- static         # favicons, app images etc. Gets transferred to root of public
 |-- stylesheets    # all the scss files
 .travis.yml        # example config for travis-ci (continuous integration tool)
-karma.conf.js      # config for karma js testing tools
-
-</pre>
+karma.conf.js      # config for karma js testing tools</pre>
+</div>
 
 
 {% endblock %}

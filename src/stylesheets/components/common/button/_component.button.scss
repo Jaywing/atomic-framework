@@ -11,11 +11,13 @@
 ////
 
 @import 'component.button.definition';
-
+@import 'component.button.sizes';
 @import 'component.button.theme';
-
-@import 'component.button-primary.theme';
-@import 'component.button-secondary.theme';
-@import 'component.button-basic.theme';
-
+@import 'component.button.primary';
+@import 'component.button.secondary';
+@import 'component.button.basic';
 @import 'component.button.hover';
+@import 'component.button.link';
+@import 'component.button.success';
+@import 'component.button.error';
+@import 'component.button.icon';

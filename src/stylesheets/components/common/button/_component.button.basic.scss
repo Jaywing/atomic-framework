@@ -21,28 +21,53 @@ $button-basic-color-hover:      darken($button-basic-color, 10%);
 $button-basic-box-shadow-active:$button-basic-box-shadow-hover;
 $button-basic-color-active:     $button-basic-color-hover;
 
-$button-basic-bg-color-active:  $c-trans-dark;
+$button-basic-bg-color-active:  $c-very-strong-trans-dark;
 $button-basic-trans-speed:      $button-trans-speed;
 
 
 .Button--basic {
 
-  @include color-swap-on-hover(
-          $button-basic-color $button-basic-bg-color,
-          $button-basic-color-hover $button-basic-bg-color-hover,
-          $button-basic-trans-speed
-  );
-
   box-shadow: $button-basic-box-shadow;
 
-  &:hover,
-  &:focus {
-    box-shadow: $button-basic-box-shadow-hover;
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-basic-color $button-basic-bg-color,
+            $button-basic-color-hover $button-basic-bg-color-hover,
+            $button-basic-trans-speed
+    );
+
+    &:hover,
+    &:focus {
+      box-shadow: $button-basic-box-shadow-hover;
+    }
+
+    &:active {
+      color: $button-basic-color-active;
+      box-shadow: $button-basic-box-shadow-active;
+      background: $button-basic-bg-color-active;
+    }
   }
 
-  &:active {
+  &.is-active {
     color: $button-basic-color-active;
     box-shadow: $button-basic-box-shadow-active;
     background: $button-basic-bg-color-active;
+
+    &:hover,
+    &:focus {
+      color: $button-basic-color-active;
+      box-shadow: $button-basic-box-shadow-active;
+      background: $button-basic-bg-color-active;
+    }
+  }
+
+  &[disabled] {
+    @include color-swap-on-hover(
+            rgba($button-basic-color, .65),
+            rgba($button-basic-color, .65),
+            $button-basic-trans-speed
+    );
+
+    color: rgba($button-basic-color, .65);
   }
 }

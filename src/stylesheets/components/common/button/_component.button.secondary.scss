@@ -23,13 +23,39 @@ $button-secondary-trans-speed:      $button-trans-speed;
 
 
 .Button--secondary {
-  @include color-swap-on-hover(
-          $button-secondary-color $button-secondary-bg-color,
-          $button-secondary-color-hover $button-secondary-bg-color-hover,
-          $button-secondary-trans-speed
-  );
-  &:active {
+
+  border-color: $button-secondary-bg-color;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-secondary-color $button-secondary-bg-color,
+            $button-secondary-color-hover $button-secondary-bg-color-hover,
+            $button-secondary-trans-speed
+    );
+
+    &:active {
+      background-color: $button-secondary-bg-color-active;
+      color: $button-secondary-color-active;
+    }
+  }
+
+  &.is-active {
     background-color: $button-secondary-bg-color-active;
     color: $button-secondary-color-active;
+
+    &:hover,
+    &:focus {
+      background-color: $button-secondary-bg-color-active;
+      color: $button-secondary-color-active;
+    }
+  }
+
+  &[disabled] {
+    background: lighten($button-secondary-bg-color, 15%);
+    color: rgba($button-secondary-color, .65);
+  }
+
+  svg {
+    fill: $button-secondary-color;
   }
 }
