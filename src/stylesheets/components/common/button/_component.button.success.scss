@@ -26,7 +26,7 @@ $button-success-hover-bg: darken($button-success-bg, 10%);
 
   &[disabled] {
     background: lighten($button-success-bg, 15%);
-    color: rgba($button-success-color, 0.8);
+    color: rgba($button-success-color, .8);
   }
 
   svg {
