@@ -25,7 +25,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <legend>Form legend</legend>
+      <legend>Form</legend>
       <input type="text" placeholder="Text input">
       <input type="password" placeholder="Password input">
       <select>
@@ -38,22 +38,354 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </form>
 </div>
 
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;form class="Form"&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Form legend&lt;/legend&gt;
+        &lt;input type="text" placeholder="Text input"&gt;
+        &lt;input type="password" placeholder="Password input"&gt;
+        &lt;select&gt;
+          &lt;option&gt;Option 01&lt;/option&gt;
+          &lt;option&gt;Option 02&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button class="Button">Button&lt;/button&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Checkbox&lt;/label&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  </code></pre>
+</div>
+
+<h4>Rows</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <legend>Form</legend>
+      <div class="Form-row">
+        <input type="text" placeholder="Text input">
+      </div>
+      <div class="Form-row">
+        <input type="password" placeholder="Password input">
+      </div>
+      <div class="Form-row">
+        <select>
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+      <div class="Form-row">
+        <button class="Button">Button</button>
+      </div>
+      <div class="Form-row">
+        <label><input type="checkbox"> Checkbox</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;form class="Form"&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;...&lt;/legend&gt;
+        &lt;div class="Form-row"&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class="Form-row"&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  </code></pre>
+</div>
+
+<h2>Control states</h2>
+
+<h4>Disabled</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <input type="text" placeholder="Text input" disabled>
+      <select disabled>
+        <option>Option 01</option>
+        <option>Option 02</option>
+      </select>
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;input type="text" placeholder="" disabled"&gt;
+  </code></pre>
+</div>
+
 <h4>Validation states</h4>
 
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <legend>Form legend</legend>
-      <input type="text" placeholder="Text input">
-      <input type="password" placeholder="Password input">
-      <select>
-        <option>Option 01</option>
-        <option>Option 02</option>
-      </select>
-      <button class="Button">Button</button>
-      <label><input type="checkbox"> Checkbox</label>
+      <input type="text" placeholder="Form-danger" class="Form-danger">
+      <input type="text" placeholder="Form-success" class="Form-success">
     </fieldset>
   </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;input type="text" placeholder="Form-danger" class="Form-danger"&gt;
+    &lt;input type="text" placeholder="Form-success" class="Form-success"&gt;
+  </code></pre>
+</div>
+
+<h2>Control modifiers</h2>
+
+<h4>Form blank</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <input type="text" placeholder="Text input" class="Form-blank">
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;input type="text" placeholder="" class="Form-blank"&gt;
+  </code></pre>
+</div>
+
+<h4>Width modifiers</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <input type="text" placeholder="Text input" class="Form-width-1-1">
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
+  </code></pre>
+</div>
+
+<h2>Layout modifiers</h2>
+
+<h4>Form stacked</h4>
+
+<div class="docs-example">
+  <form class="Form Form-stacked">
+    <fieldset>
+      <legend>Form</legend>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-it">Text input</label>
+        <div class="Form-controls">
+          <input type="text" id="Form-s-it" placeholder="Text input">
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-ip">Password input</label>
+        <div class="Form-controls">
+          <input type="password" id="Form-s-ip" placeholder="Password input">
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-s">Select field</label>
+        <div class="Form-controls">
+          <select id="Form-s-s">
+            <option>Option 01</option>
+            <option>Option 02</option>
+          </select>
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-t">Textareat</label>
+        <div class="Form-controls">
+          <textarea id="Form-s-t" cols="30" rows="5" placeholder="Textarea text"></textarea>
+        </div>
+      </div>
+      <div class="Form-row">
+        <span class="Form-label">Radio input</span>
+        <div class="Form-controls">
+          <input type="radio" id="Form-s-r">
+          <label for="Form-s-r">Radio</label>
+          <br>
+          <input type="radio" id="Form-s-r1">
+          <label for="Form-s-r1">1</label>
+          <label><input type="radio"> 2</label>
+          <label><input type="radio"> 3</label>
+        </div>
+      </div>
+      <div class="Form-row">
+        <span class="Form-label">Checkbox input</span>
+        <div class="Form-controls">
+          <input type="checkbox" id="Form-s-c">
+          <label for="Form-s-c">Checkbox</label>
+          <br>
+          <input type="checkbox" id="Form-s-c1">
+          <label for="Form-s-c1">1</label>
+          <label><input type="checkbox"> 2</label>
+          <label><input type="checkbox"> 3</label>
+        </div>
+      </div>
+      <div class="Form-row">
+        <button class="Button">Button</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;form class="Form Form-stacked"&gt;
+      &lt;fieldset&gt;
+        &lt;div class="Form-row"&gt;
+          &lt;label class="Form-label"&gt;...&lt;/label&gt;
+          &lt;div class="Form-controls"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  </code></pre>
+</div>
+
+<h4>Form horizontal</h4>
+
+<div class="docs-example">
+  <form class="Form Form-horizontal">
+    <fieldset>
+      <legend>Form</legend>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-it">Text input</label>
+        <div class="Form-controls">
+          <input type="text" id="Form-s-it" placeholder="Text input">
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-ip">Password input</label>
+        <div class="Form-controls">
+          <input type="password" id="Form-s-ip" placeholder="Password input">
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-s">Select field</label>
+        <div class="Form-controls">
+          <select id="Form-s-s">
+            <option>Option 01</option>
+            <option>Option 02</option>
+          </select>
+        </div>
+      </div>
+      <div class="Form-row">
+        <label class="Form-label" for="Form-s-t">Textareat</label>
+        <div class="Form-controls">
+          <textarea id="Form-s-t" cols="30" rows="5" placeholder="Textarea text"></textarea>
+        </div>
+      </div>
+      <div class="Form-row">
+        <span class="Form-label">Radio input</span>
+        <div class="Form-controls">
+          <input type="radio" id="Form-s-r">
+          <label for="Form-s-r">Radio</label>
+          <br>
+          <input type="radio" id="Form-s-r1">
+          <label for="Form-s-r1">1</label>
+          <label><input type="radio"> 2</label>
+          <label><input type="radio"> 3</label>
+        </div>
+      </div>
+      <div class="Form-row">
+        <span class="Form-label">Checkbox input</span>
+        <div class="Form-controls">
+          <input type="checkbox" id="Form-s-c">
+          <label for="Form-s-c">Checkbox</label>
+          <br>
+          <input type="checkbox" id="Form-s-c1">
+          <label for="Form-s-c1">1</label>
+          <label><input type="checkbox"> 2</label>
+          <label><input type="checkbox"> 3</label>
+        </div>
+      </div>
+      <div class="Form-row">
+        <button class="Button">Button</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;form class="Form Form-horizontal"&gt;
+      &lt;fieldset&gt;
+        &lt;div class="Form-row"&gt;
+          &lt;label class="Form-label"&gt;...&lt;/label&gt;
+          &lt;div class="Form-controls"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  </code></pre>
+</div>
+
+<h4>Form and grid</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <div class="o-Grid o-Grid--gutters">
+      <div class="o-Grid-cell o-Size--1of2">
+        <input type="text" placeholder="50" class="Form-width-1-1">
+      </div>
+      <div class="o-Grid-cell">
+        <input type="text" placeholder="Auto" class="Form-width-1-1">
+      </div>
+      <div class="o-Grid-cell">
+        <input type="text" placeholder="Auto" class="Form-width-1-1">
+      </div>
+    </div>
+    <div class="o-Grid o-Grid--gutters">
+      <div class="o-Grid-cell">
+        <input type="text" placeholder="Auto" class="Form-width-1-1">
+      </div>
+      <div class="o-Grid-cell o-Size--1of3">
+        <select class="Form-width-1-1">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+    &lt;form class="Form"&gt;
+      &lt;div class="o-Grid o-Grid--gutters"&gt;
+        &lt;div class="o-Grid-cell o-Size--1of2"&gt;
+          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
+        &lt;/div&gt;
+        &lt;div class="o-Grid-cell"&gt;
+          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
+        &lt;/div&gt;
+        &lt;div class="o-Grid-cell"&gt;
+          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="o-Grid o-Grid--gutters"&gt;
+        &lt;div class="o-Grid-cell"&gt;
+          &lt;input type="text" placeholder="" class="Form-width-1-1"&gt;
+        &lt;/div&gt;
+        &lt;div class="o-Grid-cell o-Size--1of3"&gt;
+          &lt;select class="Form-width-1-1"&gt;
+            &lt;option&gt;Option 01&lt;/option&gt;
+            &lt;option&gt;Option 02&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  </code></pre>
 </div>
 
 {% endblock %}

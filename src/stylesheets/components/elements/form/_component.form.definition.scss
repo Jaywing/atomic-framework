@@ -1,3 +1,29 @@
+$form-height: 35px;
+$form-padding: $g-spacer-sm;
+$form-bg: #fff;
+$form-border: 1px solid #e5e5e5;
+
+$form-disabled-bg: #fafafa;
+$form-disabled-border: 1px solid #e5e5e5;
+$form-disabled-color: #999;
+
+$form-color: $c-dark;
+
+$form-danger-bg: #fff7f8 !important;
+$form-danger-border-color: #dc8d99 !important;
+$form-danger-color: #d85030 !important;
+
+$form-success-bg: #fafff2 !important;
+$form-success-border-color: #8ec73b !important;
+$form-success-color: #659f13 !important;
+
+$form-blank-bg: transparent !important;
+$form-blank-border-color: transparent !important;
+$form-blank-border-style: dashed !important;
+$form-blank-focus-border-color: #e5e5e5 !important;
+
+$form-label-weight: $g-weight-bold;
+
 .Form {
 
   fieldset {
@@ -35,15 +61,79 @@
   input[type=color],
   select,
   textarea {
-    height: 30px;
+    height: $form-height;
     max-width: 100%;
-    padding: $g-spacer;
-    border: 1px solid #E5E5E5;
-    background: #fff;
+    padding: $form-padding;
+    border: $form-border;
+    background: $form-bg;
+    color: $form-color;
+    @include brevier;
+
+    &:disabled {
+      border-color: $form-disabled-border;
+      background-color: $form-disabled-bg;
+      color: $form-disabled-color;
+    }
+
+  }
+
+  textarea {
+    height: auto;
   }
 
   input:not([type=radio]):not([type=checkbox]),
   select {
     vertical-align: middle;
+  }
+
+}
+
+.Form-label {
+  display: block;
+  font-weight: $form-label-weight;
+}
+
+.Form-danger {
+  border-color: $form-danger-border-color;
+  background: $form-danger-bg;
+  color: $form-danger-color;
+}
+
+.Form-success {
+  border-color: $form-success-border-color;
+  background: $form-success-bg;
+  color: $form-success-color;
+}
+
+.Form-blank {
+  border-color: $form-blank-border-color;
+  border-style: $form-blank-border-style;
+  background: $form-blank-bg;
+  outline: none;
+
+  &:focus {
+    border-color: $form-blank-focus-border-color;
+  }
+}
+
+.Form-width-1-1 {
+  width: 100%;
+}
+
+@include md {
+  .Form-horizontal {
+
+    .Form-row {
+      display: flex;
+    }
+
+    .Form-label {
+      width: 33%;
+    }
+
+    .Form-controls {
+
+    }
+
   }
 }

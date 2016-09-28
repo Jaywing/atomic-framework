@@ -16,9 +16,9 @@
 .docs-example {
   @extend %docs-block;
 
-  border: 2px solid rgba(0, 0, 0, .1);
-  background: rgba(0, 0, 0, .05);
-  padding: $g-spacer-sm;
+  //border: 2px solid rgba(0, 0, 0, .1);
+  //background: rgba(0, 0, 0, .05);
+  padding: $g-spacer-sm 0;
 
   &::before {
     content: 'Example';
