@@ -28,14 +28,16 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <form class="Form">
     <fieldset>
       <legend>Form</legend>
-      <input type="text" placeholder="Text input">
-      <input type="password" placeholder="Password input">
-      <select>
+      <input type="text" placeholder="Text input" class="Form-input">
+      <input type="password" placeholder="Password input" class="Form-input">
+      <select class="Form-select">
         <option>Option 01</option>
         <option>Option 02</option>
       </select>
       <button class="Button">Button</button>
-      <label><input type="checkbox"> Checkbox</label>
+      <label><input type="checkbox" class="Form-check"> Checkbox</label>
+      <label><input type="radio" class="Form-radio"> Radio</label>
+      <textarea cols="30" rows="5" placeholder="Textarea" class="Form-text"></textarea>
     </fieldset>
   </form>
 </div>
@@ -44,14 +46,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <pre><code class="html">&lt;form class="Form"&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Form legend&lt;/legend&gt;
-    &lt;input type="text" placeholder="Text input"&gt;
-    &lt;input type="password" placeholder="Password input"&gt;
-    &lt;select&gt;
+    &lt;input type="text" placeholder="Text input" class="Form-input"&gt;
+    &lt;input type="password" placeholder="Password input" class="Form-input"&gt;
+    &lt;select class="Form-select"&gt;
       &lt;option&gt;Option 01&lt;/option&gt;
       &lt;option&gt;Option 02&lt;/option&gt;
     &lt;/select&gt;
     &lt;button class="Button">Button&lt;/button&gt;
-    &lt;label&gt;&lt;input type="checkbox"&gt; Checkbox&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" class="Form-check"&gt; Checkbox&lt;/label&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
 </div>
@@ -63,13 +65,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <fieldset>
       <legend>Form</legend>
       <div class="Form-row">
-        <input type="text" placeholder="Text input">
+        <input type="text" placeholder="Text input" class="Form-input">
       </div>
       <div class="Form-row">
-        <input type="password" placeholder="Password input">
+        <input type="password" placeholder="Password input" class="Form-input">
       </div>
       <div class="Form-row">
-        <select>
+        <select class="Form-select">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
@@ -78,7 +80,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         <button class="Button">Button</button>
       </div>
       <div class="Form-row">
-        <label><input type="checkbox"> Checkbox</label>
+        <label><input type="checkbox" class="Form-checkbox"> Checkbox</label>
       </div>
     </fieldset>
   </form>
@@ -105,8 +107,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <input type="text" placeholder="Text input" disabled>
-      <select disabled>
+      <input type="text" placeholder="Text input" class="Form-input" disabled>
+      <select class="Form-select" disabled>
         <option>Option 01</option>
         <option>Option 02</option>
       </select>
@@ -115,7 +117,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="" disabled"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="Form-input" disabled"&gt;</code></pre>
 </div>
 
 <h4>Validation states</h4>
@@ -123,31 +125,84 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <input type="text" placeholder="Form-danger" class="Form-danger">
-      <input type="text" placeholder="Form-success" class="Form-success">
+      <input type="text" placeholder="Form--danger" class="Form-input Form--danger">
+      <input type="text" placeholder="Form--success" class="Form-input Form--success">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="Form-danger" class="Form-danger"&gt;
-&lt;input type="text" placeholder="Form-success" class="Form-success"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="Form-input Form--danger" class="Form--danger"&gt;
+&lt;input type="text" placeholder="Form--success" class="Form-input Form--success"&gt;</code></pre>
 </div>
 
 <h2>Control modifiers</h2>
+
+<h4>Size modifiers</h4>
+
+<div class="docs-example">
+  <form class="Form">
+    <fieldset>
+      <div class="Form-row">
+        <input type="text" placeholder="Extra small" class="Form-input Form--xs">
+        <select class="Form-select Form--xs">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+        <button class="Button Button--xs">Button</button>
+      </div>
+      <div class="Form-row">
+        <input type="text" placeholder="Small" class="Form-input Form--sm">
+        <select class="Form-select Form--sm">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+        <button class="Button Button--sm">Button</button>
+      </div>
+      <div class="Form-row">
+        <input type="text" placeholder="Standard" class="Form-input">
+        <select class="Form-select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+        <button class="Button">Button</button>
+      </div>
+      <div class="Form-row">
+        <input type="text" placeholder="Large" class="Form-input Form--lg">
+        <select class="Form-select Form--lg">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+        <button class="Button Button--lg">Button</button>
+      </div>
+      <div class="Form-row">
+        <input type="text" placeholder="Extra large" class="Form-input Form--xl">
+        <select class="Form-select Form--xl">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+        <button class="Button Button--xl">Button</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form--xs"&gt;</code></pre>
+</div>
 
 <h4>Form blank</h4>
 
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <input type="text" placeholder="Text input" class="Form-blank">
+      <input type="text" placeholder="Text input" class="Form-input Form--blank">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="" class="Form-blank"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form--blank"&gt;</code></pre>
 </div>
 
 <h4>Width modifiers</h4>
@@ -155,13 +210,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <form class="Form">
     <fieldset>
-      <input type="text" placeholder="width-100" class="Form-width-100">
+      <input type="text" placeholder="width-100" class="Form-input Form-width-100">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="" class="Form-width-100"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form-width-100"&gt;</code></pre>
 </div>
 
 <h2>Layout modifiers</h2>
@@ -194,7 +249,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         </div>
       </div>
       <div class="Form-row">
-        <label class="Form-label" for="Form-s-t">Textareat</label>
+        <label class="Form-label" for="Form-s-t">Textarea</label>
         <div class="Form-controls">
           <textarea id="Form-s-t" cols="30" rows="5" placeholder="Textarea text"></textarea>
         </div>
@@ -320,6 +375,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
   <form class="Form">
+    <div class="o-Grid o-Grid--gutters">
+      <div class="o-Grid-cell">
+        <input type="text" placeholder="100" class="Form-width-100">
+      </div>
+    </div>
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell o-Size--1of2">
         <input type="text" placeholder="50" class="Form-width-100">

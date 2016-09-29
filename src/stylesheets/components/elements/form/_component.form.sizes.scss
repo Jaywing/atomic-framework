@@ -1,0 +1,54 @@
+$form-xs-padding: $g-spacer-sm $g-spacer;
+$form-sm-padding: $g-spacer-sm $g-spacer;
+$form-lg-padding: $g-spacer $g-spacer-lg;
+$form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl;
+
+
+.Form {
+
+  // scss-lint:disable all
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=search],
+  input[type=tel],
+  input[type=number],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=date],
+  input[type=month],
+  input[type=time],
+  input[type=week],
+  input[type=color],
+  select,
+  textarea {
+
+    &.Form--xs {
+      @include minion;
+      padding: $form-xs-padding;
+    }
+
+    &.Form--sm {
+      @include brevier;
+      padding: $form-sm-padding;
+    }
+
+    &.Form--lg {
+      padding: $form-lg-padding;
+    }
+
+    &.Form--xl {
+      @include great-primer;
+      padding: $form-xl-padding;
+    }
+
+    &.Form--block {
+      display: block;
+    }
+
+  }
+  // scss-lint:enable all
+
+}

@@ -1,4 +1,4 @@
-$form-height: 35px;
+//$form-height: 35px;
 $form-padding: $g-spacer-sm;
 $form-bg: #fff;
 $form-border: 1px solid #e5e5e5;
@@ -63,8 +63,8 @@ $form-label-weight: $g-weight-bold;
   input[type=color],
   select,
   textarea {
-    @include brevier;
-    height: $form-height;
+    //@include brevier;
+    //height: $form-height;
     max-width: 100%;
     padding: $form-padding;
     border: $form-border;
@@ -96,19 +96,19 @@ $form-label-weight: $g-weight-bold;
   font-weight: $form-label-weight;
 }
 
-.Form-danger {
+.Form--danger {
   border-color: $form-danger-border-color;
   background: $form-danger-bg;
   color: $form-danger-color;
 }
 
-.Form-success {
+.Form--success {
   border-color: $form-success-border-color;
   background: $form-success-bg;
   color: $form-success-color;
 }
 
-.Form-blank {
+.Form--blank {
   border-color: $form-blank-border-color;
   border-style: $form-blank-border-style;
   background: $form-blank-bg;
