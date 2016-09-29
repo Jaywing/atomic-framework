@@ -2,6 +2,7 @@
   margin: $g-spacer-xl 0 $g-spacer;
   position: relative;
   border-top: 1px solid rgba($c-light-30, .5);
+  border-bottom: 1px solid rgba($c-light-30, .5);
 
   &::before {
     @include minion-bold;
@@ -15,17 +16,13 @@
     text-transform: capitalize;
     border-radius: $g-border-radius $g-border-radius 0 0;
     border: 1px solid $c-light-30;
-    margin-top: 1px;
   }
 }
-
 
 .docs-example {
   @extend %docs-block;
 
-  //border: 2px solid rgba(0, 0, 0, .1);
-  //background: rgba(0, 0, 0, .05);
-  padding: $g-spacer-sm 0;
+  padding: $g-spacer-lg 0;
 
   &::before {
     content: 'Example';

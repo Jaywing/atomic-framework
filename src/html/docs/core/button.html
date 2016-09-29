@@ -155,7 +155,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
 &lt;button class=&quot;Button Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot;&gt;
   &lt;div class=&quot;Button-content&quot;&gt;Toggle me&lt;/div&gt;
-  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;I&#39;m toggled&lt;/div&gt;
+  &lt;div class=&quot;Button-content--hidden&quot;&gt;I&#39;m toggled&lt;/div&gt;
 &lt;/button&gt;</code></pre>
 </div>
 
@@ -164,14 +164,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
   <button class="Button Button--primary Button--swap Button--aniFade Button--swapToggle" data-module="Button" data-options='{"once":true}'>
     <div class="Button-content">Submit me</div>
-    <div class="Button-content--hidden">{{ icon('spinner', '0 0 1 1', 'Icon--spin') }}</div>
+    <div class="Button-content Button-content--hidden">{{ icon('spinner', '0 0 1 1', 'Icon--spin') }}</div>
   </button>
 </div>
 
 <div class="docs-code">
   <pre><code class="html">&lt;button class=&quot;Button Button--primary Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
   &lt;div class=&quot;Button-content&quot;&gt;Submit me&lt;/div&gt;
-  &lt;div class=&quot;Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin&#39;) &#125;&#125;&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin&#39;) &#125;&#125;&lt;/div&gt;
 &lt;/button&gt;</code></pre>
 </div>
 
