@@ -1,4 +1,4 @@
-$form-height: 35px;
+//$form-height: 35px;
 $form-padding: $g-spacer-sm;
 $form-bg: #fff;
 $form-border: 1px solid #e5e5e5;
@@ -9,18 +9,18 @@ $form-disabled-color: #999;
 
 $form-color: $c-dark;
 
-$form-danger-bg: #fff7f8 !important;
-$form-danger-border-color: #dc8d99 !important;
-$form-danger-color: #d85030 !important;
+$form-danger-bg: #fff7f8;
+$form-danger-border-color: #dc8d99;
+$form-danger-color: #d85030;
 
-$form-success-bg: #fafff2 !important;
-$form-success-border-color: #8ec73b !important;
-$form-success-color: #659f13 !important;
+$form-success-bg: #fafff2;
+$form-success-border-color: #8ec73b;
+$form-success-color: #659f13;
 
-$form-blank-bg: transparent !important;
-$form-blank-border-color: transparent !important;
-$form-blank-border-style: dashed !important;
-$form-blank-focus-border-color: #e5e5e5 !important;
+$form-blank-bg: transparent;
+$form-blank-border-color: transparent;
+$form-blank-border-style: dashed;
+$form-blank-focus-border-color: #e5e5e5;
 
 $form-label-weight: $g-weight-bold;
 
@@ -45,26 +45,12 @@ $form-label-weight: $g-weight-bold;
     }
   }
 
-  // scss-lint:disable all
-  input:not([type]),
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=url],
-  input[type=search],
-  input[type=tel],
-  input[type=number],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=date],
-  input[type=month],
-  input[type=time],
-  input[type=week],
-  input[type=color],
-  select,
-  textarea {
-    @include brevier;
-    height: $form-height;
+  .Form-input,
+  .Form-select,
+  .Form-text,
+  .Form-check,
+  .Form-radio {
+    //height: $form-height;
     max-width: 100%;
     padding: $form-padding;
     border: $form-border;
@@ -77,10 +63,42 @@ $form-label-weight: $g-weight-bold;
       color: $form-disabled-color;
     }
 
-  }
-  // scss-lint:enable all
+    &--inline {
+      width: auto !important;
+    }
 
-  textarea {
+    &--danger {
+      border-color: $form-danger-border-color;
+      background: $form-danger-bg;
+      color: $form-danger-color;
+    }
+
+    &--success {
+      border-color: $form-success-border-color;
+      background: $form-success-bg;
+      color: $form-success-color;
+    }
+
+    &--blank {
+      border-color: $form-blank-border-color;
+      border-style: $form-blank-border-style;
+      background: $form-blank-bg;
+      outline: none;
+
+      &:focus {
+        border-color: $form-blank-focus-border-color;
+      }
+    }
+
+  }
+
+  .Form-input,
+  .Form-select,
+  .Form-text {
+    width: 100%;
+  }
+
+  .Form-text {
     height: auto;
   }
 
@@ -96,33 +114,6 @@ $form-label-weight: $g-weight-bold;
   font-weight: $form-label-weight;
 }
 
-.Form-danger {
-  border-color: $form-danger-border-color;
-  background: $form-danger-bg;
-  color: $form-danger-color;
-}
-
-.Form-success {
-  border-color: $form-success-border-color;
-  background: $form-success-bg;
-  color: $form-success-color;
-}
-
-.Form-blank {
-  border-color: $form-blank-border-color;
-  border-style: $form-blank-border-style;
-  background: $form-blank-bg;
-  outline: none;
-
-  &:focus {
-    border-color: $form-blank-focus-border-color;
-  }
-}
-
-.Form-width-100 {
-  width: 100%;
-}
-
 .Form-icon {
   display: inline-block;
   position: relative;
@@ -133,7 +124,6 @@ $form-label-weight: $g-weight-bold;
     top: 50%;
     width: 30px;
     margin-top: -15px;
-    font-size: 14px;
     color: #999;
     text-align: center;
     pointer-events: none;
@@ -142,29 +132,15 @@ $form-label-weight: $g-weight-bold;
   &:not(.Form-icon--flip) > input {
     padding-left: 30px !important;
   }
-}
 
-.Form-icon--flip {
+  &--flip {
 
-  [class*=Icon] {
-    right: 0;
-  }
-
-  > input {
-    padding-right: 30px !important;
-  }
-
-}
-
-@include md {
-  .Form-horizontal {
-
-    .Form-row {
-      display: flex;
+    [class*=Icon] {
+      right: 0;
     }
 
-    .Form-label {
-      width: 33%;
+    > input {
+      padding-right: 30px !important;
     }
 
   }
