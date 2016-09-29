@@ -37,6 +37,7 @@ $form-label-weight: $g-weight-bold;
     width: 100%;
     padding: 0 0 $g-spacer;
     line-height: 2;
+
     &:after {
       content: '';
       display: block;
@@ -44,6 +45,7 @@ $form-label-weight: $g-weight-bold;
     }
   }
 
+  // scss-lint:disable all
   input:not([type]),
   input[type=text],
   input[type=password],
@@ -61,13 +63,13 @@ $form-label-weight: $g-weight-bold;
   input[type=color],
   select,
   textarea {
+    @include brevier;
     height: $form-height;
     max-width: 100%;
     padding: $form-padding;
     border: $form-border;
     background: $form-bg;
     color: $form-color;
-    @include brevier;
 
     &:disabled {
       border-color: $form-disabled-border;
@@ -76,6 +78,7 @@ $form-label-weight: $g-weight-bold;
     }
 
   }
+  // scss-lint:enable all
 
   textarea {
     height: auto;
@@ -116,8 +119,41 @@ $form-label-weight: $g-weight-bold;
   }
 }
 
-.Form-width-1-1 {
+.Form-width-100 {
   width: 100%;
+}
+
+.Form-icon {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+
+  [class*=Icon] {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    margin-top: -15px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  &:not(.Form-icon--flip) > input {
+    padding-left: 30px !important;
+  }
+}
+
+.Form-icon--flip {
+
+  [class*=Icon] {
+    right: 0;
+  }
+
+  > input {
+    padding-right: 30px !important;
+  }
+
 }
 
 @include md {
@@ -129,10 +165,6 @@ $form-label-weight: $g-weight-bold;
 
     .Form-label {
       width: 33%;
-    }
-
-    .Form-controls {
-
     }
 
   }
