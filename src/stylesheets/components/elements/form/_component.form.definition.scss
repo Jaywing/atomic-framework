@@ -45,68 +45,68 @@ $form-label-weight: $g-weight-bold;
     }
   }
 
-  .Form-input,
-  .Form-select,
-  .Form-text,
-  .Form-check,
-  .Form-radio {
-    //height: $form-height;
-    max-width: 100%;
-    padding: $form-padding;
-    border: $form-border;
-    background: $form-bg;
-    color: $form-color;
-
-    &:disabled {
-      border-color: $form-disabled-border;
-      background-color: $form-disabled-bg;
-      color: $form-disabled-color;
-    }
-
-    &--inline {
-      width: auto !important;
-    }
-
-    &--danger {
-      border-color: $form-danger-border-color;
-      background: $form-danger-bg;
-      color: $form-danger-color;
-    }
-
-    &--success {
-      border-color: $form-success-border-color;
-      background: $form-success-bg;
-      color: $form-success-color;
-    }
-
-    &--blank {
-      border-color: $form-blank-border-color;
-      border-style: $form-blank-border-style;
-      background: $form-blank-bg;
-      outline: none;
-
-      &:focus {
-        border-color: $form-blank-focus-border-color;
-      }
-    }
-
-  }
-
-  .Form-input,
-  .Form-select,
-  .Form-text {
-    width: 100%;
-  }
-
-  .Form-text {
-    height: auto;
-  }
-
   input:not([type=radio]):not([type=checkbox]),
   select {
     vertical-align: middle;
   }
 
+}
+
+.Form-input,
+.Form-select,
+.Form-text,
+.Form-check,
+.Form-radio {
+  //height: $form-height;
+  max-width: 100%;
+  padding: $form-padding;
+  border: $form-border;
+  background: $form-bg;
+  color: $form-color;
+
+  &:disabled {
+    border-color: $form-disabled-border;
+    background-color: $form-disabled-bg;
+    color: $form-disabled-color;
+  }
+
+  &--inline {
+    width: auto !important;
+  }
+
+  &--danger {
+    border-color: $form-danger-border-color;
+    background: $form-danger-bg;
+    color: $form-danger-color;
+  }
+
+  &--success {
+    border-color: $form-success-border-color;
+    background: $form-success-bg;
+    color: $form-success-color;
+  }
+
+  &--blank {
+    border-color: $form-blank-border-color;
+    border-style: $form-blank-border-style;
+    background: $form-blank-bg;
+    outline: none;
+
+    &:focus {
+      border-color: $form-blank-focus-border-color;
+    }
+  }
+
+}
+
+.Form-input,
+.Form-select,
+.Form-text {
+  width: 100%;
+}
+
+.Form-text {
+  height: auto;
 }
 
 .Form-label {
