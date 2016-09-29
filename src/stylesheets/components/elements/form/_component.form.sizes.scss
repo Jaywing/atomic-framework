@@ -6,49 +6,35 @@ $form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl;
 
 .Form {
 
-  // scss-lint:disable all
-  input:not([type]),
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=url],
-  input[type=search],
-  input[type=tel],
-  input[type=number],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=date],
-  input[type=month],
-  input[type=time],
-  input[type=week],
-  input[type=color],
-  select,
-  textarea {
+  .Form-input,
+  .Form-select,
+  .Form-text,
+  .Form-check,
+  .Form-radio {
 
-    &.Form--xs {
+    &--xs {
       @include minion;
       padding: $form-xs-padding;
     }
 
-    &.Form--sm {
+    &--sm {
       @include brevier;
       padding: $form-sm-padding;
     }
 
-    &.Form--lg {
+    &--lg {
       padding: $form-lg-padding;
     }
 
-    &.Form--xl {
+    &--xl {
       @include great-primer;
       padding: $form-xl-padding;
     }
 
-    &.Form--block {
+    &--block {
       display: block;
     }
 
   }
-  // scss-lint:enable all
 
 }

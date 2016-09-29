@@ -45,25 +45,11 @@ $form-label-weight: $g-weight-bold;
     }
   }
 
-  // scss-lint:disable all
-  input:not([type]),
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=url],
-  input[type=search],
-  input[type=tel],
-  input[type=number],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=date],
-  input[type=month],
-  input[type=time],
-  input[type=week],
-  input[type=color],
-  select,
-  textarea {
-    //@include brevier;
+  .Form-input,
+  .Form-select,
+  .Form-text,
+  .Form-check,
+  .Form-radio {
     //height: $form-height;
     max-width: 100%;
     padding: $form-padding;
@@ -77,10 +63,42 @@ $form-label-weight: $g-weight-bold;
       color: $form-disabled-color;
     }
 
-  }
-  // scss-lint:enable all
+    &--inline {
+      width: auto !important;
+    }
 
-  textarea {
+    &--danger {
+      border-color: $form-danger-border-color;
+      background: $form-danger-bg;
+      color: $form-danger-color;
+    }
+
+    &--success {
+      border-color: $form-success-border-color;
+      background: $form-success-bg;
+      color: $form-success-color;
+    }
+
+    &--blank {
+      border-color: $form-blank-border-color;
+      border-style: $form-blank-border-style;
+      background: $form-blank-bg;
+      outline: none;
+
+      &:focus {
+        border-color: $form-blank-focus-border-color;
+      }
+    }
+
+  }
+
+  .Form-input,
+  .Form-select,
+  .Form-text {
+    width: 100%;
+  }
+
+  .Form-text {
     height: auto;
   }
 
@@ -94,33 +112,6 @@ $form-label-weight: $g-weight-bold;
 .Form-label {
   display: block;
   font-weight: $form-label-weight;
-}
-
-.Form--danger {
-  border-color: $form-danger-border-color;
-  background: $form-danger-bg;
-  color: $form-danger-color;
-}
-
-.Form--success {
-  border-color: $form-success-border-color;
-  background: $form-success-bg;
-  color: $form-success-color;
-}
-
-.Form--blank {
-  border-color: $form-blank-border-color;
-  border-style: $form-blank-border-style;
-  background: $form-blank-bg;
-  outline: none;
-
-  &:focus {
-    border-color: $form-blank-focus-border-color;
-  }
-}
-
-.Form-width-100 {
-  width: 100%;
 }
 
 .Form-icon {
@@ -141,29 +132,15 @@ $form-label-weight: $g-weight-bold;
   &:not(.Form-icon--flip) > input {
     padding-left: 30px !important;
   }
-}
 
-.Form-icon--flip {
+  &--flip {
 
-  [class*=Icon] {
-    right: 0;
-  }
-
-  > input {
-    padding-right: 30px !important;
-  }
-
-}
-
-@include md {
-  .Form-horizontal {
-
-    .Form-row {
-      display: flex;
+    [class*=Icon] {
+      right: 0;
     }
 
-    .Form-label {
-      width: 33%;
+    > input {
+      padding-right: 30px !important;
     }
 
   }
