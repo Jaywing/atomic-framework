@@ -15,4 +15,8 @@
 
 .asciiArt {
   display: inline-block;
+  background: $c-strong-trans-dark;
+  padding: $g-spacer;
+  border-radius: $g-border-radius;
+  margin: 0;
 }
