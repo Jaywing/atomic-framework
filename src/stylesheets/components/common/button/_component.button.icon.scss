@@ -12,33 +12,4 @@ $button-icon-icon-margin: -($g-spacer-xs);
     }
   }
 
-  &--loading {
-    position: relative;
-
-    .Button-text {
-      transition: opacity .15s linear;
-    }
-
-    .Icon {
-      @include absolute-center;
-      transition: opacity .1s linear;
-      opacity: 0;
-      margin-left: -13px;
-      margin-top: -13px;
-    }
-
-    &:active,
-    &.is-active {
-      cursor: not-allowed;
-
-      .Button-text {
-        opacity: 0;
-      }
-
-      .Icon {
-        opacity: 1;
-      }
-    }
-  }
-
 }
