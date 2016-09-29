@@ -103,7 +103,9 @@
     "eqcss": "^1.2.2",
     "es6y-throttle": "^1.0.1",
     "normalize.css": "^4.0.0",
+    "shortid": "^2.2.6",
     "sticky-js": "^1.0.7",
-    "throttle-factory": "^1.0.0"
+    "throttle-factory": "^1.0.0",
+    "throttleit": "^1.0.0"
   }
 }

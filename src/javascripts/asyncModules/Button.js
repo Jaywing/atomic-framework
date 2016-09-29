@@ -1,4 +1,4 @@
-import Module from './Module'
+import Module from '../Module'
 
 export default class Button extends Module {
 

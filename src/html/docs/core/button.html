@@ -11,7 +11,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 {% extends 'layouts/docs/layout.docs.master.html' %}
 
-{% block metaTitle %}Container | Atomic: Core{% endblock %}
+{% block metaTitle %}Button | Atomic: Core{% endblock %}
 
 {% block content %}
 
@@ -89,27 +89,90 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;a href=&quot;#&quot; class=&quot;Button Button--icon&quot;&gt;&#123;&#123; icon(&#39;arrow-left&#39;) &#125;&#125; Back&lt;/a&gt;</code></pre>
 </div>
 
+<h3>Content swap buttons</h3>
+
+<div class="docs-example">
+
+  <button class="Button Button--swap">
+    <div class="Button-content">Hover on me</div>
+    <div class="Button-content Button-content--hidden">More stuff</div>
+  </button>
+
+  <button class="Button Button--swap Button--ani">
+    <div class="Button-content">Next</div>
+    <div class="Button-content Button-content--hidden">{{ icon('arrow-right') }}</div>
+  </button>
+
+  <button class="Button Button--swap Button--vertical Button--ani">
+    <div class="Button-content">Top</div>
+    <div class="Button-content Button-content--hidden">{{ icon('arrow-up') }}</div>
+  </button>
+
+  <button class="Button Button--swap Button--aniFade">
+    <div class="Button-content">Hover on me</div>
+    <div class="Button-content Button-content--hidden">I fade in</div>
+  </button>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;button class=&quot;Button Button--swap&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Hover on me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;More stuff&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--ani&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Next&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;arrow-right&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--vertical Button--ani&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Top&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;arrow-up&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--aniFade&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Hover on me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;I fade in&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+</div>
+
 <h3>Javascript: Button module</h3>
 <p>You can toggle states via an asynchronously loaded javascript module. Just add the data attribute <code>data-module="Button"</code></p>
 <div class="docs-example">
   <button class="Button" data-module="Button">Toggle me</button>
   <button class="Button Button--primary" data-module="Button">Toggle me</button>
   <button class="Button Button--hover" data-module="Button">Toggle me</button>
+  <button class="Button Button--swap Button--aniFade Button--swapToggle" data-module="Button">
+    <div class="Button-content">Toggle me</div>
+    <div class="Button-content Button-content--hidden">I'm toggled</div>
+  </button>
 </div>
 
 <div class="docs-code">
   <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
 &lt;button class=&quot;Button Button--primary&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
-&lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;</code></pre>
+&lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Toggle me&lt;/div&gt;
+  &lt;div class=&quot;Button-content--hidden&quot;&gt;I&#39;m toggled&lt;/div&gt;
+&lt;/button&gt;</code></pre>
 </div>
 
 <h4>Loading submit button</h4>
-<p>The button module can also be used with the '.Button--loading' component modifier to create a button that, when clicked shows a loading spinner icon. After this the button can not be toggled back.</p>
+<p>The 'content swap button' and the 'Button module' can be used together to create a button that when clicked once, shows a loading icon and it can not be clicked again.</p>
 <div class="docs-example">
-  <button class="Button Button--loading Button--primary" data-module="Button" data-options='{"once":true}'>
-    <span class="Button-text">Submit me</span>
-    {{ icon('spinner', '0 0 1 1', 'Icon--spin') }}
+  <button class="Button Button--primary Button--swap Button--aniFade Button--swapToggle" data-module="Button" data-options='{"once":true}'>
+    <div class="Button-content">Submit me</div>
+    <div class="Button-content Button-content--hidden">{{ icon('spinner', '0 0 1 1', 'Icon--spin') }}</div>
   </button>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;button class=&quot;Button Button--primary Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Submit me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
 </div>
 
 {% endblock %}

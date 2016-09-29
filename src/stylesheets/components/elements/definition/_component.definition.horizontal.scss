@@ -1,6 +1,7 @@
 //Horizontal DL
 $ddh-margin: 0 0 $g-spacer-sm;
 $ddh-delimiter-padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
+$ddh-delimiter: ':';
 
 //Horizontal list variant
 .Definition--horizontal {
@@ -17,7 +18,7 @@ $ddh-delimiter-padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
     white-space: nowrap;
 
     &::after {
-      content: ':';
+      content: $ddh-delimiter;
       padding: $ddh-delimiter-padding;
     }
   }
@@ -27,4 +28,5 @@ $ddh-delimiter-padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
     list-style: none;
     padding-left: 6rem;
   }
+
 }

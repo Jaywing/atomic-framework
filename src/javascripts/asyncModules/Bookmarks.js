@@ -1,28 +1,50 @@
-import $ from 'domtastic';
+import Module from '../Module'
+import createElement from '../helpers/createElement'
 
-export default class Bookmarks {
 
-  constructor(el) {
-    this.el = el
-    this.toggler = `<button id="bookmarks-toggler" class="Button Button--hover Bookmarks-toggler">Bookmarks</button>`
-    this.init()
+export default class Bookmarks extends Module {
+
+  constructor(el, name, options) {
+    const defaults = {
+      "activeClass": "is-active",
+      "autoGenerate": false
+    }
+
+    super(el, name, options, defaults)
+
   }
 
   init() {
-    this.injectToggler()
-    $(this.el).addClass('js-Bookmarks');
-    console.log('bookmarks initiated')
+
+    // set up dom elements
+    this.menu = this.el.querySelector('.Bookmarks-menu')
+
+    this.injectToggler() // create/insert toggle buttons
+
+    this.el.classList.add('js-Bookmarks') // initialise js styles
+    console.log(`${this.name} has initialised`)
   }
 
   injectToggler() {
-    $(this.el).html(this.toggler + this.el.innerHTML)
-    this.toggler = $('bookmarks-toggler')
-    this.toggler.on('click', this.toggleBookmarksMenu)
-  }
 
-  toggleBookmarksMenu(e) {
-    e.preventDefault()
-    $(this.parentNode).toggleClass('Bookmarks--is-active')
+    const Bookmarks = this
+
+    const toggler = createElement({ // Create toggler button
+      tagName: 'button',
+      className: 'Button Button--hover Bookmarks-toggler',
+      text: 'Bookmarks'
+    })
+
+    const toggleBookmarks = function () {
+      Bookmarks.el.classList.toggle(Bookmarks.settings.activeClass)
+      console.log('Bookmarks toggled')
+    }
+
+    this.el.insertBefore(toggler, this.menu)
+    this.toggler = this.el.querySelector('.Bookmarks-toggler')
+
+    this.toggler.addEventListener('click', toggleBookmarks)
+
   }
 
 }

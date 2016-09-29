@@ -25,15 +25,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>To use a stacked (default) defined list, add a class of <code>Definition</code> to the <code>dl</code> tag:</p>
 
-<div class="docs-code docs-code--html"><pre><code class="html">&lt;dl class=&quot;Definition&quot;&gt;
-  &lt;dt&gt;Item title&lt;/dt&gt;
-  &lt;dd&gt;Item definition&lt;/dd&gt;
-  &lt;dt&gt;Item 2 title&lt;/dt&gt;
-  &lt;dd&gt;Item 2 definition one&lt;/dd&gt;
-  &lt;dd&gt;Item 2 definition two&lt;/dd&gt;
-  &lt;dd&gt;Item 2 definition three&lt;/dd&gt;
-&lt;/dl&gt</code></pre></div>
-
 <div class="docs-example">
   <dl class="Definition">
     <dt>Item title</dt>
@@ -45,22 +36,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </dl>
 </div>
 
+<div class="docs-code docs-code--html"><pre><code class="html">&lt;dl class=&quot;Definition&quot;&gt;
+  &lt;dt&gt;Item title&lt;/dt&gt;
+  &lt;dd&gt;Item definition&lt;/dd&gt;
+  &lt;dt&gt;Item 2 title&lt;/dt&gt;
+  &lt;dd&gt;Item 2 definition one&lt;/dd&gt;
+  &lt;dd&gt;Item 2 definition two&lt;/dd&gt;
+  &lt;dd&gt;Item 2 definition three&lt;/dd&gt;
+&lt;/dl&gt</code></pre></div>
+
 <h3>Modifiers</h3>
 
 <p>To show a horizontal list, use the <code>Definition</code> class with the modifier class of <code>Definition--horizontal</code>.</p>
 
 <p><strong>Important:</strong> You can only have one <code>dd</code> item for each definition if you use this variation.</p>
-
-<div class="docs-code docs-code--html"><pre><code class="html">&lt;dl class=&quot;Definition Definition--horizontal&quot;&gt;
-  &lt;dt&gt;Mint&lt;/dt&gt;
-  &lt;dd&gt;A refreshing herb&lt;/dd&gt;
-  &lt;dt&gt;Shark&lt;/dt&gt;
-  &lt;dd&gt;A swimming predator&lt;/dd&gt;
-  &lt;dt&gt;Water&lt;/dt&gt;
-  &lt;dd&gt;A liquid comprising of 2 hydrogen atoms and one oxygen atom&lt;/dd&gt;
-  &lt;dt&gt;Penguin&lt;/dt&gt;
-  &lt;dd&gt;A flightless bird often associated with the arctic but also found in temperate climates&lt;/dd&gt;
-&lt;/dl&gt;</code></pre></div>
 
 <div class="docs-example">
   <dl class="Definition Definition--horizontal">
@@ -74,6 +63,17 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <dd>A flightless bird often associated with the arctic but also found in temperate climates.</dd>
   </dl>
 </div>
+
+<div class="docs-code docs-code--html"><pre><code class="html">&lt;dl class=&quot;Definition Definition--horizontal&quot;&gt;
+  &lt;dt&gt;Mint&lt;/dt&gt;
+  &lt;dd&gt;A refreshing herb&lt;/dd&gt;
+  &lt;dt&gt;Shark&lt;/dt&gt;
+  &lt;dd&gt;A swimming predator&lt;/dd&gt;
+  &lt;dt&gt;Water&lt;/dt&gt;
+  &lt;dd&gt;A liquid comprising of 2 hydrogen atoms and one oxygen atom&lt;/dd&gt;
+  &lt;dt&gt;Penguin&lt;/dt&gt;
+  &lt;dd&gt;A flightless bird often associated with the arctic but also found in temperate climates&lt;/dd&gt;
+&lt;/dl&gt;</code></pre></div>
 
 {% endblock %}
 

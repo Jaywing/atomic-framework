@@ -17,21 +17,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p class="Article-lead">An overview of all things stylesheets.</p>
 
 <div class="Bookmarks" data-module="Bookmarks">
-  <ul class="Bookmarks-menu">
-    <li><a href="#">Top</a></li>
-    <li><a href="#section:file-structure">File structure</a></li>
-    <li><a href="#section:gulp-tasks">Gulp tasks</a></li>
-    <li><a href="#section:naming-conventions">Naming conventions</a></li>
-    <li><a href="#section:coding-style">Coding style</a></li>
-    <li><a href="#section:browser-strategy">Browser strategy</a></li>
+  <ul class="Menu Menu--vertical Bookmarks-menu">
+    <li class="Menu-item"><a href="#">Top</a></li>
+    <li class="Menu-item"><a href="#section:file-structure">File structure</a></li>
+    <li class="Menu-item"><a href="#section:gulp-tasks">Gulp tasks</a></li>
+    <li class="Menu-item"><a href="#section:naming-conventions">Naming conventions</a></li>
+    <li class="Menu-item"><a href="#section:coding-style">Coding style</a></li>
+    <li class="Menu-item"><a href="#section:browser-strategy">Browser strategy</a></li>
   </ul>
 </div>
 
 <h2 id="section:file-structure"><a href="#section:file-structure" class="textLinkReset">Sass file structure</a></h2>
 
-<div class="docs-example scrollXauto">
-<pre>
-scss/
+<div class="docs-example"><div class="scrollXauto">
+<pre>scss/
 |-- settings/                           # global variables
 |   |-- settings.global.scss            # global base line variables (font size, line-height etc.)
 |   |-- settings.colors.scss            # define color palette and assign to global variables
@@ -82,9 +81,8 @@ scss/
 lint.yml                                # config file for scss-lint
 styles.scss                             # main stylesheet
 basic.scss                              # example of multiple stylesheets, if you need to break them up
-docs.scss                               # documentation specific stylesheet
-</pre>
-</div>
+docs.scss                               # documentation specific stylesheet</pre>
+</div></div>
 
 <h3>ITCSS</h3>
 <p>This scss file structure follows the <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731/2">ITCSS (Inverted triangle CSS)</a> methodology.</p>

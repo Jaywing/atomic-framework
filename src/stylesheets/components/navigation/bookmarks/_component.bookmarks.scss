@@ -25,16 +25,19 @@
   }
 
   .Bookmarks-menu {
+    display: inline-block;
     transition: all .3s ease-in;
     max-height: 0;
     height: auto;
     overflow: hidden;
     background: rgba(#fff, .75);
-    border: 1px solid transparent;
-    margin: 6px $g-spacer-xs;
+    margin: 10px 0;
+    transform: scale(0);
+    transform-origin: right top;
+    opacity: 0;
   }
 
-  &.Bookmarks--is-active {
+  &.is-active {
 
     .Bookmarks-toggler {
       background: #fff;
@@ -42,9 +45,11 @@
     }
 
     .Bookmarks-menu {
-      max-height: 400px;
+      max-height: 1200px;
       border-color: $c-dark-30;
       padding: $g-spacer-sm;
+      opacity: 1;
+      transform: scale(1);
     }
   }
 

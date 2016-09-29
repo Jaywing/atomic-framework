@@ -12,12 +12,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block metaTitle %}Atomic - A front-end starter kit by Jaywing{% endblock %}
 
 {% block main %}
-  <section class="o-Section">
-    <div class="o-Container o-Container--centered">
+  <div class="o-Container o-Container--centered o-Container--thin">
+    <section class="textCenter docs-hero">
+
       <h1>Welcome to Atomic</h1>
       <h2>Jaywing's front-end starter kit and component repository</h2>
 
-      <pre>
+      <pre class="textLeft asciiArt">
                                  \         .  ./
                              \      .:";'.:.."   /
                                  (M^^.^~~:.'").
@@ -30,8 +31,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   F R O N T   E N D   S T A R T E R   K I T
       </pre>
       <p>Bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.</p>
-    </div>
-  </section>
+      <a href="getting-started/" class="Button Button--xl Button--primary">Get started!</a>
+    </section>
+  </div>
 {% endblock %}
 
 {% block javascript %}

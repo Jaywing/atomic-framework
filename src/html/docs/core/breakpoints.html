@@ -90,8 +90,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
 // gets compiled to
 @media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>
-
   </div>
+
+  <h3>Javascript: Breakpoint module</h3>
+  <p>The <a href="breakpoint-mod.html">Breakpoint module</a> is built in by default and emits an custom event <code>bpupdate</code> that components can listen for to react to changes in breakpoints.</p>
 
 {% endblock %}
 

@@ -7,3 +7,16 @@
     flex: 1;
   }
 }
+
+.docs-footer {
+  background: $c-light-15;
+  padding: $g-spacer-sm 0;
+}
+
+.asciiArt {
+  display: inline-block;
+  background: $c-strong-trans-dark;
+  padding: $g-spacer;
+  border-radius: $g-border-radius;
+  margin: 0;
+}

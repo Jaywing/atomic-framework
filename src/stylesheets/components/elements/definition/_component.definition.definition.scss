@@ -19,15 +19,9 @@ $dd-list-style: disc;
 
 
 .Definition {
+  @include trim-child-margins;
+
   margin: $dl-margin;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   dt {
     margin: $dt-margin;
