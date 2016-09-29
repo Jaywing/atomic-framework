@@ -1,14 +1,21 @@
 %docs-block {
   margin: $g-spacer-xl 0 $g-spacer;
   position: relative;
+  border-top: 1px solid rgba($c-light-30, .5);
 
   &::before {
     @include minion-bold;
+    display: inline-block;
+    padding: $g-spacer-xxs $g-spacer-sm;
+    background: rgba($c-light-30, .5);
     position: absolute;
-    top: -($g-spacer);
+    top: -($g-spacer-lg);
     left: 0;
-    color: $c-dark-15;
+    color: $c-dark-30;
     text-transform: capitalize;
+    border-radius: $g-border-radius $g-border-radius 0 0;
+    border: 1px solid $c-light-30;
+    margin-top: 1px;
   }
 }
 

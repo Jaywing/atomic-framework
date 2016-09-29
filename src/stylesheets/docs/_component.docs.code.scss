@@ -4,6 +4,11 @@
   > pre {
     max-height: 350px;
     overflow: auto;
+    margin-top: 0;
+  }
+
+  &::before {
+    content: 'Code';
   }
 
   &--cmd {
