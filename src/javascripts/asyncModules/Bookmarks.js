@@ -26,8 +26,8 @@ export default class Bookmarks extends Module {
   }
 
   injectToggler() {
-
     const Bookmarks = this
+
 
     const toggler = createElement({ // Create toggler button
       tagName: 'button',

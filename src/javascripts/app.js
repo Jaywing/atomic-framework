@@ -5,6 +5,7 @@ import eqcss from 'eqcss' // For Element Queries within the CSS
 import $ from 'domtastic';
 
 const Button = $('#button')
+const Label = $('#label')
 
 const AlertAsyncMessage = function() {
   // CommonJS async syntax webpack magic

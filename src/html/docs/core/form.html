@@ -305,21 +305,21 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <pre><code class="html">&lt;form class="Form"&gt;
   &lt;div class="o-Grid o-Grid--gutters"&gt;
     &lt;div class="o-Grid-cell o-Size--1of2"&gt;
-      &lt;input type="text" placeholder="" class="Form-input Form-input--width-100"&gt;
+      &lt;input type="text" placeholder="" class="Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input Form-input--width-100"&gt;
+      &lt;input type="text" placeholder="" class="Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input Form-input--width-100"&gt;
+      &lt;input type="text" placeholder="" class="Form-input"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="o-Grid o-Grid--gutters"&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input Form-input--width-100"&gt;
+      &lt;input type="text" placeholder="" class="Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell o-Size--1of3"&gt;
-      &lt;select class="Form-select Form-input--width-100"&gt;
+      &lt;select class="Form-select"&gt;
         &lt;option&gt;Option 01&lt;/option&gt;
         &lt;option&gt;Option 02&lt;/option&gt;
       &lt;/select&gt;
@@ -351,6 +351,24 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <pre><code class="html">&lt;div class="Form-icon"&gt;
   &#123;{ icon('calendar') }&#125;
   &lt;input type="text" placeholder="" class="Form-input"&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2>Form label modifier</h2>
+
+<div class="docs-example">
+  <form class="Form">
+    <div class="Form-flabel">
+      <label for="Form-l-i" class="Form-label">Floating label</label>
+      <input type="text" id="Form-l-i" placeholder="Floating label" class="Form-input" data-module="Label">
+    </div>
+  </form>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class="Form-flabel"&gt;
+  &lt;label for="Form-l-i" class="Form-label"&gt;Floating label&lt;/label&gt;
+  &lt;input type="text" id="Form-l-i" placeholder="Floating label" class="Form-input" data-module="Label"&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
