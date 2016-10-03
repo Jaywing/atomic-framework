@@ -5,7 +5,6 @@ export default class Label extends Module {
   constructor(el, name, options) {
 
     const defaults = {
-      "once": false,
       "activeClass": "is-active"
     }
 
