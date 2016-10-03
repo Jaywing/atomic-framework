@@ -1,13 +1,11 @@
-//$form-height: 35px;
-$form-padding: $g-spacer-sm;
-$form-bg: #fff;
-$form-border: 1px solid #e5e5e5;
+$form-input-padding: $g-spacer-sm;
+$form-input-bg: #fff;
+$form-input-border: 1px solid #e5e5e5;
+$form-input-color: $c-dark;
 
 $form-disabled-bg: #fafafa;
 $form-disabled-border: 1px solid #e5e5e5;
 $form-disabled-color: #999;
-
-$form-color: $c-dark;
 
 $form-danger-bg: #fff7f8;
 $form-danger-border-color: #dc8d99;
@@ -57,12 +55,11 @@ $form-label-weight: $g-weight-bold;
 .Form-text,
 .Form-check,
 .Form-radio {
-  //height: $form-height;
   max-width: 100%;
-  padding: $form-padding;
-  border: $form-border;
-  background: $form-bg;
-  color: $form-color;
+  padding: $form-input-padding;
+  border: $form-input-border;
+  background: $form-input-bg;
+  color: $form-input-color;
 
   &:disabled {
     border-color: $form-disabled-border;
@@ -112,56 +109,4 @@ $form-label-weight: $g-weight-bold;
 .Form-label {
   display: block;
   font-weight: $form-label-weight;
-}
-
-.Form-icon {
-  display: inline-block;
-  position: relative;
-  max-width: 100%;
-
-  [class*=Icon] {
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    margin-top: -15px;
-    color: #999;
-    text-align: center;
-    pointer-events: none;
-  }
-
-  &:not(.Form-icon--flip) > input {
-    padding-left: 30px !important;
-  }
-
-  &--flip {
-
-    [class*=Icon] {
-      right: 0;
-    }
-
-    > input {
-      padding-right: 30px !important;
-    }
-
-  }
-}
-
-.Form-flabel {
-  position: relative;
-
-  .Form-label {
-    position: absolute;
-    top: 2rem;
-    left: 0.5rem;
-    opacity: 0;
-    transition: all 0.1s linear;
-    background: white;
-    @include minion;
-
-    &.is-active {
-      opacity: 1;
-      top: -0.5rem;
-    }
-  }
-
 }

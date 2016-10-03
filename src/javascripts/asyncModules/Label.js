@@ -17,7 +17,6 @@ export default class Label extends Module {
     console.log(Input);
 
     let toggleLabel  = function() {
-      console.log('input changed')
       let Label = this.previousElementSibling
       if (this.value.length != 0) {
         Label.classList.add('is-active')
