@@ -73,7 +73,8 @@
         { "id": "close", "title": "Close", "section": "core", "ready": false },
         { "id": "badge", "title": "Badge", "section": "core", "ready": false },
         { "id": "alert", "title": "Alert", "section": "core", "ready": false },
-        { "id": "overlay", "title": "Overlay", "section": "core", "ready": false }
+        { "id": "overlay", "title": "Overlay", "section": "core", "ready": false },
+        { "id": "tooltip", "title": "Tooltip", "section": "core", "ready": true }
       ]
     },
     {
