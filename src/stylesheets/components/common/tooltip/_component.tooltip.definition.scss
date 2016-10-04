@@ -16,7 +16,7 @@ $tooltip-popin-ani-type: linear;
   &:focus {
 
     .Tooltip-item {
-      animation: popin .2s linear;
+      animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
       visibility: visible;
       opacity: 1;
     }
@@ -36,7 +36,6 @@ $tooltip-popin-ani-type: linear;
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: all $tooltip-popin-ani-time $tooltip-popin-ani-type;
 }
 
 .Tooltip-itemInner {
