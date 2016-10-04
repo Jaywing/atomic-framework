@@ -25,19 +25,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Tooltip</h4>
 
 <div class="docs-example">
-  <a class="Tooltip" href="#">Tooltip Button
-    <span class="Tooltip-item">
-      <span class="Tooltip-itemInner">Tooltip text supports multiple lines</span>
-  </a>
+  <a class="Tooltip" href="#">{{ icon('close') }}</a>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;a class="Tooltip" href="#"&gt;
-  Tooltip Button
-  &lt;span class="Tooltip-item"&gt;
-    &lt;span class="Tooltip-itemInner"&gt;Tooltip&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<pre><code class="html">&lt;a class="Tooltip" href="#"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/a&gt;</code></pre>
 </div>
 
 {% endblock %}
