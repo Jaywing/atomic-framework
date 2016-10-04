@@ -1,24 +1,24 @@
 $form-input-padding: $g-spacer-sm;
-$form-input-bg: #fff;
-$form-input-border: 1px solid #e5e5e5;
+$form-input-bg: $c-light;
+$form-input-border: 1px solid $c-light-15;
 $form-input-color: $c-dark;
 
-$form-disabled-bg: #fafafa;
-$form-disabled-border: 1px solid #e5e5e5;
-$form-disabled-color: #999;
+$form-disabled-bg: $c-disabled;
+$form-disabled-border-color: $c-light-30;
+$form-disabled-color: $c-light-75;
 
-$form-danger-bg: #fff7f8;
-$form-danger-border-color: #dc8d99;
-$form-danger-color: #d85030;
+$form-danger-bg: $c-danger-light-30;
+$form-danger-border-color: $c-danger;
+$form-danger-color: $c-danger;
 
-$form-success-bg: #fafff2;
-$form-success-border-color: #8ec73b;
-$form-success-color: #659f13;
+$form-success-bg: $c-success-light-30;
+$form-success-border-color: $c-success;
+$form-success-color: $c-success;
 
 $form-blank-bg: transparent;
 $form-blank-border-color: transparent;
 $form-blank-border-style: dashed;
-$form-blank-focus-border-color: #e5e5e5;
+$form-blank-focus-border-color: $c-light-15;
 
 $form-label-weight: $g-weight-bold;
 
@@ -62,7 +62,7 @@ $form-label-weight: $g-weight-bold;
   color: $form-input-color;
 
   &:disabled {
-    border-color: $form-disabled-border;
+    border-color: $form-disabled-border-color;
     background-color: $form-disabled-bg;
     color: $form-disabled-color;
   }
