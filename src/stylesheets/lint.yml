@@ -82,7 +82,7 @@ linters:
     enabled: true
 
   ImportantRule:
-    enabled: false
+    enabled: true
 
   ImportPath:
     enabled: true
@@ -216,10 +216,10 @@ linters:
     enabled: true
 
   TrailingWhitespace:
-    enabled: false
+    enabled: true
 
   TrailingZero:
-    enabled: false
+    enabled: true
 
   TransitionAll:
     enabled: false
