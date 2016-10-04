@@ -70,7 +70,7 @@
         { "id": "icon", "title": "Icon", "section": "core", "ready": true },
         { "id": "button", "title": "Button", "section": "core", "ready": true },
         { "id": "panel", "title": "Panel", "section": "core", "ready": false },
-        { "id": "close", "title": "Close", "section": "core", "ready": false },
+        { "id": "close", "title": "Close", "section": "core", "ready": true },
         { "id": "badge", "title": "Badge", "section": "core", "ready": false },
         { "id": "alert", "title": "Alert", "section": "core", "ready": false },
         { "id": "overlay", "title": "Overlay", "section": "core", "ready": false },

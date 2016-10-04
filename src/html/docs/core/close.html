@@ -6,17 +6,17 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 {% from 'macros/helpers.html' import icon %}
 
-{% set pageid = 'tooltip' %}
+{% set pageid = 'close' %}
 {% set sectionid = 'core' %}
 
 {% extends 'layouts/docs/layout.docs.master.html' %}
 
-{% block metaTitle %}Tooltip | Atomic: Core{% endblock %}
+{% block metaTitle %}Close | Atomic: Core{% endblock %}
 
 {% block content %}
 
-<h1 class="Article-title">Tooltip</h1>
-<p class="Article-lead">Add sweet tooltips to your content.</p>
+<h1 class="Article-title">Close</h1>
+<p class="Article-lead">Defines styles for a close button that can be combined with different components.</p>
 
 <hr class="Article-divider">
 
@@ -28,32 +28,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <a class="Tooltip" href="#">Tooltip Button
     <span class="Tooltip-item">
       <span class="Tooltip-itemInner">Tooltip text supports multiple lines</span>
-    </span>
   </a>
 </div>
 
 <div class="docs-code docs-code--html">
 <pre><code class="html">&lt;a class="Tooltip" href="#"&gt;
   Tooltip Button
-  &lt;span class="Tooltip-item"&gt;
-    &lt;span class="Tooltip-itemInner"&gt;Tooltip&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/a&gt;</code></pre>
-</div>
-
-<h4>Tooltip with icon</h4>
-
-<div class="docs-example">
-  <a class="Tooltip" href="#">{{ icon('eye') }}
-    <span class="Tooltip-item">
-      <span class="Tooltip-itemInner">Tooltip text supports multiple lines</span>
-    </span>
-  </a>
-</div>
-
-<div class="docs-code docs-code--html">
-<pre><code class="html">&lt;a class="Tooltip" href="#"&gt;
-  &#123;&#123; icon('calendar') &#125;&#125;
   &lt;span class="Tooltip-item"&gt;
     &lt;span class="Tooltip-itemInner"&gt;Tooltip&lt;/span&gt;
   &lt;/span&gt;
