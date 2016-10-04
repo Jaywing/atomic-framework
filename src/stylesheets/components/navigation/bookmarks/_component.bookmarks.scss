@@ -1,3 +1,5 @@
+$bookmarks-z: 1000;
+
 .Bookmarks {
 
   &-menu {
@@ -15,6 +17,7 @@
   top: $g-spacer-sm;
   right: $g-spacer;
   text-align: right;
+  z-index: $bookmarks-z;
 
   .Bookmarks-toggler {
     display: inline-block;
@@ -30,7 +33,6 @@
     max-height: 0;
     height: auto;
     overflow: hidden;
-    background: rgba(#fff, .75);
     margin: 10px 0;
     transform: scale(0);
     transform-origin: right top;
@@ -50,7 +52,14 @@
       padding: $g-spacer-sm;
       opacity: 1;
       transform: scale(1);
+      background: rgba(255, 255, 255, .9);
+      z-index: 10;
     }
   }
 
+}
+
+:target {
+  animation-delay: 1.5s;
+  animation: target-fade 5s 1;
 }

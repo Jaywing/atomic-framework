@@ -115,6 +115,10 @@ body {
     }
   }
 
+  &:target {
+    animation: none;
+  }
+
 }
 
 // Highlighted text colors
