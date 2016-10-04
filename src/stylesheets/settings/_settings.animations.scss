@@ -57,3 +57,15 @@
   }
 
 }
+
+$target-fade-bg: $c-highlight;
+
+@keyframes target-fade {
+  0% {
+    background-color: rgba($target-fade-bg, .7);
+  }
+
+  100% {
+    background-color: rgba($target-fade-bg, 0);
+  }
+}
