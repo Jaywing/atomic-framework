@@ -16,18 +16,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h1 class="Article-title">Stylesheets</h1>
 <p class="Article-lead">An overview of all things stylesheets.</p>
 
-<div class="Bookmarks" data-module="Bookmarks">
-  <ul class="Menu Menu--vertical Bookmarks-menu">
-    <li class="Menu-item"><a href="#">Top</a></li>
-    <li class="Menu-item"><a href="#section:file-structure">File structure</a></li>
-    <li class="Menu-item"><a href="#section:gulp-tasks">Gulp tasks</a></li>
-    <li class="Menu-item"><a href="#section:naming-conventions">Naming conventions</a></li>
-    <li class="Menu-item"><a href="#section:coding-style">Coding style</a></li>
-    <li class="Menu-item"><a href="#section:browser-strategy">Browser strategy</a></li>
-  </ul>
-</div>
+<div class="Bookmarks" data-module="Bookmarks" data-options='{"animated":true}'></div>
 
-<h2 id="section:file-structure"><a href="#section:file-structure" class="textLinkReset">Sass file structure</a></h2>
+<h2 id="section-file-structure"><a href="#section-file-structure" class="textLinkReset">Sass file structure</a></h2>
 
 <div class="docs-example"><div class="scrollXauto">
 <pre>scss/
@@ -103,7 +94,7 @@ docs.scss                               # documentation specific stylesheet</pre
 
 <hr>
 
-<h2 id="section:gulp-tasks"><a href="section:gulp-tasks" class="textLinkReset">Gulp tasks</a></h2>
+<h2 id="section-gulp-tasks"><a href="section-gulp-tasks" class="textLinkReset">Gulp tasks</a></h2>
 
 <h3>CSS task</h3>
 <p>The css task runs on initial build and when any of the scss files are amended.<br>The task:</p>
@@ -126,7 +117,7 @@ docs.scss                               # documentation specific stylesheet</pre
 
 <hr>
 
-<h2 id="section:naming-conventions"><a href="section:naming-conventions" class="textLinkReset">Naming conventions</a></h2>
+<h2 id="section-naming-conventions"><a href="section-naming-conventions" class="textLinkReset">Naming conventions</a></h2>
 
 <h3>Class names</h3>
 <p>The naming convention for classes is based on <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT.CSS</a>) but adapted slightly to suit the ITCSS structure and our principles.</p>
@@ -224,7 +215,7 @@ _component.button.states.scss
 </code>
 </p>
 
-<h2 id="section:coding-style"><a href="#section:coding-style" class="textLinkReset">Coding style</a></h2>
+<h2 id="section-coding-style"><a href="#section-coding-style" class="textLinkReset">Coding style</a></h2>
 
 <h3>Anatomy of a scss class</h3>
 
@@ -279,7 +270,7 @@ If a number clearly has strong meaning, that's a use case for variablising* as w
 <p>Atomic comes with a <a href="https://www.npmjs.com/package/gulp-scss-lint">SCSS linter</a> built in. You can view the configuration options in the <code>lint.yml</code> in the root of stylesheet.</p>
 <p>Any errors or warnings will be logged on the console and in a json file called <code>scssReport.json</code> in the logs folder on the project root.</p>
 
-<h2 id="section:browser-strategy"><a href="#section:browser-strategy" class="textLinkReset">Browser strategy</a></h2>
+<h2 id="section-browser-strategy"><a href="#section-browser-strategy" class="textLinkReset">Browser strategy</a></h2>
 <p>Atomic is set up to serve older versions of IE (< v10) a separate universal stylesheet.</p>
 
 

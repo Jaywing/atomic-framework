@@ -28,7 +28,8 @@ $c-palette: (
   teal:   #2fcde0,
   amber:  #f9c000,
   red:    #dd2228,
-  green:  #0b9444
+  green:  #0b9444,
+  yellow: #e6d593
 );
 
 // Global color variables
@@ -56,12 +57,13 @@ $c-tertiary:       map-get($c-palette, teal);
 $c-tertiary-light: lighten($c-secondary, 15%);
 $c-tertiary-dark:  darken($c-secondary, 15%);
 
-$c-highlight:       map-get($c-palette, amber);
+$c-highlight:       map-get($c-palette, yellow);
 $c-highlight-light: lighten($c-highlight, 15%);
 $c-highlight-dark:  darken($c-highlight, 15%);
 
 $c-error:   map-get($c-palette, red);
 $c-success: map-get($c-palette, green);
+$c-disabled: $c-light-50;
 
 // Brand colors for social channels
 $g-social-colors: (
@@ -79,7 +81,7 @@ $c-trans-dark: rgba(0, 0, 0, .05);
 $c-strong-trans-dark: rgba(0, 0, 0, .10);
 $c-very-strong-trans-dark: rgba(0, 0, 0, .15);
 
-$c-subtle-trans-light: rgba(255, 255, 255, .02);
+$c-subtle-trans-light: rgba(255, 255, 255, .03);
 $c-trans-light: rgba(255, 255, 255, .08);
 $c-strong-trans-light: rgba(255, 255, 255, .12);
 $c-very-strong-trans-light: rgba(255, 255, 255, .20);
