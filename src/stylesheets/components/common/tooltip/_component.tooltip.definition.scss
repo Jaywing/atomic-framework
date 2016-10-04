@@ -3,6 +3,10 @@ $tooltip-color: $c-light;
 $tooltip-pointer-size: 10px;
 $tooltip-pointer-bg: $tooltip-bg;
 $tooltip-padding: $g-spacer-sm;
+$tooltip-max-width: 10rem;
+$tooltip-bottom: 2rem;
+$tooltip-popin-ani-time: .2s;
+$tooltip-popin-ani-type: linear;
 
 
 .Tooltip {
@@ -11,10 +15,9 @@ $tooltip-padding: $g-spacer-sm;
   &:hover,
   &:focus {
 
-    .Tooltip-tip {
-      transform: scale(1);
+    .Tooltip-item {
+      animation: popin .2s linear;
       visibility: visible;
-      bottom: 2rem;
       opacity: 1;
     }
 
@@ -22,24 +25,23 @@ $tooltip-padding: $g-spacer-sm;
 
 }
 
-.Tooltip-tip {
+.Tooltip-item {
   display: flex;
   box-align: center;
   align-items: center;
   justify-content: center;
-  transform: scale(.95);
   position: absolute;
-  bottom: 1rem;
+  bottom: $tooltip-bottom;
   left: 0;
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: all .2s linear;
+  transition: all $tooltip-popin-ani-time $tooltip-popin-ani-type;
 }
 
-.Tooltip-tipItem {
+.Tooltip-itemInner {
   flex: none;
-  max-width: 10rem;
+  max-width: $tooltip-max-width;
   background: $tooltip-bg;
   color: $tooltip-color;
   padding: $tooltip-padding;

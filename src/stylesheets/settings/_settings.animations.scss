@@ -45,3 +45,15 @@
   }
 
 }
+
+@keyframes popin {
+
+  from {
+    transform: scale(.95) translateY(10px);
+  }
+
+  to {
+    transform: rotate(1) translateY(-10px);
+  }
+
+}
