@@ -1,0 +1,16 @@
+$close-size: 2rem;
+$close-alt-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 0 6px rgba(0,0,0,.3);
+
+.Close {
+  display: inline-block;
+  width: 2$close-size;
+  height: 2$close-size;
+  line-height: 2$close-size;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Close--alt {
+  border-radius: 100%;
+  box-shadow: $close-alt-shadow;
+}

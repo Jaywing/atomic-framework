@@ -22,14 +22,24 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2>Usage</h2>
 
-<h4>Tooltip</h4>
-
 <div class="docs-example">
   <a class="Close" href="#">{{ icon('close') }}</a>
 </div>
 
 <div class="docs-code docs-code--html">
 <pre><code class="html">&lt;a class="Close" href="#"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/a&gt;</code></pre>
+</div>
+
+<h2>Style modifier</h2>
+
+<p>Add the .uk-close-alt class to apply an alternative styling to the close button.</p>
+
+<div class="docs-example">
+  <a class="Close Close--alt" href="#">{{ icon('close') }}</a>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;a class="Close Close--alt" href="#"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/a&gt;</code></pre>
 </div>
 
 {% endblock %}
