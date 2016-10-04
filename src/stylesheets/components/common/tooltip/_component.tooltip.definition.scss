@@ -12,6 +12,40 @@ $tooltip-popin-ani-type: linear;
 .Tooltip {
   position: relative;
 
+  &-item {
+    display: flex;
+    box-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: $tooltip-bottom;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &-itemInner {
+    flex: none;
+    max-width: $tooltip-max-width;
+    background: $tooltip-bg;
+    color: $tooltip-color;
+    padding: $tooltip-padding;
+
+    &:after {
+      @include transform(translateX(-50%));
+      content: ' ';
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-top: $tooltip-pointer-size solid $tooltip-pointer-bg;
+      border-right: $tooltip-pointer-size solid transparent;
+      border-left: $tooltip-pointer-size solid transparent;
+    }
+  }
+
   &:hover,
   &:focus {
 
@@ -23,38 +57,4 @@ $tooltip-popin-ani-type: linear;
 
   }
 
-}
-
-.Tooltip-item {
-  display: flex;
-  box-align: center;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: $tooltip-bottom;
-  left: 0;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.Tooltip-itemInner {
-  flex: none;
-  max-width: $tooltip-max-width;
-  background: $tooltip-bg;
-  color: $tooltip-color;
-  padding: $tooltip-padding;
-
-  &:after {
-    @include transform(translateX(-50%));
-    content: ' ';
-    position: absolute;
-    top: 99%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-top: $tooltip-pointer-size solid $tooltip-pointer-bg;
-    border-right: $tooltip-pointer-size solid transparent;
-    border-left: $tooltip-pointer-size solid transparent;
-  }
 }
