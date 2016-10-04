@@ -2,18 +2,7 @@ $form-input-padding: $g-spacer-sm;
 $form-input-bg: $c-light;
 $form-input-border: 1px solid $c-light-15;
 $form-input-color: $c-dark;
-
-$form-disabled-bg: $c-disabled;
-$form-disabled-border-color: $c-light-30;
-$form-disabled-color: $c-light-75;
-
-$form-danger-bg: $c-danger-light-30;
-$form-danger-border-color: $c-danger;
-$form-danger-color: $c-danger;
-
-$form-success-bg: $c-success-light-30;
-$form-success-border-color: $c-success;
-$form-success-color: $c-success;
+$form-input-radius: $g-border-radius;
 
 $form-blank-bg: transparent;
 $form-blank-border-color: transparent;
@@ -60,27 +49,10 @@ $form-label-weight: $g-weight-bold;
   border: $form-input-border;
   background: $form-input-bg;
   color: $form-input-color;
-
-  &:disabled {
-    border-color: $form-disabled-border-color;
-    background-color: $form-disabled-bg;
-    color: $form-disabled-color;
-  }
+  border-radius: $form-input-radius;
 
   &--inline {
     width: auto !important;
-  }
-
-  &--danger {
-    border-color: $form-danger-border-color;
-    background: $form-danger-bg;
-    color: $form-danger-color;
-  }
-
-  &--success {
-    border-color: $form-success-border-color;
-    background: $form-success-bg;
-    color: $form-success-color;
   }
 
   &--blank {
