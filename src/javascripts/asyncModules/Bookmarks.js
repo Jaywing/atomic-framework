@@ -16,7 +16,7 @@ export default class Bookmarks extends Module {
     super(el, name, options, defaults)
 
   }
-
+  
   init() {
 
     if (this.el.innerHTML === "") { // if the container is empty
