@@ -1,24 +1,13 @@
 $form-input-padding: $g-spacer-sm;
-$form-input-bg: #fff;
-$form-input-border: 1px solid #e5e5e5;
+$form-input-bg: $c-light;
+$form-input-border: 1px solid $c-light-15;
 $form-input-color: $c-dark;
-
-$form-disabled-bg: #fafafa;
-$form-disabled-border: 1px solid #e5e5e5;
-$form-disabled-color: #999;
-
-$form-danger-bg: #fff7f8;
-$form-danger-border-color: #dc8d99;
-$form-danger-color: #d85030;
-
-$form-success-bg: #fafff2;
-$form-success-border-color: #8ec73b;
-$form-success-color: #659f13;
+$form-input-radius: $g-border-radius;
 
 $form-blank-bg: transparent;
 $form-blank-border-color: transparent;
 $form-blank-border-style: dashed;
-$form-blank-focus-border-color: #e5e5e5;
+$form-blank-focus-border-color: $c-light-15;
 
 $form-label-weight: $g-weight-bold;
 
@@ -60,27 +49,10 @@ $form-label-weight: $g-weight-bold;
   border: $form-input-border;
   background: $form-input-bg;
   color: $form-input-color;
-
-  &:disabled {
-    border-color: $form-disabled-border;
-    background-color: $form-disabled-bg;
-    color: $form-disabled-color;
-  }
+  border-radius: $form-input-radius;
 
   &--inline {
     width: auto !important;
-  }
-
-  &--danger {
-    border-color: $form-danger-border-color;
-    background: $form-danger-bg;
-    color: $form-danger-color;
-  }
-
-  &--success {
-    border-color: $form-success-border-color;
-    background: $form-success-bg;
-    color: $form-success-color;
   }
 
   &--blank {

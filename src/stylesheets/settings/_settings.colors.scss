@@ -61,9 +61,17 @@ $c-highlight:       map-get($c-palette, yellow);
 $c-highlight-light: lighten($c-highlight, 15%);
 $c-highlight-dark:  darken($c-highlight, 15%);
 
-$c-error:   map-get($c-palette, red);
+$c-danger:   map-get($c-palette, red);
+$c-danger-light:   lighten($c-danger, 15%);
+$c-danger-light-30:   lighten($c-danger, 30%);
+$c-danger-light-50:   lighten($c-danger, 50%);
+
 $c-success: map-get($c-palette, green);
-$c-disabled: $c-light-50;
+$c-success-light:   lighten($c-success, 15%);
+$c-success-light-30:   lighten($c-success, 30%);
+$c-success-light-50:   lighten($c-success, 50%);
+
+$c-disabled: $c-light-15;
 
 // Brand colors for social channels
 $g-social-colors: (

@@ -1,27 +1,37 @@
-$form-radius:      $g-border-radius;
+$form-disabled-bg: $c-disabled;
+$form-disabled-border-color: $c-light-30;
+$form-disabled-color: $c-light-75;
 
-.Form {
+$form-danger-bg: $c-danger-light-30;
+$form-danger-border-color: $c-danger;
+$form-danger-color: $c-danger;
 
-  // scss-lint:disable all
-  input:not([type]),
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=url],
-  input[type=search],
-  input[type=tel],
-  input[type=number],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=date],
-  input[type=month],
-  input[type=time],
-  input[type=week],
-  input[type=color],
-  select,
-  textarea {
-    border-radius: $form-radius;
+$form-success-bg: $c-success-light-50;
+$form-success-border-color: $c-success;
+$form-success-color: $c-success;
+
+.Form-input,
+.Form-select,
+.Form-text,
+.Form-check,
+.Form-radio {
+
+  &:disabled {
+    border-color: $form-disabled-border-color;
+    background-color: $form-disabled-bg;
+    color: $form-disabled-color;
   }
-  // scss-lint:enable all
+
+  &--danger {
+    border-color: $form-danger-border-color;
+    background: $form-danger-bg;
+    color: $form-danger-color;
+  }
+
+  &--success {
+    border-color: $form-success-border-color;
+    background: $form-success-bg;
+    color: $form-success-color;
+  }
 
 }
