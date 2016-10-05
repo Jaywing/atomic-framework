@@ -1,16 +1,13 @@
 import './asyncModules'
-import exclaimify from './exclaimify'
-import breakpoint from './breakpoint'
-import eqcss from 'eqcss' // For Element Queries within the CSS
-import $ from 'domtastic';
+import exclaimify from './modules/exclaimify'
+import breakpoint from './modules/breakpoint'
 
-const Button = $('#button')
-const Label = $('#label')
+const Button = document.getElementById('button')
 
 const AlertAsyncMessage = function() {
   // CommonJS async syntax webpack magic
   require.ensure([], function() {
-    const Message = require("./asyncMessage").default
+    const Message = require("./asyncModules/asyncMessage").default
     alert(exclaimify(Message))
   })
 }
@@ -18,6 +15,9 @@ const AlertAsyncMessage = function() {
 breakpoint.init() // initialise breakpoints
 
 if (Button) {
-  Button.on('click', AlertAsyncMessage)
+  Button.addEventListener('click', AlertAsyncMessage)
 }
 
+// initiate js in the dom
+document.querySelector('html').classList.remove('no-js');
+document.querySelector('html').classList.add('js');

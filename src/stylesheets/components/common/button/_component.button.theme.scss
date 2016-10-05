@@ -25,6 +25,8 @@ $button-color-hover:      $c-dark-15;
 $button-bg-color-active:  darken($button-bg-color-hover, 20%);
 $button-color-active:     $c-dark;
 
+$button-disabled-color: $c-disabled;
+
 
 .Button {
   text-align: center;
@@ -35,9 +37,9 @@ $button-color-active:     $c-dark;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
-            $button-color $button-bg-color,
-            $button-color-hover $button-bg-color-hover,
-            $button-trans-speed
+      $button-color $button-bg-color,
+      $button-color-hover $button-bg-color-hover,
+      $button-trans-speed
     );
   }
 
@@ -55,6 +57,7 @@ $button-color-active:     $c-dark;
 
   &[disabled] {
     cursor: not-allowed;
+    color: $button-disabled-color;
   }
 
   svg {

@@ -105,7 +105,7 @@
     "normalize.css": "^4.0.0",
     "scroll-to-element": "^2.0.0",
     "shortid": "^2.2.6",
-    "sticky-js": "^1.0.7",
+    "sticky-js": "^1.1.2",
     "throttle-factory": "^1.0.0",
     "throttleit": "^1.0.0"
   }

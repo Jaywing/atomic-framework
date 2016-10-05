@@ -1,4 +1,4 @@
-import Module from '../Module'
+import Module from '../modules/Module'
 import createElement from '../helpers/createElement'
 import scrollToEle from 'scroll-to-element'
 
