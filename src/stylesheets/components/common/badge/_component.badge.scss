@@ -1,0 +1,15 @@
+$badge-padding: $g-spacer-xs;
+$badge-bg: $c-dark-50;
+$badge-color: $c-light;
+$badge-radius: $g-border-radius;
+$badge-border: 1px solid $c-dark-30;
+
+.Badge {
+  @include minion;
+  display: inline-block;
+  padding: $badge-padding;
+  border-radius: $badge-radius;
+  border: $badge-border;
+  background: $badge-bg;
+  color: $badge-color;
+}

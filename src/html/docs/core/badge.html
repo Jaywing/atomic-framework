@@ -30,6 +30,36 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <pre><code class="html">&lt;div class="Badge"&gt;...&lt;/div&gt;</code></pre>
 </div>
 
+<h2>Modifiers</h2>
+
+<h4>Notification</h4>
+
+<div class="docs-example">
+  <div class="Badge Badge--notification">1</div>
+  <div class="Badge Badge--notification">2</div>
+  <div class="Badge Badge--notification">3</div>
+  <div class="Badge Badge--notification">10</div>
+  <div class="Badge Badge--notification">100</div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class="Badge Badge--notification"&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Color modifier</h4>
+
+<div class="docs-example">
+  <div class="Badge Badge--success">sucess</div>
+  <div class="Badge Badge--warning">Warning</div>
+  <div class="Badge Badge--danger">Danger</div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class="Badge Badge--success"&gt;...&lt;/div&gt;
+&lt;div class="Badge Badge--warning"&gt;...&lt;/div&gt;
+&lt;div class="Badge Badge--danger"&gt;...&lt;/div&gt;</code></pre>
+</div>
+
 {% endblock %}
 
 {% block javascript %}
