@@ -29,7 +29,8 @@ $c-palette: (
   amber:  #f9c000,
   red:    #dd2228,
   green:  #0b9444,
-  yellow: #e6d593
+  yellow: #e6d593,
+  orange: #f9a124
 );
 
 // Global color variables
@@ -66,7 +67,7 @@ $c-success-light:   lighten($c-success, 15%);
 $c-success-light-30:   lighten($c-success, 30%);
 $c-success-light-50:   lighten($c-success, 50%);
 
-$c-warning: map-get($c-palette, green);
+$c-warning: map-get($c-palette, orange);
 $c-warning-light:   lighten($c-warning, 15%);
 $c-warning-light-30:   lighten($c-warning, 30%);
 $c-warning-light-50:   lighten($c-warning, 50%);
