@@ -24,10 +24,10 @@
     "js": {
       "src": "javascripts",
       "dest": "/javascripts",
+      "destProd": "javascripts",
       "extractSharedJs": false,
       "entries": {
-        "app": ["./app.js"],
-        "page": ["./page.js"]
+        "app": ["./app.js"]
       },
       "extensions": ["js", "json"],
       "babel": {
@@ -87,7 +87,7 @@
     },
 
     "production" : {
-      "rev": true
+      "rev": false
     }
   }
 }

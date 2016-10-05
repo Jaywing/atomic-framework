@@ -81,7 +81,7 @@
       "category": "Modules",
       "section": "core",
       "items": [
-        { "id": "button-mod", "title": "Button", "section": "core", "ready": false },
+        { "id": "button-mod", "title": "Button", "section": "core", "ready": true },
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": false },
         { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": false },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },

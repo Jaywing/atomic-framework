@@ -1,4 +1,4 @@
-import Module from '../Module'
+import Module from '../modules/Module'
 
 export default class Label extends Module {
 

@@ -1,11 +1,11 @@
 $close-size: 2rem;
-$close-alt-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 0 6px rgba(0,0,0,.3);
+$close-alt-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 6px rgba(0, 0, 0, .3);
 
 .Close {
   display: inline-block;
-  width: 2$close-size;
-  height: 2$close-size;
-  line-height: 2$close-size;
+  width: $close-size;
+  height: $close-size;
+  line-height: $close-size;
   text-align: center;
   vertical-align: middle;
 }

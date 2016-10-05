@@ -2,6 +2,7 @@ $button-swap-ani-speed: $g-trans-link-speed;
 $button-swap-ani-easing: ease;
 $button-swap-horizontal-padding: $g-spacer;
 
+// scss-lint:disable NestingDepth
 .Button--swap {
   position: relative;
   overflow: hidden;
@@ -77,7 +78,7 @@ $button-swap-horizontal-padding: $g-spacer;
     // Animated
     &.Button--ani .Button-content {
       transition: top $button-swap-ani-speed $button-swap-ani-easing,
-                  transform $button-swap-ani-speed $button-swap-ani-easing;
+      transform $button-swap-ani-speed $button-swap-ani-easing;
     }
 
     .Button-content:not(.Button-content--hidden) {
@@ -172,4 +173,3 @@ $button-swap-horizontal-padding: $g-spacer;
   }
 
 }
-

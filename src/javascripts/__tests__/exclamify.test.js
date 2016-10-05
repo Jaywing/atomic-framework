@@ -1,4 +1,4 @@
-import exclaimify from '../exclaimify'
+import exclaimify from '../modules/exclaimify'
 
 describe('exclaimify.js', () => {
 

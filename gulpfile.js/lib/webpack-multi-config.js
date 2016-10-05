@@ -9,6 +9,9 @@ var webpackManifest = require('./webpackManifest')
 module.exports = function(env) {
   var jsSrc = path.resolve(config.root.src, config.tasks.js.src)
   var jsDest = path.resolve(config.root.dest, config.tasks.js.dest)
+  if (env === 'production') {
+    jsDest = path.resolve(config.root.dest, config.tasks.js.destProd)
+  }
   var publicPath = pathToUrl(config.tasks.js.dest, '/')
 
   var extensions = config.tasks.js.extensions.map(function(extension) {
