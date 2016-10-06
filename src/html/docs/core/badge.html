@@ -22,12 +22,48 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2>Usage</h2>
 
+<p>To create a badge, just add the <code>.Badge</code> class to a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> element.</p>
+
 <div class="docs-example">
   <div class="Badge">Badge</div>
 </div>
 
 <div class="docs-code docs-code--html">
 <pre><code class="html">&lt;div class="Badge"&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+<h2>Modifiers</h2>
+
+<h4>Notification</h4>
+
+<p>Add the <code>.Badge-notification</code> class to indicate a notification, typically it is used with numbers.</p>
+
+<div class="docs-example">
+  <div class="Badge Badge--notification">1</div>
+  <div class="Badge Badge--notification">2</div>
+  <div class="Badge Badge--notification">3</div>
+  <div class="Badge Badge--notification">10</div>
+  <div class="Badge Badge--notification">100</div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class="Badge Badge--notification"&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Color modifier</h4>
+
+<p>Add the <code>.Badge-success</code>, <code>.Badge-warning</code> or <code>.Badge-danger</code> class for additional colors.</p>
+
+<div class="docs-example">
+  <div class="Badge Badge--success">sucess</div>
+  <div class="Badge Badge--warning">Warning</div>
+  <div class="Badge Badge--danger">Danger</div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class="Badge Badge--success"&gt;...&lt;/div&gt;
+&lt;div class="Badge Badge--warning"&gt;...&lt;/div&gt;
+&lt;div class="Badge Badge--danger"&gt;...&lt;/div&gt;</code></pre>
 </div>
 
 {% endblock %}

@@ -1,0 +1,48 @@
+$badge-padding: 0 $g-spacer-sm;
+$badge-bg: $c-dark-50;
+$badge-color: $c-light;
+$badge-radius: $g-border-radius;
+$badge-border: 1px solid $c-dark-30;
+
+$badge-success-bg: $c-success-light;
+$badge-success-border-color: $c-success;
+
+$badge-warning-bg: $c-warning-light;
+$badge-warning-border-color: $c-warning;
+
+$badge-danger-bg: $c-danger-light;
+$badge-danger-border-color: $c-danger;
+
+.Badge {
+  @include minion;
+  display: inline-block;
+  padding: $badge-padding;
+  border-radius: $badge-radius;
+  border: $badge-border;
+  background: $badge-bg;
+  color: $badge-color;
+  text-align: center;
+  line-height: 1.4;
+
+  &--notification {
+    min-width: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 500px;
+  }
+
+  &--success {
+    border-color: $badge-success-border-color;
+    background: $badge-success-bg;
+  }
+
+  &--warning {
+    border-color: $badge-warning-border-color;
+    background: $badge-warning-bg;
+  }
+
+  &--danger {
+    border-color: $badge-danger-border-color;
+    background: $badge-danger-bg;
+  }
+
+}
