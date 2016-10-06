@@ -1,0 +1,75 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'bookmarks' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Bookmarks | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Bookmarks</h1>
+<p class="Article-lead">A module that adds a collapsible bookmarks menu that can auto-generate based on page section ID's.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section-usage"><a href="#section-usage" class="textLinkReset">Usage</a></h2>
+
+<div class="Bookmarks" data-module="Bookmarks" data-options='
+  {"animated":
+    {"ease":"out-bounce",
+    "speed":1000}
+  }'></div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;!-- <strong>Ex.1:</strong> Auto-generating bookmark menu --&gt;
+&lt;div class=&quot;Bookmarks&quot; data-module=&quot;Bookmarks&quot;&gt;&lt;/div&gt;
+
+&lt;!-- <strong>Ex.2:</strong> Pre-built bookmark menu --&gt;
+&lt;div class=&quot;Bookmarks&quot; data-module=&quot;Bookmarks&quot;&gt;
+  &lt;ul class=&quot;Menu Menu--vertical Bookmarks-menu&quot;&gt;
+    &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#top&quot;&gt;Top&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#section-usage&quot;&gt;Usage&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<p>The bookmarks module is asynchronous and is initialised using <code>data-module="Bookmarks"</code> on the bookmark element.</p>
+
+<h3 id="section-options"><a href="#section-options" class="textLinkReset">Options</a></h3>
+<h4>Auto-generate</h4>
+<p>If the module HTML is empty (Ex.1 above) the module will auto-generate it's bookmarks by default, populating the menu with any id's with the prefix of section (eg. <code>&lt;section id="section-usage"&gt;</code>).</p>
+<p>If the bookmark menu is present in the static HTML (Ex.2 above), the module will not auto-generate unless explicitly told to using module options (eg. <code>data-options='{"autoGenerate":true}'</code>).</p>
+<h4>Animated scrolling</h4>
+<p>This is disabled by default. To enable this with it's default settings use <code>data-options='{"animated":true}'</code>.</p>
+<p>The animated functions default settings are:</p>
+<dl class="Definition Definition--horizontal">
+  <dt>ease</dt>
+  <dd>'out-circ' <small>(this uses the <a href="https://github.com/component/ease" target="_blank">'ease' js component</a>)</small></dd>
+  <dt>speed</dt>
+  <dd>750 <small>(time it take for the animation to complete)</small></dd>
+  <dt>Offset</dt>
+  <dd>0 <small>(if you need to offset the animation end point, maybe because of a sticky menu)</small></dd>
+</dl>
+<p>These defaults can be amended with <code>data-options</code>, see below</p>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;Bookmarks&quot; data-module=&quot;Bookmarks&quot; data-options=&#39;
+  {&quot;animated&quot;:
+    {&quot;ease&quot;:&quot;out-bounce&quot;,
+    &quot;speed&quot;:1000,
+    &quot;offset&quot;:-50}
+  }&#39;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

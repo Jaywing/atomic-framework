@@ -10,6 +10,8 @@ for (var i = 0; i < moduleElements.length; i++) {
   }
   require.ensure([], function() {
     const Module = require(`./${name}`).default
-    new Module(el, name, options)
+    if (Module) {
+      new Module(el, name, options)
+    }
   })
 }

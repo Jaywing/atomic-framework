@@ -22,7 +22,10 @@ breakpoint.dispatchChangeEvent = function(previous) {
   let myEvent = new CustomEvent(
     EventName,
     {
-      detail: { prev: previous }, // include details of the previous breakpoint
+      detail: {
+        previous: previous,
+        current: breakpoint.value
+      }, // include details of the previous and current breakpoint
       bubble: true,
       cancelable: true
     }
@@ -30,10 +33,10 @@ breakpoint.dispatchChangeEvent = function(previous) {
   document.dispatchEvent(myEvent)
 }
 
-// logs to breakpoint updates to the console (can be disabled through init function)
+// logs breakpoint updates to the console (can be disabled through init function)
 breakpoint.logUpdate = function (e) {
-  let msg = `Breakpoint updated to ${breakpoint.value}`
-  let prev = e.detail.prev
+  let msg = `Breakpoint updated to ${e.detail.current}`
+  let prev = e.detail.previous
   if (prev !== undefined) {
     msg += ` from ${prev}`
   }
