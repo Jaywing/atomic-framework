@@ -87,7 +87,6 @@ export default class Bookmarks extends Module {
     if(this.settings.animated !== false) {
       if (typeof this.settings.animated === 'object') {
         this.settings.animatedSettings = Object.assign(this.settings.animatedDefaults, this.settings.animated)
-        console.log(this.settings.animatedSettings)
       } else {
         this.settings.animatedSettings = this.settings.animatedDefaults
       }
@@ -109,7 +108,6 @@ export default class Bookmarks extends Module {
       }
       // close bookmark menu
       setTimeout(function () {
-        console.log(Bookmarks.toggler)
         Bookmarks.toggler.click()
       }, timeout)
     }

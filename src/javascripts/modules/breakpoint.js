@@ -44,6 +44,13 @@ breakpoint.logUpdate = function (e) {
 }
 
 breakpoint.init = function (log = true) {
+  breakpoint.refreshValue();
+
+  if (breakpoint.value === "") {
+    console.log('Breakpoint can not initialise as the necessary css is not available');
+    return
+  }
+
   window.addEventListener( // when the window resizes, check for change
     'resize',
     throttle(
@@ -55,6 +62,8 @@ breakpoint.init = function (log = true) {
     document.addEventListener(EventName, breakpoint.logUpdate, false) // listen to the event and log changes
   }
   breakpoint.checkForChange()
+
+  console.log('Breakpoint has initialised')
 }
 
 export default breakpoint
