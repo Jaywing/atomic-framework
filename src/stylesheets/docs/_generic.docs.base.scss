@@ -1,3 +1,7 @@
+html {
+  background: darken($c-light, 2%);
+}
+
 .StickyFooter {
   display: flex;
   min-width: 100vh;

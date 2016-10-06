@@ -1,4 +1,18 @@
 $bookmarks-z: 1000;
+$bookmarks-top: $g-spacer-sm;
+$bookmarks-right: $g-spacer;
+
+$bookmarks-toggler-color: $c-dark-15;
+$bookmarks-toggler-bg: rgba($c-light, .85);
+$bookmarks-toggler-border: 1px solid $c-dark-30;
+
+$bookmarks-menu-trans: all $g-trans-link-speed ease-in;
+$bookmarks-menu-trans-origin: right top;
+$bookmarks-menu-offset: 10px;
+$bookmarks-menu-border: 1px solid $c-dark-30;
+$bookmarks-menu-padding: $g-spacer-sm;
+$bookmarks-menu-bg: rgba($c-light, .85);
+$bookmarks-menu-z: $g-z-8;
 
 .Bookmarks {
 
@@ -12,30 +26,30 @@ $bookmarks-z: 1000;
 
 }
 
-.js-Bookmarks {
+.js .Bookmarks {
   position: fixed;
-  top: $g-spacer-sm;
-  right: $g-spacer;
+  top: $bookmarks-top;
+  right: $bookmarks-right;
   text-align: right;
   z-index: $bookmarks-z;
 
   .Bookmarks-toggler {
     display: inline-block;
-    color: $c-dark-15;
-    background: rgba(#fff, .5);
+    color: $bookmarks-toggler-color;
+    background: $bookmarks-toggler-bg;
     margin-top: 2px;
-    border: 1px solid $c-dark-30;
+    border: $bookmarks-toggler-border;
   }
 
   .Bookmarks-menu {
     display: inline-block;
-    transition: all .3s ease-in;
+    transition: $bookmarks-menu-trans;
     max-height: 0;
     height: auto;
     overflow: hidden;
-    margin: 10px 0;
+    margin-top: $bookmarks-menu-offset;
     transform: scale(0);
-    transform-origin: right top;
+    transform-origin: $bookmarks-menu-trans-origin;
     opacity: 0;
   }
 
@@ -47,13 +61,13 @@ $bookmarks-z: 1000;
     }
 
     .Bookmarks-menu {
-      max-height: 1200px;
-      border-color: $c-dark-30;
-      padding: $g-spacer-sm;
+      max-height: 90%;
+      border: $bookmarks-menu-border;
+      padding: $bookmarks-menu-padding;
       opacity: 1;
       transform: scale(1);
-      background: rgba(255, 255, 255, .9);
-      z-index: 10;
+      background: $bookmarks-menu-bg;
+      z-index: $bookmarks-menu-z;
     }
   }
 
