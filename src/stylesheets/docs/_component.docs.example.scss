@@ -1,32 +1,31 @@
 %docs-block {
   margin: $g-spacer-xl 0 $g-spacer;
   position: relative;
+  border-top: 1px solid rgba($c-light-30, .5);
+  border-bottom: 1px solid rgba($c-light-30, .5);
 
   &::before {
-    @include minion;
+    @include minion-bold;
     display: inline-block;
     padding: $g-spacer-xxs $g-spacer-sm;
-    border-left: 3px solid $c-light-15;
+    background: rgba($c-light-30, .5);
     position: absolute;
     top: -($g-spacer-lg);
-    left: -1px;
+    left: 0;
     color: $c-dark-30;
     text-transform: capitalize;
-    min-height: $g-spacer-lg;
+    border-radius: $g-border-radius $g-border-radius 0 0;
+    border: 1px solid $c-light-30;
   }
 }
 
 .docs-example {
   @extend %docs-block;
 
+  padding: $g-spacer-lg $g-spacer;
   background: $c-light;
-  padding: $g-spacer 0;
 
   &::before {
     content: 'Example';
-  }
-
-  pre {
-    margin: 0;
   }
 }
