@@ -47,9 +47,6 @@
 // * Default (base) elements
 @import 'base/base'; // Un-classed common common
 
-// * Icons (from the generated font)
-//@import 'generated/generated.icons'; // not needed - use svgSprite
-
 // * Objects
 @import 'components/objects/site/object.site';
 @import 'components/objects/container/object.container';
@@ -73,12 +70,13 @@
 @import 'components/common/tooltip/component.tooltip';
 
 // * Navigation Components
-@import 'components/navigation/nav/component.nav';
 @import 'components/navigation/menu/component.menu';
 @import 'components/navigation/breadcrumbs/component.breadcrumbs';
+@import 'components/navigation/skip-link/component.skip-link';
 
 // * Module Components
-
+@import 'components/modules/bookmarks/component.bookmarks';
+@import 'components/modules/breakpoint/component.breakpoint';
 
 // * Trumps      // Helper classes, hacks and browser fixes
 // @import 'trumps/trump.border';

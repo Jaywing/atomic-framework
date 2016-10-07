@@ -18,6 +18,12 @@
     }
   }
 
+  &--js {
+    &::before {
+      content: 'Javascript';
+    }
+  }
+
   &--scss {
     &::before {
       content: 'Scss';

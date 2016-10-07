@@ -22,7 +22,8 @@
 .docs-example {
   @extend %docs-block;
 
-  padding: $g-spacer-lg 0;
+  background: $c-light;
+  padding: $g-spacer-lg $g-spacer;
 
   &::before {
     content: 'Example';

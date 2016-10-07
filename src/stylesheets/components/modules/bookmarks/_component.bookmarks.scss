@@ -1,0 +1,79 @@
+$bookmarks-z: 1000;
+$bookmarks-top: $g-spacer-sm;
+$bookmarks-right: $g-spacer;
+
+$bookmarks-toggler-color: $c-dark-15;
+$bookmarks-toggler-bg: rgba($c-light, .85);
+$bookmarks-toggler-border: 1px solid $c-dark-30;
+
+$bookmarks-menu-trans: all $g-trans-link-speed ease-in;
+$bookmarks-menu-trans-origin: right top;
+$bookmarks-menu-offset: 10px;
+$bookmarks-menu-border: 1px solid $c-dark-30;
+$bookmarks-menu-padding: $g-spacer-sm;
+$bookmarks-menu-bg: rgba($c-light, .85);
+$bookmarks-menu-z: $g-z-8;
+
+.Bookmarks {
+
+  &-menu {
+    @include reset-list;
+  }
+
+  &-toggler {
+    display: none;
+  }
+
+}
+
+.js .Bookmarks {
+  position: fixed;
+  top: $bookmarks-top;
+  right: $bookmarks-right;
+  text-align: right;
+  z-index: $bookmarks-z;
+
+  .Bookmarks-toggler {
+    display: inline-block;
+    color: $bookmarks-toggler-color;
+    background: $bookmarks-toggler-bg;
+    margin-top: 2px;
+    border: $bookmarks-toggler-border;
+  }
+
+  .Bookmarks-menu {
+    display: inline-block;
+    transition: $bookmarks-menu-trans;
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    margin-top: $bookmarks-menu-offset;
+    transform: scale(0);
+    transform-origin: $bookmarks-menu-trans-origin;
+    opacity: 0;
+  }
+
+  &.is-active {
+
+    .Bookmarks-toggler {
+      background: #fff;
+      color: $c-dark;
+    }
+
+    .Bookmarks-menu {
+      max-height: 90%;
+      border: $bookmarks-menu-border;
+      padding: $bookmarks-menu-padding;
+      opacity: 1;
+      transform: scale(1);
+      background: $bookmarks-menu-bg;
+      z-index: $bookmarks-menu-z;
+    }
+  }
+
+}
+
+:target {
+  animation-delay: 1.5s;
+  animation: target-fade 5s 1;
+}

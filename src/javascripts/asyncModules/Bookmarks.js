@@ -10,7 +10,12 @@ export default class Bookmarks extends Module {
     const defaults = {
       "activeClass": "is-active",
       "autoGenerate": false,
-      "animated": false
+      "animated": false,
+      "animatedDefaults": {
+        "ease": "out-circ",
+        "speed": 750,
+        "offset": 0
+      }
     }
     // generate settings
     super(el, name, options, defaults)
@@ -19,7 +24,7 @@ export default class Bookmarks extends Module {
 
   init() {
 
-    if (this.el.innerHTML === "") { // if the container is empty
+    if (this.el.innerHTML === "" || this.settings.autoGenerate) { // if the container is empty
       this.settings.autoGenerate = true;
       this.autoGenerate(); // autogenerate list
     }
@@ -79,23 +84,30 @@ export default class Bookmarks extends Module {
 
     const Bookmarks = this
 
+    if(this.settings.animated !== false) {
+      if (typeof this.settings.animated === 'object') {
+        this.settings.animatedSettings = Object.assign(this.settings.animatedDefaults, this.settings.animated)
+      } else {
+        this.settings.animatedSettings = this.settings.animatedDefaults
+      }
+    }
+
+
     // bookmark click handler
     const bookmarkClickHandler = function (e) {
       let timeout = 0;
       // animated scroll
-      if (Bookmarks.settings.animated) {
+      if (Bookmarks.settings.animated !== false) {
         history.pushState({}, "", this.href)
-        timeout = 750
         const targetEle = e.target.getAttribute('href')
         scrollToEle(targetEle, {
-          offset: 0,
-          ease: 'out-bounce',
-          duration: timeout
+          offset: Bookmarks.settings.animatedSettings.offset,
+          ease: Bookmarks.settings.animatedSettings.ease,
+          duration: Bookmarks.settings.animatedSettings.speed
         })
       }
       // close bookmark menu
       setTimeout(function () {
-        console.log(Bookmarks.toggler)
         Bookmarks.toggler.click()
       }, timeout)
     }

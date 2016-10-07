@@ -1,3 +1,4 @@
+{% from 'macros/helpers.html' import icon %}
 <!doctype html>
 <html lang="en-GB" class="no-js">
 <head>
@@ -25,10 +26,13 @@
 <body id="top" class="o-Site scrollY">
 
   <header role="banner" class="o-Site-header docs-GlobalHeader">
+
+    <a href="#content" class="SkipLink Button ">{{ icon('arrow-down') }} Skip to content</a>
+
     {% include "shared/docs/section-nav.html" %}
   </header>
 
-  <main class="o-Site-content">
+  <main id="content" class="o-Site-content">
   {% block main %}
     <div class="o-Container o-Container--centered">
 
@@ -40,7 +44,7 @@
           {% endblock %}
         </article>
 
-        <section class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6" data-sticky-container>
+        <section data-sticky-container class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6">
           {% block sidebar %}
             {% include "shared/docs/page-nav.html" %}
           {% endblock %}

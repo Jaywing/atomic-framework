@@ -59,7 +59,7 @@
       "items": [
         { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
-        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
+        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
       ]
     },
@@ -81,9 +81,8 @@
       "category": "Modules",
       "section": "core",
       "items": [
-        { "id": "button-mod", "title": "Button", "section": "core", "ready": true },
-        { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": false },
-        { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": false },
+        { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
+        { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": true },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },
         { "id": "alert-msg", "title": "Alert message", "section": "core", "ready": false }
       ]

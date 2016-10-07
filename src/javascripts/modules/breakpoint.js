@@ -22,7 +22,10 @@ breakpoint.dispatchChangeEvent = function(previous) {
   let myEvent = new CustomEvent(
     EventName,
     {
-      detail: { prev: previous }, // include details of the previous breakpoint
+      detail: {
+        previous: previous,
+        current: breakpoint.value
+      }, // include details of the previous and current breakpoint
       bubble: true,
       cancelable: true
     }
@@ -30,10 +33,10 @@ breakpoint.dispatchChangeEvent = function(previous) {
   document.dispatchEvent(myEvent)
 }
 
-// logs to breakpoint updates to the console (can be disabled through init function)
+// logs breakpoint updates to the console (can be disabled through init function)
 breakpoint.logUpdate = function (e) {
-  let msg = `Breakpoint updated to ${breakpoint.value}`
-  let prev = e.detail.prev
+  let msg = `Breakpoint updated to ${e.detail.current}`
+  let prev = e.detail.previous
   if (prev !== undefined) {
     msg += ` from ${prev}`
   }
@@ -41,6 +44,13 @@ breakpoint.logUpdate = function (e) {
 }
 
 breakpoint.init = function (log = true) {
+  breakpoint.refreshValue();
+
+  if (breakpoint.value === "") {
+    console.log('Breakpoint can not initialise as the necessary css is not available');
+    return
+  }
+
   window.addEventListener( // when the window resizes, check for change
     'resize',
     throttle(
@@ -52,6 +62,8 @@ breakpoint.init = function (log = true) {
     document.addEventListener(EventName, breakpoint.logUpdate, false) // listen to the event and log changes
   }
   breakpoint.checkForChange()
+
+  console.log('Breakpoint has initialised')
 }
 
 export default breakpoint
