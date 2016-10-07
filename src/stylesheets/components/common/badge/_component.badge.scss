@@ -1,8 +1,10 @@
-$badge-padding: 0 $g-spacer-sm;
-$badge-bg: $c-dark-50;
+$badge-padding: $g-spacer-xxs $g-spacer-sm $g-spacer-xs;
+$badge-bg: $c-primary;
 $badge-color: $c-light;
 $badge-radius: $g-border-radius;
 $badge-border: 1px solid $c-dark-30;
+
+$badge-notification-radius: $g-round-radius;
 
 $badge-success-bg: $c-success-light;
 $badge-success-border-color: $c-success;
@@ -22,12 +24,11 @@ $badge-danger-border-color: $c-danger;
   background: $badge-bg;
   color: $badge-color;
   text-align: center;
-  line-height: 1.4;
+  text-decoration: none;
+  line-height: 1;
 
   &--notification {
-    min-width: 1.5rem;
-    line-height: 1.5rem;
-    border-radius: 500px;
+    border-radius: $badge-notification-radius;
   }
 
   &--success {

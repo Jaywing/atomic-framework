@@ -1,32 +1,40 @@
 //Horizontal DL
 $ddh-margin: 0 0 $g-spacer-sm;
-$ddh-delimiter-padding: 0 $g-spacer-sm 0 $g-spacer-xxs;
+$ddh-delimiter-padding: 0 0 0 $g-spacer-xxs;
 $ddh-delimiter: ':';
+$ddh-width: 20%;
+$ddh-dt-margin: 0 0 $g-spacer 0;
+$ddh-dt-padding: 0 $g-spacer-sm 0 0;
 
 //Horizontal list variant
 .Definition--horizontal {
   @include clearfix;
 
   dt {
-    margin: 0;
+    margin: $ddh-dt-margin;
     float: left;
-    width: 5rem;
-    margin-right: 1rem;
-    clear: both;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    clear: left;
+    width: $ddh-width;
+    padding: $ddh-dt-padding;
 
-    &::after {
-      content: $ddh-delimiter;
-      padding: $ddh-delimiter-padding;
+    @if $ddh-delimiter != '' {
+      &::after {
+        content: $ddh-delimiter;
+        padding: $ddh-delimiter-padding;
+      }
     }
   }
 
   dd {
     margin: $ddh-margin;
-    list-style: none;
-    padding-left: 6rem;
+    list-style: decimal inside;
+    padding-left: $ddh-width;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
 }
