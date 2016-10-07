@@ -59,7 +59,7 @@
       "items": [
         { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
-        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": false },
+        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
         { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
       ]
     },
