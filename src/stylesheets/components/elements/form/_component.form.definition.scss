@@ -51,10 +51,6 @@ $form-label-weight: $g-weight-bold;
   color: $form-input-color;
   border-radius: $form-input-radius;
 
-  &--inline {
-    width: auto !important;
-  }
-
   &--blank {
     border-color: $form-blank-border-color;
     border-style: $form-blank-border-style;
@@ -64,6 +60,7 @@ $form-label-weight: $g-weight-bold;
     &:focus {
       border-color: $form-blank-focus-border-color;
     }
+
   }
 
 }
@@ -72,6 +69,11 @@ $form-label-weight: $g-weight-bold;
 .Form-select,
 .Form-text {
   width: 100%;
+
+  &--inline {
+    width: auto;
+  }
+
 }
 
 .Form-text {

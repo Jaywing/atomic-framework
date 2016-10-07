@@ -1,3 +1,4 @@
+/*
 import Module from '../modules/Module'
 
 export default class Label extends Module {
@@ -28,4 +29,4 @@ export default class Label extends Module {
     this.el.addEventListener('input', toggleLabel)
 
   }
-}
+}*/
