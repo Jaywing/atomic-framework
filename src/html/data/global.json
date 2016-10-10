@@ -83,6 +83,8 @@
       "items": [
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": true },
+        { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
+        { "id": "dropdown", "title": "Dropdown", "section": "core", "ready": false },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },
         { "id": "alert-msg", "title": "Alert message", "section": "core", "ready": false }
       ]

@@ -16,20 +16,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Badge</h1>
-<p class="Article-lead">Easlily create nicely looking badges to label and highlight your content.</p>
+<p class="Article-lead">Easily create nicely looking badges to label and highlight your content.</p>
 
 <hr class="Article-divider">
 
 <h2>Usage</h2>
 
-<p>To create a badge, just add the <code>.Badge</code> class to a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> element.</p>
+<p>To create a badge, just add the <code>.Badge</code> class to an element.</p>
 
 <div class="docs-example">
-  <div class="Badge">Badge</div>
+  <strong class="Badge">Badge</strong>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;div class="Badge"&gt;...&lt;/div&gt;</code></pre>
+<pre><code class="html">&lt;strong class="Badge"&gt;...&lt;/strong&gt;</code></pre>
 </div>
 
 <h2>Modifiers</h2>
@@ -39,7 +39,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>Add the <code>.Badge-notification</code> class to indicate a notification, typically it is used with numbers.</p>
 
 <div class="docs-example">
-  <div class="Badge Badge--notification">1</div>
+  <span class="Badge Badge--notification">1</span>
   <div class="Badge Badge--notification">2</div>
   <div class="Badge Badge--notification">3</div>
   <div class="Badge Badge--notification">10</div>
@@ -47,7 +47,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;div class="Badge Badge--notification"&gt;...&lt;/div&gt;</code></pre>
+  <pre><code class="html">&lt;span class="Badge Badge--notification"&gt;...&lt;/span&gt;</code></pre>
 </div>
 
 <h4>Color modifier</h4>

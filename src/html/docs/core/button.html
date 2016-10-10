@@ -137,39 +137,39 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/button&gt;</code></pre>
 </div>
 
-<h3>Javascript: Button module</h3>
-<p>You can toggle states via an asynchronously loaded javascript module. Just add the data attribute <code>data-module="Button"</code></p>
+<h3>Javascript: Toggle module</h3>
+<p>You can toggle states via an asynchronously loaded javascript <a href="toggle.html">Toggle module</a>. Just add the data attribute <code>data-module="Toggle"</code></p>
 <div class="docs-example">
-  <button class="Button" data-module="Button">Toggle me</button>
-  <button class="Button Button--primary" data-module="Button">Toggle me</button>
-  <button class="Button Button--hover" data-module="Button">Toggle me</button>
-  <button class="Button Button--swap Button--aniFade Button--swapToggle" data-module="Button">
+  <button class="Button" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--primary" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--hover" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--swap Button--aniFade Button--swapToggle" data-module="Toggle">
     <div class="Button-content">Toggle me</div>
     <div class="Button-content Button-content--hidden">I'm toggled</div>
   </button>
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
-&lt;button class=&quot;Button Button--primary&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
-&lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Button&quot;&gt;Toggle me&lt;/button&gt;
-&lt;button class=&quot;Button Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot;&gt;
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Toggle&quot;&gt;
   &lt;div class=&quot;Button-content&quot;&gt;Toggle me&lt;/div&gt;
   &lt;div class=&quot;Button-content--hidden&quot;&gt;I&#39;m toggled&lt;/div&gt;
 &lt;/button&gt;</code></pre>
 </div>
 
 <h4>Loading submit button</h4>
-<p>The 'content swap button' and the 'Button module' can be used together to create a button that when clicked once, shows a loading icon and it can not be clicked again.</p>
+<p>The 'content swap button' and the <a href="toggle.html">'Toggle module'</a> can be used together to create a button that when clicked once, shows a loading icon and it can not be clicked again.</p>
 <div class="docs-example">
-  <button class="Button Button--primary Button--swap Button--aniFade Button--swapToggle" data-module="Button" data-options='{"once":true}'>
+  <button class="Button Button--primary Button--swap Button--aniFade Button--swapToggle" data-module="Toggle" data-options='{"once":true}'>
     <div class="Button-content">Submit me</div>
     <div class="Button-content Button-content--hidden">{{ icon('spinner', '0 0 1 1', 'Icon--spin') }}</div>
   </button>
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&lt;button class=&quot;Button Button--primary Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Button&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
+  <pre><code class="html">&lt;button class=&quot;Button Button--primary Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
   &lt;div class=&quot;Button-content&quot;&gt;Submit me&lt;/div&gt;
   &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin&#39;) &#125;&#125;&lt;/div&gt;
 &lt;/button&gt;</code></pre>
