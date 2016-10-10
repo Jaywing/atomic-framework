@@ -25,6 +25,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
   <button class="Button" data-module="Toggle">Click me to toggle me</button>
+  <button class="Button is-active" data-module="Toggle">Click me to toggle me</button>
 </div>
 <div class="docs-code docs-code--html">
   <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Click to toggle me&lt;/button&gt;</code></pre>
@@ -37,6 +38,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
   <button class="Button" data-module="Toggle" data-options='{"once":true}'>You can only turn me on</button>
+  <button class="Button is-active" data-module="Toggle" data-options='{"once":true}'>You can only turn me off</button>
 </div>
 <div class="docs-code docs-code--html">
   <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;You can only turn me on&lt;/button&gt;</code></pre>
@@ -94,6 +96,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h4>Hide</h4>
 <p>Instead of toggling an active class, you can toggle an elements display property by using the 'hide' option (<code>data-options='{"hide":true}</code>). This toggles the 'hidden' attribute on the target(s).</p>
+<p><strong class="Badge">Note</strong> If you use this option, the active class is no longer toggled.</p>
 
 <div class="docs-example">
   <button class="Button myButton" data-module="Toggle" data-options='{"target":"#mydiv4", "hide":true}'>Click to hide/show the div</button>

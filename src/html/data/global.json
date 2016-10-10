@@ -60,7 +60,8 @@
         { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
-        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
+        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false },
+        { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": true }
       ]
     },
     {
@@ -82,7 +83,6 @@
       "section": "core",
       "items": [
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
-        { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
         { "id": "dropdown", "title": "Dropdown", "section": "core", "ready": false },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },

@@ -3,10 +3,9 @@ import shortid from 'shortid'
 export default class Module {
 
   constructor(el, name, options = {}, defaults = {}) {
-    const uid = shortid.generate()
     this.el = el
     this.name = name
-    this.uid = uid
+    this.uid = shortid.generate() // generate unique id
 
     this.settings = Object.assign(defaults, options)
 
