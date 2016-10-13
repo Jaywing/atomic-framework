@@ -1,4 +1,5 @@
-$panel-error-color: $c-danger-dark;
+$panel-error-color: $c-danger;
+$panel-box-error-color: $c-danger-dark;
 $panel-box-error-bg: lighten($c-danger-light-30, 10%);
 $panel-box-error-border-color: $c-danger-dark;
 
@@ -10,8 +11,13 @@ $panel-box-error-border-color: $c-danger-dark;
   }
 
   &.Panel--box {
+    color: $panel-box-error-color;
     background: $panel-box-error-bg;
     border-color: $panel-box-error-border-color;
+
+    .Panel-title {
+      color: $panel-box-error-color;
+    }
   }
 
 }
