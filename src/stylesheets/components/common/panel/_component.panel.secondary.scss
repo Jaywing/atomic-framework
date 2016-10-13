@@ -1,0 +1,17 @@
+$panel-box-secondary-bg: $c-strong-trans-dark;
+$panel-box-secondary-border-color: $c-border;
+$panel-secondary-color: inherit;
+
+.Panel--secondary {
+  color: $panel-secondary-color;
+
+  .Panel-title {
+    color: $panel-secondary-color;
+  }
+
+  &.Panel--box {
+    background: $panel-box-secondary-bg;
+    border-color: $panel-box-secondary-border-color;
+  }
+
+}

@@ -1,0 +1,17 @@
+$panel-warning-color: $c-warning-dark;
+$panel-box-warning-bg: $c-warning-light-50;
+$panel-box-warning-border-color: $c-warning-dark;
+
+.Panel--warning {
+  color: $panel-warning-color;
+
+  .Panel-title {
+    color: $panel-warning-color;
+  }
+
+  &.Panel--box {
+    background: $panel-box-warning-bg;
+    border-color: $panel-box-warning-border-color;
+  }
+
+}

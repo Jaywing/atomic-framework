@@ -3,6 +3,7 @@
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
+    { "id": "components", "title": "Components", "ready": true },
     { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
@@ -14,7 +15,7 @@
         { "id": "environment", "title": "Dev environment", "section": "getting-started", "ready": true },
         { "id": "file-structure", "title": "File structure", "section": "getting-started", "ready": true },
         { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": true },
-        { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": false },
+        { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": true },
         { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },
         { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false },
         { "id": "support", "title": "Browser & device support", "section": "getting-started", "ready": false }
@@ -50,7 +51,8 @@
         { "id": "list", "title": "List", "section": "core", "ready": true },
         { "id": "table", "title": "Table", "section": "core", "ready": true },
         { "id": "form", "title": "Form", "section": "core", "ready": true },
-        { "id": "definition", "title": "Definition", "section": "core", "ready": true }
+        { "id": "definition", "title": "Definition", "section": "core", "ready": true },
+        { "id": "text", "title": "Text", "section": "core", "ready": false }
       ]
     },
     {
@@ -60,8 +62,15 @@
         { "id": "menu", "title": "Menu", "section": "core", "ready": true },
         { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
         { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
-        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false },
-        { "id": "bookmarks", "title": "Bookmarks", "section": "core", "ready": true }
+        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": false }
+      ]
+    },
+    {
+      "category": "Navigation",
+      "section": "components",
+      "items": [
+        { "id": "bookmarks", "title": "Bookmarks", "section": "components", "ready": true },
+        { "id": "dropdown", "title": "Dropdown", "section": "components", "ready": false }
       ]
     },
     {
@@ -70,12 +79,18 @@
       "items": [
         { "id": "icon", "title": "Icon", "section": "core", "ready": true },
         { "id": "button", "title": "Button", "section": "core", "ready": true },
-        { "id": "panel", "title": "Panel", "section": "core", "ready": false },
+        { "id": "panel", "title": "Panel", "section": "core", "ready": true },
         { "id": "close", "title": "Close", "section": "core", "ready": true },
         { "id": "badge", "title": "Badge", "section": "core", "ready": true },
-        { "id": "alert", "title": "Alert", "section": "core", "ready": false },
         { "id": "overlay", "title": "Overlay", "section": "core", "ready": false },
         { "id": "tooltip", "title": "Tooltip", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Common",
+      "section": "components",
+      "items": [
+        { "id": "alert", "title": "Alert", "section": "components", "ready": false }
       ]
     },
     {
@@ -84,9 +99,8 @@
       "items": [
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
-        { "id": "dropdown", "title": "Dropdown", "section": "core", "ready": false },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },
-        { "id": "alert-msg", "title": "Alert message", "section": "core", "ready": false }
+        { "id": "cookies", "title": "Cookies", "section": "core", "ready": false }
       ]
     }
   ],

@@ -21,16 +21,16 @@
 /// from within this file.
 
 $c-palette: (
-  black:  #000,
-  white:  #fff,
-  blue:   #2561ea,
-  purple: #a530e5,
-  teal:   #2fcde0,
-  amber:  #f9c000,
-  red:    #dd2228,
-  green:  #0b9444,
-  yellow: #e6d593,
-  orange: #be7000
+    black:  #000,
+    white:  #fff,
+    blue:   #2561ea,
+    purple: #a530e5,
+    teal:   #2fcde0,
+    amber:  #f9c000,
+    red:    #dd2228,
+    green:  #0b9444,
+    yellow: #e6d593,
+    orange: #be7000
 );
 
 // Global color variables
@@ -63,16 +63,19 @@ $c-highlight-light: lighten($c-highlight, 15%);
 $c-highlight-dark:  darken($c-highlight, 15%);
 
 $c-success: map-get($c-palette, green);
+$c-success-dark: darken($c-success, 20%);
 $c-success-light:   lighten($c-success, 15%);
 $c-success-light-30:   lighten($c-success, 30%);
 $c-success-light-50:   lighten($c-success, 50%);
 
 $c-warning: map-get($c-palette, orange);
+$c-warning-dark:   darken($c-warning, 20%);
 $c-warning-light:   lighten($c-warning, 15%);
 $c-warning-light-30:   lighten($c-warning, 30%);
 $c-warning-light-50:   lighten($c-warning, 50%);
 
 $c-danger:   map-get($c-palette, red);
+$c-danger-dark:   darken($c-danger, 20%);
 $c-danger-light:   lighten($c-danger, 15%);
 $c-danger-light-30:   lighten($c-danger, 30%);
 $c-danger-light-50:   lighten($c-danger, 50%);
@@ -82,13 +85,13 @@ $c-disabled-dark: $c-light-30;
 
 // Brand colors for social channels
 $g-social-colors: (
-  facebook:   #3b5998,
-  twitter:    #0084b4,
-  googlePlus: #dc4a38,
-  linkedIn:   #1f88be,
-  youtube:    #cc181e,
-  instagram:  #49769c,
-  pinterest:  #00aced
+    facebook:   #3b5998,
+    twitter:    #0084b4,
+    googlePlus: #dc4a38,
+    linkedIn:   #1f88be,
+    youtube:    #cc181e,
+    instagram:  #49769c,
+    pinterest:  #00aced
 );
 
 $c-subtle-trans-dark: rgba(0, 0, 0, .03);

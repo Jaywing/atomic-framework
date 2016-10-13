@@ -1,0 +1,37 @@
+$panel-box-bg: tranparent;
+$panel-box-border: 1px solid $c-border;
+$panel-box-badge-pos: $g-spacer-sm;
+$panel-box-padding: $g-spacer;
+$panel-box-border-radius: $g-border-radius;
+
+
+.Panel--box {
+  background: $panel-box-bg;
+  padding: $panel-box-padding;
+  border: $panel-box-border;
+  border-radius: $panel-box-border-radius;
+
+  .Panel-badge {
+    top: $panel-box-badge-pos;
+    right: $panel-box-badge-pos;
+  }
+
+  .Panel-teaser {
+    position: relative;
+    top: 1px;
+    margin-top: -($panel-box-padding);
+    margin-left: -($panel-box-padding);
+    margin-right: -($panel-box-padding);
+    border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
+    overflow: hidden;
+
+    img,
+    object,
+    video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}

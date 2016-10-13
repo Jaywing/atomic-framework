@@ -1,5 +1,7 @@
 $menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm;
 $menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm;
+$menu-vertical-title-margin: $g-spacer-sm 0 0;
+$menu-vertical-link-text-align: left;
 
 
 .Menu--vertical {
@@ -15,10 +17,16 @@ $menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm;
     align-items: flex-start;
     justify-content: flex-start;
     padding: $menu-vertical-link-padding;
+    text-align: $menu-vertical-link-text-align;
   }
 
   .Menu-title {
     padding: $menu-vertical-title-padding;
+    margin: $menu-vertical-title-margin;
+
+    .Menu-item:first-child & {
+      margin-top:0;
+    }
   }
 
   // Nested

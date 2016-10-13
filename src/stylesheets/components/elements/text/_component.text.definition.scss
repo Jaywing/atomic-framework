@@ -1,0 +1,20 @@
+$text-lead-color: inherit;
+
+$text-disabled-color: $c-disabled-dark;
+$text-disabled-cursor: not-allowed;
+
+
+.Text {
+
+  &--lead {
+    @include pica;
+    color: $text-lead-color;
+  }
+
+  &--disabled {
+    color: $text-disabled-color;
+    cursor: $text-disabled-cursor;
+
+  }
+
+}

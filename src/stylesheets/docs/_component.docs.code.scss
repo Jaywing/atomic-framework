@@ -1,3 +1,7 @@
+code {
+  color: $c-danger;
+}
+
 .docs-code {
   @extend %docs-block;
 
@@ -37,4 +41,11 @@
       content: 'HTML';
     }
   }
+
+  &--files {
+    &::before {
+      content: 'Files';
+    }
+  }
+
 }
