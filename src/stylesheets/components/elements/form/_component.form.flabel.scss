@@ -13,15 +13,8 @@ $form-flabel-transition: all .1s linear;
     position: absolute;
     top: $form-flabel-top;
     left: $form-flabel-left;
-    //opacity: 0;
     transition: $form-flabel-transition;
     background: $form-flabel-bg;
-
-    //&.is-active {
-    //  opacity: 1;
-    //  top: $form-flabel-active-top;
-    //}
-
   }
 
   .Form-input {
