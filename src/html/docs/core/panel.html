@@ -71,6 +71,56 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <pre><code class="html">&lt;div class=&quot;Panel Panel--box&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
+<h3>Stacked panels (<code>.Panel--stacked</code>)</h3>
+<p>It is possible to make a panel box look as though it is stack on top of others. Useful for tabs and such like.</p>
+<p><strong class="Badge">Note</strong> This class musts be used in conjuction with <code>.Panel--box</code>.</p>
+
+<div class="docs-example">
+  <div class="Panel Panel--box Panel--stacked">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;div class=&quot;Panel Panel--box Panel--stacked&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
+<h3>Piled panels (<code>.Panel--piled</code>)</h3>
+<p>It is possible to make a panel box look as though it is on top of a pile of others.</p>
+<p><strong class="Badge">Note</strong> This class musts be used in conjuction with <code>.Panel--box</code>.</p>
+
+<div class="docs-example">
+  <div class="Panel Panel--box Panel--piled">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;div class=&quot;Panel Panel--box Panel--piled&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
+<h3>Attached panel (<code>.Panel--attached</code>)</h3>
+<p>It is possible to attached the panel to other attachable items, for example, the menu (in tabular format) component, to create a tab like component.</p>
+
+<div class="docs-example">
+  <ul class="Menu Menu--tabular Menu--attached">
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+  <div class="Panel Panel--box Panel--attached Panel--stacked">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;ul class=&quot;Menu Menu--tabular Menu--attached&quot;&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ....
+&lt;/ul&gt;
+&lt;div class=&quot;Panel Panel--box Panel--attached&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
 <h4>Colour Modifiers</h4>
 
 <div class="docs-example">
@@ -196,8 +246,43 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <td class="textRight">Sub-element</td>
     </tr>
     <tr>
+      <th class="textLeft"><code>.Panel-teaser</code></th>
+      <td>Image associated with the panel</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    <tr>
       <th class="textLeft"><code>.Panel--box</code></th>
       <td>This creates some box styling</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--primary</code></th>
+      <td>This creates some styling with primary colour</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--primary</code></th>
+      <td>This creates some styling with primary colour</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--success</code></th>
+      <td>This creates some styling with success colour</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--warning</code></th>
+      <td>This creates some styling with warning colour</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--error</code></th>
+      <td>This creates some styling with error colour</td>
+      <td class="textRight">Modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Panel--attached</code></th>
+      <td>Changes the styles so a panel can be seamlessly attached to another attachable component</td>
       <td class="textRight">Modifier</td>
     </tr>
     </tbody>

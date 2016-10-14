@@ -47,15 +47,6 @@
 // * Default (base) elements
 @import 'base/base'; // Un-classed common common
 
-// * Objects
-@import 'components/objects/site/object.site';
-@import 'components/objects/container/object.container';
-@import 'components/objects/grid/object.grid';
-@import 'components/objects/size/object.size';
-@import 'components/objects/section/object.section';
-@import 'components/objects/media/object.media';
-@import 'components/objects/cover/object.cover';
-
 // * Element Components
 @import 'components/elements/list/component.list';
 @import 'components/elements/definition/component.definition';
@@ -79,6 +70,16 @@
 
 // * Module Components
 @import 'components/modules/breakpoint/component.breakpoint';
+
+// * Objects
+@import 'components/objects/site/object.site';
+@import 'components/objects/container/object.container';
+@import 'components/objects/grid/object.grid';
+@import 'components/objects/size/object.size';
+@import 'components/objects/section/object.section';
+@import 'components/objects/media/object.media';
+@import 'components/objects/cover/object.cover';
+
 
 // * Trumps      // Helper classes, hacks and browser fixes
 // @import 'trumps/trump.border';

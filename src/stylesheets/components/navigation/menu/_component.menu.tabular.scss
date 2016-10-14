@@ -4,7 +4,7 @@ $menu-tab-link-border: $menu-border-width solid transparent;
 $menu-tab-link-border-active: $menu-tab-border;
 $menu-tab-link-active-bg: $c-light;
 $menu-tab-link-active-color: $link-hover-color;
-$menu-tab-link-border-radius: $g-border-radius $g-border-radius 0 0;
+$menu-tab-link-border-radius: $g-border-radius;
 $menu-tab-link-padding-x: $g-spacer-lg;
 $menu-tab-link-padding-y: $g-spacer-sm;
 
@@ -13,13 +13,22 @@ $menu-tab-link-padding-y: $g-spacer-sm;
 
   .Menu-item {
     padding: 0;
+    margin: 0 $g-spacer-xxs;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .Menu-link {
     background: transparent;
     border: $menu-tab-link-border;
     border-bottom: 0;
-    border-radius: $menu-tab-link-border-radius;
+    border-radius: $menu-tab-link-border-radius $menu-tab-link-border-radius 0 0;
     padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
   }
 
@@ -39,9 +48,10 @@ $menu-tab-link-padding-y: $g-spacer-sm;
 
     .is-active .Menu-link,
     .Menu-link.is-active {
-      border-radius: 0 $menu-tab-link-border-radius $menu-tab-link-border-radius 0;
+      position: relative;
+      left: -($menu-border-width);
+      border-radius: $menu-tab-link-border-radius 0 0 $menu-tab-link-border-radius;
       margin-bottom: 0;
-      margin-right: -($menu-border-width);
       border: $menu-tab-link-border-active;
       border-right: 0;
     }

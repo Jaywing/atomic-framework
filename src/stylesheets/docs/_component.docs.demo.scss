@@ -22,6 +22,10 @@
     height: 100px;
   }
 
+  &--tall {
+    height: 400px;
+  }
+
   &.is-active {
     text-align: center;
     position: relative;
