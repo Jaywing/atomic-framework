@@ -2,6 +2,17 @@
 // Variables
 // ========================================================================
 
+$menu-link-color: $link-color;
+$menu-link-bg: transparent;
+$menu-link-hover-color: $link-hover-color;
+$menu-link-hover-bg: $c-strong-trans-dark;
+$menu-link-text-decoration: none;
+$menu-link-text-align: center;
+$menu-link-trans-speed: $g-trans-link-speed;
+$menu-link-active-color: $c-light;
+$menu-link-active-bg: $menu-link-color;
+
+
 $menu-margin: $g-spacer 0;
 $menu-margin-nested: $g-spacer;
 
@@ -60,14 +71,46 @@ $menu-title-font-weight: $g-weight-bold;
   flex: 0 0 auto;
   padding: $menu-item-padding;
 
-  &.is-active {
-    font-weight: $menu-item-active-font-weight;
+  &.Menu-link {
+    margin: $menu-item-padding;
+  }
+
+  &--right {
+    // scss-lint:disable ImportantRule
+    display: flex;
+    margin-left: auto !important;
+  }
+
+  &--left {
+    // scss-lint:disable ImportantRule
+    display: flex;
+    margin-right: auto !important;
   }
 }
 
 .Menu-link {
   display: block;
   padding: $menu-link-padding;
+  text-decoration: $menu-link-text-decoration;
+  text-align: $menu-link-text-align;
+
+  &:not(.Text--disabled) {
+    @include color-swap-on-hover(
+            $menu-link-color $menu-link-bg,
+            $menu-link-hover-color $menu-link-hover-bg,
+            $menu-link-trans-speed
+    );
+  }
+
+
+  .is-active &,
+  &.is-active {
+    @include color-swap-on-hover(
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-trans-speed
+    );
+  }
 }
 
 .Menu-title {

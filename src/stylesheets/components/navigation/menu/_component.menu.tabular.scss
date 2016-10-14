@@ -1,0 +1,49 @@
+$menu-border-width: 1px;
+$menu-tab-border: $menu-border-width solid $c-border;
+$menu-tab-link-border: $menu-border-width solid transparent;
+$menu-tab-link-border-active: $menu-tab-border;
+$menu-tab-link-active-bg: $c-light;
+$menu-tab-link-active-color: $link-hover-color;
+$menu-tab-link-border-radius: $g-border-radius $g-border-radius 0 0;
+$menu-tab-link-padding-x: $g-spacer-lg;
+$menu-tab-link-padding-y: $g-spacer-sm;
+
+.Menu--tabular {
+  border-bottom: $menu-tab-border;
+
+  .Menu-item {
+    padding: 0;
+  }
+
+  .Menu-link {
+    background: transparent;
+    border: $menu-tab-link-border;
+    border-bottom: 0;
+    border-radius: $menu-tab-link-border-radius;
+    padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
+  }
+
+  .is-active .Menu-link,
+  .Menu-link.is-active {
+    background: $menu-tab-link-active-bg;
+    color: $menu-tab-link-active-color;
+    border: $menu-tab-link-border-active;
+    border-bottom: 0;
+    margin-bottom: -($menu-border-width + 1);
+    padding-bottom: ($menu-tab-link-padding-y);
+  }
+
+  &.Menu--vertical {
+    border-bottom: 0;
+    border-right: $menu-tab-link-border-active;
+
+    .is-active .Menu-link,
+    .Menu-link.is-active {
+      border-radius: 0 $menu-tab-link-border-radius $menu-tab-link-border-radius 0;
+      margin-bottom: 0;
+      margin-right: -($menu-border-width);
+      border: $menu-tab-link-border-active;
+      border-right: 0;
+    }
+  }
+}

@@ -20,13 +20,16 @@ $link-visited-color:        $c-secondary;
 $link-visited-hover-color:  $c-secondary-dark;
 
 $link-trans-speed:  $g-trans-link-speed;
-
 $link-underline: underline;
 
 
 a {
-  @include color-swap-on-hover($link-color, $link-hover-color, $link-trans-speed);
   text-decoration: $link-underline;
+
+  &:not(.Text--disabled) {
+    color: $link-color;
+    @include color-swap-on-hover($link-color, $link-hover-color, $link-trans-speed);
+  }
 }
 
 @if $link-visited {
