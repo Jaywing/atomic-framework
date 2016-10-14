@@ -11,7 +11,7 @@ $close-hover-color: $c-light-50;
   vertical-align: middle;
 
   padding: 0;
-  border: none;
+  border: 0;
   background: none;
 
   &:focus,
@@ -19,6 +19,7 @@ $close-hover-color: $c-light-50;
   &:active {
     outline: none;
     cursor: pointer;
+
     svg {
       fill: $close-hover-color;
     }

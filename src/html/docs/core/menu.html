@@ -305,6 +305,29 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
+<h3>Attached menu (<code>.Menu--attached</code>)</h3>
+
+<p>It is possible to attached the menu to other attachable items, for example, the panel component, to create a tab like component.</p>
+
+<div class="docs-example">
+  <ul class="Menu Menu--tabular Menu--attached">
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+  <div class="Panel Panel--box Panel--attached Panel--stacked">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;ul class=&quot;Menu Menu--tabular Menu--attached&quot;&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ....
+&lt;/ul&gt;
+&lt;div class=&quot;Panel Panel--box Panel--attached&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
 <div class="docs-code">
   <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;

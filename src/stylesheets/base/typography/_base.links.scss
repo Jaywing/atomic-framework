@@ -27,8 +27,8 @@ a {
   text-decoration: $link-underline;
 
   &:not(.Text--disabled) {
-    color: $link-color;
     @include color-swap-on-hover($link-color, $link-hover-color, $link-trans-speed);
+    color: $link-color;
   }
 }
 

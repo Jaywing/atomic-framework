@@ -88,6 +88,38 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
+<h4>Ratio modifiers</h4>
+
+<div class="docs-example">
+  <h5>16 x 9 (.o-Cover--ratio16x9)</h5>
+  <div class="o-Cover o-Cover--bg o-Cover--ratio16x9" style="background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
+  <h5>4 x 3 (.o-Cover--ratio4x3)</h5>
+  <div class="o-Cover o-Cover--bg o-Cover--ratio4x3" style="background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
+  <h5>21 x 9 (.o-Cover--ratio21x9)</h5>
+  <div class="o-Cover o-Cover--bg o-Cover--ratio21x9" style="background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio16x9&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio4x3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio21x9&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<h3>Loading cover</h3>
+<p>This can be used with the <a href="docs/components/responsive-img.html">Responsive image</a> component when lazy loading images.</p>
+
+<div class="docs-example">
+  <div class="o-Cover o-Cover--ratio21x9 Demo">
+    {{ icon('spinner', '0 0 1 1', 'Icon--spin Icon--xl o-Cover-loading') }}
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--ratio21x9 Demo&quot;&gt;
+  &#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin Icon--xl o-Cover-loading&#39;) &#125;&#125;
+&lt;/div&gt;</code></pre>
+</div>
+
 <h3>Classes</h3>
 
 <div class="scrollXauto">
@@ -106,6 +138,16 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <td class="textRight">Component</td>
     </tr>
     <tr>
+      <th class="textLeft"><code>.o-Cover-object</code></th>
+      <td>The element that has to cover the container.</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Cover-loading</code></th>
+      <td>A spinning loading element</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    <tr>
       <th class="textLeft"><code>.o-Cover--bg</code></th>
       <td>Makes a background image cover the containing area</td>
       <td class="textRight">Component modifier</td>
@@ -119,11 +161,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <th class="textLeft"><code>.o-Cover--videoWide</code></th>
       <td>As above but with a padding of 56.34% (vimeo videos).</td>
       <td class="textRight">Component modifier</td>
-    </tr>
-    <tr>
-      <th class="textLeft"><code>.o-Cover-object</code></th>
-      <td>The element that has to cover the container.</td>
-      <td class="textRight">Sub-element</td>
     </tr>
     </tbody>
   </table>

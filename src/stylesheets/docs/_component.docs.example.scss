@@ -1,6 +1,7 @@
 %docs-block {
-  margin: $g-spacer-xl 0 $g-spacer;
+  margin: $g-spacer-xxl 0 $g-spacer;
   position: relative;
+  z-index: -10;
   border-top: 1px solid rgba($c-light-30, .5);
   border-bottom: 1px solid rgba($c-light-30, .5);
 

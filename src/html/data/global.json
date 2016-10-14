@@ -90,7 +90,8 @@
       "category": "Common",
       "section": "components",
       "items": [
-        { "id": "alert", "title": "Alert", "section": "components", "ready": false }
+        { "id": "alert", "title": "Alert", "section": "components", "ready": false },
+        { "id": "responsive-img", "title": "Responsive images", "section": "components", "ready": true }
       ]
     },
     {

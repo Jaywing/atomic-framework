@@ -11,14 +11,13 @@ $panel-box-warning-border-color: $c-warning-dark;
   }
 
   &.Panel--box {
+    color: $panel-box-warning-color;
+    background: $panel-box-warning-bg;
+    border-color: $panel-box-warning-border-color;
 
     .Panel-title {
       color: $panel-box-warning-color;
     }
-
-    color: $panel-box-warning-color;
-    background: $panel-box-warning-bg;
-    border-color: $panel-box-warning-border-color;
   }
 
 }

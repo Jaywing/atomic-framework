@@ -25,4 +25,8 @@ $panel-title-margin: 0 $g-spacer-xl 0 0;
     top: $panel-badge-pos;
     right: $panel-badge-pos;
   }
+
+  &--attached {
+    margin-top: 0;
+  }
 }

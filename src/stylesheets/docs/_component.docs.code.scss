@@ -6,6 +6,7 @@ code {
   @extend %docs-block;
 
   border: 1px solid $c-light-15;
+  margin-top: $g-spacer-xl;
 
   > pre {
     max-height: 350px;
