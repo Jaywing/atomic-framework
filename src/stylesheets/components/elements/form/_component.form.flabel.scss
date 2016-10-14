@@ -1,7 +1,7 @@
 $form-flabel-bg: white;
-$form-flabel-top: .25rem;
+$form-flabel-top: 50%;
 $form-flabel-left: $g-spacer-sm;
-$form-flabel-active-top: -.5rem;
+$form-flabel-active-top: 0;
 $form-flabel-transition: all .1s linear;
 
 .Form-flabel {
@@ -9,17 +9,27 @@ $form-flabel-transition: all .1s linear;
 
   .Form-label {
     @include minion;
+    @include transform(translateY(-50%));
     position: absolute;
     top: $form-flabel-top;
     left: $form-flabel-left;
-    opacity: 0;
+    //opacity: 0;
     transition: $form-flabel-transition;
     background: $form-flabel-bg;
 
-    &.is-active {
-      opacity: 1;
+    //&.is-active {
+    //  opacity: 1;
+    //  top: $form-flabel-active-top;
+    //}
+
+  }
+
+  .Form-input {
+
+    &:focus ~ label {
       top: $form-flabel-active-top;
     }
+
   }
 
 }
