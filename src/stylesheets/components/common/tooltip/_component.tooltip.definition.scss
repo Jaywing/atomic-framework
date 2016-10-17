@@ -11,6 +11,7 @@ $tooltip-popin-ani-type: linear;
 
 .Tooltip {
   position: relative;
+  display: inline-block;
 
   &-item {
     display: flex;
@@ -53,6 +54,91 @@ $tooltip-popin-ani-type: linear;
       animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
       visibility: visible;
       opacity: 1;
+    }
+
+  }
+
+}
+
+.Tooltip--right {
+
+  .Tooltip-item {
+    box-align: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    left: 115%;
+    bottom: -50%;
+
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Tooltip-itemInner {
+    position: relative;
+
+    &:after {
+      @include transform(translateY(-50%));
+      top: 50%;
+      left: -12%;
+      border-top: $tooltip-pointer-size solid transparent;
+      border-right: $tooltip-pointer-size solid $tooltip-pointer-bg;
+      border-bottom: $tooltip-pointer-size solid transparent;
+      border-left: $tooltip-pointer-size solid transparent;
+    }
+
+  }
+
+}
+
+.Tooltip--bottom {
+
+  .Tooltip-item {
+    top: $tooltip-bottom;
+    left: 0;
+    bottom: inherit;
+  }
+
+  .Tooltip-itemInner {
+    position: relative;
+
+    &:after {
+      top: inherit;
+      bottom: 99%;
+      left: 50%;
+      border-top: $tooltip-pointer-size solid transparent;
+      border-right: $tooltip-pointer-size solid transparent;
+      border-bottom: $tooltip-pointer-size solid $tooltip-pointer-bg;
+      border-left: $tooltip-pointer-size solid transparent;
+    }
+
+  }
+
+}
+
+.Tooltip--left {
+
+  .Tooltip-item {
+    box-align: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    left: -115%;
+    bottom: -50%;
+
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Tooltip-itemInner {
+    position: relative;
+
+    &:after {
+      @include transform(translateY(-50%));
+      top: 50%;
+      left: 99%;
+      border-top: $tooltip-pointer-size solid transparent;
+      border-right: $tooltip-pointer-size solid transparent;
+      border-bottom: $tooltip-pointer-size solid transparent;
+      border-left: $tooltip-pointer-size solid $tooltip-pointer-bg;
     }
 
   }

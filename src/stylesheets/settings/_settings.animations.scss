@@ -49,11 +49,13 @@
 @keyframes popin {
 
   from {
-    transform: scale(.95) translateY(10px);
+    //transform: scale(.95) translateY(10px);
+    transform: scale(.95);
   }
 
   to {
-    transform: rotate(1) translateY(-10px);
+    //transform: rotate(1) translateY(-10px);
+    transform: rotate(1);
   }
 
 }
