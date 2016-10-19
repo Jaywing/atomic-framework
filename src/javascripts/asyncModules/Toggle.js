@@ -1,6 +1,6 @@
 import Module from '../modules/Module'
 
-export default class Button extends Module {
+export default class Toggle extends Module {
 
   constructor(el, name, options) {
 

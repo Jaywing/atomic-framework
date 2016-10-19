@@ -74,6 +74,10 @@ $bookmarks-menu-z: $g-z-8;
 }
 
 :target {
-  animation-delay: 1.5s;
-  animation: target-fade 5s 1;
+  animation-delay: 1s;
+  animation: target-fade 3.5s 1;
+}
+
+.Panel:target {
+  animation: none;
 }

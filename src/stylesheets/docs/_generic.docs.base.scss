@@ -24,3 +24,17 @@ html {
   border-radius: $g-border-radius;
   margin: 0;
 }
+
+.is-active > .Panel,
+.Panel.is-active {
+  &::before {
+    @include minion;
+    padding: $g-spacer-xxs $g-spacer-xs;
+    content: 'I am active';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $c-light-15;
+  }
+}
+

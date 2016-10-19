@@ -101,7 +101,8 @@
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },
-        { "id": "cookies", "title": "Cookies", "section": "core", "ready": false }
+        { "id": "cookies", "title": "Cookies", "section": "core", "ready": false },
+        { "id": "switcher", "title": "Switcher", "section": "core", "ready": true }
       ]
     }
   ],

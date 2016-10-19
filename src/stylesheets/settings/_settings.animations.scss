@@ -10,6 +10,8 @@
 /// @create   19/09/2016
 ////
 
+$target-fade-bg: $c-highlight;
+
 /// Settings for common animation.
 
 @keyframes bounceInUp {
@@ -94,11 +96,9 @@
 
 }
 
-$target-fade-bg: $c-highlight;
-
 @keyframes target-fade {
   0% {
-    background-color: rgba($target-fade-bg, .7);
+    background-color: rgba($target-fade-bg, .4);
   }
 
   100% {
