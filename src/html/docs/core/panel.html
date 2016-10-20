@@ -121,6 +121,111 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   ....
 &lt;/div&gt;</code></pre></div>
 
+<h3>Panel groups (.Panels)</h3>
+<p>If you wrap you panels with a parent element with the class <code>Panels</code>, the margin is removed from the individual panel components, creating a connected look.</p>
+
+<div class="docs-example">
+  <div class="Panels">
+    <div class="Panel Panel--box">
+      <p>Top panel</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Middle panel</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Bottom panel</p>
+    </div>
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;Panels&quot;&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Top panel&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Middle panel&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Bottom panel&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Horizontal Panels (<code>.Panels--horizontal</code>)</h4>
+
+<div class="docs-example">
+  <div class="Panels Panels--horizontal">
+    <div class="Panel Panel--box">
+      <p>Top panel<br>With more content</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Middle panel</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Bottom panel</p>
+    </div>
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;Panels Panels--horizontal&quot;&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Top panel<br>With more content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Middle panel&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Bottom panel&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Hidden Panels (<code>.Panels--hidden</code>)</h4>
+
+<p>The hides all of the children panels unless given a <code>is-active</code> class. This can be used with the <a href="switcher.html">switcher</a> module to create simple tabs.</p>
+
+<div class="docs-example">
+  <ul class="Menu" data-module="Switcher">
+    <li class="Menu-item"><a href="#" class="Menu-link">Panel 1</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Panel 2</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Panel 3</a></li>
+  </ul>
+
+  <div class="Panels Panels--hidden">
+    <div class="Panel Panel--box">
+      <p>Panel 1</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Panel 2</p>
+    </div>
+    <div class="Panel Panel--box">
+      <p>Panel 3</p>
+    </div>
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot; data-module=&quot;Switcher&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;Panels Panels--hidden&quot;&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Panel 1&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Panel 2&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Panel Panel--box&quot;&gt;
+    &lt;p&gt;Panel 3&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 <h4>Colour Modifiers</h4>
 
 <div class="docs-example">

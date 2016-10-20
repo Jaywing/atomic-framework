@@ -70,6 +70,10 @@ body {
 
 }
 
+// scss-lint:disable ImportantRule
+[hidden] { display: none !important; }
+// scss-lint:enable ImportantRule
+
 // Highlighted text colors
 @include selection {
   background-color: $base-highlight-bg;

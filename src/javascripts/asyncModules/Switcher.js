@@ -1,6 +1,7 @@
 import Module from '../modules/Module'
 import sibling from '../helpers/sibling' // fix for DOM traversing (skips #text elements)
 
+
 export default class Switcher extends Module {
 
   constructor(el, name, options) {
@@ -34,6 +35,76 @@ export default class Switcher extends Module {
 
   }
 
+  addAriaTabs() {
+    //console.log('Aria Tabs');
+
+    this.el.setAttribute('role', 'tablist')
+
+    let toggleItems = [].slice.call(this.el.children)
+
+    function prepareItem(item) {
+      const target = item.getAttribute('href').replace('#','')
+      item.setAttribute('role','tab')
+      item.setAttribute('id', `tab-${target}`)
+      item.setAttribute('aria-controls', target)
+      item.setAttribute('tab-index', 0)
+    }
+
+    toggleItems.map(function (item) {
+      let tabItem
+      if (!item.hasAttribute('href')) {
+        item.setAttribute('role','presentation')
+        if (item.querySelector('[href]')) {
+          tabItem = item.querySelector('[href]')
+        }
+      } else {
+        tabItem = item
+      }
+    })
+
+    this.targets.map(function (pane) {
+      pane.setAttribute('role','tab-panel');
+      pane.setAttribute('aria-labelledby', `tab-${pane.getAttribute('id')}`)
+    })
+
+  }
+
+  normaliseTargets() {
+    var targets
+    if (this.settings.target === null) {
+      // if target is not provided use the next sibling element to the menu
+      targets = [sibling(this.el, 'nextSibling')]
+    } else {
+      // target is not an array, convert it and store it
+      targets = (typeof this.settings.target === 'string') ? [this.settings.target] : this.settings.target
+    }
+
+    this.targets = targets.map(function (target) {
+      if (typeof target === 'string') {
+        target = document.querySelector(target)
+      }
+      target.panes = [].slice.call(target.children)
+      return target
+    })
+
+  }
+
+  validateTargets() {
+    let itemCount = this.items.length
+    let valid = true
+    this.targets.map(function (target) {
+      if (target.panes) {
+        if (target.panes.length < itemCount) {
+          valid = false
+        }
+      } else {
+        valid = false
+      }
+    })
+
+    return valid
+  }
+
   init() {
 
     const switcher = this; // store module reference for handler functions
@@ -48,12 +119,14 @@ export default class Switcher extends Module {
       return item.getAttribute('href');
     })
 
-    if (this.settings.target === null) {
-      // if target is not provided use the next sibling element to the menu
-      this.target = [sibling(this.el, 'nextSibling')]
-    } else {
-      // target is not an array, convert it and store it
-      this.target = (typeof this.settings.target === 'string') ? [this.settings.target] : this.settings.target
+    this.targets = []
+    this.normaliseTargets() // popular targets array normalised element references
+
+    console.log(this.validateTargets());
+    if (!this.validateTargets()) {
+      console.warn('Switcher aborted: The target element does not pass validation rules')
+      this.el.setAttribute('hidden', true)
+      return
     }
 
     if (!this.settings.hash) { // if not hash change
@@ -62,6 +135,10 @@ export default class Switcher extends Module {
     } else {
       // set active index from the hash
       this.setHashIndex()
+    }
+
+    if(this.settings.hide) {
+      this.addAriaTabs()
     }
 
     const clickHandler = function (e) {
@@ -103,35 +180,32 @@ export default class Switcher extends Module {
     let i = 0
     const activeClass = this.settings.activeClass
     const switcher = this
-    let targetItems
 
     // add/remove active class on menu items
     this.items.map(function (item) {
-      i !== switcher.activeIndex ? item.classList.remove(activeClass) : item.classList.add(activeClass)
+      if (i !== switcher.activeIndex) {
+        item.classList.remove(activeClass)
+        item.setAttribute('aria-selected', false)
+      } else {
+        item.classList.add(activeClass)
+        item.setAttribute('aria-selected', true)
+      }
       i++
     })
 
-    for(let i = 0, x = this.target.length; i < x; i++) { // loop over targets
-      // make an array for target panes
-      if (typeof this.target[i] === 'string') {
-        targetItems = [].slice.call(document.querySelector(this.target[i]).children)
-      } else {
-        targetItems = [].slice.call(this.target[i].children)
-      }
-
+    this.targets.map(function(target) {
       let y = 0
-      // loop through target panels adding/removing active class or hidden attribute based on settings
-      targetItems.map(function (pane) {
+
+      target.panes.map(function (pane) {
         if (y !== switcher.activeIndex) {
           switcher.settings.hide ? pane.setAttribute('hidden', true) : pane.classList.remove(activeClass)
         } else {
           switcher.settings.hide ? pane.removeAttribute('hidden') : pane.classList.add(activeClass)
         }
         y++
-
       })
+    })
 
-    }
   }
 
 }

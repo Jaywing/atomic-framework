@@ -1,5 +1,5 @@
 $panel-margin: $g-spacer 0;
-$panels-margin: 0 0 $g-spacer;
+$panels-margin: $g-spacer 0;
 $panel-badge-pos: 0;
 $panel-title-margin: 0 $g-spacer-xl 0 0;
 
@@ -34,24 +34,4 @@ $panel-title-margin: 0 $g-spacer-xl 0 0;
   &[hidden] {
     display: none;
   }
-}
-
-.Panels {
-  margin: $panels-margin;
-
-  > .Panel {
-    margin: 0;
-  }
-}
-
-.Panels--hidden {
-
-  > .Panel {
-    display: none;
-
-    &.is-active {
-      display: block;
-    }
-  }
-
 }
