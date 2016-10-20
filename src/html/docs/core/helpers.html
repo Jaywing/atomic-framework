@@ -1,0 +1,78 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'helpers' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.html' %}
+
+{% block metaTitle %}Helpers | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Helpers</h1>
+<p class="Text--lead">A collection of individually importable modules aimed at making coding easier</p>
+
+<div class="Bookmarks" data-module="Bookmarks"></div>
+
+<hr class="Article-divider">
+
+<h2 id="section-create-element"><a href="#section-create-element" class="textLinkReset">Create Element</a></h2>
+<p>This is shortcut for the long winded <code>document.createElement()</code> method of creating elements on the fly.</p>
+<p>You pass in an object with all values you need.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import createElement from &quot;../helpers/createElement&quot;
+
+document.body.appendChild(createElement({
+  tagName: &quot;div&quot;,
+  className: &quot;my-class&quot;,
+  text: &quot;Blah blah&quot;,
+  attributes: {
+    &quot;id&quot;: &quot;element id&quot;,
+    &quot;data-truc&quot;: &quot;value&quot;
+  },
+  childs: [{ /* recursif call **/}]
+}))
+</code></pre>
+</div>
+
+<h2 id="section-sibling"><a href="#section-sibling" class="textLinkReset">Sibling</a></h2>
+<p>When traversing sibling elements in the DOM using <code>nextSibling</code> and <code>prevSibling</code>, if there is any white space in the HTML in between elements, then the white-space is treated as the next/prev sibling (#text).</p>
+<p>This function checks the nodeType property of the next/prev sibling and traverses until it finds the next/prev actual DOM element.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import sibling from &quot;../helpers/sibling&quot;
+
+const nextEle = sibling(this.el, 'nextSibling')</code></pre>
+</div>
+
+<h2 id="section-dom"><a href="#section-dom" class="textLinkReset">DOM</a></h2>
+<p>A few DOM shortcut functions that provide a jQuery like syntax.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import {$} from &quot;../helpers/dom&quot;
+
+$(&quot;.addClass&quot;).addClass(&quot;passed&quot;);
+$(&quot;.removeClass&quot;).removeClass(&quot;failed&quot;);
+$(&quot;.toggleClass&quot;).toggleClass(&quot;is-active&quot;);
+
+if ($(&quot;.hasClass&quot;).hasClass(&quot;hasClass&quot;)) {
+  $(&quot;.hasClass&quot;).addClass(&quot;passed&quot;);
+}
+
+$(&quot;a&quot;).on(&quot;click&quot;, function(e) {
+  e.preventDefault();
+  alert(&quot;clicked&quot;);
+});</code></pre>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

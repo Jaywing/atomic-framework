@@ -1,3 +1,5 @@
+// https://gist.github.com/MoOx/8614711
+
 module.exports = function(options) {
   let el,
       a,

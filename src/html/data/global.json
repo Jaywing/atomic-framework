@@ -98,6 +98,7 @@
       "category": "Modules",
       "section": "core",
       "items": [
+        { "id": "helpers", "title": "Helpers", "section": "core", "ready": true },
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
         { "id": "sticky", "title": "Sticky", "section": "core", "ready": false },
