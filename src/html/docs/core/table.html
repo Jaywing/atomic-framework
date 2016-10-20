@@ -264,7 +264,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/table&gt;</code></pre>
 </div>
 
-<h4>Table responsive</h4>
+<h4>Table with scrollXauto</h4>
 
 <div class="docs-example">
   <div class="scrollXauto">
@@ -326,6 +326,54 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Table Data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Table responsive</h4>
+
+<div class="docs-example">
+  <table class="Table Table--resp">
+    <caption>Caption</caption>
+    <thead>
+    <tr>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+    </tr>
+    <tr>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class="scrollXauto"&gt;
+  &lt;table class="Table Table--resp"&gt;
+    &lt;caption&gt;Caption&lt;/caption&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Table Heading&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-label="Table Heading"&gt;Table Data&lt;/td&gt;
     &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
