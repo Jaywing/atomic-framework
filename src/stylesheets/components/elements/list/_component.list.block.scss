@@ -1,5 +1,5 @@
-$list-block-spacing: $g-spacer-sm;
-$list-border: 1px solid $c-very-strong-trans-dark;
+$list-block-spacing: $g-spacer-sm !default;
+$list-border: 1px solid $c-very-strong-trans-dark !default;
 
 %list-block-border {
   border: $list-border;

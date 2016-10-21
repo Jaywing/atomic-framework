@@ -10,9 +10,9 @@
 /// @created  20/06/2016
 ////
 
-$button-margin:     $g-spacer-xs;
-$button-padding:    ($g-spacer * .75) $g-spacer; // button gets the same vertical padding as input to maintain a consistent height
-$button-min-width:  $g-min-touch-size;
+$button-margin:     $g-spacer-xs !default;
+$button-padding:    ($g-spacer * .75) $g-spacer !default; // button gets the same vertical padding as input to maintain a consistent height
+$button-min-width:  $g-min-touch-size !default;
 
 .Button {
   cursor: pointer;

@@ -11,18 +11,18 @@
 ////
 
 // Base styles for HTML and BODY elements
-$base-bg-color:     $c-light;
-$base-text-color:   $c-dark;
-$base-font-family:  $g-font-sans;
-$base-font-weight:  $g-weight-normal;
+$base-bg-color:     $c-light !default;
+$base-text-color:   $c-dark !default;
+$base-font-family:  $g-font-sans !default;
+$base-font-weight:  $g-weight-normal !default;
 // Highlighted Text colors
-$base-highlight-bg:           $c-primary-pale;
-$base-highlight-color:        $base-text-color;
-$base-input-highlight-bg:     $c-very-strong-trans-dark;
-$base-input-highlight-color:  $base-text-color;
+$base-highlight-bg:           $c-primary-pale !default;
+$base-highlight-color:        $base-text-color !default;
+$base-input-highlight-bg:     $c-very-strong-trans-dark !default;
+$base-input-highlight-color:  $base-text-color !default;
 
-$body-antialiased: $g-body-antialiased;
-$body-no-horizontal-scroll: $g-body-no-horizontal-scroll;
+$body-antialiased: $g-body-antialiased !default;
+$body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
 
 
 // Border-box for everything!

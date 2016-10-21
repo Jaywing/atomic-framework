@@ -50,8 +50,13 @@ class DOM {
   on( event, callback ) {
     return this.each(function() {
       this.addEventListener(event, callback, false);
-    });
+    })
   }
-};
+
+  find( selector ) {
+    return this.querySelectorAll(selector)
+  }
+
+}
 
 export var $ = selector => new DOM(selector);

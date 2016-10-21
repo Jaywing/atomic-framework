@@ -2,30 +2,30 @@
 // Variables
 // ========================================================================
 
-$menu-link-color: $link-color;
-$menu-link-bg: transparent;
-$menu-link-border-radius: $g-border-radius;
-$menu-link-hover-color: $link-hover-color;
-$menu-link-hover-bg: $c-strong-trans-dark;
-$menu-link-text-decoration: none;
-$menu-link-text-align: center;
-$menu-link-trans-speed: $g-trans-link-speed;
-$menu-link-active-color: $c-light;
-$menu-link-active-bg: $menu-link-color;
+$menu-link-color: $link-color !default;
+$menu-link-bg: transparent !default;
+$menu-link-border-radius: $g-border-radius !default;
+$menu-link-hover-color: $link-hover-color !default;
+$menu-link-hover-bg: $c-strong-trans-dark !default;
+$menu-link-text-decoration: none !default;
+$menu-link-text-align: center !default;
+$menu-link-trans-speed: $g-trans-link-speed !default;
+$menu-link-active-color: $c-light !default;
+$menu-link-active-bg: $menu-link-color !default;
 
-$menu-margin: $g-spacer 0;
-$menu-margin-nested: $g-spacer;
+$menu-margin: $g-spacer 0 !default;
+$menu-margin-nested: $g-spacer !default;
 
-$menu-item-padding: $g-spacer-sm;
-$menu-item-divider-size: 0;
-$menu-item-divider-bg: transparent;
-$menu-item-active-font-weight: $g-weight-bold;
+$menu-item-padding: $g-spacer-sm !default;
+$menu-item-divider-size: 0 !default;
+$menu-item-divider-bg: transparent !default;
+$menu-item-active-font-weight: $g-weight-bold !default;
 
-$menu-link-padding: $g-spacer-sm;
-$menu-link-font-weight: $g-weight-normal;
+$menu-link-padding: $g-spacer-sm !default;
+$menu-link-font-weight: $g-weight-normal !default;
 
-$menu-title-padding: $g-spacer-sm;
-$menu-title-font-weight: $g-weight-bold;
+$menu-title-padding: $g-spacer-sm !default;
+$menu-title-font-weight: $g-weight-bold !default;
 
 
 // ========================================================================

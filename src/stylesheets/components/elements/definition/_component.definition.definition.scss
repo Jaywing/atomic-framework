@@ -3,16 +3,16 @@
 //  @author anthony.fisher@jaywing.com
 //
 
-$dl-margin: $g-spacer 0;
+$dl-margin: $g-spacer 0 !default;
 
 //Normal DL
-$dt-margin: $g-spacer 0 $g-spacer-sm 0;
-$dt-font-style: normal;
-$dt-font-weight: bold;
-$dd-margin: 0 0 $g-spacer-xs $g-spacer-xl;
-$dd-last-child-margin: 0 0 $g-spacer 0;
-$dd-font-style: italic;
-$dd-font-weight: normal;
+$dt-margin: $g-spacer 0 $g-spacer-sm 0 !default;
+$dt-font-style: normal !default;
+$dt-font-weight: bold !default;
+$dd-margin: 0 0 $g-spacer-xs $g-spacer-xl !default;
+$dd-last-child-margin: 0 0 $g-spacer 0 !default;
+$dd-font-style: italic !default;
+$dd-font-weight: normal !default;
 
 
 .Definition {

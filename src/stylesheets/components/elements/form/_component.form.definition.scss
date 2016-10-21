@@ -1,27 +1,27 @@
-$form-label-weight: $g-weight-bold;
+$form-label-weight: $g-weight-bold !default;
 
-$form-input-padding: $g-spacer-sm;
-$form-input-bg: $c-light;
-$form-input-border: 1px solid $c-light-15;
-$form-input-color: $c-dark;
-$form-input-radius: $g-border-radius;
+$form-input-padding: $g-spacer-sm !default;
+$form-input-bg: $c-light !default;
+$form-input-border: 1px solid $c-light-15 !default;
+$form-input-color: $c-dark !default;
+$form-input-radius: $g-border-radius !default;
 
-$form-blank-bg: transparent;
-$form-blank-border-color: transparent;
-$form-blank-border-style: dashed;
-$form-blank-focus-border-color: $c-light-15;
+$form-blank-bg: transparent !default;
+$form-blank-border-color: transparent !default;
+$form-blank-border-style: dashed !default;
+$form-blank-focus-border-color: $c-light-15 !default;
 
-$form-disabled-bg: $c-disabled;
-$form-disabled-border-color: $c-light-30;
-$form-disabled-color: $c-light-75;
+$form-disabled-bg: $c-disabled !default;
+$form-disabled-border-color: $c-light-30 !default;
+$form-disabled-color: $c-light-75 !default;
 
-$form-danger-bg: $c-danger-light-30;
-$form-danger-border-color: $c-danger;
-$form-danger-color: $c-danger;
+$form-danger-bg: $c-danger-light-30 !default;
+$form-danger-border-color: $c-danger !default;
+$form-danger-color: $c-danger !default;
 
-$form-success-bg: $c-success-light-50;
-$form-success-border-color: $c-success;
-$form-success-color: $c-success;
+$form-success-bg: $c-success-light-50 !default;
+$form-success-border-color: $c-success !default;
+$form-success-color: $c-success !default;
 
 .Form {
 

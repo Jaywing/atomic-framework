@@ -22,10 +22,10 @@ $grid-breakpoints: (
   lg:   map-get($g-mq-breakpoints, lg),
   xl:   map-get($g-mq-breakpoints, xl),
   xxl:  map-get($g-mq-breakpoints, xxl)
-);
+) !default;
 
-$grid-columns: 12;
-$grid-gutter-width: $g-spacer;
+$grid-columns: 12 !default;
+$grid-gutter-width: $g-spacer !default;
 
 $container-max-widths: ( // max widths for .container--fixed class
     xs: 460px,
@@ -34,4 +34,4 @@ $container-max-widths: ( // max widths for .container--fixed class
     lg: 930px,
     xl: 1140px,
     xxl:1280px
-);
+) !default;

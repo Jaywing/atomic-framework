@@ -10,22 +10,22 @@
 /// @created  20/06/2016
 ////
 
-$button-font-family: $g-font-sans;
-$button-font-weight: $g-weight-normal;
-$button-radius:      $g-border-radius;
+$button-font-family: $g-font-sans !default;
+$button-font-weight: $g-weight-normal !default;
+$button-radius:      $g-border-radius !default;
 
-$button-trans-speed: $g-trans-link-speed;
+$button-trans-speed: $g-trans-link-speed !default;
 
-$button-bg-color:         $c-light-15;
-$button-color:            $c-dark-30;
+$button-bg-color:         $c-light-15 !default;
+$button-color:            $c-dark-30 !default;
 
-$button-bg-color-hover:   lighten($c-light-30, 5%);
-$button-color-hover:      $c-dark-15;
+$button-bg-color-hover:   lighten($c-light-30, 5%) !default;
+$button-color-hover:      $c-dark-15 !default;
 
-$button-bg-color-active:  darken($button-bg-color-hover, 20%);
-$button-color-active:     $c-dark;
+$button-bg-color-active:  darken($button-bg-color-hover, 20%) !default;
+$button-color-active:     $c-dark !default;
 
-$button-disabled-color: $c-disabled-dark;
+$button-disabled-color: $c-disabled-dark !default;
 
 
 .Button {

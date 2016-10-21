@@ -1,7 +1,7 @@
-$form-icon-color: $c-light-50;
-$form-icon-width: 30px;
-$form-icon-indent: $form-icon-width;
-$form-icon-margin: -15px 0 0;
+$form-icon-color: $c-light-50 !default;
+$form-icon-width: 30px !default;
+$form-icon-indent: $form-icon-width !default;
+$form-icon-margin: -15px 0 0 !default;
 
 .Form-icon {
   display: inline-block;

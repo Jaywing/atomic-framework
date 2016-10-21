@@ -21,7 +21,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="Bookmarks" data-module="Bookmarks" data-options='{"animated":true}'></div>
 
-<h2 id="section-task"><a href="#section-task" class="textLinkReset">Task and files</a></h2>
+<h2 id="section-tasks"><a href="#section-tasks" class="textLinkReset">Tasks and files</a></h2>
 
 <div class="docs-example"><div class="scrollXauto"><pre>gulpfile.js/tasks/browsersync
 gulpfile.js/tasks/webpackProduction
@@ -48,6 +48,7 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
     ...
 |-- helpers                 # re-usable utility functions and scripts
     |-- createElement.js    # script to help programmatically create HTML elements
+    ...
 |-- modules                 # non-async modules
     |-- breakpoint.js       # script that watches the HTML for changes in breakpoint and then fires a custom event
     |-- Module.js           # this is the module class that most modules will be extended from
@@ -57,8 +58,60 @@ app.js                      # this is the entry point script that webpack uses (
 
 <h2 id="section-module-class"><a href="#section-module-class" class="textLinkReset">Module class</a></h2>
 
-<div class="docs--code">
+<p>To give our modules some consistency, we have a Module class that each of our custom modules is extended from.</p>
 
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">// imported from npm, generates a short unique id
+import shortid from &#39;shortid&#39;
+
+export default class Module {
+
+  constructor(el, name, options = {}, defaults = {}) {
+    this.el = el // root element (the one with &#39;data-module&#39; attribute)
+    this.name = name // name of Module
+    this.uid = shortid.generate() // generate unique id
+
+    // Merge module defaults with options (passed in with &#39;data-options&#39;)
+    // To make the modules settings
+    this.settings = Object.assign(defaults, options)
+
+    this.init() // initiate module
+  }
+
+  init() {
+
+    console.log(`${this.name} has initialised`)
+  }
+
+}</code></pre>
+</div>
+
+<p>To create your own custom you must extend the Module class.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">// imported from npm, generates a short unique id
+import shortid from &#39;shortid&#39;
+
+export default class Module {
+
+  constructor(el, name, options = {}, defaults = {}) {
+    this.el = el // root element (the one with &#39;data-module&#39; attribute)
+    this.name = name // name of Module
+    this.uid = shortid.generate() // generate unique id
+
+    // Merge module defaults with options (passed in with &#39;data-options&#39;)
+    // To make the modules settings
+    this.settings = Object.assign(defaults, options)
+
+    this.init() // initiate module
+  }
+
+  init() {
+
+    console.log(`${this.name} has initialised`)
+  }
+
+}</code></pre>
 </div>
 
 <p></p>

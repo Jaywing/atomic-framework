@@ -1,12 +1,12 @@
-$menu-border-width: 1px;
-$menu-tab-border: $menu-border-width solid $c-border;
-$menu-tab-link-border: $menu-border-width solid transparent;
-$menu-tab-link-border-active: $menu-tab-border;
-$menu-tab-link-active-bg: $c-light;
-$menu-tab-link-active-color: $link-hover-color;
-$menu-tab-link-border-radius: $g-border-radius;
-$menu-tab-link-padding-x: $g-spacer;
-$menu-tab-link-padding-y: $g-spacer-sm;
+$menu-border-width: 1px !default;
+$menu-tab-border: $menu-border-width solid $c-border !default;
+$menu-tab-link-border: $menu-border-width solid transparent !default;
+$menu-tab-link-border-active: $menu-tab-border !default;
+$menu-tab-link-active-bg: $c-light !default;
+$menu-tab-link-active-color: $link-hover-color !default;
+$menu-tab-link-border-radius: $g-border-radius !default;
+$menu-tab-link-padding-x: $g-spacer !default;
+$menu-tab-link-padding-y: $g-spacer-sm !default;
 
 .Menu--tabular {
   border-bottom: $menu-tab-border;

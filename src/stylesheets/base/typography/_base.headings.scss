@@ -11,10 +11,10 @@
 ////
 
 /// Base styles for headings h1 - h6
-$heading-font:        $g-font-sans;
-$heading-font-weight: normal;
-$heading-color:       inherit;
-$heading-small-size:  75%;
+$heading-font:        $g-font-sans !default;
+$heading-font-weight: normal !default;
+$heading-color:       inherit !default;
+$heading-small-size:  75% !default;
 
 
 h1,

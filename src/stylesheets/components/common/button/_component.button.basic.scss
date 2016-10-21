@@ -10,19 +10,19 @@
 /// @created  21/06/2016
 ////
 
-$button-basic-bg-color:         transparent;
-$button-basic-color:            lighten($c-dark-30, 10%);
-$button-basic-box-shadow:       0 0 0 1px $c-very-strong-trans-dark inset;
+$button-basic-bg-color:         transparent !default;
+$button-basic-color:            lighten($c-dark-30, 10%) !default;
+$button-basic-box-shadow:       0 0 0 1px $c-very-strong-trans-dark inset !default;
 
-$button-basic-box-shadow-hover: 0 0 0 2px $c-very-strong-trans-dark inset;
-$button-basic-bg-color-hover:   $button-basic-bg-color;
-$button-basic-color-hover:      darken($button-basic-color, 10%);
+$button-basic-box-shadow-hover: 0 0 0 2px $c-very-strong-trans-dark inset !default;
+$button-basic-bg-color-hover:   $button-basic-bg-color !default;
+$button-basic-color-hover:      darken($button-basic-color, 10%) !default;
 
-$button-basic-box-shadow-active:$button-basic-box-shadow-hover;
-$button-basic-color-active:     $button-basic-color-hover;
+$button-basic-box-shadow-active:$button-basic-box-shadow-hover !default;
+$button-basic-color-active:     $button-basic-color-hover !default;
 
-$button-basic-bg-color-active:  $c-very-strong-trans-dark;
-$button-basic-trans-speed:      $button-trans-speed;
+$button-basic-bg-color-active:  $c-very-strong-trans-dark !default;
+$button-basic-trans-speed:      $button-trans-speed !default;
 
 
 .Button--basic {

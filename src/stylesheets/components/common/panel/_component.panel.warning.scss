@@ -1,7 +1,7 @@
-$panel-warning-color: $c-warning;
-$panel-box-warning-color: $c-warning-dark;
-$panel-box-warning-bg: $c-warning-light-50;
-$panel-box-warning-border-color: $c-warning-dark;
+$panel-warning-color: $c-warning !default;
+$panel-box-warning-color: $c-warning-dark !default;
+$panel-box-warning-bg: $c-warning-light-50 !default;
+$panel-box-warning-border-color: $c-warning-dark !default;
 
 .Panel--warning {
   color: $panel-warning-color;

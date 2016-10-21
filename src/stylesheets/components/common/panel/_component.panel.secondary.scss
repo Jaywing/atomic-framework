@@ -1,6 +1,6 @@
-$panel-box-secondary-bg: $c-strong-trans-dark;
-$panel-box-secondary-border-color: $c-border;
-$panel-secondary-color: inherit;
+$panel-box-secondary-bg: $c-strong-trans-dark !default;
+$panel-box-secondary-border-color: $c-border !default;
+$panel-secondary-color: inherit !default;
 
 .Panel--secondary {
   color: $panel-secondary-color;

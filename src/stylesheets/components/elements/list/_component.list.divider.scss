@@ -1,5 +1,5 @@
-$list-divider-border: $list-border;
-$list-divider-padding: $g-spacer-xs 0;
+$list-divider-border: $list-border !default;
+$list-divider-padding: $g-spacer-xs 0 !default;
 
 .List--divider {
 

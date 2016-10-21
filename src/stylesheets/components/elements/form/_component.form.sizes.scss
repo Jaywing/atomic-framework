@@ -1,7 +1,7 @@
-$form-xs-padding: $g-spacer-sm $g-spacer;
-$form-sm-padding: $g-spacer-sm $g-spacer;
-$form-lg-padding: $g-spacer $g-spacer-lg;
-$form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl;
+$form-xs-padding: $g-spacer-sm $g-spacer !default;
+$form-sm-padding: $g-spacer-sm $g-spacer !default;
+$form-lg-padding: $g-spacer $g-spacer-lg !default;
+$form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl !default;
 
 
 .Form {

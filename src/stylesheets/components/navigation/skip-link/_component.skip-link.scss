@@ -1,5 +1,5 @@
-$skiplink-trans: all $g-trans-link-speed ease;
-$skiplink-active-pos: $g-spacer-sm;
+$skiplink-trans: all $g-trans-link-speed ease !default;
+$skiplink-active-pos: $g-spacer-sm !default;
 
 .SkipLink {
   transition: $skiplink-trans;

@@ -1,7 +1,7 @@
-$panel-success-color: $c-success;
-$panel-box-success-color: $c-success-dark;
-$panel-box-success-bg: $c-success-light-50;
-$panel-box-success-border-color: $c-success-dark;
+$panel-success-color: $c-success !default;
+$panel-box-success-color: $c-success-dark !default;
+$panel-box-success-bg: $c-success-light-50 !default;
+$panel-box-success-border-color: $c-success-dark !default;
 
 
 .Panel--success {

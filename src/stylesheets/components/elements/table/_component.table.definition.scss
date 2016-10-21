@@ -1,8 +1,8 @@
-$table-th-font-weight: $g-weight-bold;
+$table-th-font-weight: $g-weight-bold !default;
 
-$table-cell-padding: $g-spacer-sm;
+$table-cell-padding: $g-spacer-sm !default;
 
-$table-caption-font-style: italic;
+$table-caption-font-style: italic !default;
 
 .Table {
   width: 100%;

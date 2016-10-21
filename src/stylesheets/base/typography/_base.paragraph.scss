@@ -12,7 +12,7 @@
 
 // Base styles for text
 
-$para-margin: $g-spacer 0;
+$para-margin: $g-spacer 0 !default;
 
 p {
   @include trim-child-margins;

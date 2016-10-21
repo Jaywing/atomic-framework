@@ -1,0 +1,33 @@
+$close-size: 2rem !default;
+$close-alt-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 6px rgba(0, 0, 0, .3) !default;
+$close-hover-color: $c-light-50 !default;
+
+.Close {
+  display: inline-block;
+  width: $close-size;
+  height: $close-size;
+  line-height: $close-size;
+  text-align: center;
+  vertical-align: middle;
+
+  padding: 0;
+  border: 0;
+  background: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    cursor: pointer;
+
+    svg {
+      fill: $close-hover-color;
+    }
+  }
+
+}
+
+.Close--alt {
+  border-radius: 100%;
+  box-shadow: $close-alt-shadow;
+}

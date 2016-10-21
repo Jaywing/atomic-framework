@@ -1,8 +1,8 @@
-$form-flabel-bg: white;
-$form-flabel-top: 50%;
-$form-flabel-left: $g-spacer-sm;
-$form-flabel-active-top: 0;
-$form-flabel-transition: all .1s linear;
+$form-flabel-bg: white !default;
+$form-flabel-top: 50% !default;
+$form-flabel-left: $g-spacer-sm !default;
+$form-flabel-active-top: 0 !default;
+$form-flabel-transition: all .1s linear !default;
 
 .Form-flabel {
   position: relative;

@@ -1,7 +1,7 @@
-$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm;
-$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm;
-$menu-vertical-title-margin: $g-spacer-sm 0 0;
-$menu-vertical-link-text-align: left;
+$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
+$menu-vertical-link-text-align: left !default;
 
 
 .Menu--vertical {

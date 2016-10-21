@@ -1,7 +1,7 @@
-$panel-margin: $g-spacer 0;
-$panels-margin: $g-spacer 0;
-$panel-badge-pos: 0;
-$panel-title-margin: 0 $g-spacer-xl 0 0;
+$panel-margin: $g-spacer 0 !default;
+$panels-margin: $g-spacer 0 !default;
+$panel-badge-pos: 0 !default;
+$panel-title-margin: 0 $g-spacer-xl 0 0 !default;
 
 
 .Panel {

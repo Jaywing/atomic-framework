@@ -1,5 +1,5 @@
-$dd-bullet-display: list-item;
-$dd-bullet-list-style: disc;
+$dd-bullet-display: list-item !default;
+$dd-bullet-list-style: disc !default;
 
 .Definition--bullets {
   dd {

@@ -1,8 +1,8 @@
-$panel-box-bg: $c-light;
-$panel-box-border: 1px solid $c-border;
-$panel-box-badge-pos: $g-spacer-sm;
-$panel-box-padding: $g-spacer;
-$panel-box-border-radius: $g-border-radius;
+$panel-box-bg: $c-light !default;
+$panel-box-border: 1px solid $c-border !default;
+$panel-box-badge-pos: $g-spacer-sm !default;
+$panel-box-padding: $g-spacer !default;
+$panel-box-border-radius: $g-border-radius !default;
 
 
 .Panel--box {

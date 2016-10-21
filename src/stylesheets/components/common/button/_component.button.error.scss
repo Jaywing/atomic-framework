@@ -1,7 +1,7 @@
-$button-error-bg: $c-danger;
-$button-error-color: $c-light;
-$button-error-hover-bg: darken($button-error-bg, 10%);
-$button-error-trans-speed: $g-trans-link-speed;
+$button-error-bg: $c-danger !default;
+$button-error-color: $c-light !default;
+$button-error-hover-bg: darken($button-error-bg, 10%) !default;
+$button-error-trans-speed: $g-trans-link-speed !default;
 
 .Button--error {
 

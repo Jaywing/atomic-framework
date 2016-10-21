@@ -1,7 +1,7 @@
-$text-lead-color: inherit;
+$text-lead-color: inherit !default;
 
-$text-disabled-color: $c-disabled-dark;
-$text-disabled-cursor: not-allowed;
+$text-disabled-color: $c-disabled-dark !default;
+$text-disabled-cursor: not-allowed !default;
 
 
 .Text {

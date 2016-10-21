@@ -1,6 +1,6 @@
-$button-swap-ani-speed: $g-trans-link-speed;
-$button-swap-ani-easing: ease;
-$button-swap-horizontal-padding: $g-spacer;
+$button-swap-ani-speed: $g-trans-link-speed !default;
+$button-swap-ani-easing: ease !default;
+$button-swap-horizontal-padding: $g-spacer !default;
 
 // scss-lint:disable NestingDepth
 .Button--swap {

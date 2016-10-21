@@ -13,5 +13,5 @@
 /// Site wide state settings for disabled, error, success ect.
 
 /// Disabled settings
-$g-disabled-opacity: .45;
-$g-disabled-text-color: rgba(40, 40, 40, .3);
+$g-disabled-opacity: .45 !default;
+$g-disabled-text-color: rgba(40, 40, 40, .3) !default;

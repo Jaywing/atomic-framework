@@ -1,4 +1,4 @@
-$list-margin: $g-spacer 0;
+$list-margin: $g-spacer 0 !default;
 
 .List {
   @include trim-child-margins;

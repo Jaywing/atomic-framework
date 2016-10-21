@@ -1,7 +1,7 @@
-$button-xs-padding: $g-spacer-sm $g-spacer;
-$button-sm-padding: $g-spacer-sm $g-spacer;
-$button-lg-padding: $g-spacer $g-spacer-lg;
-$button-xl-padding: ($g-spacer * 1.25) $g-spacer-xl;
+$button-xs-padding: $g-spacer-sm $g-spacer !default;
+$button-sm-padding: $g-spacer-sm $g-spacer !default;
+$button-lg-padding: $g-spacer $g-spacer-lg !default;
+$button-xl-padding: ($g-spacer * 1.25) $g-spacer-xl !default;
 
 
 .Button {

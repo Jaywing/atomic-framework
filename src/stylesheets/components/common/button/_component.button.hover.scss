@@ -10,8 +10,8 @@
 /// @created  02/09/2016
 ////
 
-$button-hover-hover-bg: $c-light-30;
-$button-hover-color: $base-text-color;
+$button-hover-hover-bg: $c-light-30 !default;
+$button-hover-color: $base-text-color !default;
 
 .Button--hover {
   &:not([disabled]) {

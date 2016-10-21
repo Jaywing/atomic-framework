@@ -194,6 +194,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Hide</h3>
 
 <p>You can toggle the hidden property on the target panes by setting <code>data-option='{"hide":true}'</code>. This results in 'Tab' like functionality.</p>
+<h4>ARIA Accessibility</h4>
+<p>When this method is activated, the module also add relevant ARIA rules to enhance accessibility. (Ref: <a href="https://24ways.org/2015/how-tabs-should-work/">24 ways: How tabs should work</a>)</p>
 
 <div class="docs-example">
 
@@ -251,7 +253,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Hash</h3>
 
 <p>You can set the switcher to use url hashes by setting <code>data-options='{"hash":true}'</code>.</p>
-<p>Using url hashes means you can link to a page a set a certain tab to be open. It also means that tab changes are in the browser history.</p>
+<p>Using url hashes means you can link to a page a set and certain tab to be open. It also means that tab changes are in the browser history.</p>
 <p><strong class="Badge">Note</strong> If you are using the hash setting you can not switch multiple targets.</p>
 
 <div class="docs-example">

@@ -22,12 +22,12 @@
 ///
 /// *Note: settings.media-queries.scss must be import before this one
 
-$base-font-size: $g-base-font-size;
-$base-line-height: 1.33;
+$base-font-size: $g-base-font-size !default;
+$base-line-height: 1.33 !default;
 
 /// set up breakpoint variables for responsive typography
-$gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs');
-$gel-bp-type-c: map-get($g-mq-breakpoints, 'md');
+$gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs') !default;
+$gel-bp-type-c: map-get($g-mq-breakpoints, 'md') !default;
 
 $gel-type-settings: (
     'canon': (
@@ -205,4 +205,4 @@ $gel-type-settings: (
             'line-height': 22px
         )
     )
-);
+) !default;

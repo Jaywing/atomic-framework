@@ -1,12 +1,12 @@
-$tooltip-bg: $c-dark-15;
-$tooltip-color: $c-light;
-$tooltip-pointer-size: 10px;
-$tooltip-pointer-bg: $tooltip-bg;
-$tooltip-padding: $g-spacer-sm;
-$tooltip-max-width: 10rem;
-$tooltip-bottom: 2rem;
-$tooltip-popin-ani-time: .2s;
-$tooltip-popin-ani-type: linear;
+$tooltip-bg: $c-dark-15 !default;
+$tooltip-color: $c-light !default;
+$tooltip-pointer-size: 10px !default;
+$tooltip-pointer-bg: $tooltip-bg !default;
+$tooltip-padding: $g-spacer-sm !default;
+$tooltip-max-width: 10rem !default;
+$tooltip-bottom: 2rem !default;
+$tooltip-popin-ani-time: .2s !default;
+$tooltip-popin-ani-type: linear !default;
 
 
 .Tooltip {

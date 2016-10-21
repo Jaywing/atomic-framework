@@ -35,9 +35,9 @@
 // Variables
 // ========================================================================
 
-$grid-gutter: $g-spacer;
-$grid-gutter-lg: $g-spacer-lg;
-$grid-gutter-xl: $g-spacer-xl;
+$grid-gutter: $g-spacer !default;
+$grid-gutter-lg: $g-spacer-lg !default;
+$grid-gutter-xl: $g-spacer-xl !default;
 
 
 // ========================================================================

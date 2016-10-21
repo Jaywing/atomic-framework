@@ -1,7 +1,7 @@
-$panel-error-color: $c-danger;
-$panel-box-error-color: $c-danger-dark;
-$panel-box-error-bg: lighten($c-danger-light-30, 10%);
-$panel-box-error-border-color: $c-danger-dark;
+$panel-error-color: $c-danger !default;
+$panel-box-error-color: $c-danger-dark !default;
+$panel-box-error-bg: lighten($c-danger-light-30, 10%) !default;
+$panel-box-error-border-color: $c-danger-dark !default;
 
 .Panel--error {
   color: $panel-error-color;
