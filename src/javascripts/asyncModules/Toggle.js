@@ -45,7 +45,6 @@ export default class Toggle extends Module {
       }
     }
 
-
     const toggleIt = function() {
 
       if (Toggle.settings.once) {

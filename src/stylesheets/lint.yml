@@ -64,8 +64,8 @@ linters:
     enabled: false
 
   FinalNewline:
-    enabled: false
-    present: false
+    enabled: true
+    present: true
 
   HexLength:
     enabled: true

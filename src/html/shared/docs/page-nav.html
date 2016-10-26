@@ -11,22 +11,22 @@
 
     {% for cat in docs_pages %}
 
-    {% if cat.section == sectionid %}
+      {% if cat.section == sectionid %}
 
-    <li class="Menu-item">
-      {% if cat.category != "" %}<strong class="Menu-title">{{ cat.category }}</strong>{% endif %}
-      {% if cat.items %}
-      <ul class="Menu Menu--vertical Menu--flush">
-        {% for comp in cat.items %}
-        {% if comp.section == sectionid %}
-        {{navItem(comp.id, comp.title, pageid, comp.ready)}}
-        {% endif %}
-        {% endfor %}
-      </ul>
+        <li class="Menu-item">
+          {% if cat.category != "" %}<strong class="Menu-title">{{ cat.category }}</strong>{% endif %}
+          {% if cat.items %}
+            <ul class="Menu Menu--vertical Menu--flush">
+              {% for comp in cat.items %}
+                {% if comp.section == sectionid %}
+                  {{navItem(comp.id, comp.title, pageid, comp.ready)}}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+
       {% endif %}
-    </li>
-
-    {% endif %}
 
     {% endfor %}
 
