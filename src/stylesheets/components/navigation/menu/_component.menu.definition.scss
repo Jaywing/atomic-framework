@@ -38,6 +38,7 @@ $menu-title-font-weight: $g-weight-bold !default;
 
   margin: $menu-margin -($menu-item-padding);
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -60,7 +61,8 @@ $menu-title-font-weight: $g-weight-bold !default;
   &--expanded {
 
     > .Menu-item {
-      flex: 1 1 0;
+      flex: 1 1 0%;
+      min-width: 0;
     }
 
   }
