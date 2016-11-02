@@ -10,6 +10,7 @@ export default class Sticky extends Module {
     const defaults  = {
       offsetTop: 0,
       bpStart: 'gtBase',
+      stickyItem: 'Sticky-item',
       stickyClass: 'is-sticky'
     }
 
@@ -28,7 +29,9 @@ export default class Sticky extends Module {
     this.vp = verge.viewport()
     this.scrollTop = verge.scrollY()
 
-    const elements = this.el.querySelectorAll(`.${this.settings.stickyClass}`)
+    css(this.el, { position: 'relative' })
+
+    const elements = this.el.querySelectorAll(`.${this.settings.stickyItem}`)
     forEach(elements, (element) => this.renderElement(element))
 
     document.addEventListener('bpupdate', this.update, false)
@@ -172,9 +175,7 @@ export default class Sticky extends Module {
         minWidth: 'auto'
       })
 
-      console.log(element.sticky.container.offsetHeight + element.sticky.container.rect.top)
-      console.log(this.scrollTop + element.sticky.rect.height + element.sticky.offsetTop)
-
+      // sticky element has overlapped the end of the container
       if ((this.scrollTop + element.sticky.rect.height + element.sticky.offsetTop) > (element.sticky.container.rect.top + element.sticky.container.offsetHeight)) {
         if (element.sticky.stickyClass) {
           element.classList.remove(element.sticky.stickyClass)
