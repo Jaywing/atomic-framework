@@ -16,11 +16,6 @@
       "dest": "./"
     },
 
-    "eslint": {
-      "src": "javascript",
-      "extensions": ["js"]
-    },
-
     "js": {
       "src": "javascripts",
       "dest": "/javascripts",
@@ -34,12 +29,6 @@
         "presets": ["es2015", "stage-1"],
         "plugins": []
       }
-    },
-
-    "scsslint": {
-      "src": "stylesheets",
-      "config": "lint.yml",
-      "extensions": ["sass", "scss"]
     },
 
     "css": {

@@ -89,24 +89,24 @@ export default class Module {
 <p>To create your own custom you must extend the Module class.</p>
 
 <div class="docs-code docs-code--js">
-  <pre><code class="javascript">// imported from npm, generates a short unique id
-import shortid from &#39;shortid&#39;
+  <pre><code class="javascript">import Module from &#39;../modules/Module&#39; // must import the class to extend it
 
-export default class Module {
+export default class Switcher extends Module {
 
-  constructor(el, name, options = {}, defaults = {}) {
-    this.el = el // root element (the one with &#39;data-module&#39; attribute)
-    this.name = name // name of Module
-    this.uid = shortid.generate() // generate unique id
+  constructor(el, name, options) {
 
-    // Merge module defaults with options (passed in with &#39;data-options&#39;)
-    // To make the modules settings
-    this.settings = Object.assign(defaults, options)
+    // configure defaults for this module
+    const defaults = {
+      &quot;activeIndex&quot;: 0,
+      &quot;activeClass&quot;: &quot;is-active&quot;
+    }
 
-    this.init() // initiate module
+    // calling super generates - this.settings object
+    super(el, name, options, defaults)
   }
 
   init() {
+    // ... some initiation code
 
     console.log(`${this.name} has initialised`)
   }
@@ -114,7 +114,25 @@ export default class Module {
 }</code></pre>
 </div>
 
-<p></p>
+<h3>Async Modules</h3>
+
+<p>Modules can be loaded asynchronously by attaching <code>data-module="CustomModule"</code>.<br>This will then try and load the file <code>CustomModule.js</code> from the <em>asyncModules</em> folder and initiate an instance of it on that component.</p>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Click to toggle me&lt;/button&gt;</code></pre>
+</div>
+
+<h3>Module options</h3>
+
+<p>You can pass configuration options into a module by attaching <code>data-options='{"param1":true,"param2":"string"}'</code> to the same component as the <code>data-module</code> attribute.</p>
+<p>The code you pass into the <code>data-options</code> attribute must be valid JSON, therefore we need to use double quotes <b>"</b> inside the JSON object, so single quotes <b>'</b> must be use for the HTML attibute (<code>data-options='...'</code>).</p>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
+  Click to hide/show the div
+&lt;/button&gt;</code></pre>
+</div>
+
 
 {% endblock %}
 
