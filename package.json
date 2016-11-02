@@ -108,6 +108,7 @@
     "shortid": "^2.2.6",
     "sticky-js": "^1.1.2",
     "throttle-factory": "^1.0.0",
-    "throttleit": "^1.0.0"
+    "throttleit": "^1.0.0",
+    "verge": "^1.9.1"
   }
 }

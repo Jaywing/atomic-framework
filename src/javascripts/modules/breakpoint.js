@@ -5,9 +5,23 @@ const ThrottleTime = 250
 
 let breakpoint = {}
 
+const breakpoints = ['base','xxs','xs','sm','md','lg','xl','xxl']
+
 // reads the value of hidden mq property in the 'content' of ':before' of body (see 'stylesheets/generic/_generic.base.scss)
 breakpoint.refreshValue = function() {
   this.value = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/\"/g, '')
+  breakpoint.detail = {
+    previous: null,
+    current: breakpoint.value,
+    gtBase: breakpoints.indexOf('base') < breakpoints.indexOf(breakpoint.value),
+    gtXxs: breakpoints.indexOf('xxs') < breakpoints.indexOf(breakpoint.value),
+    gtXs: breakpoints.indexOf('xs') < breakpoints.indexOf(breakpoint.value),
+    gtSm: breakpoints.indexOf('sm') < breakpoints.indexOf(breakpoint.value),
+    gtMd: breakpoints.indexOf('md') < breakpoints.indexOf(breakpoint.value),
+    gtLg: breakpoints.indexOf('lg') < breakpoints.indexOf(breakpoint.value),
+    gtXl: breakpoints.indexOf('xl') < breakpoints.indexOf(breakpoint.value)
+  }
+  window.jwAtomic.breakpoint = breakpoint.detail
 }
 
 breakpoint.checkForChange = function () {
@@ -19,13 +33,12 @@ breakpoint.checkForChange = function () {
 }
 
 breakpoint.dispatchChangeEvent = function(previous) {
+  breakpoint.detail.previous = previous
+
   let myEvent = new CustomEvent(
     EventName,
     {
-      detail: {
-        previous: previous,
-        current: breakpoint.value
-      }, // include details of the previous and current breakpoint
+      detail: breakpoint.detail, // include details of the previous and current breakpoint
       bubble: true,
       cancelable: true
     }
@@ -40,7 +53,7 @@ breakpoint.logUpdate = function (e) {
   if (prev !== undefined) {
     msg += ` from ${prev}`
   }
-  console.log(msg)
+  console.log(msg, e.detail)
 }
 
 breakpoint.init = function (log = true) {
@@ -63,7 +76,7 @@ breakpoint.init = function (log = true) {
   }
   breakpoint.checkForChange()
 
-  console.log('Breakpoint has initialised')
+  console.log('Breakpoint has initialised', breakpoint.detail)
 }
 
 export default breakpoint
