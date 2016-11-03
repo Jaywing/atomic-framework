@@ -53,10 +53,12 @@ $grid-gutter-xl: $g-spacer-xl !default;
 }
 
 .o-Grid-cell {
-  flex: 1;
+  flex: 1 1 0%;
 
   // Adding this to support overflow auto
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .o-Grid--flexCells > .o-Grid-cell {

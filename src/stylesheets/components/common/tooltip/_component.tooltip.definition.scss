@@ -1,5 +1,6 @@
 $tooltip-bg: $c-dark-15 !default;
 $tooltip-color: $c-light !default;
+$tooltop-z-index: $g-z-5;
 $tooltip-pointer-size: 10px !default;
 $tooltip-pointer-bg: $tooltip-bg !default;
 $tooltip-padding: $g-spacer-sm !default;
@@ -24,6 +25,7 @@ $tooltip-popin-ani-type: linear !default;
     width: 100%;
     visibility: hidden;
     opacity: 0;
+    z-index: $tooltop-z-index;
   }
 
   &-itemInner {
@@ -34,7 +36,7 @@ $tooltip-popin-ani-type: linear !default;
     padding: $tooltip-padding;
 
     &:after {
-      @include transform(translateX(-50%));
+      transform: translateX(-50%);
       content: ' ';
       position: absolute;
       bottom: -$tooltip-pointer-size;
