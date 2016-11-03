@@ -2,7 +2,7 @@
 $ddh-margin: 0 0 $g-spacer-sm !default;
 $ddh-delimiter-padding: 0 0 0 $g-spacer-xxs !default;
 $ddh-delimiter: ':' !default;
-$ddh-width: 20% !default;
+$ddh-width: 25% !default;
 $ddh-dt-margin: 0 0 $g-spacer 0 !default;
 $ddh-dt-padding: 0 $g-spacer-sm 0 0;
 
@@ -16,6 +16,7 @@ $ddh-dt-padding: 0 $g-spacer-sm 0 0;
     clear: left;
     width: $ddh-width;
     padding: $ddh-dt-padding;
+    word-break: break-all;
 
     @if $ddh-delimiter != '' {
       &::after {
