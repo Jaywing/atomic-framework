@@ -101,6 +101,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
     "eqcss": "^1.2.2",
     "es6y-throttle": "^1.0.1",
     "layzr.js": "^2.2.1",
@@ -108,6 +109,7 @@
     "scroll-to-element": "^2.0.0",
     "shortid": "^2.2.6",
     "sticky-js": "^1.1.2",
+    "svgxuse": "^1.1.22",
     "throttle-factory": "^1.0.0",
     "throttleit": "^1.0.0",
     "verge": "^1.9.1"
