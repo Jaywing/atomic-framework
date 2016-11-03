@@ -101,6 +101,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
     "eqcss": "^1.2.2",
     "es6y-throttle": "^1.0.1",
     "layzr.js": "^2.2.1",

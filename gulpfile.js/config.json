@@ -22,7 +22,7 @@
       "destProd": "javascripts",
       "extractSharedJs": false,
       "entries": {
-        "app": ["./app.js"]
+        "app": ["babel-polyfill", "./app.js"]
       },
       "extensions": ["js", "json"],
       "babel": {
