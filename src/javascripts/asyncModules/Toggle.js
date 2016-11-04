@@ -1,4 +1,5 @@
 import Module from '../modules/Module'
+import forEach from '../helpers/forEach'
 
 export default class Toggle extends Module {
 
@@ -15,7 +16,75 @@ export default class Toggle extends Module {
     super(el, name, options, defaults)
   }
 
+  init() {
+    const Toggle = this // 'this' reference
+
+    // set target (self or not)
+    if (this.settings.target === "") {
+      this.self = true
+      this.settings.target = [this.el]
+      this.el.setAttribute('aria-pressed', this.el.classList.contains(this.settings.activeClass)) // init aria
+    } else {
+      this.self = false
+      let target = this.settings.target
+      if (typeof target === 'string') { // make target an array if it is not already
+        this.settings.target = [this.settings.target]
+      }
+    }
+
+    let active
+
+    // set active status for global object
+    forEach(this.settings.target, (target) => {
+      const index = this.settings.target.indexOf(target);
+      const eleTarget = (typeof target === 'string') ? document.querySelector(target) : target
+
+
+      if (this.settings.hide) {
+        active = (!eleTarget.hasAttribute('hidden'))
+      } else {
+        active = (eleTarget.classList.contains(this.settings.activeClass))
+      }
+
+
+      window.jwAtomic.modules[this.uid].details.target[index] = eleTarget
+
+    })
+
+    this.addModDetail('self', this.self)
+    this.addModDetail('active', active)
+
+    const toggleIt = () => {
+
+      if (this.settings.once) {
+        this.el.removeEventListener('click', toggleIt)
+      }
+
+      if (Toggle.self) {
+        Toggle.doToggle(Toggle.settings.target[0])
+        Toggle.el.setAttribute('aria-pressed', Toggle.el.classList.contains(Toggle.settings.activeClass)) // init aria
+        return
+      }
+
+      const targets = Toggle.settings.target;
+      for (let i = 0, x = targets.length; i < x; i++) {
+        let mytarget = (typeof targets[i] === 'string')? document.querySelector(targets[i]) : targets[i]
+        if (mytarget) {
+          Toggle.doToggle(mytarget);
+          window.jwAtomic.modules[this.uid].details.active = !window.jwAtomic.modules[this.uid].details.target[i].active
+        }
+      }
+
+    }
+
+    // add event listener
+    this.el.addEventListener('click', toggleIt) // click event
+
+    console.log(`${this.name} has initialised`)
+  }
+
   doToggle(target) {
+
     if (target) {
       if (this.settings.hide) {
         if (target.hasAttribute('hidden')) {
@@ -28,52 +97,5 @@ export default class Toggle extends Module {
       target.classList.toggle(this.settings.activeClass)
     }
   }
-
-  init() {
-    const Toggle = this // 'this' reference
-
-    // set target (self or not)
-    if (this.settings.target === "") {
-      this.self = true
-      this.settings.target = [Toggle.el]
-      this.el.setAttribute('aria-pressed', this.el.classList.contains(this.settings.activeClass)) // init aria
-    } else {
-      this.self = false
-      let target = this.settings.target
-      if (typeof target === 'string') {
-        this.settings.target = [this.settings.target]
-      }
-    }
-
-    const toggleIt = function() {
-
-      if (Toggle.settings.once) {
-        Toggle.el.removeEventListener('click', toggleIt)
-      }
-
-      if (Toggle.self) {
-        Toggle.doToggle(Toggle.settings.target[0])
-        Toggle.el.setAttribute('aria-pressed', Toggle.el.classList.contains(Toggle.settings.activeClass)) // init aria
-        console.log('Self toggled')
-        return
-      }
-
-      const targets = Toggle.settings.target;
-      for (let i = 0, x = targets.length; i < x; i++) {
-        let mytarget = document.querySelector(targets[i])
-        if (mytarget) {
-          Toggle.doToggle(mytarget);
-          console.log(`${targets[i]} toggled`)
-        }
-      }
-
-    }
-
-    // add event listener
-    this.el.addEventListener('click', toggleIt) // click event
-
-    console.log(`${this.name} has initialised`)
-  }
-
 
 }

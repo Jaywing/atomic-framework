@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'grid' %}
 {% set sectionid = 'core' %}
 
-{% extends 'layouts/docs/layout.docs.master.html' %}
+{% extends '_layouts/docs/layout.docs.master.html' %}
 
 {% block metaTitle %}Grid | Atomic: Core{% endblock %}
 
@@ -330,6 +330,32 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
+<h5>1 of 5</h5>
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters o-Grid--1of5 textCenter">
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
 <hr class="Article-divider">
 
 <div class="docs-code docs-code--html">
@@ -405,6 +431,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <tr>
       <th class="textLeft"><code>.o-Grid--1of4</code></th>
       <td>Divides grid cells into 4 columns per row</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.o-Grid--1of5</code></th>
+      <td>Divides grid cells into 5 columns per row</td>
       <td class="textRight">Component modifier</td>
     </tr>
     <tr>

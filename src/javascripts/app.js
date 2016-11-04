@@ -1,14 +1,13 @@
-window.jwAtomic = {} // Atomic global object (the only one we should ever create)
+import './modules/setUp'
+import 'svgxuse' //Polyfill for IE11 to support "use" tags in SVGs
+import './asyncModules' // Async Module loader
+import breakpoint from './modules/breakpoint' // breakpoint module
 
-import '../../node_modules/svgxuse/svgxuse.min' //Polyfill for IE11 to support "use" tags in SVGs
-import './asyncModules'
-import breakpoint from './modules/breakpoint'
-
-breakpoint.init() // initialise breakpoints
+breakpoint.init() // initialise breakpoint module
 
 // initiate js in the dom
-const html = document.querySelector('html')
-html.classList.remove('no-js');
-html.classList.add('js');
+document.querySelector('html').classList.add('js')
+
+console.log(window.jwAtomic)
 
 window.onunload = function () { console.log('leaving window...') }

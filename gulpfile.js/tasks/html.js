@@ -22,7 +22,7 @@ var getTemplateData = function(file) {
   var filename = file.path.split(".html")[0];
   filename = filename.toString().split('\\')
   filename = (filename[filename.length - 1]) + '.json'
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'data/' + filename)
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, '_data/' + filename)
   var tempJson
   if(fs.existsSync(dataPath)) {
     tempJson = JSON.parse(fs.readFileSync(dataPath, 'utf8'))

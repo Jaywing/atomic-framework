@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'javascript' %}
 {% set sectionid = 'getting-started' %}
 
-{% extends 'layouts/docs/layout.docs.master.html' %}
+{% extends '_layouts/docs/layout.docs.master.html' %}
 
 {% block metaTitle %}Javascripts | Atomic: Getting started{% endblock %}
 
@@ -29,10 +29,11 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
 
 <p>There are a couple of webpack options exposed in the top-level <code>gulpfile.js/config.json</code> file.</p>
 
-<h3><code>entries</code></h3>
+<h3>Entries</h3>
 <p>Discrete js bundle entry points. A js file will be bundled for each item. Paths are relative to the javascripts folder. This maps directly to <code>webpackConfig.entry</code>.</p>
+<p>By default, Atomic set 'app.js' as it's entry point, but more can be added in the config file.</p>
 
-<h3><code>extractSharedJs</code></h3>
+<h3>ExtractSharedJs</h3>
 <p>Creates a <code>shared.js</code> file that contains any modules shared by multiple bundles (don't forget to include that on the page!). Useful on large sites with discrete js running on different pages that may share common modules or libraries. For smaller sites, you'll probably want to skip the async stuff, and just compile a single bundle by setting extractSharedJs to false.</p>
 
 <h3>Advanced</h3>
@@ -56,6 +57,59 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
 app.js                      # this is the entry point script that webpack uses (you can have more than one, just need to add it in config)</pre>
 </div></div>
 
+<h2 id="section-appjs"><a href="#section-appjs" class="textLinkReset">app.js</a></h2>
+
+<p>This is the entry point for webpack and is our base script.</p>
+<p>It sets up the global <code>jwAtomic</code> object, imports a fix for svg icons in IE11, the asnyc module loader and breakpoint module. Then initialises the breakpoint module and add the 'js' class</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import &#39;./modules/setUp&#39; // global 'jwAtomic' object is created
+import &#39;svgxuse&#39; //Polyfill for IE11 to support &quot;use&quot; tags in SVGs
+import &#39;./asyncModules&#39; // Async Module loader
+import breakpoint from &#39;./modules/breakpoint&#39; // breakpoint module
+
+breakpoint.init() // initialise breakpoint module
+
+// initiate js in the dom
+document.querySelector(&#39;html&#39;).classList.add(&#39;js&#39;)
+
+console.log(window.jwAtomic)
+
+window.onunload = function () { console.log(&#39;leaving window...&#39;) }</code></pre>
+</div>
+
+<h2 id="section-jwatomic"><a href="#section-jwatomic" class="textLinkReset">jwAtomic</a></h2>
+
+<p>
+  This is the one and only global object that Atomic creates.<br>
+  Every module instance that is created gets an entry in <code>modules</code> property.<br>
+  This is a place where each module instance can store details of their current state so that other component have access to them.
+</p>
+<p>By default, each module's settings are stored, but other state related information can be stored there to.</p>
+
+<div class="docs-code docs-code--js"><pre><code class="javascript">// console.log(window.jwAtomic)
+{
+  modules: [
+    Breakpoint: {
+      type: &#39;sync&#39;,
+      details: {
+        current: &#39;lg&#39;,
+        gtBase: true,
+        // ... see breakpoint module
+      }
+    },
+    Toggle_BJIYb7V9gg: {
+      type: &#39;async&#39;,
+      details: {
+        active: true,
+        activeClass: &#39;is-active&#39;,
+        // ... set toggle module
+      }
+    }
+  ]
+}</code></pre>
+</div>
+
 <h2 id="section-module-class"><a href="#section-module-class" class="textLinkReset">Module class</a></h2>
 
 <p>To give our modules some consistency, we have a Module class that each of our custom modules is extended from.</p>
@@ -67,13 +121,26 @@ import shortid from &#39;shortid&#39;
 export default class Module {
 
   constructor(el, name, options = {}, defaults = {}) {
+
     this.el = el // root element (the one with &#39;data-module&#39; attribute)
     this.name = name // name of Module
-    this.uid = shortid.generate() // generate unique id
+    this.uid = name + &#39;_&#39; + shortid.generate() // generate unique id
 
     // Merge module defaults with options (passed in with &#39;data-options&#39;)
     // To make the modules settings
     this.settings = Object.assign(defaults, options)
+
+    // add module to global object
+    window.jwAtomic.modules[this.uid] = {
+      type: &#39;async&#39;,
+      element: this.el,
+      details: this.settings,
+    }
+
+    // set a unique Id on the base element (if one does not exist)
+    if (!this.el.hasAttribute(&#39;id&#39;)) {
+      this.el.setAttribute(&#39;id&#39;, this.uid)
+    }
 
     this.init() // initiate module
   }
@@ -81,6 +148,12 @@ export default class Module {
   init() {
 
     console.log(`${this.name} has initialised`)
+  }
+
+  // a method for adding key/values to the details of module on the
+  // global object
+  addModDetail(key, value) {
+    window.jwAtomic.modules[this.uid].details[key] = value
   }
 
 }</code></pre>
@@ -132,7 +205,6 @@ export default class Switcher extends Module {
   Click to hide/show the div
 &lt;/button&gt;</code></pre>
 </div>
-
 
 {% endblock %}
 

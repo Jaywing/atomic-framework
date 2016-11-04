@@ -35,9 +35,9 @@
 // Variables
 // ========================================================================
 
-$grid-gutter: $g-spacer !default;
-$grid-gutter-lg: $g-spacer-lg !default;
-$grid-gutter-xl: $g-spacer-xl !default;
+$grid-gutter: $g-spacer;
+$grid-gutter-lg: $g-spacer-lg;
+$grid-gutter-xl: $g-spacer-xl;
 
 
 // ========================================================================
@@ -50,15 +50,11 @@ $grid-gutter-xl: $g-spacer-xl !default;
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .o-Grid-cell {
-  flex: 1 1 100%;
-
-  // Adding this to support overflow auto
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  flex: 1;
 }
 
 .o-Grid--flexCells > .o-Grid-cell {
@@ -110,19 +106,27 @@ $grid-gutter-xl: $g-spacer-xl !default;
 }
 
 .o-Grid--1of2 > .o-Grid-cell {
-  flex: 0 0 50%;
+  flex: auto;
+  width: 50%;
+  max-width: 50%;
 }
 
 .o-Grid--1of3 > .o-Grid-cell {
-  flex: 0 0 33.3333%;
+  flex: auto;
+  width: 33.3333%;
+  max-width: 33.3333%;
 }
 
 .o-Grid--1of4 > .o-Grid-cell {
-  flex: 0 0 25%;
+  flex: auto;
+  width: 25%;
+  max-width: 25%;
 }
 
 .o-Grid--1of5 > .o-Grid-cell {
-  flex: 0 0 20%;
+  flex: auto;
+  width: 20%;
+  max-width: 20%;
 }
 
 // Gutters
