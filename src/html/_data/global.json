@@ -100,7 +100,6 @@
         { "id": "helpers", "title": "Helpers", "section": "core", "ready": true },
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
-        { "id": "cookies", "title": "Cookies", "section": "core", "ready": false },
         { "id": "switcher", "title": "Switcher", "section": "core", "ready": true }
       ]
     },

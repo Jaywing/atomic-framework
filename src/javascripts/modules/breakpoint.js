@@ -21,7 +21,8 @@ breakpoint.refreshValue = function() {
     gtLg: breakpoints.indexOf('lg') < breakpoints.indexOf(breakpoint.value),
     gtXl: breakpoints.indexOf('xl') < breakpoints.indexOf(breakpoint.value)
   }
-  window.jwAtomic.breakpoint = breakpoint.detail
+
+  window.jwAtomic.modules['Breakpoint'].details = breakpoint.detail
 }
 
 breakpoint.checkForChange = function () {
@@ -57,6 +58,9 @@ breakpoint.logUpdate = function (e) {
 }
 
 breakpoint.init = function (log = true) {
+
+  window.jwAtomic.modules['Breakpoint'] = {type: 'sync', details: {} };
+
   breakpoint.refreshValue();
 
   if (breakpoint.value === "") {
@@ -76,7 +80,7 @@ breakpoint.init = function (log = true) {
   }
   breakpoint.checkForChange()
 
-  console.log('Breakpoint has initialised', breakpoint.detail)
+  console.log('Breakpoint has initialised')
 }
 
 export default breakpoint
