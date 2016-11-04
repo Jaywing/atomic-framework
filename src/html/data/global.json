@@ -82,7 +82,7 @@
         { "id": "panel", "title": "Panel", "section": "core", "ready": true },
         { "id": "close", "title": "Close", "section": "core", "ready": true },
         { "id": "badge", "title": "Badge", "section": "core", "ready": true },
-        { "id": "overlay", "title": "Overlay", "section": "core", "ready": false },
+        { "id": "overlay", "title": "Overlay", "section": "core", "ready": true },
         { "id": "tooltip", "title": "Tooltip", "section": "core", "ready": true }
       ]
     },
