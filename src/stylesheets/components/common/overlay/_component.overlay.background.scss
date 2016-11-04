@@ -1,0 +1,10 @@
+.Overlay-background {
+  background: rgba(map-get($c-palette, black), 0.8);
+  color: map-get($c-palette, white);
+
+  a,
+  a:hover,
+  a:focus {
+    color: map-get($c-palette, white);
+  }
+}
