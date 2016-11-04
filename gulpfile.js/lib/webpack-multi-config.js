@@ -63,10 +63,10 @@ module.exports = function(env) {
     }
 
     if(config.tasks.js.extractSharedJs) {
-      // Factor out common dependencies into a shared.js
+      // Factor out common dependencies into a _shared.js
       webpackConfig.plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'shared',
+          name: '_shared',
           filename: filenamePattern,
         })
       )

@@ -51,9 +51,9 @@ export default class Sticky extends Module {
     // default variables
     element.sticky.active = false
     element.sticky.rect = verge.rectangle(element)
-    element.sticky.offsetTop = parseInt(element.getAttribute('data-offset-top')) || this.settings.offsetTop
-    element.sticky.bpStart = element.getAttribute('data-bp-start') || this.settings.bpStart
-    element.sticky.stickyClass = element.getAttribute('data-sticky-class') || this.settings.stickyClass
+    element.sticky.offsetTop = parseInt(element.getAttribute('_data-offset-top')) || this.settings.offsetTop
+    element.sticky.bpStart = element.getAttribute('_data-bp-start') || this.settings.bpStart
+    element.sticky.stickyClass = element.getAttribute('_data-sticky-class') || this.settings.stickyClass
     element.sticky.container = this.el
     element.sticky.container.rect = verge.rectangle(element)
     // fix when element is image that has not yet loaded and width, height = 0

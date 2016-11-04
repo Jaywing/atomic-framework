@@ -7,9 +7,9 @@ export default class ResImg extends Module {
 
     const defaults = {
       "threshold": 0,
-      "normal": 'data-resimg-normal',
-      "retina": 'data-resimg-retina',
-      "srcset": 'data-resimg-srcset',
+      "normal": '_data-resimg-normal',
+      "retina": '_data-resimg-retina',
+      "srcset": '_data-resimg-srcset',
     }
 
     super(el, name, options, defaults)

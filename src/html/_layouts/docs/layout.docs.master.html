@@ -1,4 +1,4 @@
-{% from 'macros/helpers.html' import icon %}
+{% from '_macros/helpers.html' import icon %}
 <!doctype html>
 <html lang="en-GB" class="no-js">
 <head>
@@ -19,7 +19,7 @@
   <!-- generic fall back stylesheet for old ie versions -->
   <!--[if lte IE 9]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"><![endif]-->
 
-  {% include "shared/app-icons.html" %}
+  {% include '_shared/app-icons.html' %}
 
   {% block head %}{% endblock %}
 
@@ -30,7 +30,7 @@
 
     <a href="#content" class="SkipLink Button ">{{ icon('arrow-down') }} Skip to content</a>
 
-    {% include "shared/docs/section-nav.html" %}
+    {% include '_shared/docs/section-nav.html' %}
   </header>
 
   <main id="content" class="o-Site-content">
@@ -47,7 +47,7 @@
 
         <section data-sticky-container class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6">
           {% block sidebar %}
-            {% include "shared/docs/page-nav.html" %}
+            {% include '_shared/docs/page-nav.html' %}
           {% endblock %}
         </section>
 

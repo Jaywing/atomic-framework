@@ -3,7 +3,7 @@
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
-    { "id": "extended", "title": "Extended", "ready": true },
+    { "id": "extended", "title": "Extended", "ready": false },
     { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
@@ -17,7 +17,6 @@
         { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": true },
         { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": true },
         { "id": "html", "title": "HTML templates", "section": "getting-started", "ready": false },
-        { "id": "icons", "title": "Icons", "section": "getting-started", "ready": false },
         { "id": "support", "title": "Browser & device support", "section": "getting-started", "ready": false }
       ]
     },
