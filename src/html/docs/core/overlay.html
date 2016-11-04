@@ -127,6 +127,24 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
+<h2><a href="#section:icon" class="textLinkReset">Overlay icon</a></h2>
+
+<div class="docs-example">
+  <figure class="Overlay">
+    <img src="//placehold.it/600x400" alt="">
+    <div class="Overlay-panel Overlay-background Overlay-icon">
+      {{ icon('exclamation', '0 0 1 1', 'Icon--xxl') }}
+    </div>
+  </figure>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;Overlay&quot;&gt;
+  &lt;img src=&quot;&quot; width=&quot;&quot; height=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption class="Overlay-panel Overlay-icon"&gt;...&lt;/figcaption&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 {% endblock %}
 
 {% block javascript %}

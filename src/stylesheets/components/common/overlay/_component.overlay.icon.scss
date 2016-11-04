@@ -1,0 +1,9 @@
+.Overlay-icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  fill: map-get($c-palette, white);
+}
