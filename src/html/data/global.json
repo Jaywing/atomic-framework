@@ -3,7 +3,7 @@
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
-    { "id": "components", "title": "Components", "ready": true },
+    { "id": "extended", "title": "Extended", "ready": true },
     { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
@@ -67,10 +67,10 @@
     },
     {
       "category": "Navigation",
-      "section": "components",
+      "section": "extended",
       "items": [
-        { "id": "bookmarks", "title": "Bookmarks", "section": "components", "ready": true },
-        { "id": "dropdown", "title": "Dropdown", "section": "components", "ready": false }
+        { "id": "bookmarks", "title": "Bookmarks", "section": "extended", "ready": true },
+        { "id": "dropdown", "title": "Dropdown", "section": "extended", "ready": false }
       ]
     },
     {
@@ -88,10 +88,10 @@
     },
     {
       "category": "Common",
-      "section": "components",
+      "section": "extended",
       "items": [
-        { "id": "alert", "title": "Alert", "section": "components", "ready": false },
-        { "id": "responsive-img", "title": "Responsive images", "section": "components", "ready": true }
+        { "id": "alert", "title": "Alert", "section": "extended", "ready": false },
+        { "id": "responsive-img", "title": "Responsive images", "section": "extended", "ready": true }
       ]
     },
     {
@@ -101,9 +101,15 @@
         { "id": "helpers", "title": "Helpers", "section": "core", "ready": true },
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
-        { "id": "sticky", "title": "Sticky", "section": "core", "ready": true },
         { "id": "cookies", "title": "Cookies", "section": "core", "ready": false },
         { "id": "switcher", "title": "Switcher", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Modules",
+      "section": "extended",
+      "items": [
+        { "id": "sticky", "title": "Sticky", "section": "extended", "ready": true }
       ]
     }
   ]
