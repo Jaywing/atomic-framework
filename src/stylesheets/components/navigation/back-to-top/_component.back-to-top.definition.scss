@@ -1,0 +1,33 @@
+$backToTopMdMargin: -($g-spacer-xs);
+$backToTopFixedRight: $g-spacer-xs;
+$backToTopFixedBottom: 0;
+
+.BackToTop {
+
+  > .Icon {
+    margin: 0;
+  }
+
+  &-text {
+    position: absolute;
+    top: -9999px;
+  }
+
+  @include md {
+
+    > .Icon {
+      margin-left: $backToTopMdMargin;
+    }
+
+    &-text {
+      position: static;
+      top: auto;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    bottom: $backToTopFixedBottom;
+    right: $backToTopFixedRight;
+  }
+}
