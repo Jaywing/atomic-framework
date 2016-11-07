@@ -19,7 +19,7 @@ var paths = {
 }
 
 var getTemplateData = function(file) {
-  var filename = file.path.split(".html")[0];
+  var filename = file.path.split(".njk")[0];
   filename = filename.toString().split('\\')
   filename = (filename[filename.length - 1]) + '.json'
   var dataPath = path.resolve(config.root.src, config.tasks.html.src, '_data/' + filename)

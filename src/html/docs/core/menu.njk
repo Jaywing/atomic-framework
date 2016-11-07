@@ -1,0 +1,425 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'menu' %}
+{% set sectionid = 'core' %}
+
+{% from '_macros/helpers.njk' import icon %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Menu | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Menu</h1>
+<p class="Text--lead">Our flexible menu component makes it easy to build many common navigation patterns.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="textLinkReset">Usage</a></h2>
+
+<h3>Basic Menu</h3>
+
+<div class="docs-example">
+
+  <ul class="Menu">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+
+  <div class="Menu">
+    <a href="#" class="Menu-item Menu-link">One</a>
+    <a href="#" class="Menu-item Menu-link">Two</a>
+    <a href="#" class="Menu-item Menu-link">Three</a>
+    <a href="#" class="Menu-item Menu-link">Four</a>
+  </div>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&lt;div class=&quot;Menu&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;Menu-item Menu-link&quot;&gt;One&lt;/a&gt;
+  ...
+&lt;/div&gt;</code></pre>
+</div>
+
+<h3>Item alignment</h3>
+<h4>Right align (.Menu--right)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu Menu--right">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--right&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Centred (.Menu--center)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu Menu--center">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--center&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Expanded (.Menu--expanded)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu Menu--expanded">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+  </ul>
+
+  <ul class="Menu Menu--expanded">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+  <ul class="Menu Menu--expanded">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--expanded&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Menu item alignment (.Menu-item--right & .Menu-item--left)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item Menu-item--right"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+
+  <ul class="Menu">
+    <li class="Menu-item Menu-item--left"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+  &lt;li class=&quot;Menu-item Menu-item--right&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;Menu Menu--right&quot;&gt;
+  &lt;li class=&quot;Menu-item Menu-item--left&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Active menu item state (.is-active)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Menu title (.Menu-title)</h4>
+
+<div class="docs-example">
+
+  <ul class="Menu">
+    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h3>Vertical menu (.Menu--vertical)</h3>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical">
+    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--vertical&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h4>Vertical nested menu</h4>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical Demo">
+    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a>
+      <ul class="Menu Menu--vertical Demo">
+        <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+      </ul>
+    </li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+</div>
+
+<h4>Vertical flush nested menu (.Menu--flush)</h4>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical Demo">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a>
+      <ul class="Menu Menu--vertical Menu--flush Demo">
+        <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+      </ul>
+    </li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+</div>
+
+<h4>Responsive menu (.MenuXs, .MenuSm, .MenuMd,. MenuLg)</h4>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical MenuXs">
+    <li class="Menu-item"><strong class="Menu-title">Break @480px</strong></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+  <ul class="Menu Menu--vertical MenuSm">
+    <li class="Menu-item"><strong class="Menu-title">Break @640px</strong></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+  <ul class="Menu Menu--vertical MenuMd">
+    <li class="Menu-item"><strong class="Menu-title">Break @768px</strong></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+  <ul class="Menu Menu--vertical MenuLg">
+    <li class="Menu-item"><strong class="Menu-title">Break @960px</strong></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
+  </ul>
+</div>
+
+<h3>Tabular menu (.Menu--tabular)</h3>
+
+<div class="docs-example">
+
+  <ul class="Menu Menu--tabular">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+  <div class="o-Section--tall o-Size--1of5">
+    <ul class="Menu Menu--vertical Menu--tabular">
+      <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+      <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
+      <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<h3>Attached menu (<code>.Menu--attached</code>)</h3>
+
+<p>It is possible to attached the menu to other attachable items, for example, the panel component, to create a tab like component.</p>
+
+<div class="docs-example">
+  <ul class="Menu Menu--tabular Menu--attached">
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+  <div class="Panel Panel--box Panel--attached Panel--stacked">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;ul class=&quot;Menu Menu--tabular Menu--attached&quot;&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ....
+&lt;/ul&gt;
+&lt;div class=&quot;Panel Panel--box Panel--attached Panel--stacked&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+
+<div class="scrollXauto">
+  <table class="Table Table--striped">
+    <thead>
+    <tr>
+      <th class="o-Size--1of4 textLeft">Class</th>
+      <th class="textLeft">Description</th>
+      <th class="textRight o-Size--1of5">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th class="textLeft"><code>.Menu</code></th>
+      <td>Set Menu to use flexbox and aligns items to the left by default</td>
+      <td class="textRight">Component</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu[Xs,Sm,Md,Lg]</code></th>
+      <td>Used in conjunction with Menu--vertical to break to horizonal at 480px, 640px, 768px or 960px</td>
+      <td class="textRight">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu--right</code></th>
+      <td>Aligns items to the right</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu--center</code></th>
+      <td>Aligns items centrally</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu--expanded</code></th>
+      <td>Menu items expand to fill the available space</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu--vertical</code></th>
+      <td>Aligned menu items vertically in a stacked menu</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu--flush</code></th>
+      <td>Removes the left margin of a nested vertical menu</td>
+      <td class="textRight">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-item</code></th>
+      <td>A menu item</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-item--right</code></th>
+      <td>Aligns menu item to the right if the menu is left aligned</td>
+      <td class="textRight">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-item--left</code></th>
+      <td>Aligns menu item to the left if the menu is right aligned</td>
+      <td class="textRight">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-item.is-active</code></th>
+      <td>A active menu item</td>
+      <td class="textRight">Active state</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-link</code></th>
+      <td>A menu link</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="textLeft"><code>.Menu-title</code></th>
+      <td>A menu title</td>
+      <td class="textRight">Sub-element</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

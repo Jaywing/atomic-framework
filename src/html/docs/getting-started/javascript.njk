@@ -1,0 +1,220 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'javascript' %}
+{% set sectionid = 'getting-started' %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Javascripts | Atomic: Getting started{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Javascript</h1>
+<p class="Text--lead">Modular ES6 (with async loading) with Babel and Webpack!</p>
+<p>In development, JavaScript is compiled with <a href="https://github.com/webpack/webpack-dev-middleware">webpack-dev-middleware</a> and <a href="https://github.com/glenjamin/webpack-hot-middleware">webpack-hot-middleware</a> by <a href="/Jaywing/atomic/blob/develop/src/javascripts/gulpfile.js/tasks/browserSync.js#L14-L19">passing these into BrowserSync</a> as <a href="https://browsersync.io/docs/options/#option-middleware">middleware</a>. This means that the javascript is compiled and injected into the page by webpack, actual javascript files are not generated until production is run.  You don't have to take advantage of <a href="https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack">webpack hot module replacement</a>, but it's there if you want it! But before you go and do that, read <a href="https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.jhcp6x3rl">Dan Abramov's disclaimer</a>, which is also a great tutorial on using vanilla Webpack HMR.</p>
+
+<hr>
+
+<div class="Bookmarks" data-module="Bookmarks" data-options='{"animated":true}'></div>
+
+<h2 id="section-tasks"><a href="#section-tasks" class="textLinkReset">Tasks and files</a></h2>
+
+<div class="docs-example"><div class="scrollXauto"><pre>gulpfile.js/tasks/browsersync
+gulpfile.js/tasks/webpackProduction
+gulpfile.js/lib/webpack-multi-config</pre></div></div>
+
+<p>There are a couple of webpack options exposed in the top-level <code>gulpfile.js/config.json</code> file.</p>
+
+<h3>Entries</h3>
+<p>Discrete js bundle entry points. A js file will be bundled for each item. Paths are relative to the javascripts folder. This maps directly to <code>webpackConfig.entry</code>.</p>
+<p>By default, Atomic set 'app.js' as it's entry point, but more can be added in the config file.</p>
+
+<h3>ExtractSharedJs</h3>
+<p>Creates a <code>shared.js</code> file that contains any modules shared by multiple bundles (don't forget to include that on the page!). Useful on large sites with discrete js running on different pages that may share common modules or libraries. For smaller sites, you'll probably want to skip the async stuff, and just compile a single bundle by setting extractSharedJs to false.</p>
+
+<h3>Advanced</h3>
+<p>If you want to mess with the specifics of the webpack config, check out <code>gulpfile.js/lib/webpack-multi-config.js</code>.</p>
+
+<h2 id="section-file-structure"><a href="#section-file-structure" class="textLinkReset">File structure</a></h2>
+
+<div class="docs-code docs-code--files"><div class="scrollXauto"><pre>javascripts
+|-- __tests__               # where to keep your test scripts
+|-- asyncModules            # modules that are loaded asynchronously
+    |-- Toggle.js           # toggle async module
+    |-- index.js            # this script searches for 'data-module' attributes and match its value with a module and initiates it
+    ...
+|-- helpers                 # re-usable utility functions and scripts
+    |-- createElement.js    # script to help programmatically create HTML elements
+    ...
+|-- modules                 # non-async modules
+    |-- breakpoint.js       # script that watches the HTML for changes in breakpoint and then fires a custom event
+    |-- Module.js           # this is the module class that most modules will be extended from
+    ...
+app.js                      # this is the entry point script that webpack uses (you can have more than one, just need to add it in config)</pre>
+</div></div>
+
+<h2 id="section-appjs"><a href="#section-appjs" class="textLinkReset">app.js</a></h2>
+
+<p>This is the entry point for webpack and is our base script.</p>
+<p>It sets up the global <code>jwAtomic</code> object, imports a fix for svg icons in IE11, the asnyc module loader and breakpoint module. Then initialises the breakpoint module and add the 'js' class</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import './modules/setUp'
+import 'svgxuse' //Polyfill for IE11 to support "use" tags in SVGs
+import './asyncModules' // Async Module loader
+import breakpoint from './modules/breakpoint' // breakpoint module
+
+function atomic_initialise() {
+  breakpoint.init() // initialise breakpoint module
+  // initiate js in the dom
+  document.querySelector(.njk').classList.add('js')
+  console.log(window.jwAtomic)
+  window.onunload = function () {
+    console.log('leaving window...')
+  }
+}
+
+// cutting the mustard (https://www.npmjs.com/package/cut-the-mustard)
+// capable browsers only
+if (advTest()) {
+  atomic_initialise()
+}</code></pre>
+</div>
+
+<h2 id="section-jwatomic"><a href="#section-jwatomic" class="textLinkReset">jwAtomic</a></h2>
+
+<p>
+  This is the one and only global object that Atomic creates.<br>
+  Every module instance that is created gets an entry in <code>modules</code> property.<br>
+  This is a place where each module instance can store details of their current state so that other component have access to them.
+</p>
+<p>By default, each module's settings are stored, but other state related information can be stored there to.</p>
+
+<div class="docs-code docs-code--js"><pre><code class="javascript">// console.log(window.jwAtomic)
+{
+  modules: [
+    Breakpoint: {
+      type: &#39;sync&#39;,
+      details: {
+        current: &#39;lg&#39;,
+        gtBase: true,
+        // ... see breakpoint module
+      }
+    },
+    Toggle_BJIYb7V9gg: {
+      type: &#39;async&#39;,
+      details: {
+        active: true,
+        activeClass: &#39;is-active&#39;,
+        // ... set toggle module
+      }
+    }
+  ]
+}</code></pre>
+</div>
+
+<h2 id="section-module-class"><a href="#section-module-class" class="textLinkReset">Module class</a></h2>
+
+<p>To give our modules some consistency, we have a Module class that each of our custom modules is extended from.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">// imported from npm, generates a short unique id
+import shortid from &#39;shortid&#39;
+
+export default class Module {
+
+  constructor(el, name, options = {}, defaults = {}) {
+
+    this.el = el // root element (the one with &#39;data-module&#39; attribute)
+    this.name = name // name of Module
+    this.uid = name + &#39;_&#39; + shortid.generate() // generate unique id
+
+    // Merge module defaults with options (passed in with &#39;data-options&#39;)
+    // To make the modules settings
+    this.settings = Object.assign(defaults, options)
+
+    // add module to global object
+    window.jwAtomic.modules[this.uid] = {
+      type: &#39;async&#39;,
+      element: this.el,
+      details: this.settings,
+    }
+
+    // set a unique Id on the base element (if one does not exist)
+    if (!this.el.hasAttribute(&#39;id&#39;)) {
+      this.el.setAttribute(&#39;id&#39;, this.uid)
+    }
+
+    this.init() // initiate module
+  }
+
+  init() {
+
+    console.log(`${this.name} has initialised`)
+  }
+
+  // a method for adding key/values to the details of module on the
+  // global object
+  addModDetail(key, value) {
+    window.jwAtomic.modules[this.uid].details[key] = value
+  }
+
+}</code></pre>
+</div>
+
+<p>To create your own custom you must extend the Module class.</p>
+
+<div class="docs-code docs-code--js">
+  <pre><code class="javascript">import Module from &#39;../modules/Module&#39; // must import the class to extend it
+
+export default class Switcher extends Module {
+
+  constructor(el, name, options) {
+
+    // configure defaults for this module
+    const defaults = {
+      &quot;activeIndex&quot;: 0,
+      &quot;activeClass&quot;: &quot;is-active&quot;
+    }
+
+    // calling super generates - this.settings object
+    super(el, name, options, defaults)
+  }
+
+  init() {
+    // ... some initiation code
+
+    console.log(`${this.name} has initialised`)
+  }
+
+}</code></pre>
+</div>
+
+<h3>Async Modules</h3>
+
+<p>Modules can be loaded asynchronously by attaching <code>data-module="CustomModule"</code>.<br>This will then try and load the file <code>CustomModule.js</code> from the <em>asyncModules</em> folder and initiate an instance of it on that component.</p>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Click to toggle me&lt;/button&gt;</code></pre>
+</div>
+
+<h3>Module options</h3>
+
+<p>You can pass configuration options into a module by attaching <code>data-options='{"param1":true,"param2":"string"}'</code> to the same component as the <code>data-module</code> attribute.</p>
+<p>The code you pass into the <code>data-options</code> attribute must be valid JSON, therefore we need to use double quotes <b>"</b> inside the JSON object, so single quotes <b>'</b> must be use for the HTML attibute (<code>data-options='...'</code>).</p>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
+  Click to hide/show the div
+&lt;/button&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

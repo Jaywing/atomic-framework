@@ -1,0 +1,102 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'breakpoints' %}
+{% set sectionid = 'core' %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Breakpoints | Atomic: Core{% endblock %}
+
+{% block content %}
+
+  <h1 class="Article-title">Breakpoints</h1>
+  <p class="Text--lead">Overview of the default breakpoint settings and how to use them.</p>
+
+  <hr class="Article-divider">
+
+  <h2>Usage</h2>
+
+  <p>Settings for the default breakpoints can be found in <code>stylesheets/settings/_settings.media-queries.scss</code>.</p>
+
+  <div class="scrollXauto">
+    <table class="Table Table--striped textLeft">
+      <thead>
+      <tr>
+        <th class="o-Size--1of4">Breakpoint</th>
+        <th class="o-Size--1of4">Width</th>
+        <th class="o-Size--1of2">Example device</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>None</td>
+        <td>0px</td>
+        <td>Wearables, very small phones</td>
+      </tr>
+      <tr>
+        <td>xxs</td>
+        <td>320px</td>
+        <td>Smart phones</td>
+      </tr>
+      <tr>
+        <td>xs</td>
+        <td>480px</td>
+        <td>Large phones, phone in landscape</td>
+      </tr>
+      <tr>
+        <td>sm</td>
+        <td>640px</td>
+        <td>Small tablets</td>
+      </tr>
+      <tr>
+        <td>md</td>
+        <td>768px</td>
+        <td>Larger tablets</td>
+      </tr>
+      <tr>
+        <td>lg</td>
+        <td>960px</td>
+        <td>Small desktop, tablets in landscape</td>
+      </tr>
+      <tr>
+        <td>xl</td>
+        <td>1180px</td>
+        <td>Medium desktop, tablets in landscape</td>
+      </tr>
+      <tr>
+        <td>xxl</td>
+        <td>1400px</td>
+        <td>Large desktop, widescreens</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Mixins</h3>
+  <p>Each breakpoint has its own mixin.</p>
+  <div class="docs-code docs-code--scss">
+    <pre><code class="css">@include md { .... }
+@include xl { .... }
+// gets compiled to
+@media screen and (min-width: 768px) { .... }
+@media screen and (min-width: 1180px) { .... }</code></pre>
+  </div>
+    <p>For more complicated media queries use the <code>mq</code> mixin from <a href="https://github.com/sass-mq/sass-mq">sass-mq</a> plugin which is installed</p>
+  <div class="docs-code docs-code--scss">
+    <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
+// gets compiled to
+@media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>
+  </div>
+
+  <h3>Javascript: Breakpoint module</h3>
+  <p>The <a href="breakpoint-mod.njk">Breakpoint module</a> is built in by default and emits an custom event <code>bpupdate</code> that components can listen for to react to changes in breakpoints.</p>
+
+{% endblock %}
+
+{% block javascript %}
+  <script src="/javascripts/app.js"></script>
+{% endblock %}

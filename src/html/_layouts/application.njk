@@ -1,0 +1,43 @@
+{% from '_macros/helpers.njk' import icon %}
+
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+
+  <!-- standard styles - hidden from < ie10 -->
+  <!--[if ! lte IE 9]><!--><link rel="stylesheet" href="/stylesheets/styles.css"><!--<![endif]-->
+  <!-- generic fall back stylesheet for old ie versions -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"><![endif]-->
+
+  {% include '_shared/app-icons.njk' %}
+
+  {% block head %}{% endblock %}
+
+</head>
+<body id="top">
+
+
+{% block main %}
+<main>
+  <article>
+    {% block content %}{% endblock %}
+  </article>
+  <section>
+
+  </section>
+</main>
+{% endblock %}
+
+<footer>
+  <p>Made with ♥ at <a href="http://jaywing.com">JAYWING</a></p>
+</footer>
+
+{% block javascript %}{% endblock %}
+
+</body>
+</html>
