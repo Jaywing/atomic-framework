@@ -21,7 +21,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="Bookmarks" data-module="Bookmarks" data-options='{"animated":true}'></div>
 
-<h2 id="section-tasks"><a href="#section-tasks" class="textLinkReset">Tasks and files</a></h2>
+<h2 id="section-tasks"><a href="#section-tasks" class="Text--resetLink">Tasks and files</a></h2>
 
 <div class="docs-example"><div class="scrollXauto"><pre>gulpfile.js/tasks/browsersync
 gulpfile.js/tasks/webpackProduction
@@ -39,7 +39,7 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
 <h3>Advanced</h3>
 <p>If you want to mess with the specifics of the webpack config, check out <code>gulpfile.js/lib/webpack-multi-config.js</code>.</p>
 
-<h2 id="section-file-structure"><a href="#section-file-structure" class="textLinkReset">File structure</a></h2>
+<h2 id="section-file-structure"><a href="#section-file-structure" class="Text--resetLink">File structure</a></h2>
 
 <div class="docs-code docs-code--files"><div class="scrollXauto"><pre>javascripts
 |-- __tests__               # where to keep your test scripts
@@ -57,7 +57,7 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
 app.js                      # this is the entry point script that webpack uses (you can have more than one, just need to add it in config)</pre>
 </div></div>
 
-<h2 id="section-appjs"><a href="#section-appjs" class="textLinkReset">app.js</a></h2>
+<h2 id="section-appjs"><a href="#section-appjs" class="Text--resetLink">app.js</a></h2>
 
 <p>This is the entry point for webpack and is our base script.</p>
 <p>It sets up the global <code>jwAtomic</code> object, imports a fix for svg icons in IE11, the asnyc module loader and breakpoint module. Then initialises the breakpoint module and add the 'js' class</p>
@@ -85,7 +85,7 @@ if (advTest()) {
 }</code></pre>
 </div>
 
-<h2 id="section-jwatomic"><a href="#section-jwatomic" class="textLinkReset">jwAtomic</a></h2>
+<h2 id="section-jwatomic"><a href="#section-jwatomic" class="Text--resetLink">jwAtomic</a></h2>
 
 <p>
   This is the one and only global object that Atomic creates.<br>
@@ -117,7 +117,7 @@ if (advTest()) {
 }</code></pre>
 </div>
 
-<h2 id="section-module-class"><a href="#section-module-class" class="textLinkReset">Module class</a></h2>
+<h2 id="section-module-class"><a href="#section-module-class" class="Text--resetLink">Module class</a></h2>
 
 <p>To give our modules some consistency, we have a Module class that each of our custom modules is extended from.</p>
 

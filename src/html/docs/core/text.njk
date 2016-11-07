@@ -1,0 +1,56 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'text' %}
+{% set sectionid = 'core' %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Text | Atomic: Core{% endblock %}
+
+{% block content %}
+
+  <h1 class="Article-title">Text</h1>
+  <p class="Text--lead">Some useful utility classes relating to text.</p>
+
+  <hr class="Article-divider">
+
+  <h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+  <p>The text utility classes must always be used with a modifier (eg. <code>.Text--lead</code>), on it's own the base class <code>.Text</code> does nothing.</p>
+
+  <dl class="Definition Definition--horizontal">
+    <dt><code>.Text--lead</code></dt>
+    <dd>Gives increased prominence for the lead paragraph of some copy</dd>
+    <dt><code>.Text--disabled</code></dt>
+    <dd>Styles text to appear disabled.</dd>
+    <dt><code>.Text--break</code></dt>
+    <dd>Allow copy to break words in order to fill available space.</dd>
+    <dt><code>.Text--noWrap</code></dt>
+    <dd>Stops copy from wrapping</dd>
+    <dt><code>.Text--truncate</code></dt>
+    <dd>Will truncate text with an ellipsis when it exceeds available space.</dd>
+    <dt><code>.Text--center</code></dt>
+    <dd>Centre aligns text</dd>
+    <dt><code>.Text--left</code></dt>
+    <dd>Left aligns text</dd>
+    <dt><code>.Text--right</code></dt>
+    <dd>Right aligns text</dd>
+    <dt><code>.Text--justify</code></dt>
+    <dd>Justifies text alignment</dd>
+    <dt><code>.Text--inheritColor</code></dt>
+    <dd>Inherits the color of the parent element</dd>
+    <dt><code>.Text--resetLink</code></dt>
+    <dd>Overrides link styles to make appear link the parents style</dd>
+    <dt><code>.Text--kern</code></dt>
+    <dd>Enables font kerning (all supported browsers except Chrome on Windows)</dd>
+  </dl>
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="/javascripts/app.js"></script>
+{% endblock %}

@@ -51,7 +51,7 @@
         { "id": "table", "title": "Table", "section": "core", "ready": true },
         { "id": "form", "title": "Form", "section": "core", "ready": true },
         { "id": "definition", "title": "Definition", "section": "core", "ready": true },
-        { "id": "text", "title": "Text", "section": "core", "ready": false }
+        { "id": "text", "title": "Text", "section": "core", "ready": true }
       ]
     },
     {
