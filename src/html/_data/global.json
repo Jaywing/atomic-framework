@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
