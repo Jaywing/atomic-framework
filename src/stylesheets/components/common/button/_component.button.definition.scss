@@ -1,7 +1,5 @@
 // ----------------------------------------------------------------------
-
 // Components: Button Definition
-
 // ----------------------------------------------------------------------
 
 ////
@@ -24,6 +22,10 @@ $button-min-width:  $g-min-touch-size !default;
   min-width: $button-min-width;
   margin: $button-margin;
   padding: $button-padding;
+
+  &--block {
+    display: block;
+  }
 
   &:first-child {
     margin-left: 0;

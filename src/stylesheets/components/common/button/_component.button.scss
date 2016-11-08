@@ -11,7 +11,10 @@
 ////
 
 @import 'component.button.definition';
-@import 'component.button.sizes';
+@import 'component.button.xs';
+@import 'component.button.sm';
+@import 'component.button.lg';
+@import 'component.button.xl';
 @import 'component.button.theme';
 @import 'component.button.primary';
 @import 'component.button.secondary';
