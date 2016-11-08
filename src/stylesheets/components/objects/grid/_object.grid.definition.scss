@@ -54,7 +54,9 @@ $grid-gutter-xl: $g-spacer-xl;
 }
 
 .o-Grid-cell {
-  flex: 1;
+  flex: 1 1 auto;;
+  //width: 100%;
+  //min-width: 100%;
 }
 
 .o-Grid--flexCells > .o-Grid-cell {
