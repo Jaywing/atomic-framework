@@ -55,6 +55,7 @@ $grid-gutter-xl: $g-spacer-xl;
 
 .o-Grid-cell {
   flex: 1 1 auto;
+  max-width: 100%;
 }
 
 .o-Grid--flexCells > .o-Grid-cell {
