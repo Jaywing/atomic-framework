@@ -52,6 +52,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
     <h3>Examples</h3>
 
+    <hr>
+
+    <h4>Text lead</h4>
+
     <div class="docs-code docs-code--html">
         <pre><code class="html">&lt;p class="Text--lead"&gt;Here is some lead text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus augue, euismod venenatis placerat a, volutpat vel nisl. Suspendisse vitae nunc vehicula, iaculis diam ac, lacinia erat.&lt;/p&gt;</code></pre>
     </div>
@@ -60,11 +64,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         lectus augue, euismod venenatis placerat a, volutpat vel nisl. Suspendisse vitae nunc vehicula, iaculis diam ac,
         lacinia erat.</p>
 
+    <h4>Text disabled</h4>
+
     <div class="docs-code docs-code--html">
         <pre><code class="html">&lt;p class="Text--disabled"&gt;This text is disabled&lt;/p&gt;</code></pre>
     </div>
 
     <p class="Text--disabled">This text is disabled</p>
+
+    <h4>Text break</h4>
 
     <div class="docs-code docs-code--html">
         <pre><code class="html">&lt;div style="width: 40px;"&gt;
@@ -74,6 +82,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
 
     <div style="width:80px; background:#ccc; padding:1rem;"><p class="Text--break">Oooooops this extremely long text is too long!</p></div>
+
+    <h4>Text no-wrap</h4>
 
     <div class="docs-code docs-code--html">
         <pre><code class="html">&lt;div style="width: 40px;"&gt;
@@ -85,6 +95,67 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <div style="width:80px; background:#ccc; padding:1rem;">
         <p class="Text--noWrap">Oooooops this extremely long text is too long!</p>
     </div>
+
+    <h4>Text truncate</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--truncate"&gt;Oooooops this extremely long text is too long!&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:80px; background:#ccc; padding:1rem;">
+        <p class="Text--truncate">Oooooops this extremely long text is too long!</p>
+    </div>
+
+    <h4>Align text left</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--left"&gt;Text aligned left&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--left">Text aligned left</p>
+    </div>
+
+    <h4>Align text center</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--center"&gt;Text aligned center&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--center">Text aligned center</p>
+    </div>
+
+    <h4>Align text right</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--right"&gt;Text aligned right&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--right">Text aligned right</p>
+    </div>
+
+    <h4>Justify text</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style=width:100%; background:#ccc; padding:1rem;"&gt;
+    &lt;p class="Text--justify"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, leo ac iaculis finibus, orci sem sollicitudin sem, ut blandit tellus quam non tortor. Aenean ut libero sagittis, bibendum diam in, aliquam magna. Morbi in vestibulum metus, vel bibendum tortor. In lobortis tellus nec tincidunt porta. Fusce consequat ligula et pulvinar ornare. Curabitur risus tellus, condimentum at lacus eu, tincidunt fermentum metus. Fusce finibus placerat dapibus. Donec imperdiet tempus turpis, in feugiat magna imperdiet vitae.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, leo ac iaculis finibus, orci sem sollicitudin sem, ut blandit tellus quam non tortor. Aenean ut libero sagittis, bibendum diam in, aliquam magna. Morbi in vestibulum metus, vel bibendum tortor. In lobortis tellus nec tincidunt porta. Fusce consequat ligula et pulvinar ornare. Curabitur risus tellus, condimentum at lacus eu, tincidunt fermentum metus. Fusce finibus placerat dapibus. Donec imperdiet tempus turpis, in feugiat magna imperdiet vitae.</p>
+    </div>
+
+    <h4>Add font kerning</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style=width:100%; background:#ccc; padding:1rem;"&gt;
+    &lt;p class="Text--kern"&gt;Add text kerning.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--kern">Add text kerning.</p>
+    </div>
+
 
 
 {% endblock %}
