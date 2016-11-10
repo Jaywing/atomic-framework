@@ -39,7 +39,6 @@ export default class Toggle extends Module {
       const index = this.settings.target.indexOf(target);
       const eleTarget = (typeof target === 'string') ? document.querySelector(target) : target
 
-
       if (this.settings.hide) {
         active = (!eleTarget.hasAttribute('hidden'))
       } else {
@@ -70,8 +69,9 @@ export default class Toggle extends Module {
       for (let i = 0, x = targets.length; i < x; i++) {
         let mytarget = (typeof targets[i] === 'string')? document.querySelector(targets[i]) : targets[i]
         if (mytarget) {
-          Toggle.doToggle(mytarget);
-          window.jwAtomic.modules[this.uid].details.active = !window.jwAtomic.modules[this.uid].details.target[i].active
+          Toggle.doToggle(mytarget, this.el);
+          //window.jwAtomic.modules[this.uid].details.active = !window.jwAtomic.modules[this.uid].details.target[i].active
+
         }
       }
 
@@ -83,18 +83,22 @@ export default class Toggle extends Module {
     console.log(`${this.name} has initialised`)
   }
 
-  doToggle(target) {
-
+  doToggle(target, baseEle) {
     if (target) {
       if (this.settings.hide) {
         if (target.hasAttribute('hidden')) {
           target.removeAttribute('hidden')
+          window.jwAtomic.modules[baseEle.getAttribute('id')].details.active = true;
         } else {
           target.setAttribute('hidden', true)
+          window.jwAtomic.modules[baseEle.getAttribute('id')].details.active = false;
         }
         return;
       }
       target.classList.toggle(this.settings.activeClass)
+
+      window.jwAtomic.modules[baseEle.getAttribute('id')].details.active = target.classList.contains(this.settings.activeClass);
+
     }
   }
 
