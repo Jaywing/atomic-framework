@@ -12,6 +12,8 @@
   
   F R O N T   E N D   S T A R T E R   K I T
 ```
+[Atomic documentation](http://atomic.preview8.jaywing.com/docs/)
+
 Atomic is the front end starter kit for Jaywing (Newbury).
 
 Bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.
