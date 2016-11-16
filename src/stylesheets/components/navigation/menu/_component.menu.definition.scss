@@ -1,13 +1,32 @@
 
-
 // Variables
 // ========================================================================
 
-$menu-margin: $g-spacer 0;
+$menu-link-color: $link-color !default;
+$menu-link-bg: transparent !default;
+$menu-link-border-radius: $g-border-radius !default;
+$menu-link-hover-color: $link-hover-color !default;
+$menu-link-hover-bg: $c-strong-trans-dark !default;
+$menu-link-text-decoration: none !default;
+$menu-link-text-align: center !default;
+$menu-link-trans-speed: $g-trans-link-speed !default;
+$menu-link-active-color: $c-light !default;
+$menu-link-active-bg: $menu-link-color !default;
 
-$menu-item-padding: $g-spacer-xs $g-spacer-sm;
-$menu-item-divider-size: 0;
-$menu-item-divider-bg: transparent;
+$menu-margin: $g-spacer 0 !default;
+$menu-margin-nested: $g-spacer !default;
+
+$menu-item-padding: $g-spacer-sm !default;
+$menu-item-divider-size: 0 !default;
+$menu-item-divider-bg: transparent !default;
+$menu-item-active-font-weight: $g-weight-bold !default;
+
+$menu-link-padding: $g-spacer-sm !default;
+$menu-link-font-weight: $g-weight-normal !default;
+
+$menu-title-padding: $g-spacer-sm !default;
+$menu-title-font-weight: $g-weight-bold !default;
+
 
 // ========================================================================
 // Component: Menu
@@ -15,74 +34,94 @@ $menu-item-divider-bg: transparent;
 
 .Menu {
   @include trim-child-margins;
-  @include clearfix;
+  @include reset-list;
 
+  margin: $menu-margin -($menu-item-padding);
+  width: 100%;
+  max-width: 100%;
   display: flex;
-  margin: 0;
-  list-style: none;
-  padding: 0;
+  flex-wrap: nowrap;
+  align-items: center;
 
-  // Sub-Menu
-  .Menu {
-    margin: 0;
+  input,
+  a,
+  button {
+    margin-bottom: 0;
+  }
 
-    &:not(.Menu--vertical) > .Menu {
-      display: flex;
+  // Alignment modifiers
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--expanded {
+
+    > .Menu-item {
+      flex: 1 1 0%;
+      min-width: 0;
     }
+
   }
 
-}
-
-// Menu-item
-// ========================================================================
-.Menu:not(.Menu--vertical) {
-  > .Menu-item {
-    display: flex;
-    align-items: center;
+  &--attached {
+    margin-bottom: 0;
   }
+
 }
 
 .Menu-item {
-  position: relative;
-  vertical-align: middle;
-  line-height: 1;
-  text-decoration: none;
-  tap-highlight-color: transparent;
   flex: 0 0 auto;
-  user-select: none;
   padding: $menu-item-padding;
 
-  // Border / divider
-  &:before {
-    background: $menu-item-divider-bg;
-    width: $menu-item-divider-size;
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    height: 100%;
+  &.Menu-link {
+    margin: $menu-item-padding;
   }
 
-  // Text content
-  &--text,
-  > p {
-    @include trim-child-margins;
-
-    &:only-child {
-      user-select: text;
-      line-height: $base-line-height;
-    }
-
+  &--right {
+    // scss-lint:disable ImportantRule
+    display: flex;
+    margin-left: auto !important;
   }
 
-  // Button
-  .Button {
-    margin: 0;
+  &--left {
+    // scss-lint:disable ImportantRule
+    display: flex;
+    margin-right: auto !important;
+  }
+}
+
+.Menu-link {
+  display: block;
+  padding: $menu-link-padding;
+  text-decoration: $menu-link-text-decoration;
+  text-align: $menu-link-text-align;
+  border-radius: $menu-link-border-radius;
+
+  &:not(.Text--disabled) {
+    @include color-swap-on-hover(
+            $menu-link-color $menu-link-bg,
+            $menu-link-hover-color $menu-link-hover-bg,
+            $menu-link-trans-speed
+    );
   }
 
-  // Header
-  &--header {
-    margin: 0;
-  }
 
+  .is-active &,
+  &.is-active {
+    @include color-swap-on-hover(
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-trans-speed
+    );
+  }
+}
+
+.Menu-title {
+  display: block;
+  padding: $menu-title-padding;
+  font-weight: $menu-title-font-weight;
 }

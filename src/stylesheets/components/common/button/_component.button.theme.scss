@@ -10,37 +10,58 @@
 /// @created  20/06/2016
 ////
 
-$button-font-family: $g-font-sans;
-$button-font-weight: $g-weight-normal;
-$button-radius:      $g-border-radius;
+$button-font-family: $g-font-sans !default;
+$button-font-weight: $g-weight-normal !default;
+$button-radius:      $g-border-radius !default;
 
-$button-trans-speed: $g-trans-link-speed;
+$button-trans-speed: $g-trans-link-speed !default;
 
-$button-bg-color:         $c-light-15;
-$button-color:            $c-dark-30;
+$button-bg-color:         $c-light-15 !default;
+$button-color:            $c-dark-30 !default;
 
-$button-bg-color-hover:   lighten($c-light-30, 5%);
-$button-color-hover:      $c-dark-15;
+$button-bg-color-hover:   lighten($c-light-30, 5%) !default;
+$button-color-hover:      $c-dark-15 !default;
 
-$button-bg-color-active:  darken($button-bg-color-hover, 5%);
-$button-color-active:     $c-dark;
+$button-bg-color-active:  darken($button-bg-color-hover, 20%) !default;
+$button-color-active:     $c-dark !default;
+
+$button-disabled-color: $c-disabled-dark !default;
 
 
 .Button {
-  @include color-swap-on-hover(
-          $button-color $button-bg-color,
-          $button-color-hover $button-bg-color-hover,
-          $button-trans-speed
-  );
   text-align: center;
   text-decoration: none;
   font-family: $button-font-family;
   font-weight: $button-font-weight;
   border-radius: $button-radius;
 
-  &:active {
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+      $button-color $button-bg-color,
+      $button-color-hover $button-bg-color-hover,
+      $button-trans-speed
+    );
+  }
+
+  &:active,
+  &.is-active {
     background-color: $button-bg-color-active;
     color: $button-color-active;
+
+    &:hover,
+    &:focus {
+      background-color: $button-bg-color-active;
+      color: $button-color-active;
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $button-disabled-color;
+  }
+
+  svg {
+    fill: $button-color;
   }
 
 }

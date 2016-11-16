@@ -1,0 +1,82 @@
+$panel-box-bg: $c-light !default;
+$panel-box-border: 1px solid $c-border !default;
+$panel-box-badge-pos: $g-spacer-sm !default;
+$panel-box-padding: $g-spacer !default;
+$panel-box-border-radius: $g-border-radius !default;
+
+
+.Panel--box {
+  background: $panel-box-bg;
+  padding: $panel-box-padding;
+  border: $panel-box-border;
+  border-radius: $panel-box-border-radius;
+
+  .Panel-badge {
+    top: $panel-box-badge-pos;
+    right: $panel-box-badge-pos;
+  }
+
+  .Panel-teaser {
+    position: relative;
+    top: 1px;
+    margin-top: -($panel-box-padding);
+    margin-left: -($panel-box-padding);
+    margin-right: -($panel-box-padding);
+    border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
+    overflow: hidden;
+
+    img,
+    object,
+    video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &.Panel--attached {
+    border-top: 0;
+    border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
+  }
+
+  &.Panel--stacked {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      border-top: $panel-box-border;
+      background: rgba(0, 0, 0, .03);
+      width: 100%;
+      height: 6px;
+      visibility: visible;
+    }
+  }
+
+  &.Panel--piled {
+    &::after,
+    &::before {
+      background: $panel-box-bg;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      border: $panel-box-border;
+    }
+
+    &::after {
+      transform: rotate(.75deg);
+      top: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      transform: rotate(-.75deg);
+      top: 0;
+      z-index: -2;
+    }
+  }
+
+}

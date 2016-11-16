@@ -17,7 +17,7 @@
 /// SASS-MQ settings (media queries)
 /// @link https://github.com/sass-mq/sass-mq
 
-$mq-base-font-size: $g-base-font-size;
+$mq-base-font-size: $g-base-font-size !default;
 
 $mq-breakpoints: (
   xxs:  320px,
@@ -27,6 +27,6 @@ $mq-breakpoints: (
   lg:   960px,
   xl:   1180px,
   xxl:  1400px
-);
+) !default;
 // set it back to our variable naming convention
-$g-mq-breakpoints: $mq-breakpoints;
+$g-mq-breakpoints: $mq-breakpoints !default;

@@ -1,0 +1,62 @@
+// ----------------------------------------------------------------------
+
+// Components: Button Primary Theme
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   James Taylor
+/// @group    jw
+/// @created  21/06/2016
+////
+
+$button-primary-bg-color:         $c-primary !default;
+$button-primary-color:            $c-light !default;
+
+$button-primary-bg-color-hover:   darken($button-primary-bg-color, 7.5%) !default;
+$button-primary-color-hover:      $button-primary-color !default;
+
+$button-primary-bg-color-active:  darken($button-primary-bg-color-hover, 7.5%) !default;
+$button-primary-color-active:     $button-primary-color !default;
+
+$button-primary-trans-speed:      $button-trans-speed !default;
+
+
+.Button--primary {
+
+  border-color: $button-primary-bg-color;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+            $button-primary-color $button-primary-bg-color,
+            $button-primary-color-hover $button-primary-bg-color-hover,
+            $button-primary-trans-speed
+    );
+
+    &:active {
+      background-color: $button-primary-bg-color-active;
+      color: $button-primary-color-active;
+    }
+  }
+
+  &.is-active {
+    background-color: $button-primary-bg-color-active;
+    color: $button-primary-color-active;
+
+    &:hover,
+    &:focus {
+      background-color: $button-primary-bg-color-active;
+      color: $button-primary-color-active;
+    }
+  }
+
+  &[disabled] {
+    background: lighten($button-primary-bg-color, 15%);
+    color: rgba($button-primary-color, .65);
+  }
+
+  svg {
+    fill: $button-primary-color;
+  }
+
+}

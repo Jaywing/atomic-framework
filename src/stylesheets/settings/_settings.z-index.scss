@@ -13,5 +13,16 @@
 /// Manage all the z-indexes in one place.
 /// List all here in decending order to easily see which is on top
 
-$g-z-base:      0;
-$g-z-bg:        -1;
+$g-z-base:  0 !default;
+$g-z-bg:    -1 !default;
+
+$g-z-1:     10 !default;
+$g-z-2:     20 !default;
+$g-z-3:     30 !default;
+$g-z-4:     40 !default;
+$g-z-5:     50 !default;
+$g-z-6:     60 !default;
+$g-z-7:     70 !default;
+$g-z-8:     80 !default;
+$g-z-9:     90 !default;
+$g-z-10:    100 !default;

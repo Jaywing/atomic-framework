@@ -11,10 +11,10 @@
 ////
 
 /// Styles for all unclassed lists
-$list-margin-bottom:      $g-spacer;
-$list-margin-side:        $g-spacer-lg;
-$list-nested-margin-side: $g-spacer-lg;
-$dt-font-weight: $g-weight-bold;
+$list-margin-bottom:      $g-spacer !default;
+$list-margin-side:        $g-spacer-xl !default;
+$list-nested-margin-side: $g-spacer-lg !default;
+$dt-font-weight: $g-weight-bold !default;
 
 
 ul,
@@ -38,5 +38,9 @@ dl {
 
   dt {
     font-weight: $dt-font-weight;
+  }
+
+  dd {
+    margin: 0;
   }
 }

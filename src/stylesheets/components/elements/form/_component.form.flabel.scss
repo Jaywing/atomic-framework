@@ -1,0 +1,28 @@
+$form-flabel-bg: white !default;
+$form-flabel-top: 50% !default;
+$form-flabel-left: $g-spacer-sm !default;
+$form-flabel-active-top: 0 !default;
+$form-flabel-transition: all .1s linear !default;
+
+.Form-flabel {
+  position: relative;
+
+  .Form-label {
+    @include minion;
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: $form-flabel-top;
+    left: $form-flabel-left;
+    transition: $form-flabel-transition;
+    background: $form-flabel-bg;
+  }
+
+  .Form-input {
+
+    &:focus ~ label {
+      top: $form-flabel-active-top;
+    }
+
+  }
+
+}

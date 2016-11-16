@@ -1,0 +1,24 @@
+$skiplink-trans: all $g-trans-link-speed ease !default;
+$skiplink-active-pos: $g-spacer-sm !default;
+
+.SkipLink {
+  transition: $skiplink-trans;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+
+  &:focus,
+  &:hover,
+  &:active {
+    left: $skiplink-active-pos;
+    top: $skiplink-active-pos;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+

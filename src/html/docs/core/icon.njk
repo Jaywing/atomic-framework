@@ -1,0 +1,117 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% from '_macros/helpers.njk' import icon %}
+
+{% set pageid = 'icon' %}
+{% set sectionid = 'core' %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Icon | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Icon</h1>
+<p class="Text--lead">Place vector icons anywhere using our SVG sprite generator.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+
+<p>Drop icon svgs in the 'icon' folder in 'src' and they are automatically added to the sprite, it's location is indexed with a reference that matches its filename.</p>
+
+<p>You need to add the helper macro to the top of your HTML.</p>
+
+<pre><code class="html">&#123;% from '_macros/helpers.njk' import icon %&#125;</code></pre>
+
+<p>You can then use 'icon' macro (located in the 'src/html/macros/helpers.njk' file.</p>
+
+<div class="docs-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;) &#125;&#125;</code></pre>
+</div>
+
+<div class="docs-example">
+  <div class="o-Grid o-Grid--gutters Text--center">
+  {% for i in icons %}
+
+    <div class="o-Grid-cell o-Size--1of10 Demo">
+      {{ icon(i.id) }}
+      <div><small>{{ i.id }}</small></div>
+    </div>
+
+  {% endfor %}
+  </div>
+</div>
+
+<h3>Size modifiers</h3>
+
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters Text--center">
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('eye', '0 0 1 1', 'Icon--sm') }}
+      <div><small>.Icon--sm</small></div>
+    </div>
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('eye') }}
+      <div><small>.Icon</small></div>
+    </div>
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('eye', '0 0 1 1', 'Icon--lg') }}
+      <div><small>.Icon--lg</small></div>
+    </div>
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('eye', '0 0 1 1', 'Icon--xl') }}
+      <div><small>.Icon--xl</small></div>
+    </div>
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('eye', '0 0 1 1', 'Icon--xxl') }}
+      <div><small>.Icon--xxl</small></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--sm&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;) &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--lg&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--xl&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--xxl&#39; &#125;&#125;</code></pre>
+</div>
+
+<h3>Spin modifier</h3>
+
+<div class="docs-example">
+
+  <div class="o-Grid o-Grid--gutters Text--center">
+
+    <div class="o-Grid-cell o-Size--1of5 Demo">
+      {{ icon('spinner-3', '0 0 1 1', 'Icon--lg Icon--spin') }}
+      <div><small>.Icon--spin</small></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin Icon--lg&#39; &#125;&#125;</code></pre>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}

@@ -11,23 +11,23 @@
 ////
 
 
-$g-base-font-size:   16px;
-$g-base-line-height: 24px;
+$g-base-font-size:   16px !default;
+$g-base-line-height: 24px !default;
 
-$g-site-max-width: 1200px;
+$g-site-max-width: 1200px !default;
 
-$g-scrollbar-width: 17px;
-$g-min-touch-size:  44px;
+$g-scrollbar-width: 17px !default;
+$g-min-touch-size:  44px !default;
 
-$g-text-direction: ltr;
+$g-text-direction: ltr !default;
 
-$g-body-antialiased: true;
-$g-body-no-horizontal-scroll: true;
+$g-body-antialiased: true !default;
+$g-body-no-horizontal-scroll: true !default;
 
 // CSS Debugging - coloured borders around elements
-$css-debug-outline: false;
-$css-debug-depth:   false;
+$css-debug-outline: false !default;
+$css-debug-depth:   false !default;
 
 // GEL settings (typography) - https://github.com/bbc/gel-typography
-$gel-namespace:      '';                // removes the 'gel-' prefix
-$gel-base-font-size: $g-base-font-size; // set the gel base font-size to equal ours
+$gel-namespace:      '' !default;                // removes the 'gel-' prefix
+$gel-base-font-size: $g-base-font-size !default; // set the gel base font-size to equal ours

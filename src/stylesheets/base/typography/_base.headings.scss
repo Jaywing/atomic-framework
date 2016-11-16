@@ -11,9 +11,10 @@
 ////
 
 /// Base styles for headings h1 - h6
-$heading-font:        $g-font-sans;
-$heading-font-weight: normal;
-$heading-color:       inherit;
+$heading-font:        $g-font-sans !default;
+$heading-font-weight: normal !default;
+$heading-color:       inherit !default;
+$heading-small-size:  75% !default;
 
 
 h1,
@@ -26,6 +27,10 @@ h6 {
   font-family: $heading-font;
   font-weight: normal;
   color: $heading-color;
+
+  small {
+    font-size: $heading-small-size;
+  }
 }
 
 h1 {
@@ -49,7 +54,7 @@ h5 {
 }
 
 h6 {
-  @include brevier-bold;
+  @include brevier;
   text-transform: uppercase;
   margin: 0 0 $g-spacer-sm;
 

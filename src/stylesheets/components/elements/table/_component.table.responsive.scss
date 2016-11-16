@@ -1,0 +1,60 @@
+$table-data-label-weight: $g-weight-bold !default;
+
+.Table--resp {
+
+  thead {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  tr {
+    display: block;
+  }
+
+  td {
+    display: block;
+    text-align: right;
+
+    &::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: $table-data-label-weight;
+    }
+
+  }
+
+}
+
+@include md {
+
+  .Table--resp {
+
+    thead {
+      height: auto;
+      margin: 0;
+      overflow: auto;
+      position: static;
+      width: auto;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    td {
+      display: table-cell;
+      text-align: left;
+
+      &::before {
+        display: none;
+      }
+
+    }
+
+  }
+
+}

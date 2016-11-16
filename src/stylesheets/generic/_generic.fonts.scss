@@ -15,4 +15,5 @@
 ///
 /// @example scss
 ///   @include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
-
+///
+/// Note: the best way to include fonts is asynchronously with webfont-loader.

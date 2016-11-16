@@ -79,7 +79,7 @@
     @include make-col;
 
     .demo & {
-      &:after {
+      &::after {
         content: 'col';
       }
     }
@@ -93,7 +93,7 @@
             @include make-col-span($i, $columns);
 
             .demo & {
-              &:after {
+              &::after {
                 content: 'col col--#{$i}';
               }
             }
@@ -102,7 +102,7 @@
           .col-#{$breakpoint}--#{$i} {
             @include make-col-span($i, $columns);
             .demo & {
-              &:after {
+              &::after {
                 content: 'col col-#{$breakpoint}--#{$i}';
               }
             }

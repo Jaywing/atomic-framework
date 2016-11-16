@@ -1,0 +1,66 @@
+$tooltip-bg: $c-dark-15 !default;
+$tooltip-color: $c-light !default;
+$tooltop-z-index: $g-z-5;
+$tooltip-pointer-size: 10px !default;
+$tooltip-pointer-bg: $tooltip-bg !default;
+$tooltip-padding: $g-spacer-sm !default;
+$tooltip-max-width: 10rem !default;
+$tooltip-bottom: 2rem !default;
+$tooltip-popin-ani-time: .2s !default;
+$tooltip-popin-ani-type: linear !default;
+
+
+.Tooltip {
+  position: relative;
+  display: inline-block;
+
+  &-item {
+    display: flex;
+    box-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: $tooltip-bottom;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: $tooltop-z-index;
+  }
+
+  &-itemInner {
+    flex: none;
+    max-width: $tooltip-max-width;
+    background: $tooltip-bg;
+    color: $tooltip-color;
+    padding: $tooltip-padding;
+
+    &:after {
+      transform: translateX(-50%);
+      content: ' ';
+      position: absolute;
+      bottom: -$tooltip-pointer-size;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-top: $tooltip-pointer-size solid $tooltip-pointer-bg;
+      border-right: $tooltip-pointer-size solid transparent;
+      border-left: $tooltip-pointer-size solid transparent;
+    }
+  }
+
+  &:hover,
+  &:focus {
+
+    .Tooltip-item {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .Tooltip-itemInner {
+      animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
+    }
+
+  }
+
+}

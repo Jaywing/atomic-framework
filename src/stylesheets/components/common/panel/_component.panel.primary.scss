@@ -1,0 +1,16 @@
+$panel-box-primary-border-color: $c-primary-dark !default;
+$panel-primary-color: $c-primary-dark !default;
+$panel-box-primary-bg: $c-primary-pale !default;
+
+.Panel--primary {
+  color: $panel-primary-color;
+
+  .Panel-title {
+    color: $panel-primary-color;
+  }
+
+  &.Panel--box {
+    background: $panel-box-primary-bg;
+    border-color: $panel-box-primary-border-color;
+  }
+}

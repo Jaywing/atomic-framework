@@ -1,0 +1,175 @@
+$button-swap-ani-speed: $g-trans-link-speed !default;
+$button-swap-ani-easing: ease !default;
+$button-swap-horizontal-padding: $g-spacer !default;
+
+// scss-lint:disable NestingDepth
+.Button--swap {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  .Button-content:not(&-content--hidden) {
+    position: relative;
+    will-change: transform, opacity;
+  }
+
+  .Button-content--hidden {
+    position: absolute;
+    width: 100%;
+    padding-left: $button-swap-horizontal-padding;
+    padding-right: $button-swap-horizontal-padding;
+  }
+
+  // Horizontal
+  .Button-content {
+    &:not(.Button-content--hidden) {
+      left: auto;
+      right: 0;
+    }
+
+    &--hidden {
+      top: 50%;
+      left: auto;
+      right: -100%;
+      transform: translateY(-50%);
+    }
+  }
+
+  // Animated
+  &.Button--ani {
+    .Button-content {
+      transition: right $button-swap-ani-speed $button-swap-ani-easing 0s;
+    }
+  }
+
+  &:not(.Button--swapToggle) {
+    &:hover,
+    &:focus {
+
+      .Button-content:not(.Button-content--hidden) {
+        left: auto;
+        right: 200%;
+      }
+
+      .Button-content--hidden {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  &.Button--swapToggle {
+    &.is-active {
+      .Button-content:not(.Button-content--hidden) {
+        left: auto;
+        right: 200%;
+      }
+
+      .Button-content--hidden {
+        left: auto;
+        right: 0;
+        top: 50%;
+      }
+    }
+  }
+
+  &.Button--vertical {
+
+    // Animated
+    &.Button--ani .Button-content {
+      transition: top $button-swap-ani-speed $button-swap-ani-easing,
+      transform $button-swap-ani-speed $button-swap-ani-easing;
+    }
+
+    .Button-content:not(.Button-content--hidden) {
+      transform: translateY(0%);
+      right: auto;
+      text-align: center;
+    }
+
+    .Button-content--hidden {
+      top: -50%;
+      left: 0;
+      right: auto;
+    }
+
+    &:not(.Button--swapToggle) {
+      &.Button--vertical:hover,
+      &.Button--vertical:focus {
+        .Button-content:not(.Button-content--hidden) {
+          transform: translateY(200%);
+          right: auto;
+        }
+
+        .Button-content--hidden {
+          top: 50%;
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+
+
+
+  &.Button--aniFade {
+    .Button-content {
+      transition: opacity $button-swap-ani-speed $button-swap-ani-easing,
+      transform $button-swap-ani-speed $button-swap-ani-easing;
+    }
+
+    .Button-content:not(.Button-content--hidden) {
+      left: auto;
+      right: auto;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .Button-content--hidden {
+      opacity: 0;
+      left: 0;
+      right: auto;
+      transform: scale(0);
+    }
+
+    &:not(.Button--swapToggle) {
+      &:hover,
+      &:focus {
+        .Button-content:not(.Button-content--hidden) {
+          left: auto;
+          right: auto;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        .Button-content--hidden {
+          left: 0;
+          right: auto;
+          opacity: 1;
+          transform: scale(1) translateY(-50%);
+        }
+      }
+    }
+
+    &.Button--swapToggle {
+      &.is-active {
+        .Button-content:not(.Button-content--hidden) {
+          left: auto;
+          right: auto;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        .Button-content--hidden {
+          left: 0;
+          top: 50%;
+          right: auto;
+          opacity: 1;
+          transform: scale(1) translateY(-50%);
+        }
+      }
+    }
+
+  }
+
+}

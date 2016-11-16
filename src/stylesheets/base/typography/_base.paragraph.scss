@@ -10,9 +10,9 @@
 /// @create   27/06/2016
 ////
 
-// Base styles for paragraph
+// Base styles for text
 
-$para-margin: $g-spacer 0;
+$para-margin: $g-spacer 0 !default;
 
 p {
   @include trim-child-margins;

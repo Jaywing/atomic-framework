@@ -1,0 +1,9 @@
+$dd-bullet-display: list-item !default;
+$dd-bullet-list-style: disc !default;
+
+.Definition--bullets {
+  dd {
+    display: $dd-bullet-display;
+    list-style: $dd-bullet-list-style;
+  }
+}

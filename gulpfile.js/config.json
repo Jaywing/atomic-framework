@@ -16,30 +16,19 @@
       "dest": "./"
     },
 
-    "eslint": {
-      "src": "javascript",
-      "extensions": ["js"]
-    },
-
     "js": {
       "src": "javascripts",
-      "dest": "javascripts",
+      "dest": "/javascripts",
+      "destProd": "javascripts",
       "extractSharedJs": false,
       "entries": {
-        "app": ["./app.js"],
-        "page": ["./page.js"]
+        "app": ["babel-polyfill", "./app.js"]
       },
       "extensions": ["js", "json"],
       "babel": {
         "presets": ["es2015", "stage-1"],
-        "plugins": []
+        "plugins": ["transform-object-assign"]
       }
-    },
-
-    "scsslint": {
-      "src": "stylesheets",
-      "config": "lint.yml",
-      "extensions": ["sass", "scss"]
     },
 
     "css": {
@@ -60,12 +49,12 @@
     "html": {
       "src": "html",
       "dest": "./",
-      "dataFile": "data/global.json",
+      "dataFile": "_data/global.json",
       "htmlmin": {
         "collapseWhitespace": true
       },
-      "extensions": ["html", "json"],
-      "excludeFolders": ["layouts", "shared", "macros", "data"]
+      "extensions": ["html", "njk", "json"],
+      "excludeFolders": ["_layouts", "_shared", "_macros", "_data"]
     },
 
     "images": {
@@ -80,13 +69,6 @@
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
-    "iconFont": {
-      "src": "icons",
-      "dest": "fonts",
-      "sassDest": "generated",
-      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
-    },
-
     "svgSprite": {
       "src": "icons",
       "dest": "images",
@@ -94,7 +76,7 @@
     },
 
     "production" : {
-      "rev": true
+      "rev": false
     }
   }
 }

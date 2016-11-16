@@ -12,7 +12,7 @@ var paths = {
 var esLintTask = function () {
   return gulp.src([
     paths.src,
-    '!node_modules/**', // this folder is ignored
+    '!node_modules/**' // this folder is ignored
   ])
     .pipe(eslint())
     .pipe(eslint.format('checkstyle'))

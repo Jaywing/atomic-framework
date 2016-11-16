@@ -1,0 +1,59 @@
+$menu-border-width: 1px !default;
+$menu-tab-border: $menu-border-width solid $c-border !default;
+$menu-tab-link-border: $menu-border-width solid transparent !default;
+$menu-tab-link-border-active: $menu-tab-border !default;
+$menu-tab-link-active-bg: $c-light !default;
+$menu-tab-link-active-color: $link-hover-color !default;
+$menu-tab-link-border-radius: $g-border-radius !default;
+$menu-tab-link-padding-x: $g-spacer !default;
+$menu-tab-link-padding-y: $g-spacer-sm !default;
+
+.Menu--tabular {
+  border-bottom: $menu-tab-border;
+
+  .Menu-item {
+    padding: 0;
+    margin: 0 $g-spacer-xxs;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .Menu-link {
+    background: transparent;
+    border: $menu-tab-link-border;
+    border-bottom: 0;
+    border-radius: $menu-tab-link-border-radius $menu-tab-link-border-radius 0 0;
+    padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
+  }
+
+  .is-active .Menu-link,
+  .Menu-link.is-active {
+    background: $menu-tab-link-active-bg;
+    color: $menu-tab-link-active-color;
+    border: $menu-tab-link-border-active;
+    border-bottom: 0;
+    margin-bottom: -($menu-border-width + 1);
+    padding-bottom: ($menu-tab-link-padding-y);
+  }
+
+  &.Menu--vertical {
+    border-bottom: 0;
+    border-right: $menu-tab-link-border-active;
+
+    .is-active .Menu-link,
+    .Menu-link.is-active {
+      position: relative;
+      left: -($menu-border-width);
+      border-radius: $menu-tab-link-border-radius 0 0 $menu-tab-link-border-radius;
+      margin-bottom: 0;
+      border: $menu-tab-link-border-active;
+      border-right: 0;
+    }
+  }
+}

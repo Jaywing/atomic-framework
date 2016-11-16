@@ -13,8 +13,9 @@
 // Imports all the settings files
 
 @import 'settings.global';
-@import 'settings.media-queries'; // it is important that this file is second as other files below rely on its variables
 @import 'settings.colors';
+@import 'settings.media-queries'; // it is important that this file is second as other files below rely on its variables
+@import 'settings.animations';
 @import 'settings.accents';
 @import 'settings.fonts';
 @import 'settings.sizes';

@@ -1,0 +1,52 @@
+code {
+  color: $c-danger;
+}
+
+.docs-code {
+  @extend %docs-block;
+
+  border: 1px solid $c-light-15;
+  margin-top: $g-spacer-xl;
+
+  > pre {
+    max-height: 350px;
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: 'Code';
+  }
+
+  &--cmd {
+    &::before {
+      content: 'Command line';
+    }
+  }
+
+  &--js {
+    &::before {
+      content: 'Javascript';
+    }
+  }
+
+  &--scss {
+    &::before {
+      content: 'Scss';
+    }
+  }
+
+  &--html {
+    &::before {
+      content: 'HTML';
+    }
+  }
+
+  &--files {
+    &::before {
+      content: 'Files';
+    }
+  }
+
+}

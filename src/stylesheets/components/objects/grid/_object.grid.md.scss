@@ -54,89 +54,62 @@
     &--1of2 {
 
       > .o-Grid-cell {
-        flex: 0 0 50%;
+        flex: auto;
+        width: 50%;
+        max-width: 50%;
       }
     }
 
     &--1of3 {
 
       > .o-Grid-cell {
-        flex: 0 0 33.3333%;
+        flex: auto;
+        width: 33.3333%;
+        max-width: 33.3333%;
       }
     }
 
     &--1of4 {
 
       > .o-Grid-cell {
-        flex: 0 0 25%;
+        flex: auto;
+        width: 25%;
+        max-width: 25%;
       }
     }
 
     &--1of5 {
 
       > .o-Grid-cell {
-        flex: 0 0 20%;
-      }
-    }
-
-    &--2of5 {
-
-      > .o-Grid-cell {
-        flex: 0 0 40%;
-      }
-    }
-
-    &--3of5 {
-
-      > .o-Grid-cell {
-        flex: 0 0 60%;
-      }
-    }
-
-    &--4of5 {
-
-      > .o-Grid-cell {
-        flex: 0 0 80%;
-      }
-    }
-
-    &--1of6 {
-
-      > .o-Grid-cell {
-        flex: 0 0 16.666%;
-      }
-    }
-
-    &--5of6 {
-
-      > .o-Grid-cell {
-        flex: 0 0 83.333%;
+        flex: auto;
+        width: 20%;
+        max-width: 20%;
       }
     }
 
     // Gutters
     // ========================================================================
     &--gutters {
-      margin: 0 -($grid-gutter/2);
+      margin: 0 - ($grid-gutter / 2);
 
       > .o-Grid-cell {
-        padding: $grid-gutter/2;
+        padding: $grid-gutter / 2;
       }
     }
 
     &--guttersLg {
-      margin: 0 -($grid-gutter-lg/2);
+      margin: 0 - ($grid-gutter-lg / 2);
 
       > .o-Grid-cell {
-        padding: $grid-gutter-lg/2;
+        padding: $grid-gutter-lg / 2;
       }
     }
 
     &--guttersXl {
-      margin: 0 -($grid-gutter-xl/2);
+      margin: 0 - ($grid-gutter-xl / 2);
 
       > .o-Grid-cell {
-        padding: $grid-gutter-xl/2;
+        padding: $grid-gutter-xl / 2;
       }
     }
 

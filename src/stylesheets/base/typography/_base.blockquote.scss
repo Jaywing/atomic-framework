@@ -13,7 +13,7 @@
 /// Unclassed blockquotes and cites
 
 
-$bq-margin: $g-spacing 0;
+$bq-margin: $g-spacing 0 !default;
 
 blockquote {
 

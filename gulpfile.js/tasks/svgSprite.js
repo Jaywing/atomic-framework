@@ -6,6 +6,7 @@ var gulp        = require('gulp')
 var imagemin    = require('gulp-imagemin')
 var svgstore    = require('gulp-svgstore')
 var path        = require('path')
+var pngquant    = require('imagemin-pngquant')
 
 var svgSpriteTask = function() {
 
@@ -15,7 +16,10 @@ var svgSpriteTask = function() {
   }
 
   return gulp.src(settings.src)
-    //.pipe(imagemin())
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    })) // Optimize
     .pipe(svgstore())
     .pipe(gulp.dest(settings.dest))
     .pipe(browserSync.stream())

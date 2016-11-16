@@ -1,0 +1,37 @@
+$panel-margin: $g-spacer 0 !default;
+$panels-margin: $g-spacer 0 !default;
+$panel-badge-pos: 0 !default;
+$panel-title-margin: 0 $g-spacer-xl 0 0 !default;
+
+
+.Panel {
+  @include trim-child-margins;
+
+  position: relative;
+  display: block;
+  margin: $panel-margin;
+  min-height: 100%;
+
+  &-title {
+    @include pica;
+    margin: $panel-title-margin;
+
+    .Icon {
+      margin: -3px 0 0 -5px;
+    }
+  }
+
+  &-badge {
+    position: absolute;
+    top: $panel-badge-pos;
+    right: $panel-badge-pos;
+  }
+
+  &--attached {
+    margin-top: 0;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

@@ -12,12 +12,32 @@
   
   F R O N T   E N D   S T A R T E R   K I T
 ```
+[Atomic documentation](http://atomic.preview8.jaywing.com/docs/)
+
 Atomic is the front end starter kit for Jaywing (Newbury).
 
 Bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.
 
 The technical architecture is based on [Gulp Starter](https://github.com/vigetlabs/gulp-starter) by [Viget](https://www.viget.com).
 Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure.
+
+## Requirements
+
+* Node.js (developed using v5.11.1). Install NVM to manage node versions
+* Npm (developed using v2.14.12)
+* Gulp.js (developed using v3.9.1)
+* Sass 3.4.20+ (developed using v3.4.22)
+* Ruby 2.0.0+ (developed using v2.0.0)
+* scss_lint (Ruby gem)
+
+## Installation
+
+If you haven't already, install the scss-lint ruby gem.
+
+```bash
+gem install scss_lint
+```
+then
 
 ```bash
 git clone https://github.com/jaywing/atomic.git MyApp
@@ -29,7 +49,7 @@ npm start
 Features | Tools Used
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps, [scss-lint](https://www.npmjs.com/package/gulp-scss-lint), [uncss](https://www.npmjs.com/package/gulp-uncss)
-**JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/)
+**JavaScript** | ES6 with [Babel](http://babeljs.io/) and [Webpack](http://webpack.github.io/), [eslint](https://www.npmjs.com/package/gulp-eslint)
 **HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
 **Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)
@@ -43,6 +63,11 @@ Features | Tools Used
 Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions. 
 
 This has been tested on Node `0.12.x` - `5.11.1`.
+
+If you haven't already, install (ruby 2.0 if you haven't already) the scss_lint ruby gem.
+```bash
+gem install scss_lint
+```
 
 #### Install Dependencies
 ```bash

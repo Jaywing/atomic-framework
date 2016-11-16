@@ -1,0 +1,42 @@
+$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
+$menu-vertical-link-text-align: left !default;
+
+
+.Menu--vertical {
+  flex-wrap: wrap;
+
+  .Menu-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .Menu-link {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: $menu-vertical-link-padding;
+    text-align: $menu-vertical-link-text-align;
+  }
+
+  .Menu-title {
+    padding: $menu-vertical-title-padding;
+    margin: $menu-vertical-title-margin;
+
+    .Menu-item:first-child & {
+      margin-top: 0;
+    }
+  }
+
+  // Nested
+  .Menu {
+    margin-left: $menu-margin-nested;
+    margin-top: 0;
+
+    &--flush {
+      margin-left: 0;
+    }
+  }
+
+}

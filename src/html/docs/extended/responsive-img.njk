@@ -1,0 +1,109 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'responsive-img' %}
+{% set sectionid = 'extended' %}
+
+{% extends '_layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Responsive images | Atomic: Components{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Responsive images (lazy loaded)</h1>
+<p class="Text--lead">This module uses <a href="http://callmecavs.com/layzr.js/">Layzr.js</a>, a module for lazy loading responsive images.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+<p>You can lazy load images and make them responsive by using <code>data-module="ResImg"</code>.</p>
+
+<div class="docs-example">
+
+  <div data-module="ResImg">
+    <img data-resimg-normal="https://placehold.it/320x180&text=320x180(16:9)"
+         data-resimg-retina="https://placehold.it/320x180&text=320x180(16:9)-Retina"
+         data-resimg-srcset="https://placehold.it/320x180&text=320x180(16:9) 320w,
+                             https://placehold.it/640x360&text=640x360(16:9) 640w,
+                             https://placehold.it/768x432&text=768x432(16:9) 768w,
+                             https://placehold.it/960x540&text=960x540(16:9) 960w,
+                             https://placehold.it/1024x576&text=1024x576(16:9) 1024w"
+         alt="Lazy loaded, responsive image">
+  </div>
+
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre class="scrollXauto"><code class="html">&lt;div data-module=&quot;ResImg&quot;&gt;
+  &lt;img data-resimg-normal=&quot;/images/placeholder/img-320x200.png&quot;
+       data-resimg-retina=&quot;/images/placeholder/img-320x200@x2.png&quot;
+       data-resimg-srcset=&quot;/images/placeholder/img-640x400.png 320w,
+                           /images/placeholder/img-768x480.png 640w,
+                           /images/placeholder/img-960x600.png 768w,
+                           /images/placeholder/img-1024x640.png 960w&quot;
+       alt=&quot;Lazy loaded, responsive image&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<p>You use the data attributes in the <code>img</code> tag to define which images to load at which viewport size.</p>
+<dl class="Definition Definition--horizontal">
+  <dt><code>data-normal</code></dt>
+  <dd><strong class="Badge Badge--danger">Required</strong> the normal resolution source</dd>
+  <dt><code>data-retina</code></dt>
+  <dd><strong class="Badge">Optional</strong> the retina/high resolution source</dd>
+  <dt><code>data-srcset</code></dt>
+  <dd><strong class="Badge">Optional</strong> the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">source set</a> for the responsive images</dd>
+</dl>
+
+<h3>Using the Cover object</h3>
+
+<p>We can use the <a href="/docs/core/cover.html">cover component</a> to maintain the aspect ratio of the image before the image has loaded. This stops the page jumping around as images are loaded.</p>
+<p>We can also use the loading icon to display a loading icon as the image loads.</p>
+
+<div class="docs-example">
+
+  <div data-module="ResImg">
+    <div class="o-Cover o-Cover--videoWide Demo">
+
+      {{ icon('spinner', '0 0 1 1', 'Icon--spin Icon--xl o-Cover-loading') }}
+
+      <div id="cover-object" class="o-Cover-object">
+        <img data-resimg-normal="https://placehold.it/320x180&text=320x180(16:9)"
+             data-resimg-retina="https://placehold.it/320x180&text=320x180(16:9)-Retina"
+             data-resimg-srcset="https://placehold.it/320x180&text=320x180(16:9) 320w,
+                          https://placehold.it/640x360&text=640x360(16:9) 640w,
+                          https://placehold.it/768x432&text=768x432(16:9) 768w,
+                          https://placehold.it/960x540&text=960x540(16:9) 960w,
+                          https://placehold.it/1024x576&text=1024x576(16:9) 1024w"
+             alt="Lazy loaded, responsive image">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code>&lt;div class=&quot;o-Cover o-Cover--ratio21x9&quot;&gt;
+  &#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin Icon--xl o-Cover-loading&#39;) &#125;&#125;
+  &lt;div id=&quot;cover-object&quot; class=&quot;o-Cover-object&quot;&gt;
+    &lt;img data-resimg-normal=&quot;https://placehold.it/320x180&amp;text=320x180(16:9)&quot;
+         data-resimg-retina=&quot;https://placehold.it/320x180&amp;text=320x180(16:9)-Retina&quot;
+         data-resimg-srcset=&quot;https://placehold.it/320x180&amp;text=320x180(16:9) 320w,
+                      ...&quot;
+         alt=&quot;Lazy loaded, responsive image&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<p><button id="btnHideImg" data-module="Toggle" data-options='{"hide":true,"target":["#cover-object"]}'>Toggle the image</button> to see the loading view.</p>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}
