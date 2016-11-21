@@ -71,4 +71,8 @@
     height: 0;
     visibility: hidden;
   }
+
+  &.Sticky-item {
+    min-width: auto;
+  }
 }

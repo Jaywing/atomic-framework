@@ -7,9 +7,9 @@ export default class ResImg extends Module {
 
     const defaults = {
       "threshold": 0,
-      "normal": '_data-resimg-normal',
-      "retina": '_data-resimg-retina',
-      "srcset": '_data-resimg-srcset',
+      "normal": 'data-resimg-normal',
+      "retina": 'data-resimg-retina',
+      "srcset": 'data-resimg-srcset',
     }
 
     super(el, name, options, defaults)
@@ -19,14 +19,16 @@ export default class ResImg extends Module {
 
     const resimg = this
 
-    const instance = Layzr({
+    const layzrInstance = Layzr({
       normal: resimg.settings.normal,
       retina: resimg.settings.retina,
       srcset: resimg.settings.srcset,
       threshold: resimg.settings.threshold
     })
 
-    instance.update().check().handlers(true)
+    layzrInstance.update().check().handlers(true)
+
+    console.log(layzrInstance);
 
     console.log(`${this.name} has initialised`)
 
