@@ -1,0 +1,18 @@
+{
+  "metaTitle": "Atomic - A front-end starter kit by Jaywing",
+  "sections": [
+    {
+      "component": "_shared/hero.njk",
+      "classList": "o-Container o-Container--centered Text--center",
+      "content": {
+        "title": "Atomic",
+        "subTitle": "Jaywing's front-end starter kit and component repository",
+        "description": "A'tom'ic: of or forming a single irreducible unit or component in a larger system",
+        "cta": {
+          "url": "docs/",
+          "title": "Check out the docs"
+        }
+      }
+    }
+  ]
+}

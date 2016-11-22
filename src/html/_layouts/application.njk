@@ -1,13 +1,14 @@
-{% from '_macros/helpers.njk' import icon %}
+{% from '_macros/helpers.njk' import icon, navItem %}
 
 <!doctype html>
-<html lang="en-GB" class="no-js">
+<html lang="{{ lang }}">
 <head>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
   <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+  <meta name="author" content="{{ author.name }}"/>
 
   <!-- standard styles - hidden from < ie10 -->
   <!--[if ! lte IE 9]><!--><link rel="stylesheet" href="/stylesheets/styles.css"><!--<![endif]-->
@@ -16,25 +17,26 @@
 
   {% include '_shared/app-icons.njk' %}
 
-  {% block head %}{% endblock %}
+  {% block metaHead %}{% endblock %}
 
 </head>
-<body id="top">
+<body id="top" class="o-Site">
 
+<header role="banner" class="o-Site-header">
 
-{% block main %}
-<main>
-  <article>
-    {% block content %}{% endblock %}
-  </article>
-  <section>
+  {% block pageHead %}{% endblock %}
 
-  </section>
+  {% include '_shared/main-nav.njk' %}
+</header>
+
+<main id="content" class="o-Site-content">
+
+  {% block content %}{% endblock %}
+
 </main>
-{% endblock %}
 
-<footer>
-  <p>Made with ♥ at <a href="http://jaywing.com">JAYWING</a></p>
+<footer class="o-Site-footer">
+  <p>&copy; {{ author.createdYear }} - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
 </footer>
 
 {% block javascript %}{% endblock %}

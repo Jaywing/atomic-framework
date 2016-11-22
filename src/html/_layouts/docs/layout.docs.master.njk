@@ -1,11 +1,12 @@
-{% from '_macros/helpers.njk' import icon %}
+{% from '_macros/helpers.njk' import icon, navItem %}
+
 <!doctype html>
-<html lang="en-GB">
+<html lang="{{ lang }}">
 <head>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="Jaywing"/>
+  <meta name="author" content="{{ author }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
   <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
 
