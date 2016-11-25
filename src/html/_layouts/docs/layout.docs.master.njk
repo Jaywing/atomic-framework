@@ -1,7 +1,11 @@
 {% from '_macros/helpers.njk' import icon, navItem %}
 
 <!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="{{ lang }}" class="fonts-loaded">
+<!--#else -->
 <html lang="{{ lang }}">
+<!--#endif -->
 <head>
 
   <meta charset="utf-8">

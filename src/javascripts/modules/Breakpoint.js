@@ -64,7 +64,7 @@ breakpoint.init = function (log = true) {
   breakpoint.refreshValue();
 
   if (breakpoint.value === "") {
-    console.log('Breakpoint can not initialise as the necessary css is not available');
+    console.warn('Breakpoint can not initialise as the necessary css is not available');
     return;
   }
 
