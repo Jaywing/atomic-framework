@@ -63,15 +63,21 @@
   {% if section.action %} action="{{ section.action }}"{% endif %}
   novalidate>
 
-  {% for fieldset in section.fieldsets %}
-    <fieldset {% if fieldset.id %} id="{{ fieldset.id }}"{% endif %}>
-      {% if fieldset.legend %}<legend>{{ fieldset.legend }}</legend>{% endif %}
+  {% if section.fieldsets.length > 0 %}
+    {% for fieldset in section.fieldsets %}
+      <fieldset {% if fieldset.id %} id="{{ fieldset.id }}"{% endif %}>
+        {% if fieldset.legend %}<legend>{{ fieldset.legend }}</legend>{% endif %}
 
-      {% for field in fieldset.fields %}
-        {{ generateField(field, section.id) }}
-      {% endfor %}
+        {% for field in fieldset.fields %}
+          {{ generateField(field, section.id) }}
+        {% endfor %}
 
-    </fieldset>
-  {% endfor %}
+      </fieldset>
+    {% endfor %}
+  {% else %}
+    {% for field in section.fields %}
+      {{ generateField(field, section.id) }}
+    {% endfor %}
+  {% endif %}
 
 </form>

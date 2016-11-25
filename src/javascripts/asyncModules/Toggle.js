@@ -60,7 +60,7 @@ export default class Toggle extends Module {
       }
 
       if (Toggle.self) {
-        Toggle.doToggle(Toggle.settings.target[0])
+        Toggle.doToggle(this.el, Toggle.settings.target[0])
         Toggle.el.setAttribute('aria-pressed', Toggle.el.classList.contains(Toggle.settings.activeClass)) // init aria
         return
       }
