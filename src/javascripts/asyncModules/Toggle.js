@@ -59,17 +59,17 @@ export default class Toggle extends Module {
         this.el.removeEventListener('click', toggleIt)
       }
 
-      if (Toggle.self) {
-        Toggle.doToggle(this.el, Toggle.settings.target[0])
-        Toggle.el.setAttribute('aria-pressed', Toggle.el.classList.contains(Toggle.settings.activeClass)) // init aria
+      if (this.self) {
+        this.doToggle(this.el, Toggle.settings.target[0])
+        this.el.setAttribute('aria-pressed', Toggle.el.classList.contains(this.settings.activeClass)) // init aria
         return
       }
 
-      const targets = Toggle.settings.target;
+      const targets = this.settings.target;
       for (let i = 0, x = targets.length; i < x; i++) {
         let mytarget = (typeof targets[i] === 'string')? document.querySelector(targets[i]) : targets[i]
         if (mytarget) {
-          Toggle.doToggle(mytarget, this.el);
+          this.doToggle(mytarget, this.el);
           //window.jwAtomic.modules[this.uid].details.active = !window.jwAtomic.modules[this.uid].details.target[i].active
 
         }

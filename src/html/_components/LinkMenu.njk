@@ -1,15 +1,16 @@
 
-{% macro Menu(
+{% macro LinkMenu(
   menuItems={},
   classList = "",
   activeItem = false,
-  activeClass = 'is-active'
-) %}
+  menuTitle = false,
+  menuTitleClassList = "",
+  activeClass = 'is-active') %}
 
   {% if menuItems | length %}
     <ul class="Menu {{ classList }}">
-      {% if settings.menuTitle %}
-        {{ _MenuTitle (settings.menuTitle) }}
+      {% if menuTitle %}
+        {{ _MenuTitle (menuTitle, menuTitleClassList) }}
       {% endif %}
 
       {% for item in menuItems %}
@@ -21,8 +22,8 @@
 {% endmacro %}
 
 
-{% macro _MenuTitle (title) %}
-  <li class="Menu-item"><span class="Menu-title">{{ title }}</span></li>
+{% macro _MenuTitle (title, classList) %}
+  <li class="Menu-item {{ classList }}"><span class="Menu-title">{{ title }}</span></li>
 {% endmacro %}
 
 {% macro _MenuItem(item, activeItem, activeClass) %}

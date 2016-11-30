@@ -1,4 +1,4 @@
-{% from '_components/Menu.njk' import Menu %}
+{% from '_components/LinkMenu.njk' import LinkMenu %}
 {% from '_components/ToggleButton.njk' import ToggleButton %}
 
 {% macro NavSimple(
@@ -7,6 +7,8 @@
           activeItem,
           classList,
           menuClassList,
+          menuTitle,
+          menuTitleClassList,
           togglerClassList,
           breakpoint = 'Md') %}
 
@@ -27,10 +29,12 @@
         togglerClassList)
     }}
     {{
-      Menu(
+      LinkMenu(
         menuItems,
         menuClassList,
-        activeItem)
+        activeItem,
+        menuTitle,
+        menuTitleClassList)
     }}
   </nav>
 

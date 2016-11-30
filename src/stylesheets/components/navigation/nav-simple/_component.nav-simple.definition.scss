@@ -1,14 +1,13 @@
-
 .NavSimple-toggler {
   display: none;
 }
 
+.NavSimple-menu {
+  margin-top: 0;
+}
+
 .NavSimple--right {
   text-align: right;
-
-  .NavSimple-menu .Menu-item {
-    text-align: right;
-  }
 }
 
 .js {
@@ -16,7 +15,8 @@
     .NavSimple-menu {
       transition: all 0.33s ease;
       transform: scale(0);
-      transform-origin: top left;
+      opacity: 0;
+      transform-origin: center center;
       max-width: 0;
       max-height: 0;
     }
@@ -24,15 +24,10 @@
     &.is-active {
       .NavSimple-menu {
         transform: scale(1);
+        opacity: 1;
         max-width: 100%;
         max-height: 100%;
       }
-    }
-  }
-
-  .NavSimple--right {
-    .NavSimple-menu {
-
     }
   }
 

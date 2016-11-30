@@ -1,4 +1,3 @@
-
 {% macro navbarItem(id, title, active, ready) %}
 <li class="Menu-item{% if id == active %} is-active{% endif %}">
   {% if ready %}
@@ -10,12 +9,13 @@
 {% endmacro %}
 
 <nav class="o-Container o-Container--centered">
-
   <ul class="Menu Menu--vertical MenuMd">
     <li class="Menu-item Menu-item--left"><a href="/docs/"><img src="/images/docs/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li>
 
     {% for section in docs_sections %}
-    {{navbarItem(section.id, section.title, sectionid, section.ready)}}
+
+      {{navbarItem(section.id, section.title, sectionid, section.ready)}}
+
     {% endfor %}
 
   </ul>

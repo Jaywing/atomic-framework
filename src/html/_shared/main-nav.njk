@@ -1,10 +1,16 @@
-<nav>
-  {% if pages | length %}
-    <ul class="Menu Menu--right">
-      <li class="Menu-item Menu-item--left Menu-title">Atomic</li>
-      {% for page in pages %}
-        {{ navItem(page.id, page.title, pageid, page.ready) }}
-      {%  endfor %}
-    </ul>
-  {% endif %}
-</nav>
+{% from "../_components/NavSimple.njk" import NavSimple %}
+
+<div class="o-Container o-Container--centered">
+{{
+  NavSimple(
+    'nav-main',
+    pages,
+    'index',
+    '',
+    'Menu--right',
+    'Atomic',
+    'Menu-item--left',
+    '',
+    'Md')
+}}
+</div>

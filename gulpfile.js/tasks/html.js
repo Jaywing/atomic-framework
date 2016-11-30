@@ -18,6 +18,18 @@ var paths = {
   dest: path.join(config.root.dest, config.tasks.html.dest),
 }
 
+/*
+var getData = function(file) {
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
+  return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+}
+**************************************************************************************************
+* Gulp-Starter MODIFICATION
+**************************************************************************************************
+ *
+ * Need to load template specific data as well as global data
+*/
+
 var getTemplateData = function(file) {
   var filename = file.path.split(".njk")[0];
   filename = filename.toString().split('\\')
@@ -35,9 +47,11 @@ var getGlobalData = function(file) {
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
+
 var htmlTask = function() {
 
   return gulp.src(paths.src)
+    //.pipe(data(getData))
     .pipe(data(getGlobalData))
     .pipe(data(getTemplateData))
     .on('error', handleErrors)
@@ -48,7 +62,7 @@ var htmlTask = function() {
       }
     }))
     .on('error', handleErrors)
-    //.pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))
+    .pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))
     .pipe(gulp.dest(paths.dest))
     .on('end', browserSync.reload)
 

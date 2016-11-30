@@ -38,3 +38,4 @@ function atomic_initialise() {
 if (advTest()) {
   atomic_initialise();
 }
+
