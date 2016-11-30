@@ -1,0 +1,43 @@
+
+.NavSimple-toggler {
+  display: none;
+}
+
+.NavSimple--right {
+  text-align: right;
+
+  .NavSimple-menu .Menu-item {
+    text-align: right;
+  }
+}
+
+.js {
+  .NavSimple {
+    .NavSimple-menu {
+      transition: all 0.33s ease;
+      transform: scale(0);
+      transform-origin: top left;
+      max-width: 0;
+      max-height: 0;
+    }
+
+    &.is-active {
+      .NavSimple-menu {
+        transform: scale(1);
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .NavSimple--right {
+    .NavSimple-menu {
+
+    }
+  }
+
+  .NavSimple-toggler {
+    display: inline-block;
+  }
+
+}

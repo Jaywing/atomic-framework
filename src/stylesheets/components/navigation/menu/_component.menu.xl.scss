@@ -1,0 +1,18 @@
+@include xl {
+  .MenuXl {
+    flex-wrap: nowrap;
+
+    .Menu-item {
+      flex: 0 0 auto;
+      padding: $menu-item-padding;
+    }
+
+    .Menu-link {
+      padding: $menu-link-padding;
+    }
+
+    .Menu-title {
+      padding: $menu-title-padding;
+    }
+  }
+}

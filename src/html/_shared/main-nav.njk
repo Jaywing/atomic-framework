@@ -1,7 +1,7 @@
 <nav>
   {% if pages | length %}
     <ul class="Menu Menu--right">
-      <li class="Menu-item Menu-item--left Menu-title">[ Logo ]</li>
+      <li class="Menu-item Menu-item--left Menu-title">Atomic</li>
       {% for page in pages %}
         {{ navItem(page.id, page.title, pageid, page.ready) }}
       {%  endfor %}

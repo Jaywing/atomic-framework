@@ -109,8 +109,7 @@ $menu-title-font-weight: $g-weight-bold !default;
     );
   }
 
-
-  .is-active &,
+  .is-active > &,
   &.is-active {
     @include color-swap-on-hover(
             $menu-link-active-color $menu-link-active-bg,

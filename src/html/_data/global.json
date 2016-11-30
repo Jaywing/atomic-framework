@@ -8,8 +8,8 @@
     "createdYear": "2016"
   },
   "pages": [
-    { "id": "index", "title": "Home", "ready": true },
-    { "id": "contact", "title": "Contact", "ready": true }
+    { "id": "index", "url": false, "title": "Home", "ready": true },
+    { "id": "features", "url": false, "title": "Features", "ready": false }
   ],
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
@@ -79,7 +79,8 @@
       "category": "Navigation",
       "section": "extended",
       "items": [
-        { "id": "bookmarks", "title": "Bookmarks", "section": "extended", "ready": true },
+        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": true },
+        { "id": "bookmarks", "title": "Bookmarks", "section": "extended", "ready": false },
         { "id": "dropdown", "title": "Dropdown", "section": "extended", "ready": false }
       ]
     },
