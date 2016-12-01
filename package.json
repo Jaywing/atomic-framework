@@ -18,12 +18,18 @@
     "production": "gulp production",
     "deploy": "gulp deploy",
     "demo": "gulp production && gulp server",
-    "test": "gulp production && karma start --single-run",
+    "test": "jest --coverage",
     "test:watch": "karma start",
     "test:gulp": "mocha ./gulpfile.js/**/*.test.js"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/javascripts/helpers/*.js"
+    ]
+  },
   "devDependencies": {
     "babel-core": "^6.10.4",
+    "babel-jest": "^17.0.2",
     "babel-loader": "6.2.4",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-preset-es2015": "6.6.0",
@@ -60,6 +66,7 @@
     "gulp-uglify": "1.5.3",
     "gulp-util": "3.0.7",
     "gulp-watch": "4.3.5",
+    "jest": "^17.0.3",
     "karma": "0.13.22",
     "karma-chrome-launcher": "0.2.3",
     "karma-cli": "0.1.2",

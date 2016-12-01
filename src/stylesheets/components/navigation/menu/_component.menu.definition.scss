@@ -77,10 +77,6 @@ $menu-title-font-weight: $g-weight-bold !default;
   flex: 0 0 auto;
   padding: $menu-item-padding;
 
-  &.Menu-link {
-    margin: $menu-item-padding;
-  }
-
   &--right {
     // scss-lint:disable ImportantRule
     display: flex;
@@ -101,12 +97,14 @@ $menu-title-font-weight: $g-weight-bold !default;
   text-align: $menu-link-text-align;
   border-radius: $menu-link-border-radius;
 
-  &:not(.Text--disabled) {
-    @include color-swap-on-hover(
-            $menu-link-color $menu-link-bg,
-            $menu-link-hover-color $menu-link-hover-bg,
-            $menu-link-trans-speed
-    );
+  @include color-swap-on-hover(
+          $menu-link-color $menu-link-bg,
+          $menu-link-hover-color $menu-link-hover-bg,
+          $menu-link-trans-speed
+  );
+
+  .Icon svg {
+    fill: $menu-link-color;
   }
 
   .is-active > &,
@@ -119,7 +117,7 @@ $menu-title-font-weight: $g-weight-bold !default;
   }
 }
 
-.Menu-title {
+.Menu-header {
   display: block;
   padding: $menu-title-padding;
   font-weight: $menu-title-font-weight;

@@ -1,16 +1,13 @@
-{% from "../_components/NavSimple.njk" import NavSimple %}
+{% from "../_components/NavSimple/NavSimple.component.njk" import NavSimple %}
 
 <div class="o-Container o-Container--centered">
 {{
   NavSimple(
-    'nav-main',
+    'navMain',
     pages,
-    'index',
+    pageid,
     '',
-    'Menu--right',
-    'Atomic',
-    'Menu-item--left',
-    '',
-    'Md')
+    'NavSimple--right NavSimpleMd',
+    'Menu--vertical MenuMd')
 }}
 </div>

@@ -8,6 +8,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set sectionid = 'core' %}
 
 {% from '_macros/helpers.njk' import icon %}
+{% from '_components/Menu/Menu.component.njk' import Menu %}
 
 {% extends '_layouts/docs/layout.docs.master.njk' %}
 
@@ -22,23 +23,44 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
 
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      {
+        "text": "My simple menu",
+        "header": true,
+        "classList": "Menu-item--left"
+      },
+      {
+        "text": "Home"
+      },
+      {
+        "id": "features",
+        "url": "features.html",
+        "text": "Features",
+        "linkClassList": " "
+      }
+    ],
+    'Menu--right',
+    'item2'
+  ) }}
+
+</div>
+
+
 <h3>Basic Menu</h3>
 
 <div class="docs-example">
 
-  <ul class="Menu">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
-
-  <div class="Menu">
-    <a href="#" class="Menu-item Menu-link">One</a>
-    <a href="#" class="Menu-item Menu-link">Two</a>
-    <a href="#" class="Menu-item Menu-link">Three</a>
-    <a href="#" class="Menu-item Menu-link">Four</a>
-  </div>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ]
+  ) }}
 
 </div>
 
@@ -48,10 +70,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   ...
 &lt;/ul&gt;
 
-&lt;div class=&quot;Menu&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;Menu-item Menu-link&quot;&gt;One&lt;/a&gt;
-  ...
-&lt;/div&gt;</code></pre>
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ]
+) &#125;&#125;
+</code></pre>
 </div>
 
 <h3>Item alignment</h3>
@@ -59,12 +86,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <ul class="Menu Menu--right">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--right"
+  ) }}
 
 </div>
 
@@ -72,19 +102,32 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <pre><code class="html">&lt;ul class=&quot;Menu Menu--right&quot;&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--right"
+) &#125;&#125;</code></pre>
 </div>
 
 <h4>Centred (.Menu--center)</h4>
 
 <div class="docs-example">
 
-  <ul class="Menu Menu--center">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--center"
+  ) }}
 
 </div>
 
@@ -92,30 +135,49 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <pre><code class="html">&lt;ul class=&quot;Menu Menu--center&quot;&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--center"
+) &#125;&#125;</code></pre>
 </div>
 
 <h4>Expanded (.Menu--expanded)</h4>
 
 <div class="docs-example">
 
-  <ul class="Menu Menu--expanded">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" }
+    ],
+    "Menu--expanded"
+  ) }}
 
-  <ul class="Menu Menu--expanded">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" }
+    ],
+    "Menu--expanded"
+  ) }}
 
-  <ul class="Menu Menu--expanded">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+  "Menu--expanded"
+  ) }}
 
 </div>
 
@@ -123,26 +185,41 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <pre><code class="html">&lt;ul class=&quot;Menu Menu--expanded&quot;&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--expanded"
+) &#125;&#125;</code></pre>
 </div>
 
 <h4>Menu item alignment (.Menu-item--right & .Menu-item--left)</h4>
 
 <div class="docs-example">
 
-  <ul class="Menu">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item Menu-item--right"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#", "classList": "Menu-item--right" }
+    ]
+  ) }}
 
-  <ul class="Menu">
-    <li class="Menu-item Menu-item--left"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "One", "url": "#", "classList": "Menu-item--left" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    'Menu--right'
+  ) }}
 
 </div>
 
@@ -157,18 +234,33 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &lt;li class=&quot;Menu-item Menu-item--left&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#", "classList": "Menu-item--left" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--right"
+) &#125;&#125;</code></pre>
 </div>
 
 <h4>Active menu item state (.is-active)</h4>
 
 <div class="docs-example">
 
-  <ul class="Menu">
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "id": "one", "text": "One", "url": "#" },
+      { "id": "two", "text": "Two", "url": "#" },
+      { "id": "three", "text": "Three", "url": "#" },
+      { "id": "four", "text": "Four", "url": "#" }
+    ],
+    "",
+    "two"
+  ) }}
 
 </div>
 
@@ -177,19 +269,33 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "id": "one", "text": "One", "url": "#", "classList": "Menu-item--left" },
+    { "id": "two", "text": "Two", "url": "#" },
+    { "id": "three", "text": "Three", "url": "#" },
+    { "id": "four", "text": "Four", "url": "#" }
+  ],
+  "",
+  "two"
+) &#125;&#125;</code></pre>
 </div>
 
-<h4>Menu title (.Menu-title)</h4>
+<h4>Menu header (.Menu-header)</h4>
 
 <div class="docs-example">
 
-  <ul class="Menu">
-    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "Menu header", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ]
+  ) }}
 
 </div>
 
@@ -198,36 +304,63 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "Menu header", "header": true },
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ]
+) &#125;&#125;</code></pre>
 </div>
 
 <h3>Vertical menu (.Menu--vertical)</h3>
 
 <div class="docs-example">
-  <ul class="Menu Menu--vertical">
-    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-  </ul>
+
+  {{ Menu(
+    [
+      { "text": "Menu header", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical"
+  ) }}
+
 </div>
 
 <div class="docs-code">
   <pre><code class="html">&lt;ul class=&quot;Menu Menu--vertical&quot;&gt;
-  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-header&quot;&gt;Menu header&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "Menu header", "header": true },
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--vertical"
+) &#125;&#125;</code></pre>
 </div>
 
 <h4>Vertical nested menu</h4>
 
 <div class="docs-example">
   <ul class="Menu Menu--vertical Demo">
-    <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+    <li class="Menu-item"><span class="Menu-header">Menu header</span></li>
     <li class="Menu-item"><a href="#" class="Menu-link">One</a>
       <ul class="Menu Menu--vertical Demo">
-        <li class="Menu-item"><span class="Menu-title">Menu title</span></li>
+        <li class="Menu-item"><span class="Menu-header">Menu header</span></li>
         <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
         <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
       </ul>
@@ -255,35 +388,117 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Responsive menu (.MenuXs, .MenuSm, .MenuMd,. MenuLg)</h4>
 
 <div class="docs-example">
-  <ul class="Menu Menu--vertical MenuXs">
-    <li class="Menu-item"><strong class="Menu-title">Break @480px</strong></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
-  <ul class="Menu Menu--vertical MenuSm">
-    <li class="Menu-item"><strong class="Menu-title">Break @640px</strong></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
-  <ul class="Menu Menu--vertical MenuMd">
-    <li class="Menu-item"><strong class="Menu-title">Break @768px</strong></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
-  <ul class="Menu Menu--vertical MenuLg">
-    <li class="Menu-item"><strong class="Menu-title">Break @960px</strong></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
-    <li class="Menu-item"><a href="#" class="Menu-link">Four</a></li>
-  </ul>
+  {{ Menu(
+    [
+      { "text": "Break @480px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuXs"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @640px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuSm"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @768px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuMd"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @960px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuLg"
+  ) }}
+
 </div>
+
+<h3>Unstyled links</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#", "linkClassList": " " },
+      { "text": "Two", "url": "#", "linkClassList": " " },
+      { "text": "Three", "url": "#", "linkClassList": " " },
+      { "text": "Four", "url": "#", "linkClassList": " " }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#", "linkClassList": " " },
+    { "text": "Two", "url": "#", "linkClassList": " " },
+    { "text": "Three", "url": "#", "linkClassList": " " },
+    { "text": "Four", "url": "#", "linkClassList": " " }
+  ]
+) &#125;&#125;</code></pre>
+</div>
+
+<h3>Icon links</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "", "icon": "sc-facebook", "url": "#"},
+      { "text": "", "icon": "sc-twitter", "url": "#" },
+      { "text": "", "icon": "sc-google-plus", "url": "#" },
+      { "text": "", "icon": "sc-youtube", "url": "#" }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;
+      &lt;span class="Icon Icon--sc-facebook "&gt;
+        &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#sc-facebook"&gt;&lt;/use&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "", "url": "#", "icon": "sc-facebook" },
+    { "text": "", "url": "#", "icon": "sc-twitter" },
+    { "text": "", "url": "#", "icon": "sc-google-plus" },
+    { "text": "", "url": "#", "icon": "sc-youtube" }
+  ]
+) &#125;&#125;</code></pre>
+</div>
+
 
 <h3>Tabular menu (.Menu--tabular)</h3>
 
@@ -408,8 +623,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <td class="Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.Menu-title</code></th>
-      <td>A menu title</td>
+      <th class="Text--left"><code>.Menu-header</code></th>
+      <td>A menu header</td>
       <td class="Text--right">Sub-element</td>
     </tr>
     </tbody>

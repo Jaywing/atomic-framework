@@ -11,13 +11,6 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     max-width: 100%;
     padding: 0;
     text-align: left;
-    
-    .Menu--right > & {
-      text-align: right;
-    }
-    .Menu--center > & {
-      text-align: center;
-    }
   }
 
   .Menu-link {
@@ -27,7 +20,7 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     text-align: inherit;
   }
 
-  .Menu-title {
+  .Menu-header {
     padding: $menu-vertical-title-padding;
     margin: $menu-vertical-title-margin;
 
@@ -46,4 +39,14 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     }
   }
 
+  &.Menu--right {
+    .Menu-item {
+      text-align: right;
+    }
+  }
+  &.Menu--center {
+    .Menu-item {
+      text-align: center;
+    }
+  }
 }

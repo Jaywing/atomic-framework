@@ -8,8 +8,9 @@
     "createdYear": "2016"
   },
   "pages": [
-    { "id": "index", "url": false, "title": "Home", "ready": true },
-    { "id": "features", "url": false, "title": "Features", "ready": false }
+    { "text": "Atomic", "classList": "Menu-item--left", "header": true },
+    { "id": "index", "url": "index.html", "text": "Home" },
+    { "id": "features", "url": "features.html", "text": "Features", "disabled": true }
   ],
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
