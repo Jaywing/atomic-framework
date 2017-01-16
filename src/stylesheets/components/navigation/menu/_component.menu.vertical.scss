@@ -40,8 +40,14 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
   }
 
   &.Menu--right {
-    .Menu-item {
+    .Menu-item,
+    .Menu-item--left {
       text-align: right;
+      .Menu-header {
+        display: block;
+        width: 100%;
+        text-align: right;
+      }
     }
   }
   &.Menu--center {

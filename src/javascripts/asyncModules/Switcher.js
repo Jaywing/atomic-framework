@@ -122,7 +122,6 @@ export default class Switcher extends Module {
     this.targets = []
     this.normaliseTargets() // popular targets array normalised element references
 
-    console.log(this.validateTargets());
     if (!this.validateTargets()) {
       console.warn('Switcher aborted: The target element does not pass validation rules')
       this.el.setAttribute('hidden', true)

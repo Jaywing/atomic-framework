@@ -19,6 +19,7 @@
     "js": {
       "src": "javascripts",
       "dest": "/javascripts",
+      "destProd": "assets/javascripts",
       "entries": {
         "app": ["babel-polyfill", "./app.js"]
       },
