@@ -18,7 +18,7 @@
 
     "js": {
       "src": "javascripts",
-      "dest": "/javascripts",
+      "dest": "/assets/javascripts",
       "destProd": "assets/javascripts",
       "entries": {
         "app": ["babel-polyfill", "./app.js"]
@@ -32,7 +32,7 @@
     },
     "css": {
       "src": "stylesheets",
-      "dest": "stylesheets",
+      "dest": "assets/stylesheets",
       "autoprefixer": {
         "browsers": ["last 3 versions"]
       },
@@ -48,6 +48,7 @@
     "html": {
       "src": "html",
       "dest": "./",
+      "validationDest": "./logs",
       "dataFile": "_data/global.json",
       "htmlmin": {
         "collapseWhitespace": true
@@ -58,19 +59,19 @@
 
     "images": {
       "src": "images",
-      "dest": "images",
+      "dest": "assets/images",
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
     "fonts": {
       "src": "fonts",
-      "dest": "fonts",
+      "dest": "assets/fonts",
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
     "svgSprite": {
       "src": "icons",
-      "dest": "images",
+      "dest": "assets/images",
       "extensions": ["svg"]
     },
 
