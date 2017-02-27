@@ -1,3 +1,5 @@
+$form-field-padding: $g-spacer-sm !default;
+
 $form-label-weight: $g-weight-bold !default;
 
 $form-input-padding: $g-spacer-sm !default;
@@ -22,6 +24,8 @@ $form-danger-color: $c-danger !default;
 $form-success-bg: $c-success-light-50 !default;
 $form-success-border-color: $c-success !default;
 $form-success-color: $c-success !default;
+
+$form-status-padding: $g-spacer-sm 0 !default;
 
 .Form {
 
@@ -113,4 +117,19 @@ $form-success-color: $c-success !default;
 .Form-label {
   display: block;
   font-weight: $form-label-weight;
+}
+
+.Form-field {
+  padding: $form-field-padding;
+}
+
+.Form-status {
+  padding: $form-status-padding;
+  &--danger {
+    color: $form-danger-color;
+  }
+
+  &--success {
+    color: $form-success-color;
+  }
 }

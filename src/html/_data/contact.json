@@ -62,21 +62,6 @@
               "maxLength": 30
             }
           ]
-        },
-        {
-          "id": "message",
-          "legend": "What do you want to say?",
-          "fields": [
-            {
-              "label": "Your message",
-              "id": "message",
-              "type": "textarea",
-              "rows": 3,
-              "isRequired": true,
-              "classList": "",
-              "placeholder": "Type your message here..."
-            }
-          ]
         }
       ]
     }
