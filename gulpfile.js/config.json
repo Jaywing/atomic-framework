@@ -8,6 +8,10 @@
     "browserSync": {
       "server": {
         "baseDir": "public"
+      },
+      "port": 3434,
+      "ui": {
+        "port": 3435
       }
     },
 
