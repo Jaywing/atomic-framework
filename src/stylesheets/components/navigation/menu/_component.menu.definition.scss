@@ -24,8 +24,10 @@ $menu-item-active-font-weight: $g-weight-bold !default;
 $menu-link-padding: $g-spacer-sm !default;
 $menu-link-font-weight: $g-weight-normal !default;
 
-$menu-title-padding: $g-spacer-sm !default;
-$menu-title-font-weight: $g-weight-bold !default;
+$menu-header-padding: $g-spacer-sm !default;
+$menu-header-font-weight: $g-weight-bold !default;
+$menu-header-color: $base-text-color !default;
+$menu-header-hover-color: $link-hover-color !default;
 
 
 // ========================================================================
@@ -88,6 +90,15 @@ $menu-title-font-weight: $g-weight-bold !default;
     display: flex;
     margin-right: auto !important;
   }
+
+}
+
+.Menu .Menu-item--flush {
+  > .Menu-link,
+  > .Menu-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .Menu-link {
@@ -115,10 +126,22 @@ $menu-title-font-weight: $g-weight-bold !default;
             $menu-link-trans-speed
     );
   }
+
 }
 
 .Menu-header {
   display: block;
-  padding: $menu-title-padding;
-  font-weight: $menu-title-font-weight;
+  min-width: 100%;
+  padding: $menu-header-padding;
+  font-weight: $menu-header-font-weight;
+  color: $menu-header-color;
+
+  a {
+    @include color-swap-on-hover(
+            $menu-header-color,
+            $menu-header-hover-color,
+            $menu-link-trans-speed
+    );
+    text-decoration: none;
+  }
 }

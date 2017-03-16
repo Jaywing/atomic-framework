@@ -28,7 +28,11 @@ export default class Toggle extends Module {
       this.self = false
       let target = this.settings.target
       if (typeof target === 'string') { // make target an array if it is not already
-        this.settings.target = [this.settings.target]
+        if (target === "parent") {
+          this.settings.target = [this.el.parentNode]
+        } else {
+          this.settings.target = [this.settings.target]
+        }
       }
     }
 

@@ -1,5 +1,5 @@
-$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm !default;
-$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-link-padding: $g-spacer-sm $g-spacer-sm !default;
+$menu-vertical-title-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
 
 
@@ -11,6 +11,7 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     max-width: 100%;
     padding: 0;
     text-align: left;
+    margin: $g-spacer-xxs 0;
   }
 
   .Menu-link {

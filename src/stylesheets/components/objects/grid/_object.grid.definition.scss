@@ -6,6 +6,7 @@
 // Sub-objects:     `o-Grid-cell`
 //
 // Modifiers:       `o-Grid--flexCells`
+//                  `o-Grid--flush`
 //                  `o-Grid--full`
 //                  `o-Grid--top`
 //                  `o-Grid--bottom`
@@ -53,9 +54,17 @@ $grid-gutter-xl: $g-spacer-xl;
   width: 100%;
 }
 
+.o-Grid--flush {
+  margin: 0 -($grid-gutter/2);
+}
+
 .o-Grid-cell {
   flex: 1 0 auto;
   max-width: 100%;
+
+  .o-Grid {
+    margin: 0 -($grid-gutter/2);
+  }
 }
 
 .o-Grid--flexCells > .o-Grid-cell {

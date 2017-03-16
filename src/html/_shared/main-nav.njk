@@ -1,13 +1,26 @@
-{% from "../_components/NavSimple/NavSimple.component.njk" import NavSimple %}
+{% from '_macros/menu.njk' import menuLink, menuHeader %}
+{% from '_macros/buttons.njk' import ToggleButton %}
 
-<div class="o-Container o-Container--centered">
-{{
-  NavSimple(
-    'navMain',
-    pages,
-    pageid,
-    '',
-    'NavSimple--right NavSimpleMd',
-    'Menu--vertical MenuMd')
-}}
-</div>
+    <div class="NavMain">
+
+      <div class="o-Container o-Container--centered">
+
+        <nav role="navigation" class="NavResponsive NavResponsiveSm">
+
+          {{ ToggleButton("parent") }}
+
+          <ul class="Menu Menu--vertical MenuSm">
+
+            {{ menuHeader('Atomic', 'index.html', 'Menu-item--left Menu-item--flush') }}
+
+            {% for page in pages %}
+              {{ menuLink(page.id, page.title, page.url, pageId, 'nav-item') }}
+            {% endfor %}
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </div>

@@ -1,7 +1,7 @@
 {% from '_macros/icon.njk' import icon %}
 
 {% macro ToggleButton(
-  settings = false,
+  target = false,
   classList = "",
   content = {
   initIcon: 'navicon',
@@ -10,10 +10,7 @@
   closeText: false
 }) %}
 
-  <button class="ToggleButton {{ classList }}" data-module="Toggle"
-      {% if settings %}
-        data-options='{{ settings }}'
-      {% endif %}>
+  <button class="ToggleButton {{ classList }}" data-module="Toggle"{% if target !== false %} data-options='{"target":"{{ target }}"}'{% endif %}>
 
     <div class="ToggleButton-init">
       {{ icon(content.initIcon, 'ToggleButton-icon--init') }}

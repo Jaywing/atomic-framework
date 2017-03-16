@@ -4,17 +4,16 @@
   Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% set pageid = 'index' %}
+{% set pageId = 'index' %}
 
 {% extends '_layouts/application.njk' %}
+{% from '_macros/hero.njk' import Hero %}
 
 {% block metaTitle %}{{ metaTitle }}{% endblock %}
 
 {% block content %}
 
-  {% for section in sections %}
-    {% include section.component %}
-  {% endfor %}
+  {{ Hero(hero.content, hero.classes) }}
 
 {% endblock %}
 

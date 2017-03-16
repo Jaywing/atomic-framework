@@ -5,12 +5,13 @@
     "name": "Jaywing",
     "url": "https://jaywing.com",
     "footerText": "Made with ♥ at",
-    "createdYear": "2016"
+    "createdYear": "2017"
   },
   "pages": [
-    { "text": "Atomic", "classList": "Menu-item--left", "header": true },
-    { "id": "index", "url": "index.html", "text": "Home" },
-    { "id": "features", "url": "features.html", "text": "Features", "disabled": true }
+    { "id": "index", "url": "index.html", "title": "Home" },
+    { "id": "features", "url": "features.html", "title": "Features" },
+    { "id": "docs", "url": "docs/", "title": "Docs" },
+    { "id": "github", "url": "https://github.com/jaywing/atomic", "title": "Github" }
   ],
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
@@ -20,7 +21,7 @@
   ],
   "docs_pages": [
     {
-      "category": "",
+      "category": "Getting started",
       "section": "getting-started",
       "items": [
         { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
