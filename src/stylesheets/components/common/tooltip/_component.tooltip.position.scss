@@ -1,26 +1,24 @@
 .Tooltip--right {
 
   .Tooltip-item {
-    @include transform(translateY(-50%));
-
     align-items: center;
     bottom: inherit;
     box-align: flex-start;
     justify-content: flex-start;
     left: 115%;
     top: 50%;
+    transform: translateY(-50%);
   }
 
   .Tooltip-itemInner {
 
     &::after {
-      @include transform(translateY(-50%));
-
       border: $tooltip-pointer-size solid transparent;
       border-right: $tooltip-pointer-size solid $tooltip-pointer-bg;
       bottom: inherit;
       left: - ($tooltip-pointer-size * 2);
       top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -61,28 +59,26 @@
 
 .Tooltip--left {
   .Tooltip-item {
-    @include transform(translateY(-50%));
-
     align-items: flex-end;
     bottom: inherit;
     box-align: flex-end;
     justify-content: flex-end;
     left: -115%;
     top: 50%;
+    transform: translateY(-50%);
   }
 
   .Tooltip-itemInner {
     position: relative;
 
     &::after {
-      @include transform(translateY(-50%));
-
       border: $tooltip-pointer-size solid transparent;
       border-left: $tooltip-pointer-size solid $tooltip-pointer-bg;
       bottom: inherit;
       left: inherit;
       right: - ($tooltip-pointer-size * 2);
       top: 50%;
+      transform: translateY(-50%);
     }
   }
 

@@ -79,15 +79,13 @@ body {
 // scss-lint:enable ImportantRule
 
 // Highlighted text colors
-@include selection {
+::selection {
   background-color: $base-highlight-bg;
   color: $base-highlight-color;
 }
 
-input,
-textarea {
-  @include selection(true) {
-    background: $base-input-highlight-bg;
-    color: $base-input-highlight-color;
-  }
+input::selection,
+textarea::selection {
+  background: $base-input-highlight-bg;
+  color: $base-input-highlight-color;
 }

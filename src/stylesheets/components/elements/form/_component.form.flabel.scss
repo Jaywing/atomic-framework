@@ -9,12 +9,11 @@ $form-flabel-transition: all .1s linear !default;
 
   .Form-label {
     @include minion;
-    @include transform(translateY(-50%));
-
     background: $form-flabel-bg;
     left: $form-flabel-left;
     position: absolute;
     top: $form-flabel-top;
+    transform: translateY(-50%);
     transition: $form-flabel-transition;
   }
 
