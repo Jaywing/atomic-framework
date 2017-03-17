@@ -81,9 +81,7 @@
       "category": "Navigation",
       "section": "extended",
       "items": [
-        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": true },
-        { "id": "bookmarks", "title": "Bookmarks", "section": "extended", "ready": false },
-        { "id": "dropdown", "title": "Dropdown", "section": "extended", "ready": false }
+        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": true }
       ]
     },
     {
@@ -103,7 +101,6 @@
       "category": "Common",
       "section": "extended",
       "items": [
-        { "id": "alert", "title": "Alert", "section": "extended", "ready": false },
         { "id": "responsive-img", "title": "Responsive images", "section": "extended", "ready": true }
       ]
     },

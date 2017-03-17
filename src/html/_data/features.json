@@ -1,0 +1,14 @@
+{
+  "metaTitle": "Atomic Features",
+  "hero": {
+    "content": {
+      "title": "Features: Coming soon...",
+      "cta": {
+        "url": "docs/",
+        "title": "Check out the docs",
+        "classes": "Button Button--primary Button--xl"
+      }
+    },
+    "classes": "Hero--jumbo Text--center"
+  }
+}
