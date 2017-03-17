@@ -20,6 +20,17 @@
       "dest": "./"
     },
 
+    "eslint": {
+      "src": "javascripts",
+      "extensions": ["js"],
+      "options": {
+        "envs": [
+          "browser"
+        ],
+        "configFile": "src/javascripts/eslintrc.json"
+      }
+    },
+
     "js": {
       "src": "javascripts",
       "dest": "/assets/javascripts",

@@ -1,13 +1,12 @@
 // https://gist.github.com/MoOx/8614711
-
-module.exports = function(options) {
+const createElement = function (options) {
   let el,
-      a,
-      i
+    a,
+    i
+
   if (!options.tagName) {
     el = document.createDocumentFragment()
-  }
-  else {
+  } else {
     el = document.createElement(options.tagName)
     if (options.className) {
       el.className = options.className
@@ -38,6 +37,7 @@ module.exports = function(options) {
       el.appendChild(options.childs[i] instanceof window.HTMLElement ? options.childs[i] : createElement(options.childs[i]))
     }
   }
-
   return el
 }
+
+module.exports = createElement

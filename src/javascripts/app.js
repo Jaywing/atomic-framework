@@ -5,32 +5,24 @@ import './asyncModules'; // Async Module loader
 import Breakpoint from './modules/Breakpoint'; // breakpoint module
 import FontLoader from './modules/FontLoader'; // font loader module
 
-
-function atomic_initialise() {
-
-  Breakpoint.init(); // initialise breakpoint module
-
+function atomic_initialise () {
   const fontConfig = {
     google: {
       'Raleway': [
-        { weight: '400' },
-        { weight: '400i' },
-        { weight: '700' },
-        { weight: '700i' }
+        {weight: '400'},
+        {weight: '400i'},
+        {weight: '700'},
+        {weight: '700i'}
       ]
     }
-  };
+  }
+  FontLoader.init(fontConfig)
 
-  FontLoader.init(fontConfig);
-
-  // initiate js in the dom (this should be the last thing to initialise
-  document.querySelector('html').classList.add('js');
-  console.log(window.jwAtomic);
+  Breakpoint.init() // initialise breakpoint module
 
   window.onunload = function () {
     console.log('leaving window...');
-  };
-
+  }
 }
 
 // cutting the mustard (https://www.npmjs.com/package/cut-the-mustard)
@@ -38,4 +30,3 @@ function atomic_initialise() {
 if (advTest()) {
   atomic_initialise();
 }
-

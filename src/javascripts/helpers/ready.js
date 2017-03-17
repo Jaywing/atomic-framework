@@ -1,7 +1,3 @@
-module.exports = function(fn) {
-  if (document.readyState != 'loading') {
-    fn()
-  } else {
-    document.addEventListener('DOMContentLoaded', fn)
-  }
+module.exports = function (fn) {
+  (document.readyState !== 'loading') ? fn() : document.addEventListener('DOMContentLoaded', fn)
 }
