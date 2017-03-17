@@ -103,9 +103,8 @@ export default class Switcher extends Module {
 
   init () {
     const switcher = this // store module reference for handler functions
+    const items = this.el.querySelectorAll('[href]') // create an array of menu items
 
-    // create an array of menu items
-    const items = this.el.querySelectorAll('[href]')
     // [...items]
     this.items = Array.from(items)
 
