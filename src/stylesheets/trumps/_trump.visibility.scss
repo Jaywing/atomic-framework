@@ -21,6 +21,8 @@
 // *    .printOnly
 
 /* visibility helpers */
+
+// sass-lint:disable no-important
 .hide {
   display: none !important;
 }
@@ -39,28 +41,29 @@
 
 // screen readers only
 .srOnly {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 // allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
 .srOnly--focusable:active,
 .srOnly--focusable:focus {
-  position: static;
-  width: auto;
+  clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
-  clip: auto;
+  position: static;
+  width: auto;
 }
 
 // Print visibility class
+// sass-lint:disable no-important
 .printOnly {
   display: none !important;
 }

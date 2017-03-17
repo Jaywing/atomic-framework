@@ -21,7 +21,6 @@ $base-highlight-bg:           $c-primary-pale !default;
 $base-highlight-color:        $base-text-color !default;
 $base-input-highlight-bg:     $c-very-strong-trans-dark !default;
 $base-input-highlight-color:  $base-text-color !default;
-
 $body-antialiased: $g-body-antialiased !default;
 $body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
 
@@ -43,8 +42,8 @@ body {
 html {
   background-color: $base-bg-color;
   color: $base-text-color;
-  font-size: $base-font-size;
   font-family: $base-font-family-fb;
+  font-size: $base-font-size;
   font-weight: $base-font-weight;
 
   &.fonts-loaded {
@@ -60,7 +59,7 @@ body {
 
   // optimise font rendering - set this in settings.global.scss
   @if $body-antialiased {
-    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
@@ -75,7 +74,7 @@ body {
 
 }
 
-// scss-lint:disable ImportantRule
+// sass-lint:disable no-important
 [hidden] { display: none !important; }
 // scss-lint:enable ImportantRule
 

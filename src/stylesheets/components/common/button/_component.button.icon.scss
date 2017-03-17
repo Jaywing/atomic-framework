@@ -2,14 +2,12 @@ $button-icon-padding: ($g-spacer-sm * .94) $g-spacer !default;
 $button-icon-icon-margin: -($g-spacer-xs) !default;
 
 .Button {
-
   &--icon {
     padding: $button-icon-padding;
 
     > .Icon {
-      margin-right: $button-icon-icon-margin;
       margin-left: $button-icon-icon-margin;
+      margin-right: $button-icon-icon-margin;
     }
   }
-
 }

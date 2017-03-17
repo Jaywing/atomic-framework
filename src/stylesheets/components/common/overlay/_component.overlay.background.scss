@@ -1,5 +1,5 @@
-$overlay-background-bg: rgba(map-get($c-palette, black), 0.8) !default;
-$overlay-background-color: map-get($c-palette, white) !default;
+$overlay-background-bg: rgba($c-dark, .8) !default;
+$overlay-background-color: $c-light !default;
 
 .Overlay-background {
   background: $overlay-background-bg;

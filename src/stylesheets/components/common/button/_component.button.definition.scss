@@ -13,15 +13,15 @@ $button-padding:    ($g-spacer * .75) $g-spacer !default; // button gets the sam
 $button-min-width:  $g-min-touch-size !default;
 
 .Button {
+  border: 0;
   cursor: pointer;
   display: inline-block;
-  min-height: 1em;
-  border: 0;
   line-height: 1;
-  vertical-align: baseline;
-  min-width: $button-min-width;
   margin: $button-margin;
+  min-height: 1em;
+  min-width: $button-min-width;
   padding: $button-padding;
+  vertical-align: baseline;
 
   &--block {
     display: block;
@@ -34,6 +34,4 @@ $button-min-width:  $g-min-touch-size !default;
   &:last-child {
     margin-right: 0;
   }
-
 }
-

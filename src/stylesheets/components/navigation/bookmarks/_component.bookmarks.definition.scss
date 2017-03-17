@@ -28,45 +28,45 @@ $bookmarks-menu-z: $g-z-8 !default;
 
 .js .Bookmarks {
   position: fixed;
-  top: $bookmarks-top;
   right: $bookmarks-right;
   text-align: right;
+  top: $bookmarks-top;
   z-index: $bookmarks-z;
 
   .Bookmarks-toggler {
-    display: inline-block;
-    color: $bookmarks-toggler-color;
     background: $bookmarks-toggler-bg;
-    margin-top: 2px;
     border: $bookmarks-toggler-border;
+    color: $bookmarks-toggler-color;
+    display: inline-block;
+    margin-top: 2px;
   }
 
   .Bookmarks-menu {
     display: inline-block;
-    transition: $bookmarks-menu-trans;
-    max-height: 0;
     height: auto;
-    overflow: hidden;
     margin-top: $bookmarks-menu-offset;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     transform: scale(0);
     transform-origin: $bookmarks-menu-trans-origin;
-    opacity: 0;
+    transition: $bookmarks-menu-trans;
   }
 
   &.is-active {
 
     .Bookmarks-toggler {
-      background: #fff;
+      background: $c-light;
       color: $c-dark;
     }
 
     .Bookmarks-menu {
-      max-height: 90%;
-      border: $bookmarks-menu-border;
-      padding: $bookmarks-menu-padding;
-      opacity: 1;
-      transform: scale(1);
       background: $bookmarks-menu-bg;
+      border: $bookmarks-menu-border;
+      max-height: 90%;
+      opacity: 1;
+      padding: $bookmarks-menu-padding;
+      transform: scale(1);
       z-index: $bookmarks-menu-z;
     }
   }
@@ -74,8 +74,8 @@ $bookmarks-menu-z: $g-z-8 !default;
 }
 
 :target {
-  animation-delay: 1s;
   animation: target-fade 3.5s 1;
+  animation-delay: 1s;
 }
 
 .Panel:target {

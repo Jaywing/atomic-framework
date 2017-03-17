@@ -16,17 +16,20 @@
 // *      .round
 // *      .circle
 
+// sass-lint:disable no-important
+
 $radius:  $g-border-radius !default;
 $round:   $g-round-radius !default;
 $circle:  $g-circular-radius !default;
 
-
 .radius {
   border-radius: $radius !important;
 }
+
 .round {
   border-radius: $round !important;
 }
+
 .circle {
   border-radius: $circle !important;
 }

@@ -22,14 +22,12 @@
 /// </article>
 /// ```
 
-
 $media-spacing:     $g-spacer !default;
 $media-golden-sml:  $g-golden-sm !default;
 
-
 .o-Media {
-  display: flex;
   align-items: flex-start;
+  display: flex;
 
   &--bottom {
     align-items: flex-end;
@@ -63,13 +61,13 @@ $media-golden-sml:  $g-golden-sm !default;
 }
 
 .o-Media-figure {
-  padding-right: $media-spacing;
   padding-bottom: $media-spacing;
+  padding-right: $media-spacing;
 
   .o-Media--reverse &,
   .o-Media--alternate:nth-of-type(even) & {
-    padding-right: 0;
     padding-left: $media-spacing;
+    padding-right: 0;
   }
 
   .o-Media--center & {

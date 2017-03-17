@@ -1,37 +1,36 @@
-// scss-lint:disable ImportantRule
+// sass-lint:disable no-important
 @include sm {
 
   .o-SizeSm {
 
     &--full {
-      width: 100% !important;
       flex: none !important;
+      width: 100% !important;
     }
 
     &--1of2 {
-      width: 50% !important;
       flex: none !important;
+      width: 50% !important;
     }
 
     &--1of3 {
-      width: 33.3333% !important;
       flex: none !important;
+      width: 33.3333% !important;
     }
 
     &--2of3 {
-      width: 66.6667% !important;
       flex: none !important;
+      width: 66.6667% !important;
     }
 
     &--1of4 {
-      width: 25% !important;
       flex: none !important;
+      width: 25% !important;
     }
 
     &--3of4 {
-      width: 75% !important;
       flex: none !important;
+      width: 75% !important;
     }
-
   }
 }

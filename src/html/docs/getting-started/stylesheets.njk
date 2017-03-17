@@ -68,7 +68,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 |   ...
 |   |-- trumps.shame.scss               # place for any quick fixes or dirty hacks (must be refactored into the code base eventually)
 |-- docs/                               # place for all the documentation specific styles
-lint.yml                                # config file for scss-lint
+lint.yml                                # config file for sass-lint
 styles.scss                             # main stylesheet
 basic.scss                              # example of multiple stylesheets, if you need to break them up
 docs.scss                               # documentation specific stylesheet</pre>
@@ -266,9 +266,9 @@ If a number clearly has strong meaning, that's a use case for variablising* as w
   <li>Mixins should be documented - with example use cases</li>
 </ul>
 
-<h3>SCSS Lint</h3>
-<p>Atomic comes with a <a href="https://www.npmjs.com/package/gulp-scss-lint">SCSS linter</a> built in. You can view the configuration options in the <code>lint.yml</code> in the root of stylesheet.</p>
-<p>Any errors or warnings will be logged on the console and in a json file called <code>scssReport.json</code> in the logs folder on the project root.</p>
+<h3>SASS Lint</h3>
+<p>Atomic comes with a <a href="https://www.npmjs.com/package/gulp-sass-lint">SASS linter</a> built in. You can view the configuration options in the <code>lint.yml</code> in the root of stylesheet.</p>
+<p>Any errors or warnings will be logged on the console.</p>
 
 <h2 id="section-browser-strategy"><a href="#section-browser-strategy" class="Text--resetLink">Browser strategy</a></h2>
 <p>Atomic is set up to serve older versions of IE (&lt; v10) a separate universal stylesheet.</p>

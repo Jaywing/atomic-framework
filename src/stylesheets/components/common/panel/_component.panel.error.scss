@@ -11,13 +11,12 @@ $panel-box-error-border-color: $c-danger-dark !default;
   }
 
   &.Panel--box {
-    color: $panel-box-error-color;
     background: $panel-box-error-bg;
     border-color: $panel-box-error-border-color;
+    color: $panel-box-error-color;
 
     .Panel-title {
       color: $panel-box-error-color;
     }
   }
-
 }

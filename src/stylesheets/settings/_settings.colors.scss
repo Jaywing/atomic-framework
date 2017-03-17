@@ -20,17 +20,19 @@
 /// With this setup the whole of the sites colour palette can be amended
 /// from within this file.
 
+//sass-lint:disable no-color-keywords
+//sass-lint:disable no-color-literals
 $c-palette: (
-    black:  #000,
-    white:  #fff,
-    blue:   #2561ea,
-    purple: #a530e5,
-    teal:   #2fcde0,
-    amber:  #f9c000,
-    red:    #dd2228,
-    green:  #0b9444,
-    yellow: #e6d593,
-    orange: #be7000
+  black:  #000,
+  white:  #fff,
+  blue:   #2561ea,
+  purple: #a530e5,
+  teal:   #2fcde0,
+  amber:  #f9c000,
+  red:    #dd2228,
+  green:  #0b9444,
+  yellow: #e6d593,
+  orange: #be7000
 ) !default;
 
 // Global color variables
@@ -85,13 +87,13 @@ $c-disabled-dark: $c-light-30 !default;
 
 // Brand colors for social channels
 $g-social-colors: (
-    facebook:   #3b5998,
-    twitter:    #0084b4,
-    googlePlus: #dc4a38,
-    linkedIn:   #1f88be,
-    youtube:    #cc181e,
-    instagram:  #49769c,
-    pinterest:  #00aced
+  facebook:   #3b5998,
+  twitter:    #0084b4,
+  googlePlus: #dc4a38,
+  linkedIn:   #1f88be,
+  youtube:    #cc181e,
+  instagram:  #49769c,
+  pinterest:  #00aced
 ) !default;
 
 $c-subtle-trans-dark: rgba(0, 0, 0, .03) !default;

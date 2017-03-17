@@ -14,16 +14,15 @@ $dd-last-child-margin: 0 0 $g-spacer 0 !default;
 $dd-font-style: italic !default;
 $dd-font-weight: normal !default;
 
-
 .Definition {
   @include trim-child-margins;
 
   margin: $dl-margin;
 
   dt {
-    margin: $dt-margin;
     font-style: $dt-font-style;
     font-weight: $dt-font-weight;
+    margin: $dt-margin;
 
     &:first-child {
       margin-top: 0;
@@ -31,8 +30,8 @@ $dd-font-weight: normal !default;
   }
 
   dd {
-    margin: $dd-margin;
     font-style: $dd-font-style;
     font-weight: $dd-font-weight;
+    margin: $dd-margin;
   }
 }

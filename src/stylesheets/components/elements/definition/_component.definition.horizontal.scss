@@ -4,18 +4,18 @@ $ddh-delimiter-padding: 0 0 0 $g-spacer-xxs !default;
 $ddh-delimiter: ':' !default;
 $ddh-width: 25% !default;
 $ddh-dt-margin: 0 !default;
-$ddh-dt-padding: 0 $g-spacer-sm 0 0;
+$ddh-dt-padding: 0 $g-spacer-sm 0 0 !default;
 
 //Horizontal list variant
 .Definition--horizontal {
   @include clearfix;
 
   dt {
-    margin: $ddh-dt-margin;
-    float: left;
     clear: left;
-    width: $ddh-width;
+    float: left;
+    margin: $ddh-dt-margin;
     padding: $ddh-dt-padding;
+    width: $ddh-width;
     word-break: break-all;
 
     @if $ddh-delimiter != '' {
@@ -27,15 +27,14 @@ $ddh-dt-padding: 0 $g-spacer-sm 0 0;
   }
 
   dd {
-    margin: $ddh-margin;
     list-style: decimal inside;
+    margin: $ddh-margin;
     padding-left: $ddh-width;
 
     &::after {
+      clear: both;
       content: '';
       display: block;
-      clear: both;
     }
   }
-
 }

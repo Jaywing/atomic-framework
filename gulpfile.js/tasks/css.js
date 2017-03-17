@@ -10,6 +10,7 @@ var handleErrors = require('../lib/handleErrors')
 var autoprefixer = require('gulp-autoprefixer')
 var path         = require('path')
 var cssnano      = require('gulp-cssnano')
+var sassLint     = require('gulp-sass-lint')
 
 var paths = {
   src: path.join(config.root.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
@@ -18,6 +19,9 @@ var paths = {
 
 var cssTask = function () {
   return gulp.src(paths.src)
+    .pipe(gulpif(!global.production, sassLint(config.tasks.css.lint)))
+    .pipe(gulpif(!global.production, sassLint.format()))
+    .pipe(gulpif(!global.production, sassLint.failOnError()))
     .pipe(gulpif(!global.production, sourcemaps.init()))
     .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)

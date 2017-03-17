@@ -12,8 +12,8 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
   border-bottom: $menu-tab-border;
 
   .Menu-item {
-    padding: 0;
     margin: 0 $g-spacer-xxs;
+    padding: 0;
 
     &:first-child {
       margin-left: 0;
@@ -35,9 +35,9 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
   .is-active .Menu-link,
   .Menu-link.is-active {
     background: $menu-tab-link-active-bg;
-    color: $menu-tab-link-active-color;
     border: $menu-tab-link-border-active;
     border-bottom: 0;
+    color: $menu-tab-link-active-color;
     margin-bottom: -($menu-border-width + 1);
     padding-bottom: ($menu-tab-link-padding-y);
   }
@@ -48,12 +48,12 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
 
     .is-active .Menu-link,
     .Menu-link.is-active {
-      position: relative;
-      left: -($menu-border-width);
-      border-radius: $menu-tab-link-border-radius 0 0 $menu-tab-link-border-radius;
-      margin-bottom: 0;
       border: $menu-tab-link-border-active;
+      border-radius: $menu-tab-link-border-radius 0 0 $menu-tab-link-border-radius;
       border-right: 0;
+      left: -($menu-border-width);
+      margin-bottom: 0;
+      position: relative;
     }
   }
 }

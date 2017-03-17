@@ -8,21 +8,21 @@ $nav-responsive-menu-closed-maxheight: 2.2rem;
 $nav-responsive-menu-open-maxheight: 32.4rem;
 
 .NavResponsive {
-  position: relative;
   padding: $nav-responsive-padding;
+  position: relative;
 
   .ToggleButton {
     position: absolute;
-    top: $nav-responsive-toggle-top;
     right: $nav-responsive-toggle-right;
+    top: $nav-responsive-toggle-top;
     z-index: $nav-responsive-toggle-zindex;
   }
 
   .Menu {
     margin: 0;
-    position: relative;
-    overflow: hidden;
     max-height: $nav-responsive-menu-closed-maxheight;
+    overflow: hidden;
+    position: relative;
   }
 
   &.is-active {

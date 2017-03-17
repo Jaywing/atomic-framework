@@ -3,7 +3,6 @@ $panel-box-success-color: $c-success-dark !default;
 $panel-box-success-bg: $c-success-light-50 !default;
 $panel-box-success-border-color: $c-success-dark !default;
 
-
 .Panel--success {
   color: $panel-success-color;
 
@@ -12,13 +11,12 @@ $panel-box-success-border-color: $c-success-dark !default;
   }
 
   &.Panel--box {
-    color: $panel-box-success-color;
     background: $panel-box-success-bg;
     border-color: $panel-box-success-border-color;
+    color: $panel-box-success-color;
 
     .Panel-title {
       color: $panel-box-success-color;
     }
   }
-
 }

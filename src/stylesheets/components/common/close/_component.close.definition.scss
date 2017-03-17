@@ -3,28 +3,26 @@ $close-alt-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 0 6px rgba(0, 0, 0, .3) !defau
 $close-hover-color: $c-light-50 !default;
 
 .Close {
+  background: none;
+  border: 0;
   display: inline-block;
-  width: $close-size;
   height: $close-size;
   line-height: $close-size;
+  padding: 0;
   text-align: center;
   vertical-align: middle;
-
-  padding: 0;
-  border: 0;
-  background: none;
+  width: $close-size;
 
   &:focus,
   &:hover,
   &:active {
-    outline: none;
     cursor: pointer;
+    outline: none;
 
     svg {
       fill: $close-hover-color;
     }
   }
-
 }
 
 .Close--alt {

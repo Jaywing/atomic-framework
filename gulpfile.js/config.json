@@ -34,6 +34,7 @@
       },
       "extractSharedJs": false
     },
+
     "css": {
       "src": "stylesheets",
       "dest": "assets/stylesheets",
@@ -45,6 +46,18 @@
         "includePaths": [
           "./node_modules/normalize.css"
         ]
+      },
+      "lint": {
+        "options": {
+          "formatter": "stylish"
+        },
+        "files": {
+          "ignore": [
+            "**/vendor/*.scss",
+            "**/docs/*.scss"
+          ]
+        },
+        "configFile": "src/stylesheets/lint.yml"
       },
       "extensions": ["sass", "scss", "css"]
     },

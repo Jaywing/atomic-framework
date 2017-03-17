@@ -38,12 +38,12 @@ $menu-header-hover-color: $link-hover-color !default;
   @include trim-child-margins;
   @include reset-list;
 
-  margin: $menu-margin -($menu-item-padding);
-  width: 100%;
-  max-width: 100%;
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  margin: $menu-margin -($menu-item-padding);
+  max-width: 100%;
+  width: 100%;
 
   input,
   a,
@@ -80,14 +80,14 @@ $menu-header-hover-color: $link-hover-color !default;
   padding: $menu-item-padding;
 
   &--right {
-    // scss-lint:disable ImportantRule
     display: flex;
+    // sass-lint:disable no-important
     margin-left: auto !important;
   }
 
   &--left {
-    // scss-lint:disable ImportantRule
     display: flex;
+    // sass-lint:disable no-important
     margin-right: auto !important;
   }
 
@@ -102,17 +102,17 @@ $menu-header-hover-color: $link-hover-color !default;
 }
 
 .Menu-link {
+  @include color-swap-on-hover(
+    $menu-link-color $menu-link-bg,
+    $menu-link-hover-color $menu-link-hover-bg,
+    $menu-link-trans-speed
+  );
+
+  border-radius: $menu-link-border-radius;
   display: block;
   padding: $menu-link-padding;
-  text-decoration: $menu-link-text-decoration;
   text-align: $menu-link-text-align;
-  border-radius: $menu-link-border-radius;
-
-  @include color-swap-on-hover(
-          $menu-link-color $menu-link-bg,
-          $menu-link-hover-color $menu-link-hover-bg,
-          $menu-link-trans-speed
-  );
+  text-decoration: $menu-link-text-decoration;
 
   .Icon svg {
     fill: $menu-link-color;
@@ -121,27 +121,28 @@ $menu-header-hover-color: $link-hover-color !default;
   .is-active > &,
   &.is-active {
     @include color-swap-on-hover(
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-trans-speed
+      $menu-link-active-color $menu-link-active-bg,
+      $menu-link-active-color $menu-link-active-bg,
+      $menu-link-trans-speed
     );
   }
 
 }
 
 .Menu-header {
+  color: $menu-header-color;
   display: block;
+  font-weight: $menu-header-font-weight;
   min-width: 100%;
   padding: $menu-header-padding;
-  font-weight: $menu-header-font-weight;
-  color: $menu-header-color;
 
   a {
     @include color-swap-on-hover(
-            $menu-header-color,
-            $menu-header-hover-color,
-            $menu-link-trans-speed
+      $menu-header-color,
+      $menu-header-hover-color,
+      $menu-link-trans-speed
     );
+
     text-decoration: none;
   }
 }

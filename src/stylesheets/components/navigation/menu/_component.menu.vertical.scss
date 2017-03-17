@@ -8,10 +8,10 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
 
   .Menu-item {
     flex: 0 0 100%;
+    margin: $g-spacer-xxs 0;
     max-width: 100%;
     padding: 0;
     text-align: left;
-    margin: $g-spacer-xxs 0;
   }
 
   .Menu-link {
@@ -22,8 +22,8 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
   }
 
   .Menu-header {
-    padding: $menu-vertical-title-padding;
     margin: $menu-vertical-title-margin;
+    padding: $menu-vertical-title-padding;
 
     .Menu-item:first-child & {
       margin-top: 0;
@@ -44,16 +44,16 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     .Menu-item,
     .Menu-item--left {
       text-align: right;
+
       .Menu-header {
         display: block;
-        width: 100%;
         text-align: right;
+        width: 100%;
       }
     }
   }
-  &.Menu--center {
-    .Menu-item {
-      text-align: center;
-    }
+
+  &.Menu--center .Menu-item {
+    text-align: center;
   }
 }

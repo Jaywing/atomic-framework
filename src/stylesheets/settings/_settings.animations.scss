@@ -12,10 +12,11 @@
 
 $target-fade-bg: $c-highlight !default;
 
+$target-fade-from-color: rgba($target-fade-bg, .4);
+$target-fade-to-color: rgba($target-fade-bg, 0);
 /// Settings for common animation.
 
 @keyframes bounceInUp {
-
   0% {
     opacity: 0;
     transform: translateY(2000px);
@@ -33,11 +34,9 @@ $target-fade-bg: $c-highlight !default;
   100% {
     transform: translateY(0);
   }
-
 }
 
 @keyframes spin {
-
   from {
     transform: rotate(0deg);
   }
@@ -45,11 +44,9 @@ $target-fade-bg: $c-highlight !default;
   to {
     transform: rotate(360deg);
   }
-
 }
 
 @keyframes popin {
-
   from {
     transform: scale(.95) translateY(10px);
   }
@@ -98,10 +95,10 @@ $target-fade-bg: $c-highlight !default;
 
 @keyframes target-fade {
   0% {
-    background-color: rgba($target-fade-bg, .4);
+    background-color: $target-fade-from-color;
   }
 
   100% {
-    background-color: rgba($target-fade-bg, 0);
+    background-color: $target-fade-to-color;
   }
 }

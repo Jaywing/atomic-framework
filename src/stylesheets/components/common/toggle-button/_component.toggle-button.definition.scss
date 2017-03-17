@@ -1,13 +1,11 @@
-$toggleButton-border: 1px solid $c-strong-trans-dark !default;
-$toggleButton-bg: transparent !default;
-$toggleButton-radius: $g-border-radius !default;
-
+$toggle-button-border: 1px solid $c-strong-trans-dark !default;
+$toggle-button-bg: transparent !default;
+$toggle-button-radius: $g-border-radius !default;
 
 .ToggleButton {
-
-  background: $toggleButton-bg;
-  border: $toggleButton-border;
-  border-radius: $toggleButton-radius;
+  background: $toggle-button-bg;
+  border: $toggle-button-border;
+  border-radius: $toggle-button-radius;
   min-height: 44px;
   min-width: 44px;
 
@@ -20,6 +18,7 @@ $toggleButton-radius: $g-border-radius !default;
     .ToggleButton-close {
       display: inline-block;
     }
+
     .ToggleButton-init {
       display: none;
     }
@@ -28,6 +27,6 @@ $toggleButton-radius: $g-border-radius !default;
 
 .ToggleButton--hideText {
   .ToggleButton-text {
-    @include hide-visually();
+    @include hide-visually;
   }
 }

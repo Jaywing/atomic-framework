@@ -12,14 +12,12 @@
 
 $button-secondary-bg-color:         $c-dark-15 !default;
 $button-secondary-color:            $c-light !default;
-
 $button-secondary-bg-color-hover:   lighten($button-secondary-bg-color, 7.5%) !default;
 $button-secondary-color-hover:      $button-secondary-color !default;
-
 $button-secondary-bg-color-active:  lighten($button-secondary-bg-color-hover, 7.5%) !default;
 $button-secondary-color-active:     $button-secondary-color !default;
-
 $button-secondary-trans-speed:      $button-trans-speed !default;
+$button-secondary-disabled-color:   rgba($button-secondary-color, .65) !default;
 
 
 .Button--secondary {
@@ -28,9 +26,9 @@ $button-secondary-trans-speed:      $button-trans-speed !default;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
-            $button-secondary-color $button-secondary-bg-color,
-            $button-secondary-color-hover $button-secondary-bg-color-hover,
-            $button-secondary-trans-speed
+      $button-secondary-color $button-secondary-bg-color,
+      $button-secondary-color-hover $button-secondary-bg-color-hover,
+      $button-secondary-trans-speed
     );
 
     &:active {
@@ -52,7 +50,7 @@ $button-secondary-trans-speed:      $button-trans-speed !default;
 
   &[disabled] {
     background: lighten($button-secondary-bg-color, 15%);
-    color: rgba($button-secondary-color, .65);
+    color: $button-secondary-disabled-color;
   }
 
   svg {

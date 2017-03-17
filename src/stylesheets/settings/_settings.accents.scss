@@ -11,17 +11,10 @@
 ////
 
 /// Reusable settings for common borders, gradients, box-shadows etc.
-
 $c-border: $c-very-strong-trans-dark !default;
-
 $g-border-radius:   4px !default;
 $g-round-radius:    2000px !default;
 $g-circular-radius: 50% !default;
-
 $g-subtle-gradient: linear-gradient(transparent, $c-trans-dark) !default;
-
 $g-subtle-shadow: 0 1px 2px 0 $c-border !default;
-
-$g-floating-shadow:
-  0 2px 4px 0 $c-strong-trans-dark,
-  0 2px 10px 0 $c-trans-dark !default;
+$g-floating-shadow: 0 2px 4px 0 $c-strong-trans-dark, 0 2px 10px 0 $c-trans-dark !default;

@@ -5,7 +5,7 @@ $form-label-weight: $g-weight-bold !default;
 $form-input-padding: $g-spacer-sm !default;
 $form-input-bg: $c-light !default;
 $form-input-border: 1px solid $c-light-15 !default;
-$form-input-color: $c-dark !default;
+$form-input-color: $c-dark-15 !default;
 $form-input-radius: $g-border-radius !default;
 
 $form-blank-bg: transparent !default;
@@ -28,7 +28,6 @@ $form-success-color: $c-success !default;
 $form-status-padding: $g-spacer-sm 0 !default;
 
 .Form {
-
   fieldset {
     border: 0;
     margin: 0;
@@ -37,18 +36,18 @@ $form-status-padding: $g-spacer-sm 0 !default;
 
   legend {
     display: block;
-    width: 100%;
-    padding: 0 0 $g-spacer;
     line-height: 2;
+    padding: 0 0 $g-spacer;
+    width: 100%;
 
-    &:after {
+    &::after {
+      border-bottom: 1px solid $c-dark-30;
       content: '';
       display: block;
-      border-bottom: 1px solid #ddd;
     }
   }
 
-  input:not([type=radio]):not([type=checkbox]),
+  input:not([type='radio']):not([type='checkbox']),
   select {
     vertical-align: middle;
   }
@@ -60,43 +59,41 @@ $form-status-padding: $g-spacer-sm 0 !default;
 .Form-text,
 .Form-check,
 .Form-radio {
+  background: $form-input-bg;
+  border: $form-input-border;
+  border-radius: $form-input-radius;
+  color: $form-input-color;
   max-width: 100%;
   padding: $form-input-padding;
-  border: $form-input-border;
-  background: $form-input-bg;
-  color: $form-input-color;
-  border-radius: $form-input-radius;
 
   &--blank {
+    background: $form-blank-bg;
     border-color: $form-blank-border-color;
     border-style: $form-blank-border-style;
-    background: $form-blank-bg;
     outline: none;
 
     &:focus {
       border-color: $form-blank-focus-border-color;
     }
-
   }
 
   &:disabled {
-    border-color: $form-disabled-border-color;
     background-color: $form-disabled-bg;
+    border-color: $form-disabled-border-color;
     color: $form-disabled-color;
   }
 
   &--danger {
-    border-color: $form-danger-border-color;
     background: $form-danger-bg;
+    border-color: $form-danger-border-color;
     color: $form-danger-color;
   }
 
   &--success {
-    border-color: $form-success-border-color;
     background: $form-success-bg;
+    border-color: $form-success-border-color;
     color: $form-success-color;
   }
-
 }
 
 .Form-input,
@@ -107,7 +104,6 @@ $form-status-padding: $g-spacer-sm 0 !default;
   &--inline {
     width: auto;
   }
-
 }
 
 .Form-text {
@@ -125,6 +121,7 @@ $form-status-padding: $g-spacer-sm 0 !default;
 
 .Form-status {
   padding: $form-status-padding;
+
   &--danger {
     color: $form-danger-color;
   }

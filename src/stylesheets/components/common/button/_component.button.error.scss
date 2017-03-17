@@ -2,6 +2,7 @@ $button-error-bg: $c-danger !default;
 $button-error-color: $c-light !default;
 $button-error-hover-bg: darken($button-error-bg, 10%) !default;
 $button-error-trans-speed: $g-trans-link-speed !default;
+$button-error-disabled-color: rgba($button-error-color, .8) !default;
 
 .Button--error {
 
@@ -9,9 +10,9 @@ $button-error-trans-speed: $g-trans-link-speed !default;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
-            $button-error-color $button-error-bg,
-            $button-error-color $button-error-hover-bg,
-            $button-error-trans-speed
+      $button-error-color $button-error-bg,
+      $button-error-color $button-error-hover-bg,
+      $button-error-trans-speed
     );
   }
 
@@ -26,11 +27,10 @@ $button-error-trans-speed: $g-trans-link-speed !default;
 
   &[disabled] {
     background: lighten($button-error-bg, 15%);
-    color: rgba($button-error-color, .8);
+    color: $button-error-disabled-color;
   }
 
   svg {
     fill: $button-error-color;
   }
-
 }

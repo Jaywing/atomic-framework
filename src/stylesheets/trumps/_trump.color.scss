@@ -29,9 +29,10 @@
 // *      .bgError
 // *      .bgSuccess
 
+// sass-lint:disable no-important
+
 // Generates classes for every color in $c-palette. Eg: .c-black, .c-purple;
 @include generate-color-classes;
-
 
 .colorDark {
   color: $c-dark !important;

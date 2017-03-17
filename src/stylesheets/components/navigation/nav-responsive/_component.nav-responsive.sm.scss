@@ -1,10 +1,12 @@
 @include sm {
-  .NavResponsiveSm, .NavResponsiveSm.is-active {
+  .NavResponsiveSm,
+  .NavResponsiveSm.is-active {
     padding-top: 0;
 
     .ToggleButton {
       display: none;
     }
+
     .Menu {
       max-height: none;
     }

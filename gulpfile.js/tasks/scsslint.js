@@ -7,7 +7,7 @@ var scsslint     = require('gulp-scss-lint')
 var cache        = require('gulp-cached')
 
 var paths = {
-  src:    path.join(config.root.src, config.tasks.scsslint.src, '/**/*.{' + config.tasks.scsslint.extensions + '}'),
+  src:    path.join(config.root.src, config.tasks.scsslint.src, '/**/*.scss'),
   config: path.join(config.root.src, config.tasks.scsslint.src, config.tasks.scsslint.config)
 }
 

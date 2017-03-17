@@ -21,7 +21,7 @@
 /// group-d: above 768px and a touch device (.touch)
 ///
 /// *Note: settings.media-queries.scss must be import before this one
-
+//
 $base-font-size: $g-base-font-size !default;
 $base-line-height: 1.33 !default;
 
@@ -29,79 +29,80 @@ $base-line-height: 1.33 !default;
 $gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs') !default;
 $gel-bp-type-c: map-get($g-mq-breakpoints, 'md') !default;
 
+// sass-lint:disable indentation
 $gel-type-settings: (
-    'canon': (
-        'group-a': (
-            'font-size': 28px,
-            'line-height': 32px
-        ),
-        'group-b': (
-            'font-size': 32px,
-            'line-height': 36px
-        ),
-        'group-c': (
-            'font-size': 52px,
-            'line-height': 56px
-        ),
-        'group-d': (
-            'font-size': 44px,
-            'line-height': 48px
-        )
+  'canon': (
+    'group-a': (
+      'font-size': 28px,
+      'line-height': 32px
     ),
-    'canon-bold': (
-        'group-a': (
-            'font-weight': bold,
-            'letter-spacing': -1px
-        )
+    'group-b': (
+      'font-size': 32px,
+      'line-height': 36px
     ),
-    'trafalgar': (
-        'group-a': (
-            'font-size': 20px,
-            'line-height': 24px
-        ),
-        'group-b': (
-            'font-size': 24px,
-            'line-height': 28px
-        ),
-        'group-c': (
-            'font-size': 36px,
-            'line-height': 40px
-        ),
-        'group-d': (
-            'font-size': 32px,
-            'line-height': 36px
-        )
+    'group-c': (
+      'font-size': 52px,
+      'line-height': 56px
     ),
-    'trafalgar-bold': (
-        'group-a': (
-            'font-weight': bold,
-            'letter-spacing': -1px
-        )
+    'group-d': (
+      'font-size': 44px,
+      'line-height': 48px
+    )
+  ),
+  'canon-bold': (
+    'group-a': (
+      'font-weight': bold,
+      'letter-spacing': -1px
+    )
+  ),
+  'trafalgar': (
+    'group-a': (
+      'font-size': 20px,
+      'line-height': 24px
     ),
-    'double-pica': (
-        'group-a': (
-            'font-size': 20px,
-            'line-height': 24px
-        ),
-        'group-c': (
-            'font-size': 26px,
-            'line-height': 30px
-        ),
-        'group-d': (
-            'font-size': 24px,
-            'line-height': 28px
-        )
+    'group-b': (
+      'font-size': 24px,
+      'line-height': 28px
     ),
-    'double-pica-bold': (
-        'group-a': (
-            'font-weight': bold,
-            'letter-spacing': -1px
-        )
+    'group-c': (
+      'font-size': 36px,
+      'line-height': 40px
     ),
-    'great-primer': (
+    'group-d': (
+      'font-size': 32px,
+      'line-height': 36px
+    )
+  ),
+  'trafalgar-bold': (
+    'group-a': (
+      'font-weight': bold,
+      'letter-spacing': -1px
+    )
+  ),
+  'double-pica': (
+    'group-a': (
+      'font-size': 20px,
+      'line-height': 24px
+    ),
+    'group-c': (
+      'font-size': 26px,
+      'line-height': 30px
+    ),
+    'group-d': (
+      'font-size': 24px,
+      'line-height': 28px
+    )
+  ),
+  'double-pica-bold': (
+      'group-a': (
+        'font-weight': bold,
+        'letter-spacing': -1px
+      )
+  ),
+  'great-primer': (
         'group-a': (
-            'font-size': 18px,
-            'line-height': 22px
+          'font-size': 18px,
+          'line-height': 22px
         ),
         'group-c': (
             'font-size': 21px,

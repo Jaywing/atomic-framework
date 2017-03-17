@@ -81,7 +81,7 @@
       "category": "Navigation",
       "section": "extended",
       "items": [
-        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": true }
+        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": false }
       ]
     },
     {
