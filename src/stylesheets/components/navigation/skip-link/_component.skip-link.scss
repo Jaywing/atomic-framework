@@ -5,24 +5,24 @@ $skiplink-bg: rgba($c-light, .85) !default;
 $skiplink-padding: $g-spacer-sm !default;
 
 .SkipLink {
+  background: $skiplink-bg;
   height: 1px;
   left: -1000px;
   overflow: hidden;
+  padding: $skiplink-padding;
   position: absolute;
   text-align: left;
   top: -1000px;
   transition: $skiplink-trans;
   width: 1px;
-  padding: $skiplink-padding;
-  background: $skiplink-bg;
 
   &:focus,
   &:hover,
   &:active {
-    text-decoration: none;
     height: auto;
     left: $skiplink-active-pos;
     overflow: visible;
+    text-decoration: none;
     top: $skiplink-active-pos;
     width: auto;
     z-index: $skiplink-zindex;
