@@ -3,7 +3,7 @@ $text-lead-color: inherit !default;
 $text-disabled-color: $c-disabled-dark !default;
 $text-disabled-cursor: not-allowed !default;
 
-// scss-lint:disable ImportantRule
+// sass-lint:disable no-important
 .Text {
 
   &--lead {
@@ -66,8 +66,8 @@ $text-disabled-cursor: not-allowed !default;
   &--resetLink > a:hover,
   &--resetLink > a:focus {
     color: inherit !important;
-    text-decoration: none !important;
     cursor: text !important;
+    text-decoration: none !important;
   }
 
   /**
@@ -79,9 +79,8 @@ $text-disabled-cursor: not-allowed !default;
  * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
  */
   &--kern {
-    font-feature-settings: "kern" 1; /* 1 */
+    font-feature-settings: 'kern' 1; /* 1 */
     font-kerning: normal; /* 2 */
     text-rendering: optimizeLegibility; /* 3 */
   }
-
 }

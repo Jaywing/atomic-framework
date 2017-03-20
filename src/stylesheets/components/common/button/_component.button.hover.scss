@@ -12,6 +12,7 @@
 
 $button-hover-hover-bg: $c-light-30 !default;
 $button-hover-color: $base-text-color !default;
+$button-hover-disabled-color: rgba($button-hover-color, .65) !default;
 
 .Button--hover {
   &:not([disabled]) {
@@ -29,6 +30,6 @@ $button-hover-color: $base-text-color !default;
 
   &[disabled] {
     background: transparent;
-    color: rgba($button-hover-color, .65);
+    color: $button-hover-disabled-color;
   }
 }

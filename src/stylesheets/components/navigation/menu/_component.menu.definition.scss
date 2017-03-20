@@ -24,8 +24,10 @@ $menu-item-active-font-weight: $g-weight-bold !default;
 $menu-link-padding: $g-spacer-sm !default;
 $menu-link-font-weight: $g-weight-normal !default;
 
-$menu-title-padding: $g-spacer-sm !default;
-$menu-title-font-weight: $g-weight-bold !default;
+$menu-header-padding: $g-spacer-sm !default;
+$menu-header-font-weight: $g-weight-bold !default;
+$menu-header-color: $base-text-color !default;
+$menu-header-hover-color: $link-hover-color !default;
 
 
 // ========================================================================
@@ -36,12 +38,12 @@ $menu-title-font-weight: $g-weight-bold !default;
   @include trim-child-margins;
   @include reset-list;
 
-  margin: $menu-margin -($menu-item-padding);
-  width: 100%;
-  max-width: 100%;
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  margin: $menu-margin -($menu-item-padding);
+  max-width: 100%;
+  width: 100%;
 
   input,
   a,
@@ -77,51 +79,70 @@ $menu-title-font-weight: $g-weight-bold !default;
   flex: 0 0 auto;
   padding: $menu-item-padding;
 
-  &.Menu-link {
-    margin: $menu-item-padding;
-  }
-
   &--right {
-    // scss-lint:disable ImportantRule
     display: flex;
+    // sass-lint:disable no-important
     margin-left: auto !important;
   }
 
   &--left {
-    // scss-lint:disable ImportantRule
     display: flex;
+    // sass-lint:disable no-important
     margin-right: auto !important;
+  }
+
+}
+
+.Menu .Menu-item--flush {
+  > .Menu-link,
+  > .Menu-header {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .Menu-link {
+  @include color-swap-on-hover(
+    $menu-link-color $menu-link-bg,
+    $menu-link-hover-color $menu-link-hover-bg,
+    $menu-link-trans-speed
+  );
+
+  border-radius: $menu-link-border-radius;
   display: block;
   padding: $menu-link-padding;
-  text-decoration: $menu-link-text-decoration;
   text-align: $menu-link-text-align;
-  border-radius: $menu-link-border-radius;
+  text-decoration: $menu-link-text-decoration;
 
-  &:not(.Text--disabled) {
-    @include color-swap-on-hover(
-            $menu-link-color $menu-link-bg,
-            $menu-link-hover-color $menu-link-hover-bg,
-            $menu-link-trans-speed
-    );
+  .Icon svg {
+    fill: $menu-link-color;
   }
 
-
-  .is-active &,
+  .is-active > &,
   &.is-active {
     @include color-swap-on-hover(
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-trans-speed
+      $menu-link-active-color $menu-link-active-bg,
+      $menu-link-active-color $menu-link-active-bg,
+      $menu-link-trans-speed
     );
   }
+
 }
 
-.Menu-title {
+.Menu-header {
+  color: $menu-header-color;
   display: block;
-  padding: $menu-title-padding;
-  font-weight: $menu-title-font-weight;
+  font-weight: $menu-header-font-weight;
+  min-width: 100%;
+  padding: $menu-header-padding;
+
+  a {
+    @include color-swap-on-hover(
+      $menu-header-color,
+      $menu-header-hover-color,
+      $menu-link-trans-speed
+    );
+
+    text-decoration: none;
+  }
 }

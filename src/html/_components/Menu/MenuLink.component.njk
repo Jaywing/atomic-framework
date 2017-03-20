@@ -1,0 +1,21 @@
+{% from '_macros/helpers.njk' import icon %}
+
+{% macro MenuLink(item) %}
+
+  {% set classList="Menu-link" %}
+  {% if item.linkClassList %}
+    {% set classList = item.linkClassList %}
+  {% endif %}
+
+  {% if item.disabled %}
+    {% set classList = classList + ' Menu-link--disabled' %}
+  {% endif %}
+
+  <a href="{{ item.url }}" class="{{ classList }}">
+    {% if item.icon %}
+      {{ icon(item.icon) }}
+    {% endif %}
+    {{ item.text }}
+  </a>
+
+{% endmacro %}

@@ -1,11 +1,11 @@
-$overlay-icon-color: map-get($c-palette, white) !default;
+$overlay-icon-color: $c-light !default;
 
 .Overlay-icon {
+  align-content: stretch;
+  align-items: center;
   display: flex;
+  fill: $overlay-icon-color;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-content: stretch;
-  align-items: center;
-  fill: $overlay-icon-color;
 }

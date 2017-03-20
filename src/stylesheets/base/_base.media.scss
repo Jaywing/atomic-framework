@@ -10,7 +10,6 @@
 /// @create   01/09/2016
 ////
 
-
 img {
   vertical-align: middle;
 }
@@ -20,9 +19,7 @@ canvas,
 img,
 svg,
 video {
-  max-width: 100%;
-  height: auto;
   box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
 }
-
-

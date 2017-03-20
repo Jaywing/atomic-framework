@@ -10,7 +10,7 @@
 /// @create   15/06/2016
 ////
 
-///
+// sass-lint:disable no-important
 
 // can be used on body to lock scrolling when an overlay is
 // used
@@ -31,8 +31,8 @@
 
 .scrollYauto,
 .scrollY {
-  overflow-y: auto;
   overflow-x: none;
+  overflow-y: auto;
   width: 100%;
 }
 

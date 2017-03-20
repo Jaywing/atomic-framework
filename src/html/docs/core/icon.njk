@@ -54,7 +54,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-Grid o-Grid--gutters Text--center">
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('eye', '0 0 1 1', 'Icon--sm') }}
+      {{ icon('eye', 'Icon--sm', '0 0 1 1') }}
       <div><small>.Icon--sm</small></div>
     </div>
 
@@ -64,17 +64,17 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('eye', '0 0 1 1', 'Icon--lg') }}
+      {{ icon('eye', 'Icon--lg') }}
       <div><small>.Icon--lg</small></div>
     </div>
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('eye', '0 0 1 1', 'Icon--xl') }}
+      {{ icon('eye', 'Icon--xl') }}
       <div><small>.Icon--xl</small></div>
     </div>
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('eye', '0 0 1 1', 'Icon--xxl') }}
+      {{ icon('eye', 'Icon--xxl') }}
       <div><small>.Icon--xxl</small></div>
     </div>
 
@@ -83,11 +83,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--sm&#39; &#125;&#125;
+  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--sm&#39; &#125;&#125;
 &#123;&#123; icon(&#39;eye&#39;) &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--lg&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--xl&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;0 0 1 1&#39;, &#39;Icon--xxl&#39; &#125;&#125;</code></pre>
+&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--lg&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xl&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xxl &#125;&#125;</code></pre>
 </div>
 
 <h3>Spin modifier</h3>
@@ -97,7 +97,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-Grid o-Grid--gutters Text--center">
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('spinner-3', '0 0 1 1', 'Icon--lg Icon--spin') }}
+      {{ icon('spinner-3', 'Icon--lg Icon--spin') }}
       <div><small>.Icon--spin</small></div>
     </div>
 
@@ -106,12 +106,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;0 0 1 1&#39;, &#39;Icon--spin Icon--lg&#39; &#125;&#125;</code></pre>
+  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;Icon--spin Icon--lg&#39; &#125;&#125;</code></pre>
 </div>
 
 
 {% endblock %}
 
 {% block javascript %}
-<script src="/javascripts/app.js"></script>
+<script src="/assets/javascripts/app.js" async></script>
 {% endblock %}

@@ -12,9 +12,7 @@ module.exports = function(publicPath, dest, filename) {
 
       for (var key in chunks) {
         var originalFilename = key + '.js'
-        var chunkName = typeof chunks[key] === 'string' ? chunks[key] : chunks[key][0]
-        console.log(chunkName);
-        manifest[path.join(publicPath, originalFilename)] = path.join(publicPath, chunkName)
+        manifest[path.join(publicPath, originalFilename)] = path.join(publicPath, chunks[key])
       }
 
       fs.writeFileSync(

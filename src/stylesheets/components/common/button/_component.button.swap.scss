@@ -4,8 +4,8 @@ $button-swap-horizontal-padding: $g-spacer !default;
 
 // scss-lint:disable NestingDepth
 .Button--swap {
-  position: relative;
   overflow: hidden;
+  position: relative;
   text-align: center;
 
   .Button-content:not(&-content--hidden) {
@@ -14,10 +14,10 @@ $button-swap-horizontal-padding: $g-spacer !default;
   }
 
   .Button-content--hidden {
-    position: absolute;
-    width: 100%;
     padding-left: $button-swap-horizontal-padding;
     padding-right: $button-swap-horizontal-padding;
+    position: absolute;
+    width: 100%;
   }
 
   // Horizontal
@@ -28,9 +28,9 @@ $button-swap-horizontal-padding: $g-spacer !default;
     }
 
     &--hidden {
-      top: 50%;
       left: auto;
       right: -100%;
+      top: 50%;
       transform: translateY(-50%);
     }
   }
@@ -45,7 +45,6 @@ $button-swap-horizontal-padding: $g-spacer !default;
   &:not(.Button--swapToggle) {
     &:hover,
     &:focus {
-
       .Button-content:not(.Button-content--hidden) {
         left: auto;
         right: 200%;
@@ -82,35 +81,33 @@ $button-swap-horizontal-padding: $g-spacer !default;
     }
 
     .Button-content:not(.Button-content--hidden) {
-      transform: translateY(0%);
       right: auto;
       text-align: center;
+      transform: translateY(0%);
     }
 
     .Button-content--hidden {
-      top: -50%;
       left: 0;
       right: auto;
+      top: -50%;
     }
 
     &:not(.Button--swapToggle) {
       &.Button--vertical:hover,
       &.Button--vertical:focus {
         .Button-content:not(.Button-content--hidden) {
-          transform: translateY(200%);
           right: auto;
+          transform: translateY(200%);
         }
 
         .Button-content--hidden {
-          top: 50%;
-          right: auto;
           left: 0;
+          right: auto;
+          top: 50%;
         }
       }
     }
   }
-
-
 
   &.Button--aniFade {
     .Button-content {
@@ -120,14 +117,14 @@ $button-swap-horizontal-padding: $g-spacer !default;
 
     .Button-content:not(.Button-content--hidden) {
       left: auto;
-      right: auto;
       opacity: 1;
+      right: auto;
       transform: scale(1);
     }
 
     .Button-content--hidden {
-      opacity: 0;
       left: 0;
+      opacity: 0;
       right: auto;
       transform: scale(0);
     }
@@ -137,15 +134,15 @@ $button-swap-horizontal-padding: $g-spacer !default;
       &:focus {
         .Button-content:not(.Button-content--hidden) {
           left: auto;
-          right: auto;
           opacity: 0;
+          right: auto;
           transform: scale(0);
         }
 
         .Button-content--hidden {
           left: 0;
-          right: auto;
           opacity: 1;
+          right: auto;
           transform: scale(1) translateY(-50%);
         }
       }
@@ -155,21 +152,19 @@ $button-swap-horizontal-padding: $g-spacer !default;
       &.is-active {
         .Button-content:not(.Button-content--hidden) {
           left: auto;
-          right: auto;
           opacity: 0;
+          right: auto;
           transform: scale(0);
         }
 
         .Button-content--hidden {
           left: 0;
-          top: 50%;
-          right: auto;
           opacity: 1;
+          right: auto;
+          top: 50%;
           transform: scale(1) translateY(-50%);
         }
       }
     }
-
   }
-
 }

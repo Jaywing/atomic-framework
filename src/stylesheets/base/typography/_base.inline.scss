@@ -23,7 +23,6 @@ $hr-margin: $g-spacer auto !default;
 $strong-font-weight:  $g-weight-bold !default;
 $small-font-size:     80% !default;
 
-
 b {
   font-weight: normal;
 }
@@ -40,18 +39,18 @@ cite {
 
 code {
   background: $code-bg;
-  font-family: $code-font-family;
   display: inline-block;
+  font-family: $code-font-family;
   padding: 0 .2rem;
 }
 
 hr {
-  max-width: $hr-width;
-  height: 0;
   border: 0;
   border-bottom: $hr-border;
-  margin: $hr-margin;
   clear: both;
+  height: 0;
+  margin: $hr-margin;
+  max-width: $hr-width;
 }
 
 i {
@@ -75,4 +74,3 @@ small {
 u {
   text-decoration: none;
 }
-

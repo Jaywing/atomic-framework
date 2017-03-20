@@ -1,14 +1,27 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "lang": "en-GB",
+  "author": {
+    "name": "Jaywing",
+    "url": "https://jaywing.com",
+    "footerText": "Made with ♥ at",
+    "createdYear": "2017"
+  },
+  "pages": [
+    { "id": "index", "url": "index.html", "title": "Home" },
+    { "id": "features", "url": "features.html", "title": "Features" },
+    { "id": "docs", "url": "docs/", "title": "Docs" },
+    { "id": "github", "url": "https://github.com/jaywing/atomic", "title": "Github" }
+  ],
   "docs_sections": [
     { "id": "getting-started", "title": "Getting Started", "ready": true },
     { "id": "core", "title": "Core", "ready": true },
-    { "id": "extended", "title": "Extended", "ready": false },
+    { "id": "extended", "title": "Extended", "ready": true },
     { "id": "roadmap", "title": "Roadmap", "ready": false }
   ],
   "docs_pages": [
     {
-      "category": "",
+      "category": "Getting started",
       "section": "getting-started",
       "items": [
         { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
@@ -68,8 +81,7 @@
       "category": "Navigation",
       "section": "extended",
       "items": [
-        { "id": "bookmarks", "title": "Bookmarks", "section": "extended", "ready": true },
-        { "id": "dropdown", "title": "Dropdown", "section": "extended", "ready": false }
+        { "id": "nav-simple", "title": "Simple nav", "section": "extended", "ready": false }
       ]
     },
     {
@@ -89,7 +101,6 @@
       "category": "Common",
       "section": "extended",
       "items": [
-        { "id": "alert", "title": "Alert", "section": "extended", "ready": false },
         { "id": "responsive-img", "title": "Responsive images", "section": "extended", "ready": true }
       ]
     },

@@ -38,3 +38,14 @@ html {
   }
 }
 
+.docs-PanelList {
+  .Panel {
+    margin-bottom: $g-spacer;
+  }
+  .Panel-title {
+    font-weight: bold;
+  }
+  p {
+    margin-top: .5rem;
+  }
+}

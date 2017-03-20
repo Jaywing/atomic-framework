@@ -18,17 +18,14 @@
 //    @include hide-visually; // hides an item visually
 //    @include hide-visually(true); // makes item focusable
 
-
 @mixin hide-visually ($focusable: false) {
-  border: 0;
-  padding: 0;
   @if $focusable {
-    width: 1px;
-    position: absolute;
     clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
+    position: absolute;
+    width: 1px;
   } @else {
     clip: auto;
     height: auto;
@@ -37,4 +34,7 @@
     position: static;
     width: auto;
   }
+
+  border: 0;
+  padding: 0;
 }

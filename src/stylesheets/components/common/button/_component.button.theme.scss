@@ -27,13 +27,12 @@ $button-color-active:     $c-dark !default;
 
 $button-disabled-color: $c-disabled-dark !default;
 
-
 .Button {
-  text-align: center;
-  text-decoration: none;
+  border-radius: $button-radius;
   font-family: $button-font-family;
   font-weight: $button-font-weight;
-  border-radius: $button-radius;
+  text-align: center;
+  text-decoration: none;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
@@ -56,12 +55,11 @@ $button-disabled-color: $c-disabled-dark !default;
   }
 
   &[disabled] {
-    cursor: not-allowed;
     color: $button-disabled-color;
+    cursor: not-allowed;
   }
 
   svg {
     fill: $button-color;
   }
-
 }

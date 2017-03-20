@@ -5,17 +5,17 @@ $form-icon-margin: -15px 0 0 !default;
 
 .Form-icon {
   display: inline-block;
-  position: relative;
   max-width: 100%;
+  position: relative;
 
-  [class*=Icon] {
+  [class*='Icon'] {
+    color: $form-icon-color;
+    margin: $form-icon-margin;
+    pointer-events: none;
     position: absolute;
+    text-align: center;
     top: 50%;
     width: $form-icon-width;
-    margin: $form-icon-margin;
-    color: $form-icon-color;
-    text-align: center;
-    pointer-events: none;
   }
 
   &:not(.Form-icon--flip) > input {
@@ -23,14 +23,12 @@ $form-icon-margin: -15px 0 0 !default;
   }
 
   &--flip {
-
-    [class*=Icon] {
+    [class*='Icon'] {
       right: 0;
     }
 
     > input {
       padding-right: $form-icon-indent;
     }
-
   }
 }

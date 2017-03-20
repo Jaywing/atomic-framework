@@ -16,7 +16,6 @@ $heading-font-weight: normal !default;
 $heading-color:       inherit !default;
 $heading-small-size:  75% !default;
 
-
 h1,
 h2,
 h3,
@@ -24,9 +23,10 @@ h4,
 h5,
 h6 {
   @include trim-child-margins;
+
+  color: $heading-color;
   font-family: $heading-font;
   font-weight: normal;
-  color: $heading-color;
 
   small {
     font-size: $heading-small-size;
@@ -55,8 +55,9 @@ h5 {
 
 h6 {
   @include brevier;
-  text-transform: uppercase;
+
   margin: 0 0 $g-spacer-sm;
+  text-transform: uppercase;
 
   .demo & {
     margin-top: $g-spacer;

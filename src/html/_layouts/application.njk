@@ -1,43 +1,44 @@
-{% from '_macros/helpers.njk' import icon %}
-
 <!doctype html>
-<html lang="en-GB" class="no-js">
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="{{ lang }}" class="fonts-loaded">
+<!--#else -->
+<html lang="{{ lang }}">
+<!--#endif -->
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
-  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="{{ author.name }}"/>
 
-  <!-- standard styles - hidden from < ie10 -->
-  <!--[if ! lte IE 9]><!--><link rel="stylesheet" href="/stylesheets/styles.css"><!--<![endif]-->
-  <!-- generic fall back stylesheet for old ie versions -->
-  <!--[if lte IE 9]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"><![endif]-->
+  <title>{% block metaTitle %}Atomic - by Jaywing{% endblock %}</title>
+
+  <meta name="format-detection" content="telephone=no">
 
   {% include '_shared/app-icons.njk' %}
 
-  {% block head %}{% endblock %}
+  <link rel="stylesheet" href="/assets/stylesheets/styles.css">
 
+  <script>if(document.documentElement){document.documentElement.classList.add('js');}</script>
+  {% block metaHead %}{% endblock %}
 </head>
-<body id="top">
 
+<body id="top" class="o-Site">
 
-{% block main %}
-<main>
-  <article>
+  <header role="banner" class="o-Site-header">
+    {% block pageHead %}{% endblock %}
+    {% include '_shared/main-nav.njk' %}
+  </header>
+
+  <main id="content" class="o-Site-content">
     {% block content %}{% endblock %}
-  </article>
-  <section>
+  </main>
 
-  </section>
-</main>
-{% endblock %}
+  <footer role="contentinfo" class="o-Site-footer">
+    <div class="o-Container o-Container--centered">
+      <p>&copy; {{ author.createdYear }} - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
+    </div>
+  </footer>
 
-<footer>
-  <p>Made with ♥ at <a href="http://jaywing.com">JAYWING</a></p>
-</footer>
-
-{% block javascript %}{% endblock %}
+  {% block javascript %}{% endblock %}
 
 </body>
 </html>

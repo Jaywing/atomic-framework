@@ -1,21 +1,28 @@
-
 {% macro navbarItem(id, title, active, ready) %}
 <li class="Menu-item{% if id == active %} is-active{% endif %}">
   {% if ready %}
-  <a href="/docs/{{id}}" class="Button Button--hover">{{title}}</a>
+    <a href="/docs/{{id}}" class="Menu-link">{{title}}</a>
   {% else %}
-  <button class="Button Button--hover" disabled>{{title}}</button>
+    <a class="Menu-link is-disabled" disabled>{{title}}</a>
   {% endif %}
 </li>
 {% endmacro %}
 
-<nav class="o-Container o-Container--centered">
+{% from '_macros/buttons.njk' import ToggleButton %}
+
+<nav class="o-Container o-Container--centered NavResponsive NavResponsiveMd">
+
+  {{ ToggleButton("parent") }}
+
   <ul class="Menu Menu--vertical MenuMd">
-    <li class="Menu-item Menu-item--left"><a href="/docs/"><img src="/images/docs/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li>
-
+    <li class="Menu-item Menu-item--left w-logo">
+      <a href="/docs/">
+        <img src="/assets/images/docs/jaywing-logo.png" width="65" height="65" alt="Jaywing">
+      </a>
+    </li>
     {% for section in docs_sections %}
-    {{navbarItem(section.id, section.title, sectionid, section.ready)}}
+      {{navbarItem(section.id, section.title, sectionid, section.ready)}}
     {% endfor %}
-
   </ul>
+
 </nav>

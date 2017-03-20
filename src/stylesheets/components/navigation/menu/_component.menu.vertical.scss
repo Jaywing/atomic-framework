@@ -1,7 +1,6 @@
-$menu-vertical-link-padding: $g-spacer-xs $g-spacer-sm !default;
-$menu-vertical-title-padding: $g-spacer-xs $g-spacer-sm !default;
+$menu-vertical-link-padding: $g-spacer-sm $g-spacer-sm !default;
+$menu-vertical-title-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
-$menu-vertical-link-text-align: left !default;
 
 
 .Menu--vertical {
@@ -9,20 +8,22 @@ $menu-vertical-link-text-align: left !default;
 
   .Menu-item {
     flex: 0 0 100%;
+    margin: $g-spacer-xxs 0;
     max-width: 100%;
     padding: 0;
+    text-align: left;
   }
 
   .Menu-link {
     align-items: flex-start;
     justify-content: flex-start;
     padding: $menu-vertical-link-padding;
-    text-align: $menu-vertical-link-text-align;
+    text-align: inherit;
   }
 
-  .Menu-title {
-    padding: $menu-vertical-title-padding;
+  .Menu-header {
     margin: $menu-vertical-title-margin;
+    padding: $menu-vertical-title-padding;
 
     .Menu-item:first-child & {
       margin-top: 0;
@@ -39,4 +40,20 @@ $menu-vertical-link-text-align: left !default;
     }
   }
 
+  &.Menu--right {
+    .Menu-item,
+    .Menu-item--left {
+      text-align: right;
+
+      .Menu-header {
+        display: block;
+        text-align: right;
+        width: 100%;
+      }
+    }
+  }
+
+  &.Menu--center .Menu-item {
+    text-align: center;
+  }
 }

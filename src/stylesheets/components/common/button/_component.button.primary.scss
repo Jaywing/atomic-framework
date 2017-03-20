@@ -12,15 +12,12 @@
 
 $button-primary-bg-color:         $c-primary !default;
 $button-primary-color:            $c-light !default;
-
 $button-primary-bg-color-hover:   darken($button-primary-bg-color, 7.5%) !default;
 $button-primary-color-hover:      $button-primary-color !default;
-
 $button-primary-bg-color-active:  darken($button-primary-bg-color-hover, 7.5%) !default;
 $button-primary-color-active:     $button-primary-color !default;
-
 $button-primary-trans-speed:      $button-trans-speed !default;
-
+$button-primary-disabled-color:   rgba($button-primary-color, .65);
 
 .Button--primary {
 
@@ -28,9 +25,9 @@ $button-primary-trans-speed:      $button-trans-speed !default;
 
   &:not([disabled]) {
     @include color-swap-on-hover(
-            $button-primary-color $button-primary-bg-color,
-            $button-primary-color-hover $button-primary-bg-color-hover,
-            $button-primary-trans-speed
+      $button-primary-color $button-primary-bg-color,
+      $button-primary-color-hover $button-primary-bg-color-hover,
+      $button-primary-trans-speed
     );
 
     &:active {
@@ -52,11 +49,10 @@ $button-primary-trans-speed:      $button-trans-speed !default;
 
   &[disabled] {
     background: lighten($button-primary-bg-color, 15%);
-    color: rgba($button-primary-color, .65);
+    color: $button-primary-disabled-color;
   }
 
   svg {
     fill: $button-primary-color;
   }
-
 }

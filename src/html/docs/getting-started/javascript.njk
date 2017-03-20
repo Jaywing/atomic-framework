@@ -51,7 +51,7 @@ gulpfile.js/lib/webpack-multi-config</pre></div></div>
     |-- createElement.js    # script to help programmatically create HTML elements
     ...
 |-- modules                 # non-async modules
-    |-- breakpoint.js       # script that watches the HTML for changes in breakpoint and then fires a custom event
+    |-- Breakpoint.js       # script that watches the HTML for changes in breakpoint and then fires a custom event
     |-- Module.js           # this is the module class that most modules will be extended from
     ...
 app.js                      # this is the entry point script that webpack uses (you can have more than one, just need to add it in config)</pre>
@@ -216,5 +216,5 @@ export default class Switcher extends Module {
 {% endblock %}
 
 {% block javascript %}
-<script src="/javascripts/app.js"></script>
+<script src="/assets/javascripts/app.js" async></script>
 {% endblock %}

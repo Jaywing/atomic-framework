@@ -3,17 +3,17 @@ $panels-margin: $g-spacer 0 !default;
 $panel-badge-pos: 0 !default;
 $panel-title-margin: 0 $g-spacer-xl 0 0 !default;
 
-
 .Panel {
   @include trim-child-margins;
 
-  position: relative;
   display: block;
   margin: $panel-margin;
   min-height: 100%;
+  position: relative;
 
   &-title {
     @include pica;
+
     margin: $panel-title-margin;
 
     .Icon {
@@ -23,8 +23,8 @@ $panel-title-margin: 0 $g-spacer-xl 0 0 !default;
 
   &-badge {
     position: absolute;
-    top: $panel-badge-pos;
     right: $panel-badge-pos;
+    top: $panel-badge-pos;
   }
 
   &--attached {

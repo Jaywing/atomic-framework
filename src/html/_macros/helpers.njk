@@ -1,6 +1,12 @@
-{% macro icon(id, viewBox, classes) %}
+{% macro icon(id, classes, viewBox) %}
   {% set viewBox = viewBox or "0 0 1 1"%}
   <span class='Icon Icon--{{id}} {{classes}}'>
-    <svg viewBox="{{viewBox}}"><use xlink:href='/images/icons.svg#{{id}}'></use></svg>
+    <svg viewBox="{{viewBox}}"><use xlink:href='/assets/images/icons.svg#{{id}}'></use></svg>
   </span>
+{% endmacro %}
+
+{% macro navItem(id, title, active='index', ready=false) %}
+  <li class="Menu-item{% if id == active %} is-active{% endif %}">
+    <a{% if ready %} href="{{id}}.html" class="Menu-link"{% else %} class="Menu-link Text--disabled"{% endif %}>{{title}}</a>
+  </li>
 {% endmacro %}

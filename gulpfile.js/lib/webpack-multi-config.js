@@ -9,10 +9,12 @@ var webpackManifest = require('./webpackManifest')
 module.exports = function(env) {
   var jsSrc = path.resolve(config.root.src, config.tasks.js.src)
   var jsDest = path.resolve(config.root.dest, config.tasks.js.dest)
+  var publicPath = pathToUrl(config.tasks.js.dest, '/')
+  var publicPath = pathToUrl(config.tasks.js.dest, '/')
+
   if (env === 'production') {
     jsDest = path.resolve(config.root.dest, config.tasks.js.destProd)
   }
-  var publicPath = pathToUrl(config.tasks.js.dest, '/')
 
   var extensions = config.tasks.js.extensions.map(function(extension) {
     return '.' + extension
@@ -63,10 +65,10 @@ module.exports = function(env) {
     }
 
     if(config.tasks.js.extractSharedJs) {
-      // Factor out common dependencies into a _shared.js
+      // Factor out common dependencies into a shared.js
       webpackConfig.plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
-          name: '_shared',
+          name: 'shared',
           filename: filenamePattern,
         })
       )

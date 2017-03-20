@@ -6,6 +6,7 @@
 // Sub-objects:     `o-Grid-cell`
 //
 // Modifiers:       `o-Grid--flexCells`
+//                  `o-Grid--flush`
 //                  `o-Grid--full`
 //                  `o-Grid--top`
 //                  `o-Grid--bottom`
@@ -53,9 +54,17 @@ $grid-gutter-xl: $g-spacer-xl;
   width: 100%;
 }
 
+.o-Grid--flush {
+  margin: 0 - ($grid-gutter / 2);
+}
+
 .o-Grid-cell {
   flex: 1 0 auto;
   max-width: 100%;
+
+  .o-Grid {
+    margin: 0 - ($grid-gutter / 2);
+  }
 }
 
 .o-Grid--flexCells > .o-Grid-cell {
@@ -108,26 +117,26 @@ $grid-gutter-xl: $g-spacer-xl;
 
 .o-Grid--1of2 > .o-Grid-cell {
   flex: auto;
-  width: 50%;
   max-width: 50%;
+  width: 50%;
 }
 
 .o-Grid--1of3 > .o-Grid-cell {
   flex: auto;
-  width: 33.3333%;
   max-width: 33.3333%;
+  width: 33.3333%;
 }
 
 .o-Grid--1of4 > .o-Grid-cell {
   flex: auto;
-  width: 25%;
   max-width: 25%;
+  width: 25%;
 }
 
 .o-Grid--1of5 > .o-Grid-cell {
   flex: auto;
-  width: 20%;
   max-width: 20%;
+  width: 20%;
 }
 
 // Gutters

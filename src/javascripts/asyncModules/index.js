@@ -8,10 +8,10 @@ for (var i = 0; i < moduleElements.length; i++) {
   if (dataOptions) {
     options = JSON.parse(dataOptions)
   }
-  require.ensure([], function() {
+  require.ensure([], function () {
     const Module = require(`./${name}`).default
     if (Module) {
-      new Module(el, name, options)
+      new Module(el, name, options) // eslint-disable-line no-new
     }
   })
 }

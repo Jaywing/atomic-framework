@@ -1,4 +1,4 @@
-var config        = require('./gulpfile.js/_config')
+var config        = require('./gulpfile.js/config')
 var karmaWebpack  = require('karma-webpack')
 var webpackConfig = require('./gulpfile.js/lib/webpack-multi-config')
 var path          = require('path')

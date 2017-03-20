@@ -1,10 +1,11 @@
-.idea/
 .DS_Store
 .sass-cache
 .publish
 public
 Desktop.ini
 node_modules
-src/stylesheets/generated/_generated.icons.sass
+**/generated/_icons.sass
 npm-debug.log
+coverage
 logs
+.idea/

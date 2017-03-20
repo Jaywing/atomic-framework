@@ -1,0 +1,14 @@
+@include lg {
+  .NavResponsiveLg,
+  .NavResponsiveLg.is-active {
+    padding: 0;
+
+    .ToggleButton {
+      display: none;
+    }
+
+    .Menu {
+      max-height: none;
+    }
+  }
+}

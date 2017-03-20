@@ -88,7 +88,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <form class="Form">
     <fieldset>
       <input type="text" placeholder="Form-input--danger" class="Form-input Form-input--inline Form-input--danger">
+      <div class="Form-status Form-status--danger">Danger</div>
       <input type="text" placeholder="Form-input--success" class="Form-input Form-input--inline Form-input--success">
+      <div class="Form-status Form-status--success">Success</div>
     </fieldset>
   </form>
 </div>
@@ -363,40 +365,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell">
         <div class="Form-flabel">
-          <input type="text" id="Form-l-i" class="Form-input Form-input--xs">
-          <label for="Form-l-i" class="Form-label">Floating label</label>
-        </div>
-      </div>
-    </div>
-    <div class="o-Grid o-Grid--gutters">
-      <div class="o-Grid-cell">
-        <div class="Form-flabel">
-          <input type="text" id="Form-l-i-1" class="Form-input Form-input--sm">
-          <label for="Form-l-i-1" class="Form-label">Floating label</label>
-        </div>
-      </div>
-    </div>
-    <div class="o-Grid o-Grid--gutters">
-      <div class="o-Grid-cell">
-        <div class="Form-flabel">
           <input type="text" id="Form-l-i-2" class="Form-input">
           <label for="Form-l-i-2" class="Form-label">Floating label</label>
-        </div>
-      </div>
-    </div>
-    <div class="o-Grid o-Grid--gutters">
-      <div class="o-Grid-cell">
-        <div class="Form-flabel">
-          <input type="text" id="Form-l-i-3" class="Form-input Form-input--lg">
-          <label for="Form-l-i-3" class="Form-label">Floating label</label>
-        </div>
-      </div>
-    </div>
-    <div class="o-Grid o-Grid--gutters">
-      <div class="o-Grid-cell">
-        <div class="Form-flabel">
-          <input type="text" id="Form-l-i-4" class="Form-input Form-input--xl">
-          <label for="Form-l-i-4" class="Form-label">Floating label</label>
         </div>
       </div>
     </div>
@@ -410,8 +380,22 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
+<h4>Form field</h4>
+
+<div class="docs-example">
+  <div class="Form-field">
+    <input type="text" placeholder="Text input" class="Form-input Form-input--inline">
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class="Form-field"&gt;
+  &lt;input type="text" placeholder="Text input" class="Form-input"&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 {% endblock %}
 
 {% block javascript %}
-<script src="/javascripts/app.js"></script>
+<script src="/assets/javascripts/app.js" async></script>
 {% endblock %}

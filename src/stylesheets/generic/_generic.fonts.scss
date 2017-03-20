@@ -16,4 +16,9 @@
 /// @example scss
 ///   @include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular", $file-formats: eot woff2 woff);
 ///
-/// Note: the best way to include fonts is asynchronously with webfont-loader.
+/// Note: the best way to include fonts is asynchronously with FontFaceObserver.
+
+@include font-face('League Gothic Regular', '/fonts/leaguegothic/regular', $file-formats: eot svg woff ttf);
+// sass-lint:disable no-url-domains
+// sass-lint:disable no-url-protocols
+@import url('//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');

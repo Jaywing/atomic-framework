@@ -14,9 +14,10 @@
 
 // CSS Debug
 
+// sass-lint:disable no-important no-color-literals hex-length
+
 $css-debug-outline: true !default;
 $css-debug-depth: true !default;
-
 
 @if $css-debug-outline == true {
 
@@ -223,498 +224,497 @@ $css-debug-depth: true !default;
 @if $css-debug-depth == true {
 
   body {
+    background-color: rgba(17, 34, 99, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(17, 34, 99, 0.25)
   }
 
   article {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   nav {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   aside {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   section {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   header {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   footer {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h1 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h2 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h3 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h4 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h5 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   h6 {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   main {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   address {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   div {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   p {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   hr {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   pre {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   blockquote {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   ol {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   ul {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   li {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   dl {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   dt {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   dd {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   figure {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   figcaption {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   table {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   caption {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   thead {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   tbody {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   tfoot {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   tr {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   th {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   td {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   col {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   colgroup {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   button {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   datalist {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   fieldset {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   form {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   input {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   keygen {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   label {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   legend {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   meter {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   optgroup {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   option {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   output {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   progress {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   select {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   textarea {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   details {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   summary {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   command {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   menu {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   del {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   ins {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   img {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   iframe {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   embed {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   object {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   param {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   video {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   audio {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   source {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   canvas {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   track {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   map {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   area {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   a {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   em {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   strong {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   i {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   b {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   u {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   s {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   small {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   abbr {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   q {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   cite {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   dfn {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   sub {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   sup {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   time {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   code {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   kbd {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   samp {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   var {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   mark {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   bdi {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   bdo {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   ruby {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   rt {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   rp {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   span {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   br {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
 
   wbr {
+    background-color: rgba(255, 255, 255, .25);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
-    background-color: rgba(255, 255, 255, 0.25)
   }
-
 }

@@ -1,12 +1,12 @@
 var config       = require('../config')
 if(!config.tasks.eslint) return
 
-var gulp         = require('gulp')
-var path         = require('path')
-var eslint     = require('gulp-eslint')
+var gulp   = require('gulp')
+var path   = require('path')
+var eslint = require('gulp-eslint')
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.eslint.src, '/**/*.{' + config.tasks.scsslint.extensions + '}')
+  src: path.join(config.root.src, config.tasks.eslint.src, '/**/*.{' + config.tasks.eslint.extensions + '}')
 }
 
 var esLintTask = function () {
@@ -14,8 +14,9 @@ var esLintTask = function () {
     paths.src,
     '!node_modules/**' // this folder is ignored
   ])
-    .pipe(eslint())
-    .pipe(eslint.format('checkstyle'))
+  .pipe(eslint(config.tasks.eslint.options))
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError())
 }
 
 gulp.task('eslint', esLintTask)

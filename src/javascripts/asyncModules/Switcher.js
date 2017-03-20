@@ -1,18 +1,15 @@
 import Module from '../modules/Module'
 import sibling from '../helpers/sibling' // fix for DOM traversing (skips #text elements)
 
-
 export default class Switcher extends Module {
-
-  constructor(el, name, options) {
-
+  constructor (el, name, options) {
     const defaults = {
-      "activeIndex": 0, // pane to active first (first one by default)
-      "activeClass": "is-active",
-      "target": null,
-      "hash": false, // enable hash change and load panel with url hash
-      "hide": false, // switch hidden instead of class name
-      "event": "click"
+      'activeIndex': 0, // pane to active first (first one by default)
+      'activeClass': 'is-active',
+      'target': null,
+      'hash': false, // enable hash change and load panel with url hash
+      'hide': false, // switch hidden instead of class name
+      'event': 'click'
     }
 
     super(el, name, options, defaults)
@@ -24,7 +21,7 @@ export default class Switcher extends Module {
     // if active index is not set and there is not valid hash
     if(this.activeIndex === undefined && hashIndex < 0) {
       this.activeIndex = 0 // set active to 0
-      this.hash = this.tabIds[0]; // set active hash
+      this.hash = this.tabIds[0] // set active hash
       return
     }
 
@@ -32,17 +29,13 @@ export default class Switcher extends Module {
       this.activeIndex = hashIndex // set activeIndex
       this.hash = location.hash // set hash value
     }
-
   }
 
-  addAriaTabs() {
-    //console.log('Aria Tabs');
-
+  addAriaTabs () {
     this.el.setAttribute('role', 'tablist')
-
     let toggleItems = [].slice.call(this.el.children)
 
-    function prepareItem(item) {
+    function prepareItem (item) {
       const target = item.getAttribute('href').replace('#','')
       item.setAttribute('role','tab')
       item.setAttribute('id', `tab-${target}`)
@@ -71,12 +64,15 @@ export default class Switcher extends Module {
 
   normaliseTargets() {
     var targets
+
     if (this.settings.target === null) {
       // if target is not provided use the next sibling element to the menu
       targets = [sibling(this.el, 'nextSibling')]
     } else {
       // target is not an array, convert it and store it
-      targets = (typeof this.settings.target === 'string') ? [this.settings.target] : this.settings.target
+      targets = (typeof this.settings.target === 'string')
+        ? [this.settings.target]
+        : this.settings.target
     }
 
     this.targets = targets.map(function (target) {
@@ -86,12 +82,12 @@ export default class Switcher extends Module {
       target.panes = [].slice.call(target.children)
       return target
     })
-
   }
 
-  validateTargets() {
+  validateTargets () {
     let itemCount = this.items.length
     let valid = true
+
     this.targets.map(function (target) {
       if (target.panes) {
         if (target.panes.length < itemCount) {
@@ -105,24 +101,21 @@ export default class Switcher extends Module {
     return valid
   }
 
-  init() {
+  init () {
+    const switcher = this // store module reference for handler functions
+    const items = this.el.querySelectorAll('[href]') // create an array of menu items
 
-    const switcher = this; // store module reference for handler functions
-
-    // create an array of menu items
-    const items = this.el.querySelectorAll('[href]');
-    [...items]
+    // [...items]
     this.items = Array.from(items)
 
     // create an array of target IDs
     this.tabIds = this.items.map(function (item) {
-      return item.getAttribute('href');
+      return item.getAttribute('href')
     })
 
     this.targets = []
     this.normaliseTargets() // popular targets array normalised element references
 
-    console.log(this.validateTargets());
     if (!this.validateTargets()) {
       console.warn('Switcher aborted: The target element does not pass validation rules')
       this.el.setAttribute('hidden', true)
@@ -142,7 +135,6 @@ export default class Switcher extends Module {
     }
 
     const clickHandler = function (e) {
-
       e.preventDefault(); // stop the page jump and hash change
       // create an array of menu items
       const nodeList = [].slice.call(switcher.el.children);
@@ -155,9 +147,7 @@ export default class Switcher extends Module {
           switcher.activeIndex = nodeList.indexOf(e.target.parentNode) // set the activeIndex
         }
       }
-
       switcher.activateItem() // once set, activate the item
-
     }
 
     const hashChangeHandler = function () {
@@ -170,13 +160,12 @@ export default class Switcher extends Module {
     } else {
       window.addEventListener('hashchange', hashChangeHandler, false) // add the hash change handler
     }
-
     this.activateItem(this.activeIndex) // activate with initial item
 
     console.log(`${this.name} has initialised`)
   }
 
-  activateItem() {
+  activateItem () {
     let i = 0
     const activeClass = this.settings.activeClass
     const switcher = this
@@ -193,7 +182,7 @@ export default class Switcher extends Module {
       i++
     })
 
-    this.targets.map(function(target) {
+    this.targets.map(function (target) {
       let y = 0
 
       target.panes.map(function (pane) {
@@ -205,7 +194,5 @@ export default class Switcher extends Module {
         y++
       })
     })
-
   }
-
 }

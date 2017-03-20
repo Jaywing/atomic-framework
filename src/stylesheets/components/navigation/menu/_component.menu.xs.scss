@@ -11,8 +11,9 @@
       padding: $menu-link-padding;
     }
 
-    .Menu-title {
-      padding: $menu-title-padding;
+    .Menu-header {
+      margin: -($menu-header-padding);
+      padding: $menu-header-padding;
     }
   }
 }

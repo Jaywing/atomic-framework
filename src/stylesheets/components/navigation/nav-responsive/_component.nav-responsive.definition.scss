@@ -1,0 +1,33 @@
+$nav-responsive-padding: $g-spacer-sm 0;
+
+$nav-responsive-toggle-top: 0;
+$nav-responsive-toggle-right: 0;
+$nav-responsive-toggle-zindex: $g-z-5;
+
+$nav-responsive-menu-closed-maxheight: 2.2rem;
+$nav-responsive-menu-open-maxheight: 32.4rem;
+
+.NavResponsive {
+  padding: $nav-responsive-padding;
+  position: relative;
+
+  .ToggleButton {
+    position: absolute;
+    right: $nav-responsive-toggle-right;
+    top: $nav-responsive-toggle-top;
+    z-index: $nav-responsive-toggle-zindex;
+  }
+
+  .Menu {
+    margin: 0;
+    max-height: $nav-responsive-menu-closed-maxheight;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &.is-active {
+    .Menu {
+      max-height: $nav-responsive-menu-open-maxheight;
+    }
+  }
+}

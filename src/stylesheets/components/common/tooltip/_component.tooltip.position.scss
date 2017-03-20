@@ -1,111 +1,91 @@
 .Tooltip--right {
 
   .Tooltip-item {
-    @include transform(translateY(-50%));
-    box-align: flex-start;
     align-items: center;
+    bottom: inherit;
+    box-align: flex-start;
     justify-content: flex-start;
     left: 115%;
     top: 50%;
-    bottom: inherit;
+    transform: translateY(-50%);
   }
 
   .Tooltip-itemInner {
 
-    &:after {
-      @include transform(translateY(-50%));
-      top: 50%;
-      left: -$tooltip-pointer-size*2;
-      bottom: inherit;
-      border-top: $tooltip-pointer-size solid transparent;
+    &::after {
+      border: $tooltip-pointer-size solid transparent;
       border-right: $tooltip-pointer-size solid $tooltip-pointer-bg;
-      border-bottom: $tooltip-pointer-size solid transparent;
-      border-left: $tooltip-pointer-size solid transparent;
+      bottom: inherit;
+      left: - ($tooltip-pointer-size * 2);
+      top: 50%;
+      transform: translateY(-50%);
     }
-
   }
 
   &:hover,
   &:focus {
-
     .Tooltip-itemInner {
       animation: popinRight $tooltip-popin-ani-time $tooltip-popin-ani-type;
     }
-
   }
-
 }
 
 .Tooltip--bottom {
-
   .Tooltip-item {
-    top: $tooltip-bottom;
-    left: 0;
     bottom: inherit;
+    left: 0;
+    top: $tooltip-bottom;
   }
 
   .Tooltip-itemInner {
     position: relative;
 
-    &:after {
-      top: -$tooltip-pointer-size*2;
-      left: 50%;
-      bottom: inherit;
-      border-top: $tooltip-pointer-size solid transparent;
-      border-right: $tooltip-pointer-size solid transparent;
+    &::after {
+      border: $tooltip-pointer-size solid transparent;
       border-bottom: $tooltip-pointer-size solid $tooltip-pointer-bg;
-      border-left: $tooltip-pointer-size solid transparent;
+      bottom: inherit;
+      left: 50%;
+      top: - ($tooltip-pointer-size * 2);
     }
-
   }
 
   &:hover,
   &:focus {
-
     .Tooltip-itemInner {
       animation: popinDown $tooltip-popin-ani-time $tooltip-popin-ani-type;
     }
-
   }
-
 }
 
 .Tooltip--left {
-
   .Tooltip-item {
-    @include transform(translateY(-50%));
-    box-align: flex-end;
     align-items: flex-end;
+    bottom: inherit;
+    box-align: flex-end;
     justify-content: flex-end;
     left: -115%;
     top: 50%;
-    bottom: inherit;
+    transform: translateY(-50%);
   }
 
   .Tooltip-itemInner {
     position: relative;
 
-    &:after {
-      @include transform(translateY(-50%));
-      top: 50%;
-      right: -$tooltip-pointer-size*2;
+    &::after {
+      border: $tooltip-pointer-size solid transparent;
+      border-left: $tooltip-pointer-size solid $tooltip-pointer-bg;
       bottom: inherit;
       left: inherit;
-      border-top: $tooltip-pointer-size solid transparent;
-      border-right: $tooltip-pointer-size solid transparent;
-      border-bottom: $tooltip-pointer-size solid transparent;
-      border-left: $tooltip-pointer-size solid $tooltip-pointer-bg;
+      right: - ($tooltip-pointer-size * 2);
+      top: 50%;
+      transform: translateY(-50%);
     }
-
   }
 
   &:hover,
   &:focus {
-
     .Tooltip-itemInner {
       animation: popinLeft $tooltip-popin-ani-time $tooltip-popin-ani-type;
     }
-
   }
-
 }

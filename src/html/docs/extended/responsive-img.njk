@@ -33,6 +33,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
                              https://placehold.it/960x540&text=960x540(16:9) 960w,
                              https://placehold.it/1024x576&text=1024x576(16:9) 1024w"
          alt="Lazy loaded, responsive image">
+    <noscript>
+      <img src="https://placehold.it/320x180&text=320x180(16:9)" alt="">
+    </noscript>
   </div>
 
 </div>
@@ -46,7 +49,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
                            /images/placeholder/img-960x600.png 768w,
                            /images/placeholder/img-1024x640.png 960w&quot;
        alt=&quot;Lazy loaded, responsive image&quot;&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+&lt;noscript&gt;
+  &lt;img src="https://placehold.it/320x180&amp;text=320x180(16:9)" alt=""&gt;
+&lt;/noscript&gt;</code></pre>
 </div>
 
 <p>You use the data attributes in the <code>img</code> tag to define which images to load at which viewport size.</p>
@@ -77,9 +83,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
              data-resimg-srcset="https://placehold.it/320x180&text=320x180(16:9) 320w,
                           https://placehold.it/640x360&text=640x360(16:9) 640w,
                           https://placehold.it/768x432&text=768x432(16:9) 768w,
-                          https://placehold.it/960x540&text=960x540(16:9) 960w,
-                          https://placehold.it/1024x576&text=1024x576(16:9) 1024w"
+                          https://placehold.it/960x540&text=960x540(16:9) 1024w,
+                          https://placehold.it/1024x576&text=1024x576(16:9) 1180w"
              alt="Lazy loaded, responsive image">
+        &lt;noscript&gt;
+          &lt;img src="https://placehold.it/320x180&amp;text=320x180(16:9)" alt=""&gt;
+        &lt;/noscript&gt;
       </div>
     </div>
   </div>
@@ -99,11 +108,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
-<p><button id="btnHideImg" data-module="Toggle" data-options='{"hide":true,"target":["#cover-object"]}'>Toggle the image</button> to see the loading view.</p>
+<p><button data-module="Toggle" data-options='{"hide":true,"target":["#cover-object"]}'>Toggle the image</button> to see the loading view.</p>
 
 
 {% endblock %}
 
 {% block javascript %}
-<script src="/javascripts/app.js"></script>
+<script src="/assets/javascripts/app.js" async></script>
 {% endblock %}

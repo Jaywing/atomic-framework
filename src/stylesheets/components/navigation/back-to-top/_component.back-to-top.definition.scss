@@ -1,6 +1,6 @@
-$backToTopMdMargin: -($g-spacer-xs);
-$backToTopFixedRight: $g-spacer-xs;
-$backToTopFixedBottom: 0;
+$back-to-top-md-margin: -($g-spacer-xs);
+$back-to-top-fixed-right: $g-spacer-xs;
+$back-to-top-fixed-bottom: 0;
 
 .BackToTop {
 
@@ -16,7 +16,7 @@ $backToTopFixedBottom: 0;
   @include md {
 
     > .Icon {
-      margin-left: $backToTopMdMargin;
+      margin-left: $back-to-top-md-margin;
     }
 
     &-text {
@@ -26,8 +26,8 @@ $backToTopFixedBottom: 0;
   }
 
   &--fixed {
+    bottom: $back-to-top-fixed-bottom;
     position: fixed;
-    bottom: $backToTopFixedBottom;
-    right: $backToTopFixedRight;
+    right: $back-to-top-fixed-right;
   }
 }
