@@ -4,7 +4,7 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% from '_macros/helpers.njk' import icon %}
+{% from '_macros/icon.njk' import icon %}
 
 {% set pageid = 'icon' %}
 {% set sectionid = 'core' %}
@@ -26,9 +26,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>You need to add the helper macro to the top of your HTML.</p>
 
-<pre><code class="html">&#123;% from '_macros/helpers.njk' import icon %&#125;</code></pre>
+<pre><code class="html">&#123;% from '_macros/icon.njk' import icon %&#125;</code></pre>
 
-<p>You can then use 'icon' macro (located in the 'src/html/macros/helpers.njk' file.</p>
+<p>You can then use 'icon' macro (located in the 'src/html/macros/icon.njk' file.</p>
 
 <div class="docs-code">
   <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;) &#125;&#125;</code></pre>

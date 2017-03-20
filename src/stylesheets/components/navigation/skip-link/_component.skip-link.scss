@@ -1,5 +1,8 @@
 $skiplink-trans: all $g-trans-link-speed ease !default;
 $skiplink-active-pos: $g-spacer-sm !default;
+$skiplink-zindex: $g-z-9 !default;
+$skiplink-bg: rgba($c-light, .85) !default;
+$skiplink-padding: $g-spacer-sm !default;
 
 .SkipLink {
   height: 1px;
@@ -10,14 +13,18 @@ $skiplink-active-pos: $g-spacer-sm !default;
   top: -1000px;
   transition: $skiplink-trans;
   width: 1px;
+  padding: $skiplink-padding;
+  background: $skiplink-bg;
 
   &:focus,
   &:hover,
   &:active {
+    text-decoration: none;
     height: auto;
     left: $skiplink-active-pos;
     overflow: visible;
     top: $skiplink-active-pos;
     width: auto;
+    z-index: $skiplink-zindex;
   }
 }

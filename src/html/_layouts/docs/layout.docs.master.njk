@@ -1,5 +1,4 @@
-{% from '_macros/helpers.njk' import icon, navItem %}
-
+{% from '_macros/icon.njk' import icon %}
 <!doctype html>
 <!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
 <html lang="{{ lang }}" class="fonts-loaded">
@@ -24,6 +23,8 @@
 
 </head>
 <body id="top" class="o-Site scrollY">
+
+  <a href="#content" class="SkipLink">Skip to content</a>
 
   <header role="banner" class="o-Site-header docs-GlobalHeader">
 
