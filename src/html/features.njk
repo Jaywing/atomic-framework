@@ -8,12 +8,14 @@
 
 {% extends '_layouts/application.njk' %}
 {% from '_macros/hero.njk' import Hero %}
+{% from '_macros/featuresList.njk' import FeaturesList %}
 
 {% block metaTitle %}{{ metaTitle }}{% endblock %}
 
 {% block content %}
 
   {{ Hero(hero.content, hero.classes) }}
+  {{ FeaturesList(features, 'o-Container o-Container--centered') }}
 
 {% endblock %}
 

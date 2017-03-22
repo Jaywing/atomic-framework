@@ -58,6 +58,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;div id=&quot;mydiv&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
 
+<p>You can also pass in the string 'parent' to specifically target source element's direct parent element.</p>
+<div class="docs-example">
+  <div class="Demo Demo--fat">
+    <button class="Button myButton" data-module="Toggle" data-options='{"target":"parent"}'>Click me to toggle the div</button>
+  </div>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div id=&quot;mydiv&quot;&gt;
+  &lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;parent&quot;}&#39;&gt;
+    Click to toggle the div
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 <p>You can also multiple element by passing in an array (<code>data-options='{"target":["#mydiv1","#mydiv2"]}'</code>).</p>
 
 <div class="docs-example">

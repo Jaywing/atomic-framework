@@ -1,0 +1,28 @@
+{% from '_macros/icon.njk' import icon %}
+
+{% macro FeaturesList(
+  features = [],
+  classList = ""
+) %}
+
+  {% if features.length > 0 %}
+
+    <div class="FeaturesList {{ classList }}">
+
+      {% for feature in features %}
+        <div class="o-Media o-Section--short">
+          <div class="o-Media-figure">
+            {{ icon(feature.icon, 'Icon--xxl') }}
+          </div>
+          <div class="o-Media-body">
+            <h3>{{ feature.title }}</h3>
+            {{ feature.description | safe }}
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+  {%  endif %}
+
+{% endmacro %}

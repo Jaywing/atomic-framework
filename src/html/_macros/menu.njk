@@ -14,7 +14,7 @@
     currentPageId,
     classes,
     activeClass
-  ) %}
+)%}
 
   {% if not activeClass %}
     {% set activeClass="is-active" %}
@@ -25,7 +25,7 @@
   {% endif %}
 
   <li class="Menu-item {{ classes }} {{ activeClass }}">
-    <a href="{{url}}" class="Menu-link">{{title}}</a>
+    <a href="{{url}}" class="Menu-link">{{ title | safe }}</a>
   </li>
 {% endmacro %}
 
@@ -44,7 +44,7 @@
   {% set header = title %}
 
   {% if url %}
-    {% set header= '<a href="{{ url }}">{{ title }}</a>' %}
+    {% set header= '<a href="{{ url }}">{{ title | safe }}</a>' %}
   {% endif %}
 
   <li class="Menu-item {{ classes }}">
@@ -52,7 +52,7 @@
       {%  if url %}
         <a href="{{ url }}">
       {% endif %}
-      {{ title }}
+      {{ title | safe }}
       {%  if url %}
         </a>
       {% endif %}

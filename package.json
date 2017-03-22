@@ -38,6 +38,7 @@
     "browser-sync": "2.11.1",
     "chai": "3.5.0",
     "compression": "1.6.1",
+    "critical": "^0.8.4",
     "del": "2.2.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.1",
