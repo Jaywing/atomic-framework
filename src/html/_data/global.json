@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "lang": "en-GB",
   "author": {
     "name": "Jaywing",
@@ -68,23 +68,6 @@
       ]
     },
     {
-      "category": "Navigation",
-      "section": "core",
-      "items": [
-        { "id": "menu", "title": "Menu", "section": "core", "ready": true },
-        { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
-        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
-        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": true }
-      ]
-    },
-    {
-      "category": "Navigation",
-      "section": "extended",
-      "items": [
-        { "id": "nav-responsive", "title": "Standard Responsive", "section": "extended", "ready": false }
-      ]
-    },
-    {
       "category": "Common",
       "section": "core",
       "items": [
@@ -103,6 +86,23 @@
       "items": [
         { "id": "toggle-button", "title": "Toggle Button", "section": "extended", "ready": true },
         { "id": "responsive-img", "title": "Responsive images", "section": "extended", "ready": true }
+      ]
+    },
+    {
+      "category": "Navigation",
+      "section": "core",
+      "items": [
+        { "id": "menu", "title": "Menu", "section": "core", "ready": true },
+        { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
+        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
+        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Navigation",
+      "section": "extended",
+      "items": [
+        { "id": "nav-responsive-standard", "title": "Standard Responsive", "section": "extended", "ready": true }
       ]
     },
     {

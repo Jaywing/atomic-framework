@@ -1,5 +1,6 @@
 @include xs {
-  .MenuXs {
+  .MenuXs,
+  .NavResponsiveXs {
     flex-wrap: nowrap;
 
     .Menu-item {

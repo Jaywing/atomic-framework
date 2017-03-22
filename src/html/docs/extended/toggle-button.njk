@@ -15,7 +15,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
   <h1 class="Article-title">Toggle Button</h1>
-  <p class="Text--lead">Toggle buttons have an on/off or true/false state. A typical use case is for toggling a mobile menu.</p>
+  <p class="Text--lead">Toggle buttons have an on/off or true/false state. A typical use case is for toggling a collapsible menu, and its default state reflects this.</p>
 
   <dl class="Definition Definition--horizontal">
     <dt>Modules</dt>
@@ -30,7 +30,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <div class="docs-example">
 
-    <button class="ToggleButton " data-module="Toggle" id="Toggle_ryZYWN6ynx" aria-pressed="false">
+    <button class="ToggleButton" data-module="Toggle">
       <div class="ToggleButton-init">
         <span class="Icon Icon--navicon ToggleButton-icon--init">
           <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#navicon"></use></svg>
@@ -82,22 +82,27 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </dl>
 
   <div class="docs-code docs-code--macro">
-    <pre><code class="html">&#123;% set content = &#123;
+    <pre><code class="html">&#123;&#123; ToggleButton() &#125;&#125;
+&lt;br /&gt;&lt;br /&gt;
+
+&#123;% set content = &#123;
   offIcon: 'minus',
   onIcon: 'plus',
   offText: 'Subtract',
   onText: 'Addition'
 &#125; %&#125;
-
 &#123;&#123; ToggleButton(false, 'ToggleButton--hideText', content) &#125;&#125;</code></pre>
   </div>
 
   <div class="docs-example">
+    {{ ToggleButton() }}
+    <br /><br />
+
     {% set content = {
-    offIcon: 'minus',
-    onIcon: 'plus',
-    offText: 'Subtract',
-    onText: 'Addition'
+      offIcon: 'minus',
+      onIcon: 'plus',
+      offText: 'Subtract',
+      onText: 'Addition'
     } %}
     {{ ToggleButton(false, 'ToggleButton--hideText', content) }}
   </div>
