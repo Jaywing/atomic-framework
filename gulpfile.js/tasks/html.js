@@ -32,8 +32,10 @@ var getData = function(file) {
 */
 
 var getTemplateData = function(file) {
-  var filename = file.path.split(".njk")[0];
-  filename = filename.toString().split('\\')
+  var filename = file.path.split(".njk")[0]
+  var splitOperator = '\\'
+  if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/'
+  filename = filename.toString().split(splitOperator)
   filename = (filename[filename.length - 1]) + '.json'
   var dataPath = path.resolve(config.root.src, config.tasks.html.src, '_data/' + filename)
   var tempJson

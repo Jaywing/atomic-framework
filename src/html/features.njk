@@ -15,7 +15,13 @@
 {% block content %}
 
   {{ Hero(hero.content, hero.classes) }}
-  {{ FeaturesList(features, 'o-Container o-Container--centered') }}
+
+  <div class="o-Container o-Container--centered">
+    <dl class="Definition">
+      <dt>HTML</dt>
+      <dd>Nunjucks templates</dd>
+    </dl>
+  </div>
 
 {% endblock %}
 
