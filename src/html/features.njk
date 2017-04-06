@@ -17,10 +17,28 @@
   {{ Hero(hero.content, hero.classes) }}
 
   <div class="o-Container o-Container--centered">
-    <dl class="Definition">
-      <dt>HTML</dt>
-      <dd>Nunjucks templates</dd>
-    </dl>
+    <div class="o-Grid">
+      <div class="o-Grid-cell o-Size--3of12">
+        <dl class="Definition Definition--bullets">
+          <dt>Performance</dt>
+          <dd>No jQuery dependency</dd>
+          <dd>Web font loader</dd>
+          <dd>Async ES6 modules</dd>
+          <dd>SVG sprites</dd>
+          <dd>Lazy loading images</dd>
+        </dl>
+      </div>
+      <div class="o-Grid-cell o-Size--3of12">
+        <dl class="Definition Definition--bullets">
+          <dt>Code consistency</dt>
+          <dd>Library of reusable components</dd>
+          <dd>CSS class name strategy</dd>
+          <dd>Code linters (JS and CSS)</dd>
+          <dd>ES6 module pattern</dd>
+          <dd>Nunchucks templates (mirroring integrated views)</dd>
+        </dl>
+      </div>
+    </div>
   </div>
 
 {% endblock %}
