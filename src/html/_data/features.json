@@ -2,12 +2,7 @@
   "metaTitle": "Atomic Features",
   "hero": {
     "content": {
-      "title": "Features",
-      "cta": {
-        "url": "docs/",
-        "title": "Check out the docs",
-        "classes": "Button Button--primary Button--xl"
-      }
+      "title": "Features"
     },
     "classes": "Hero--jumbo Text--center"
   },
