@@ -113,7 +113,8 @@
         { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
         { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
         { "id": "switcher", "title": "Switcher", "section": "core", "ready": true },
-        { "id": "load-img", "title": "Load Image", "section": "core", "ready": false }
+        { "id": "load-img", "title": "Load Image", "section": "core", "ready": false },
+        { "id": "validate", "title": "Validate", "section": "core", "ready": false }
       ]
     },
     {

@@ -1,4 +1,4 @@
-$form-field-padding: $g-spacer-sm !default;
+$form-field-padding: $g-spacer-sm 0 !default;
 
 $form-label-weight: $g-weight-bold !default;
 
@@ -17,11 +17,9 @@ $form-disabled-bg: $c-disabled !default;
 $form-disabled-border-color: $c-light-30 !default;
 $form-disabled-color: $c-light-75 !default;
 
-$form-danger-bg: $c-danger-light-30 !default;
 $form-danger-border-color: $c-danger !default;
 $form-danger-color: $c-danger !default;
 
-$form-success-bg: $c-success-light-50 !default;
 $form-success-border-color: $c-success !default;
 $form-success-color: $c-success !default;
 
@@ -84,15 +82,11 @@ $form-status-padding: $g-spacer-sm 0 !default;
   }
 
   &--danger {
-    background: $form-danger-bg;
     border-color: $form-danger-border-color;
-    color: $form-danger-color;
   }
 
   &--success {
-    background: $form-success-bg;
     border-color: $form-success-border-color;
-    color: $form-success-color;
   }
 }
 
@@ -117,6 +111,17 @@ $form-status-padding: $g-spacer-sm 0 !default;
 
 .Form-field {
   padding: $form-field-padding;
+
+  .Panel {
+    margin: $g-spacer-xs 0;
+  }
+
+  &--list {
+    > label {
+      display: block;
+      padding: $g-spacer-sm 0 0;
+    }
+  }
 }
 
 .Form-status {
