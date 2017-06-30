@@ -145,11 +145,31 @@ export default class Validate extends Module {
     this.removeError(e.target) // field is valid - remove error
   }
 
+  submitHandler (e) {
+    let error, hasErrors
+    const fields = this.el.elements;
+
+    for (let i = 0; i < fields.length; i++) {
+      error = this.hasError(fields[i])
+      if (error) {
+        this.showError(fields[i], error)
+        if (!hasErrors) hasErrors = fields[i]
+      }
+    }
+
+    if (hasErrors) {
+      e.preventDefault()
+      hasErrors.focus()
+    }
+  }
+
   init () {
     this.setNoValidate() // turn off in browser validation
 
     // delegate blur event on the form - pass event to blurHandler
     this.el.addEventListener('blur', (e) => { this.blurHandler(e) }, true)
+
+    this.el.addEventListener('submit', (e) => { this.submitHandler(e)}, false)
 
     console.log(`${this.name} has initialised`)
   }
