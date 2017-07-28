@@ -26,8 +26,64 @@ $base-font-size: $g-base-font-size !default;
 $base-line-height: 1.33 !default;
 
 /// set up breakpoint variables for responsive typography
+
+$fs-huge: (
+  null: (36px, 1.2),
+  xxs: 46px,
+  sm: 58px
+);
+
+$fs-h1: (
+  null: (24px, 1.2),
+  xxs: 26px,
+  sm: 32px
+);
+
+$fs-h2: (
+  null: (21px, 1.2),
+  xxs: 24px,
+  sm: 28px
+);
+
+$fs-h3: (
+  null: (19px, 1.2),
+  xxs: 20px,
+  sm: 24px
+);
+
+$fs-h4: (
+  null: (17px, 1.2),
+  xxs: 20px,
+  sm: 22px
+);
+
+$fs-body: (
+  null: (15px, 1.4),
+  xxs: 16px,
+  md: 18px
+);
+
+
+
 $gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs') !default;
-$gel-bp-type-c: map-get($g-mq-breakpoints, 'md') !default;
+$gel-bp-type-c: map-get($g-mq-breakpoints, 'xxl') !default;
+
+$typography: (
+  alpha: (
+    base: (
+      font-size: 20px
+    ),
+    sm: (
+      font-size: 24px
+    ),
+    md: (
+      font-size: 32px
+    ),
+    xl: (
+      font-size: 55px
+    )
+  )
+);
 
 // sass-lint:disable indentation
 $gel-type-settings: (
