@@ -19,8 +19,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <hr>
 
-<div class="Bookmarks" data-module="Bookmarks" data-options='{"animated":true}'></div>
-
 <h2 id="section-tasks"><a href="#section-tasks" class="Text--resetLink">Tasks and files</a></h2>
 
 <div class="docs-example"><div class="scrollXauto"><pre>gulpfile.js/tasks/browsersync
@@ -212,6 +210,11 @@ export default class Switcher extends Module {
   Click to hide/show the div
 &lt;/button&gt;</code></pre>
 </div>
+
+<h3>Async modules in production</h3>
+
+<p>When you run a production build and the actual javascript bundle files are produced, all the async modules are bundled into a file called <code>1.1.js</code> (which can be loaded asynchronously when a async module is requested).</p>
+<p><strong>It is therefore important that you delete any unused async modules from the <code>asyncModules</code> folder before you run a production build.</strong></p>
 
 {% endblock %}
 

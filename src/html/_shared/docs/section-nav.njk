@@ -8,11 +8,11 @@
 </li>
 {% endmacro %}
 
-{% from '_macros/buttons.njk' import ToggleButton %}
+{% from '_macros/toggle-button.njk' import ToggleButton %}
 
 <nav class="o-Container o-Container--centered NavResponsive NavResponsiveMd">
 
-  {{ ToggleButton("parent") }}
+  {{ ToggleButton("parent", "ToggleButton--hideText") }}
 
   <ul class="Menu Menu--vertical MenuMd">
     <li class="Menu-item Menu-item--left w-logo">

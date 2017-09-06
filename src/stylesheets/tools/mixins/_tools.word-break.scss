@@ -1,0 +1,10 @@
+@mixin break-word {
+  hyphens: auto;
+  word-break: break-word;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

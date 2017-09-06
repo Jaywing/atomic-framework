@@ -24,7 +24,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <div data-module="ResImg">
+  <div data-module="ResImg" class="o-Cover--ratio16x9">
     <img data-resimg-normal="https://placehold.it/320x180&text=320x180(16:9)"
          data-resimg-retina="https://placehold.it/320x180&text=320x180(16:9)-Retina"
          data-resimg-srcset="https://placehold.it/320x180&text=320x180(16:9) 320w,
@@ -32,7 +32,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
                              https://placehold.it/768x432&text=768x432(16:9) 768w,
                              https://placehold.it/960x540&text=960x540(16:9) 960w,
                              https://placehold.it/1024x576&text=1024x576(16:9) 1024w"
-         alt="Lazy loaded, responsive image">
+         alt="">
     <noscript>
       <img src="https://placehold.it/320x180&text=320x180(16:9)" alt="">
     </noscript>
@@ -75,7 +75,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div data-module="ResImg">
     <div class="o-Cover o-Cover--videoWide Demo">
 
-      {{ icon('spinner', '0 0 1 1', 'Icon--spin Icon--xl o-Cover-loading') }}
+      {{ icon('spinner-3', 'Icon--spin Icon--xl o-Cover-loading') }}
 
       <div id="cover-object" class="o-Cover-object">
         <img data-resimg-normal="https://placehold.it/320x180&text=320x180(16:9)"
@@ -109,7 +109,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <p><button data-module="Toggle" data-options='{"hide":true,"target":["#cover-object"]}'>Toggle the image</button> to see the loading view.</p>
-
 
 {% endblock %}
 

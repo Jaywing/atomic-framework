@@ -1,13 +1,11 @@
 {% from '_macros/menu.njk' import menuLink, menuHeader %}
-{% from '_macros/buttons.njk' import ToggleButton %}
+{% from '_macros/toggle-button.njk' import ToggleButton %}
 
     <div class="NavMain">
-
       <div class="o-Container o-Container--centered">
-
         <nav role="navigation" class="NavResponsive NavResponsiveSm">
 
-          {{ ToggleButton("parent") }}
+          {{ ToggleButton('parent')}}
 
           <ul class="Menu Menu--vertical MenuSm">
 
@@ -18,9 +16,6 @@
             {% endfor %}
 
           </ul>
-
         </nav>
-
       </div>
-
     </div>

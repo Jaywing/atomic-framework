@@ -12,19 +12,9 @@
 
 
 // settings for flexbox grid;
+$grid-columns-12: true !default;
+$grid-columns-16: false !default;
 
-// Grid mixin needs `zero: 0px` in this file, we would prefer just `0`.
-// sass-lint:disable zero-unit
-$grid-breakpoints: (
-  zero: 0px, // needs to have 'px' unit for mixin to work (even though throws a warning in the linter
-  sm:   map-get($g-mq-breakpoints, sm),
-  md:   map-get($g-mq-breakpoints, md),
-  lg:   map-get($g-mq-breakpoints, lg),
-  xl:   map-get($g-mq-breakpoints, xl),
-  xxl:  map-get($g-mq-breakpoints, xxl)
-) !default;
-
-$grid-columns: 12 !default;
 $grid-gutter-width: $g-spacer !default;
 
 $container-max-widths: ( // max widths for .container--fixed class

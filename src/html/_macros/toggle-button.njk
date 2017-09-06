@@ -1,0 +1,42 @@
+{% from '_macros/icon.njk' import icon %}
+
+<!--
+  ** ToggleButton **
+  - target        (string) - selector for element that needs to be toggled (Default: false)
+  - classes     (string) - classes to be added to the container
+  - content       (object)
+    - initIcon      (string) - ID of Icon for closed state (Default: 'navicon')
+    - closeIcon     (string) - ID of Icon for open state (Default: 'close')
+    - initText      (string) - Supporting text for closed state (Default: 'Menu')
+    - closeText     (string) - Supporting text for open state (Default: 'Close')
+-->
+{% macro ToggleButton(
+  target = false,
+  classes = "",
+  content = {
+    offIcon: 'navicon',
+    onIcon: 'close',
+    offText: 'Menu',
+    onText: 'Close'
+  }
+) %}
+
+  <button class="ToggleButton {{ classes }}" data-module="Toggle"{% if target !== false %} data-options='{"target":"{{ target }}"}'{% endif %}>
+
+    <div class="ToggleButton-init">
+      {{ icon(content.offIcon, 'ToggleButton-icon--init') }}
+      {% if content.offText %}
+        <span class="ToggleButton-text">{{ content.offText | safe }}</span>
+      {% endif %}
+    </div>
+
+    <div class="ToggleButton-close">
+      {{ icon(content.onIcon, 'ToggleButton-icon--close') }}
+      {% if content.onText %}
+        <span class="ToggleButton-text">{{ content.onText | safe }}</span>
+      {% endif %}
+    </div>
+
+  </button>
+
+{% endmacro %}

@@ -4,6 +4,7 @@ import advTest from 'cut-the-mustard/advanced';
 import './asyncModules'; // Async Module loader
 import Breakpoint from './modules/Breakpoint'; // breakpoint module
 import FontLoader from './modules/FontLoader'; // font loader module
+import UpdateCopyrightYear from './modules/CopyrightYear'; // font loader module
 
 function atomic_initialise () {
   const fontConfig = {
@@ -19,6 +20,8 @@ function atomic_initialise () {
   FontLoader.init(fontConfig)
 
   Breakpoint.init() // initialise breakpoint module
+
+  UpdateCopyrightYear('copyright-year')
 
   window.onunload = function () {
     console.log('leaving window...');

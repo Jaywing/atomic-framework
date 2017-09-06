@@ -27,6 +27,6 @@ $toggle-button-radius: $g-border-radius !default;
 
 .ToggleButton--hideText {
   .ToggleButton-text {
-    @include hide-visually;
+    @include hide-visually(true);
   }
 }

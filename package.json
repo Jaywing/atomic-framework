@@ -1,6 +1,6 @@
 {
   "name": "atomic",
-  "version": "1.1.0",
+  "version": "1.2.3",
   "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
@@ -38,6 +38,7 @@
     "browser-sync": "2.11.1",
     "chai": "3.5.0",
     "compression": "1.6.1",
+    "critical": "^0.8.4",
     "del": "2.2.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.1",
@@ -103,6 +104,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@frctl/fractal": "^1.1.3",
+    "@frctl/nunjucks": "^1.0.3",
     "babel-polyfill": "^6.16.0",
     "cut-the-mustard": "^1.0.0",
     "domtastic": "^0.12.3",

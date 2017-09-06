@@ -16,17 +16,22 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h1 class="Article-title">Size</h1>
 <p class="Text--lead">Responsive component for determining widths</p>
 
-<p>A utility object that can be combined with other object to determine widths. By default it accommodates up to 10 grid columns. You set different widths for different break points using the responsive modifiers.</p>
+  <p>A utility object that can be combined with other objects to determine widths. By default it accommodates a <strong>12 column grid</strong> but a <strong>16 column version</strong> can be enabled. You set different widths for different break points using the responsive modifiers.</p>
 
 <hr>
 
 <h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
 
+<h3>Settings</h3>
+
+<p>In <code>/stylesheets/settings/_settings.grid.scss</code> you can choose between a 12 column or a 16 column grid, or both if you need to.</p>
+<p>The variables <code>$grid-columns-12</code> and <code>$grid-columns-16</code> can be set to true of false.</p>
+
 <h3>Classes</h3>
 <table class="Table Table--striped Text--left" width="100%">
   <thead>
   <tr>
-    <th class="o-Size--1of3">Class</th>
+    <th class="o-Size--4of12">Class</th>
     <th>Description</th>
   </tr>
   </thead>
@@ -36,56 +41,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <td>Fills 100% of the available width</td>
   </tr>
   <tr>
-    <th>o-Size--1of2</th>
-    <td>Half width</td>
+    <th>o-Size--1of12</th>
+    <td>One grid cell of 12</td>
   </tr>
   <tr>
-    <th>o-Size--1of3</th>
-    <td>Third width</td>
+    <th>o-Size--1of16</th>
+    <td>One grid cell of 16</td>
   </tr>
   <tr>
-    <th>o-Size--2of3</th>
-    <td>2 thirds width</td>
+    <th>o-Size--11of12</th>
+    <td>Eleven grid cells of 12</td>
   </tr>
   <tr>
-    <th>o-Size--1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-Size--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-Size--1of5</th>
-    <td>Fifth width</td>
-  </tr>
-  <tr>
-    <th>o-Size--2of5</th>
-    <td>2 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-Size--3of5</th>
-    <td>3 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-Size--4of5</th>
-    <td>4 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-Size--1of6</th>
-    <td>Sixth width</td>
-  </tr>
-  <tr>
-    <th>o-Size--5of6</th>
-    <td>5 Sixths width</td>
-  </tr>
-  <tr>
-    <th>o-Size--1of10</th>
-    <td>Tenth width</td>
-  </tr>
-  <tr>
-    <th>o-Size--9of10</th>
-    <td>9 Tenths width</td>
+    <th>o-Size--15of16</th>
+    <td>Fifteen grid cells of 16</td>
   </tr>
   </tbody>
 </table>
@@ -150,6 +119,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Responsive modifiers</h3>
 
+<p>The 12/16 column grid is also available at all the different breakpoints (except xxs).</p>
+
 <table class="Table Text--left" width="100%">
   <thead>
   <tr>
@@ -159,248 +130,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </thead>
   <tbody>
   <tr>
-    <th>o-SizeSm--full</th>
-    <td>Fills 100% of the available width from 'sm' breakpoint (640px) and upwards</td>
+    <th>o-SizeXs--full</th>
+    <td>Fills 100% of the available width from 'xs' and upwards</td>
   </tr>
   <tr>
-    <th>o-SizeSm--1of2</th>
-    <td>Half width</td>
+    <th>o-SizeSm--6of12</th>
+    <td>Six grid cells of 12 from 'sm' and upwards</td>
   </tr>
   <tr>
-    <th>o-SizeSm--1of3</th>
-    <td>Third width</td>
-  </tr>
-  <tr>
-    <th>o-SizeSm--2of3</th>
-    <td>2 thirds width</td>
-  </tr>
-  <tr>
-    <th>o-SizeSm--1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-SizeSm--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--full</th>
-    <td>Fills 100% of the available width from 'md' breakpoint (768px) and upwards</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--1of2</th>
-    <td>Half width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--1of3</th>
-    <td>Third width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--2of3</th>
-    <td>2 thirds width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--1of5</th>
-    <td>Fifth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--2of5</th>
-    <td>2 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--3of5</th>
-    <td>3 fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--4of5</th>
-    <td>4 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--1of6</th>
-    <td>Sixt width</td>
-  </tr>
-  <tr>
-    <th>o-SizeMd--5of6</th>
-    <td>5 Sixths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--full</th>
-    <td>Fills 100% of the available width from 'lg' breakpoint (960px) and upwards</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of2</th>
-    <td>Half width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of3</th>
-    <td>Third width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--2of3</th>
-    <td>2 thirds width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of5</th>
-    <td>Fifth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--2of5</th>
-    <td>2 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--3of5</th>
-    <td>3 fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--4of5</th>
-    <td>4 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of6</th>
-    <td>Sixth width width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--5of6</th>
-    <td>5 Sixths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--1of10</th>
-    <td>Tenth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeLg--9of10</th>
-    <td>9 Tenths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--full</th>
-    <td>Fills 100% of the available width from 'xl' breakpoint (1180px) and upwards</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--1of2</th>
-    <td>Half width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--1of3</th>
-    <td>Third width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--2of3</th>
-    <td>2 thirds width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl-1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--1of5</th>
-    <td>Fifth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--2of5</th>
-    <td>2 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--3of5</th>
-    <td>3 fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--4of5</th>
-    <td>4 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--1of6</th>
-    <td>Sixth width width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--5of6</th>
-    <td>5 Sixths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--1of10</th>
-    <td>Tenth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXl--9of10</th>
-    <td>9 Tenths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--full</th>
-    <td>Fills 100% of the available width from 'xxl' breakpoint (1400px) and upwards</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--1of2</th>
-    <td>Half width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--1of3</th>
-    <td>Third width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--2of3</th>
-    <td>2 thirds width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl-1of4</th>
-    <td>Quarter width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--3of4</th>
-    <td>3 quarters width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXx--1of5</th>
-    <td>Fifth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--2of5</th>
-    <td>2 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--3of5</th>
-    <td>3 fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--4of5</th>
-    <td>4 Fifths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--1of6</th>
-    <td>Sixth width width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--5of6</th>
-    <td>5 Sixths width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--1of10</th>
-    <td>Tenth width</td>
-  </tr>
-  <tr>
-    <th>o-SizeXxl--9of10</th>
-    <td>9 Tenths width</td>
+    <th>o-SizeXl--12of16</th>
+    <td>Twelve grid cells of 16 from 'xl' and upwards</td>
   </tr>
   </tbody>
 </table>
-
 
 {% endblock %}
 
