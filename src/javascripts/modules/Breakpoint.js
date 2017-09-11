@@ -21,7 +21,7 @@ breakpoint.refreshValue = function () {
     gtXl: breakpoints.indexOf('xl') < breakpoints.indexOf(breakpoint.value)
   }
 
-  window.jwAtomic.modules.Breakpoint.details = breakpoint.detail
+  window.jwAtomic.modules.Breakpoint.detail = breakpoint.detail
 }
 
 breakpoint.checkForChange = function () {
@@ -59,7 +59,7 @@ breakpoint.logUpdate = function (e) {
 breakpoint.init = function (log = true) {
   window.jwAtomic.modules.Breakpoint = {
     type: 'sync',
-    details: {}
+    detail: {}
   }
 
   breakpoint.refreshValue()
