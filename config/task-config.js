@@ -1,5 +1,7 @@
 module.exports = {
-  html: true,
+  html: {
+    excludeFolders: ['layouts', 'shared', 'macros', 'data', 'components']
+  },
   images: true,
   fonts: true,
   static: true,
