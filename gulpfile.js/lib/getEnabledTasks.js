@@ -1,15 +1,15 @@
-var config  = require('../config')
 var compact = require('lodash/compact')
+var isEmpty = require('lodash/isEmpty')
 
 // Grouped by what can run in parallel
-var assetTasks = ['fonts', 'images', 'svgSprite']
-var codeTasks = ['html', 'css', 'eslint', 'js']
+var assetTasks = ['fonts', 'iconFont', 'images', 'svgSprite']
+var codeTasks = ['html', 'stylesheets', 'javascripts']
 
 module.exports = function(env) {
 
   function matchFilter(task) {
-    if(config.tasks[task]) {
-      if(task === 'js') {
+    if(TASK_CONFIG[task]) {
+      if(task === 'javascripts') {
         task = env === 'production' ? 'webpack:production' : false
       }
       return task
@@ -20,8 +20,14 @@ module.exports = function(env) {
     return !!value
   }
 
+  function findExistingTasks(candidates) {
+    var tasks = compact(candidates.map(matchFilter).filter(exists))
+
+    return isEmpty(tasks) ? false : tasks
+  }
+
   return {
-    assetTasks: compact(assetTasks.map(matchFilter).filter(exists)),
-    codeTasks: compact(codeTasks.map(matchFilter).filter(exists))
+    assetTasks: findExistingTasks(assetTasks),
+    codeTasks: findExistingTasks(codeTasks)
   }
 }

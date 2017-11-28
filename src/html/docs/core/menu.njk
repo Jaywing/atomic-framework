@@ -7,10 +7,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'menu' %}
 {% set sectionid = 'core' %}
 
-{% from '_macros/icon.njk' import icon %}
-{% from '_components/Menu/Menu.component.njk' import Menu %}
+{% from 'macros/icon.njk' import icon %}
+{% from 'components/Menu/Menu.component.njk' import Menu %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Menu | Atomic: Core{% endblock %}
 
@@ -636,5 +636,5 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

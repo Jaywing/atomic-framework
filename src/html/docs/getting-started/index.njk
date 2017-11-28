@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'index' %}
 {% set sectionid = 'getting-started' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Installation | Atomic: Getting started{% endblock %}
 
@@ -50,5 +50,5 @@ git commit -m "Initialised with Atomic"
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

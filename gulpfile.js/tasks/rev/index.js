@@ -1,10 +1,10 @@
-var config = require('../../config')
-if(!config.tasks.production.rev) return
+if(!TASK_CONFIG.production.rev) return
 
 var gulp         = require('gulp')
 var gutil        = require('gulp-util')
 var gulpSequence = require('gulp-sequence')
 
+var updateHtml = TASK_CONFIG.html ? 'update-html' : false
 // If you are familiar with Rails, this task the equivalent of `rake assets:precompile`
 var revTask = function(cb) {
   gulpSequence(
@@ -15,7 +15,7 @@ var revTask = function(cb) {
     // 3) Rev and compress CSS and JS files (this is done after assets, so that if a referenced asset hash changes, the parent hash will change as well
     'rev-css',
     // 4) Update asset references in HTML
-    'update-html',
+    updateHtml,
   cb)
 }
 

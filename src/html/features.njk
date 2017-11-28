@@ -6,9 +6,9 @@
 
 {% set pageId = 'features' %}
 
-{% extends '_layouts/application.njk' %}
-{% from '_macros/hero.njk' import Hero %}
-{% from '_macros/featuresList.njk' import FeaturesList %}
+{% extends 'layouts/application.njk' %}
+{% from 'macros/hero.njk' import Hero %}
+{% from 'macros/featuresList.njk' import FeaturesList %}
 
 {% block metaTitle %}{{ metaTitle }}{% endblock %}
 
@@ -57,5 +57,5 @@
 {% endblock %}
 
 {% block javascript %}
-  <script src="/assets/javascripts/app.js" async></script>
+  <script src="/javascripts/app.js" async></script>
 {% endblock %}

@@ -29,20 +29,18 @@
 /// @created  08/06/2016
 ////
 
-
 // * Settings
-@import 'settings/settings';   // global variables
+@import 'settings/settings'; // global variables
 
 // * Tools
-@import 'tools/tools';      // Mixins, functions and placeholders
+@import 'tools/tools'; // Mixins, functions and placeholders
 
 // * Generic
-@import 'normalize'; // served from node_modules
+@import '../../node_modules/normalize.css/normalize'; // served from node_modules
 @import 'generic/generic.fonts';
 @import 'generic/generic.base';
 
 // * Vendor
-
 
 // * Default (base) elements
 @import 'base/base'; // Un-classed common common
@@ -83,7 +81,6 @@
 @import 'components/objects/section/object.section';
 @import 'components/objects/media/object.media';
 @import 'components/objects/cover/object.cover';
-
 
 // * Trumps      // Helper classes, hacks and browser fixes
 // @import 'trumps/trump.border';

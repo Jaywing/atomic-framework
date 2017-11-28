@@ -6,8 +6,8 @@
 
 {% set pageId = 'index' %}
 
-{% extends '_layouts/application.njk' %}
-{% from '_macros/hero.njk' import Hero %}
+{% extends 'layouts/application.njk' %}
+{% from 'macros/hero.njk' import Hero %}
 
 {% block metaTitle %}{{ metaTitle }}{% endblock %}
 
@@ -18,5 +18,5 @@
 {% endblock %}
 
 {% block javascript %}
-  <script src="/assets/javascripts/app.js" async></script>
+  <script src="/javascripts/app.js" async></script>
 {% endblock %}

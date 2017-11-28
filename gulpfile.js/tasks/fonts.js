@@ -1,17 +1,17 @@
-var config      = require('../config')
-if(!config.tasks.fonts) return
+if(!TASK_CONFIG.fonts) return
 
 var browserSync = require('browser-sync')
 var changed     = require('gulp-changed')
 var gulp        = require('gulp')
 var path        = require('path')
 
-var paths = {
-  src: path.join(config.root.src, config.tasks.fonts.src, '/**/*.{' + config.tasks.fonts.extensions + '}'),
-  dest: path.join(config.root.dest, config.tasks.fonts.dest)
-}
-
 var fontsTask = function() {
+
+  var paths = {
+    src: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.fonts.src, '**/*.{' + TASK_CONFIG.fonts.extensions + '}'),
+    dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.fonts.dest)
+  }
+
   return gulp.src([paths.src, '*!README.md'])
     .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(gulp.dest(paths.dest))

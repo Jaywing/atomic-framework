@@ -4,12 +4,12 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% from '_macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import icon %}
 
 {% set pageid = 'close' %}
 {% set sectionid = 'core' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Close | Atomic: Core{% endblock %}
 
@@ -55,5 +55,5 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

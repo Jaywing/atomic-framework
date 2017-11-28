@@ -7,8 +7,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'toggle-button' %}
 {% set sectionid = 'extended' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
-{% from '_macros/toggle-button.njk' import ToggleButton %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+{% from 'macros/toggle-button.njk' import ToggleButton %}
 
 {% block metaTitle %}Toggle Button | Atomic: Components{% endblock %}
 
@@ -33,13 +33,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <button class="ToggleButton" data-module="Toggle">
       <div class="ToggleButton-init">
         <span class="Icon Icon--navicon ToggleButton-icon--init">
-          <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#navicon"></use></svg>
+          <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg>
         </span>
         <span class="ToggleButton-text">Menu</span>
       </div>
       <div class="ToggleButton-close">
         <span class="Icon Icon--close ToggleButton-icon--close">
-          <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#close"></use></svg>
+          <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"></use></svg>
         </span>
         <span class="ToggleButton-text">Close</span>
       </div>
@@ -51,13 +51,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <pre class="scrollXauto"><code class="html">&lt;button class="ToggleButton" data-module="Toggle"&gt;
   &lt;div class="ToggleButton-init"&gt;
     &lt;span class="Icon Icon--navicon ToggleButton-icon--init"&gt;
-      &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;
+      &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;
     &lt;/span&gt;
     &lt;span class="ToggleButton-text"&gt;Menu&lt;/span&gt;
   &lt;/div&gt;
   &lt;div class="ToggleButton-close"&gt;
     &lt;span class="Icon Icon--close ToggleButton-icon--close"&gt;
-      &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#close"&gt;&lt;/use&gt;&lt;/svg&gt;
+      &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"&gt;&lt;/use&gt;&lt;/svg&gt;
     &lt;/span&gt;
     &lt;span class="ToggleButton-text"&gt;Close&lt;/span&gt;
   &lt;/div&gt;
@@ -70,7 +70,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <dt>Macro</dt>
     <dd>ToggleButton</dd>
     <dt>Import</dt>
-    <dd><pre><code class="html">&#123;% from '_macros/toggle-button.njk' import ToggleButton %&#125;</code></pre></dd>
+    <dd><pre><code class="html">&#123;% from 'macros/toggle-button.njk' import ToggleButton %&#125;</code></pre></dd>
     <dt>Parameters</dt>
     <dd><strong>target</strong> (string or boolean:false) - reference to the element you want to toggle the active class on. If false, it toggles on itself</dd>
     <dd><strong>classes</strong> (string) - any extra classes to be put on the button element</dd>
@@ -117,5 +117,5 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% endblock %}
 
 {% block javascript %}
-  <script src="/assets/javascripts/app.js" async></script>
+  <script src="/javascripts/app.js" async></script>
 {% endblock %}

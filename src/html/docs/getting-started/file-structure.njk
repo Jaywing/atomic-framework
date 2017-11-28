@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'file-structure' %}
 {% set sectionid = 'getting-started' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}File Structure | Atomic: Getting started{% endblock %}
 
@@ -37,5 +37,5 @@ karma.conf.js      # config for karma js testing tools</pre>
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

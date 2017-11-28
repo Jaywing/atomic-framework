@@ -1,25 +1,24 @@
-var config      = require('../config')
-if(!config.tasks.svgSprite) return
+if(!TASK_CONFIG.svgSprite) return
 
-var browserSync = require('browser-sync')
-var gulp        = require('gulp')
-var imagemin    = require('gulp-imagemin')
-var svgstore    = require('gulp-svgstore')
-var path        = require('path')
+const browserSync = require('browser-sync')
+const gulp        = require('gulp')
+const svgstore    = require('gulp-svgstore')
+const path        = require('path')
 
-var svgSpriteTask = function() {
+const svgSpriteTask = function() {
 
-  var settings = {
-    src: path.join(config.root.src, config.tasks.svgSprite.src, '/*.svg'),
-    dest: path.join(config.root.dest, config.tasks.svgSprite.dest)
+  const settings = {
+    src: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.icons.src, '*.svg'),
+    dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.icons.dest)
   }
 
   return gulp.src(settings.src)
-    .pipe(imagemin())
-    .pipe(svgstore())
+    .pipe(svgstore(TASK_CONFIG.svgSprite.svgstore))
     .pipe(gulp.dest(settings.dest))
     .pipe(browserSync.stream())
 }
 
-gulp.task('svgSprite', svgSpriteTask)
-module.exports = svgSpriteTask
+const { alternateTask = () => svgSpriteTask } = TASK_CONFIG.svgSprite
+const task = alternateTask(gulp, PATH_CONFIG, TASK_CONFIG)
+gulp.task('svgSprite', task)
+module.exports = task

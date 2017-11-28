@@ -1,8 +1,0 @@
-{% macro icon (id, classes, viewBox) %}
-
-  {% set viewBox = viewBox or "0 0 1 1"%}
-
-  <span class='Icon Icon--{{id}} {{classes}}'>
-    <svg viewBox="{{viewBox}}"><use xlink:href='/assets/images/icons.svg#{{id}}'></use></svg>
-  </span>
-{% endmacro %}

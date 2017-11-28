@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'javascript' %}
 {% set sectionid = 'getting-started' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Javascripts | Atomic: Getting started{% endblock %}
 
@@ -219,5 +219,5 @@ export default class Switcher extends Module {
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

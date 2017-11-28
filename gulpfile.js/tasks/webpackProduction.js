@@ -1,13 +1,14 @@
-var config = require('../config')
-if(!config.tasks.js) return
+if(!TASK_CONFIG.javascripts) return
 
-var config  = require('../lib/webpack-multi-config')('production')
 var gulp    = require('gulp')
 var logger  = require('../lib/compileLogger')
 var webpack = require('webpack')
 
 var webpackProductionTask = function(callback) {
-  webpack(config, function(err, stats) {
+
+  var webpackConfig = require('../lib/webpack-multi-config')('production')
+
+  webpack(webpackConfig, function(err, stats) {
     logger(err, stats)
     callback()
   })

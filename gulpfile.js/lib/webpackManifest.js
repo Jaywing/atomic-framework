@@ -1,22 +1,24 @@
-var path = require('path')
-var fs   = require('fs')
+const path = require('path')
+const fs   = require('fs')
 
-module.exports = function(publicPath, dest, filename) {
+module.exports = function(jsDest, dest, filename) {
   filename = filename || 'rev-manifest.json'
 
   return function() {
-    this.plugin("done", function(stats) {
-      var stats    = stats.toJson()
-      var chunks   = stats.assetsByChunkName
-      var manifest = {}
+    this.plugin("done", function(statsObject) {
+      const stats    = statsObject.toJson()
+      const chunks   = stats.assetsByChunkName
+      const manifest = {}
 
-      for (var key in chunks) {
-        var originalFilename = key + '.js'
-        manifest[path.join(publicPath, originalFilename)] = path.join(publicPath, chunks[key])
+      for (let key in chunks) {
+        const originalFilename = key + '.js'
+        // https://github.com/vigetlabs/blendid/issues/232#issuecomment-171963233
+        const chunkName = typeof chunks[key] === 'string' ? chunks[key] : chunks[key][0]
+        manifest[path.join(jsDest, originalFilename)] = path.join(jsDest, chunkName)
       }
 
       fs.writeFileSync(
-        path.join(process.cwd(), dest, filename),
+        path.resolve(process.env.PWD, dest, filename),
         JSON.stringify(manifest)
       )
     })

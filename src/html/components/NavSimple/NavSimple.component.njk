@@ -1,0 +1,41 @@
+{% from 'components/Menu/Menu.component.njk' import Menu %}
+{% from 'components/ToggleButton/ToggleButton.component.njk' import ToggleButton %}
+
+{% macro NavSimple(
+id,
+menuItems,
+activeItem,
+activeClass,
+classList,
+menuClassList,
+togglerClassList) %}
+
+  {% set thisMenuClassList = "NavSimple-menu Menu--vertical " %}
+  {% set thisTogglerClassList = "NavSimple-toggler " %}
+  {% if menuClassList %}
+    {% set thisMenuClassList = thisMenuClassList + menuClassList %}
+  {% endif %}
+  {% if togglerClassList %}
+    {% set thisTogglerClassList = thisTogglerClassList + togglerClassList %}
+  {% endif %}
+
+  {% set targetJson = '{"target": "#' + id + '"}' %}
+
+  <nav id="{{ id }}" class="NavSimple {{ classList }}">
+    {{
+      ToggleButton(
+        "{\"target\":\"#" + id + "\"}",
+        thisTogglerClassList
+      )
+    }}
+    {{
+      Menu(
+        menuItems,
+        thisMenuClassList,
+        activeItem,
+        activeClass
+      )
+    }}
+  </nav>
+
+{% endmacro %}

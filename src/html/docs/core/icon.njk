@@ -4,12 +4,12 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% from '_macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import icon %}
 
 {% set pageid = 'icon' %}
 {% set sectionid = 'core' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Icon | Atomic: Core{% endblock %}
 
@@ -31,14 +31,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
   <span class="Icon Icon--navicon">
-    <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#navicon"></use></svg>
+    <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg>
   </span>
 </div>
 
 <div class="docs-code docs-code--html">
   <pre><code class="html">&lt;span class="Icon Icon--navicon"&gt;
   &lt;svg viewBox="0 0 1 1"&gt;
-    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#navicon"&gt;&lt;/use&gt;
+    &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;
   &lt;/svg&gt;
 &lt;/span&gt;</code></pre>
 </div>
@@ -49,7 +49,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <dt>Macro</dt>
   <dd>icon</dd>
   <dt>Import</dt>
-  <dd><pre><code class="html">&#123;% from '_macros/icon.njk' import icon %&#125;</code></pre></dd>
+  <dd><pre><code class="html">&#123;% from 'macros/icon.njk' import icon %&#125;</code></pre></dd>
   <dt>Parameters</dt>
   <dd><strong>id</strong> (string) - corresponds to the filename of icon svg</dd>
   <dd><strong>classes</strong> (string) - any extran classes to be put on icon container span</dd>
@@ -139,5 +139,5 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

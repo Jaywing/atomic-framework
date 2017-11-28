@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'html-templates' %}
 {% set sectionid = 'getting-started' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}HTML templates | Atomic: Getting started{% endblock %}
 
@@ -22,10 +22,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h2 id="section-file-structure"><a href="#section-file-structure" class="Text--resetLink">File structure</a></h2>
 
 <div class="docs-code docs-code--files"><div class="scrollXauto"><pre>html
-|-- _data         # data that will be made accessible to your templates
-|-- _layouts      # nunjucks layout templates
-|-- _macros       # nunjucks helper functions (icon helper is an example)
-|-- _shared       # nunjucks shared includes (eg. global menus etc.)
+|-- data         # data that will be made accessible to your templates
+|-- layouts      # nunjucks layout templates
+|-- macros       # nunjucks helper functions (icon helper is an example)
+|-- shared       # nunjucks shared includes (eg. global menus etc.)
 |-- docs          # templates for this documentation site (can be deleted for project work)
 index.njk         # prototype root file (homepage)
 </div></div>
@@ -33,9 +33,9 @@ index.njk         # prototype root file (homepage)
 <h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
 
 <h3>Data</h3>
-<p>The <code>_data</code> directory is where you set up the data sources for your prototype.</p>
+<p>The <code>data</code> directory is where you set up the data sources for your prototype.</p>
 <p>This will mirror the data sources in the back end, so it is probably best to work with a backend developer to set this up.</p>
-<p>By default, the <code>_data</code> folder contains the <code>global.json</code>, the global data object that is available for all the templates.</p>
+<p>By default, the <code>data</code> folder contains the <code>global.json</code>, the global data object that is available for all the templates.</p>
 <p>For template specific data, create a data (.json) file with the same filename as the template. Currently, for these docs, there is a icon.json file that is used to populate the icons on the icon docs page.</p>
 
 <h3>Layouts</h3>
@@ -43,7 +43,7 @@ index.njk         # prototype root file (homepage)
 
 <div class="docs-code docs-code--html">
   <pre><code class="html">&lt;!-- import icon helper macro --&gt;
-&#123;% from '_macros/icon.njk' import icon %&#125;
+&#123;% from 'macros/icon.njk' import icon %&#125;
 &lt;!doctype html&gt;
 &lt;html lang="en-GB"&gt;
 &lt;head&gt;
@@ -52,7 +52,7 @@ index.njk         # prototype root file (homepage)
   &lt;title&gt;&#123;% block metaTitle %&#125;Gulp Asset Pipeline&#123;% endblock %&#125;&lt;/title&gt;
   &lt;link rel="stylesheet" href="/stylesheets/styles.css"&gt;
   ...
-  &#123;% include '_shared/app-icons.njk' %&#125; &lt;!-- import shared favicons --&gt;
+  &#123;% include 'shared/app-icons.njk' %&#125; &lt;!-- import shared favicons --&gt;
   &#123;% block head %&#125;&#123;% endblock %&#125; &lt;!-- block content hook for head --&gt;
 &lt;/head&gt;
 &lt;body id="top" class="o-Site scrollY"&gt;
@@ -66,7 +66,7 @@ index.njk         # prototype root file (homepage)
         &lt;/article&gt;
         &lt;section data-sticky-container class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6"&gt;
           &#123;% block sidebar %&#125;
-            &#123;% include '_shared/docs/page-nav.njk' %&#125; &lt;!-- import share page nav --&gt;
+            &#123;% include 'shared/docs/page-nav.njk' %&#125; &lt;!-- import share page nav --&gt;
           &#123;% endblock %&#125;
         &lt;/section&gt;
       &lt;/div&gt;
@@ -100,5 +100,5 @@ index.njk         # prototype root file (homepage)
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}

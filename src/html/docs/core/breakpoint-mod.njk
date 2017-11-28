@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'breakpoint-mod' %}
 {% set sectionid = 'core' %}
 
-{% extends '_layouts/docs/layout.docs.master.njk' %}
+{% extends 'layouts/docs/layout.docs.master.njk' %}
 
 {% block metaTitle %}Breakpoint module | Atomic: Core{% endblock %}
 
@@ -51,5 +51,5 @@ function myFunction(e) { // this will fire everytime the breakpoint changes
 {% endblock %}
 
 {% block javascript %}
-<script src="/assets/javascripts/app.js" async></script>
+<script src="/javascripts/app.js" async></script>
 {% endblock %}
