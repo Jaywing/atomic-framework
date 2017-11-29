@@ -6,13 +6,11 @@
     "blendid": "^4.3.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-polyfill": "^6.16.0",
     "bourbon": "^4.3.4",
     "cut-the-mustard": "^1.0.0",
     "eqcss": "^1.4.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^4.2.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^2.1.1",
     "fontfaceobserver": "^2.0.6",
     "gel-sass-tools": "^1.2.1",
     "gel-typography": "^2.0.3",
