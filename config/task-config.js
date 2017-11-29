@@ -1,6 +1,26 @@
 module.exports = {
   html: {
-    excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data']
+    excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
+    dataFunction: function(file) {
+      // const fs = require('fs');
+      // return JSON.parse(fs.readFileSync('./../../src/html/data/index.json', 'utf8'));
+
+      const fs = require('fs');
+      const path = require('path');
+
+      var filename = file.path.split('.njk')[0];
+      var splitOperator = '\\';
+      if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
+      filename = filename.toString().split(splitOperator);
+      filename = filename[filename.length - 1] + '.json';
+      var dataPath = path.resolve('./../../src/html/data/' + filename);
+
+      var tempJson;
+      if (fs.existsSync(dataPath)) {
+        tempJson = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+      }
+      return tempJson;
+    }
   },
   images: true,
   fonts: true,
