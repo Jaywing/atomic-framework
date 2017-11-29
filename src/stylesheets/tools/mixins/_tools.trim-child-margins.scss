@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @created  07/07/2016
 ////
@@ -18,9 +18,7 @@
 ///   @include trim-child-margins;
 /// }
 
-
 @mixin trim-child-margins {
-
   &:first-child {
     margin-top: 0;
   }
@@ -28,5 +26,4 @@
   &:last-child {
     margin-bottom: 0;
   }
-
 }

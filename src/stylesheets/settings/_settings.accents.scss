@@ -5,15 +5,15 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @created  19/06/2016
 ////
 
 /// Reusable settings for common borders, gradients, box-shadows etc.
 $c-border: $c-very-strong-trans-dark !default;
-$g-border-radius:   4px !default;
-$g-round-radius:    2000px !default;
+$g-border-radius: 4px !default;
+$g-round-radius: 2000px !default;
 $g-circular-radius: 50% !default;
 $g-subtle-gradient: linear-gradient(transparent, $c-trans-dark) !default;
 $g-subtle-shadow: 0 1px 2px 0 $c-border !default;

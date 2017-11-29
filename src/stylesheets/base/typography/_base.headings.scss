@@ -5,16 +5,16 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @create   15/06/2016
 ////
 
 /// Base styles for headings h1 - h6
-$heading-font:        $g-font-sans !default;
+$heading-font: $g-font-sans !default;
 $heading-font-weight: normal !default;
-$heading-color:       inherit !default;
-$heading-small-size:  75% !default;
+$heading-color: inherit !default;
+$heading-small-size: 75% !default;
 
 h1,
 h2,

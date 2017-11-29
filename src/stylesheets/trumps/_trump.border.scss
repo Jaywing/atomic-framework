@@ -5,11 +5,10 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @created  13/06/2016
 ////
-
 
 // Border helpers
 // *      .radius
@@ -18,9 +17,9 @@
 
 // sass-lint:disable no-important
 
-$radius:  $g-border-radius !default;
-$round:   $g-round-radius !default;
-$circle:  $g-circular-radius !default;
+$radius: $g-border-radius !default;
+$round: $g-round-radius !default;
+$circle: $g-circular-radius !default;
 
 .radius {
   border-radius: $radius !important;

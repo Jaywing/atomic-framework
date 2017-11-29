@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @create   14/06/2016
 ////
@@ -21,7 +21,6 @@
 /// @example html
 ///   <a href="#"><i class="icon"></i> <u>this part gets underlines</u></a>
 
-
 @mixin link-complex {
   text-decoration: none;
 
@@ -32,10 +31,8 @@
   &:hover,
   &:focus,
   &:active {
-
     > u {
       text-decoration: underline;
     }
   }
-
 }

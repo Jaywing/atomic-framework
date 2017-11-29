@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @create   14/06/2016
 ////
@@ -138,7 +138,6 @@
 // through the media queries and sets up the
 // responsive typography
 @mixin typography($element) {
-
   $map: map-get($typography, $element);
   $base: map-get($map, base);
 
@@ -151,5 +150,4 @@
       @include prop-value($attr);
     }
   }
-
 }

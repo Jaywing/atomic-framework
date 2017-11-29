@@ -5,25 +5,24 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @created  08/06/2016
 ////
 
 // Base styles for HTML and BODY elements
-$base-bg-color:       $c-light !default;
-$base-text-color:     $c-dark !default;
+$base-bg-color: $c-light !default;
+$base-text-color: $c-dark !default;
 $base-font-family-fb: $g-font-sans-fb !default;
-$base-font-family:    $g-font-sans !default;
-$base-font-weight:  $g-weight-normal !default;
+$base-font-family: $g-font-sans !default;
+$base-font-weight: $g-weight-normal !default;
 // Highlighted Text colors
-$base-highlight-bg:           $c-primary-pale !default;
-$base-highlight-color:        $base-text-color !default;
-$base-input-highlight-bg:     $c-very-strong-trans-dark !default;
-$base-input-highlight-color:  $base-text-color !default;
+$base-highlight-bg: $c-primary-pale !default;
+$base-highlight-color: $base-text-color !default;
+$base-input-highlight-bg: $c-very-strong-trans-dark !default;
+$base-input-highlight-color: $base-text-color !default;
 $body-antialiased: $g-body-antialiased !default;
 $body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
-
 
 // Border-box for everything!
 *,
@@ -52,7 +51,6 @@ html {
 }
 
 body {
-
   @include body-copy; // set up default font size
 
   min-height: 100%;
@@ -71,11 +69,12 @@ body {
   &:target {
     animation: none;
   }
-
 }
 
 // sass-lint:disable no-important
-[hidden] { display: none !important; }
+[hidden] {
+  display: none !important;
+}
 // scss-lint:enable ImportantRule
 
 // Highlighted text colors

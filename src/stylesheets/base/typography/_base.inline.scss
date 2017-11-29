@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @create   16/06/2016
 ////
@@ -15,13 +15,13 @@
 /// Comment out any non used items. (be careful not to comment out
 /// anything that can be added in a wysiwyg editor.)s
 
-$code-bg:             $c-light-15 !default;
-$code-font-family:    $g-font-monospace !default;
-$hr-width:  100% !default;
+$code-bg: $c-light-15 !default;
+$code-font-family: $g-font-monospace !default;
+$hr-width: 100% !default;
 $hr-border: 1px solid $c-very-strong-trans-dark !default;
 $hr-margin: $g-spacer auto !default;
-$strong-font-weight:  $g-weight-bold !default;
-$small-font-size:     80% !default;
+$strong-font-weight: $g-weight-bold !default;
+$small-font-size: 80% !default;
 
 b {
   font-weight: normal;
@@ -41,7 +41,7 @@ code {
   background: $code-bg;
   display: inline-block;
   font-family: $code-font-family;
-  padding: 0 .2rem;
+  padding: 0 0.2rem;
 }
 
 hr {

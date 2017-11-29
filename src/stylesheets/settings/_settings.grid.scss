@@ -5,11 +5,10 @@
 // ----------------------------------------------------------------------
 
 ////
-/// @author   James Taylor
+/// @author   Jaywing
 /// @group    jw
 /// @created  08/06/2016
 ////
-
 
 // settings for flexbox grid;
 $grid-columns-12: true !default;
@@ -17,11 +16,4 @@ $grid-columns-16: false !default;
 
 $grid-gutter-width: $g-spacer !default;
 
-$container-max-widths: ( // max widths for .container--fixed class
-  xs:  460px,
-  sm:  615px,
-  md:  720px,
-  lg:  930px,
-  xl:  1140px,
-  xxl: 1280px
-) !default;
+$container-max-widths: (xs: 460px, sm: 615px, md: 720px, lg: 930px, xl: 1140px, xxl: 1280px) !default;
