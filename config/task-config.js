@@ -27,7 +27,8 @@ module.exports = {
       // should match `dest` in
       // path-config.json
       baseDir: 'public'
-    }
+    },
+    open: false
   },
 
   production: {

@@ -6,26 +6,21 @@ import Breakpoint from './modules/Breakpoint'; // breakpoint module
 import FontLoader from './modules/FontLoader'; // font loader module
 import UpdateCopyrightYear from './modules/CopyrightYear'; // font loader module
 
-function atomic_initialise () {
+function atomic_initialise() {
   const fontConfig = {
     google: {
-      'Raleway': [
-        {weight: '400'},
-        {weight: '400i'},
-        {weight: '700'},
-        {weight: '700i'}
-      ]
+      Raleway: [{ weight: '400' }, { weight: '400i' }, { weight: '700' }, { weight: '700i' }]
     }
-  }
-  FontLoader.init(fontConfig)
+  };
+  FontLoader.init(fontConfig);
 
-  Breakpoint.init() // initialise breakpoint module
+  Breakpoint.init(); // initialise breakpoint module
 
-  UpdateCopyrightYear('copyright-year')
+  UpdateCopyrightYear('copyright-year');
 
-  window.onunload = function () {
+  window.onunload = function() {
     console.log('leaving window...');
-  }
+  };
 }
 
 // cutting the mustard (https://www.npmjs.com/package/cut-the-mustard)

@@ -14,7 +14,7 @@
 
   "javascripts": {
     "src": "javascripts",
-    "dest": "javascripts"
+    "dest": "/javascripts"
   },
 
   "stylesheets": {
