@@ -32,6 +32,7 @@ module.exports = {
   stylesheets: true,
 
   javascripts: {
+    publicPath: '/javascripts',
     entry: {
       // files paths are relative to
       // javascripts.dest in path-config.json
