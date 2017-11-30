@@ -7,8 +7,8 @@ module.exports = {
   html: {
     excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
     dataFunction: function(file) {
-      var globalData = JSON.parse(fs.readFileSync('./../../src/html/data/global.json', 'utf8'));
-      var pageData = globalData;
+      var globalData = path.resolve('./../../src/html/data/global.json');
+      var pageData = JSON.parse(fs.readFileSync(globalData));
       var filename = file.path.split('.njk')[0];
       var splitOperator = '\\';
       if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
@@ -17,7 +17,10 @@ module.exports = {
       var dataPath = path.resolve('./../../src/html/data/' + filename);
 
       if (fs.existsSync(dataPath)) {
-        pageData = mergeJson.merge(globalData, JSON.parse(fs.readFileSync(dataPath, 'utf8')));
+        pageData = mergeJson.merge(
+          JSON.parse(fs.readFileSync(globalData, 'utf8')),
+          JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+        );
       }
 
       return pageData;
