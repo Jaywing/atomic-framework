@@ -80,7 +80,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2>Start compiling, serving, and watching files</h2>
 <div class="docs-code docs-code--cmd">
-<pre><code>yarn run blendid</code></pre>
+<pre><code>yarn start</code></pre>
 </div>
 <p>This runs gulp from ./node_modules/bin, using the version installed with this project, rather than a globally installed instance. All commands in the package.json scripts work this way. The gulp command runs the default task, defined in gulpfile.js/tasks/default.js.</p>
 <p>All files will compile in development mode (uncompressed with source maps). BrowserSync will serve up files to localhost:3000 and will stream live changes to the code and assets to all connected browsers. Don't forget about the additional BrowserSync tools available on localhost:3001!.</p>

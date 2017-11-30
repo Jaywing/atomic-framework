@@ -19,13 +19,13 @@ your Node versions.
 git clone https://github.com/jaywing/atomic.git MyApp
 cd MyApp
 yarn add blendid
-yarn run blendid
+yarn start
 ```
 
 ## Commands
 
 ```bash
-yarn run blendid
+yarn start
 ```
 
 This runs the development task, which starts compiling, watching, and live updating all our files as we change them.
@@ -33,7 +33,7 @@ Browsersync will start a server on port 3000, or do whatever you've configured i
 changes in all connected browsers.
 
 ```bash
-yarn run blendid build
+yarn build
 ```
 
 Compiles files for production to your destination directory. JS files are built with webpack 3 with standard production
