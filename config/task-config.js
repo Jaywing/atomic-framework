@@ -55,17 +55,16 @@ module.exports = {
   },
   additionalTasks: {
     initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
-      const paths = {
-        src: path.resolve(
-          process.env.PWD,
-          PATH_CONFIG.src,
-          PATH_CONFIG.stylesheets.src,
-          '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
-        )
-      };
       gulp.task('lint', function() {
         return gulp
-          .src(paths.src)
+          .src(
+            path.resolve(
+              process.env.PWD,
+              PATH_CONFIG.src,
+              PATH_CONFIG.stylesheets.src,
+              '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+            )
+          )
           .pipe(
             sassLint({
               options: {
