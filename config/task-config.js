@@ -57,21 +57,32 @@ module.exports = {
     initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
       gulp.task('lint', function() {
         return gulp
-          .src(
+          .src([
             path.resolve(
               process.env.PWD,
               PATH_CONFIG.src,
               PATH_CONFIG.stylesheets.src,
               '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
-            )
-          )
+            ),
+            '!' +
+              path.resolve(
+                process.env.PWD,
+                PATH_CONFIG.src,
+                PATH_CONFIG.stylesheets.src,
+                'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+              ),
+            '!' +
+              path.resolve(
+                process.env.PWD,
+                PATH_CONFIG.src,
+                PATH_CONFIG.stylesheets.src,
+                'docs/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+              )
+          ])
           .pipe(
             sassLint({
               options: {
                 formatter: 'stylish'
-              },
-              files: {
-                ignore: 'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
               },
               configFile: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.stylesheets.src, 'lint.yml')
             })
