@@ -30,7 +30,6 @@ module.exports = {
   svgSprite: true,
   ghPages: true,
   stylesheets: true,
-
   javascripts: {
     publicPath: '/javascripts',
     entry: {
@@ -44,7 +43,6 @@ module.exports = {
     },
     extractSharedJs: false
   },
-
   browserSync: {
     server: {
       // should match `dest` in
@@ -53,7 +51,6 @@ module.exports = {
     },
     open: false
   },
-
   production: {
     rev: true
   }
