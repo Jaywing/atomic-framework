@@ -2,9 +2,6 @@ module.exports = {
   html: {
     excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
     dataFunction: function(file) {
-      // const fs = require('fs');
-      // return JSON.parse(fs.readFileSync('./../../src/html/data/index.json', 'utf8'));
-
       const fs = require('fs');
       const path = require('path');
       const mergeJson = require('merge-json');
