@@ -66,7 +66,17 @@ module.exports = {
       gulp.task('lint', function() {
         return gulp
           .src(paths.src)
-          .pipe(sassLint())
+          .pipe(
+            sassLint({
+              options: {
+                formatter: 'stylish'
+              },
+              files: {
+                ignore: ['**/vendor/*.scss', '**/docs/*.scss']
+              },
+              configFile: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.stylesheets.src, 'lint.yml')
+            })
+          )
           .pipe(sassLint.format())
           .pipe(sassLint.failOnError());
       });
