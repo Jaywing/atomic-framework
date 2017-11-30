@@ -28,8 +28,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 document.addEventListener('bpupdate', myFunction, false);
 
 function myFunction(e) { // this will fire everytime the breakpoint changes
-  console.log(`I am here: ${e.details.current}`) // current breakpoint
-  console.log(`I came from: ${e.details.previous}`) // previous breakpoint
+  console.log(`I am here: ${e.detail.current}`) // current breakpoint
+  console.log(`I came from: ${e.detail.previous}`) // previous breakpoint
 }
 
 // e.detail object that is available with this custom event
@@ -46,7 +46,7 @@ function myFunction(e) { // this will fire everytime the breakpoint changes
 }</code></pre>
 </div>
 
-<p>The breakpoint detail object is also available on the global <code>jwAtomic</code> object @<code>window.jwAtomic.breakpoint</code>.</p>
+<p>The breakpoint detail object is also available on the global <code>jwAtomic</code> object @<code>window.jwAtomic.modules.Breakpoint.detail</code>.</p>
 
 {% endblock %}
 
