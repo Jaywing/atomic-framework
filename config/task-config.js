@@ -1,15 +1,14 @@
+const fs = require('fs');
+const path = require('path');
+const mergeJson = require('merge-json');
+const sassLint = require('gulp-sass-lint');
+
 module.exports = {
   html: {
     excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
     dataFunction: function(file) {
-      const fs = require('fs');
-      const path = require('path');
-      const mergeJson = require('merge-json');
-
-      const globalData = JSON.parse(fs.readFileSync('./../../src/html/data/global.json', 'utf8'));
-
+      var globalData = JSON.parse(fs.readFileSync('./../../src/html/data/global.json', 'utf8'));
       var pageData = globalData;
-
       var filename = file.path.split('.njk')[0];
       var splitOperator = '\\';
       if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
@@ -53,5 +52,32 @@ module.exports = {
   },
   production: {
     rev: true
+  },
+  additionalTasks: {
+    initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
+      const paths = {
+        src: path.resolve(
+          process.env.PWD,
+          PATH_CONFIG.src,
+          PATH_CONFIG.stylesheets.src,
+          '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+        )
+      };
+      gulp.task('lint', function() {
+        return gulp
+          .src(paths.src)
+          .pipe(sassLint())
+          .pipe(sassLint.format())
+          .pipe(sassLint.failOnError());
+      });
+    },
+    development: {
+      prebuild: ['lint'],
+      postbuild: null
+    },
+    production: {
+      prebuild: null,
+      postbuild: null
+    }
   }
 };
