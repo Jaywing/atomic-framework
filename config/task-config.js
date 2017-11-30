@@ -71,7 +71,7 @@ module.exports = {
                 formatter: 'stylish'
               },
               files: {
-                ignore: ['**/vendor/*.scss', '**/docs/*.scss']
+                ignore: 'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
               },
               configFile: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.stylesheets.src, 'lint.yml')
             })

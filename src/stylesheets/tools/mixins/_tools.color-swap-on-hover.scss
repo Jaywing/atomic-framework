@@ -46,17 +46,13 @@
 ///     @include color-swap-on-hover($color-dark $color-light, $color-light $color-dark, 300ms);
 ///   }
 
-@mixin color-swap-on-hover ($off,
- $on,
- $duration: 0,
-  $bg: false) {
+@mixin color-swap-on-hover ($off, $on, $duration: 0, $bg: false) {
   $transition-properties: null;
   $off-is-list: type-of($off) == list;
   $on-is-list: type-of($on) == list; // If $off IS a list,
   // assign color and background-color.
   @if $off-is-list {
     background-color: nth($off, 2);
-
     color: nth($off, 1);
     $transition-properties: background-color, color;
   } @else if $bg and not($off-is-list) {
@@ -73,6 +69,7 @@
     transition-duration: $duration;
     transition-property: $transition-properties;
   }
+
   &:hover,
   &:focus {
     // $on is treated the same as $off, above.
