@@ -10,13 +10,12 @@
 /// @create   20/06/2016
 ////
 
-// * Import Settings
-@import 'atomic/settings/settings'; // global variables
+@charset 'utf-8';
 
-// * Import Tools
-@import 'atomic/tools/tools'; // Mixins, functions and placeholders
+// * Atomic
+@import 'atomic/atomic';
 
-// * Import Doc specific styles
+// * Import Doc styles
 @import 'docs/settings.docs.colors';
 
 @import 'docs/generic.docs.base';
