@@ -1,14 +1,13 @@
 {
   "name": "atomic",
   "version": "1.2.3",
-  "description":
-    "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
+  "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
   "scripts": {
     "start": "yarn run blendid",
     "build": "yarn run blendid build"
   },
   "dependencies": {
-    "blendid": "^4.3.1"
+    "blendid": "^4.4.3"
   },
   "devDependencies": {
     "babel-plugin-transform-object-assign": "^6.8.0",

@@ -95,7 +95,8 @@ module.exports = {
       });
     },
     development: {
-      prebuild: ['lint'],
+      // prebuild: ['lint'],
+      prebuild: null,
       postbuild: null
     },
     production: {
