@@ -1,6 +1,6 @@
 {
   "src": "./",
-  "dest": "./_build",
+  "dest": "./dist",
   "html": {
     "src": "html",
     "dest": "./"

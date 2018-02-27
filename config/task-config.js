@@ -49,7 +49,7 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: '_build'
+      baseDir: 'dist'
     },
     open: false
   },
