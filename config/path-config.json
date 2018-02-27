@@ -10,12 +10,12 @@
     "dest": "./"
   },
   "javascripts": {
-    "src": "javascripts",
-    "dest": "javascripts"
+    "src": "js",
+    "dest": "js"
   },
   "stylesheets": {
-    "src": "stylesheets",
-    "dest": "stylesheets"
+    "src": "scss",
+    "dest": "css"
   },
   "images": {
     "src": "images",

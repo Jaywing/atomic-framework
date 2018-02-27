@@ -33,7 +33,7 @@ module.exports = {
   ghPages: true,
   stylesheets: true,
   javascripts: {
-    publicPath: '/javascripts',
+    publicPath: '/js',
     entry: {
       // files paths are relative to
       // javascripts.dest in path-config.json
