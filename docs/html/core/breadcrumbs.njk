@@ -1,0 +1,85 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'breadcrumbs' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Breadcrumbs | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Breadcrumbs</h1>
+<p class="Text--lead">Easily create nice looking breadcrumbs in different styles</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+
+<p>The breadcrumb component consists of a <code>.Breadcrumbs</code> parent component which is in a <code>nav</code> tag. This wraps a <code>.Breadcrumbs-list</code> list tag with children that have the <code>.Breadcrumbs-item</code> class.</p>
+
+<p>Variables in component.breadcrumbs.definition.scss give you control over a great deal of parameters include spacer icon, spacing and text decoration.</p>
+
+<p>This component is based on the <a href="http://foundation.zurb.com/sites/docs/breadcrumbs.html" target="_blank">Foundation breadcrumb component</a> using <a href="https://schema.org/docs/gs.html" target="_blank">microdata</a> <a href="https://developers.google.com/search/docs/data-types/breadcrumbs">recommendations from Google for breadcrumbs</a> to improve SEO. It also includes ARIA labels to let visually impared users know where they are and what the current breadcrumb item is.</p>
+
+<p>Microformats meta can be validated using <a href="https://search.google.com/structured-data/testing-tool" target="_blank">this Google tool.</a></p>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;nav class=&quot;Breadcrumbs&quot; aria-label=&quot;You are here:&quot; role=&quot;navigation&quot;&gt;
+  &lt;ol class=&quot;Breadcrumbs-list&quot; itemscope itemtype=&quot;http://schema.org/BreadcrumbList&quot; itemListOrder=&quot;Hierarchical&quot;&gt;
+    &lt;li class=&quot;Breadcrumbs-item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+      &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;Breadcrumbs-item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+      &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Features&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;Breadcrumbs-item disabled&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Gene Splicing&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;Breadcrumbs-item--current&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+      &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
+        &lt;span itemprop=&quot;name&quot; aria-label=&quot;Current:&quot;&gt;Cloning&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+
+<h3>Example</h3>
+
+<nav class="Breadcrumbs" aria-label="You are here:" role="navigation">
+  <ol class="Breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList" itemListOrder="Hierarchical">
+    <li class="Breadcrumbs-item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+        <span itemprop="name">Home</span>
+      </a>
+    </li>
+    <li class="Breadcrumbs-item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+        <span itemprop="name">Features</span>
+      </a>
+    </li>
+    <li class="Breadcrumbs-item disabled" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+        <span itemprop="name">Gene Splicing</span>
+    </li>
+    <li class="Breadcrumbs-item--current" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+        <span itemprop="name" aria-label="Current:">Cloning</span>
+      </a>
+    </li>
+  </ol>
+</nav>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

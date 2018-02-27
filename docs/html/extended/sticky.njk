@@ -1,0 +1,54 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'sticky' %}
+{% set sectionid = 'extended' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Sticky | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<div>
+
+  <h1 class="Article-title">Sticky</h1>
+  <p class="Text--lead"></p>
+
+  <hr class="Article-divider">
+
+  <h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+  <div class="docs-example">
+
+    <div data-sticky-container>
+    <div class="o-Grid o-Grid--gutters">
+      <div class="o-Grid-cell o-Size--3of12">
+        <div class="Demo Demo--fat Sticky-item" data-sticky-for="768">I'm sticky</div>
+      </div>
+      <div class="o-Grid-cell o-Size--6of12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolorem eius explicabo laudantium molestiae nisi? Aspernatur consequatur distinctio earum illo incidunt molestiae molestias, nemo, rem rerum unde, ut vitae?</p>
+        <p>Ab accusantium at consectetur, consequuntur dolorem dolorum eveniet, explicabo fugiat neque obcaecati placeat reiciendis saepe sapiente suscipit ullam unde ut vel voluptates.</p>
+        <p>Aliquid animi consectetur deserunt dolorem et eum eveniet facere id ipsam iste iusto laudantium minus nam, odio pariatur perspiciatis saepe velit veniam?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolorem eius explicabo laudantium molestiae nisi? Aspernatur consequatur distinctio earum illo incidunt molestiae molestias, nemo, rem rerum unde, ut vitae?</p>
+        <p>Ab accusantium at consectetur, consequuntur dolorem dolorum eveniet, explicabo fugiat neque obcaecati placeat reiciendis saepe sapiente suscipit ullam unde ut vel voluptates.</p>
+        <p>Aliquid animi consectetur deserunt dolorem et eum eveniet facere id ipsam iste iusto laudantium minus nam, odio pariatur perspiciatis saepe velit veniam?</p>
+      </div>
+      <div class="o-Grid-cell o-Size--3of12" style="padding-top: 175px;">
+        <div class="Demo Sticky-item" data-sticky-for="768">I'm sticky too</div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+<div style="height:1500px;"></div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

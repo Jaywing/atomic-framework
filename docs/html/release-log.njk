@@ -1,0 +1,61 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'release-log' %}
+{% set sectionid = 'index' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Release log - Atomic{% endblock %}
+
+{% block main %}
+  <div class="o-Container o-Container--centered">
+    <div class="o-Container o-Container--thin">
+      <section class="docs-hero">
+
+        <h1>Release log</h1>
+
+        <div class="Accordion">
+          <h2>1.1.0</h2>
+          <div>
+            <dl class="Definition Definition--horizontal">
+              <dt>1.1.0 - <em><small>30/11/2016</small></em></dt>
+              <dd><strong>Gulp Starter</strong> - Upgraded to latest version (3.1.0) - <strong>JT</strong></dd>
+              <dd><strong>Component templates</strong> - Concept of building on core components - <strong>JT</strong></dd>
+              <dd><strong>ToggleButton</strong> - Added with component template - <strong>JT</strong></dd>
+              <dd><strong>Menu</strong> - Component template - <strong>JT</strong></dd>
+              <dd><strong>NavSimple</strong> - Added with component template - <strong>JT</strong></dd>
+            </dl>
+          </div>
+          <h2>1.0.0</h2>
+          <div>
+            <dl class="Definition Definition--horizontal">
+              <dt>1.0.2 - <em><small>25/11/2016</small></em></dt>
+              <dd><strong>Prototype boilerplate</strong> - Fleshed out for a decent starting point - <strong>JT</strong></dd>
+              <dd><strong>Font loader</strong> - Added - <strong>JT</strong></dd>
+              <dd><strong>Toggle</strong> - JS fix - <strong>JT</strong></dd>
+              <dd><strong>Sticky</strong> - JS Fix - <strong>JT</strong></dd>
+              <dd><strong>Responsive Images</strong> - JS Fix - <strong>JT</strong></dd>
+              <dt>1.0.1 - <em><small>16/11/2016</small></em></dt>
+              <dd><strong>Button</strong> - Separated button sizes out into their own sass files - <strong>JT</strong></dd>
+              <dd><strong>Grid</strong> - IOS Fix, remove test code and negative margins - <strong>DP</strong></dd>
+              <dd><strong>Grid</strong> - Fix grid on small BPs - <strong>AF</strong></dd>
+              <dd><strong>Text</strong> - Adding examples to docs - <strong>AF</strong></dd>
+              <dd><strong>Toggle</strong> - JS fix for writing to global object - <strong>JT</strong></dd>
+              <dd><strong>Docs</strong> - Added link to live docs site to readme - <strong>JT</strong></dd>
+              <dt>1.0.0 - <em><small>16/11/2016</small></em></dt>
+              <dd><strong>Core components</strong> - reviewed and tested by front end team</dd>
+            </dl>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

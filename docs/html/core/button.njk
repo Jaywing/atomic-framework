@@ -1,0 +1,182 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% from 'macros/icon.njk' import icon %}
+
+{% set pageid = 'button' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Button | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Button</h1>
+<p class="Text--lead">Easily create versatile buttons in a variety of styles.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section:usage"><a href="section:usage" class="Text--resetLink">Usage</a></h2>
+
+<div class="docs-example">
+  <a href="#" class="Button">Link</a>
+  <button class="Button">Button</button>
+  <button class="Button" disabled>Disabled</button>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;Button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;Button&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+</div>
+
+<h3>Sizing modifiers</h3>
+
+<div class="docs-example">
+  <a href="#" class="Button Button--xs">Extra small</a>
+  <a href="#" class="Button Button--sm">Small</a>
+  <a href="#" class="Button">Standard</a>
+  <a href="#" class="Button Button--lg">Large</a>
+  <a href="#" class="Button Button--xl">Extra Large</a>
+  <a href="#" class="Button Button--block">Block button</a>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button Button--xs&quot;&gt;Extra small&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--sm&quot;&gt;Small&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button&quot;&gt;Standard&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--lg&quot;&gt;Large&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--xl&quot;&gt;Extra Large&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--block&quot;&gt;Block button&lt;/a&gt;</code></pre>
+</div>
+
+<h3>Priority modifiers</h3>
+
+<div class="docs-example">
+  <a href="#" class="Button Button--primary">Primary</a>
+  <a href="#" class="Button Button--secondary">Secondary</a>
+  <a href="#" class="Button Button--basic">Basic</a>
+  <a href="#" class="Button Button--hover">Hover</a>
+  <a href="#" class="Button Button--link">Link</a>
+  <a href="#" class="Button Button--success">Success</a>
+  <a href="#" class="Button Button--error">Error</a>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button Button--primary&quot;&gt;Primary&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--secondary&quot;&gt;Secondary&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--basic&quot;&gt;Basic&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--hover&quot;&gt;Hover&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--link&quot;&gt;Link&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--success&quot;&gt;Success&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--error&quot;&gt;Error&lt;/a&gt;</code></pre>
+</div>
+
+<h3>Icon buttons</h3>
+<div class="docs-example">
+  <a href="#" class="Button Button--icon">{{ icon('gear') }}<small class="srOnly"> Settings</small></a>
+  <a href="#" class="Button Button--icon">Dropdown {{ icon('chevron-down') }}</a>
+  <a href="#" class="Button Button--icon">{{ icon('arrow-left') }} Back</a>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;Button Button--icon&quot;&gt;&#123;&#123; icon(&#39;gear&#39;) &#125;&#125;&lt;small class=&quot;srOnly&quot;&gt; Settings&lt;/small&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--icon&quot;&gt;Dropdown &#123;&#123; icon(&#39;chevron-down&#39;) &#125;&#125;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;Button Button--icon&quot;&gt;&#123;&#123; icon(&#39;arrow-left&#39;) &#125;&#125; Back&lt;/a&gt;</code></pre>
+</div>
+
+<h3>Content swap buttons</h3>
+
+<div class="docs-example">
+
+  <button class="Button Button--swap">
+    <div class="Button-content">Hover on me</div>
+    <div class="Button-content Button-content--hidden">More stuff</div>
+  </button>
+
+  <button class="Button Button--swap Button--ani">
+    <div class="Button-content">Next</div>
+    <div class="Button-content Button-content--hidden">{{ icon('arrow-right') }}</div>
+  </button>
+
+  <button class="Button Button--swap Button--vertical Button--ani">
+    <div class="Button-content">Top</div>
+    <div class="Button-content Button-content--hidden">{{ icon('arrow-up') }}</div>
+  </button>
+
+  <button class="Button Button--swap Button--aniFade">
+    <div class="Button-content">Hover on me</div>
+    <div class="Button-content Button-content--hidden">I fade in</div>
+  </button>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;button class=&quot;Button Button--swap&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Hover on me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;More stuff&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--ani&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Next&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;arrow-right&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--vertical Button--ani&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Top&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;arrow-up&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;Button Button--swap Button--aniFade&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Hover on me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;I fade in&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+</div>
+
+<h3>Javascript: Toggle module</h3>
+<p>You can toggle states via an asynchronously loaded javascript <a href="toggle.html">Toggle module</a>. Just add the data attribute <code>data-module="Toggle"</code></p>
+<div class="docs-example">
+  <button class="Button" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--primary" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--hover" data-module="Toggle">Toggle me</button>
+  <button class="Button Button--swap Button--aniFade Button--swapToggle" data-module="Toggle">
+    <div class="Button-content">Toggle me</div>
+    <div class="Button-content Button-content--hidden">I'm toggled</div>
+  </button>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--primary&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--hover&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
+&lt;button class=&quot;Button Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Toggle&quot;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Toggle me&lt;/div&gt;
+  &lt;div class=&quot;Button-content--hidden&quot;&gt;I&#39;m toggled&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+</div>
+
+<h4>Loading submit button</h4>
+<p>The 'content swap button' and the <a href="toggle.html">'Toggle module'</a> can be used together to create a button that when clicked once, shows a loading icon and it can not be clicked again.</p>
+<div class="docs-example">
+  <button class="Button Button--primary Button--swap Button--aniFade Button--swapToggle" data-module="Toggle" data-options='{"once":true}'>
+    <div class="Button-content">Submit me</div>
+    <div class="Button-content Button-content--hidden">{{ icon('spinner', 'Icon--spin') }}</div>
+  </button>
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;button class=&quot;Button Button--primary Button--swap Button--aniFade Button--swapToggle&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
+  &lt;div class=&quot;Button-content&quot;&gt;Submit me&lt;/div&gt;
+  &lt;div class=&quot;Button-content Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;Icon--spin&#39;) &#125;&#125;&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

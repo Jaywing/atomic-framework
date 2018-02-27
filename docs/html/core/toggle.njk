@@ -1,0 +1,130 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'toggle' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Toggle | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Toggle</h1>
+<p class="Text--lead">Hide, switch or change the appearance of different contents through a toggle.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+<p>The toggle module is loaded asynchronously and is initialised using <code>data-module="Toggle"</code> on the toggler element.</p>
+<p>By default the module toggles the default active class (<code>is-active</code>) on itself.</p>
+
+<div class="docs-example">
+  <button class="Button" data-module="Toggle">Click me to toggle me</button>
+  <button class="Button is-active" data-module="Toggle">Click me to toggle me</button>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot;&gt;Click to toggle me&lt;/button&gt;</code></pre>
+</div>
+
+<h3 id="section-options"><a href="#section-options" class="Text--resetLink">Options</a></h3>
+
+<h4>Once</h4>
+<p>You can set the toggle module to only toggle once (<code>data-options='{"once":true}'</code>).</p>
+
+<div class="docs-example">
+  <button class="Button" data-module="Toggle" data-options='{"once":true}'>You can only turn me on</button>
+  <button class="Button is-active" data-module="Toggle" data-options='{"once":true}'>You can only turn me off</button>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;You can only turn me on&lt;/button&gt;</code></pre>
+</div>
+
+<h4>Target</h4>
+<p>You can also toggle an active class on another element using the target option (<code>data-options='{"target":"#mydiv"}'</code>).</p>
+
+<div class="docs-example">
+  <button class="Button myButton" data-module="Toggle" data-options='{"target":"#mydiv"}'>Click me to toggle the div</button>
+  <div class="Demo Demo--fat" id="mydiv"></div>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
+    Click to toggle the div
+&lt;/button&gt;
+&lt;div id=&quot;mydiv&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<p>You can also pass in the string 'parent' to specifically target source element's direct parent element.</p>
+<div class="docs-example">
+  <div class="Demo Demo--fat">
+    <button class="Button myButton" data-module="Toggle" data-options='{"target":"parent"}'>Click me to toggle the div</button>
+  </div>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div id=&quot;mydiv&quot;&gt;
+  &lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;parent&quot;}&#39;&gt;
+    Click to toggle the div
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<p>You can also multiple element by passing in an array (<code>data-options='{"target":["#mydiv1","#mydiv2"]}'</code>).</p>
+
+<div class="docs-example">
+  <button class="Button myButton" data-module="Toggle" data-options='{"target":["#mydiv1","#mydiv2"]}'>Click to toggle the both divs</button>
+  <div class="o-Grid o-Grid--gutters">
+    <div class="o-Grid-cell">
+      <div class="Demo Demo--fat" id="mydiv1"></div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo Demo--fat" id="mydiv2"></div>
+    </div>
+  </div>
+
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:[&quot;#mydiv1&quot;,&quot;#mydiv2&quot;]}&#39;&gt;
+    Click to toggle both divs
+&lt;/button&gt;
+&lt;div id=&quot;mydiv1&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;mydiv2&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Active class</h4>
+<p>You can also toggle an custom active class using the 'activeClass' option (<code>data-options='{"activeClass":"is-alt-active"}'</code>).</p>
+
+<div class="docs-example">
+  <button class="Button myButton" data-module="Toggle" data-options='{"target":"#mydiv3","activeClass":"is-alt-active"}'>Click to toggle the div</button>
+  <div class="Demo Demo--fat" id="mydiv3"></div>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;activeClass&quot;:&quot;is-alt-active&quot;,&quot;target&quot;:&quot;#mydiv3&quot;}&#39;&gt;
+    Click to toggle the div
+&lt;/button&gt;
+&lt;div id=&quot;mydiv3&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Hide</h4>
+<p>Instead of toggling an active class, you can toggle an elements display property by using the 'hide' option (<code>data-options='{"hide":true}</code>). This toggles the 'hidden' attribute on the target(s).</p>
+<p><strong class="Badge">Note</strong> If you use this option, the active class is no longer toggled.</p>
+
+<div class="docs-example">
+  <button class="Button myButton" data-module="Toggle" data-options='{"target":"#mydiv4", "hide":true}'>Click to hide/show the div</button>
+  <div class="Demo Demo--fat" id="mydiv4"></div>
+</div>
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;button class=&quot;Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
+    Click to hide/show the div
+&lt;/button&gt;
+&lt;div id=&quot;mydiv&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

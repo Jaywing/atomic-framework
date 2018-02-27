@@ -1,0 +1,138 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'section' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Section | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Section</h1>
+<p class="Text--lead">Provides control over the spacing of sections.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section:usage"><a href="#section:usages" class="Text--resetLink">Usage</a></h2>
+
+<h3>Section (.Section)</h3>
+<div class="docs-example">
+
+  <div class="o-Section o-Grid o-Grid--gutters Demo">
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;div class=&quot;o-Section o-Grid o-Grid--gutters Demo&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+</div>
+
+<h3>Section tall (.o-Section--tall)</h3>
+<div class="docs-example">
+
+  <div class="o-Section--tall o-Grid o-Grid--gutters Demo">
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Section short (.o-Section--short)</h3>
+<div class="docs-example">
+
+  <div class="o-Section--short o-Grid o-Grid--gutters Demo">
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Section collapse (.o-Section--collapse)</h3>
+<div class="docs-example">
+
+  <div class="o-Section--collapse o-Grid o-Grid--gutters Demo">
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="o-Grid-cell">
+      <div class="Demo">
+        <h3>Consectetur adipisicing elit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

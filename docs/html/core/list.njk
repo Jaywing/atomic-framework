@@ -1,0 +1,107 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'list' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}List | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">List</h1>
+<p class="Text--lead">Easily create nicely looking lists, which come in different styles</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+
+<p>To apply this component, add the <code>.List</code> class to an unordered or ordered list. The list will now display without any spacing or list-style.</p>
+
+<div class="docs-example">
+  <ul class="List">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;ul class=&quot;List&quot;&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h3>Modifiers</h3>
+
+<h4>List block (.List--block)</h4>
+
+<div class="docs-example">
+  <ul class="List List--block">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;ul class=&quot;List List--block&quot;&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h5>List block with links</h5>
+<div class="docs-example">
+  <ul class="List List--block">
+    <li><a href="#">List item 1</a></li>
+    <li><a href="#">List item 2</a></li>
+    <li><a href="#">List item 3</a></li>
+  </ul>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;ul class=&quot;List List--block&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item 1&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+<h5>List block with links, without list</h5>
+<div class="docs-example">
+  <div class="List List--block">
+    <a href="#">List item 1</a>
+    <a href="#">List item 2</a>
+    <a href="#">List item 3</a>
+  </div>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class=&quot;List List--block&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;List item 1&lt;/a&gt;
+  ...
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>List divider (.List--divider)</h4>
+
+<div class="docs-example">
+  <ul class="List List--divider">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</div>
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;ul class=&quot;List List--divider&quot;&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

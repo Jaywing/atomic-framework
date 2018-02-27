@@ -1,0 +1,640 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'menu' %}
+{% set sectionid = 'core' %}
+
+{% from 'macros/icon.njk' import icon %}
+{% from 'components/Menu/Menu.component.njk' import Menu %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Menu | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Menu</h1>
+<p class="Text--lead">Our flexible menu component makes it easy to build many common navigation patterns.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      {
+        "text": "My simple menu",
+        "header": true,
+        "classList": "Menu-item--left"
+      },
+      {
+        "text": "Home"
+      },
+      {
+        "id": "features",
+        "url": "features.html",
+        "text": "Features",
+        "linkClassList": " "
+      }
+    ],
+    'Menu--right',
+    'item2'
+  ) }}
+
+</div>
+
+
+<h3>Basic Menu</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ]
+) &#125;&#125;
+</code></pre>
+</div>
+
+<h3>Item alignment</h3>
+<h4>Right align (.Menu--right)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--right"
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--right&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--right"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Centred (.Menu--center)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--center"
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--center&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--center"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Expanded (.Menu--expanded)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" }
+    ],
+    "Menu--expanded"
+  ) }}
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" }
+    ],
+    "Menu--expanded"
+  ) }}
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+  "Menu--expanded"
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--expanded&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--expanded"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Menu item alignment (.Menu-item--right & .Menu-item--left)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#", "classList": "Menu-item--right" }
+    ]
+  ) }}
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#", "classList": "Menu-item--left" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    'Menu--right'
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+  &lt;li class=&quot;Menu-item Menu-item--right&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;Menu Menu--right&quot;&gt;
+  &lt;li class=&quot;Menu-item Menu-item--left&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#", "classList": "Menu-item--left" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--right"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Active menu item state (.is-active)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "id": "one", "text": "One", "url": "#" },
+      { "id": "two", "text": "Two", "url": "#" },
+      { "id": "three", "text": "Three", "url": "#" },
+      { "id": "four", "text": "Four", "url": "#" }
+    ],
+    "",
+    "two"
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "id": "one", "text": "One", "url": "#", "classList": "Menu-item--left" },
+    { "id": "two", "text": "Two", "url": "#" },
+    { "id": "three", "text": "Three", "url": "#" },
+    { "id": "four", "text": "Four", "url": "#" }
+  ],
+  "",
+  "two"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Menu header (.Menu-header)</h4>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "Menu header", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "Menu header", "header": true },
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ]
+) &#125;&#125;</code></pre>
+</div>
+
+<h3>Vertical menu (.Menu--vertical)</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "Menu header", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical"
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu Menu--vertical&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-header&quot;&gt;Menu header&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "Menu header", "header": true },
+    { "text": "One", "url": "#" },
+    { "text": "Two", "url": "#" },
+    { "text": "Three", "url": "#" },
+    { "text": "Four", "url": "#" }
+  ],
+  "Menu--vertical"
+) &#125;&#125;</code></pre>
+</div>
+
+<h4>Vertical nested menu</h4>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical Demo">
+    <li class="Menu-item"><span class="Menu-header">Menu header</span></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a>
+      <ul class="Menu Menu--vertical Demo">
+        <li class="Menu-item"><span class="Menu-header">Menu header</span></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+      </ul>
+    </li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+</div>
+
+<h4>Vertical flush nested menu (.Menu--flush)</h4>
+
+<div class="docs-example">
+  <ul class="Menu Menu--vertical Demo">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a>
+      <ul class="Menu Menu--vertical Menu--flush Demo">
+        <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+        <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+      </ul>
+    </li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+</div>
+
+<h4>Responsive menu (.MenuXs, .MenuSm, .MenuMd,. MenuLg)</h4>
+
+<div class="docs-example">
+  {{ Menu(
+    [
+      { "text": "Break @480px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuXs"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @640px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuSm"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @768px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuMd"
+  ) }}
+  {{ Menu(
+    [
+      { "text": "Break @960px", "header": true },
+      { "text": "One", "url": "#" },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ],
+    "Menu--vertical MenuLg"
+  ) }}
+
+</div>
+
+<h3>Unstyled links</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "One", "url": "#", "linkClassList": " " },
+      { "text": "Two", "url": "#", "linkClassList": " " },
+      { "text": "Three", "url": "#", "linkClassList": " " },
+      { "text": "Four", "url": "#", "linkClassList": " " }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "One", "url": "#", "linkClassList": " " },
+    { "text": "Two", "url": "#", "linkClassList": " " },
+    { "text": "Three", "url": "#", "linkClassList": " " },
+    { "text": "Four", "url": "#", "linkClassList": " " }
+  ]
+) &#125;&#125;</code></pre>
+</div>
+
+<h3>Icon links</h3>
+
+<div class="docs-example">
+
+  {{ Menu(
+    [
+      { "text": "", "icon": "sc-facebook", "url": "#"},
+      { "text": "", "icon": "sc-twitter", "url": "#" },
+      { "text": "", "icon": "sc-google-plus", "url": "#" },
+      { "text": "", "icon": "sc-youtube", "url": "#" }
+    ]
+  ) }}
+
+</div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;
+      &lt;span class="Icon Icon--sc-facebook "&gt;
+        &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#sc-facebook"&gt;&lt;/use&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&#123;&#123; Menu(
+  [
+    { "text": "", "url": "#", "icon": "sc-facebook" },
+    { "text": "", "url": "#", "icon": "sc-twitter" },
+    { "text": "", "url": "#", "icon": "sc-google-plus" },
+    { "text": "", "url": "#", "icon": "sc-youtube" }
+  ]
+) &#125;&#125;</code></pre>
+</div>
+
+
+<h3>Tabular menu (.Menu--tabular)</h3>
+
+<div class="docs-example">
+
+  <ul class="Menu Menu--tabular">
+    <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+
+  <div class="o-Section--tall o-Size--1of5">
+    <ul class="Menu Menu--vertical Menu--tabular">
+      <li class="Menu-item"><a href="#" class="Menu-link">One</a></li>
+      <li class="Menu-item is-active"><a href="#" class="Menu-link">Two</a></li>
+      <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<h3>Attached menu (<code>.Menu--attached</code>)</h3>
+
+<p>It is possible to attached the menu to other attachable items, for example, the panel component, to create a tab like component.</p>
+
+<div class="docs-example">
+  <ul class="Menu Menu--tabular Menu--attached">
+    <li class="Menu-item is-active"><a href="#" class="Menu-link">One</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Two</a></li>
+    <li class="Menu-item"><a href="#" class="Menu-link">Three</a></li>
+  </ul>
+  <div class="Panel Panel--box Panel--attached Panel--stacked">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
+  </div>
+</div>
+
+<div class="docs-code"><pre><code class="html">&lt;ul class=&quot;Menu Menu--tabular Menu--attached&quot;&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ....
+&lt;/ul&gt;
+&lt;div class=&quot;Panel Panel--box Panel--attached Panel--stacked&quot;&gt;
+  ....
+&lt;/div&gt;</code></pre></div>
+
+<div class="docs-code">
+  <pre><code class="html">&lt;ul class=&quot;Menu&quot;&gt;
+  &lt;li class=&quot;Menu-item&quot;&gt;&lt;span class=&quot;Menu-title&quot;&gt;Menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+</div>
+
+
+<div class="scrollXauto">
+  <table class="Table Table--striped">
+    <thead>
+    <tr>
+      <th class="o-Size--1of4 Text--left">Class</th>
+      <th class="Text--left">Description</th>
+      <th class="Text--right o-Size--1of5">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th class="Text--left"><code>.Menu</code></th>
+      <td>Set Menu to use flexbox and aligns items to the left by default</td>
+      <td class="Text--right">Component</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu[Xs,Sm,Md,Lg]</code></th>
+      <td>Used in conjunction with Menu--vertical to break to horizonal at 480px, 640px, 768px or 960px</td>
+      <td class="Text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu--right</code></th>
+      <td>Aligns items to the right</td>
+      <td class="Text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu--center</code></th>
+      <td>Aligns items centrally</td>
+      <td class="Text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu--expanded</code></th>
+      <td>Menu items expand to fill the available space</td>
+      <td class="Text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu--vertical</code></th>
+      <td>Aligned menu items vertically in a stacked menu</td>
+      <td class="Text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu--flush</code></th>
+      <td>Removes the left margin of a nested vertical menu</td>
+      <td class="Text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-item</code></th>
+      <td>A menu item</td>
+      <td class="Text--right">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-item--right</code></th>
+      <td>Aligns menu item to the right if the menu is left aligned</td>
+      <td class="Text--right">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-item--left</code></th>
+      <td>Aligns menu item to the left if the menu is right aligned</td>
+      <td class="Text--right">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-item.is-active</code></th>
+      <td>A active menu item</td>
+      <td class="Text--right">Active state</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-link</code></th>
+      <td>A menu link</td>
+      <td class="Text--right">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="Text--left"><code>.Menu-header</code></th>
+      <td>A menu header</td>
+      <td class="Text--right">Sub-element</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

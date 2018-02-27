@@ -1,0 +1,59 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% from 'macros/icon.njk' import icon %}
+
+{% set pageid = 'close' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/docs/layout.docs.master.njk' %}
+
+{% block metaTitle %}Close | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Close</h1>
+<p class="Text--lead">Defines styles for a close button that can be combined with different components.</p>
+
+<hr class="Article-divider">
+
+<h2>Usage</h2>
+
+<div class="docs-example">
+  <a class="Close" href="#">{{ icon('close') }}</a>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;a class="Close" href="#"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/a&gt;</code></pre>
+</div>
+
+<h2>Style modifier</h2>
+
+<p>Add the <code>.Close--alt</code> class to apply an alternative styling to the close button.</p>
+
+<div class="docs-example">
+  <a class="Close Close--alt" href="#">{{ icon('close') }}</a>
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;a class="Close Close--alt" href="#"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/a&gt;</code></pre>
+</div>
+
+<h2>Close button</h2>
+
+<div class="docs-example">
+  <button class="Close">{{ icon('close') }}</button>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;button class="Close"&gt;&#123;&#123; icon('close') &#125;&#125;&lt;/button&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/javascripts/app.js" async></script>
+{% endblock %}

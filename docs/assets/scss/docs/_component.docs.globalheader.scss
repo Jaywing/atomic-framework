@@ -1,0 +1,79 @@
+$doc-globalheader-bg: $c-jaywing-dark;
+
+.docs-GlobalHeader {
+  background: $doc-globalheader-bg;
+
+  .w-logo a {
+    display: block;
+    width: 50px;
+    margin: -12px 0 0 -7px;
+  }
+
+  .NavResponsive {
+    padding-top: $g-spacer;
+    overflow-x: visible;
+    .Icon svg {
+      fill: rgba(#fff, 0.5);
+    }
+  }
+
+  .ToggleButton {
+    top: 7px;
+    right: 7px;
+    border-color: rgba(#fff, 0.2);
+
+    @include xxs {
+      right: $g-spacer;
+    }
+  }
+
+  @include xs {
+    .Menu-item:not(.w-logo) {
+      max-width: 50%;
+    }
+  }
+
+  .Menu-link {
+    transition: all $g-trans-link-speed ease-in-out;
+    display: block;
+    color: rgba(#fff, .6);
+    padding: $g-spacer-sm;
+    margin: $g-spacer-xs 0;
+    border: 1px solid rgba(#fff, 0);
+
+    &:hover, &:focus {
+      color: rgba(#fff, .8);
+      background: none;
+      border-color: rgba(#fff, 0.25);
+    }
+
+    &.is-disabled,
+    .is-disabled > & {
+      color: rgba(#fff, 0.25);
+      &:hover, &:focus {
+        color: rgba(#fff, 0.25);
+        border-color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  .is-active {
+    > .Menu-link {
+      color: rgba(#fff, 1);
+      background: rgba(#000, .33);
+      border-color: rgba(#fff, .5);
+    }
+  }
+
+  @include md {
+    .w-logo a {
+      width: auto;
+      display: inline-block;
+      margin: 0;
+    }
+    .NavResponsive {
+      padding-top: 0;
+    }
+  }
+
+}
