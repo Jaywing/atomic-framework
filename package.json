@@ -1,6 +1,6 @@
 {
   "name": "atomic-framework",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
   "scripts": {
     "start": "yarn run blendid",
