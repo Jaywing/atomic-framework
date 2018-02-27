@@ -1,18 +1,7 @@
-// ----------------------------------------------------------------------
-
-// App stylesheet - App specific styles
-
-// ----------------------------------------------------------------------
-
-////
-/// @author   Jaywing
-/// @group    jw
-/// @create   20/06/2016
-////
-
 @charset 'utf-8';
 
 // * Atomic
-@import 'atomic/atomic';
+@import "settings";
+@import 'atomic-framework/scss/atomic';
 
-// * Import App styles
+// * Site

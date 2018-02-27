@@ -1,8 +1,0 @@
-$list-margin: $g-spacer 0 !default;
-
-.List {
-  @include trim-child-margins;
-  @include reset-list;
-
-  margin: $list-margin;
-}
