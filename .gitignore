@@ -10,3 +10,4 @@ coverage
 logs
 .idea
 yarn.lock
+dist
