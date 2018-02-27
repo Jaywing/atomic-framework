@@ -10,7 +10,14 @@ The technical architecture is based on [Blendid](https://github.com/vigetlabs/bl
 [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder,
 or can be configured and integrated into your own development environment and site or app structure.
 
-## Installation
+
+## Installation - NPM
+
+```bash
+npm install --save atomic-framework
+```
+
+## Installation - Site
 
 Requires at least version 6 of Node. We reccomend using [nvm](https://github.com/creationix/nvm) to install and manage
 your Node versions.
