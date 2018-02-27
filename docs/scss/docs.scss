@@ -1,9 +1,3 @@
-// ----------------------------------------------------------------------
-
-// Docs stylesheet - Documentation specific styles
-
-// ----------------------------------------------------------------------
-
 ////
 /// @author   Jaywing
 /// @group    jw
@@ -13,7 +7,7 @@
 @charset 'utf-8';
 
 // * Atomic
-@import 'atomic/atomic';
+@import '/scss/atomic';
 
 // * Import Doc styles
 @import 'docs/settings.docs.colors';
