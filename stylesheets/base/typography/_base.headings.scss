@@ -1,0 +1,65 @@
+// ----------------------------------------------------------------------
+
+// Elements: Headings
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @create   15/06/2016
+////
+
+/// Base styles for headings h1 - h6
+$heading-font: $g-font-sans !default;
+$heading-font-weight: normal !default;
+$heading-color: inherit !default;
+$heading-small-size: 75% !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include trim-child-margins;
+
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: normal;
+
+  small {
+    font-size: $heading-small-size;
+  }
+}
+
+h1 {
+  @include trafalgar;
+}
+
+h2 {
+  @include double-pica;
+}
+
+h3 {
+  @include great-primer;
+}
+
+h4 {
+  @include pica;
+}
+
+h5 {
+  @include brevier-bold;
+}
+
+h6 {
+  @include brevier;
+
+  margin: 0 0 $g-spacer-sm;
+  text-transform: uppercase;
+
+  .demo & {
+    margin-top: $g-spacer;
+  }
+}

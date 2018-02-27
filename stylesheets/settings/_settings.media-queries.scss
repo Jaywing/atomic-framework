@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------
+
+// Settings: Media queries
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Set of breakpoint for use with a 'tiny-first' (smaller than mobile) approach.
+/// By having the first breakpoint at the start of the mobile size range (320px),
+/// we can use any base styles to optimise for viewports smaller than mobile.
+
+/// SASS-MQ settings (media queries)
+/// @link https://github.com/sass-mq/sass-mq
+
+$mq-base-font-size: $g-base-font-size !default;
+
+$mq-breakpoints: (xxs: 320px, xs: 480px, sm: 640px, md: 768px, lg: 960px, xl: 1180px, xxl: 1400px) !default;
+// set it back to our variable naming convention
+$g-mq-breakpoints: $mq-breakpoints !default;

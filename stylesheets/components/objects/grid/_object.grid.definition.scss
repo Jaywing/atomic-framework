@@ -1,0 +1,160 @@
+// Name:            Grid
+// Description:     Defines styles for flexbox based grid layout.
+//
+// Component:       `o-Grid`
+//
+// Sub-objects:     `o-Grid-cell`
+//
+// Modifiers:       `o-Grid--flexCells`
+//                  `o-Grid--flush`
+//                  `o-Grid--full`
+//                  `o-Grid--top`
+//                  `o-Grid--bottom`
+//                  `o-Grid--center`
+//                  `o-Grid--justifyCenter`
+//                  `o-Grid--reverse`
+//                  `o-Grid--gutters`
+//                  `o-Grid--guttersLg`
+//                  `o-Grid--guttersXl`
+//
+//                  `o-Grid-cell--top`
+//                  `o-Grid-cell--bottom`
+//                  `o-Grid-cell--center`
+//                  `o-Grid-cell--autoSize`
+//
+// Markup:
+//
+// <!-- o-Grid -->
+// <div class="o-Sidebar">
+//   <div class="o-Sidebar-column">...</div>
+//   <div class="o-Sidebar-content">...</div>
+// </div>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$grid-gutter: $g-spacer;
+$grid-gutter-lg: $g-spacer-lg;
+$grid-gutter-xl: $g-spacer-xl;
+
+
+// ========================================================================
+// Component: o-Grid
+// ========================================================================
+
+.o-Grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.o-Grid-cell {
+  flex: 1 0 auto;
+  max-width: 100%;
+}
+
+.o-Grid--flexCells > .o-Grid-cell {
+  display: flex;
+}
+
+.o-Grid--top {
+  align-items: flex-start;
+}
+
+.o-Grid--bottom {
+  align-items: flex-end;
+}
+
+.o-Grid--center {
+  align-items: center;
+}
+
+.o-Grid--justifyCenter {
+  justify-content: center;
+}
+
+.o-Grid--reverse {
+  flex-direction: row-reverse;
+}
+
+.o-Grid-cell--top {
+  align-self: flex-start;
+}
+
+.o-Grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.o-Grid-cell--center {
+  align-self: center;
+}
+
+.o-Grid-cell--autoSize {
+  flex: none;
+}
+
+.o-Grid--fit > .o-Grid-cell {
+  flex: 1;
+}
+
+.o-Grid--full > .o-Grid-cell {
+  flex: 0 0 100%;
+}
+
+.o-Grid--1of2 > .o-Grid-cell {
+  flex: auto;
+  max-width: 50%;
+  width: 50%;
+}
+
+.o-Grid--1of3 > .o-Grid-cell {
+  flex: auto;
+  max-width: 33.3333%;
+  width: 33.3333%;
+}
+
+.o-Grid--1of4 > .o-Grid-cell {
+  flex: auto;
+  max-width: 25%;
+  width: 25%;
+}
+
+.o-Grid--1of5 > .o-Grid-cell {
+  flex: auto;
+  max-width: 20%;
+  width: 20%;
+}
+
+// Gutters
+// ========================================================================
+
+.o-Grid--gutters {
+  //margin-left: - ($grid-gutter / 2);
+  //margin-right: - ($grid-gutter / 2);
+
+  > .o-Grid-cell {
+    padding: $grid-gutter / 2;
+  }
+}
+
+.o-Grid--guttersLg {
+  //margin: 0 - ($grid-gutter-lg / 2);
+
+  > .o-Grid-cell {
+    padding: $grid-gutter-lg / 2;
+  }
+}
+
+.o-Grid--guttersXl {
+  //margin: 0 - ($grid-gutter-xl / 2);
+
+  > .o-Grid-cell {
+    padding: $grid-gutter-xl / 2;
+  }
+}

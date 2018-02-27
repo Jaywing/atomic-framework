@@ -1,0 +1,99 @@
+// -----------------------------------
+
+// Settings: Colours
+
+// -----------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Colour palette is set up using actual colour names at the top, then
+/// each of these is assigned to a global variable (which is not named
+/// according to its colour but by its function.
+///
+/// When referencing colour anywhere else in the project, the global
+/// variable names must be used.
+///
+/// With this setup the whole of the sites colour palette can be amended
+/// from within this file.
+
+//sass-lint:disable no-color-keywords
+//sass-lint:disable no-color-literals
+$c-palette: (
+    black: #000,
+    white: #fff,
+    blue: #2561ea,
+    purple: #a530e5,
+    teal: #2fcde0,
+    amber: #f9c000,
+    red: #dd2228,
+    green: #0b9444,
+    yellow: #e6d593,
+    orange: #be7000
+  )
+  !default;
+
+// Global color variables
+$c-dark: map-get($c-palette, black) !default;
+$c-dark-15: lighten($c-dark, 15%) !default;
+$c-dark-30: lighten($c-dark, 30%) !default;
+$c-dark-50: lighten($c-dark, 50%) !default;
+$c-dark-75: lighten($c-dark, 75%) !default;
+$c-light: map-get($c-palette, white) !default;
+$c-light-15: darken($c-light, 15%) !default;
+$c-light-30: darken($c-light, 30%) !default;
+$c-light-50: darken($c-light, 50%) !default;
+$c-light-75: darken($c-light, 75%) !default;
+$c-primary: map-get($c-palette, blue) !default;
+$c-primary-light: lighten($c-primary, 15%) !default;
+$c-primary-pale: lighten($c-primary, 35%) !default;
+$c-primary-dark: darken($c-primary, 15%) !default;
+$c-secondary: map-get($c-palette, purple) !default;
+$c-secondary-light: lighten($c-secondary, 15%) !default;
+$c-secondary-dark: darken($c-secondary, 15%) !default;
+$c-tertiary: map-get($c-palette, teal) !default;
+$c-tertiary-light: lighten($c-secondary, 15%) !default;
+$c-tertiary-dark: darken($c-secondary, 15%) !default;
+$c-highlight: map-get($c-palette, yellow) !default;
+$c-highlight-light: lighten($c-highlight, 15%) !default;
+$c-highlight-dark: darken($c-highlight, 15%) !default;
+$c-success: map-get($c-palette, green) !default;
+$c-success-dark: darken($c-success, 20%) !default;
+$c-success-light: lighten($c-success, 15%) !default;
+$c-success-light-30: lighten($c-success, 30%) !default;
+$c-success-light-50: lighten($c-success, 50%) !default;
+$c-warning: map-get($c-palette, orange) !default;
+$c-warning-dark: darken($c-warning, 20%) !default;
+$c-warning-light: lighten($c-warning, 15%) !default;
+$c-warning-light-30: lighten($c-warning, 30%) !default;
+$c-warning-light-50: lighten($c-warning, 50%) !default;
+$c-danger: map-get($c-palette, red) !default;
+$c-danger-dark: darken($c-danger, 20%) !default;
+$c-danger-light: lighten($c-danger, 15%) !default;
+$c-danger-light-30: lighten($c-danger, 30%) !default;
+$c-danger-light-50: lighten($c-danger, 50%) !default;
+$c-disabled: $c-light-15 !default;
+$c-disabled-dark: $c-light-30 !default;
+// Brand colors for social channels
+$g-social-colors: (
+    facebook: #3b5998,
+    twitter: #0084b4,
+    googlePlus: #dc4a38,
+    linkedIn: #1f88be,
+    youtube: #cc181e,
+    instagram: #49769c,
+    pinterest: #00aced
+  )
+  !default;
+$c-subtle-trans-dark: rgba(0, 0, 0, 0.03) !default;
+$c-trans-dark: rgba(0, 0, 0, 0.05) !default;
+$c-strong-trans-dark: rgba(0, 0, 0, 0.1) !default;
+$c-very-strong-trans-dark: rgba(0, 0, 0, 0.15) !default;
+
+$c-subtle-trans-light: rgba(255, 255, 255, 0.03) !default;
+$c-trans-light: rgba(255, 255, 255, 0.08) !default;
+$c-strong-trans-light: rgba(255, 255, 255, 0.12) !default;
+$c-very-strong-trans-light: rgba(255, 255, 255, 0.2) !default;

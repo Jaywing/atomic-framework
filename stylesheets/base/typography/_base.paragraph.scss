@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------
+
+// Elements: Paragraph
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @create   27/06/2016
+////
+
+// Base styles for text
+
+$para-margin: $g-spacer 0 !default;
+
+p {
+  @include trim-child-margins;
+  margin: $para-margin;
+}

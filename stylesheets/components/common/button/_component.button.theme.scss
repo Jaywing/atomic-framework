@@ -1,0 +1,65 @@
+// ----------------------------------------------------------------------
+
+// Components: Button Theme
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  20/06/2016
+////
+
+$button-font-family: $g-font-sans !default;
+$button-font-weight: $g-weight-normal !default;
+$button-radius:      $g-border-radius !default;
+
+$button-trans-speed: $g-trans-link-speed !default;
+
+$button-bg-color:         $c-light-15 !default;
+$button-color:            $c-dark-30 !default;
+
+$button-bg-color-hover:   lighten($c-light-30, 5%) !default;
+$button-color-hover:      $c-dark-15 !default;
+
+$button-bg-color-active:  darken($button-bg-color-hover, 20%) !default;
+$button-color-active:     $c-dark !default;
+
+$button-disabled-color: $c-disabled-dark !default;
+
+.Button {
+  border-radius: $button-radius;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  text-align: center;
+  text-decoration: none;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+      $button-color $button-bg-color,
+      $button-color-hover $button-bg-color-hover,
+      $button-trans-speed
+    );
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $button-bg-color-active;
+    color: $button-color-active;
+
+    &:hover,
+    &:focus {
+      background-color: $button-bg-color-active;
+      color: $button-color-active;
+    }
+  }
+
+  &[disabled] {
+    color: $button-disabled-color;
+    cursor: not-allowed;
+  }
+
+  svg {
+    fill: $button-color;
+  }
+}

@@ -1,0 +1,20 @@
+@include lg {
+  .MenuLg,
+  .NavResponsiveLg {
+    flex-wrap: nowrap;
+
+    .Menu-item {
+      flex: 0 0 auto;
+      padding: $menu-item-padding;
+    }
+
+    .Menu-link {
+      padding: $menu-link-padding;
+    }
+
+    .Menu-header {
+      margin: -($menu-header-padding);
+      padding: $menu-header-padding;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------
+
+// Elements: media
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jt
+/// @create   01/09/2016
+////
+
+img {
+  vertical-align: middle;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+}

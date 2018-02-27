@@ -1,0 +1,117 @@
+// Name:            Grid Extra extra large
+// Description:     Defines styles for flexbox based grid layout for Extra extra large devices (960px +).
+//
+// Component:       `o-GridXxl`
+//
+// Sub-objects:     `o-Grid-cell`
+//
+// Modifiers:       `o-GridXxl--reverse`
+//                  `o-GridXxl--1of2`
+//                  `o-GridXxl--1of3`
+//                  `o-GridXxl--1of4`
+//                  `o-GridXxl--gutters`
+//                  `o-GridXxl--guttersLg`
+//                  `o-GridXxl--guttersXl`
+//
+//
+// Markup:
+//
+// <!-- o-Grid -->
+// <div class="o-Grid o-GridXxl o-GridXxl--1of3">
+//   <div class="o-Grid-cell">...</div>
+//   <div class="o-Grid-cell">...</div>
+//   <div class="o-Grid-cell">...</div>
+// </div>
+//
+// ========================================================================
+
+// Breakpoints
+// ========================================================================
+
+@include xxl {
+
+  .o-GridXxl {
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--fit {
+
+      > .o-Grid-cell {
+        flex: 1;
+      }
+    }
+
+    &--full {
+
+      > .o-Grid-cell {
+        flex: 0 0 100%;
+      }
+    }
+
+    &--1of2 {
+
+      > .o-Grid-cell {
+        flex: auto;
+        max-width: 50%;
+        width: 50%;
+      }
+    }
+
+    &--1of3 {
+
+      > .o-Grid-cell {
+        flex: auto;
+        max-width: 33.3333%;
+        width: 33.3333%;
+      }
+    }
+
+    &--1of4 {
+
+      > .o-Grid-cell {
+        flex: auto;
+        max-width: 25%;
+        width: 25%;
+      }
+    }
+
+    &--1of5 {
+
+      > .o-Grid-cell {
+        flex: auto;
+        max-width: 20%;
+        width: 20%;
+      }
+    }
+
+    // Gutters
+    // ========================================================================
+    &--gutters {
+      margin: 0 - ($grid-gutter / 2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter / 2;
+      }
+    }
+
+    &--guttersLg {
+      margin: 0 - ($grid-gutter-lg / 2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter-lg / 2;
+      }
+    }
+
+    &--guttersXl {
+      margin: 0 - ($grid-gutter-xl / 2);
+
+      > .o-Grid-cell {
+        padding: $grid-gutter-xl / 2;
+      }
+    }
+
+  }
+
+}

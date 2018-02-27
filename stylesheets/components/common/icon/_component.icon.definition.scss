@@ -1,0 +1,40 @@
+$icon-size-sm:  18px !default;
+$icon-size:     26px !default;
+$icon-size-lg:  44px !default;
+$icon-size-xl:  60px !default;
+$icon-size-xxl: 88px !default;
+
+$icon-spin-ani-time: 1.25s !default;
+$icon-spin-ani-type: linear !default;
+
+.Icon {
+  display: inline-block;
+  height: $icon-size;
+  vertical-align: middle;
+  width: $icon-size;
+
+  &--lg {
+    height: $icon-size-lg;
+    width: $icon-size-lg;
+  }
+
+  &--sm {
+    height: $icon-size-sm;
+    width: $icon-size-sm;
+  }
+
+  &--xl {
+    height: $icon-size-xl;
+    width: $icon-size-xl;
+  }
+
+  &--xxl {
+    height: $icon-size-xxl;
+    width: $icon-size-xxl;
+  }
+
+  &--spin {
+    animation: spin $icon-spin-ani-time infinite $icon-spin-ani-type;
+    display: inline-block;
+  }
+}

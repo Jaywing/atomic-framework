@@ -1,0 +1,26 @@
+// ----------------------------------------------------------------------
+
+// Elements: index
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jt
+/// @create   15/06/2016
+////
+
+/// Import all the unclasses element styles
+
+@import 'base.print';
+
+@import 'typography/base.headings';
+@import 'typography/base.paragraph';
+@import 'typography/base.links';
+@import 'typography/base.lists';
+@import 'typography/base.inline';
+@import 'typography/base.blockquote';
+
+@import 'base.media';
+@import 'base.details';
+@import 'base.figure';

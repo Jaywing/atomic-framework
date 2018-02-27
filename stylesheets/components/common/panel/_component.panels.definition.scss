@@ -1,0 +1,61 @@
+.Panels {
+  margin: $panels-margin;
+
+  > .Panel {
+    margin: 0;
+  }
+}
+
+.Panels--horizontal {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
+
+  > .Panel {
+    flex: 1;
+  }
+
+  > .Panel--box {
+    border-radius: 0;
+    border-right: 0;
+
+    &:first-child {
+      border-radius: $panel-box-border-radius 0 0 $panel-box-border-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $panel-box-border-radius $panel-box-border-radius 0;
+      border-right: $panel-box-border;
+    }
+  }
+}
+
+.Panels--hidden {
+  > .Panel {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.Panels:not(.Panels--horizontal, .Panels--hidden) {
+  > .Panel--box:not(.Panel--attached) {
+    border-bottom: 0;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
+    }
+
+    &:last-child {
+      border-bottom: $panel-box-border;
+      border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
+    }
+  }
+}
+
+.Panels--attached {
+  margin-top: 0;
+}

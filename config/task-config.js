@@ -6,15 +6,15 @@ const sassLint = require('gulp-sass-lint');
 module.exports = {
   html: {
     excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
-    dataFunction: function(file) {
-      var globalData = path.resolve('./../../src/html/data/global.json');
+    dataFunction: function (file) {
+      var globalData = path.resolve('./../../html/data/global.json');
       var pageData = JSON.parse(fs.readFileSync(globalData));
       var filename = file.path.split('.njk')[0];
       var splitOperator = '\\';
       if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
       filename = filename.toString().split(splitOperator);
       filename = filename[filename.length - 1] + '.json';
-      var dataPath = path.resolve('./../../src/html/data/' + filename);
+      var dataPath = path.resolve('./../../html/data/' + filename);
 
       if (fs.existsSync(dataPath)) {
         pageData = mergeJson.merge(
@@ -49,7 +49,7 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: 'public'
+      baseDir: 'dist'
     },
     open: false
   },
@@ -58,7 +58,7 @@ module.exports = {
   },
   additionalTasks: {
     initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
-      gulp.task('lint', function() {
+      gulp.task('lint', function () {
         return gulp
           .src([
             path.resolve(
@@ -68,19 +68,19 @@ module.exports = {
               '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
             ),
             '!' +
-              path.resolve(
-                process.env.PWD,
-                PATH_CONFIG.src,
-                PATH_CONFIG.stylesheets.src,
-                'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
-              ),
+            path.resolve(
+              process.env.PWD,
+              PATH_CONFIG.src,
+              PATH_CONFIG.stylesheets.src,
+              'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+            ),
             '!' +
-              path.resolve(
-                process.env.PWD,
-                PATH_CONFIG.src,
-                PATH_CONFIG.stylesheets.src,
-                'docs/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
-              )
+            path.resolve(
+              process.env.PWD,
+              PATH_CONFIG.src,
+              PATH_CONFIG.stylesheets.src,
+              'docs/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
+            )
           ])
           .pipe(
             sassLint({

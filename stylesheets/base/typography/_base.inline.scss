@@ -1,0 +1,76 @@
+// ----------------------------------------------------------------------
+
+// Elements: Inline
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @create   16/06/2016
+////
+
+/// Inline typography styles eg. strong, em, abbr... ect
+///
+/// Comment out any non used items. (be careful not to comment out
+/// anything that can be added in a wysiwyg editor.)s
+
+$code-bg: $c-light-15 !default;
+$code-font-family: $g-font-monospace !default;
+$hr-width: 100% !default;
+$hr-border: 1px solid $c-very-strong-trans-dark !default;
+$hr-margin: $g-spacer auto !default;
+$strong-font-weight: $g-weight-bold !default;
+$small-font-size: 80% !default;
+
+b {
+  font-weight: normal;
+}
+
+cite {
+  @include brevier;
+
+  font-style: italic;
+
+  &::before {
+    content: '- ';
+  }
+}
+
+code {
+  background: $code-bg;
+  display: inline-block;
+  font-family: $code-font-family;
+  padding: 0 0.2rem;
+}
+
+hr {
+  border: 0;
+  border-bottom: $hr-border;
+  clear: both;
+  height: 0;
+  margin: $hr-margin;
+  max-width: $hr-width;
+}
+
+i {
+  font-style: normal;
+}
+
+pre {
+  display: block;
+
+  code {
+    display: block;
+    overflow-x: auto;
+    padding: $g-spacer-sm;
+  }
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+u {
+  text-decoration: none;
+}

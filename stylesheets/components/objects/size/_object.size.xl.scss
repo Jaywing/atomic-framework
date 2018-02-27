@@ -1,0 +1,153 @@
+// sass-lint:disable no-important
+@include xl {
+  .o-SizeXl {
+    &--full {
+      flex: none !important;
+      width: 100% !important;
+    }
+
+    @if $grid-columns-12 == true {
+      &--12of12 {
+        flex: none !important;
+        width: 100% !important;
+      }
+
+      &--1of12 {
+        flex: none !important;
+        width: 8.3333% !important;
+      }
+
+      &--2of12 {
+        flex: none !important;
+        width: 16.6667% !important;
+      }
+
+      &--3of12 {
+        flex: none !important;
+        width: 25% !important;
+      }
+
+      &--4of12 {
+        flex: none !important;
+        width: 33.3333% !important;
+      }
+
+      &--5of12 {
+        flex: none !important;
+        width: 41.6667% !important;
+      }
+
+      &--6of12 {
+        flex: none !important;
+        width: 50% !important;
+      }
+
+      &--7of12 {
+        flex: none !important;
+        width: 58.3333% !important;
+      }
+
+      &--8of12 {
+        flex: none !important;
+        width: 66.6667% !important;
+      }
+
+      &--9of12 {
+        flex: none !important;
+        width: 75% !important;
+      }
+
+      &--10of12 {
+        flex: none !important;
+        width: 83.3333% !important;
+      }
+
+      &--11of12 {
+        flex: none !important;
+        width: 91.6667% !important;
+      }
+    }
+
+    @if $grid-columns-16 == true {
+      &--16of16 {
+        flex: none !important;
+        width: 100% !important;
+      }
+
+      &--1of16 {
+        flex: none !important;
+        width: 6.25% !important;
+      }
+
+      &--2of16 {
+        flex: none !important;
+        width: 12.5% !important;
+      }
+
+      &--3of16 {
+        flex: none !important;
+        width: 18.75% !important;
+      }
+
+      &--4of16 {
+        flex: none !important;
+        width: 25% !important;
+      }
+
+      &--5of16 {
+        flex: none !important;
+        width: 31.25% !important;
+      }
+
+      &--6of16 {
+        flex: none !important;
+        width: 37.5% !important;
+      }
+
+      &--7of16 {
+        flex: none !important;
+        width: 43.75% !important;
+      }
+
+      &--8of16 {
+        flex: none !important;
+        width: 50% !important;
+      }
+
+      &--9of16 {
+        flex: none !important;
+        width: 56.25% !important;
+      }
+
+      &--10of16 {
+        flex: none !important;
+        width: 62.75% !important;
+      }
+
+      &--11of16 {
+        flex: none !important;
+        width: 68.75% !important;
+      }
+
+      &--12of16 {
+        flex: none !important;
+        width: 75% !important;
+      }
+
+      &--13of16 {
+        flex: none !important;
+        width: 81.25% !important;
+      }
+
+      &--14of16 {
+        flex: none !important;
+        width: 87.5% !important;
+      }
+
+      &--15of16 {
+        flex: none !important;
+        width: 93.75% !important;
+      }
+    }
+  }
+}

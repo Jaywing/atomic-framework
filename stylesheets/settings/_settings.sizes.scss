@@ -1,0 +1,26 @@
+// ----------------------------------------------------------------------
+
+// Settings: sizes
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+$g-spacer: 1rem !default;
+
+$g-spacer-lg: $g-spacer * 1.5 !default;
+$g-spacer-xl: $g-spacer * 2 !default;
+$g-spacer-xxl: $g-spacer * 3 !default;
+
+$g-spacer-sm: $g-spacer / 2 !default;
+$g-spacer-xs: $g-spacer / 4 !default;
+$g-spacer-xxs: $g-spacer / 6 !default;
+
+$g-spacer-tiny: $g-spacer / 8 !default;
+
+$g-golden-sm: 38.196602% !default;
+$g-golden-lg: 61.803398% !default;

@@ -1,0 +1,34 @@
+$button-success-bg: $c-success !default;
+$button-success-color: $c-light !default;
+$button-success-hover-bg: darken($button-success-bg, 10%) !default;
+$button-success-disabled-color: rgba($button-success-color, .8);
+
+.Button--success {
+  border-color: $button-success-bg;
+
+  &:not([disabled]) {
+    @include color-swap-on-hover(
+      $button-secondary-color $button-success-bg,
+      $button-secondary-color-hover $button-success-hover-bg,
+      $button-secondary-trans-speed
+    );
+  }
+
+  &.is-active {
+    background: darken($button-success-hover-bg, 5%);
+
+    &:hover,
+    &:focus {
+      background: darken($button-success-hover-bg, 5%);
+    }
+  }
+
+  &[disabled] {
+    background: lighten($button-success-bg, 15%);
+    color: $button-success-disabled-color;
+  }
+
+  svg {
+    fill: $button-success-color;
+  }
+}

@@ -1,0 +1,81 @@
+$panel-box-bg: $c-light !default;
+$panel-box-border: 1px solid $c-border !default;
+$panel-box-badge-pos: $g-spacer-sm !default;
+$panel-box-padding: $g-spacer !default;
+$panel-box-border-radius: $g-border-radius !default;
+$panel-box-stacked-bg: rgba($c-dark, .03) !default;
+
+.Panel--box {
+  background: $panel-box-bg;
+  border: $panel-box-border;
+  border-radius: $panel-box-border-radius;
+  padding: $panel-box-padding;
+
+  .Panel-badge {
+    right: $panel-box-badge-pos;
+    top: $panel-box-badge-pos;
+  }
+
+  .Panel-teaser {
+    border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
+    margin-left: -($panel-box-padding);
+    margin-right: -($panel-box-padding);
+    margin-top: -($panel-box-padding);
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+
+    img,
+    object,
+    video {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  &.Panel--attached {
+    border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
+    border-top: 0;
+  }
+
+  &.Panel--stacked {
+    &::after {
+      background: $panel-box-stacked-bg;
+      border-top: $panel-box-border;
+      bottom: -3px;
+      content: '';
+      height: 6px;
+      left: 0;
+      position: absolute;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+
+  &.Panel--piled {
+    &::after,
+    &::before {
+      background: $panel-box-bg;
+      border: $panel-box-border;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(.75deg);
+      z-index: -1;
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(-.75deg);
+      z-index: -2;
+    }
+  }
+}
