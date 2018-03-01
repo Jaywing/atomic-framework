@@ -1,7 +1,6 @@
 _build
 node_modules
 config
-dist
 static
 icons
 images
