@@ -19,7 +19,7 @@ gulp.task('sass:atomic', function() {
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({
-        includePaths: CONFIG.SASS_DOC_PATHS
+        includePaths: CONFIG.SASS_PATHS
       }).on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: CONFIG.CSS_COMPATIBILITY
