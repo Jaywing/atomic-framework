@@ -11,7 +11,6 @@ var autoprefixer = require('autoprefixer');
 
 var CONFIG = require('../config.js');
 
-// Compiles Sass files into CSS
 gulp.task('sass', ['sass:atomic', 'sass:docs']);
 
 // Prepare dependencies

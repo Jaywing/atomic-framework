@@ -2,7 +2,6 @@ var gulp = require('gulp');
 
 var CONFIG = require('../config.js');
 
-// Copies static assets
 gulp.task('images', ['images:atomic', 'images:docs']);
 
 gulp.task('images:atomic', function() {
