@@ -12,22 +12,4 @@ up development time.
 npm install --save atomic-framework
 ```
 
-## Commands
-
-```bash
-yarn start
-```
-
-This runs the development task, which starts compiling, watching, and live updating all our files as we change them.
-Browsersync will start a server on port 3000, or do whatever you've configured it to do. You'll be able to see live
-changes in all connected browsers.
-
-```bash
-yarn build
-```
-
-In development.
-
----
-
 View the [Atomic documentation](http://atomic.preview8.jaywing.com/docs/).
