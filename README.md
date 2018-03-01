@@ -18,7 +18,7 @@ Requires at least version 6 of Node. We reccomend using [nvm](https://github.com
 your Node versions.
 
 ```bash
-git clone https://github.com/jaywing/atomic.git AtomicFramework
+git clone https://github.com/Jaywing/atomic-framework.git AtomicFramework
 cd AtomicFramework
 yarn install
 yarn start
