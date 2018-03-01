@@ -12,18 +12,6 @@ up development time.
 npm install --save atomic-framework
 ```
 
-## Installation - Site Template
-
-Requires at least version 6 of Node. We reccomend using [nvm](https://github.com/creationix/nvm) to install and manage
-your Node versions.
-
-```bash
-git clone https://github.com/Jaywing/atomic-framework.git AtomicFramework
-cd AtomicFramework
-yarn install
-yarn start
-```
-
 ## Commands
 
 ```bash
