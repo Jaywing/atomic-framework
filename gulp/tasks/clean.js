@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-var rimraf = require('rimraf').sync;
+var clean = require('del').sync;
 
 // Erases the dist folder
 gulp.task('clean', function() {
-  rimraf('_build');
+  clean(['./_build', './dist']);
 });

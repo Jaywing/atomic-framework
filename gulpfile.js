@@ -7,7 +7,7 @@ requireDir('./gulp/tasks');
 
 // Builds the documentation and framework files
 // gulp.task('build', ['clean', 'copy', 'docs:all', 'sass', 'javascript']);
-gulp.task('build', ['clean', 'sass']);
+gulp.task('build', ['clean', 'sass', 'html']);
 
 // Starts a BrowerSync instance
 gulp.task('serve', ['build'], function(){
