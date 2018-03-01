@@ -7,7 +7,7 @@
     "node": ">=6.11.1",
     "npm": ">=3.10.3"
   },
-  "main": "gulpfile.js/index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
   },
