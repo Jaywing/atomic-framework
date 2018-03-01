@@ -34,11 +34,5 @@ module.exports = {
       'ios >= 7'
     ],
   
-    ASSETS_FILES: [
-      'docs/assets/**/*',
-      '!docs/assets/{js,scss}',
-      '!docs/assets/{js,scss}/**/*'
-    ],
-  
     DIST_FILES: [],
   };
