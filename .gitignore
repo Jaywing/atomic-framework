@@ -10,5 +10,4 @@ coverage
 logs
 .idea
 yarn.lock
-dist
 _build

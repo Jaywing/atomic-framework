@@ -13,14 +13,7 @@ var CONFIG = require('../config.js');
 
 gulp.task('sass', ['sass:atomic', 'sass:docs']);
 
-// Prepare dependencies
-// gulp.task('sass:deps', function() {
-//   return gulp.src(CONFIG.SASS_DEPS_FILES)
-//     .pipe(gulp.dest('_vendor'));
-// });
-
 // Compiles Atomic Sass
-// gulp.task('sass:atomic', ['sass:deps'], function() {
 gulp.task('sass:atomic', function() {
   return gulp.src(['./scss/atomic.scss'])
     .pipe(sourcemaps.init())
@@ -33,17 +26,16 @@ gulp.task('sass:atomic', function() {
     })]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
-    // .on('finish', function() {
-    //   gulp.src(CONFIG.SASS_LINT_FILES)
-    //     .pipe(sassLint({
-    //         config: './.sass-lint.yml'
-    //       }))
-    //     .pipe(sassLint.format());
-    // });
+    .on('finish', function() {
+      gulp.src(CONFIG.SASS_LINT_FILES)
+        .pipe(sassLint({
+            config: './.sass-lint.yml'
+          }))
+        .pipe(sassLint.format());
+    });
 });
 
-// Compiles docs Sass (includes Atomic code also)
-// gulp.task('sass:docs', ['sass:deps'], function() {
+// Compiles Docs Sass with Atomic Sass
 gulp.task('sass:docs', function() {
   return gulp.src('./docs/scss/docs.scss')
     .pipe(sourcemaps.init())
