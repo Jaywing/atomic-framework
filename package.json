@@ -6,8 +6,6 @@
     "start": "gulp"
   },
   "dependencies": {
-  },
-  "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -46,5 +44,7 @@
     "verge": "^1.9.1",
     "webpack": "3.5.5",
     "webpack-stream": "^3.2.0"
+  },
+  "devDependencies": {    
   }
 }
