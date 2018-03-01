@@ -3,12 +3,12 @@
   .NavResponsiveXl {
     flex-wrap: nowrap;
 
-    .Menu-item {
+    > .Menu-item {
       flex: 0 0 auto;
       padding: $menu-item-padding;
     }
 
-    .Menu-link {
+    > .Menu-item .Menu-link {
       padding: $menu-link-padding;
     }
 
