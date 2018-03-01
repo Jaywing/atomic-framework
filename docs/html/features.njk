@@ -1,0 +1,60 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageId = 'features' %}
+
+{% extends 'layouts/application.njk' %}
+{% from 'macros/hero.njk' import Hero %}
+{% from 'macros/featuresList.njk' import FeaturesList %}
+
+{% block metaTitle %}{{ metaTitle }}{% endblock %}
+
+{% block content %}
+
+  {{ Hero(hero.content, hero.classes) }}
+
+  <div class="o-Container o-Container--centered">
+    <div class="o-Grid o-Grid--gutters">
+      <div class="o-Grid-cell o-Size--4of12">
+        <div class="Panel Panel--box">
+          <dl class="Definition Definition--bullets">
+            <dt>Performance</dt>
+            <dd>No jQuery dependency</dd>
+            <dd>Web font loader (non render blocking)</dd>
+            <dd>Async ES6 modules</dd>
+            <dd>SVG sprites</dd>
+            <dd>Lazy loaded images</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="o-Grid-cell o-Size--4of12">
+        <div class="Panel Panel--box">
+          <dl class="Definition Definition--bullets">
+            <dt>Code consistency</dt>
+            <dd>Library of reusable components</dd>
+            <dd>CSS class name strategy</dd>
+            <dd>Code linters (JS and CSS)</dd>
+            <dd>ES6 module pattern</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="o-Grid-cell o-Size--4of12">
+        <div class="Panel Panel--box">
+          <dl class="Definition Definition--bullets">
+            <dt>Efficiencies</dt>
+            <dd>Library of reusable components</dd>
+            <dd>Build prototypes rapidly</dd>
+            <dd>Mirroring integrated views in the prototype</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

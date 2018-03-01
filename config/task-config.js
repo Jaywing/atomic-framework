@@ -1,20 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-const mergeJson = require('merge-json');
-const sassLint = require('gulp-sass-lint');
+const fs          = require('fs');
+const mergeJson   = require('merge-json');
+const sassLint    = require('gulp-sass-lint');
+const projectPath = require('blendid/gulpfile.js/lib/projectPath')
 
 module.exports = {
   html: {
     excludeFolders: ['components', 'layouts', 'shared', 'macros', 'data'],
     dataFunction: function (file) {
-      var globalData = path.resolve('./../../html/data/global.json');
+      var globalData = projectPath(PATH_CONFIG.src, PATH_CONFIG.html.src + '/data/global.json');
       var pageData = JSON.parse(fs.readFileSync(globalData));
       var filename = file.path.split('.njk')[0];
       var splitOperator = '\\';
       if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
       filename = filename.toString().split(splitOperator);
       filename = filename[filename.length - 1] + '.json';
-      var dataPath = path.resolve('./../../html/data/' + filename);
+      var dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.html.src + '/data/' + filename);
 
       if (fs.existsSync(dataPath)) {
         pageData = mergeJson.merge(
@@ -73,13 +73,6 @@ module.exports = {
               PATH_CONFIG.src,
               PATH_CONFIG.stylesheets.src,
               'vendor/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
-            ),
-            '!' +
-            path.resolve(
-              process.env.PWD,
-              PATH_CONFIG.src,
-              PATH_CONFIG.stylesheets.src,
-              'docs/**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'
             )
           ])
           .pipe(

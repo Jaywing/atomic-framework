@@ -1,0 +1,165 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'text' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}Text | Atomic: Core{% endblock %}
+
+{% block content %}
+
+    <h1 class="Article-title">Text</h1>
+    <p class="Text--lead">Some useful utility classes relating to text.</p>
+
+    <hr class="Article-divider">
+
+    <h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+    <p>The text utility classes must always be used with a modifier (eg. <code>.Text--lead</code>), on it's own the base
+        class <code>.Text</code> does nothing.</p>
+
+    <dl class="Definition Definition--horizontal">
+        <dt><code>.Text--lead</code></dt>
+        <dd>Gives increased prominence for the lead paragraph of some copy</dd>
+        <dt><code>.Text--disabled</code></dt>
+        <dd>Styles text to appear disabled.</dd>
+        <dt><code>.Text--break</code></dt>
+        <dd>Allow copy to break words in order to fill available space.</dd>
+        <dt><code>.Text--noWrap</code></dt>
+        <dd>Stops copy from wrapping</dd>
+        <dt><code>.Text--truncate</code></dt>
+        <dd>Will truncate text with an ellipsis when it exceeds available space.</dd>
+        <dt><code>.Text--center</code></dt>
+        <dd>Centre aligns text</dd>
+        <dt><code>.Text--left</code></dt>
+        <dd>Left aligns text</dd>
+        <dt><code>.Text--right</code></dt>
+        <dd>Right aligns text</dd>
+        <dt><code>.Text--justify</code></dt>
+        <dd>Justifies text alignment</dd>
+        <dt><code>.Text--inheritColor</code></dt>
+        <dd>Inherits the color of the parent element</dd>
+        <dt><code>.Text--resetLink</code></dt>
+        <dd>Overrides link styles to make appear link the parents style</dd>
+        <dt><code>.Text--kern</code></dt>
+        <dd>Enables font kerning (all supported browsers except Chrome on Windows)</dd>
+    </dl>
+
+    <h3>Examples</h3>
+
+    <hr>
+
+    <h4>Text lead</h4>
+
+    <div class="docs-code docs-code--html">
+        <pre><code class="html">&lt;p class="Text--lead"&gt;Here is some lead text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus augue, euismod venenatis placerat a, volutpat vel nisl. Suspendisse vitae nunc vehicula, iaculis diam ac, lacinia erat.&lt;/p&gt;</code></pre>
+    </div>
+
+    <p class="Text--lead">Here is some lead text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+        lectus augue, euismod venenatis placerat a, volutpat vel nisl. Suspendisse vitae nunc vehicula, iaculis diam ac,
+        lacinia erat.</p>
+
+    <h4>Text disabled</h4>
+
+    <div class="docs-code docs-code--html">
+        <pre><code class="html">&lt;p class="Text--disabled"&gt;This text is disabled&lt;/p&gt;</code></pre>
+    </div>
+
+    <p class="Text--disabled">This text is disabled</p>
+
+    <h4>Text break</h4>
+
+    <div class="docs-code docs-code--html">
+        <pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--break"&gt;Oooooops this extremely long text is too long!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div style="width:80px; background:#ccc; padding:1rem;"><p class="Text--break">Oooooops this extremely long text is too long!</p></div>
+
+    <h4>Text no-wrap</h4>
+
+    <div class="docs-code docs-code--html">
+        <pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--noWrap"&gt;Oooooops this extremely long text is too long!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div style="width:80px; background:#ccc; padding:1rem;">
+        <p class="Text--noWrap">Oooooops this extremely long text is too long!</p>
+    </div>
+
+    <h4>Text truncate</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--truncate"&gt;Oooooops this extremely long text is too long!&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:80px; background:#ccc; padding:1rem;">
+        <p class="Text--truncate">Oooooops this extremely long text is too long!</p>
+    </div>
+
+    <h4>Align text left</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--left"&gt;Text aligned left&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--left">Text aligned left</p>
+    </div>
+
+    <h4>Align text center</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--center"&gt;Text aligned center&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--center">Text aligned center</p>
+    </div>
+
+    <h4>Align text right</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style="width: 40px;"&gt;
+    &lt;p class="Text--right"&gt;Text aligned right&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--right">Text aligned right</p>
+    </div>
+
+    <h4>Justify text</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style=width:100%; background:#ccc; padding:1rem;"&gt;
+    &lt;p class="Text--justify"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, leo ac iaculis finibus, orci sem sollicitudin sem, ut blandit tellus quam non tortor. Aenean ut libero sagittis, bibendum diam in, aliquam magna. Morbi in vestibulum metus, vel bibendum tortor. In lobortis tellus nec tincidunt porta. Fusce consequat ligula et pulvinar ornare. Curabitur risus tellus, condimentum at lacus eu, tincidunt fermentum metus. Fusce finibus placerat dapibus. Donec imperdiet tempus turpis, in feugiat magna imperdiet vitae.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis, leo ac iaculis finibus, orci sem sollicitudin sem, ut blandit tellus quam non tortor. Aenean ut libero sagittis, bibendum diam in, aliquam magna. Morbi in vestibulum metus, vel bibendum tortor. In lobortis tellus nec tincidunt porta. Fusce consequat ligula et pulvinar ornare. Curabitur risus tellus, condimentum at lacus eu, tincidunt fermentum metus. Fusce finibus placerat dapibus. Donec imperdiet tempus turpis, in feugiat magna imperdiet vitae.</p>
+    </div>
+
+    <h4>Add font kerning</h4>
+
+    <div class="docs-code docs-code--html"><pre><code class="html">&lt;div style=width:100%; background:#ccc; padding:1rem;"&gt;
+    &lt;p class="Text--kern"&gt;Add text kerning.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+
+    <div style="width:100%; background:#ccc; padding:1rem;">
+        <p class="Text--kern">Add text kerning.</p>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+    
+{% endblock %}

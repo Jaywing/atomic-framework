@@ -1,0 +1,21 @@
+{% from 'macros/menu.njk' import menuLink, menuHeader %}
+{% from 'macros/toggle-button.njk' import ToggleButton %}
+
+    <div class="NavMain">
+      <div class="o-Container o-Container--centered">
+        <nav role="navigation" class="NavResponsive NavResponsiveSm">
+
+          {{ ToggleButton('parent')}}
+
+          <ul class="Menu Menu--vertical MenuSm">
+
+            {{ menuHeader('Atomic', 'index.html', 'Menu-item--left Menu-item--flush') }}
+
+            {% for page in pages %}
+              {{ menuLink(page.id, page.title, page.url, pageId, 'nav-item') }}
+            {% endfor %}
+
+          </ul>
+        </nav>
+      </div>
+    </div>

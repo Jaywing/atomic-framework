@@ -2,7 +2,7 @@
   "src": "./",
   "dest": "./dist",
   "html": {
-    "src": "html",
+    "src": "./docs/html",
     "dest": "./"
   },
   "static": {
@@ -14,11 +14,11 @@
     "dest": "js"
   },
   "stylesheets": {
-    "src": "scss",
+    "src": "./docs/scss",
     "dest": "css"
   },
   "images": {
-    "src": "images",
+    "src": "./docs/images",
     "dest": "images"
   },
   "fonts": {

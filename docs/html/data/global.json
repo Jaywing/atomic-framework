@@ -1,0 +1,126 @@
+{
+  "version": "1.2.3",
+  "lang": "en-GB",
+  "author": {
+    "name": "Jaywing",
+    "url": "https://jaywing.com",
+    "footerText": "Made with ♥ at",
+    "createdYear": "2017"
+  },
+  "pages": [
+    { "id": "index", "url": "index.html", "title": "Home" },
+    { "id": "features", "url": "features.html", "title": "Features" },
+    { "id": "docs", "url": "docs/", "title": "Docs" },
+    { "id": "github", "url": "https://github.com/jaywing/atomic", "title": "Github" }
+  ],
+  "docs_sections": [
+    { "id": "getting-started", "title": "Getting Started", "ready": true },
+    { "id": "core", "title": "Core", "ready": true },
+    { "id": "extended", "title": "Extended", "ready": true },
+    { "id": "roadmap", "title": "Roadmap", "ready": false }
+  ],
+  "docs_pages": [
+    {
+      "category": "Getting started",
+      "section": "getting-started",
+      "items": [
+        { "id": "index", "title": "Installation", "section": "getting-started", "ready": true },
+        { "id": "environment", "title": "Dev environment", "section": "getting-started", "ready": true },
+        { "id": "file-structure", "title": "File structure", "section": "getting-started", "ready": true },
+        { "id": "stylesheets", "title": "Stylesheets", "section": "getting-started", "ready": true },
+        { "id": "javascript", "title": "Javascript", "section": "getting-started", "ready": true },
+        { "id": "html-templates", "title": "HTML templates", "section": "getting-started", "ready": true },
+        { "id": "support", "title": "Browser & device support", "section": "getting-started", "ready": true }
+      ]
+    },
+    {
+      "category": "Defaults",
+      "section": "core",
+      "items": [
+        { "id": "base", "title": "Base", "section": "core", "ready": true },
+        { "id": "breakpoints", "title": "Breakpoints", "section": "core", "ready": true },
+        { "id": "font-sizes", "title": "Font sizes", "section": "core", "ready": true },
+        { "id": "print", "title": "Print", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Objects",
+      "section": "core",
+      "items": [
+        { "id": "site", "title": "Site", "section": "core", "ready": true },
+        { "id": "container", "title": "Container", "section": "core", "ready": true },
+        { "id": "grid", "title": "Grid", "section": "core", "ready": true },
+        { "id": "size", "title": "Size", "section": "core", "ready": true },
+        { "id": "section", "title": "Section", "section": "core", "ready": true },
+        { "id": "media", "title": "Media", "section": "core", "ready": true },
+        { "id": "cover", "title": "Cover", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Elements",
+      "section": "core",
+      "items": [
+        { "id": "list", "title": "List", "section": "core", "ready": true },
+        { "id": "table", "title": "Table", "section": "core", "ready": true },
+        { "id": "form", "title": "Form", "section": "core", "ready": true },
+        { "id": "definition", "title": "Definition", "section": "core", "ready": true },
+        { "id": "text", "title": "Text", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Common",
+      "section": "core",
+      "items": [
+        { "id": "icon", "title": "Icon", "section": "core", "ready": true },
+        { "id": "button", "title": "Button", "section": "core", "ready": true },
+        { "id": "panel", "title": "Panel", "section": "core", "ready": true },
+        { "id": "close", "title": "Close", "section": "core", "ready": true },
+        { "id": "badge", "title": "Badge", "section": "core", "ready": true },
+        { "id": "overlay", "title": "Overlay", "section": "core", "ready": true },
+        { "id": "tooltip", "title": "Tooltip", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Common",
+      "section": "extended",
+      "items": [
+        { "id": "toggle-button", "title": "Toggle Button", "section": "extended", "ready": true },
+        { "id": "responsive-img", "title": "Responsive images", "section": "extended", "ready": true }
+      ]
+    },
+    {
+      "category": "Navigation",
+      "section": "core",
+      "items": [
+        { "id": "menu", "title": "Menu", "section": "core", "ready": true },
+        { "id": "breadcrumbs", "title": "Breadcrumbs", "section": "core", "ready": true },
+        { "id": "skip-link", "title": "Skip link", "section": "core", "ready": true },
+        { "id": "back-to-top", "title": "Back to top", "section": "core", "ready": true }
+      ]
+    },
+    {
+      "category": "Navigation",
+      "section": "extended",
+      "items": [
+        { "id": "nav-responsive-standard", "title": "Standard Responsive", "section": "extended", "ready": true }
+      ]
+    },
+    {
+      "category": "Modules",
+      "section": "core",
+      "items": [
+        { "id": "helpers", "title": "Helpers", "section": "core", "ready": true },
+        { "id": "breakpoint-mod", "title": "Breakpoint", "section": "core", "ready": true },
+        { "id": "toggle", "title": "Toggle", "section": "core", "ready": true },
+        { "id": "switcher", "title": "Switcher", "section": "core", "ready": true },
+        { "id": "load-img", "title": "Load Image", "section": "core", "ready": false },
+        { "id": "validate", "title": "Validate", "section": "core", "ready": false }
+      ]
+    },
+    {
+      "category": "Modules",
+      "section": "extended",
+      "items": [{ "id": "sticky", "title": "Sticky", "section": "extended", "ready": true }]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{% from 'macros/icon.njk' import icon %}
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="{{ lang }}" class="fonts-loaded">
+<!--#else -->
+<html lang="{{ lang }}">
+<!--#endif -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="{{ author }}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+
+  <!-- standard styles - hidden from < ie10 -->
+  <link rel="stylesheet" href="/css/app.css">
+
+  {% include 'shared/app-icons.njk' %}
+
+  {% block head %}{% endblock %}
+
+</head>
+<body id="top" class="o-Site scrollY">
+
+  <a href="#content" class="SkipLink">Skip to content</a>
+
+  <header role="banner" class="o-Site-header docs-GlobalHeader">
+
+    <a href="#content" class="SkipLink Button ">{{ icon('arrow-down') }} Skip to content</a>
+
+    {% include 'shared/section-nav.njk' %}
+  </header>
+
+  <main id="content" class="o-Site-content">
+  {% block main %}
+    <div class="o-Container o-Container--centered">
+
+      <div class="o-Grid o-GridMd--reverse o-GridMd--gutters o-GridXl--guttersXl" data-module="Sticky" data-sticky-container>
+
+        <article class="o-Grid-cell o-SizeMd--9of12">
+          {% block content %}
+
+          {% endblock %}
+        </article>
+
+        <section class="o-Grid-cell o-Size--full o-SizeMd--3of12">
+          {% block sidebar %}
+            {% include 'shared/page-nav.njk' %}
+          {% endblock %}
+        </section>
+
+      </div>
+
+    </div>
+
+  {% endblock %}
+  </main>
+
+  <footer role="contentinfo" class="o-Site-footer docs-footer">
+    <div class="o-Container o-Container--centered">
+      <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v{{version}}</small></p>
+    </div>
+  </footer>
+
+  {# <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> #}
+
+  <script src="/assets/js/app.js" async></script>
+  
+  {% block javascript %}{% endblock %}
+
+</body>
+</html>

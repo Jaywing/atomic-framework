@@ -1,0 +1,40 @@
+<!--
+  ** hero
+  - content
+    - content.title
+    - content.subTitle
+    - content.description
+    - content.cta
+      - content.cta.url
+      - content.cta.title
+      - content.cta.classes
+  - classes
+-->
+{% macro Hero (content, classes) %}
+
+  <div class="Hero o-Section--tall {{ classes }}">
+
+    <div class="o-Container o-Container--centered">
+
+      <h1>{{ content.title }}</h1>
+      {% if content.subTitle %}
+        <h2>{{ content.subTitle }}</h2>
+      {% endif %}
+      {% if content.description %}
+        <p>{{ content.description }}</p>
+      {% endif %}
+
+      {% if content.cta %}
+        {% if content.cta.classes %}
+          {% set ctaClasses = content.cta.classes %}
+        {% else %}
+          {% set ctaClasses = "Button Button--primary" %}
+        {% endif %}
+        <a href="{{ content.cta.url }}" class="{{ ctaClasses }}">{{ content.cta.title }}</a>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{%  endmacro %}

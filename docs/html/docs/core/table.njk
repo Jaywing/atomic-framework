@@ -1,0 +1,385 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'table' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}Table | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Table</h1>
+<p class="Text--lead">Easily create nicely looking tables, which come in different styles.</p>
+
+<hr class="Article-divider">
+
+<h2>Usage</h2>
+
+<h3>Basic table (.Table)</h3>
+<div class="docs-example">
+  <table class="Table">
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td>Table footer</td>
+        <td>Table footer</td>
+        <td>Table footer</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table"&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<h3>Modifiers</h3>
+
+<h4>Divider (.Table--divider)</h4>
+<div class="docs-example">
+  <table class="Table Table--divider">
+    <caption>Caption</caption>
+    <thead>
+    <tr>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+      <td>Table footer</td>
+      <td>Table footer</td>
+      <td>Table footer</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table Table--divider"&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Table Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Table Data&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<h4>Table striped</h4>
+
+<div class="docs-example">
+  <table class="Table Table--striped">
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table Table--striped"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Table Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Table Data&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<h4>Table condensed</h4>
+
+<div class="docs-example">
+  <table class="Table Table--condensed">
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table Table--condensed"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Table Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Table Data&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<h4>Table yaxis</h4>
+
+<div class="docs-example">
+  <table class="Table Table--yaxis">
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+      <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        <td>Table Data</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table--vertical"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Table Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Table Data&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<h4>Table with scrollXauto</h4>
+
+<div class="docs-example">
+  <div class="scrollXauto">
+    <table class="Table">
+      <caption>Caption</caption>
+      <thead>
+        <tr>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+          <th>Table Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+        </tr>
+        <tr>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+          <td>Table Data</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;div class="scrollXauto"&gt;
+  &lt;table class="Table"&gt;
+    &lt;caption&gt;Caption&lt;/caption&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Table Heading&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Table Data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h4>Table responsive</h4>
+
+<div class="docs-example">
+  <table class="Table Table--resp">
+    <caption>Caption</caption>
+    <thead>
+    <tr>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+      <th>Table Heading</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+    </tr>
+    <tr>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+      <td data-label="Table Heading">Table Data</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="docs-code docs-code--html">
+<pre><code class="html">&lt;table class="Table Table--resp"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Table Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td data-label="Table Heading"&gt;Table Data&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

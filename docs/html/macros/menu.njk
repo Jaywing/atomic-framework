@@ -1,0 +1,61 @@
+<!--
+  ** menuLink **
+  - id            (string)
+  - title         (string)
+  - url           (string)
+  - currentPageId (string)
+  - classes       (string)
+  - activeClass   (string)
+-->
+{% macro menuLink(
+    id,
+    title,
+    url,
+    currentPageId,
+    classes,
+    activeClass
+)%}
+
+  {% if not activeClass %}
+    {% set activeClass="is-active" %}
+  {% endif %}
+
+  {% if id != currentPageId %}
+    {%  set activeClass = "" %}
+  {% endif %}
+
+  <li class="Menu-item {{ classes }} {{ activeClass }}">
+    <a href="{{url}}" class="Menu-link">{{ title | safe }}</a>
+  </li>
+{% endmacro %}
+
+<!--
+  ** menuHeader **
+  - title         (string)
+  - url           (string)
+  - classes       (string)
+-->
+{% macro menuHeader(
+    title,
+    url,
+    classes
+  ) %}
+
+  {% set header = title %}
+
+  {% if url %}
+    {% set header= '<a href="{{ url }}">{{ title | safe }}</a>' %}
+  {% endif %}
+
+  <li class="Menu-item {{ classes }}">
+    <span class="Menu-header">
+      {%  if url %}
+        <a href="{{ url }}">
+      {% endif %}
+      {{ title | safe }}
+      {%  if url %}
+        </a>
+      {% endif %}
+    </span>
+  </li>
+{% endmacro %}
