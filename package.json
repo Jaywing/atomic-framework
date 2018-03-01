@@ -27,6 +27,7 @@
     "gulp-path": "^4.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^7.0.0",
+    "gulp-webpack": "^1.5.0",
     "merge-json": "^0.1.0-b.3",
     "normalize.css": "^4.0.0",
     "require-dir": "^0.3.2",

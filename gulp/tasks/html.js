@@ -30,7 +30,6 @@ gulp.task('html:atomic', function() {
         JSON.parse(fs.readFileSync(dataPath, 'utf8'))
       );
     }
-
     return pageData;
   }
 
@@ -61,7 +60,6 @@ gulp.task('html:docs', function() {
         JSON.parse(fs.readFileSync(dataPath, 'utf8'))
       );
     }
-
     return pageData;
   }
 

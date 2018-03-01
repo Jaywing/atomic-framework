@@ -33,7 +33,7 @@ gulp.task('sass:atomic', function() {
       browsers: CONFIG.CSS_COMPATIBILITY
     })]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/assets/css'))
+    .pipe(gulp.dest('./dist/css'))
     // .on('finish', function() {
     //   gulp.src(CONFIG.SASS_LINT_FILES)
     //     .pipe(sassLint({
@@ -55,5 +55,5 @@ gulp.task('sass:docs', function() {
       browsers: CONFIG.CSS_COMPATIBILITY
     })]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./_build/assets/css'));
+    .pipe(gulp.dest('./_build/css'));
 });
