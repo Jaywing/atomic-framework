@@ -31,7 +31,14 @@ module.exports = {
   static: true,
   svgSprite: true,
   ghPages: true,
-  stylesheets: true,
+  stylesheets: {
+    sass: {
+      includePaths: [
+        "./node_modules",
+        "./scss"
+      ]
+    },
+  },
   javascripts: {
     publicPath: '/js',
     entry: {
@@ -51,7 +58,8 @@ module.exports = {
       // path-config.json
       baseDir: 'dist'
     },
-    open: false
+    open: false,
+    files: ["./scss/**/*"]
   },
   production: {
     rev: true
