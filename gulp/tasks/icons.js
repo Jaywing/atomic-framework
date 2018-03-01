@@ -1,4 +1,4 @@
-var gulp        = require('gulp');
+var gulp      = require('gulp');
 var svgstore  = require('gulp-svgstore')
 
 var CONFIG = require('../config.js');
