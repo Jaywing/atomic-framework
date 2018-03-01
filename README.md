@@ -5,27 +5,22 @@ Atomic is the front end starter kit for Jaywing (Newbury).
 Bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed
 up development time.
 
-The technical architecture is based on [Blendid](https://github.com/vigetlabs/blendid) by
-[Viget](https://www.viget.com). Blendid is a delicious blend of tasks and build tools poured into
-[Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder,
-or can be configured and integrated into your own development environment and site or app structure.
 
-
-## Installation - NPM
+## Installation - NPM Package
 
 ```bash
 npm install --save atomic-framework
 ```
 
-## Installation - Site
+## Installation - Site Template
 
 Requires at least version 6 of Node. We reccomend using [nvm](https://github.com/creationix/nvm) to install and manage
 your Node versions.
 
 ```bash
-git clone https://github.com/jaywing/atomic.git MyApp
-cd MyApp
-yarn add blendid
+git clone https://github.com/jaywing/atomic.git AtomicFramework
+cd AtomicFramework
+yarn install
 yarn start
 ```
 
@@ -43,10 +38,7 @@ changes in all connected browsers.
 yarn build
 ```
 
-Compiles files for production to your destination directory. JS files are built with webpack 3 with standard production
-optimizations (uglfiy, etc.). CSS is run through CSSNano. If rev is set to true in your task-config.js file, filenames
-will be hashed (file.css -> file-a8908d9io20.css) so your server may cache them indefinitely. A rev-manifest.json file
-is output to the root of your dest directory (public by default), and maps original filenames to hashed ones.
+In development.
 
 ---
 
