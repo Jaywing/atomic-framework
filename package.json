@@ -2,6 +2,12 @@
   "name": "atomic-framework",
   "version": "2.2.1",
   "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.11.1",
+    "npm": ">=3.10.3"
+  },
+  "main": "gulpfile.js/index.js",
   "scripts": {
     "start": "gulp"
   },
