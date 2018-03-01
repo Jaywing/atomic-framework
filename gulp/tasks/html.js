@@ -11,8 +11,7 @@ var mergeJson      = require('merge-json');
 
 var CONFIG = require('../config.js');
 
-// gulp.task('html', ['html:atomic', 'html:docs']);
-gulp.task('html', ['html:atomic']);
+gulp.task('html', ['html:atomic', 'html:docs']);
 
 gulp.task('html:atomic', function() {
   const dataFunction = function(file) {
@@ -43,4 +42,31 @@ gulp.task('html:atomic', function() {
   // .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
   .pipe(gulp.dest('dist'))
   // .pipe(browserSync.stream())
+});
+
+gulp.task('html:docs', function() {
+  const dataFunction = function(file) {
+    var globalData = path.resolve('docs/html/data/global.json');
+    var pageData = JSON.parse(fs.readFileSync(globalData));
+    var filename = file.path.split('.njk')[0];
+    var splitOperator = '\\';
+    if (filename.toString().indexOf(splitOperator) < 0) splitOperator = '/';
+    filename = filename.toString().split(splitOperator);
+    filename = filename[filename.length - 1] + '.json';
+    var dataPath = path.resolve('docs/html/data/' + filename);
+
+    if (fs.existsSync(dataPath)) {
+      pageData = mergeJson.merge(
+        JSON.parse(fs.readFileSync(globalData, 'utf8')),
+        JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+      );
+    }
+
+    return pageData;
+  }
+
+  return gulp.src(['./docs/html/**/*.njk', '!./docs/html/{components,layouts,shared,macros,data}/**'])
+  .pipe(data(dataFunction))
+  .pipe(nunjucksRender({path: ['./docs/html']}))
+  .pipe(gulp.dest('_build'))
 });
