@@ -13,10 +13,14 @@ gulp.task('serve', ['build'], function(){
 
 gulp.task('watch', function() {
   gulp.watch('./html/**/*', ['html:atomic', browser.reload]);
+  gulp.watch('./docs/html/**/*', ['html:docs', browser.reload]);
   gulp.watch('./scss/**/*', ['sass:atomic', browser.reload]);
+  gulp.watch('./docs/scss/**/*', ['sass:docs', browser.reload]);
   gulp.watch('./js/**/*', ['webpack', browser.reload]);
   gulp.watch('./images/**/*', ['images:atomic', browser.reload]);
+  gulp.watch('./docs/images/**/*', ['images:docs', browser.reload]);
   gulp.watch('./icons/*', ['icons:atomic', browser.reload]);
+  gulp.watch('./docs/icons/*', ['icons:docs', browser.reload]);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve', 'watch']);
