@@ -8,7 +8,7 @@ up development time.
 
 ## Before you start
 
-![](https://i.imgflip.com/25me08.jpg =250x250)
+![](https://i.imgflip.com/25me08.jpg)
 
 
 Do you want to start a new project? Stop! You need our [Atomic Framework Template](https://github.com/Jaywing/atomic-framework-template)!
