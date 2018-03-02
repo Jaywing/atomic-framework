@@ -6,6 +6,13 @@ Bringing together a growing a set of common re-usable components aimed at standa
 up development time.
 
 
+## Before you start
+
+![](https://i.imgflip.com/25me08.jpg =250x250)
+
+
+Do you want to start a new project? Stop! You need our [Atomic Framework Template](https://github.com/Jaywing/atomic-framework-template)!
+
 ## Installation - NPM Package
 
 ```bash
