@@ -51,10 +51,10 @@ rules:
 
   force-pseudo-nesting: 1
 
-  function-name-format:
-    - 1
-    - allow-leading-underscore: true
-      convention: hyphenatedlowercase
+  # function-name-format:
+  #   - 1
+  #   - allow-leading-underscore: true
+  #     convention: hyphenatedlowercase
 
   hex-length:
     - 1
