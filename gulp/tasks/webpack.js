@@ -1,7 +1,7 @@
-var gulp      = require('gulp');
-var webpack   = require('webpack-stream');
-var webpack2  = require('webpack');
-var path      = require('path');
+var gulp = require('gulp');
+var webpack = require('webpack-stream');
+var webpack2 = require('webpack');
+var path = require('path');
 
 var webpackConfig = {
   context: path.resolve('js/'),
@@ -13,23 +13,29 @@ var webpackConfig = {
     filename: 'app.js',
     publicPath: '/js/'
   },
-  plugins: [],
+  plugins: [
+    // new UglifyJsPlugin()
+  ],
   resolve: {
-    // extensions: extensions,
-    // alias: TASK_CONFIG.javascripts.alias,
-    modules: [path.resolve('js/'), path.resolve('node_modules')]
+    modules: [
+      path.resolve('js/'), path.resolve('node_modules')
+    ]
   },
   module: {
-    rules: [
+    loaders: [
       {
         loader: 'babel-loader',
-        exclude: path.resolve('node_modules')
+        test: /\.js$/,
+        exclude: path.resolve('node_modules'),
+        query: {
+          presets: [["es2015", { "modules": false }], 'stage-1']
+        }
       }
     ]
   }
 }
 
-gulp.task('webpack', function() {
+gulp.task('webpack', function () {
   return gulp.src('./js/app.js')
     .pipe(webpack(webpackConfig, webpack2))
     .pipe(gulp.dest('./_build/js/'));
