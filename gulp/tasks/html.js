@@ -3,7 +3,6 @@
 var browserSync    = require('browser-sync')
 var data           = require('gulp-data')
 var gulp           = require('gulp')
-// var gulpif         = require('gulp-if')
 var nunjucksRender = require('gulp-nunjucks-render')
 var fs             = require('fs')
 var path           = require('path');
@@ -35,12 +34,8 @@ gulp.task('html:atomic', function() {
 
   return gulp.src(['./html/**/*.njk', '!./html/{components,layouts,shared,macros,data}/**'])
   .pipe(data(dataFunction))
-  // .on('error', handleErrors)
   .pipe(nunjucksRender({path: ['./html']}))
-  // .on('error', handleErrors)
-  // .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
   .pipe(gulp.dest('dist'))
-  // .pipe(browserSync.stream())
 });
 
 gulp.task('html:docs', function() {

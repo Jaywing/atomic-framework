@@ -35,7 +35,6 @@ gulp.task('sass:atomic', function() {
     });
 });
 
-// Compiles Docs Sass with Atomic Sass
 gulp.task('sass:docs', function() {
   return gulp.src('./docs/scss/docs.scss')
     .pipe(sourcemaps.init())
