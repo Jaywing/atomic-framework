@@ -14,7 +14,7 @@ var webpackConfig = {
     publicPath: '/assets/js/'
   },
   plugins: [
-    new UglifyJsPlugin()
+    // new UglifyJsPlugin()
   ],
   resolve: {
     modules: [
