@@ -9,9 +9,9 @@ var webpackConfig = {
     app: ['babel-polyfill', 'app.js']
   },
   output: {
-    path: path.resolve('_build/assets/js/'),
+    path: path.resolve('_build/js/'),
     filename: 'app.js',
-    publicPath: '/assets/js/'
+    publicPath: '/js/'
   },
   plugins: [
     // new UglifyJsPlugin()
