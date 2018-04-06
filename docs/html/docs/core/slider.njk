@@ -1,0 +1,60 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'toggle' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/application.njk' %}
+{% from 'macros/icon.njk' import icon %}
+
+{% block metaTitle %}Slider | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Slider</h1>
+<p class="Text--lead">Slide between content.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+
+<p>The slider module is loaded asynchronously and is initialised using <code>data-module="Slider"</code> on the element.</p>
+
+<div class="docs-example">
+
+  <div class="Slider" data-module="Slider">
+    <div class="Slider-slides">
+      <div class="Slider-slide Active">
+        Slide 1
+      </div>
+      <div class="Slider-slide Next">
+        Slide 2
+      </div>
+      <div class="Slider-slide">
+        Slide 3
+      </div>
+    </div>
+    <div class="Slider-controls">
+      <div class="Slider-previous">
+        {{ icon('chevron-left') }}
+      </div>
+      <div class="Slider-next">
+        {{ icon('chevron-right') }}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">&lt;div class=&quot;Slider&quot; data-module=&quot;Slider&quot;&gt;Slider content&lt;/button&gt;</code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

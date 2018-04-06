@@ -2837,6 +2837,76 @@ video {
   body::before {
     content: 'xxl'; } }
 
+.Slider {
+  position: relative; }
+
+.Slider-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.Slider-controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.Slider-previous,
+.Slider-next {
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  cursor: pointer; }
+  .Slider-previous .Icon,
+  .Slider-next .Icon {
+    width: 50px;
+    height: 50px; }
+  .Slider-previous.Hidden,
+  .Slider-next.Hidden {
+    opacity: 0; }
+
+.Slider-previous.Hidden {
+  -webkit-transform: translateX(-200px);
+      -ms-transform: translateX(-200px);
+          transform: translateX(-200px); }
+
+.Slider-next.Hidden {
+  -webkit-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+          transform: translateX(200px); }
+
+.Slider-slide {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  opacity: 0;
+  background: #fff; }
+  .Slider-slide.Active {
+    z-index: 1;
+    opacity: 1; }
+  .Slider-slide.Previous {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  .Slider-slide.Next {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%); }
+
 .o-Site {
   display: -webkit-box;
   display: -webkit-flex;
