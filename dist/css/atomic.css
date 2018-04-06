@@ -2891,21 +2891,30 @@ video {
 
 .Slider-slide {
   position: absolute;
-  z-index: 0;
   width: 100%;
-  opacity: 0;
-  background: #fff; }
+  background: #fff;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%); }
   .Slider-slide.Active {
-    z-index: 1;
-    opacity: 1; }
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    z-index: 11; }
   .Slider-slide.Previous {
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
-            transform: translateX(-100%); }
+            transform: translateX(-100%);
+    z-index: 10; }
   .Slider-slide.Next {
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
-            transform: translateX(100%); }
+            transform: translateX(100%);
+    z-index: 9; }
 
 .o-Site {
   display: -webkit-box;

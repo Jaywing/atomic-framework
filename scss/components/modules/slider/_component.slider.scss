@@ -46,23 +46,23 @@
 
 .Slider-slide {
   position: absolute;
-  z-index: 0;
   width: 100%;
-  // height: 100%;
-  opacity: 0;
   background: $c-light;
-  // transition: transform 4500ms;
+  transition: transform 500ms;
+  transform: translateX(-100%);
 
   &.Active {
-    z-index: 1;
-    opacity: 1;
+    transform: translateX(0);
+    z-index: 11;
   }
 
   &.Previous {
     transform: translateX(-100%);
+    z-index: 10;
   }
 
   &.Next {
     transform: translateX(100%);
+    z-index: 9;
   }
 }
