@@ -50,7 +50,29 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;div class=&quot;Slider&quot; data-module=&quot;Slider&quot;&gt;Slider content&lt;/button&gt;</code></pre>
+  <pre><code class="html">
+  &lt;div class=&quot;Slider&quot; data-module=&quot;Slider&quot;&gt;
+    &lt;div class=&quot;Slider-slides&quot;&gt;
+      &lt;div class=&quot;Slider-slide Active&quot;&gt;
+        Slide 1
+      &lt;/div&gt;
+      &lt;div class=&quot;Slider-slide Next&quot;&gt;
+        Slide 2
+      &lt;/div&gt;
+      &lt;div class=&quot;Slider-slide Active&quot;&gt;
+        Slide 3
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Slider-controls&quot;&gt;
+      &lt;div class=&quot;Slider-previous&quot;&gt;
+        &lt; Previous
+      &lt;/div&gt;
+      &lt;div class=&quot;Slider-next&quot;&gt;
+        Next &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </code></pre>
 </div>
 
 {% endblock %}
