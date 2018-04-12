@@ -2350,20 +2350,21 @@ video {
   padding-right: 0; }
 
 .Menu-link {
-  background-color: transparent;
-  color: #2561ea;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-property: background-color, color;
-  transition-property: background-color, color;
   border-radius: 4px;
   display: block;
   padding: 0.5rem;
   text-align: center;
   text-decoration: none; }
-  .Menu-link:hover, .Menu-link:focus {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #1142b1; }
+  .Menu-link:not(.Text--disabled) {
+    background-color: transparent;
+    color: #2561ea;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color; }
+    .Menu-link:not(.Text--disabled):hover, .Menu-link:not(.Text--disabled):focus {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #1142b1; }
   .Menu-link .Icon svg {
     fill: #2561ea; }
   .is-active > .Menu-link, .Menu-link.is-active {

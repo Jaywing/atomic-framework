@@ -102,11 +102,13 @@ $menu-header-hover-color: $link-hover-color !default;
 }
 
 .Menu-link {
-  @include color-swap-on-hover(
-    $menu-link-color $menu-link-bg,
-    $menu-link-hover-color $menu-link-hover-bg,
-    $menu-link-trans-speed
-  );
+  &:not(.Text--disabled) {
+    @include color-swap-on-hover(
+      $menu-link-color $menu-link-bg,
+      $menu-link-hover-color $menu-link-hover-bg,
+      $menu-link-trans-speed
+    );
+  }
 
   border-radius: $menu-link-border-radius;
   display: block;
