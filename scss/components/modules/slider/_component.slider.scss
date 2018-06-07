@@ -76,6 +76,11 @@
   display: flex;
 }
 
+.Slider-previous,
+.Slider-next {
+  cursor: pointer;
+}
+
 .Slider-pips {
   display: flex;
   justify-content: center;

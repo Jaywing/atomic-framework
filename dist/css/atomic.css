@@ -2898,6 +2898,10 @@ video {
   display: -ms-flexbox;
   display: flex; }
 
+.Slider-previous,
+.Slider-next {
+  cursor: pointer; }
+
 .Slider-pips {
   display: -webkit-box;
   display: -webkit-flex;
