@@ -28,7 +28,8 @@ export default class Slider extends Module {
       'slides': this.el.querySelector('.Slider-slides'),
       'slide': this.el.querySelectorAll('.Slider-slide'),
       'nextButton': this.el.querySelector('.Slider-next'),
-      'previousButton': this.el.querySelector('.Slider-previous')
+      'previousButton': this.el.querySelector('.Slider-previous'),
+      'pips': this.el.querySelector('.Slider-pips')
     }
 
   }
@@ -37,24 +38,33 @@ export default class Slider extends Module {
 
     let sliderNum = 0
     let direction = 1
+    let slidesTotal = this.dom.slide.length
 
-    for (let i = 0; i < this.dom.slide.length; i++) {
-      if (this.dom.slide.length > 1 && this.dom.slide[i].classList.contains('Active')) {
+    for (let i = 0; i < slidesTotal; i++) {
+
+      if (slidesTotal > 1 && this.dom.slide[i].classList.contains('Active')) {
         sliderNum = i
       }
+
+      if (i == 0) {
+        this.dom.pips.innerHTML += '<div class="Slider-pip Active"></div>'
+      } else {
+        this.dom.pips.innerHTML += '<div class="Slider-pip"></div>'
+      }
+
     }
 
     const slideForward = () => {
       direction = 1
       sliderNum += 1
-      if (sliderNum >= this.dom.slide.length) sliderNum = 0
+      if (sliderNum >= slidesTotal) sliderNum = 0
       this.changeSlide(sliderNum, direction)
     }
 
     const slideBackward = () => {
       direction = 0
       sliderNum -= 1
-      if (sliderNum < 0) sliderNum = this.dom.slide.length - 1
+      if (sliderNum < 0) sliderNum = slidesTotal - 1
       this.changeSlide(sliderNum, direction)
     }
 
@@ -65,11 +75,15 @@ export default class Slider extends Module {
 
   changeSlide(sliderNum, direction) {
 
-    for (let i = 0; i < this.dom.slide.length; i++) {
+    let slidesTotal = this.dom.slide.length
+
+    for (let i = 0; i < slidesTotal; i++) {
       this.dom.slide[i].classList.remove('Active', 'Active--next', 'Active--previous', 'Next', 'Previous')
+      this.el.querySelectorAll('.Slider-pip')[i].classList.remove('Active')
     }
 
     this.dom.slide[sliderNum].classList.add('Active')
+    this.el.querySelectorAll('.Slider-pip')[sliderNum].classList.add('Active')
     if (direction == 1) this.dom.slide[sliderNum].classList.add('Active--next')
     if (direction == 0) this.dom.slide[sliderNum].classList.add('Active--previous')
     if (this.dom.slide[sliderNum].nextElementSibling) this.dom.slide[sliderNum].nextElementSibling.classList.add('Next')
