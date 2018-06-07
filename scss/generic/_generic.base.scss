@@ -40,10 +40,10 @@ body {
 
 html {
   background-color: $base-bg-color;
-  color: $base-text-color;
   font-family: $base-font-family-fb;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
+  color: $base-text-color;
 
   &.fonts-loaded {
     font-family: $base-font-family;

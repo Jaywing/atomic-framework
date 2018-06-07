@@ -1,5 +1,4 @@
 import Module from '../modules/Module'
-import imagesLoaded from 'imagesloaded'
 
 export default class Slider extends Module {
   constructor(el, name, options) {
@@ -13,97 +12,68 @@ export default class Slider extends Module {
    * @function
    */
   init() {
+
     const Slider = this
     console.log(`${this.name} has initialised`)
-    this.dom = this.cacheDom();
-    this.addEventListeners();
+    this.dom = this.cacheDom()
 
-    // Make the slider - check images have loaded first
-    imagesLoaded(this.dom.slides).on('done', function (instance) {
-      Slider.makeSlider()
-    })
+    // Make the slider
+    this.makeSlider()
+
   }
 
   cacheDom() {
+
     return {
       'slides': this.el.querySelector('.Slider-slides'),
       'slide': this.el.querySelectorAll('.Slider-slide'),
       'nextButton': this.el.querySelector('.Slider-next'),
       'previousButton': this.el.querySelector('.Slider-previous')
     }
-  }
 
-  addEventListeners() {
-    this.dom.nextButton.addEventListener('click', this.changeSlide.bind(this, 1))
-    this.dom.previousButton.addEventListener('click', this.changeSlide.bind(this, -1))
   }
 
   makeSlider() {
-    // let SliderW = this.dom.slide[0].offsetWidth
-    let SliderH = 0
 
-    // this.dom.slides.style.width = `${SliderW}px`
+    let sliderNum = 0
+    let direction = 1
 
     for (let i = 0; i < this.dom.slide.length; i++) {
-      // Slider height
-      if (this.dom.slide[i].offsetHeight > SliderH) {
-        SliderH = this.dom.slide[i].offsetHeight
-      }
-      this.dom.slides.style.height = `${SliderH}px`
-
-      //Make next slide
       if (this.dom.slide.length > 1 && this.dom.slide[i].classList.contains('Active')) {
-        this.dom.slide[1].classList.add('Next')
+        sliderNum = i
       }
     }
 
-    if (!this.el.querySelector('.Slider-slide.Next')) {
-      this.dom.nextButton.classList.add('Hidden')
+    const slideForward = () => {
+      direction = 1
+      sliderNum += 1
+      if (sliderNum >= this.dom.slide.length) sliderNum = 0
+      this.changeSlide(sliderNum, direction)
     }
 
-    if (!this.el.querySelector('.Slider-slide.Previous')) {
-      this.dom.previousButton.classList.add('Hidden')
+    const slideBackward = () => {
+      direction = 0
+      sliderNum -= 1
+      if (sliderNum < 0) sliderNum = this.dom.slide.length - 1
+      this.changeSlide(sliderNum, direction)
     }
+
+    this.dom.nextButton.addEventListener('click', slideForward)
+    this.dom.previousButton.addEventListener('click', slideBackward)
+
   }
 
-  changeSlide(num) {
-    let active = this.el.querySelector('.Slider-slide.Active')
-    let previous = active.previousElementSibling
-    let next = active.nextElementSibling
+  changeSlide(sliderNum, direction) {
 
-    if (num == 1) {
-      active.classList.remove('Active')
-      active.classList.add('Previous')
-      if (next) next.classList.remove('Next')
-      if (next) next.classList.add('Active')
-      if (previous) previous.classList.remove('Previous')
-
-      // Set previous and next
-      if (previous) next.previousElementSibling.classList.add('Previous')
-      if (next.nextElementSibling) next.nextElementSibling.classList.add('Next')
+    for (let i = 0; i < this.dom.slide.length; i++) {
+      this.dom.slide[i].classList.remove('Active', 'Active--next', 'Active--previous', 'Next', 'Previous')
     }
 
-    if (num == -1) {
-      active.classList.remove('Active')
-      active.classList.add('Next')
-      if (previous) previous.classList.remove('Previous')
-      if (previous) previous.classList.add('Active')
-      if (next) next.classList.remove('Next')
-
-      // Set previous and next
-      if (previous.previousElementSibling) previous.previousElementSibling.classList.add('Previous')
-    }
-
-    if (this.el.querySelector('.Slider-slide.Next')) {
-      this.dom.nextButton.classList.remove('Hidden')
-    } else {
-      this.dom.nextButton.classList.add('Hidden')
-    }
-
-    if (this.el.querySelector('.Slider-slide.Previous')) {
-      this.dom.previousButton.classList.remove('Hidden')
-    } else {
-      this.dom.previousButton.classList.add('Hidden')
-    }
+    this.dom.slide[sliderNum].classList.add('Active')
+    if (direction == 1) this.dom.slide[sliderNum].classList.add('Active--next')
+    if (direction == 0) this.dom.slide[sliderNum].classList.add('Active--previous')
+    if (this.dom.slide[sliderNum].nextElementSibling) this.dom.slide[sliderNum].nextElementSibling.classList.add('Next')
+    if (this.dom.slide[sliderNum].previousElementSibling) this.dom.slide[sliderNum].previousElementSibling.classList.add('Previous')
   }
+
 }

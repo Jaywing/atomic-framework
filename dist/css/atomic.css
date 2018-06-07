@@ -515,10 +515,10 @@ body {
 
 html {
   background-color: #fff;
-  color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #000; }
   html.fonts-loaded {
     font-family: "Raleway", sans-serif; }
 
@@ -845,8 +845,8 @@ svg,
 video {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: auto;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 .List {
   list-style: none;
@@ -2838,84 +2838,138 @@ video {
   body::before {
     content: 'xxl'; } }
 
-.Slider {
-  position: relative; }
-
-.Slider-slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.Slider-picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden; }
+  .Slider-picture .Slider-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateY(-50%) scale(1.0125);
+        -ms-transform: translateY(-50%) scale(1.0125);
+            transform: translateY(-50%) scale(1.0125); }
+
+.Slider-content {
+  position: relative;
+  z-index: 1;
+  height: 10rem; }
+
+.Slider-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: #fff; }
+
+.Slider-slide {
+  display: none;
+  position: relative;
+  height: 100%; }
+  .Slider-slide::before {
+    display: block;
+    width: 100%;
+    padding-bottom: 41.55%;
+    content: ""; }
+  .Slider-slide.Active {
+    display: block; }
+  .Slider-slide.Active--next .Slider-picture .Slider-image {
+    -webkit-animation: slider-background-next 0.5s;
+            animation: slider-background-next 0.5s; }
+  .Slider-slide.Active--next .Slider-text {
+    -webkit-animation: slider-content-next 0.5s;
+            animation: slider-content-next 0.5s; }
+  .Slider-slide.Active--previous .Slider-picture .Slider-image {
+    -webkit-animation: slider-background-previous 0.5s;
+            animation: slider-background-previous 0.5s; }
+  .Slider-slide.Active--previous .Slider-text {
+    -webkit-animation: slider-content-previous 0.5s;
+            animation: slider-content-previous 0.5s; }
 
 .Slider-controls {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: flex; }
 
-.Slider-previous,
-.Slider-next {
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  cursor: pointer; }
-  .Slider-previous .Icon,
-  .Slider-next .Icon {
-    width: 50px;
-    height: 50px; }
-  .Slider-previous.Hidden,
-  .Slider-next.Hidden {
-    opacity: 0; }
+@media (min-width: 48em) {
+  .Slider-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%; } }
 
-.Slider-previous.Hidden {
-  -webkit-transform: translateX(-200px);
-      -ms-transform: translateX(-200px);
-          transform: translateX(-200px); }
+@-webkit-keyframes slider-background-next {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0.5%);
+            transform: translateY(-50%) scale(1.0125) translateX(0.5%); }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0%);
+            transform: translateY(-50%) scale(1.0125) translateX(0%); } }
 
-.Slider-next.Hidden {
-  -webkit-transform: translateX(200px);
-      -ms-transform: translateX(200px);
-          transform: translateX(200px); }
+@keyframes slider-background-next {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0.5%);
+            transform: translateY(-50%) scale(1.0125) translateX(0.5%); }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0%);
+            transform: translateY(-50%) scale(1.0125) translateX(0%); } }
 
-.Slider-slide {
-  position: absolute;
-  width: 100%;
-  background: #fff;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%); }
-  .Slider-slide.Active {
+@-webkit-keyframes slider-content-next {
+  0% {
+    -webkit-transform: translateX(1%);
+            transform: translateX(1%); }
+  100% {
     -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-    z-index: 11; }
-  .Slider-slide.Previous {
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
-    z-index: 10; }
-  .Slider-slide.Next {
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    z-index: 9; }
+            transform: translateX(0); } }
+
+@keyframes slider-content-next {
+  0% {
+    -webkit-transform: translateX(1%);
+            transform: translateX(1%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@-webkit-keyframes slider-background-previous {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(-0.5%);
+            transform: translateY(-50%) scale(1.0125) translateX(-0.5%); }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0%);
+            transform: translateY(-50%) scale(1.0125) translateX(0%); } }
+
+@keyframes slider-background-previous {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(-0.5%);
+            transform: translateY(-50%) scale(1.0125) translateX(-0.5%); }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1.0125) translateX(0%);
+            transform: translateY(-50%) scale(1.0125) translateX(0%); } }
+
+@-webkit-keyframes slider-content-previous {
+  0% {
+    -webkit-transform: translateX(-1%);
+            transform: translateX(-1%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes slider-content-previous {
+  0% {
+    -webkit-transform: translateX(-1%);
+            transform: translateX(-1%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
 
 .o-Site {
   display: -webkit-box;
