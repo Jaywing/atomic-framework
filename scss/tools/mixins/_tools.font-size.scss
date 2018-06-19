@@ -27,7 +27,7 @@
 }
 
 @mixin trafalgar {
-  @include font-size($fs-huge);
+  @include gel-typography('trafalgar');
 }
 
 @mixin trafalgar-bold {
