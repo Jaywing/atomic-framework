@@ -26,13 +26,13 @@ gulp.task('sass:atomic', function() {
     })]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
-    .on('finish', function() {
-      gulp.src(CONFIG.SASS_LINT_FILES)
-        .pipe(sassLint({
-            config: './.sass-lint.yml'
-          }))
-        .pipe(sassLint.format());
-    });
+    // .on('finish', function() {
+    //   gulp.src(CONFIG.SASS_LINT_FILES)
+    //     .pipe(sassLint({
+    //         config: './.sass-lint.yml'
+    //       }))
+    //     .pipe(sassLint.format());
+    // });
 });
 
 gulp.task('sass:docs', function() {

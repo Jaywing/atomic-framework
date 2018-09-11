@@ -633,14 +633,27 @@ h6 {
     font-size: 75%; }
 
 h1 {
-  font-size: 36px;
-  line-height: 1.2; }
-  @media screen and (min-width: xxs) {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+  @media (min-width: 20em) {
     h1 {
-      font-size: 46px; } }
-  @media screen and (min-width: sm) {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      line-height: 1.75rem; } }
+  @media (min-width: 37.5em) {
     h1 {
-      font-size: 58px; } }
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 40px;
+      line-height: 2.5rem; }
+      .no-touch h1 {
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 36px;
+        line-height: 2.25rem; } }
 
 h2 {
   font-size: 20px;
@@ -2268,12 +2281,12 @@ video {
   .Panels--hidden > .Panel.is-active {
     display: block; }
 
-.Panels:not(.Panels--horizontal):not(.Panels--hidden) > .Panel--box:not(.Panel--attached) {
+.Panels > .Panel--box:not(.Panel--attached) {
   border-bottom: 0;
   border-radius: 0; }
-  .Panels:not(.Panels--horizontal):not(.Panels--hidden) > .Panel--box:not(.Panel--attached):first-child {
+  .Panels > .Panel--box:not(.Panel--attached):first-child {
     border-radius: 4px 4px 0 0; }
-  .Panels:not(.Panels--horizontal):not(.Panels--hidden) > .Panel--box:not(.Panel--attached):last-child {
+  .Panels > .Panel--box:not(.Panel--attached):last-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0 0 4px 4px; }
 

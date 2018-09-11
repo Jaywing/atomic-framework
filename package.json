@@ -9,7 +9,9 @@
   },
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'"
   },
   "dependencies": {
     "autoprefixer": "^6.7.7",
@@ -54,5 +56,11 @@
     "webpack": "3.5.5",
     "webpack-stream": "^3.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint-config-idiomatic-order": "^5.0.0"
+  }
 }
