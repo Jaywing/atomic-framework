@@ -8,30 +8,30 @@
 /// @created  20/06/2016
 ////
 
-$button-margin:     $g-spacer-xs !default;
-$button-padding:    ($g-spacer * .75) $g-spacer !default; // button gets the same vertical padding as input to maintain a consistent height
-$button-min-width:  $g-min-touch-size !default;
+$button-margin: $g-spacer-xs !default;
+$button-padding: ($g-spacer * 0.75) $g-spacer !default; // button gets the same vertical padding as input to maintain a consistent height
+$button-min-width: $g-min-touch-size !default;
 
 .Button {
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  margin: $button-margin;
-  min-height: 1em;
-  min-width: $button-min-width;
-  padding: $button-padding;
-  vertical-align: baseline;
+    display: inline-block;
+    min-width: $button-min-width;
+    min-height: 1em;
+    padding: $button-padding;
+    border: 0;
+    margin: $button-margin;
+    cursor: pointer;
+    line-height: 1;
+    vertical-align: baseline;
 
-  &--block {
-    display: block;
-  }
+    &--block {
+        display: block;
+    }
 
-  &:first-child {
-    margin-left: 0;
-  }
+    &:first-child {
+        margin-left: 0;
+    }
 
-  &:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+        margin-right: 0;
+    }
 }

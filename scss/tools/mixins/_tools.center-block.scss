@@ -24,17 +24,18 @@
 ///     @include center-block(15em);
 ///   }
 
-@mixin center-block ($max-width: false) {
-  margin-left: auto;
-  margin-right: auto;
-  @if $max-width {
-    max-width: $max-width;
-  }
+@mixin center-block($max-width: false) {
+    margin-right: auto;
+    margin-left: auto;
+
+    @if $max-width {
+        max-width: $max-width;
+    }
 }
 
 @mixin absolute-center {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

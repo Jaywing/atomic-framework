@@ -9,7 +9,6 @@
 /// @created  08/06/2016
 ////
 
-
 /// Converts one or more pixel values into matching rem values.
 ///
 /// @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
@@ -17,27 +16,27 @@
 ///
 /// @returns {List} A list of converted values.
 @function rem-calc($values, $base: null) {
-  $rem-values: ();
-  $count: length($values);
+    $rem-values: ();
+    $count: length($values);
 
-  // If no base is defined, defer to the global font size
-  @if $base == null {
-    $base: $global-font-size;
-  }
+    // If no base is defined, defer to the global font size
+    @if $base == null {
+        $base: $global-font-size;
+    }
 
-  // If the base font size is a %, then multiply it by 16px
-  // This is because 100% font size = 16px in most all browsers
-  @if unit($base) == '%' {
-    $base: ($base / 100%) * 16px;
-  }
+    // If the base font size is a %, then multiply it by 16px
+    // This is because 100% font size = 16px in most all browsers
+    @if unit($base) == '%' {
+        $base: ($base / 100%) * 16px;
+    }
 
-  @if $count == 1 {
-    @return -zf-to-rem($values, $base);
-  }
+    @if $count == 1 {
+        @return -zf-to-rem($values, $base);
+    }
 
-  @for $i from 1 through $count {
-    $rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
-  }
+    @for $i from 1 through $count {
+        $rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
+    }
 
-  @return $rem-values;
+    @return $rem-values;
 }

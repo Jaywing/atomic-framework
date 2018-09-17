@@ -1,85 +1,84 @@
-
 .Demo {
-  background: rgba(0, 0, 0, .05);
-  min-height: $g-spacer-lg;
-  width: 100%;
+    width: 100%;
+    min-height: $g-spacer-lg;
+    background: rgba(0, 0, 0, 0.05);
 
-  &--bordered {
-    border: 1px solid rgba(0, 0, 0, .25);
+    &--bordered {
+        border: 1px solid rgba(0, 0, 0, 0.25);
 
-    > * {
-      border: 1px solid rgba(0, 0, 0, .5);
+        > * {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
     }
-  }
 
-  &--parent {
-    > * {
-      background: rgba(0, 0, 0, .05);
+    &--parent {
+        > * {
+            background: rgba(0, 0, 0, 0.05);
+        }
     }
-  }
 
-  &--fat {
-    height: 100px;
-  }
-
-  &--tall {
-    height: 400px;
-  }
-
-  &.is-active {
-    position: relative;
-    background: rgba(0, 0, 0, .1);
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      content: 'I am active!';
-      display: inline-block;
-      margin: 0 auto;
+    &--fat {
+        height: 100px;
     }
-  }
 
-  &.is-alt-active {
-    text-align: center;
-    position: relative;
-    background: rgba(0, 0, 0, .15);
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      content: "I'm using a different active class!";
-      display: inline-block;
-      margin: 0 auto;
+    &--tall {
+        height: 400px;
     }
-  }
+
+    &.is-active {
+        position: relative;
+        background: rgba(0, 0, 0, 0.1);
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            margin: 0 auto;
+            content: 'I am active!';
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &.is-alt-active {
+        position: relative;
+        background: rgba(0, 0, 0, 0.15);
+        text-align: center;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            margin: 0 auto;
+            content: "I'm using a different active class!";
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .o-Grid-cell > .Demo {
-  padding: $g-spacer $g-spacer 0;
-  display: block;
-  min-width: 100%;
-
-  &::after {
-    content: '\00a0';
     display: block;
-    margin-top: 1em;
-    height: 0;
-    visibility: hidden;
-  }
+    min-width: 100%;
+    padding: $g-spacer $g-spacer 0;
 
-  &.Sticky-item {
-    min-width: auto;
-  }
+    &::after {
+        display: block;
+        height: 0;
+        margin-top: 1em;
+        content: '\00a0';
+        visibility: hidden;
+    }
+
+    &.Sticky-item {
+        min-width: auto;
+    }
 }
 
 .Menu-item.is-active-alt {
-  .Menu-link {
-    background: red;
-    color: white;
-    font-weight: bold;
-  }
+    .Menu-link {
+        background: red;
+        color: white;
+        font-weight: bold;
+    }
 }

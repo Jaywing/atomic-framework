@@ -12,34 +12,34 @@ $badge-danger-bg: $c-danger-light !default;
 $badge-danger-border-color: $c-danger !default;
 
 .Badge {
-  @include minion;
+    @include minion;
 
-  background: $badge-bg;
-  border: $badge-border;
-  border-radius: $badge-radius;
-  color: $badge-color;
-  display: inline-block;
-  line-height: 1;
-  padding: $badge-padding;
-  text-align: center;
-  text-decoration: none;
+    display: inline-block;
+    padding: $badge-padding;
+    border: $badge-border;
+    background: $badge-bg;
+    border-radius: $badge-radius;
+    color: $badge-color;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
 
-  &--notification {
-    border-radius: $badge-notification-radius;
-  }
+    &--notification {
+        border-radius: $badge-notification-radius;
+    }
 
-  &--success {
-    background: $badge-success-bg;
-    border-color: $badge-success-border-color;
-  }
+    &--success {
+        background: $badge-success-bg;
+        border-color: $badge-success-border-color;
+    }
 
-  &--warning {
-    background: $badge-warning-bg;
-    border-color: $badge-warning-border-color;
-  }
+    &--warning {
+        background: $badge-warning-bg;
+        border-color: $badge-warning-border-color;
+    }
 
-  &--danger {
-    background: $badge-danger-bg;
-    border-color: $badge-danger-border-color;
-  }
+    &--danger {
+        background: $badge-danger-bg;
+        border-color: $badge-danger-border-color;
+    }
 }

@@ -8,33 +8,33 @@ $ddh-dt-padding: 0 $g-spacer-sm 0 0 !default;
 
 //Horizontal list variant
 .Definition--horizontal {
-  @include clearfix;
+    @include clearfix;
 
-  dt {
-    clear: left;
-    float: left;
-    margin: $ddh-dt-margin;
-    padding: $ddh-dt-padding;
-    width: $ddh-width;
-    word-break: break-all;
+    dt {
+        width: $ddh-width;
+        padding: $ddh-dt-padding;
+        margin: $ddh-dt-margin;
+        clear: left;
+        float: left;
+        word-break: break-all;
 
-    @if $ddh-delimiter != '' {
-      &::after {
-        content: $ddh-delimiter;
-        padding: $ddh-delimiter-padding;
-      }
+        @if $ddh-delimiter != '' {
+            &::after {
+                padding: $ddh-delimiter-padding;
+                content: $ddh-delimiter;
+            }
+        }
     }
-  }
 
-  dd {
-    list-style: decimal inside;
-    margin: $ddh-margin;
-    padding-left: $ddh-width;
+    dd {
+        padding-left: $ddh-width;
+        margin: $ddh-margin;
+        list-style: decimal inside;
 
-    &::after {
-      clear: both;
-      content: '';
-      display: block;
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
     }
-  }
 }

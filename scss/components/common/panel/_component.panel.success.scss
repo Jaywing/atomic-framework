@@ -4,19 +4,19 @@ $panel-box-success-bg: $c-success-light-50 !default;
 $panel-box-success-border-color: $c-success-dark !default;
 
 .Panel--success {
-  color: $panel-success-color;
-
-  .Panel-title {
     color: $panel-success-color;
-  }
-
-  &.Panel--box {
-    background: $panel-box-success-bg;
-    border-color: $panel-box-success-border-color;
-    color: $panel-box-success-color;
 
     .Panel-title {
-      color: $panel-box-success-color;
+        color: $panel-success-color;
     }
-  }
+
+    &.Panel--box {
+        background: $panel-box-success-bg;
+        border-color: $panel-box-success-border-color;
+        color: $panel-box-success-color;
+
+        .Panel-title {
+            color: $panel-box-success-color;
+        }
+    }
 }

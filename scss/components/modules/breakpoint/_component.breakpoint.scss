@@ -1,52 +1,52 @@
 body {
-  // Expose css breakpoints to javascript
-  // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
-  @include mq($until: map-get($mq-breakpoints, 'xxs')) {
-    &::before {
-      content: 'base';
-      display: none;
+    // Expose css breakpoints to javascript
+    // @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+    @include mq($until: map-get($mq-breakpoints, 'xxs')) {
+        &::before {
+            display: none;
+            content: 'base';
+        }
     }
-  }
 
-  @include xxs {
-    &::before {
-      content: 'xxs';
+    @include xxs {
+        &::before {
+            content: 'xxs';
+        }
     }
-  }
 
-  @include xs {
-    &::before {
-      content: 'xs';
+    @include xs {
+        &::before {
+            content: 'xs';
+        }
     }
-  }
 
-  @include sm {
-    &::before {
-      content: 'sm';
+    @include sm {
+        &::before {
+            content: 'sm';
+        }
     }
-  }
 
-  @include md {
-    &::before {
-      content: 'md';
+    @include md {
+        &::before {
+            content: 'md';
+        }
     }
-  }
 
-  @include lg {
-    &::before {
-      content: 'lg';
+    @include lg {
+        &::before {
+            content: 'lg';
+        }
     }
-  }
 
-  @include xl {
-    &::before {
-      content: 'xl';
+    @include xl {
+        &::before {
+            content: 'xl';
+        }
     }
-  }
 
-  @include xxl {
-    &::before {
-      content: 'xxl';
+    @include xxl {
+        &::before {
+            content: 'xxl';
+        }
     }
-  }
 }

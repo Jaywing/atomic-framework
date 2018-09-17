@@ -24,53 +24,53 @@ $strong-font-weight: $g-weight-bold !default;
 $small-font-size: 80% !default;
 
 b {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 cite {
-  @include brevier;
+    @include brevier;
 
-  font-style: italic;
+    font-style: italic;
 
-  &::before {
-    content: '- ';
-  }
+    &::before {
+        content: '- ';
+    }
 }
 
 code {
-  background: $code-bg;
-  display: inline-block;
-  font-family: $code-font-family;
-  padding: 0 0.2rem;
+    display: inline-block;
+    padding: 0 0.2rem;
+    background: $code-bg;
+    font-family: $code-font-family;
 }
 
 hr {
-  border: 0;
-  border-bottom: $hr-border;
-  clear: both;
-  height: 0;
-  margin: $hr-margin;
-  max-width: $hr-width;
+    max-width: $hr-width;
+    height: 0;
+    border: 0;
+    border-bottom: $hr-border;
+    margin: $hr-margin;
+    clear: both;
 }
 
 i {
-  font-style: normal;
+    font-style: normal;
 }
 
 pre {
-  display: block;
-
-  code {
     display: block;
-    overflow-x: auto;
-    padding: $g-spacer-sm;
-  }
+
+    code {
+        display: block;
+        padding: $g-spacer-sm;
+        overflow-x: auto;
+    }
 }
 
 small {
-  font-size: $small-font-size;
+    font-size: $small-font-size;
 }
 
 u {
-  text-decoration: none;
+    text-decoration: none;
 }

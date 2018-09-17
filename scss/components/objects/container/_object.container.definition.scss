@@ -2,32 +2,32 @@ $container-max-width: $g-site-max-width !default;
 $container-side-padding: $g-spacer !default;
 $container-thin-max-width: 800px !default;
 
-
 .o-Container {
-  @include clearfix;
-  max-width: $container-max-width;
-  padding-left: $container-side-padding;
-  padding-right: $container-side-padding;
+    @include clearfix;
 
-  &--centered {
-    margin-left: auto;
-    margin-right: auto;
-  }
+    max-width: $container-max-width;
+    padding-right: $container-side-padding;
+    padding-left: $container-side-padding;
 
-  &--fluid {
-    max-width: 100%;
-  }
+    &--centered {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-  &--collapse {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    &--fluid {
+        max-width: 100%;
+    }
 
-  &--absolute {
-    position: relative;
-  }
+    &--collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-  &--thin {
-    max-width: $container-thin-max-width;
-  }
+    &--absolute {
+        position: relative;
+    }
+
+    &--thin {
+        max-width: $container-thin-max-width;
+    }
 }

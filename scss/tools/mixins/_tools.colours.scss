@@ -22,7 +22,7 @@
 /// @group colours
 
 @function color($name, $palette: $c-palette) {
-  @return map-get($palette, $name);
+    @return map-get($palette, $name);
 }
 
 /// Generate helper classes for a given colour palette
@@ -36,10 +36,14 @@
 ///
 /// @group colours
 
-@mixin generate-color-classes($palette: $c-palette, $prefix: 'c-', $property: 'color') {
-  @each $name, $color in $palette {
-    .#{unquote($prefix + $name)} {
-      #{$property}: $color;
+@mixin generate-color-classes(
+    $palette: $c-palette,
+    $prefix: 'c-',
+    $property: 'color'
+) {
+    @each $name, $color in $palette {
+        .#{unquote($prefix + $name)} {
+            #{$property}: $color;
+        }
     }
-  }
 }

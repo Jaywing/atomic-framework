@@ -1,14 +1,14 @@
 @include xl {
-  .NavResponsiveXl,
-  .NavResponsiveXl.is-active {
-    padding: 0;
+    .NavResponsiveXl,
+    .NavResponsiveXl.is-active {
+        padding: 0;
 
-    .ToggleButton {
-      display: none;
-    }
+        .ToggleButton {
+            display: none;
+        }
 
-    .Menu {
-      max-height: none;
+        .Menu {
+            max-height: none;
+        }
     }
-  }
 }

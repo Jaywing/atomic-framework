@@ -1,9 +1,9 @@
 $button-sm-padding: $g-spacer-sm $g-spacer !default;
 
 .Button {
-  &--sm {
-    @include brevier;
+    &--sm {
+        @include brevier;
 
-    padding: $button-sm-padding;
-  }
+        padding: $button-sm-padding;
+    }
 }

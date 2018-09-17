@@ -2,58 +2,57 @@ $menu-vertical-link-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
 
-
 .Menu--vertical {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  .Menu-item {
-    flex: 0 0 100%;
-    margin: $g-spacer-xxs 0;
-    max-width: 100%;
-    padding: 0;
-    text-align: left;
-  }
-
-  .Menu-link {
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: $menu-vertical-link-padding;
-    text-align: inherit;
-  }
-
-  .Menu-header {
-    margin: $menu-vertical-title-margin;
-    padding: $menu-vertical-title-padding;
-
-    .Menu-item:first-child & {
-      margin-top: 0;
+    .Menu-item {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
+        margin: $g-spacer-xxs 0;
+        text-align: left;
     }
-  }
 
-  // Nested
-  .Menu {
-    margin-left: $menu-margin-nested;
-    margin-top: 0;
-
-    &--flush {
-      margin-left: 0;
+    .Menu-link {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: $menu-vertical-link-padding;
+        text-align: inherit;
     }
-  }
 
-  &.Menu--right {
-    .Menu-item,
-    .Menu-item--left {
-      text-align: right;
+    .Menu-header {
+        padding: $menu-vertical-title-padding;
+        margin: $menu-vertical-title-margin;
 
-      .Menu-header {
-        display: block;
-        text-align: right;
-        width: 100%;
-      }
+        .Menu-item:first-child & {
+            margin-top: 0;
+        }
     }
-  }
 
-  &.Menu--center .Menu-item {
-    text-align: center;
-  }
+    // Nested
+    .Menu {
+        margin-top: 0;
+        margin-left: $menu-margin-nested;
+
+        &--flush {
+            margin-left: 0;
+        }
+    }
+
+    &.Menu--right {
+        .Menu-item,
+        .Menu-item--left {
+            text-align: right;
+
+            .Menu-header {
+                display: block;
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+
+    &.Menu--center .Menu-item {
+        text-align: center;
+    }
 }

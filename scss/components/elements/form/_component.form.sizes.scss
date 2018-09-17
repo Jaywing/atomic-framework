@@ -4,35 +4,35 @@ $form-lg-padding: $g-spacer $g-spacer-lg !default;
 $form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl !default;
 
 .Form {
-  .Form-input,
-  .Form-select,
-  .Form-text,
-  .Form-check,
-  .Form-radio {
-    &--xs {
-      @include minion;
+    .Form-input,
+    .Form-select,
+    .Form-text,
+    .Form-check,
+    .Form-radio {
+        &--xs {
+            @include minion;
 
-      padding: $form-xs-padding;
+            padding: $form-xs-padding;
+        }
+
+        &--sm {
+            @include brevier;
+
+            padding: $form-sm-padding;
+        }
+
+        &--lg {
+            padding: $form-lg-padding;
+        }
+
+        &--xl {
+            @include great-primer;
+
+            padding: $form-xl-padding;
+        }
+
+        &--block {
+            display: block;
+        }
     }
-
-    &--sm {
-      @include brevier;
-
-      padding: $form-sm-padding;
-    }
-
-    &--lg {
-      padding: $form-lg-padding;
-    }
-
-    &--xl {
-      @include great-primer;
-
-      padding: $form-xl-padding;
-    }
-
-    &--block {
-      display: block;
-    }
-  }
 }

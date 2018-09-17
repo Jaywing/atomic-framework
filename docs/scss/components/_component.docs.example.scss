@@ -1,31 +1,32 @@
 %docs-block {
-  margin: $g-spacer-xxl 0 $g-spacer;
-  position: relative;
-  border-top: 1px solid rgba($c-light-30, .5);
-  border-bottom: 1px solid rgba($c-light-30, .5);
+    position: relative;
+    border-top: 1px solid rgba($c-light-30, 0.5);
+    border-bottom: 1px solid rgba($c-light-30, 0.5);
+    margin: $g-spacer-xxl 0 $g-spacer;
 
-  &::before {
-    @include minion-bold;
-    display: inline-block;
-    padding: $g-spacer-xxs $g-spacer-sm;
-    background: rgba($c-light-30, .5);
-    position: absolute;
-    top: -($g-spacer-lg);
-    left: 0;
-    color: $c-dark-30;
-    text-transform: capitalize;
-    border-radius: $g-border-radius $g-border-radius 0 0;
-    border: 1px solid $c-light-30;
-  }
+    &::before {
+        @include minion-bold;
+
+        position: absolute;
+        top: -($g-spacer-lg);
+        left: 0;
+        display: inline-block;
+        padding: $g-spacer-xxs $g-spacer-sm;
+        border: 1px solid $c-light-30;
+        background: rgba($c-light-30, 0.5);
+        border-radius: $g-border-radius $g-border-radius 0 0;
+        color: $c-dark-30;
+        text-transform: capitalize;
+    }
 }
 
 .docs-example {
-  @extend %docs-block;
+    @extend %docs-block;
 
-  padding: $g-spacer-lg $g-spacer;
-  background: $c-light;
+    padding: $g-spacer-lg $g-spacer;
+    background: $c-light;
 
-  &::before {
-    content: 'Example';
-  }
+    &::before {
+        content: 'Example';
+    }
 }

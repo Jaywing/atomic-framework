@@ -3,7 +3,7 @@ $bookmarks-top: $g-spacer-sm !default;
 $bookmarks-right: $g-spacer !default;
 
 $bookmarks-toggler-color: $c-dark-15 !default;
-$bookmarks-toggler-bg: rgba($c-light, .85) !default;
+$bookmarks-toggler-bg: rgba($c-light, 0.85) !default;
 $bookmarks-toggler-border: 1px solid $c-dark-30 !default;
 
 $bookmarks-menu-trans: all $g-trans-link-speed ease-in !default;
@@ -11,73 +11,69 @@ $bookmarks-menu-trans-origin: right top !default;
 $bookmarks-menu-offset: 10px !default;
 $bookmarks-menu-border: 1px solid $c-dark-30 !default;
 $bookmarks-menu-padding: $g-spacer-sm !default;
-$bookmarks-menu-bg: rgba($c-light, .85) !default;
+$bookmarks-menu-bg: rgba($c-light, 0.85) !default;
 $bookmarks-menu-z: $g-z-8 !default;
 
 .Bookmarks {
+    &-menu {
+        @include reset-list;
+    }
 
-  &-menu {
-    @include reset-list;
-  }
-
-  &-toggler {
-    display: none;
-  }
-
+    &-toggler {
+        display: none;
+    }
 }
 
 .js .Bookmarks {
-  position: fixed;
-  right: $bookmarks-right;
-  text-align: right;
-  top: $bookmarks-top;
-  z-index: $bookmarks-z;
-
-  .Bookmarks-toggler {
-    background: $bookmarks-toggler-bg;
-    border: $bookmarks-toggler-border;
-    color: $bookmarks-toggler-color;
-    display: inline-block;
-    margin-top: 2px;
-  }
-
-  .Bookmarks-menu {
-    display: inline-block;
-    height: auto;
-    margin-top: $bookmarks-menu-offset;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transform: scale(0);
-    transform-origin: $bookmarks-menu-trans-origin;
-    transition: $bookmarks-menu-trans;
-  }
-
-  &.is-active {
+    position: fixed;
+    z-index: $bookmarks-z;
+    top: $bookmarks-top;
+    right: $bookmarks-right;
+    text-align: right;
 
     .Bookmarks-toggler {
-      background: $c-light;
-      color: $c-dark;
+        display: inline-block;
+        border: $bookmarks-toggler-border;
+        margin-top: 2px;
+        background: $bookmarks-toggler-bg;
+        color: $bookmarks-toggler-color;
     }
 
     .Bookmarks-menu {
-      background: $bookmarks-menu-bg;
-      border: $bookmarks-menu-border;
-      max-height: 90%;
-      opacity: 1;
-      padding: $bookmarks-menu-padding;
-      transform: scale(1);
-      z-index: $bookmarks-menu-z;
+        display: inline-block;
+        overflow: hidden;
+        height: auto;
+        max-height: 0;
+        margin-top: $bookmarks-menu-offset;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: $bookmarks-menu-trans-origin;
+        transition: $bookmarks-menu-trans;
     }
-  }
 
+    &.is-active {
+        .Bookmarks-toggler {
+            background: $c-light;
+            color: $c-dark;
+        }
+
+        .Bookmarks-menu {
+            z-index: $bookmarks-menu-z;
+            max-height: 90%;
+            padding: $bookmarks-menu-padding;
+            border: $bookmarks-menu-border;
+            background: $bookmarks-menu-bg;
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 }
 
 :target {
-  animation: target-fade 3.5s 1;
-  animation-delay: 1s;
+    animation: target-fade 3.5s 1;
+    animation-delay: 1s;
 }
 
 .Panel:target {
-  animation: none;
+    animation: none;
 }

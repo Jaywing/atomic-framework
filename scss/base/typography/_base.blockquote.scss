@@ -15,7 +15,7 @@
 $bq-margin: $g-spacer 0 !default;
 
 blockquote {
-  @include trim-child-margins;
+    @include trim-child-margins;
 
-  margin: $bq-margin;
+    margin: $bq-margin;
 }

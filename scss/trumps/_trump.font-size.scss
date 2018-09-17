@@ -17,65 +17,65 @@
 
 /* font-size helpers */
 .canon {
-  @include canon;
+    @include canon;
 }
 
 .canonBold {
-  @include canon-bold;
+    @include canon-bold;
 }
 
 .trafalgar {
-  @include trafalgar;
+    @include trafalgar;
 }
 
 .trafalgarBold {
-  @include trafalgar-bold;
+    @include trafalgar-bold;
 }
 
 .doublePica {
-  @include double-pica;
+    @include double-pica;
 }
 
 .doublePicaBold {
-  @include double-pica-bold;
+    @include double-pica-bold;
 }
 
 .greatPrimer {
-  @include great-primer;
+    @include great-primer;
 }
 
 .greatPrimerBold {
-  @include great-primer-bold;
+    @include great-primer-bold;
 }
 
 .pica {
-  @include pica;
+    @include pica;
 }
 
 .picaBold {
-  @include pica-bold;
+    @include pica-bold;
 }
 
 .longPrimer {
-  @include long-primer;
+    @include long-primer;
 }
 
 .longPrimerBold {
-  @include long-primer-bold;
+    @include long-primer-bold;
 }
 
 .brevier {
-  @include brevier;
+    @include brevier;
 }
 
 .brevierBold {
-  @include brevier-bold;
+    @include brevier-bold;
 }
 
 .minion {
-  @include minion;
+    @include minion;
 }
 
 .minionBold {
-  @include minion-bold;
+    @include minion-bold;
 }

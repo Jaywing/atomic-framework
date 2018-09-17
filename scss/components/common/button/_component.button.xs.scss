@@ -1,9 +1,9 @@
 $button-xs-padding: $g-spacer-sm $g-spacer !default;
 
 .Button {
-  &--xs {
-    @include minion;
+    &--xs {
+        @include minion;
 
-    padding: $button-xs-padding;
-  }
+        padding: $button-xs-padding;
+    }
 }

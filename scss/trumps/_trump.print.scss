@@ -14,39 +14,39 @@
 
 /* print helpers */
 @media print {
-  // * Print visibility classes
-  // *     .print-hide
-  // *     .print-only
+    // * Print visibility classes
+    // *     .print-hide
+    // *     .print-only
 
-  .printHide {
-    display: none !important;
-  }
+    .printHide {
+        display: none !important;
+    }
 
-  .printOnly {
-    display: block !important;
-  }
+    .printOnly {
+        display: block !important;
+    }
 
-  table.printOnly {
-    display: table !important;
-  }
+    table.printOnly {
+        display: table !important;
+    }
 
-  thead.printOnly {
-    display: table-header-group !important;
-  }
+    thead.printOnly {
+        display: table-header-group !important;
+    }
 
-  tbody.printOnly {
-    display: table-row-group !important;
-  }
+    tbody.printOnly {
+        display: table-row-group !important;
+    }
 
-  tr.printOnly {
-    display: table-row !important;
-  }
+    tr.printOnly {
+        display: table-row !important;
+    }
 
-  td.printOnly {
-    display: table-cell !important;
-  }
+    td.printOnly {
+        display: table-cell !important;
+    }
 
-  th.printOnly {
-    display: table-cell !important;
-  }
+    th.printOnly {
+        display: table-cell !important;
+    }
 }

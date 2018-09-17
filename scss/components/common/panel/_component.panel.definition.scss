@@ -4,34 +4,34 @@ $panel-badge-pos: 0 !default;
 $panel-title-margin: 0 $g-spacer-xl 0 0 !default;
 
 .Panel {
-  @include trim-child-margins;
+    @include trim-child-margins;
 
-  display: block;
-  margin: $panel-margin;
-  min-height: 100%;
-  position: relative;
+    position: relative;
+    display: block;
+    min-height: 100%;
+    margin: $panel-margin;
 
-  &-title {
-    @include pica;
+    &-title {
+        @include pica;
 
-    margin: $panel-title-margin;
+        margin: $panel-title-margin;
 
-    .Icon {
-      margin: -3px 0 0 -5px;
+        .Icon {
+            margin: -3px 0 0 -5px;
+        }
     }
-  }
 
-  &-badge {
-    position: absolute;
-    right: $panel-badge-pos;
-    top: $panel-badge-pos;
-  }
+    &-badge {
+        position: absolute;
+        top: $panel-badge-pos;
+        right: $panel-badge-pos;
+    }
 
-  &--attached {
-    margin-top: 0;
-  }
+    &--attached {
+        margin-top: 0;
+    }
 
-  &[hidden] {
-    display: none;
-  }
+    &[hidden] {
+        display: none;
+    }
 }

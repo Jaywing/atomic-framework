@@ -18,23 +18,25 @@
 //    @include hide-visually; // hides an item visually
 //    @include hide-visually(true); // makes item focusable
 
-@mixin hide-visually ($focusable: false) {
-  @if $focusable {
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-  } @else {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
+@mixin hide-visually($focusable: false) {
+    @if $focusable {
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip: rect(0 0 0 0);
+    }
 
-  border: 0;
-  padding: 0;
+ @else {
+        position: static;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip: auto;
+    }
+
+    padding: 0;
+    border: 0;
 }

@@ -1,30 +1,30 @@
 $skiplink-trans: all $g-trans-link-speed ease !default;
 $skiplink-active-pos: $g-spacer-sm !default;
 $skiplink-zindex: $g-z-9 !default;
-$skiplink-bg: rgba($c-light, .85) !default;
+$skiplink-bg: rgba($c-light, 0.85) !default;
 $skiplink-padding: $g-spacer-sm !default;
 
 .SkipLink {
-  background: $skiplink-bg;
-  height: 1px;
-  left: -1000px;
-  overflow: hidden;
-  padding: $skiplink-padding;
-  position: absolute;
-  text-align: left;
-  top: -1000px;
-  transition: $skiplink-trans;
-  width: 1px;
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: $skiplink-padding;
+    background: $skiplink-bg;
+    text-align: left;
+    transition: $skiplink-trans;
 
-  &:focus,
-  &:hover,
-  &:active {
-    height: auto;
-    left: $skiplink-active-pos;
-    overflow: visible;
-    text-decoration: none;
-    top: $skiplink-active-pos;
-    width: auto;
-    z-index: $skiplink-zindex;
-  }
+    &:focus,
+    &:hover,
+    &:active {
+        z-index: $skiplink-zindex;
+        top: $skiplink-active-pos;
+        left: $skiplink-active-pos;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+    }
 }

@@ -1,8 +1,7 @@
 $table-striped-tr-background: $c-very-strong-trans-dark !default;
 
 .Table--striped {
-
-  tbody tr:nth-of-type(odd) {
-    background: $table-striped-tr-background;
-  }
+    tbody tr:nth-of-type(odd) {
+        background: $table-striped-tr-background;
+    }
 }

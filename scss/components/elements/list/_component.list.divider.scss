@@ -2,13 +2,12 @@ $list-divider-border: $list-border !default;
 $list-divider-padding: $g-spacer-xs 0 !default;
 
 .List--divider {
+    > li {
+        padding: $list-divider-padding;
+        border-bottom: $list-divider-border;
 
-  > li {
-    border-bottom: $list-divider-border;
-    padding: $list-divider-padding;
-
-    &:last-child {
-      border-bottom: 0;
+        &:last-child {
+            border-bottom: 0;
+        }
     }
-  }
 }

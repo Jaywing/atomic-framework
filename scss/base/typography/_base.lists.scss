@@ -19,26 +19,26 @@ $dt-font-weight: $g-weight-bold !default;
 ul,
 ol,
 dl {
-  margin-bottom: $list-margin-bottom;
-  padding: 0;
+    padding: 0;
+    margin-bottom: $list-margin-bottom;
 }
 
 ul,
 ol {
-  margin-left: $list-margin-side;
+    margin-left: $list-margin-side;
 
-  & & {
-    margin-bottom: 0;
-    margin-left: $list-nested-margin-side;
-  }
+    & & {
+        margin-bottom: 0;
+        margin-left: $list-nested-margin-side;
+    }
 }
 
 dl {
-  dt {
-    font-weight: $dt-font-weight;
-  }
+    dt {
+        font-weight: $dt-font-weight;
+    }
 
-  dd {
-    margin: 0;
-  }
+    dd {
+        margin: 0;
+    }
 }

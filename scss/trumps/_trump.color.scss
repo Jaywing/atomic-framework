@@ -35,53 +35,53 @@
 @include generate-color-classes;
 
 .colorDark {
-  color: $c-dark !important;
+    color: $c-dark !important;
 }
 
 .colorLight {
-  color: $c-light !important;
+    color: $c-light !important;
 }
 
 .colorPrimary {
-  color: $c-primary !important;
+    color: $c-primary !important;
 }
 
 .colorSecondary {
-  color: $c-secondary !important;
+    color: $c-secondary !important;
 }
 
 .colorHighlight {
-  color: $c-highlight !important;
+    color: $c-highlight !important;
 }
 
 .colorError {
-  color: $c-danger !important;
+    color: $c-danger !important;
 }
 
 .colorSuccess {
-  color: $c-success !important;
+    color: $c-success !important;
 }
 
 .bgDark {
-  background-color: $c-dark !important;
+    background-color: $c-dark !important;
 }
 
 .bgLight {
-  background-color: $c-light !important;
+    background-color: $c-light !important;
 }
 
 .bgSecondary {
-  background-color: $c-secondary !important;
+    background-color: $c-secondary !important;
 }
 
 .bgHighlight {
-  background-color: $c-highlight !important;
+    background-color: $c-highlight !important;
 }
 
 .bgError {
-  background-color: $c-danger !important;
+    background-color: $c-danger !important;
 }
 
 .bgSuccess {
-  background-color: $c-success !important;
+    background-color: $c-success !important;
 }

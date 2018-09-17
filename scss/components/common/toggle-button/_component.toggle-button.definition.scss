@@ -3,30 +3,30 @@ $toggle-button-bg: transparent !default;
 $toggle-button-radius: $g-border-radius !default;
 
 .ToggleButton {
-  background: $toggle-button-bg;
-  border: $toggle-button-border;
-  border-radius: $toggle-button-radius;
-  min-height: 44px;
-  min-width: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border: $toggle-button-border;
+    background: $toggle-button-bg;
+    border-radius: $toggle-button-radius;
 
-  .ToggleButton-close {
-    display: none;
-  }
-
-  &.is-active,
-  .is-active > & {
     .ToggleButton-close {
-      display: inline-block;
+        display: none;
     }
 
-    .ToggleButton-init {
-      display: none;
+    &.is-active,
+    .is-active > & {
+        .ToggleButton-close {
+            display: inline-block;
+        }
+
+        .ToggleButton-init {
+            display: none;
+        }
     }
-  }
 }
 
 .ToggleButton--hideText {
-  .ToggleButton-text {
-    @include hide-visually(true);
-  }
+    .ToggleButton-text {
+        @include hide-visually(true);
+    }
 }

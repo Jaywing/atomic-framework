@@ -1,20 +1,20 @@
 @include lg {
-  .MenuLg,
-  .NavResponsiveLg {
-    flex-wrap: nowrap;
+    .MenuLg,
+    .NavResponsiveLg {
+        flex-wrap: nowrap;
 
-    > .Menu-item {
-      flex: 0 0 auto;
-      padding: $menu-item-padding;
-    }
+        > .Menu-item {
+            flex: 0 0 auto;
+            padding: $menu-item-padding;
+        }
 
-    > .Menu-item .Menu-link {
-      padding: $menu-link-padding;
-    }
+        > .Menu-item .Menu-link {
+            padding: $menu-link-padding;
+        }
 
-    .Menu-header {
-      margin: -($menu-header-padding);
-      padding: $menu-header-padding;
+        .Menu-header {
+            padding: $menu-header-padding;
+            margin: -($menu-header-padding);
+        }
     }
-  }
 }

@@ -5,7 +5,6 @@
 //
 // ========================================================================
 
-
 //=========================================================================
 //   Component: Cover
 //=========================================================================
@@ -41,112 +40,111 @@ $cover-loading-icon-xxl-adj: -($icon-size-xxl / 2) !default;
 
 // 1 */
 .o-Cover {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 
-  &-object {
-    // 2 */
-    height: auto;
-    left: 50%;
-    // 3 */
-    max-width: none;
-    min-height: 100%;
-    min-width: 100%;
-    // 4 */
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
+    &-object {
+        // 4 */
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        min-width: 100%;
+        // 3 */
+        max-width: none;
+        // 2 */
+        height: auto;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
 
-    > iframe,
-    > object,
-    > embed,
-    > video,
-    > img {
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  &-loading {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-
-    &.Icon {
-      margin-left: $cover-loading-icon-adj;
-      margin-top: $cover-loading-icon-adj;
+        > iframe,
+        > object,
+        > embed,
+        > video,
+        > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    &.Icon--sm {
-      margin-left: $cover-loading-icon-sm-adj;
-      margin-top: $cover-loading-icon-sm-adj;
+    &-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        &.Icon {
+            margin-top: $cover-loading-icon-adj;
+            margin-left: $cover-loading-icon-adj;
+        }
+
+        &.Icon--sm {
+            margin-top: $cover-loading-icon-sm-adj;
+            margin-left: $cover-loading-icon-sm-adj;
+        }
+
+        &.Icon--lg {
+            margin-top: $cover-loading-icon-lg-adj;
+            margin-left: $cover-loading-icon-lg-adj;
+        }
+
+        &.Icon--xl {
+            margin-top: $cover-loading-icon-xl-adj;
+            margin-left: $cover-loading-icon-xl-adj;
+        }
+
+        &.Icon--xxl {
+            margin-top: $cover-loading-icon-xxl-adj;
+            margin-left: $cover-loading-icon-xxl-adj;
+        }
     }
 
-    &.Icon--lg {
-      margin-left: $cover-loading-icon-lg-adj;
-      margin-top: $cover-loading-icon-lg-adj;
+    &--bg {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    &.Icon--xl {
-      margin-left: $cover-loading-icon-xl-adj;
-      margin-top: $cover-loading-icon-xl-adj;
+    &--video,
+    &--videoWide,
+    &--ratio16x9,
+    &--ratio4x3,
+    &--ratio21x9 {
+        @include trim-child-margins;
+
+        position: relative;
+        height: 0;
+        margin: $cover-video-margin;
+
+        > .o-Cover-object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(0, 0);
+        }
     }
 
-    &.Icon--xxl {
-      margin-left: $cover-loading-icon-xxl-adj;
-      margin-top: $cover-loading-icon-xxl-adj;
+    &--video {
+        padding-bottom: $cover-video-ratio;
     }
-  }
 
-  &--bg {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  &--video,
-  &--videoWide,
-  &--ratio16x9,
-  &--ratio4x3,
-  &--ratio21x9 {
-    @include trim-child-margins;
-
-    height: 0;
-    margin: $cover-video-margin;
-    position: relative;
-
-    > .o-Cover-object {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(0, 0);
-      width: 100%;
+    &--videoWide {
+        padding-bottom: $cover-video-wide-ratio;
     }
-  }
 
-  &--video {
-    padding-bottom: $cover-video-ratio;
-  }
+    &--ratio16x9 {
+        padding-bottom: $cover-ratio-16-9;
+    }
 
-  &--videoWide {
-    padding-bottom: $cover-video-wide-ratio;
-  }
+    &--ratio4x3 {
+        padding-bottom: $cover-ratio-4-3;
+    }
 
-  &--ratio16x9 {
-    padding-bottom: $cover-ratio-16-9;
-  }
-
-  &--ratio4x3 {
-    padding-bottom: $cover-ratio-4-3;
-  }
-
-  &--ratio21x9 {
-    padding-bottom: $cover-ratio-21-9;
-  }
-
+    &--ratio21x9 {
+        padding-bottom: $cover-ratio-21-9;
+    }
 }

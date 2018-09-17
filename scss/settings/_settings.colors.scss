@@ -33,9 +33,7 @@ $c-palette: (
     green: #0b9444,
     yellow: #e6d593,
     orange: #be7000
-  )
-  !default;
-
+) !default;
 // Global color variables
 $c-dark: map-get($c-palette, black) !default;
 $c-dark-15: lighten($c-dark, 15%) !default;
@@ -86,13 +84,11 @@ $g-social-colors: (
     youtube: #cc181e,
     instagram: #49769c,
     pinterest: #00aced
-  )
-  !default;
+) !default;
 $c-subtle-trans-dark: rgba(0, 0, 0, 0.03) !default;
 $c-trans-dark: rgba(0, 0, 0, 0.05) !default;
 $c-strong-trans-dark: rgba(0, 0, 0, 0.1) !default;
 $c-very-strong-trans-dark: rgba(0, 0, 0, 0.15) !default;
-
 $c-subtle-trans-light: rgba(255, 255, 255, 0.03) !default;
 $c-trans-light: rgba(255, 255, 255, 0.08) !default;
 $c-strong-trans-light: rgba(255, 255, 255, 0.12) !default;

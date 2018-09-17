@@ -5,60 +5,64 @@
 
 $breadcrumbs-margin: 0 0 $g-spacer 0 !default;
 $breadcrumbs-item-font-size: $base-font-size !default;
-$breadcrumbs-item-color-disabled: rgba($c-dark, .5) !default;
-$breadcrumbs-item-margin: 0 .75rem !default;
+$breadcrumbs-item-color-disabled: rgba($c-dark, 0.5) !default;
+$breadcrumbs-item-margin: 0 0.75rem !default;
 $breadcrumbs-item-uppercase: false !default;
 $breadcrumbs-item-underline: false !default;
 $breadcrumbs-item-separator: true !default;
 $breadcrumbs-item-separator-char: '/' !default;
 
 .Breadcrumbs-list {
-  list-style: none;
-  margin: $breadcrumbs-margin;
+    margin: $breadcrumbs-margin;
+    list-style: none;
 
-  li {
-    cursor: default;
-    float: left;
-    font-size: $breadcrumbs-item-font-size;
+    li {
+        cursor: default;
+        float: left;
+        font-size: $breadcrumbs-item-font-size;
 
-    @if $breadcrumbs-item-uppercase {
-      text-transform: uppercase;
+        @if $breadcrumbs-item-uppercase {
+            text-transform: uppercase;
+        }
+
+        &:not(:last-child)::after {
+            @if $breadcrumbs-item-separator {
+                content: $breadcrumbs-item-separator-char;
+            }
+
+ @else {
+                content: '';
+            }
+
+            position: relative;
+            top: 1px;
+            margin: $breadcrumbs-item-margin;
+            opacity: 1;
+        }
     }
 
-    &:not(:last-child)::after {
-      @if $breadcrumbs-item-separator {
-        content: $breadcrumbs-item-separator-char;
-      } @else {
+    a {
+        @if $breadcrumbs-item-underline {
+            text-decoration: underline;
+        }
+
+ @else {
+            text-decoration: none;
+        }
+    }
+
+    .disabled {
+        color: $breadcrumbs-item-color-disabled;
+        cursor: not-allowed;
+    }
+
+    &::before,
+    &::after {
+        display: table;
         content: '';
-      }
-
-      margin: $breadcrumbs-item-margin;
-      opacity: 1;
-      position: relative;
-      top: 1px;
     }
-  }
 
-  a {
-    @if $breadcrumbs-item-underline {
-      text-decoration: underline;
-    } @else {
-      text-decoration: none;
+    &::after {
+        clear: both;
     }
-  }
-
-  .disabled {
-    color: $breadcrumbs-item-color-disabled;
-    cursor: not-allowed;
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
-
-  &::after {
-    clear: both;
-  }
 }

@@ -9,51 +9,53 @@ $menu-tab-link-padding-x: $g-spacer !default;
 $menu-tab-link-padding-y: $g-spacer-sm !default;
 
 .Menu--tabular {
-  border-bottom: $menu-tab-border;
+    border-bottom: $menu-tab-border;
 
-  .Menu-item {
-    margin: 0 $g-spacer-xxs;
-    padding: 0;
+    .Menu-item {
+        padding: 0;
+        margin: 0 $g-spacer-xxs;
 
-    &:first-child {
-      margin-left: 0;
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
-    &:last-child {
-      margin-right: 0;
+    .Menu-link {
+        padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
+        border: $menu-tab-link-border;
+        border-bottom: 0;
+        background: transparent;
+        border-radius: $menu-tab-link-border-radius $menu-tab-link-border-radius
+            0 0;
     }
-  }
-
-  .Menu-link {
-    background: transparent;
-    border: $menu-tab-link-border;
-    border-bottom: 0;
-    border-radius: $menu-tab-link-border-radius $menu-tab-link-border-radius 0 0;
-    padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
-  }
-
-  .is-active .Menu-link,
-  .Menu-link.is-active {
-    background: $menu-tab-link-active-bg;
-    border: $menu-tab-link-border-active;
-    border-bottom: 0;
-    color: $menu-tab-link-active-color;
-    margin-bottom: -($menu-border-width + 1);
-    padding-bottom: ($menu-tab-link-padding-y);
-  }
-
-  &.Menu--vertical {
-    border-bottom: 0;
-    border-right: $menu-tab-link-border-active;
 
     .is-active .Menu-link,
     .Menu-link.is-active {
-      border: $menu-tab-link-border-active;
-      border-radius: $menu-tab-link-border-radius 0 0 $menu-tab-link-border-radius;
-      border-right: 0;
-      left: -($menu-border-width);
-      margin-bottom: 0;
-      position: relative;
+        padding-bottom: ($menu-tab-link-padding-y);
+        border: $menu-tab-link-border-active;
+        border-bottom: 0;
+        margin-bottom: -($menu-border-width + 1);
+        background: $menu-tab-link-active-bg;
+        color: $menu-tab-link-active-color;
     }
-  }
+
+    &.Menu--vertical {
+        border-right: $menu-tab-link-border-active;
+        border-bottom: 0;
+
+        .is-active .Menu-link,
+        .Menu-link.is-active {
+            position: relative;
+            left: -($menu-border-width);
+            border: $menu-tab-link-border-active;
+            border-right: 0;
+            margin-bottom: 0;
+            border-radius: $menu-tab-link-border-radius 0 0
+                $menu-tab-link-border-radius;
+        }
+    }
 }

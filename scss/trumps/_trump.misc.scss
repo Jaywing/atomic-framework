@@ -15,27 +15,27 @@
 // can be used on body to lock scrolling when an overlay is
 // used
 .scrollNone {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
 
 .scrollXauto,
 .scrollX {
-  overflow-x: auto;
-  overflow-y: none;
-  width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: none;
 }
 
 .scrollX {
-  overflow-x: scroll;
+    overflow-x: scroll;
 }
 
 .scrollYauto,
 .scrollY {
-  overflow-x: none;
-  overflow-y: auto;
-  width: 100%;
+    width: 100%;
+    overflow-x: none;
+    overflow-y: auto;
 }
 
 .scrollY {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }

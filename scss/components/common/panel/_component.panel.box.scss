@@ -3,79 +3,79 @@ $panel-box-border: 1px solid $c-border !default;
 $panel-box-badge-pos: $g-spacer-sm !default;
 $panel-box-padding: $g-spacer !default;
 $panel-box-border-radius: $g-border-radius !default;
-$panel-box-stacked-bg: rgba($c-dark, .03) !default;
+$panel-box-stacked-bg: rgba($c-dark, 0.03) !default;
 
 .Panel--box {
-  background: $panel-box-bg;
-  border: $panel-box-border;
-  border-radius: $panel-box-border-radius;
-  padding: $panel-box-padding;
+    padding: $panel-box-padding;
+    border: $panel-box-border;
+    background: $panel-box-bg;
+    border-radius: $panel-box-border-radius;
 
-  .Panel-badge {
-    right: $panel-box-badge-pos;
-    top: $panel-box-badge-pos;
-  }
-
-  .Panel-teaser {
-    border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
-    margin-left: -($panel-box-padding);
-    margin-right: -($panel-box-padding);
-    margin-top: -($panel-box-padding);
-    overflow: hidden;
-    position: relative;
-    top: 1px;
-
-    img,
-    object,
-    video {
-      display: block;
-      height: auto;
-      max-width: 100%;
-    }
-  }
-
-  &.Panel--attached {
-    border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
-    border-top: 0;
-  }
-
-  &.Panel--stacked {
-    &::after {
-      background: $panel-box-stacked-bg;
-      border-top: $panel-box-border;
-      bottom: -3px;
-      content: '';
-      height: 6px;
-      left: 0;
-      position: absolute;
-      visibility: visible;
-      width: 100%;
-    }
-  }
-
-  &.Panel--piled {
-    &::after,
-    &::before {
-      background: $panel-box-bg;
-      border: $panel-box-border;
-      content: '';
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      width: 100%;
+    .Panel-badge {
+        top: $panel-box-badge-pos;
+        right: $panel-box-badge-pos;
     }
 
-    &::after {
-      top: 0;
-      transform: rotate(.75deg);
-      z-index: -1;
+    .Panel-teaser {
+        position: relative;
+        top: 1px;
+        overflow: hidden;
+        margin-top: -($panel-box-padding);
+        margin-right: -($panel-box-padding);
+        margin-left: -($panel-box-padding);
+        border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
+
+        img,
+        object,
+        video {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
     }
 
-    &::before {
-      top: 0;
-      transform: rotate(-.75deg);
-      z-index: -2;
+    &.Panel--attached {
+        border-top: 0;
+        border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
     }
-  }
+
+    &.Panel--stacked {
+        &::after {
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            border-top: $panel-box-border;
+            background: $panel-box-stacked-bg;
+            content: '';
+            visibility: visible;
+        }
+    }
+
+    &.Panel--piled {
+        &::after,
+        &::before {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: $panel-box-border;
+            background: $panel-box-bg;
+            content: '';
+        }
+
+        &::after {
+            z-index: -1;
+            top: 0;
+            transform: rotate(0.75deg);
+        }
+
+        &::before {
+            z-index: -2;
+            top: 0;
+            transform: rotate(-0.75deg);
+        }
+    }
 }

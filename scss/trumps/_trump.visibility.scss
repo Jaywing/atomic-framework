@@ -23,46 +23,46 @@
 
 // sass-lint:disable no-important
 .hide {
-  display: none !important;
+    display: none !important;
 }
 
 .show {
-  display: block !important;
+    display: block !important;
 }
 
 .invisible {
-  visibility: hidden !important;
+    visibility: hidden !important;
 }
 
 .visible {
-  visibility: visible !important;
+    visibility: visible !important;
 }
 
 // screen readers only
 .srOnly {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
 }
 
 // allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
 .srOnly--focusable:active,
 .srOnly--focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
+    position: static;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
 }
 
 // Print visibility class
 // sass-lint:disable no-important
 .printOnly {
-  display: none !important;
+    display: none !important;
 }

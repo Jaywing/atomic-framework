@@ -1,4 +1,3 @@
-
 // Variables
 // ========================================================================
 
@@ -29,122 +28,116 @@ $menu-header-font-weight: $g-weight-bold !default;
 $menu-header-color: $base-text-color !default;
 $menu-header-hover-color: $link-hover-color !default;
 
-
 // ========================================================================
 // Component: Menu
 // ========================================================================
 
 .Menu {
-  @include trim-child-margins;
-  @include reset-list;
+    @include trim-child-margins;
+    @include reset-list;
 
-  align-items: center;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: $menu-margin -($menu-item-padding);
-  max-width: 100%;
-  width: 100%;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: $menu-margin - ($menu-item-padding);
 
-  input,
-  a,
-  button {
-    margin-bottom: 0;
-  }
-
-  // Alignment modifiers
-  &--right {
-    justify-content: flex-end;
-  }
-
-  &--center {
-    justify-content: center;
-  }
-
-  &--expanded {
-
-    > .Menu-item {
-      flex: 1 1 0%;
-      min-width: 0;
+    input,
+    a,
+    button {
+        margin-bottom: 0;
     }
 
-  }
+    // Alignment modifiers
+    &--right {
+        justify-content: flex-end;
+    }
 
-  &--attached {
-    margin-bottom: 0;
-  }
+    &--center {
+        justify-content: center;
+    }
 
+    &--expanded {
+        > .Menu-item {
+            min-width: 0;
+            flex: 1 1 0%;
+        }
+    }
+
+    &--attached {
+        margin-bottom: 0;
+    }
 }
 
 .Menu-item {
-  flex: 0 0 auto;
-  padding: $menu-item-padding;
+    flex: 0 0 auto;
+    padding: $menu-item-padding;
 
-  &--right {
-    display: flex;
-    // sass-lint:disable no-important
-    margin-left: auto !important;
-  }
+    &--right {
+        display: flex;
+        // sass-lint:disable no-important
+        margin-left: auto !important;
+    }
 
-  &--left {
-    display: flex;
-    // sass-lint:disable no-important
-    margin-right: auto !important;
-  }
-
+    &--left {
+        display: flex;
+        // sass-lint:disable no-important
+        margin-right: auto !important;
+    }
 }
 
 .Menu .Menu-item--flush {
-  > .Menu-link,
-  > .Menu-header {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    > .Menu-link,
+    > .Menu-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .Menu-link {
-  &:not(.Text--disabled) {
-    @include color-swap-on-hover(
-      $menu-link-color $menu-link-bg,
-      $menu-link-hover-color $menu-link-hover-bg,
-      $menu-link-trans-speed
-    );
-  }
+    &:not(.Text--disabled) {
+        @include color-swap-on-hover(
+            $menu-link-color $menu-link-bg,
+            $menu-link-hover-color $menu-link-hover-bg,
+            $menu-link-trans-speed
+        );
+    }
 
-  border-radius: $menu-link-border-radius;
-  display: block;
-  padding: $menu-link-padding;
-  text-align: $menu-link-text-align;
-  text-decoration: $menu-link-text-decoration;
+    display: block;
+    padding: $menu-link-padding;
+    border-radius: $menu-link-border-radius;
+    text-align: $menu-link-text-align;
+    text-decoration: $menu-link-text-decoration;
 
-  .Icon svg {
-    fill: $menu-link-color;
-  }
+    .Icon svg {
+        fill: $menu-link-color;
+    }
 
-  .is-active > &,
-  &.is-active {
-    @include color-swap-on-hover(
-      $menu-link-active-color $menu-link-active-bg,
-      $menu-link-active-color $menu-link-active-bg,
-      $menu-link-trans-speed
-    );
-  }
-
+    .is-active > &,
+    &.is-active {
+        @include color-swap-on-hover(
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-trans-speed
+        );
+    }
 }
 
 .Menu-header {
-  color: $menu-header-color;
-  display: block;
-  font-weight: $menu-header-font-weight;
-  min-width: 100%;
-  padding: $menu-header-padding;
+    display: block;
+    min-width: 100%;
+    padding: $menu-header-padding;
+    color: $menu-header-color;
+    font-weight: $menu-header-font-weight;
 
-  a {
-    @include color-swap-on-hover(
-      $menu-header-color,
-      $menu-header-hover-color,
-      $menu-link-trans-speed
-    );
+    a {
+        @include color-swap-on-hover(
+            $menu-header-color,
+            $menu-header-hover-color,
+            $menu-link-trans-speed
+        );
 
-    text-decoration: none;
-  }
+        text-decoration: none;
+    }
 }

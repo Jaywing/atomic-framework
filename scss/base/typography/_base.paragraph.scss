@@ -15,6 +15,7 @@
 $para-margin: $g-spacer 0 !default;
 
 p {
-  @include trim-child-margins;
-  margin: $para-margin;
+    @include trim-child-margins;
+
+    margin: $para-margin;
 }

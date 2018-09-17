@@ -28,63 +28,63 @@ $body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-  background-color: $base-bg-color;
-  font-family: $base-font-family-fb;
-  font-size: $base-font-size;
-  font-weight: $base-font-weight;
-  color: $base-text-color;
+    background-color: $base-bg-color;
+    color: $base-text-color;
+    font-family: $base-font-family-fb;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
 
-  &.fonts-loaded {
-    font-family: $base-font-family;
-  }
+    &.fonts-loaded {
+        font-family: $base-font-family;
+    }
 }
 
 body {
-  @include body-copy; // set up default font size
+    @include body-copy; // set up default font size
 
-  min-height: 100%;
+    min-height: 100%;
 
-  // optimise font rendering - set this in settings.global.scss
-  @if $body-antialiased {
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
+    // optimise font rendering - set this in settings.global.scss
+    @if $body-antialiased {
+        font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
 
-  @if $body-no-horizontal-scroll {
-    // disable horizontal scroll
-    overflow-x: hidden;
-  }
+    @if $body-no-horizontal-scroll {
+        // disable horizontal scroll
+        overflow-x: hidden;
+    }
 
-  &:target {
-    animation: none;
-  }
+    &:target {
+        animation: none;
+    }
 }
 
 // sass-lint:disable no-important
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
 // scss-lint:enable ImportantRule
 
 // Highlighted text colors
 ::selection {
-  background-color: $base-highlight-bg;
-  color: $base-highlight-color;
+    background-color: $base-highlight-bg;
+    color: $base-highlight-color;
 }
 
 input::selection,
 textarea::selection {
-  background: $base-input-highlight-bg;
-  color: $base-input-highlight-color;
+    background: $base-input-highlight-bg;
+    color: $base-input-highlight-color;
 }

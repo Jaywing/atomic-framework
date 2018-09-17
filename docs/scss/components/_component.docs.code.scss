@@ -1,58 +1,57 @@
 code {
-  color: $c-danger;
+    color: $c-danger;
 }
 
 .docs-code {
-  @extend %docs-block;
+    @extend %docs-block;
 
-  border: 1px solid $c-light-15;
-  margin-top: $g-spacer-xl;
+    border: 1px solid $c-light-15;
+    margin-top: $g-spacer-xl;
 
-  > pre {
-    max-height: 350px;
-    overflow: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  &::before {
-    content: 'Code';
-  }
-
-  &--cmd {
-    &::before {
-      content: 'Command line';
+    > pre {
+        overflow: auto;
+        max-height: 350px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-  }
 
-  &--js {
     &::before {
-      content: 'Javascript';
+        content: 'Code';
     }
-  }
 
-  &--scss {
-    &::before {
-      content: 'Scss';
+    &--cmd {
+        &::before {
+            content: 'Command line';
+        }
     }
-  }
 
-  &--html {
-    &::before {
-      content: 'HTML';
+    &--js {
+        &::before {
+            content: 'Javascript';
+        }
     }
-  }
 
-  &--files {
-    &::before {
-      content: 'Files';
+    &--scss {
+        &::before {
+            content: 'Scss';
+        }
     }
-  }
-  
-  &--macro {
-    &::before {
-      content: 'Macro';
-    }
-  }
 
+    &--html {
+        &::before {
+            content: 'HTML';
+        }
+    }
+
+    &--files {
+        &::before {
+            content: 'Files';
+        }
+    }
+
+    &--macro {
+        &::before {
+            content: 'Macro';
+        }
+    }
 }

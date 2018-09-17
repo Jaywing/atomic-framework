@@ -22,44 +22,44 @@ h3,
 h4,
 h5,
 h6 {
-  @include trim-child-margins;
+    @include trim-child-margins;
 
-  color: $heading-color;
-  font-family: $heading-font;
-  font-weight: normal;
+    color: $heading-color;
+    font-family: $heading-font;
+    font-weight: normal;
 
-  small {
-    font-size: $heading-small-size;
-  }
+    small {
+        font-size: $heading-small-size;
+    }
 }
 
 h1 {
-  @include trafalgar;
+    @include trafalgar;
 }
 
 h2 {
-  @include double-pica;
+    @include double-pica;
 }
 
 h3 {
-  @include great-primer;
+    @include great-primer;
 }
 
 h4 {
-  @include pica;
+    @include pica;
 }
 
 h5 {
-  @include brevier-bold;
+    @include brevier-bold;
 }
 
 h6 {
-  @include brevier;
+    @include brevier;
 
-  margin: 0 0 $g-spacer-sm;
-  text-transform: uppercase;
+    margin: 0 0 $g-spacer-sm;
+    text-transform: uppercase;
 
-  .demo & {
-    margin-top: $g-spacer;
-  }
+    .demo & {
+        margin-top: $g-spacer;
+    }
 }

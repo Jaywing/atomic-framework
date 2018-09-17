@@ -22,17 +22,17 @@
 ///   <a href="#"><i class="icon"></i> <u>this part gets underlines</u></a>
 
 @mixin link-complex {
-  text-decoration: none;
-
-  > u {
     text-decoration: none;
-  }
 
-  &:hover,
-  &:focus,
-  &:active {
     > u {
-      text-decoration: underline;
+        text-decoration: none;
     }
-  }
+
+    &:hover,
+    &:focus,
+    &:active {
+        > u {
+            text-decoration: underline;
+        }
+    }
 }

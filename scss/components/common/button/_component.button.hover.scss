@@ -12,24 +12,29 @@
 
 $button-hover-hover-bg: $c-light-30 !default;
 $button-hover-color: $base-text-color !default;
-$button-hover-disabled-color: rgba($button-hover-color, .65) !default;
+$button-hover-disabled-color: rgba($button-hover-color, 0.65) !default;
 
 .Button--hover {
-  &:not([disabled]) {
-    @include color-swap-on-hover(transparent, $button-hover-hover-bg, $g-trans-link-speed, true);
-  }
-
-  &.is-active {
-    background: darken($button-hover-hover-bg, 10%);
-
-    &:hover,
-    &:focus {
-      background: darken($button-hover-hover-bg, 10%);
+    &:not([disabled]) {
+        @include color-swap-on-hover(
+            transparent,
+            $button-hover-hover-bg,
+            $g-trans-link-speed,
+            true
+        );
     }
-  }
 
-  &[disabled] {
-    background: transparent;
-    color: $button-hover-disabled-color;
-  }
+    &.is-active {
+        background: darken($button-hover-hover-bg, 10%);
+
+        &:hover,
+        &:focus {
+            background: darken($button-hover-hover-bg, 10%);
+        }
+    }
+
+    &[disabled] {
+        background: transparent;
+        color: $button-hover-disabled-color;
+    }
 }

@@ -22,16 +22,25 @@ $link-trans-speed: $g-trans-link-speed !default;
 $link-underline: underline !default;
 
 a {
-  text-decoration: $link-underline;
+    text-decoration: $link-underline;
 
-  &:not(.Text--disabled) {
-    @include color-swap-on-hover($link-color, $link-hover-color, $link-trans-speed);
-    color: $link-color;
-  }
+    &:not(.Text--disabled) {
+        @include color-swap-on-hover(
+            $link-color,
+            $link-hover-color,
+            $link-trans-speed
+        );
+
+        color: $link-color;
+    }
 }
 
 @if $link-visited {
-  a:visited {
-    @include color-swap-on-hover($link-visited-color, $link-visited-hover-color, $link-trans-speed);
-  }
+    a:visited {
+        @include color-swap-on-hover(
+            $link-visited-color,
+            $link-visited-hover-color,
+            $link-trans-speed
+        );
+    }
 }

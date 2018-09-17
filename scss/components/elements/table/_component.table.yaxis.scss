@@ -1,39 +1,39 @@
 .Table--yaxis {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: hidden;
-
-  caption {
     display: flex;
-    flex: 0 1 100%;
-  }
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  thead {
-    display: flex;
-    flex-shrink: 0;
-    min-width: min-content;
-  }
+    caption {
+        display: flex;
+        flex: 0 1 100%;
+    }
 
-  tbody {
-    display: flex;
-    flex: 1;
-    overflow-x: auto;
-    overflow-y: hidden;
-    position: relative;
-    width: 100%;
-  }
+    thead {
+        display: flex;
+        min-width: min-content;
+        flex-shrink: 0;
+    }
 
-  tr {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-shrink: 0;
-    min-width: min-content;
-    white-space: nowrap;
-  }
+    tbody {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
 
-  td {
-    border-left: 0;
-  }
+    tr {
+        display: flex;
+        min-width: min-content;
+        flex: 1;
+        flex-direction: column;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    td {
+        border-left: 0;
+    }
 }

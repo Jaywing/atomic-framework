@@ -1,57 +1,52 @@
 $table-data-label-weight: $g-weight-bold !default;
 
 .Table--resp {
-
-  thead {
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  tr {
-    display: block;
-  }
-
-  td {
-    display: block;
-    text-align: right;
-
-    &::before {
-      content: attr(data-label);
-      float: left;
-      font-weight: $table-data-label-weight;
-    }
-
-  }
-
-}
-
-@include md {
-
-  .Table--resp {
-
     thead {
-      height: auto;
-      margin: 0;
-      overflow: auto;
-      position: static;
-      width: auto;
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
     }
 
     tr {
-      display: table-row;
+        display: block;
     }
 
     td {
-      display: table-cell;
-      text-align: left;
+        display: block;
+        text-align: right;
 
-      &::before {
-        display: none;
-      }
+        &::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: $table-data-label-weight;
+        }
     }
-  }
+}
+
+@include md {
+    .Table--resp {
+        thead {
+            position: static;
+            overflow: auto;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+
+        tr {
+            display: table-row;
+        }
+
+        td {
+            display: table-cell;
+            text-align: left;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
 }

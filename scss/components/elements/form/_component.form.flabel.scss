@@ -2,24 +2,25 @@ $form-flabel-bg: $c-light !default;
 $form-flabel-top: 50% !default;
 $form-flabel-left: $g-spacer-sm !default;
 $form-flabel-active-top: 0 !default;
-$form-flabel-transition: all .1s linear !default;
+$form-flabel-transition: all 0.1s linear !default;
 
 .Form-flabel {
-  position: relative;
+    position: relative;
 
-  .Form-label {
-    @include minion;
-    background: $form-flabel-bg;
-    left: $form-flabel-left;
-    position: absolute;
-    top: $form-flabel-top;
-    transform: translateY(-50%);
-    transition: $form-flabel-transition;
-  }
+    .Form-label {
+        @include minion;
 
-  .Form-input {
-    &:focus ~ label {
-      top: $form-flabel-active-top;
+        position: absolute;
+        top: $form-flabel-top;
+        left: $form-flabel-left;
+        background: $form-flabel-bg;
+        transform: translateY(-50%);
+        transition: $form-flabel-transition;
     }
-  }
+
+    .Form-input {
+        &:focus ~ label {
+            top: $form-flabel-active-top;
+        }
+    }
 }
