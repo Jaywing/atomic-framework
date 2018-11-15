@@ -2933,6 +2933,21 @@ video {
   .Slider-pip.Active {
     background: #000; }
 
+.Slider--scroll {
+  overflow: hidden; }
+  .Slider--scroll .Slider-slides {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+  .Slider--scroll .Slider-slide {
+    display: block;
+    height: auto;
+    padding: 0 0.5rem; }
+
 @media (min-width: 48em) {
   .Slider-content {
     position: absolute;

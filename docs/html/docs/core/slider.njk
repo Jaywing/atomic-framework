@@ -103,6 +103,62 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </code></pre>
 </div>
 
+<h3>Slides to show</h3>
+
+<div class="docs-example">
+
+  <div class="Slider Slider--scroll" data-module="Slider" data-options='{"slidesToShow": 2}'>
+    <div class="Slider-slides">
+      <div class="Slider-slide Active">
+        <picture class="Slider-picture">
+          <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
+          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+        </picture>
+        <div class="Slider-content">
+          <div class="Slider-text">
+            <h1 class="Hero-title">Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="Slider-slide">
+        <picture class="Slider-picture">
+          <source srcset="//placeimg.com/1600/800/tech/sepia" media="(min-width: 768px)">
+          <img class="Slider-image" src="//placeimg.com/600/600/tech/sepia" alt="">
+        </picture>
+        <div class="Slider-content">
+          <div class="Slider-text">
+            <h1 class="Hero-title">Cras</h1>
+            <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
+          </div>
+        </div>
+      </div>
+      <div class="Slider-slide">
+        <picture class="Slider-picture">
+          <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
+          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+        </picture>
+        <div class="Slider-content">
+          <div class="Slider-text">
+            <h1 class="Hero-title">Cras</h1>
+            <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Slider-controls">
+      <div class="Slider-previous">
+        {{ icon('chevron-left') }}
+      </div>
+      <div class="Slider-pips"></div>
+      <div class="Slider-next">
+        {{ icon('chevron-right') }}
+      </div>
+    </div>
+  </div>
+
+</div>
+
 {% endblock %}
 
 {% block javascript %}
