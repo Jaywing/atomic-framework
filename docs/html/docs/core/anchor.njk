@@ -1,0 +1,77 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'switcher' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}Anchor | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Anchor</h1>
+<p class="Text--lead">Dynamically transition through different content</p>
+
+<hr class="Article-divider">
+
+<div class="docs-example">
+
+  <div data-sticky-container>
+      <div class="o-Grid o-Grid--gutters">
+        <div class="o-Grid-cell o-SizeMd--3of12">
+
+          <div class="Demo Sticky-item" data-sticky-for="768">
+            <ul class="Menu Menu--vertical" data-module="Anchor">
+              <li class="Menu-item">
+                <a href="#anchor-one" class="Menu-link">
+                  Anchor link 1
+                </a>
+              </li>
+              <li class="Menu-item">
+                <a href="#anchor-two" class="Menu-link">
+                  Anchor link 2
+                </a>
+              </li>
+              <li class="Menu-item">
+                <a href="#anchor-three" class="Menu-link">
+                  Anchor link 3
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="o-Grid-cell o-SizeMd--9of12">
+
+          <div id="anchor-one" data-scrollspy style="padding-bottom: 505px;">
+            Anchor one
+          </div>
+
+          <div id="anchor-two" data-scrollspy style="padding-bottom: 505px;">
+            Anchor two
+          </div>
+
+          <div id="anchor-three" data-scrollspy style="padding-bottom: 1005px;">
+            Anchor three
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div class="docs-code docs-code--html">
+  <pre><code class="html">
+  </code></pre>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

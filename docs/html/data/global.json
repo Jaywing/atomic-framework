@@ -357,6 +357,12 @@
           "ready": true
         },
         {
+          "id": "anchor",
+          "title": "Anchor",
+          "section": "core",
+          "ready": true
+        },
+        {
           "id": "load-img",
           "title": "Load Image",
           "section": "core",

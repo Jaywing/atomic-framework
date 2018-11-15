@@ -542,17 +542,8 @@ body {
 [hidden] {
   display: none !important; }
 
-::-moz-selection {
-  background-color: #c8d7fa;
-  color: #000; }
-
 ::selection {
   background-color: #c8d7fa;
-  color: #000; }
-
-input::-moz-selection,
-textarea::-moz-selection {
-  background: rgba(0, 0, 0, 0.15);
   color: #000; }
 
 input::selection,
@@ -3014,6 +3005,11 @@ video {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0); } }
+
+.Switcher-content {
+  display: none; }
+  .Switcher-content.is-active {
+    display: block; }
 
 .o-Site {
   display: -webkit-box;
