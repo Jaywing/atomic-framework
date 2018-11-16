@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-// Components: Button Secondary
+// Components: c-Button Secondary
 
 // ----------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ $button-secondary-color-active: $button-secondary-color !default;
 $button-secondary-trans-speed: $button-trans-speed !default;
 $button-secondary-disabled-color: rgba($button-secondary-color, 0.65) !default;
 
-.Button--secondary {
+.c-Button--secondary {
     border-color: $button-secondary-bg-color;
 
     &:not([disabled]) {

@@ -2080,7 +2080,7 @@ video {
   .o-Cover--ratio21x9 {
     padding-bottom: 42.85%; }
 
-.Badge {
+.c-Badge {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 16px;
@@ -2095,25 +2095,25 @@ video {
   text-align: center;
   text-decoration: none; }
   @media (min-width: 37.5em) {
-    .Badge {
+    .c-Badge {
       font-size: 13px;
       font-size: 0.8125rem; }
-      .no-touch .Badge {
+      .no-touch .c-Badge {
         font-size: 12px;
         font-size: 0.75rem; } }
-  .Badge--notification {
+  .c-Badge--notification {
     border-radius: 2000px; }
-  .Badge--success {
+  .c-Badge--success {
     background: #10db65;
     border-color: #0b9444; }
-  .Badge--warning {
+  .c-Badge--warning {
     background: #ff9b0c;
     border-color: #be7000; }
-  .Badge--danger {
+  .c-Badge--danger {
     background: #e76469;
     border-color: #dd2228; }
 
-.Button {
+.c-Button {
   display: inline-block;
   min-width: 44px;
   min-height: 1em;
@@ -2123,376 +2123,376 @@ video {
   cursor: pointer;
   line-height: 1;
   vertical-align: baseline; }
-  .Button--block {
+  .c-Button--block {
     display: block; }
-  .Button:first-child {
+  .c-Button:first-child {
     margin-left: 0; }
-  .Button:last-child {
+  .c-Button:last-child {
     margin-right: 0; }
 
-.Button--xs {
+.c-Button--xs {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 16px;
   line-height: 1rem;
   padding: 0.5rem 1rem; }
   @media (min-width: 37.5em) {
-    .Button--xs {
+    .c-Button--xs {
       font-size: 13px;
       font-size: 0.8125rem; }
-      .no-touch .Button--xs {
+      .no-touch .c-Button--xs {
         font-size: 12px;
         font-size: 0.75rem; } }
 
-.Button--sm {
+.c-Button--sm {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 16px;
   line-height: 1rem;
   padding: 0.5rem 1rem; }
   @media (min-width: 20em) {
-    .Button--sm {
+    .c-Button--sm {
       line-height: 18px;
       line-height: 1.125rem; } }
   @media (min-width: 37.5em) {
-    .no-touch .Button--sm {
+    .no-touch .c-Button--sm {
       font-size: 13px;
       font-size: 0.8125rem;
       line-height: 16px;
       line-height: 1rem; } }
 
-.Button--lg {
+.c-Button--lg {
   padding: 1rem 1.5rem; }
 
-.Button--xl {
+.c-Button--xl {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 22px;
   line-height: 1.375rem;
   padding: 1.25rem 2rem; }
   @media (min-width: 37.5em) {
-    .Button--xl {
+    .c-Button--xl {
       font-size: 21px;
       font-size: 1.3125rem;
       line-height: 24px;
       line-height: 1.5rem; }
-      .no-touch .Button--xl {
+      .no-touch .c-Button--xl {
         font-size: 20px;
         font-size: 1.25rem; } }
 
-.Button {
+.c-Button {
   border-radius: 4px;
   font-family: "Raleway", sans-serif;
   font-weight: normal;
   text-align: center;
   text-decoration: none; }
-  .Button:not([disabled]) {
+  .c-Button:not([disabled]) {
     background-color: #d9d9d9;
     color: #4d4d4d;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button:not([disabled]):hover, .Button:not([disabled]):focus {
+    .c-Button:not([disabled]):hover, .c-Button:not([disabled]):focus {
       background-color: #bfbfbf;
       color: #262626; }
-  .Button:active, .Button.is-active {
+  .c-Button:active, .c-Button.is-active {
     background-color: #8c8c8c;
     color: #000; }
-    .Button:active:hover, .Button:active:focus, .Button.is-active:hover, .Button.is-active:focus {
+    .c-Button:active:hover, .c-Button:active:focus, .c-Button.is-active:hover, .c-Button.is-active:focus {
       background-color: #8c8c8c;
       color: #000; }
-  .Button[disabled] {
+  .c-Button[disabled] {
     color: #b3b3b3;
     cursor: not-allowed; }
-  .Button svg {
+  .c-Button svg {
     fill: #4d4d4d; }
 
-.Button--primary {
+.c-Button--primary {
   border-color: #2561ea; }
-  .Button--primary:not([disabled]) {
+  .c-Button--primary:not([disabled]) {
     background-color: #2561ea;
     color: #fff;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--primary:not([disabled]):hover, .Button--primary:not([disabled]):focus {
+    .c-Button--primary:not([disabled]):hover, .c-Button--primary:not([disabled]):focus {
       background-color: #144fd4;
       color: #fff; }
-    .Button--primary:not([disabled]):active {
+    .c-Button--primary:not([disabled]):active {
       background-color: #1142b1;
       color: #fff; }
-  .Button--primary.is-active {
+  .c-Button--primary.is-active {
     background-color: #1142b1;
     color: #fff; }
-    .Button--primary.is-active:hover, .Button--primary.is-active:focus {
+    .c-Button--primary.is-active:hover, .c-Button--primary.is-active:focus {
       background-color: #1142b1;
       color: #fff; }
-  .Button--primary[disabled] {
+  .c-Button--primary[disabled] {
     background: #6b94f1;
     color: rgba(255, 255, 255, 0.65); }
-  .Button--primary svg {
+  .c-Button--primary svg {
     fill: #fff; }
 
-.Button--secondary {
+.c-Button--secondary {
   border-color: #262626; }
-  .Button--secondary:not([disabled]) {
+  .c-Button--secondary:not([disabled]) {
     background-color: #262626;
     color: #fff;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--secondary:not([disabled]):hover, .Button--secondary:not([disabled]):focus {
+    .c-Button--secondary:not([disabled]):hover, .c-Button--secondary:not([disabled]):focus {
       background-color: #393939;
       color: #fff; }
-    .Button--secondary:not([disabled]):active {
+    .c-Button--secondary:not([disabled]):active {
       background-color: #4d4d4d;
       color: #fff; }
-  .Button--secondary.is-active {
+  .c-Button--secondary.is-active {
     background-color: #4d4d4d;
     color: #fff; }
-    .Button--secondary.is-active:hover, .Button--secondary.is-active:focus {
+    .c-Button--secondary.is-active:hover, .c-Button--secondary.is-active:focus {
       background-color: #4d4d4d;
       color: #fff; }
-  .Button--secondary[disabled] {
+  .c-Button--secondary[disabled] {
     background: #4d4d4d;
     color: rgba(255, 255, 255, 0.65); }
-  .Button--secondary svg {
+  .c-Button--secondary svg {
     fill: #fff; }
 
-.Button--basic {
+.c-Button--basic {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset; }
-  .Button--basic:not([disabled]) {
+  .c-Button--basic:not([disabled]) {
     background-color: transparent;
     color: #666666;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--basic:not([disabled]):hover, .Button--basic:not([disabled]):focus {
+    .c-Button--basic:not([disabled]):hover, .c-Button--basic:not([disabled]):focus {
       background-color: transparent;
       color: #4d4d4d; }
-    .Button--basic:not([disabled]):hover, .Button--basic:not([disabled]):focus {
+    .c-Button--basic:not([disabled]):hover, .c-Button--basic:not([disabled]):focus {
       -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
               box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset; }
-    .Button--basic:not([disabled]):active {
+    .c-Button--basic:not([disabled]):active {
       background: rgba(0, 0, 0, 0.15);
       -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
               box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
       color: #4d4d4d; }
-  .Button--basic.is-active {
+  .c-Button--basic.is-active {
     background: rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
             box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
     color: #4d4d4d; }
-    .Button--basic.is-active:hover, .Button--basic.is-active:focus {
+    .c-Button--basic.is-active:hover, .c-Button--basic.is-active:focus {
       background: rgba(0, 0, 0, 0.15);
       -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
               box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) inset;
       color: #4d4d4d; }
-  .Button--basic[disabled] {
+  .c-Button--basic[disabled] {
     color: rgba(102, 102, 102, 0.65);
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: color;
     transition-property: color;
     color: rgba(102, 102, 102, 0.65); }
-    .Button--basic[disabled]:hover, .Button--basic[disabled]:focus {
+    .c-Button--basic[disabled]:hover, .c-Button--basic[disabled]:focus {
       color: rgba(102, 102, 102, 0.65); }
 
-.Button--hover:not([disabled]) {
+.c-Button--hover:not([disabled]) {
   background-color: transparent;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   -webkit-transition-property: background-color;
   transition-property: background-color; }
-  .Button--hover:not([disabled]):hover, .Button--hover:not([disabled]):focus {
+  .c-Button--hover:not([disabled]):hover, .c-Button--hover:not([disabled]):focus {
     background-color: #b3b3b3; }
 
-.Button--hover.is-active {
+.c-Button--hover.is-active {
   background: #999999; }
-  .Button--hover.is-active:hover, .Button--hover.is-active:focus {
+  .c-Button--hover.is-active:hover, .c-Button--hover.is-active:focus {
     background: #999999; }
 
-.Button--hover[disabled] {
+.c-Button--hover[disabled] {
   background: transparent;
   color: rgba(0, 0, 0, 0.65); }
 
-.Button--link {
+.c-Button--link {
   background: transparent;
   text-decoration: underline; }
-  .Button--link:not([disabled]) {
+  .c-Button--link:not([disabled]) {
     background-color: transparent;
     color: #2561ea;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--link:not([disabled]):hover, .Button--link:not([disabled]):focus {
+    .c-Button--link:not([disabled]):hover, .c-Button--link:not([disabled]):focus {
       background-color: transparent;
       color: #1142b1; }
-  .Button--link[disabled] {
+  .c-Button--link[disabled] {
     color: #6b94f1;
     text-decoration: none; }
-  .Button--link svg {
+  .c-Button--link svg {
     fill: #2561ea; }
 
-.Button--success {
+.c-Button--success {
   border-color: #0b9444; }
-  .Button--success:not([disabled]) {
+  .c-Button--success:not([disabled]) {
     background-color: #0b9444;
     color: #fff;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--success:not([disabled]):hover, .Button--success:not([disabled]):focus {
+    .c-Button--success:not([disabled]):hover, .c-Button--success:not([disabled]):focus {
       background-color: #07652e;
       color: #fff; }
-  .Button--success.is-active {
+  .c-Button--success.is-active {
     background: #064d23; }
-    .Button--success.is-active:hover, .Button--success.is-active:focus {
+    .c-Button--success.is-active:hover, .c-Button--success.is-active:focus {
       background: #064d23; }
-  .Button--success[disabled] {
+  .c-Button--success[disabled] {
     background: #10db65;
     color: rgba(255, 255, 255, 0.8); }
-  .Button--success svg {
+  .c-Button--success svg {
     fill: #fff; }
 
-.Button--error {
+.c-Button--error {
   border-color: #dd2228; }
-  .Button--error:not([disabled]) {
+  .c-Button--error:not([disabled]) {
     background-color: #dd2228;
     color: #fff;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Button--error:not([disabled]):hover, .Button--error:not([disabled]):focus {
+    .c-Button--error:not([disabled]):hover, .c-Button--error:not([disabled]):focus {
       background-color: #b11b20;
       color: #fff; }
-  .Button--error.is-active {
+  .c-Button--error.is-active {
     background: #9b181c; }
-    .Button--error.is-active:hover, .Button--error.is-active:focus {
+    .c-Button--error.is-active:hover, .c-Button--error.is-active:focus {
       background: #9b181c; }
-  .Button--error[disabled] {
+  .c-Button--error[disabled] {
     background: #e76469;
     color: rgba(255, 255, 255, 0.8); }
-  .Button--error svg {
+  .c-Button--error svg {
     fill: #fff; }
 
-.Button--icon {
+.c-Button--icon {
   padding: 0.47rem 1rem; }
-  .Button--icon > .o-Icon {
+  .c-Button--icon > .o-Icon {
     margin-right: -0.25rem;
     margin-left: -0.25rem; }
 
-.Button--swap {
+.c-Button--swap {
   position: relative;
   overflow: hidden;
   text-align: center; }
-  .Button-content:not(.Button--swap-content--hidden) {
+  .c-Button-content:not(.c-Button--swap-content--hidden) {
     position: relative;
     will-change: transform, opacity; }
-  .Button--swap .Button-content--hidden {
+  .c-Button--swap .c-Button-content--hidden {
     position: absolute;
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem; }
-  .Button--swap .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap .c-Button-content:not(.c-Button-content--hidden) {
     right: 0;
     left: auto; }
-  .Button--swap .Button-content--hidden {
+  .c-Button--swap .c-Button-content--hidden {
     top: 50%;
     right: -100%;
     left: auto;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .Button--swap.Button--ani .Button-content {
+  .c-Button--swap.c-Button--ani .c-Button-content {
     -webkit-transition: right 0.5s ease 0s;
     transition: right 0.5s ease 0s; }
-  .Button--swap:not(.Button--swapToggle):hover .Button-content:not(.Button-content--hidden), .Button--swap:not(.Button--swapToggle):focus .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap:not(.c-Button--swapToggle):hover .c-Button-content:not(.c-Button-content--hidden), .c-Button--swap:not(.c-Button--swapToggle):focus .c-Button-content:not(.c-Button-content--hidden) {
     right: 200%;
     left: auto; }
-  .Button--swap:not(.Button--swapToggle):hover .Button-content--hidden, .Button--swap:not(.Button--swapToggle):focus .Button-content--hidden {
+  .c-Button--swap:not(.c-Button--swapToggle):hover .c-Button-content--hidden, .c-Button--swap:not(.c-Button--swapToggle):focus .c-Button-content--hidden {
     right: 0;
     left: auto; }
-  .Button--swap.Button--swapToggle.is-active .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--swapToggle.is-active .c-Button-content:not(.c-Button-content--hidden) {
     right: 200%;
     left: auto; }
-  .Button--swap.Button--swapToggle.is-active .Button-content--hidden {
+  .c-Button--swap.c-Button--swapToggle.is-active .c-Button-content--hidden {
     top: 50%;
     right: 0;
     left: auto; }
-  .Button--swap.Button--vertical.Button--ani .Button-content {
+  .c-Button--swap.c-Button--vertical.c-Button--ani .c-Button-content {
     -webkit-transition: top 0.5s ease, -webkit-transform 0.5s ease;
     transition: top 0.5s ease, -webkit-transform 0.5s ease;
     transition: top 0.5s ease, transform 0.5s ease;
     transition: top 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease; }
-  .Button--swap.Button--vertical .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--vertical .c-Button-content:not(.c-Button-content--hidden) {
     right: auto;
     text-align: center;
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
             transform: translateY(0%); }
-  .Button--swap.Button--vertical .Button-content--hidden {
+  .c-Button--swap.c-Button--vertical .c-Button-content--hidden {
     top: -50%;
     right: auto;
     left: 0; }
-  .Button--swap.Button--vertical:not(.Button--swapToggle).Button--vertical:hover .Button-content:not(.Button-content--hidden), .Button--swap.Button--vertical:not(.Button--swapToggle).Button--vertical:focus .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--vertical:not(.c-Button--swapToggle).c-Button--vertical:hover .c-Button-content:not(.c-Button-content--hidden), .c-Button--swap.c-Button--vertical:not(.c-Button--swapToggle).c-Button--vertical:focus .c-Button-content:not(.c-Button-content--hidden) {
     right: auto;
     -webkit-transform: translateY(200%);
         -ms-transform: translateY(200%);
             transform: translateY(200%); }
-  .Button--swap.Button--vertical:not(.Button--swapToggle).Button--vertical:hover .Button-content--hidden, .Button--swap.Button--vertical:not(.Button--swapToggle).Button--vertical:focus .Button-content--hidden {
+  .c-Button--swap.c-Button--vertical:not(.c-Button--swapToggle).c-Button--vertical:hover .c-Button-content--hidden, .c-Button--swap.c-Button--vertical:not(.c-Button--swapToggle).c-Button--vertical:focus .c-Button-content--hidden {
     top: 50%;
     right: auto;
     left: 0; }
-  .Button--swap.Button--aniFade .Button-content {
+  .c-Button--swap.c-Button--aniFade .c-Button-content {
     -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
     transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
     transition: opacity 0.5s ease, transform 0.5s ease;
     transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease; }
-  .Button--swap.Button--aniFade .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--aniFade .c-Button-content:not(.c-Button-content--hidden) {
     right: auto;
     left: auto;
     opacity: 1;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1); }
-  .Button--swap.Button--aniFade .Button-content--hidden {
+  .c-Button--swap.c-Button--aniFade .c-Button-content--hidden {
     right: auto;
     left: 0;
     opacity: 0;
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0); }
-  .Button--swap.Button--aniFade:not(.Button--swapToggle):hover .Button-content:not(.Button-content--hidden), .Button--swap.Button--aniFade:not(.Button--swapToggle):focus .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--aniFade:not(.c-Button--swapToggle):hover .c-Button-content:not(.c-Button-content--hidden), .c-Button--swap.c-Button--aniFade:not(.c-Button--swapToggle):focus .c-Button-content:not(.c-Button-content--hidden) {
     right: auto;
     left: auto;
     opacity: 0;
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0); }
-  .Button--swap.Button--aniFade:not(.Button--swapToggle):hover .Button-content--hidden, .Button--swap.Button--aniFade:not(.Button--swapToggle):focus .Button-content--hidden {
+  .c-Button--swap.c-Button--aniFade:not(.c-Button--swapToggle):hover .c-Button-content--hidden, .c-Button--swap.c-Button--aniFade:not(.c-Button--swapToggle):focus .c-Button-content--hidden {
     right: auto;
     left: 0;
     opacity: 1;
     -webkit-transform: scale(1) translateY(-50%);
         -ms-transform: scale(1) translateY(-50%);
             transform: scale(1) translateY(-50%); }
-  .Button--swap.Button--aniFade.Button--swapToggle.is-active .Button-content:not(.Button-content--hidden) {
+  .c-Button--swap.c-Button--aniFade.c-Button--swapToggle.is-active .c-Button-content:not(.c-Button-content--hidden) {
     right: auto;
     left: auto;
     opacity: 0;
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0); }
-  .Button--swap.Button--aniFade.Button--swapToggle.is-active .Button-content--hidden {
+  .c-Button--swap.c-Button--aniFade.c-Button--swapToggle.is-active .c-Button-content--hidden {
     top: 50%;
     right: auto;
     left: 0;
@@ -2567,7 +2567,7 @@ video {
           justify-content: center;
   fill: #fff; }
 
-.Close {
+.c-Close {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -2577,13 +2577,13 @@ video {
   line-height: 2rem;
   text-align: center;
   vertical-align: middle; }
-  .Close:focus, .Close:hover, .Close:active {
+  .c-Close:focus, .c-Close:hover, .c-Close:active {
     cursor: pointer;
     outline: none; }
-    .Close:focus svg, .Close:hover svg, .Close:active svg {
+    .c-Close:focus svg, .c-Close:hover svg, .c-Close:active svg {
       fill: gray; }
 
-.Close--alt {
+.c-Close--alt {
   border-radius: 100%;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3); }
@@ -2749,58 +2749,58 @@ video {
   -webkit-animation: popinLeft 0.2s linear;
           animation: popinLeft 0.2s linear; }
 
-.Panel {
+.c-Panel {
   position: relative;
   display: block;
   min-height: 100%;
   margin: 1rem 0; }
-  .Panel:first-child {
+  .c-Panel:first-child {
     margin-top: 0; }
-  .Panel:last-child {
+  .c-Panel:last-child {
     margin-bottom: 0; }
-  .Panel-title {
+  .c-Panel-title {
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 20px;
     line-height: 1.25rem;
     margin: 0 2rem 0 0; }
     @media (min-width: 20em) {
-      .Panel-title {
+      .c-Panel-title {
         font-size: 16px;
         font-size: 1rem;
         line-height: 20px;
         line-height: 1.25rem; } }
     @media (min-width: 37.5em) {
-      .Panel-title {
+      .c-Panel-title {
         font-size: 18px;
         font-size: 1.125rem;
         line-height: 22px;
         line-height: 1.375rem; }
-        .no-touch .Panel-title {
+        .no-touch .c-Panel-title {
           font-size: 16px;
           font-size: 1rem;
           line-height: 20px;
           line-height: 1.25rem; } }
-    .Panel-title .o-Icon {
+    .c-Panel-title .o-Icon {
       margin: -3px 0 0 -5px; }
-  .Panel-badge {
+  .c-Panel-badge {
     position: absolute;
     top: 0;
     right: 0; }
-  .Panel--attached {
+  .c-Panel--attached {
     margin-top: 0; }
-  .Panel[hidden] {
+  .c-Panel[hidden] {
     display: none; }
 
-.Panel--box {
+.c-Panel--box {
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #fff;
   border-radius: 4px; }
-  .Panel--box .Panel-badge {
+  .c-Panel--box .c-Panel-badge {
     top: 0.5rem;
     right: 0.5rem; }
-  .Panel--box .Panel-teaser {
+  .c-Panel--box .c-Panel-teaser {
     position: relative;
     top: 1px;
     overflow: hidden;
@@ -2808,16 +2808,16 @@ video {
     margin-right: -1rem;
     margin-left: -1rem;
     border-radius: 4px 4px 0 0; }
-    .Panel--box .Panel-teaser img,
-    .Panel--box .Panel-teaser object,
-    .Panel--box .Panel-teaser video {
+    .c-Panel--box .c-Panel-teaser img,
+    .c-Panel--box .c-Panel-teaser object,
+    .c-Panel--box .c-Panel-teaser video {
       display: block;
       max-width: 100%;
       height: auto; }
-  .Panel--box.Panel--attached {
+  .c-Panel--box.c-Panel--attached {
     border-top: 0;
     border-radius: 0 0 4px 4px; }
-  .Panel--box.Panel--stacked::after {
+  .c-Panel--box.c-Panel--stacked::after {
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -2827,7 +2827,7 @@ video {
     background: rgba(0, 0, 0, 0.03);
     content: '';
     visibility: visible; }
-  .Panel--box.Panel--piled::after, .Panel--box.Panel--piled::before {
+  .c-Panel--box.c-Panel--piled::after, .c-Panel--box.c-Panel--piled::before {
     position: absolute;
     left: 0;
     display: block;
@@ -2836,71 +2836,71 @@ video {
     border: 1px solid rgba(0, 0, 0, 0.15);
     background: #fff;
     content: ''; }
-  .Panel--box.Panel--piled::after {
+  .c-Panel--box.c-Panel--piled::after {
     z-index: -1;
     top: 0;
     -webkit-transform: rotate(0.75deg);
         -ms-transform: rotate(0.75deg);
             transform: rotate(0.75deg); }
-  .Panel--box.Panel--piled::before {
+  .c-Panel--box.c-Panel--piled::before {
     z-index: -2;
     top: 0;
     -webkit-transform: rotate(-0.75deg);
         -ms-transform: rotate(-0.75deg);
             transform: rotate(-0.75deg); }
 
-.Panel--primary {
+.c-Panel--primary {
   color: #1142b1; }
-  .Panel--primary .Panel-title {
+  .c-Panel--primary .c-Panel-title {
     color: #1142b1; }
-  .Panel--primary.Panel--box {
+  .c-Panel--primary.c-Panel--box {
     background: #c8d7fa;
     border-color: #1142b1; }
 
-.Panel--secondary {
+.c-Panel--secondary {
   color: inherit; }
-  .Panel--secondary .Panel-title {
+  .c-Panel--secondary .c-Panel-title {
     color: inherit; }
-  .Panel--secondary.Panel--box {
+  .c-Panel--secondary.c-Panel--box {
     background: rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.15); }
 
-.Panel--success {
+.c-Panel--success {
   color: #0b9444; }
-  .Panel--success .Panel-title {
+  .c-Panel--success .c-Panel-title {
     color: #0b9444; }
-  .Panel--success.Panel--box {
+  .c-Panel--success.c-Panel--box {
     background: #a6f8c8;
     border-color: #043518;
     color: #043518; }
-    .Panel--success.Panel--box .Panel-title {
+    .c-Panel--success.c-Panel--box .c-Panel-title {
       color: #043518; }
 
-.Panel--warning {
+.c-Panel--warning {
   color: #be7000; }
-  .Panel--warning .Panel-title {
+  .c-Panel--warning .c-Panel-title {
     color: #be7000; }
-  .Panel--warning.Panel--box {
+  .c-Panel--warning.c-Panel--box {
     background: #ffe4be;
     border-color: #583400;
     color: #583400; }
-    .Panel--warning.Panel--box .Panel-title {
+    .c-Panel--warning.c-Panel--box .c-Panel-title {
       color: #583400; }
 
-.Panel--error {
+.c-Panel--error {
   color: #dd2228; }
-  .Panel--error .Panel-title {
+  .c-Panel--error .c-Panel-title {
     color: #dd2228; }
-  .Panel--error.Panel--box {
+  .c-Panel--error.c-Panel--box {
     background: #f8d3d4;
     border-color: #851418;
     color: #851418; }
-    .Panel--error.Panel--box .Panel-title {
+    .c-Panel--error.c-Panel--box .c-Panel-title {
       color: #851418; }
 
 .Panels {
   margin: 1rem 0; }
-  .Panels > .Panel {
+  .Panels > .c-Panel {
     margin: 0; }
 
 .Panels--horizontal {
@@ -2915,31 +2915,31 @@ video {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
-  .Panels--horizontal > .Panel {
+  .Panels--horizontal > .c-Panel {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-  .Panels--horizontal > .Panel--box {
+  .Panels--horizontal > .c-Panel--box {
     border-right: 0;
     border-radius: 0; }
-    .Panels--horizontal > .Panel--box:first-child {
+    .Panels--horizontal > .c-Panel--box:first-child {
       border-radius: 4px 0 0 4px; }
-    .Panels--horizontal > .Panel--box:last-child {
+    .Panels--horizontal > .c-Panel--box:last-child {
       border-right: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 0 4px 4px 0; }
 
-.Panels--hidden > .Panel {
+.Panels--hidden > .c-Panel {
   display: none; }
-  .Panels--hidden > .Panel.is-active {
+  .Panels--hidden > .c-Panel.is-active {
     display: block; }
 
-.Panels > .Panel--box:not(.Panel--attached) {
+.Panels > .c-Panel--box:not(.c-Panel--attached) {
   border-bottom: 0;
   border-radius: 0; }
-  .Panels > .Panel--box:not(.Panel--attached):first-child {
+  .Panels > .c-Panel--box:not(.c-Panel--attached):first-child {
     border-radius: 4px 4px 0 0; }
-  .Panels > .Panel--box:not(.Panel--attached):last-child {
+  .Panels > .c-Panel--box:not(.c-Panel--attached):last-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0 0 4px 4px; }
 
@@ -3250,7 +3250,7 @@ video {
 
 .Form-field {
   padding: 0.5rem 0; }
-  .Form-field .Panel {
+  .Form-field .c-Panel {
     margin: 0.25rem 0; }
   .Form-field--list > label {
     display: block;
@@ -3925,7 +3925,7 @@ video {
   -webkit-animation-delay: 1s;
           animation-delay: 1s; }
 
-.Panel:target {
+.c-Panel:target {
   -webkit-animation: none;
           animation: none; }
 

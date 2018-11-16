@@ -3,19 +3,19 @@ $panel-box-error-color: $c-danger-dark !default;
 $panel-box-error-bg: lighten($c-danger-light-30, 10%) !default;
 $panel-box-error-border-color: $c-danger-dark !default;
 
-.Panel--error {
+.c-Panel--error {
     color: $panel-error-color;
 
-    .Panel-title {
+    .c-Panel-title {
         color: $panel-error-color;
     }
 
-    &.Panel--box {
+    &.c-Panel--box {
         background: $panel-box-error-bg;
         border-color: $panel-box-error-border-color;
         color: $panel-box-error-color;
 
-        .Panel-title {
+        .c-Panel-title {
             color: $panel-box-error-color;
         }
     }

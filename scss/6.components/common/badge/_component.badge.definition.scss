@@ -11,7 +11,7 @@ $badge-warning-border-color: $c-warning !default;
 $badge-danger-bg: $c-danger-light !default;
 $badge-danger-border-color: $c-danger !default;
 
-.Badge {
+.c-Badge {
     @include minion;
 
     display: inline-block;

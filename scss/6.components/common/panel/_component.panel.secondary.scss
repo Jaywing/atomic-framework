@@ -2,14 +2,14 @@ $panel-box-secondary-bg: $c-strong-trans-dark !default;
 $panel-box-secondary-border-color: $c-border !default;
 $panel-secondary-color: inherit !default;
 
-.Panel--secondary {
+.c-Panel--secondary {
     color: $panel-secondary-color;
 
-    .Panel-title {
+    .c-Panel-title {
         color: $panel-secondary-color;
     }
 
-    &.Panel--box {
+    &.c-Panel--box {
         background: $panel-box-secondary-bg;
         border-color: $panel-box-secondary-border-color;
     }

@@ -51,8 +51,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 |-- components/                         # UI specific components
 |-- |-- common/
 |   |   |-- button/                                 # Complicated components can be split into separate file and put in a directory
-|   |   |   |-- component.button.scss               # Button master file (imports others)
-|   |   |   |-- component.button.definition.scss    # Button global definition
+|   |   |   |-- component.button.scss               # c-Button master file (imports others)
+|   |   |   |-- component.button.definition.scss    # c-Button global definition
 |   |   |   |-- component.button.theme.scss         # Presentation style
 |   |   |   |-- comonpent.button-basic.theme.scss   # Presentation styles for primary modifier
 |   |   |-- component.close.scss        # More simple components can be kept in their own file
@@ -234,7 +234,7 @@ _component.button.states.scss
 
 <p>But more complicated components may be split into separate files. This makes it easy to exclude parts unneeded part of the component.</p>
 
-<p><strong>Button component example:</strong></p>
+<p><strong>c-Button component example:</strong></p>
 <code>
 _component.button.scss                #imports the require component files<br>
 _component.button.definition.scss     #base, shared styles for all buttons<br>

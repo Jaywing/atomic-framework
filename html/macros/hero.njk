@@ -28,7 +28,7 @@
         {% if content.cta.classes %}
           {% set ctaClasses = content.cta.classes %}
         {% else %}
-          {% set ctaClasses = "Button Button--primary" %}
+          {% set ctaClasses = "c-Button c-Button--primary" %}
         {% endif %}
         <a href="{{ content.cta.url }}" class="{{ ctaClasses }}">{{ content.cta.title }}</a>
       {% endif %}

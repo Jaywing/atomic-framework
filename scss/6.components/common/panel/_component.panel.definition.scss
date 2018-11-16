@@ -3,7 +3,7 @@ $panels-margin: $g-spacer 0 !default;
 $panel-badge-pos: 0 !default;
 $panel-title-margin: 0 $g-spacer-xl 0 0 !default;
 
-.Panel {
+.c-Panel {
     @include trim-child-margins;
 
     position: relative;
