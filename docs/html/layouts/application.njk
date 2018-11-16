@@ -38,13 +38,13 @@
 
       <div class="o-Grid o-GridMd--reverse o-GridMd--gutters o-GridXl--guttersXl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-Grid-cell o-SizeMd--9of12">
+        <article class="o-Grid-cell o-SizeMd--9">
           {% block content %}
 
           {% endblock %}
         </article>
 
-        <section class="o-Grid-cell o-Size--full o-SizeMd--3of12">
+        <section class="o-Grid-cell o-Size--full o-SizeMd--3">
           {% block sidebar %}
             {% include 'shared/page-nav.njk' %}
           {% endblock %}
@@ -67,7 +67,7 @@
   <script>hljs.initHighlightingOnLoad();</script> #}
 
   <script src="/js/app.js" async></script>
-  
+
   {% block javascript %}{% endblock %}
 
 </body>
