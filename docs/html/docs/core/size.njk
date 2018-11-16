@@ -16,7 +16,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h1 class="Article-title">Size</h1>
 <p class="c-Text--lead">Responsive component for determining widths</p>
 
-  <p>A utility object that can be combined with other objects to determine widths. By default it accommodates a <strong>12 column grid</strong> but a <strong>16 column version</strong> can be enabled. You set different widths for different break points using the responsive modifiers.</p>
+  <p>A utility object that can be combined with other objects to determine widths using a <strong>12 column grid</strong></p>
 
 <hr>
 
@@ -44,16 +44,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <td>One grid cell of 12</td>
   </tr>
   <tr>
-    <th>o-Size--1of16</th>
-    <td>One grid cell of 16</td>
-  </tr>
-  <tr>
     <th>o-Size--11</th>
     <td>Eleven grid cells of 12</td>
-  </tr>
-  <tr>
-    <th>o-Size--15of16</th>
-    <td>Fifteen grid cells of 16</td>
   </tr>
   </tbody>
 </table>
@@ -62,55 +54,55 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="docs-example">
 
   <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
-    <div class="o-FlexGrid-cell o-Size--1of2">
+    <div class="o-FlexGrid-cell o-Size--6">
       <div class="Demo">
-        1 of 2
+        6
       </div>
     </div>
-    <div class="o-FlexGrid-cell o-Size--1of2">
+    <div class="o-FlexGrid-cell o-Size--6">
       <div class="Demo">
-        1 of 2
-      </div>
-    </div>
-  </div>
-
-  <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
-    <div class="o-FlexGrid-cell o-Size--1of3">
-      <div class="Demo">
-        1 of 3
-      </div>
-    </div>
-    <div class="o-FlexGrid-cell o-Size--1of3">
-      <div class="Demo">
-        1 of 3
-      </div>
-    </div>
-    <div class="o-FlexGrid-cell o-Size--1of3">
-      <div class="Demo">
-        1 of 3
+        6
       </div>
     </div>
   </div>
 
   <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
-    <div class="o-FlexGrid-cell o-Size--1of4">
+    <div class="o-FlexGrid-cell o-Size--4">
       <div class="Demo">
-        1 of 4
+        4
       </div>
     </div>
-    <div class="o-FlexGrid-cell o-Size--1of10">
+    <div class="o-FlexGrid-cell o-Size--4">
       <div class="Demo">
-        1 of 10
+        4
       </div>
     </div>
-    <div class="o-FlexGrid-cell o-Size--2of5">
+    <div class="o-FlexGrid-cell o-Size--4">
       <div class="Demo">
-        2 of 5
+        4
       </div>
     </div>
-    <div class="o-FlexGrid-cell o-Size--1of4">
+  </div>
+
+  <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
+    <div class="o-FlexGrid-cell o-Size--3">
       <div class="Demo">
-        1 of 4
+        3
+      </div>
+    </div>
+    <div class="o-FlexGrid-cell o-Size--3">
+      <div class="Demo">
+        3
+      </div>
+    </div>
+    <div class="o-FlexGrid-cell o-Size--3">
+      <div class="Demo">
+        3
+      </div>
+    </div>
+    <div class="o-FlexGrid-cell o-Size--3">
+      <div class="Demo">
+        3
       </div>
     </div>
   </div>
