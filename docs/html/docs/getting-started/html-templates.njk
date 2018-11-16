@@ -14,12 +14,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">HTML templates</h1>
-<p class="Text--lead">Atomic uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> as our templating solution.</p>
+<p class="c-Text--lead">Atomic uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> as our templating solution.</p>
 <p>Nunjucks is nearly identical in syntax to Twig (PHP), and replaces Swig (and Twig-like js templating language), which is no longer maintained.</p>
 <a href="https://mozilla.github.io/nunjucks/templating.html" class="c-Button c-Button--primary">Nunjucks templating docs</a>
 <hr>
 
-<h2 id="section-file-structure"><a href="#section-file-structure" class="Text--resetLink">File structure</a></h2>
+<h2 id="section-file-structure"><a href="#section-file-structure" class="c-Text--resetLink">File structure</a></h2>
 
 <div class="docs-code docs-code--files"><div class="scrollXauto"><pre>html
 |-- data         # data that will be made accessible to your templates
@@ -30,7 +30,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 index.njk         # prototype root file (homepage)
 </div></div>
 
-<h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+<h2 id="section-usage"><a href="#section-usage" class="c-Text--resetLink">Usage</a></h2>
 
 <h3>Data</h3>
 <p>The <code>data</code> directory is where you set up the data sources for your prototype.</p>
@@ -87,7 +87,7 @@ index.njk         # prototype root file (homepage)
 <div class="docs-code docs-code--html">
   <pre><code class="html">&#123;% macro navItem(id, title, active='index', ready=false) %&#125;
 &lt;li class="Menu-item&#123;% if id == active %&#125; is-active&#123;% endif %&#125;"&gt;
-  &lt;a&#123;% if ready %&#125; href="&#123;&#123;id&#125;&#125;.html" class="Menu-link"&#123;% else %&#125; class="Menu-link Text--disabled"&#123;% endif %&#125;&gt;&#123;&#123;title&#125;&#125;&lt;/a&gt;
+  &lt;a&#123;% if ready %&#125; href="&#123;&#123;id&#125;&#125;.html" class="Menu-link"&#123;% else %&#125; class="Menu-link c-Text--disabled"&#123;% endif %&#125;&gt;&#123;&#123;title&#125;&#125;&lt;/a&gt;
 &lt;/li&gt;
 &#123;% endmacro %&#125;</code></pre>
 </div>

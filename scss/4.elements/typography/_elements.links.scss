@@ -24,7 +24,7 @@ $link-underline: underline !default;
 a {
     text-decoration: $link-underline;
 
-    &:not(.Text--disabled) {
+    &:not(.c-c-Text--disabled) {
         @include color-swap-on-hover(
             $link-color,
             $link-hover-color,

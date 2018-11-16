@@ -14,9 +14,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Stylesheets</h1>
-<p class="Text--lead">An overview of all things stylesheets.</p>
+<p class="c-Text--lead">An overview of all things stylesheets.</p>
 
-<h2 id="section-file-structure"><a href="#section-file-structure" class="Text--resetLink">Sass file structure</a></h2>
+<h2 id="section-file-structure"><a href="#section-file-structure" class="c-Text--resetLink">Sass file structure</a></h2>
 
 <div class="docs-example"><div class="scrollXauto"><pre>scss/
 |-- settings/                           # global variables
@@ -61,7 +61,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 |   |   |   |-- object.media.scss       # Object styles
 |   ...
 |-- trumps/                             # Utilities, helpers, overrides and browser hacks
-|   |-- trumps.typography.scss          # typography utilities like .t-nobr or .t-Text--center
+|   |-- trumps.typography.scss          # typography utilities like .t-nobr or .t-c-Text--center
     |-- trumps.print.scss               # any print specific styles
 |   ...
 |   |-- trumps.shame.scss               # place for any quick fixes or dirty hacks (must be refactored into the code base eventually)
@@ -92,7 +92,7 @@ docs.scss                               # documentation specific stylesheet</pre
 
 <hr>
 
-<h2 id="section-gulp-tasks"><a href="section-gulp-tasks" class="Text--resetLink">Gulp tasks</a></h2>
+<h2 id="section-gulp-tasks"><a href="section-gulp-tasks" class="c-Text--resetLink">Gulp tasks</a></h2>
 
 <h3>CSS task</h3>
 <p>The css task runs on initial build and when any of the scss files are amended.<br>The task:</p>
@@ -115,7 +115,7 @@ docs.scss                               # documentation specific stylesheet</pre
 
 <hr>
 
-<h2 id="section-naming-conventions"><a href="section-naming-conventions" class="Text--resetLink">Naming conventions</a></h2>
+<h2 id="section-naming-conventions"><a href="section-naming-conventions" class="c-Text--resetLink">Naming conventions</a></h2>
 
 <h3>Class names</h3>
 <p>The naming convention for classes is based on <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT.CSS</a>) but adapted slightly to suit the ITCSS structure and our principles.</p>
@@ -152,7 +152,7 @@ docs.scss                               # documentation specific stylesheet</pre
 <h4>Trumps</h4>
 <p>
   <strong>Syntax:&nbsp; </strong> <code>trumpName</code><br>
-  <strong>Example:</strong> <code>Text--resetLink</code>
+  <strong>Example:</strong> <code>c-Text--resetLink</code>
 </p>
 
 <p>Trump class names consist of:</p>
@@ -213,7 +213,7 @@ _component.button.states.scss
 </code>
 </p>
 
-<h2 id="section-coding-style"><a href="#section-coding-style" class="Text--resetLink">Coding style</a></h2>
+<h2 id="section-coding-style"><a href="#section-coding-style" class="c-Text--resetLink">Coding style</a></h2>
 
 <h3>Anatomy of a scss class</h3>
 
@@ -268,7 +268,7 @@ If a number clearly has strong meaning, that's a use case for variablising* as w
 <p>Atomic comes with a <a href="https://www.npmjs.com/package/gulp-sass-lint">SASS linter</a> built in. You can view the configuration options in the <code>lint.yml</code> in the root of stylesheet.</p>
 <p>Any errors or warnings will be logged on the console.</p>
 
-<h2 id="section-browser-strategy"><a href="#section-browser-strategy" class="Text--resetLink">Browser strategy</a></h2>
+<h2 id="section-browser-strategy"><a href="#section-browser-strategy" class="c-Text--resetLink">Browser strategy</a></h2>
 <p>Atomic is set up to serve older versions of IE (&lt; v10) a separate universal stylesheet.</p>
 
 {% endblock %}

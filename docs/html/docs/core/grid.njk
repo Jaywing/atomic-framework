@@ -14,13 +14,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Grid</h1>
-<p class="Text--lead">Create a fully responsive, fluid and nestable grid layout.</p>
+<p class="c-Text--lead">Create a fully responsive, fluid and nestable grid layout.</p>
 
 <p>Atomic's grid system follows the mobile-first approach, accommodates up to 10 grid columns and is built using flexbox.<br>For explicit control over the widths and responsiveness, use the <a href="size.html">Size component</a>.</p>
 
 <hr class="Article-divider">
 
-<h2 id="section:features"><a href="#section:features" class="Text--resetLink">Features</a></h2>
+<h2 id="section:features"><a href="#section:features" class="c-Text--resetLink">Features</a></h2>
 
 <p>Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell?</p>
 <p>Listed below are some of my criteria for an ideal grid system. Fortunately, with Flexbox we get most of these features for free.</p>
@@ -35,7 +35,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <hr class="Article-divider">
 
-<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+<h2 id="section:usage"><a href="#section:usage" class="c-Text--resetLink">Usage</a></h2>
 
 <h3>Basic grids</h3>
 
@@ -43,7 +43,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">1/2</div>
     </div>
@@ -52,7 +52,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">1/3</div>
     </div>
@@ -64,7 +64,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">1/4</div>
     </div>
@@ -96,7 +96,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell o-Size--6">
       <div class="Demo">1/2</div>
     </div>
@@ -108,7 +108,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">auto</div>
     </div>
@@ -117,7 +117,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-Grid o-Grid--gutters c-Text--center">
     <div class="o-Grid-cell o-Size--3">
       <div class="Demo">1/4</div>
     </div>
@@ -137,7 +137,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--full o-Grid@md--fit Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--full o-Grid@md--fit c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Full &amp; Halves</div>
     </div>
@@ -146,7 +146,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 
-  <div class="o-Grid o-Grid--gutters o-Grid--full o-Grid@md--fit Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--full o-Grid@md--fit c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Full &amp; Thirds</div>
     </div>
@@ -165,16 +165,16 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--flexCells Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--flexCells c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">
-        <div class="o-Grid o-Grid--gutters Text--center">
+        <div class="o-Grid o-Grid--gutters c-Text--center">
           <div class="o-Grid-cell o-Size--4">
             <div class="Demo">1/3</div>
           </div>
           <div class="o-Grid-cell">
             <div class="Demo">
-              <div class="o-Grid o-Grid--gutters Text--center">
+              <div class="o-Grid o-Grid--gutters c-Text--center">
                 <div class="o-Grid-cell">
                   <div class="Demo">1/2</div>
                 </div>
@@ -275,7 +275,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h5>1 of 2</h5>
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--1of2 Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--1of2 c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Grid cell</div>
     </div>
@@ -292,7 +292,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h5>1 of 3</h5>
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--1of3 Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--1of3 c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Grid cell</div>
     </div>
@@ -312,7 +312,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h5>1 of 4</h5>
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--1of4 Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--1of4 c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Grid cell</div>
     </div>
@@ -336,7 +336,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h5>1 of 5</h5>
 <div class="docs-example">
 
-  <div class="o-Grid o-Grid--gutters o-Grid--1of5 Text--center">
+  <div class="o-Grid o-Grid--gutters o-Grid--1of5 c-Text--center">
     <div class="o-Grid-cell">
       <div class="Demo">Grid cell</div>
     </div>
@@ -369,127 +369,127 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre>
 </div>
 
-<h3 id="section:classes"><a href="#section:classes" class="Text--resetLink">Classes</a></h3>
+<h3 id="section:classes"><a href="#section:classes" class="c-Text--resetLink">Classes</a></h3>
 
 <div class="scrollXauto">
   <table class="c-Table c-Table--striped">
     <thead>
     <tr>
-      <th class="Text--left o-Size--1of4">Class</th>
-      <th class="Text--left">Description</th>
-      <th class="Text--right o-Size--1of5">Type</th>
+      <th class="c-Text--left o-Size--1of4">Class</th>
+      <th class="c-Text--left">Description</th>
+      <th class="c-Text--right o-Size--1of5">Type</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <th class="Text--left"><code>.o-Grid</code></th>
+      <th class="c-Text--left"><code>.o-Grid</code></th>
       <td>Object component</td>
-      <td class="Text--right">Component</td>
+      <td class="c-Text--right">Component</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--full</code></th>
+      <th class="c-Text--left"><code>.o-Grid--full</code></th>
       <td>Stacks all grid cells (ready to be over-ridden with responsive modifiers)</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--flexCells</code></th>
+      <th class="c-Text--left"><code>.o-Grid--flexCells</code></th>
       <td>All grid cells will fill the available vertical space (vertical alignment)</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--top</code></th>
+      <th class="c-Text--left"><code>.o-Grid--top</code></th>
       <td>Vertically aligns all grid cells to the top</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--bottom</code></th>
+      <th class="c-Text--left"><code>.o-Grid--bottom</code></th>
       <td>Vertically aligns all grid cells to the bottom</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--center</code></th>
+      <th class="c-Text--left"><code>.o-Grid--center</code></th>
       <td>Vertically aligns all grid cells to the center</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--justifyCenter</code></th>
+      <th class="c-Text--left"><code>.o-Grid--justifyCenter</code></th>
       <td>Horizontally aligns the grid cells to the center</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--reverse</code></th>
+      <th class="c-Text--left"><code>.o-Grid--reverse</code></th>
       <td>Reverses the order of the grid cells</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--1of2</code></th>
+      <th class="c-Text--left"><code>.o-Grid--1of2</code></th>
       <td>Divides grid cells into 2 columns per row</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--1of3</code></th>
+      <th class="c-Text--left"><code>.o-Grid--1of3</code></th>
       <td>Divides grid cells into 3 columns per row</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--1of4</code></th>
+      <th class="c-Text--left"><code>.o-Grid--1of4</code></th>
       <td>Divides grid cells into 4 columns per row</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid--1of5</code></th>
+      <th class="c-Text--left"><code>.o-Grid--1of5</code></th>
       <td>Divides grid cells into 5 columns per row</td>
-      <td class="Text--right">Component modifier</td>
+      <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid@sm</code></th>
+      <th class="c-Text--left"><code>.o-Grid@sm</code></th>
       <td>This classname, combined with any of the modifiers associated with the <code>o-Grid</code> component, (e.g <code>o-Grid@sm--reverse</code>) have the same effect but only at that particular breakpoint and above</td>
-      <td class="Text--right">Responsive modifier</td>
+      <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid@md</code></th>
+      <th class="c-Text--left"><code>.o-Grid@md</code></th>
       <td>As above</td>
-      <td class="Text--right">Responsive modifier</td>
+      <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid@lg</code></th>
+      <th class="c-Text--left"><code>.o-Grid@lg</code></th>
       <td>As above</td>
-      <td class="Text--right">Responsive modifier</td>
+      <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid@xl</code></th>
+      <th class="c-Text--left"><code>.o-Grid@xl</code></th>
       <td>As above</td>
-      <td class="Text--right">Responsive modifier</td>
+      <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid@xxl</code></th>
+      <th class="c-Text--left"><code>.o-Grid@xxl</code></th>
       <td>As above</td>
-      <td class="Text--right">Responsive modifier</td>
+      <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid-cell</code></th>
+      <th class="c-Text--left"><code>.o-Grid-cell</code></th>
       <td>Grid cells</td>
-      <td class="Text--right">Sub-element</td>
+      <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid-cell--top</code></th>
+      <th class="c-Text--left"><code>.o-Grid-cell--top</code></th>
       <td>Vertically aligns individual grid cell to the top</td>
-      <td class="Text--right">Sub-element modifier</td>
+      <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid-cell--bottom</code></th>
+      <th class="c-Text--left"><code>.o-Grid-cell--bottom</code></th>
       <td>Vertically aligns individual grid cell to the bottom</td>
-      <td class="Text--right">Sub-element modifier</td>
+      <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid-cell--center</code></th>
+      <th class="c-Text--left"><code>.o-Grid-cell--center</code></th>
       <td>Vertically aligns individual grid cell to the centre</td>
-      <td class="Text--right">Sub-element modifier</td>
+      <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.o-Grid-cell--autoSize</code></th>
+      <th class="c-Text--left"><code>.o-Grid-cell--autoSize</code></th>
       <td>Instructs the individual grid cell to fill the available space</td>
-      <td class="Text--right">Sub-element modifier</td>
+      <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     </tbody>
   </table>
