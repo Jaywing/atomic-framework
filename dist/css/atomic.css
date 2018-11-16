@@ -3834,7 +3834,7 @@ video {
   .c-Breadcrumbs-list::after {
     clear: both; }
 
-.SkipLink {
+.c-SkipLink {
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -3846,7 +3846,7 @@ video {
   text-align: left;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-  .SkipLink:focus, .SkipLink:hover, .SkipLink:active {
+  .c-SkipLink:focus, .c-SkipLink:hover, .c-SkipLink:active {
     z-index: 90;
     top: 0.5rem;
     left: 0.5rem;

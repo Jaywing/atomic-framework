@@ -4,7 +4,7 @@ $skiplink-zindex: $g-z-9 !default;
 $skiplink-bg: rgba($c-light, 0.85) !default;
 $skiplink-padding: $g-spacer-sm !default;
 
-.SkipLink {
+.c-SkipLink {
     position: absolute;
     top: -1000px;
     left: -1000px;
