@@ -3851,21 +3851,21 @@ video {
     height: auto;
     text-decoration: none; }
 
-.BackToTop > .o-Icon {
+.c-BackToTop > .o-Icon {
   margin: 0; }
 
-.BackToTop-text {
+.c-BackToTop-text {
   position: absolute;
   top: -9999px; }
 
 @media (min-width: 48em) {
-  .BackToTop > .o-Icon {
+  .c-BackToTop > .o-Icon {
     margin-left: -0.25rem; }
-  .BackToTop-text {
+  .c-BackToTop-text {
     position: static;
     top: auto; } }
 
-.BackToTop--fixed {
+.c-BackToTop--fixed {
   position: fixed;
   right: 0.25rem;
   bottom: 0; }
