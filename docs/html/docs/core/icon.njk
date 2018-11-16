@@ -29,13 +29,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>Drop icon svgs in the 'icon' folder in 'src' and they are automatically added to the sprite, the icon's location is indexed with a reference that matches its filename.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <span class="o-Icon o-Icon--navicon">
     <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg>
   </span>
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;span class="o-Icon o-Icon--navicon"&gt;
   &lt;svg viewBox="0 0 1 1"&gt;
     &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;
@@ -56,11 +56,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <dd><strong>viewbox</strong> (string: '0 0 1 1') - <a href="https://developer.mozilla.org/en/docs/Web/SVG/Attribute/viewBox" target="_blank">Viewbox</a> preserves the aspect ratio of the sprite so that only the required sprite is shown</dd>
 </dl>
 
-<div class="docs-code">
+<div class="t-code">
   <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;, 'o-Icon--lg') &#125;&#125;</code></pre>
 </div>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
   {{ icon('archive') }}
   {{ icon('arrow-down') }}
@@ -135,7 +135,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Size modifiers</h3>
 
-<div class="docs-example">
+<div class="t-example">
 
   <div class="o-FlexGrid o-FlexGrid--1of5 c-Text--center">
 
@@ -168,7 +168,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="docs-code">
+<div class="t-code">
   <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--sm&#39; &#125;&#125;
 &#123;&#123; icon(&#39;eye&#39;) &#125;&#125;
 &#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--lg&#39; &#125;&#125;
@@ -178,7 +178,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Spin modifier</h3>
 
-<div class="docs-example">
+<div class="t-example">
 
   <div class="o-FlexGrid o-FlexGrid--gutters c-Text--center">
 
@@ -191,7 +191,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="docs-code">
+<div class="t-code">
   <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;o-Icon--spin o-Icon--lg&#39; &#125;&#125;</code></pre>
 </div>
 

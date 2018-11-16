@@ -22,7 +22,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>You can lazy load images and make them responsive by using <code>data-module="ResImg"</code>.</p>
 
-<div class="docs-example">
+<div class="t-example">
 
   <div data-module="ResImg" class="o-Cover--ratio16x9">
     <img data-resimg-normal="https://placehold.it/320x180&text=320x180(16:9)"
@@ -40,7 +40,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre class="scrollXauto"><code class="html">&lt;div data-module=&quot;ResImg&quot;&gt;
   &lt;img data-resimg-normal=&quot;/images/placeholder/img-320x200.png&quot;
        data-resimg-retina=&quot;/images/placeholder/img-320x200@x2.png&quot;
@@ -70,7 +70,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>We can use the <a href="/docs/core/cover.html">cover component</a> to maintain the aspect ratio of the image before the image has loaded. This stops the page jumping around as images are loaded.</p>
 <p>We can also use the loading icon to display a loading icon as the image loads.</p>
 
-<div class="docs-example">
+<div class="t-example">
 
   <div data-module="ResImg">
     <div class="o-Cover o-Cover--videoWide Demo">
@@ -95,7 +95,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code>&lt;div class=&quot;o-Cover o-Cover--ratio21x9&quot;&gt;
   &#123;&#123; icon(&#39;spinner&#39;, &#39;0 0 1 1&#39;, &#39;o-Icon--spin o-Icon--xl o-Cover-loading&#39;) &#125;&#125;
   &lt;div id=&quot;cover-object&quot; class=&quot;o-Cover-object&quot;&gt;

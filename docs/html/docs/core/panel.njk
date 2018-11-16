@@ -20,7 +20,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2 id="section:usage"><a href="#section:usage" class="c-Text--resetLink">Usage</a></h2>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="o-FlexGrid o-FlexGrid--gutters@lg o-FlexGrid--1of3">
     <div class="o-FlexGrid-cell">
       <div class="c-Panel">
@@ -32,7 +32,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 <p><strong class="c-Badge">Note</strong> By default, a panel is blank and has no styling. Use the modifiers to alter its appearance. Like with the <code>.c-Panel--box</code> below.</p>
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
 <pre><code class="html">&lt;div class=&quot;c-Panel&quot;&gt;
   &lt;span class=&quot;c-Badge c-Badge--danger c-Panel-badge&quot;&gt;+3&lt;/span&gt;
   &lt;h3 class=&quot;c-Panel-title&quot;&gt;c-Panel title&lt;/h3&gt;
@@ -42,7 +42,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Panel box (.c-Panel--box)</h3>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="o-FlexGrid o-FlexGrid--gutters@lg o-FlexGrid--1of3">
     <div class="o-FlexGrid-cell">
       <div class="c-Panel c-Panel--box">
@@ -67,7 +67,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </section>
   </div>
 </div>
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
@@ -75,13 +75,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>It is possible to make a panel box look as though it is stack on top of others. Useful for tabs and such like.</p>
 <p><strong class="c-Badge">Note</strong> This class musts be used in conjuction with <code>.c-Panel--box</code>.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="c-Panel c-Panel--box c-Panel--stacked">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="docs-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--stacked&quot;&gt;
+<div class="t-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--stacked&quot;&gt;
   ....
 &lt;/div&gt;</code></pre></div>
 
@@ -89,20 +89,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>It is possible to make a panel box look as though it is on top of a pile of others.</p>
 <p><strong class="c-Badge">Note</strong> This class musts be used in conjuction with <code>.c-Panel--box</code>.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="c-Panel c-Panel--box c-Panel--piled">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="docs-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--piled&quot;&gt;
+<div class="t-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--piled&quot;&gt;
   ....
 &lt;/div&gt;</code></pre></div>
 
 <h3>Attached panel (<code>.c-Panel--attached</code>)</h3>
 <p>It is possible to attached the panel to other attachable items, for example, the menu (in tabular format) component, to create a tab like component.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <ul class="c-Menu c-Menu--tabular c-Menu--attached">
     <li class="c-Menu-item is-active"><a href="#" class="c-Menu-link">One</a></li>
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
@@ -113,7 +113,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="docs-code"><pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--tabular c-Menu--attached&quot;&gt;
+<div class="t-code"><pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--tabular c-Menu--attached&quot;&gt;
   &lt;li class=&quot;c-Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ....
 &lt;/ul&gt;
@@ -124,7 +124,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Panel groups (.Panels)</h3>
 <p>If you wrap you panels with a parent element with the class <code>Panels</code>, the margin is removed from the individual panel components, creating a connected look.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="Panels">
     <div class="c-Panel c-Panel--box">
       <p>Top panel</p>
@@ -138,7 +138,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;div class=&quot;Panels&quot;&gt;
   &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
     &lt;p&gt;Top panel&lt;/p&gt;
@@ -154,7 +154,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h4>Horizontal Panels (<code>.Panels--horizontal</code>)</h4>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="Panels Panels--horizontal">
     <div class="c-Panel c-Panel--box">
       <p>Top panel<br>With more content</p>
@@ -168,7 +168,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;div class=&quot;Panels Panels--horizontal&quot;&gt;
   &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
     &lt;p&gt;Top panel<br>With more content&lt;/p&gt;
@@ -186,7 +186,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>The hides all of the children panels unless given a <code>is-active</code> class. This can be used with the <a href="switcher.html">switcher</a> module to create simple tabs.</p>
 
-<div class="docs-example">
+<div class="t-example">
   <ul class="c-Menu" data-module="Switcher">
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Panel 1</a></li>
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Panel 2</a></li>
@@ -206,7 +206,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;ul class=&quot;c-Menu&quot; data-module=&quot;Switcher&quot;&gt;
   &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;c-Panel 1&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;c-Panel 2&lt;/a&gt;&lt;/li&gt;
@@ -228,7 +228,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h4>Colour Modifiers</h4>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="o-FlexGrid o-FlexGrid--gutters@lg o-FlexGrid--1of5">
     <div class="o-FlexGrid-cell">
       <div class="c-Panel c-Panel--primary">
@@ -292,7 +292,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </div>
   </div>
 </div>
-<div class="docs-code docs-code--html">
+<div class="t-code t-code--html">
   <pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--primary&quot;&gt;...&lt;/div&gt;
 &lt;div class=&quot;c-Panel c-Panel--secondary&quot;&gt;...&lt;/div&gt;
 &lt;div class=&quot;c-Panel c-Panel--success&quot;&gt;...&lt;/div&gt;
@@ -308,7 +308,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Panel teaser image (<code>.c-Panel-teaser</code>)</h3>
 
-<div class="docs-example">
+<div class="t-example">
   <div class="o-FlexGrid o-FlexGrid--gutters o-FlexGrid--1of3">
     <div class="o-FlexGrid-cell">
       <div class="c-Panel">

@@ -24,7 +24,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>This is shortcut for the long winded <code>document.createElement()</code> method of creating elements on the fly.</p>
 <p>You pass in an object with all values you need.</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import createElement from &quot;../helpers/createElement&quot;
 
 document.body.appendChild(createElement({
@@ -44,7 +44,7 @@ document.body.appendChild(createElement({
 <p>When traversing sibling elements in the DOM using <code>nextSibling</code> and <code>prevSibling</code>, if there is any white space in the HTML in between elements, then the white-space is treated as the next/prev sibling (#text).</p>
 <p>This function checks the nodeType property of the next/prev sibling and traverses until it finds the next/prev actual DOM element.</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import sibling from &quot;../helpers/sibling&quot;
 
 const nextEle = sibling(this.el, 'nextSibling')</code></pre>
@@ -53,7 +53,7 @@ const nextEle = sibling(this.el, 'nextSibling')</code></pre>
 <h2 id="section-for-each"><a href="#section-for-each" class="c-Text--resetLink">For Each</a></h2>
 <p>Function that loops through an array (or node list) and executes a callback on each one.</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import forEach from &quot;../helpers/forEach&quot;
 
 const </code></pre>
@@ -62,7 +62,7 @@ const </code></pre>
 <h2 id="section-dom"><a href="#section-dom" class="c-Text--resetLink">DOM</a></h2>
 <p>A few DOM shortcut functions that provide a jQuery like syntax (without the bloat).</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import {$} from &quot;../helpers/dom&quot;
 
 $(&quot;.addClass&quot;).addClass(&quot;passed&quot;);
@@ -93,7 +93,7 @@ $(&quot;a&quot;).on(&quot;click&quot;, function(e) {
 <h2 id="section-css"><a href="#section-css" class="c-Text--resetLink">CSS</a></h2>
 <p>Function that allows you to pass in an javascript object of css styles and they are then applied to the target element.</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import css from &quot;../helpers/css&quot;
 
 var target = document.getElementById('target')
@@ -106,7 +106,7 @@ css(target, {
 <h2 id="section-ready"><a href="#section-ready" class="c-Text--resetLink">Ready</a></h2>
 <p>Function that wait until the whole DOM is loaded and then executes the callback. Much like jquery's $(document).ready()</p>
 
-<div class="docs-code docs-code--js">
+<div class="t-code t-code--js">
   <pre><code class="javascript">import ready from &quot;../helpers/ready&quot;
 
 </code></pre>

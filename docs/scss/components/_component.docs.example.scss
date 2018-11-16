@@ -1,4 +1,4 @@
-%docs-block {
+%t-block {
     position: relative;
     border-top: 1px solid rgba($c-light-30, 0.5);
     border-bottom: 1px solid rgba($c-light-30, 0.5);
@@ -20,8 +20,8 @@
     }
 }
 
-.docs-example {
-    @extend %docs-block;
+.t-example {
+    @extend %t-block;
 
     padding: $g-spacer-lg $g-spacer;
     background: $c-light;

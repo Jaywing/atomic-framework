@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 // * Atomic
+@import '../../scss/1.settings/settings';
 @import 'settings'; // Site settings to override atomic
 @import '../../scss/atomic';
 
