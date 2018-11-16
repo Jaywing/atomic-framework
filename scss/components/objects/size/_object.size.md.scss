@@ -1,6 +1,6 @@
 // sass-lint:disable no-important
 @include md {
-    .o-SizeMd {
+    .o-Size\@md {
         &--full {
             width: 100% !important;
             flex: none !important;

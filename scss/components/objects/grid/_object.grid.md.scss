@@ -1,23 +1,23 @@
 // Name:            Grid Medium
 // Description:     Defines styles for flexbox based grid layout for medium devices (768px +).
 //
-// Component:       `o-GridMd`
+// Component:       `o-Grid\@md`
 //
 // Sub-objects:     `o-Grid-cell`
 //
-// Modifiers:       `o-GridMd--reverse`
-//                  `o-GridMd--1of2`
-//                  `o-GridMd--1of3`
-//                  `o-GridMd--1of4`
-//                  `o-GridMd--gutters`
-//                  `o-GridMd--guttersLg`
-//                  `o-GridMd--guttersXl`
+// Modifiers:       `o-Grid\@md--reverse`
+//                  `o-Grid\@md--1of2`
+//                  `o-Grid\@md--1of3`
+//                  `o-Grid\@md--1of4`
+//                  `o-Grid\@md--gutters`
+//                  `o-Grid\@md--gutters\@lg`
+//                  `o-Grid\@md--gutters\@xl`
 //
 //
 // Markup:
 //
 // <!-- o-Grid -->
-// <div class="o-Grid o-GridMd--1of3">
+// <div class="o-Grid o-Grid\@md--1of3">
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
@@ -29,7 +29,7 @@
 // ========================================================================
 
 @include md {
-    .o-GridMd {
+    .o-Grid\@md {
         &--reverse {
             flex-direction: row-reverse;
         }
@@ -88,7 +88,7 @@
             }
         }
 
-        &--guttersLg {
+        &--gutters\@lg {
             margin: 0 - ($grid-gutter-lg / 2);
 
             > .o-Grid-cell {
@@ -96,7 +96,7 @@
             }
         }
 
-        &--guttersXl {
+        &--gutters\@xl {
             margin: 0 - ($grid-gutter-xl / 2);
 
             > .o-Grid-cell {

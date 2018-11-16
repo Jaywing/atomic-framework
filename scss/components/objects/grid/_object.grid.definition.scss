@@ -14,8 +14,8 @@
 //                  `o-Grid--justifyCenter`
 //                  `o-Grid--reverse`
 //                  `o-Grid--gutters`
-//                  `o-Grid--guttersLg`
-//                  `o-Grid--guttersXl`
+//                  `o-Grid--gutters\@lg`
+//                  `o-Grid--gutters\@xl`
 //
 //                  `o-Grid-cell--top`
 //                  `o-Grid-cell--bottom`
@@ -141,7 +141,7 @@ $grid-gutter-xl: $g-spacer-xl;
     }
 }
 
-.o-Grid--guttersLg {
+.o-Grid--gutters\@lg {
     //margin: 0 - ($grid-gutter-lg / 2);
 
     > .o-Grid-cell {
@@ -149,7 +149,7 @@ $grid-gutter-xl: $g-spacer-xl;
     }
 }
 
-.o-Grid--guttersXl {
+.o-Grid--gutters\@xl {
     //margin: 0 - ($grid-gutter-xl / 2);
 
     > .o-Grid-cell {

@@ -1,6 +1,6 @@
 @include md {
-    .NavResponsiveMd,
-    .NavResponsiveMd.is-active {
+    .NavResponsive\@md,
+    .NavResponsive\@md.is-active {
         padding: 0;
 
         .ToggleButton {

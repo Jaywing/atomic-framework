@@ -60,11 +60,11 @@ index.njk         # prototype root file (homepage)
   &lt;main id="content" class="o-Site-content"&gt;
   &#123;% block main %&#125; &lt;!-- block main content hook --&gt;
     &lt;div class="o-Container o-Container--centered"&gt;
-      &lt;div class="o-Grid o-GridMd--reverse o-GridMd--gutters o-GridXl--guttersXl"&gt;
-        &lt;article class="o-Grid-cell o-SizeMd--3of4 o-SizeLg--4of5 o-SizeXl--5of6"&gt;
+      &lt;div class="o-Grid o-Grid@md--reverse o-Grid@md--gutters o-Grid@xl--gutters@xl"&gt;
+        &lt;article class="o-Grid-cell o-Size@md--3of4 o-Size@lg--4of5 o-Size@xl--5of6"&gt;
           &#123;% block content %&#125;&#123;% endblock %&#125; &lt;!-- block content content hook --&gt;
         &lt;/article&gt;
-        &lt;section data-sticky-container class="o-Grid-cell o-Size--full o-SizeMd--1of4 o-SizeLg--1of5 o-SizeXl--1of6"&gt;
+        &lt;section data-sticky-container class="o-Grid-cell o-Size--full o-Size@md--1of4 o-Size@lg--1of5 o-Size@xl--1of6"&gt;
           &#123;% block sidebar %&#125;
             &#123;% include 'shared/docs/page-nav.njk' %&#125; &lt;!-- import share page nav --&gt;
           &#123;% endblock %&#125;

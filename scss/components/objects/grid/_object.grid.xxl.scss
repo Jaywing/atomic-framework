@@ -1,23 +1,23 @@
 // Name:            Grid Extra extra large
 // Description:     Defines styles for flexbox based grid layout for Extra extra large devices (960px +).
 //
-// Component:       `o-GridXxl`
+// Component:       `o-Grid\@xxl`
 //
 // Sub-objects:     `o-Grid-cell`
 //
-// Modifiers:       `o-GridXxl--reverse`
-//                  `o-GridXxl--1of2`
-//                  `o-GridXxl--1of3`
-//                  `o-GridXxl--1of4`
-//                  `o-GridXxl--gutters`
-//                  `o-GridXxl--guttersLg`
-//                  `o-GridXxl--guttersXl`
+// Modifiers:       `o-Grid\@xxl--reverse`
+//                  `o-Grid\@xxl--1of2`
+//                  `o-Grid\@xxl--1of3`
+//                  `o-Grid\@xxl--1of4`
+//                  `o-Grid\@xxl--gutters`
+//                  `o-Grid\@xxl--gutters\@lg`
+//                  `o-Grid\@xxl--gutters\@xl`
 //
 //
 // Markup:
 //
 // <!-- o-Grid -->
-// <div class="o-Grid o-GridXxl o-GridXxl--1of3">
+// <div class="o-Grid o-Grid\@xxl o-Grid\@xxl--1of3">
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
@@ -29,7 +29,7 @@
 // ========================================================================
 
 @include xxl {
-    .o-GridXxl {
+    .o-Grid\@xxl {
         &--reverse {
             flex-direction: row-reverse;
         }
@@ -88,7 +88,7 @@
             }
         }
 
-        &--guttersLg {
+        &--gutters\@lg {
             margin: 0 - ($grid-gutter-lg / 2);
 
             > .o-Grid-cell {
@@ -96,7 +96,7 @@
             }
         }
 
-        &--guttersXl {
+        &--gutters\@xl {
             margin: 0 - ($grid-gutter-xl / 2);
 
             > .o-Grid-cell {

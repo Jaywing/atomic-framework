@@ -1,6 +1,6 @@
 @include xxl {
-    .NavResponsiveXxl,
-    .NavResponsiveXxl.is-active {
+    .NavResponsive\@xxl,
+    .NavResponsive\@xxl.is-active {
         padding: 0;
 
         .ToggleButton {

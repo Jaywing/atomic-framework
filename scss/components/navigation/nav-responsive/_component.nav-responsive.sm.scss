@@ -1,6 +1,6 @@
 @include sm {
-    .NavResponsiveSm,
-    .NavResponsiveSm.is-active {
+    .NavResponsive\@sm,
+    .NavResponsive\@sm.is-active {
         padding-top: 0;
 
         .ToggleButton {

@@ -1,6 +1,6 @@
 @include lg {
-    .NavResponsiveLg,
-    .NavResponsiveLg.is-active {
+    .NavResponsive\@lg,
+    .NavResponsive\@lg.is-active {
         padding: 0;
 
         .ToggleButton {

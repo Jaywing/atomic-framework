@@ -1,6 +1,6 @@
 // sass-lint:disable no-important
 @include xxl {
-    .o-SizeXxl {
+    .o-Size\@xxl {
         &--full {
             width: 100% !important;
             flex: none !important;

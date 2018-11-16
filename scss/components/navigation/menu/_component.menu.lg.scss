@@ -1,6 +1,6 @@
 @include lg {
-    .MenuLg,
-    .NavResponsiveLg {
+    .Menu\@lg,
+    .NavResponsive\@lg {
         flex-wrap: nowrap;
 
         > .Menu-item {

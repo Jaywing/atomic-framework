@@ -1,22 +1,22 @@
-// Name:            Grid Small
+// Name:            Grid \@small
 // Description:     Defines styles for flexbox based grid layout for small devices (480px).
 //
-// Component:       `o-GridSm`
+// Component:       `o-Grid\@sm`
 //
 // Sub-objects:     `o-Grid-cell`
 //
-// Modifiers:       `o-GridSm--reverse`
-//                  `o-GridSm--1of2`
-//                  `o-GridSm--1of3`
-//                  `o-GridSm--1of4`
-//                  `o-GridSm--gutters`
-//                  `o-GridSm--guttersLg`
-//                  `o-GridSm--guttersXl`
+// Modifiers:       `o-Grid\@sm--reverse`
+//                  `o-Grid\@sm--1of2`
+//                  `o-Grid\@sm--1of3`
+//                  `o-Grid\@sm--1of4`
+//                  `o-Grid\@sm--gutters`
+//                  `o-Grid\@sm--gutters\@lg`
+//                  `o-Grid\@sm--gutters\@xl`
 //
 // Markup:
 //
 // <!-- o-Grid -->
-// <div class="o-Grid o-GridSm o-GridSm--1of3">
+// <div class="o-Grid o-Grid\@sm o-Grid\@sm--1of3">
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
 //   <div class="o-Grid-cell">...</div>
@@ -35,7 +35,7 @@ $grid-gutter-xl: $g-spacer-xl;
 // ========================================================================
 
 @include sm {
-    .o-GridSm {
+    .o-Grid\@sm {
         &--reverse {
             flex-direction: row-reverse;
         }
@@ -94,7 +94,7 @@ $grid-gutter-xl: $g-spacer-xl;
             }
         }
 
-        &--guttersLg {
+        &--gutters\@lg {
             margin: 0 - ($grid-gutter-lg / 2);
 
             > .o-Grid-cell {
@@ -102,7 +102,7 @@ $grid-gutter-xl: $g-spacer-xl;
             }
         }
 
-        &--guttersXl {
+        &--gutters\@xl {
             margin: 0 - ($grid-gutter-xl / 2);
 
             > .o-Grid-cell {

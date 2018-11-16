@@ -122,29 +122,29 @@ docs.scss                               # documentation specific stylesheet</pre
 
 <h4>Objects</h4>
 <p>
-  <strong>Syntax:&nbsp; </strong> <code>o-&lt;ObjectName&gt;[Xxs|Xs|Sm|Md|Lg|Xl|Xxl][-decendentName][--modifierName]</code><br>
-  <strong>Example:</strong> <code>o-SizeMd-gridCell--cellCollapse</code>
+  <strong>Syntax:&nbsp; </strong> <code>o-&lt;ObjectName&gt;[@xxs|@xs|@sm|@md|@lg|@xl|@xxl][-decendentName][--modifierName]</code><br>
+  <strong>Example:</strong> <code>o-Size@md-gridCell--cellCollapse</code>
 </p>
 
 <p>Object class names consist of:</p>
 <ul>
   <li><strong>Object prefix (o-)</strong> - <em>Mandatory</em> - to easily distinguish between Object classes and Component classes (which don't have a prefix)</li>
   <li><strong>Object name (ObjectName)</strong> - <em>Mandatory</em> - must be pascal case</li>
-  <li><strong>Responsive utility (Sm)</strong> - <em>Not Mandatory</em> - corresponds to the responsive breakpoints defined in the Settings folder</li>
+  <li><strong>Responsive utility (@sm)</strong> - <em>Not Mandatory</em> - corresponds to the responsive breakpoints defined in the Settings folder</li>
   <li><strong>Descendant name (-descendantName)</strong> - <em>Not Mandatory</em> - is attached to a decendant node of an object - must be camel case</li>
   <li><strong>Modifier name (--modifierName)</strong> - <em>Not Mandatory</em> - modifies the presentation of the base component in some form - must be camel case</li>
 </ul>
 
 <h4>Components</h4>
 <p>
-  <strong>Syntax:&nbsp; </strong> <code>&lt;ComponentName&gt;[Xxs|Xs|Sm|Md|Lg|Xl|Xxl][-decendentName][--modifierName]</code><br>
-  <strong>Example:</strong> <code>Media-figureXxl--wide</code>
+  <strong>Syntax:&nbsp; </strong> <code>&lt;ComponentName&gt;[@xxs|@xs|@sm|@md|@lg|@xl|@xxl][-decendentName][--modifierName]</code><br>
+  <strong>Example:</strong> <code>Media-figure@xxl--wide</code>
 </p>
 
 <p>Component class names consist of:</p>
 <ul>
   <li><strong>Component name (ComponentName)</strong> - <em>Mandatory</em> - must be pascal case</li>
-  <li><strong>Responsive utility (Sm)</strong> - <em>Not Mandatory</em> - corresponds to the responsive breakpoints defined in the Settings folder</li>
+  <li><strong>Responsive utility (@sm)</strong> - <em>Not Mandatory</em> - corresponds to the responsive breakpoints defined in the Settings folder</li>
   <li><strong>Descendant name (-descendantName)</strong> - <em>Not Mandatory</em> - is attached to a decendant node of an object - must be camel case</li>
   <li><strong>Modifier name (--modifierName)</strong> - <em>Not Mandatory</em> - modifies the presentation of the base component in some form - must be camel case</li>
 </ul>

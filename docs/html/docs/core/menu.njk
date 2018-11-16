@@ -385,7 +385,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </ul>
 </div>
 
-<h4>Responsive menu (.MenuXs, .MenuSm, .MenuMd,. MenuLg)</h4>
+<h4>Responsive menu (.Menu@xs, .Menu@sm, .Menu@md,. Menu@lg)</h4>
 
 <div class="docs-example">
   {{ Menu(
@@ -396,7 +396,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "Menu--vertical MenuXs"
+    "Menu--vertical Menu@xs"
   ) }}
   {{ Menu(
     [
@@ -406,7 +406,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "Menu--vertical MenuSm"
+    "Menu--vertical Menu@sm"
   ) }}
   {{ Menu(
     [
@@ -416,7 +416,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "Menu--vertical MenuMd"
+    "Menu--vertical Menu@md"
   ) }}
   {{ Menu(
     [
@@ -426,7 +426,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "Menu--vertical MenuLg"
+    "Menu--vertical Menu@lg"
   ) }}
 
 </div>
@@ -568,7 +568,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       <td class="Text--right">Component</td>
     </tr>
     <tr>
-      <th class="Text--left"><code>.Menu[Xs,Sm,Md,Lg]</code></th>
+      <th class="Text--left"><code>.Menu[@xs,@sm,@md,@lg]</code></th>
       <td>Used in conjunction with Menu--vertical to break to horizonal at 480px, 640px, 768px or 960px</td>
       <td class="Text--right">Responsive modifier</td>
     </tr>

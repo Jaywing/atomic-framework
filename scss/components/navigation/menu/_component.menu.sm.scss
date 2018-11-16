@@ -1,6 +1,6 @@
 @include sm {
-    .MenuSm,
-    .NavResponsiveSm {
+    .Menu\@sm,
+    .NavResponsive\@sm {
         flex-wrap: nowrap;
 
         > .Menu-item {
