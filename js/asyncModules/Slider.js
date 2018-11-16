@@ -31,12 +31,12 @@ export default class Slider extends Module {
 
   cacheDom() {
     return {
-      slides: this.el.querySelector(".Slider-slides"),
-      slide: this.el.querySelectorAll(".Slider-slide"),
-      controls: this.el.querySelector(".Slider-controls"),
-      nextButton: this.el.querySelector(".Slider-next"),
-      previousButton: this.el.querySelector(".Slider-previous"),
-      pips: this.el.querySelector(".Slider-pips")
+      slides: this.el.querySelector(".c-Slider-slides"),
+      slide: this.el.querySelectorAll(".c-Slider-slide"),
+      controls: this.el.querySelector(".c-Slider-controls"),
+      nextButton: this.el.querySelector(".c-Slider-next"),
+      previousButton: this.el.querySelector(".c-Slider-previous"),
+      pips: this.el.querySelector(".c-Slider-pips")
     };
   }
 
@@ -74,9 +74,9 @@ export default class Slider extends Module {
       // Create pips
       if (slidesTotal > 1) {
         if (i == 0) {
-          this.dom.pips.innerHTML += `<div class="Slider-pip Active"></div>`;
+          this.dom.pips.innerHTML += `<div class="c-Slider-pip Active"></div>`;
         } else {
-          this.dom.pips.innerHTML += `<div class="Slider-pip"></div>`;
+          this.dom.pips.innerHTML += `<div class="c-Slider-pip"></div>`;
         }
       }
     }
@@ -105,7 +105,7 @@ export default class Slider extends Module {
       this.dom.controls.style.display = "none";
     }
 
-    let slides = Array.from(this.el.querySelector(".Slider-pips").children);
+    let slides = Array.from(this.el.querySelector(".c-Slider-pips").children);
 
     const slideForward = () => {
       direction = 1;
@@ -123,7 +123,7 @@ export default class Slider extends Module {
 
     const setSlide = event => {
       direction = 1;
-      if (!event.target.matches("div.Slider-pip")) return;
+      if (!event.target.matches("div.c-Slider-pip")) return;
       let slide = event.target;
       let prevSlide = sliderNum;
       sliderNum = slides.indexOf(slide);
@@ -136,7 +136,7 @@ export default class Slider extends Module {
 
     this.dom.nextButton.addEventListener("click", slideForward);
     this.dom.previousButton.addEventListener("click", slideBackward);
-    this.el.querySelector(".Slider-pips").addEventListener("click", setSlide);
+    this.el.querySelector(".c-Slider-pips").addEventListener("click", setSlide);
   }
 
   changeSlide(sliderNum, direction) {
@@ -180,7 +180,7 @@ export default class Slider extends Module {
     }
 
     // Set pip
-    this.el.querySelector(".Slider-pip.Active").classList.remove("Active");
-    this.el.querySelectorAll(".Slider-pip")[sliderNum].classList.add("Active");
+    this.el.querySelector(".c-Slider-pip.Active").classList.remove("Active");
+    this.el.querySelectorAll(".c-Slider-pip")[sliderNum].classList.add("Active");
   }
 }

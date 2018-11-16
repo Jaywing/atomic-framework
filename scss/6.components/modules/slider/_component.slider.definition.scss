@@ -1,4 +1,4 @@
-.Slider-picture {
+.c-Slider-picture {
     position: absolute;
     top: 0;
     right: 0;
@@ -6,7 +6,7 @@
     left: 0;
     overflow: hidden;
 
-    .Slider-image {
+    .c-Slider-image {
         position: absolute;
         top: 50%;
         right: 0;
@@ -16,13 +16,13 @@
     }
 }
 
-.Slider-content {
+.c-Slider-content {
     position: relative;
     z-index: 1;
     height: 10rem;
 }
 
-.Slider-text {
+.c-Slider-text {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -31,7 +31,7 @@
     color: $c-light;
 }
 
-.Slider-slide {
+.c-Slider-slide {
     position: relative;
     display: none;
     height: 100%;
@@ -48,46 +48,46 @@
     }
 
     &.Active--next {
-        .Slider-picture {
-            .Slider-image {
+        .c-Slider-picture {
+            .c-Slider-image {
                 animation: slider-background-next 0.5s;
             }
         }
 
-        .Slider-text {
+        .c-Slider-text {
             animation: slider-content-next 0.5s;
         }
     }
 
     &.Active--previous {
-        .Slider-picture {
-            .Slider-image {
+        .c-Slider-picture {
+            .c-Slider-image {
                 animation: slider-background-previous 0.5s;
             }
         }
 
-        .Slider-text {
+        .c-Slider-text {
             animation: slider-content-previous 0.5s;
         }
     }
 }
 
-.Slider-controls {
+.c-Slider-controls {
     display: flex;
 }
 
-.Slider-previous,
-.Slider-next {
+.c-Slider-previous,
+.c-Slider-next {
     cursor: pointer;
 }
 
-.Slider-pips {
+.c-Slider-pips {
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
-.Slider-pip {
+.c-Slider-pip {
     position: relative;
     top: 50%;
     width: 10px;
@@ -102,15 +102,15 @@
     }
 }
 
-.Slider--scroll {
+.c-Slider--scroll {
     overflow: hidden;
 
-    .Slider-slides {
+    .c-Slider-slides {
         display: flex;
         flex-wrap: nowrap;
     }
 
-    .Slider-slide {
+    .c-Slider-slide {
         display: block;
         height: auto;
         padding: 0 $g-spacer-sm;
@@ -118,7 +118,7 @@
 }
 
 @include md {
-    .Slider-content {
+    .c-Slider-content {
         position: absolute;
         top: 0;
         right: 0;
