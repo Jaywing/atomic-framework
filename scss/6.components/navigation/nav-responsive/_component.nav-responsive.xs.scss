@@ -1,6 +1,6 @@
 @include xs {
-    .NavResponsive\@xs,
-    .NavResponsive\@xs.is-active {
+    .c-NavResponsive\@xs,
+    .c-NavResponsive\@xs.is-active {
         padding-top: 0;
 
         .c-ToggleButton {

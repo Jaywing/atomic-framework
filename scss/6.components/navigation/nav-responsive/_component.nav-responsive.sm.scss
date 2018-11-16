@@ -1,6 +1,6 @@
 @include sm {
-    .NavResponsive\@sm,
-    .NavResponsive\@sm.is-active {
+    .c-NavResponsive\@sm,
+    .c-NavResponsive\@sm.is-active {
         padding-top: 0;
 
         .c-ToggleButton {

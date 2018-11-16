@@ -32,11 +32,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <h2 id="section:usage"><a href="#section:usage" class="c-Text--resetLink">Usage</a></h2>
 
   <p>The example below switches patterns when the browser window width passes 480px (xs breakpoint).</p>
-  <p><span class="c-Badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>NavResponsive[@xs|@sm|@md|@lg|@xl|@xxl]</code>.</p>
+  <p><span class="c-Badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>c-NavResponsive[@xs|@sm|@md|@lg|@xl|@xxl]</code>.</p>
 
   <div class="docs-example">
 
-    <nav role="navigation" class="NavResponsive NavResponsive@xs">
+    <nav role="navigation" class="c-NavResponsive c-NavResponsive@xs">
       <button class="c-ToggleButton" data-module="Toggle" data-options='{"target":"parent"}'>
         <div class="c-ToggleButton-init">
           <span class="o-Icon o-Icon--navicon c-ToggleButton-icon--init"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg></span>
@@ -59,7 +59,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 
   <div class="docs-code docs-code--html">
-    <pre><code class="html">&lt;nav role="navigation" class="NavResponsive NavResponsive@xs"&gt;
+    <pre><code class="html">&lt;nav role="navigation" class="c-NavResponsive c-NavResponsive@xs"&gt;
   &lt;button class="c-ToggleButton" data-module="Toggle" data-options='{"target":"parent"}'&gt;
     &lt;div class="c-ToggleButton-init"&gt;
       &lt;span class="o-Icon o-Icon--navicon c-ToggleButton-icon--init"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
@@ -90,7 +90,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &#123; id: 'repo', title: 'Github', url: 'https://github.com/jaywing/atomic', null &#125;
 ]
 %&#125;
-&lt;nav class="NavResponsive NavResponsive@xs"&gt;
+&lt;nav class="c-NavResponsive c-NavResponsive@xs"&gt;
   &#123;&#123; ToggleButton("parent", "c-ToggleButton--hideText") &#125;&#125;
   &lt;ul class="c-Menu c-Menu--vertical"&gt;
     &#123;&#123; menuHeader('Atomic', 'index.html', 'c-Menu-item--left c-Menu-item--flush') &#125;&#125;
