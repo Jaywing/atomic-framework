@@ -3806,28 +3806,28 @@ video {
       margin-bottom: 0;
       border-radius: 4px 0 0 4px; }
 
-.Breadcrumbs-list {
+.c-Breadcrumbs-list {
   margin: 0 0 1rem 0;
   list-style: none; }
-  .Breadcrumbs-list li {
+  .c-Breadcrumbs-list li {
     cursor: default;
     float: left;
     font-size: 16px; }
-    .Breadcrumbs-list li:not(:last-child)::after {
+    .c-Breadcrumbs-list li:not(:last-child)::after {
       content: "/";
       position: relative;
       top: 1px;
       margin: 0 0.75rem;
       opacity: 1; }
-  .Breadcrumbs-list a {
+  .c-Breadcrumbs-list a {
     text-decoration: none; }
-  .Breadcrumbs-list .disabled {
+  .c-Breadcrumbs-list .disabled {
     color: rgba(0, 0, 0, 0.5);
     cursor: not-allowed; }
-  .Breadcrumbs-list::before, .Breadcrumbs-list::after {
+  .c-Breadcrumbs-list::before, .c-Breadcrumbs-list::after {
     display: table;
     content: ''; }
-  .Breadcrumbs-list::after {
+  .c-Breadcrumbs-list::after {
     clear: both; }
 
 .SkipLink {
