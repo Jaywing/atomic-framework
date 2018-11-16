@@ -3870,27 +3870,27 @@ video {
   right: 0.25rem;
   bottom: 0; }
 
-.Bookmarks-menu {
+.c-Bookmarks-menu {
   padding: 0;
   margin: 0;
   list-style: none; }
 
-.Bookmarks-toggler {
+.c-Bookmarks-toggler {
   display: none; }
 
-.js .Bookmarks {
+.js .c-Bookmarks {
   position: fixed;
   z-index: 1000;
   top: 0.5rem;
   right: 1rem;
   text-align: right; }
-  .js .Bookmarks .Bookmarks-toggler {
+  .js .c-Bookmarks .c-Bookmarks-toggler {
     display: inline-block;
     border: 1px solid #4d4d4d;
     margin-top: 2px;
     background: rgba(255, 255, 255, 0.85);
     color: #262626; }
-  .js .Bookmarks .Bookmarks-menu {
+  .js .c-Bookmarks .c-Bookmarks-menu {
     display: inline-block;
     overflow: hidden;
     height: auto;
@@ -3905,10 +3905,10 @@ video {
             transform-origin: right top;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in; }
-  .js .Bookmarks.is-active .Bookmarks-toggler {
+  .js .c-Bookmarks.is-active .c-Bookmarks-toggler {
     background: #fff;
     color: #000; }
-  .js .Bookmarks.is-active .Bookmarks-menu {
+  .js .c-Bookmarks.is-active .c-Bookmarks-menu {
     z-index: 80;
     max-height: 90%;
     padding: 0.5rem;
