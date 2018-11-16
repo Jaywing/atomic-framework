@@ -111,8 +111,8 @@
           "ready": true
         },
         {
-          "id": "flex-grid",
-          "title": "Flex Grid",
+          "id": "flexbox-grid",
+          "title": "Flexbox Grid",
           "section": "core",
           "ready": true
         },
