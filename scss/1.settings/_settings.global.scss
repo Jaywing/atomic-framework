@@ -23,6 +23,9 @@ $g-text-direction: ltr !default;
 $g-body-antialiased: true !default;
 $g-body-no-horizontal-scroll: true !default;
 
+// CSS Healthcheck - coloured borders around layers
+$css-healthcheck-outline: true !default;
+
 // CSS Debugging - coloured borders around elements
 $css-debug-outline: false !default;
 $css-debug-depth: false !default;
