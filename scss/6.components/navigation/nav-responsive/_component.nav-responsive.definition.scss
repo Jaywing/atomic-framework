@@ -11,7 +11,7 @@ $nav-responsive-menu-open-maxheight: 32.4rem;
     position: relative;
     padding: $nav-responsive-padding;
 
-    .ToggleButton {
+    .c-ToggleButton {
         position: absolute;
         z-index: $nav-responsive-toggle-zindex;
         top: $nav-responsive-toggle-top;
