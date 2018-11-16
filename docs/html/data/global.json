@@ -111,10 +111,16 @@
           "ready": true
         },
         {
+          "id": "flex-grid",
+          "title": "Flex Grid",
+          "section": "core",
+          "ready": true
+        },
+        {
           "id": "grid",
           "title": "Grid",
           "section": "core",
-          "ready": true
+          "ready": false
         },
         {
           "id": "size",
