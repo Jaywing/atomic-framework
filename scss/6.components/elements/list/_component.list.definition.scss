@@ -1,6 +1,6 @@
 $list-margin: $g-spacer 0 !default;
 
-.List {
+.c-List {
     @include trim-child-margins;
     @include reset-list;
 

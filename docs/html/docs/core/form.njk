@@ -25,37 +25,37 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Form</h4>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
       <legend>Form</legend>
-      <input type="text" placeholder="Text input" class="Form-input Form-input--inline">
-      <input type="password" placeholder="Password input" class="Form-input Form-input--inline">
-      <select class="Form-select Form-select--inline">
+      <input type="text" placeholder="Text input" class="c-Form-input c-Form-input--inline">
+      <input type="password" placeholder="Password input" class="c-Form-input c-Form-input--inline">
+      <select class="c-Form-select c-Form-select--inline">
         <option>Option 01</option>
         <option>Option 02</option>
       </select>
       <button class="c-Button">c-Button</button>
-      <label><input type="checkbox" class="Form-check Form-check--inline"> Checkbox</label>
-      <label><input type="radio" class="Form-radio Form-radio--inline"> Radio</label>
-      <textarea cols="30" rows="5" placeholder="Textarea" class="Form-text Form-text--inline"></textarea>
+      <label><input type="checkbox" class="c-Form-check c-Form-check--inline"> Checkbox</label>
+      <label><input type="radio" class="c-Form-radio c-Form-radio--inline"> Radio</label>
+      <textarea cols="30" rows="5" placeholder="Textarea" class="c-Form-text c-Form-text--inline"></textarea>
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;form class="Form"&gt;
+<pre><code class="html">&lt;form class="c-Form"&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Form legend&lt;/legend&gt;
-    &lt;input type="text" placeholder="Text input" class="Form-input"&gt;
-    &lt;input type="password" placeholder="Password input" class="Form-input"&gt;
-    &lt;select class="Form-select"&gt;
+    &lt;input type="text" placeholder="Text input" class="c-Form-input"&gt;
+    &lt;input type="password" placeholder="Password input" class="c-Form-input"&gt;
+    &lt;select class="c-Form-select"&gt;
       &lt;option&gt;Option 01&lt;/option&gt;
       &lt;option&gt;Option 02&lt;/option&gt;
     &lt;/select&gt;
     &lt;button class="c-Button">c-Button&lt;/button&gt;
-    &lt;label&gt;&lt;input type="checkbox" class="Form-check"&gt; Checkbox&lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" class="Form-radio"&gt; Radio&lt;/label&gt;
-    &lt;textarea cols="30" rows="5" placeholder="Textarea" class="Form-text Form-text--inline"&gt;&lt;/textarea&gt;
+    &lt;label&gt;&lt;input type="checkbox" class="c-Form-check"&gt; Checkbox&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" class="c-Form-radio"&gt; Radio&lt;/label&gt;
+    &lt;textarea cols="30" rows="5" placeholder="Textarea" class="c-Form-text c-Form-text--inline"&gt;&lt;/textarea&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
 </div>
@@ -65,10 +65,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Disabled</h4>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
-      <input type="text" placeholder="Text input" class="Form-input Form-input--inline" disabled>
-      <select class="Form-select Form-select--inline" disabled>
+      <input type="text" placeholder="Text input" class="c-Form-input c-Form-input--inline" disabled>
+      <select class="c-Form-select c-Form-select--inline" disabled>
         <option>Option 01</option>
         <option>Option 02</option>
       </select>
@@ -77,7 +77,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="" class="Form-input" disabled"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="c-Form-input" disabled"&gt;</code></pre>
 </div>
 
 <h4>Validation states</h4>
@@ -85,19 +85,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>Unagi!</p>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
-      <input type="text" placeholder="Form-input--danger" class="Form-input Form-input--inline Form-input--danger">
-      <div class="Form-status Form-status--danger">Danger</div>
-      <input type="text" placeholder="Form-input--success" class="Form-input Form-input--inline Form-input--success">
-      <div class="Form-status Form-status--success">Success</div>
+      <input type="text" placeholder="c-Form-input--danger" class="c-Form-input c-Form-input--inline c-Form-input--danger">
+      <div class="c-Form-status c-Form-status--danger">Danger</div>
+      <input type="text" placeholder="c-Form-input--success" class="c-Form-input c-Form-input--inline c-Form-input--success">
+      <div class="c-Form-status c-Form-status--success">Success</div>
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="Form--danger" class="Form-input Form-input--danger"&gt;
-&lt;input type="text" placeholder="Form--success" class="Form-input Form-input--success"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="c-Form--danger" class="c-Form-input c-Form-input--danger"&gt;
+&lt;input type="text" placeholder="c-Form--success" class="c-Form-input c-Form-input--success"&gt;</code></pre>
 </div>
 
 <h2>Control modifiers</h2>
@@ -105,43 +105,43 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Size modifiers</h4>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
-      <div class="Form-row">
-        <input type="text" placeholder="Extra small" class="Form-input Form-input--inline Form-input--xs">
-        <select class="Form-select Form-select--inline Form-select--xs">
+      <div class="c-Form-row">
+        <input type="text" placeholder="Extra small" class="c-Form-input c-Form-input--inline c-Form-input--xs">
+        <select class="c-Form-select c-Form-select--inline c-Form-select--xs">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
         <button class="c-Button c-Button--xs">c-Button</button>
       </div>
-      <div class="Form-row">
-        <input type="text" placeholder="Small" class="Form-input Form-input--inline Form-input--sm">
-        <select class="Form-select Form-select--inline Form-select--sm">
+      <div class="c-Form-row">
+        <input type="text" placeholder="Small" class="c-Form-input c-Form-input--inline c-Form-input--sm">
+        <select class="c-Form-select c-Form-select--inline c-Form-select--sm">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
         <button class="c-Button c-Button--sm">c-Button</button>
       </div>
-      <div class="Form-row">
-        <input type="text" placeholder="Standard" class="Form-input Form-input--inline">
-        <select class="Form-select Form-select--inline">
+      <div class="c-Form-row">
+        <input type="text" placeholder="Standard" class="c-Form-input c-Form-input--inline">
+        <select class="c-Form-select c-Form-select--inline">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
         <button class="c-Button">c-Button</button>
       </div>
-      <div class="Form-row">
-        <input type="text" placeholder="Large" class="Form-input Form-input--inline Form-input--lg">
-        <select class="Form-select Form-select--inline Form-select--lg">
+      <div class="c-Form-row">
+        <input type="text" placeholder="Large" class="c-Form-input c-Form-input--inline c-Form-input--lg">
+        <select class="c-Form-select c-Form-select--inline c-Form-select--lg">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
         <button class="c-Button c-Button--lg">c-Button</button>
       </div>
-      <div class="Form-row">
-        <input type="text" placeholder="Extra large" class="Form-input Form-input--inline Form-input--xl">
-        <select class="Form-select Form-select--inline Form-select--xl">
+      <div class="c-Form-row">
+        <input type="text" placeholder="Extra large" class="c-Form-input c-Form-input--inline c-Form-input--xl">
+        <select class="c-Form-select c-Form-select--inline c-Form-select--xl">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
@@ -152,63 +152,63 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form--input--xs"&gt;</code></pre>
+  <pre><code class="html">&lt;input type="text" placeholder="" class="c-Form-input c-Form--input--xs"&gt;</code></pre>
 </div>
 
 <h4>Form inline</h4>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
-      <input type="text" placeholder="Text input" class="Form-input Form-input--inline">
+      <input type="text" placeholder="Text input" class="c-Form-input c-Form-input--inline">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form-input--inline"&gt;</code></pre>
+  <pre><code class="html">&lt;input type="text" placeholder="" class="c-Form-input c-Form-input--inline"&gt;</code></pre>
 </div>
 
 <h4>Form blank</h4>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <fieldset>
-      <input type="text" placeholder="Text input" class="Form-input Form-input--blank">
+      <input type="text" placeholder="Text input" class="c-Form-input c-Form-input--blank">
     </fieldset>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;input type="text" placeholder="" class="Form-input Form-input--blank"&gt;</code></pre>
+<pre><code class="html">&lt;input type="text" placeholder="" class="c-Form-input c-Form-input--blank"&gt;</code></pre>
 </div>
 
 <h2>Form and grid</h2>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell">
-        <input type="text" placeholder="100" class="Form-input">
+        <input type="text" placeholder="100" class="c-Form-input">
       </div>
     </div>
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell o-Size--1of2">
-        <input type="text" placeholder="50" class="Form-input">
+        <input type="text" placeholder="50" class="c-Form-input">
       </div>
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-input">
+        <input type="text" placeholder="Auto" class="c-Form-input">
       </div>
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-input">
+        <input type="text" placeholder="Auto" class="c-Form-input">
       </div>
     </div>
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell">
-        <input type="text" placeholder="Auto" class="Form-input">
+        <input type="text" placeholder="Auto" class="c-Form-input">
       </div>
       <div class="o-Grid-cell o-Size--1of3">
-        <select class="Form-select">
+        <select class="c-Form-select">
           <option>Option 01</option>
           <option>Option 02</option>
         </select>
@@ -217,15 +217,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell o-Size--1of2">
         <label>Form label</label>
-        <input type="text" placeholder="50" class="Form-input">
+        <input type="text" placeholder="50" class="c-Form-input">
       </div>
       <div class="o-Grid-cell">
         <label>Form label</label>
-        <input type="text" placeholder="Auto" class="Form-input">
+        <input type="text" placeholder="Auto" class="c-Form-input">
       </div>
       <div class="o-Grid-cell">
         <label>Form label</label>
-        <input type="text" placeholder="Auto" class="Form-input">
+        <input type="text" placeholder="Auto" class="c-Form-input">
       </div>
     </div>
     <div class="o-Grid o-Grid--gutters o-Grid--full">
@@ -235,7 +235,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
             <label>Form label</label>
           </div>
           <div class="o-Grid-cell">
-            <input type="text" placeholder="50" class="Form-input">
+            <input type="text" placeholder="50" class="c-Form-input">
           </div>
         </div>
       </div>
@@ -245,7 +245,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
             <label>Form label</label>
           </div>
           <div class="o-Grid-cell">
-            <input type="text" placeholder="50" class="Form-input">
+            <input type="text" placeholder="50" class="c-Form-input">
           </div>
         </div>
       </div>
@@ -255,49 +255,49 @@ Docs: https://mozilla.github.io/nunjucks/api.html
             <label>Form label</label>
           </div>
           <div class="o-Grid-cell">
-            <input type="text" placeholder="50" class="Form-input">
+            <input type="text" placeholder="50" class="c-Form-input">
           </div>
         </div>
       </div>
       <div class="o-Grid-cell">
         <div class="o-Grid o-Grid--gutters">
           <div class="o-Grid-cell o-Size--1of3">
-            <span class="Form-label">Radio label</span>
+            <span class="c-Form-label">Radio label</span>
           </div>
           <div class="o-Grid-cell">
-            <input type="radio" id="Form-g-r" name="radio" class="Form-radio">
-            <label for="Form-g-r">Radio</label>
+            <input type="radio" id="c-Form-g-r" name="radio" class="c-Form-radio">
+            <label for="c-Form-g-r">Radio</label>
             <br>
-            <input type="radio" id="Form-g-r1" name="radio" class="Form-radio">
-            <label for="Form-g-r1">1</label>
-            <label><input type="radio" name="radio" class="Form-radio"> 2</label>
-            <label><input type="radio" name="radio" class="Form-radio"> 3</label>
+            <input type="radio" id="c-Form-g-r1" name="radio" class="c-Form-radio">
+            <label for="c-Form-g-r1">1</label>
+            <label><input type="radio" name="radio" class="c-Form-radio"> 2</label>
+            <label><input type="radio" name="radio" class="c-Form-radio"> 3</label>
           </div>
         </div>
       </div>
       <div class="o-Grid-cell">
         <div class="o-Grid o-Grid--gutters">
           <div class="o-Grid-cell o-Size--1of3">
-            <span class="Form-label">Checkbox label</span>
+            <span class="c-Form-label">Checkbox label</span>
           </div>
           <div class="o-Grid-cell">
-            <input type="checkbox" id="Form-g-c" class="Form-check">
-            <label for="Form-g-c">Checkbox</label>
+            <input type="checkbox" id="c-Form-g-c" class="c-Form-check">
+            <label for="c-Form-g-c">Checkbox</label>
             <br>
-            <input type="checkbox" id="Form-g-c1" class="Form-check">
-            <label for="Form-g-c1">1</label>
-            <label><input type="checkbox" class="Form-check"> 2</label>
-            <label><input type="checkbox" class="Form-check"> 3</label>
+            <input type="checkbox" id="c-Form-g-c1" class="c-Form-check">
+            <label for="c-Form-g-c1">1</label>
+            <label><input type="checkbox" class="c-Form-check"> 2</label>
+            <label><input type="checkbox" class="c-Form-check"> 3</label>
           </div>
         </div>
       </div>
       <div class="o-Grid-cell">
         <div class="o-Grid o-Grid--gutters">
           <div class="o-Grid-cell o-Size--1of3">
-            <label for="Form-g-t">Form label</label>
+            <label for="c-Form-g-t">Form label</label>
           </div>
           <div class="o-Grid-cell">
-            <textarea id="Form-g-t" cols="30" rows="5" placeholder="Textarea text" class="Form-text"></textarea>
+            <textarea id="c-Form-g-t" cols="30" rows="5" placeholder="Textarea text" class="c-Form-text"></textarea>
           </div>
         </div>
       </div>
@@ -306,24 +306,24 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;form class="Form"&gt;
+<pre><code class="html">&lt;form class="c-Form"&gt;
   &lt;div class="o-Grid o-Grid--gutters"&gt;
     &lt;div class="o-Grid-cell o-Size--1of2"&gt;
-      &lt;input type="text" placeholder="" class="Form-input"&gt;
+      &lt;input type="text" placeholder="" class="c-Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input"&gt;
+      &lt;input type="text" placeholder="" class="c-Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input"&gt;
+      &lt;input type="text" placeholder="" class="c-Form-input"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="o-Grid o-Grid--gutters"&gt;
     &lt;div class="o-Grid-cell"&gt;
-      &lt;input type="text" placeholder="" class="Form-input"&gt;
+      &lt;input type="text" placeholder="" class="c-Form-input"&gt;
     &lt;/div&gt;
     &lt;div class="o-Grid-cell o-Size--1of3"&gt;
-      &lt;select class="Form-select"&gt;
+      &lt;select class="c-Form-select"&gt;
         &lt;option&gt;Option 01&lt;/option&gt;
         &lt;option&gt;Option 02&lt;/option&gt;
       &lt;/select&gt;
@@ -335,38 +335,38 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h2>Form and icons</h2>
 
 <div class="docs-example">
-  <form class="Form">
-    <div class="Form-icon">
+  <form class="c-Form">
+    <div class="c-Form-icon">
       {{ icon('calendar', '0 0 1 1', 'o-Icon--sm') }}
-      <input type="text" placeholder="" class="Form-input">
+      <input type="text" placeholder="" class="c-Form-input">
     </div>
-    <div class="Form-icon">
+    <div class="c-Form-icon">
       {{ icon('gear', '0 0 1 1', 'o-Icon--sm') }}
-      <input type="text" placeholder="" class="Form-input">
+      <input type="text" placeholder="" class="c-Form-input">
     </div>
-    <div class="Form-icon Form-icon--flip">
+    <div class="c-Form-icon c-Form-icon--flip">
       {{ icon('gear', '0 0 1 1', 'o-Icon--sm') }}
-      <input type="text" placeholder="" class="Form-input">
+      <input type="text" placeholder="" class="c-Form-input">
     </div>
   </form>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;div class="Form-icon"&gt;
+<pre><code class="html">&lt;div class="c-Form-icon"&gt;
   &#123;&#123; icon('calendar') &#125;&#125;
-  &lt;input type="text" placeholder="" class="Form-input"&gt;
+  &lt;input type="text" placeholder="" class="c-Form-input"&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 <h2>Form label modifier</h2>
 
 <div class="docs-example">
-  <form class="Form">
+  <form class="c-Form">
     <div class="o-Grid o-Grid--gutters">
       <div class="o-Grid-cell">
-        <div class="Form-flabel">
-          <input type="text" id="Form-l-i-2" class="Form-input">
-          <label for="Form-l-i-2" class="Form-label">Floating label</label>
+        <div class="c-Form-flabel">
+          <input type="text" id="c-Form-l-i-2" class="c-Form-input">
+          <label for="c-Form-l-i-2" class="c-Form-label">Floating label</label>
         </div>
       </div>
     </div>
@@ -374,23 +374,23 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;div class="Form-flabel"&gt;
-  &lt;label for="Form-l-i" class="Form-label"&gt;Floating label&lt;/label&gt;
-  &lt;input type="text" id="Form-l-i" placeholder="Floating label" class="Form-input"&gt;
+<pre><code class="html">&lt;div class="c-Form-flabel"&gt;
+  &lt;label for="c-Form-l-i" class="c-Form-label"&gt;Floating label&lt;/label&gt;
+  &lt;input type="text" id="c-Form-l-i" placeholder="Floating label" class="c-Form-input"&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 <h4>Form field</h4>
 
 <div class="docs-example">
-  <div class="Form-field">
-    <input type="text" placeholder="Text input" class="Form-input Form-input--inline">
+  <div class="c-Form-field">
+    <input type="text" placeholder="Text input" class="c-Form-input c-Form-input--inline">
   </div>
 </div>
 
 <div class="docs-code docs-code--html">
-<pre><code class="html">&lt;div class="Form-field"&gt;
-  &lt;input type="text" placeholder="Text input" class="Form-input"&gt;
+<pre><code class="html">&lt;div class="c-Form-field"&gt;
+  &lt;input type="text" placeholder="Text input" class="c-Form-input"&gt;
 &lt;/div&gt;</code></pre>
 </div>
 

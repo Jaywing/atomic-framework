@@ -3,12 +3,12 @@ $form-sm-padding: $g-spacer-sm $g-spacer !default;
 $form-lg-padding: $g-spacer $g-spacer-lg !default;
 $form-xl-padding: ($g-spacer * 1.25) $g-spacer-xl !default;
 
-.Form {
-    .Form-input,
-    .Form-select,
-    .Form-text,
-    .Form-check,
-    .Form-radio {
+.c-Form {
+    .c-Form-input,
+    .c-Form-select,
+    .c-Form-text,
+    .c-Form-check,
+    .c-Form-radio {
         &--xs {
             @include minion;
 

@@ -1,1 +1,85 @@
-@import 'component.text.definition';
+$text-lead-color: inherit !default;
+
+$text-disabled-color: $c-disabled-dark !default;
+$text-disabled-cursor: not-allowed !default;
+
+// sass-lint:disable no-important
+.Text {
+    &--lead {
+        @include pica;
+    }
+
+    &--disabled {
+        color: $text-disabled-color !important;
+        cursor: $text-disabled-cursor !important;
+    }
+
+    &--break {
+        word-wrap: break-word !important;
+    }
+
+    &--noWrap {
+        white-space: nowrap !important;
+    }
+
+    /**
+   * Text truncation
+   * Prevent text from wrapping onto multiple lines, and truncate with an
+   * ellipsis.
+   * 1. Ensure that the node has a maximum width after which truncation can
+   *    occur.
+   * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+   *    nodes.*/
+    &--truncate {
+        overflow: hidden !important;
+        max-width: 100%; /* 1 */
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        word-wrap: normal !important; /* 2 */
+    }
+
+    &--center {
+        text-align: center !important;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--justify {
+        text-align: justify !important;
+    }
+
+    &--inheritColor {
+        color: inherit !important;
+    }
+
+    &--resetLink,
+    &--resetLink > a,
+    &--resetLink:hover,
+    &--resetLink:focus,
+    &--resetLink > a:hover,
+    &--resetLink > a:focus {
+        color: inherit !important;
+        cursor: text !important;
+        text-decoration: none !important;
+    }
+
+    /**
+ * Enables font kerning in all browsers.
+ * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ *
+ * 1. Chrome (not Windows), Firefox, IE 10+
+ * 2. Safari 7 and future browsers
+ * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+ */
+    &--kern {
+        font-feature-settings: 'kern' 1; /* 1 */
+        font-kerning: normal; /* 2 */
+        text-rendering: optimizeLegibility; /* 3 */
+    }
+}

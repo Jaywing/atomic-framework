@@ -25,7 +25,7 @@ $form-success-color: $c-success !default;
 
 $form-status-padding: $g-spacer-sm 0 !default;
 
-.Form {
+.c-Form {
     fieldset {
         padding: 0;
         border: 0;
@@ -51,11 +51,11 @@ $form-status-padding: $g-spacer-sm 0 !default;
     }
 }
 
-.Form-input,
-.Form-select,
-.Form-text,
-.Form-check,
-.Form-radio {
+.c-Form-input,
+.c-Form-select,
+.c-Form-text,
+.c-Form-check,
+.c-Form-radio {
     max-width: 100%;
     padding: $form-input-padding;
     border: $form-input-border;
@@ -89,9 +89,9 @@ $form-status-padding: $g-spacer-sm 0 !default;
     }
 }
 
-.Form-input,
-.Form-select,
-.Form-text {
+.c-Form-input,
+.c-Form-select,
+.c-Form-text {
     width: 100%;
 
     &--inline {
@@ -99,16 +99,16 @@ $form-status-padding: $g-spacer-sm 0 !default;
     }
 }
 
-.Form-text {
+.c-Form-text {
     height: auto;
 }
 
-.Form-label {
+.c-Form-label {
     display: block;
     font-weight: $form-label-weight;
 }
 
-.Form-field {
+.c-Form-field {
     padding: $form-field-padding;
 
     .c-Panel {
@@ -123,7 +123,7 @@ $form-status-padding: $g-spacer-sm 0 !default;
     }
 }
 
-.Form-status {
+.c-Form-status {
     padding: $form-status-padding;
 
     &--danger {
