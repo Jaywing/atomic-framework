@@ -11,16 +11,16 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 {% extends 'layouts/application.njk' %}
 
-{% block metaTitle %}Icon | Atomic: Core{% endblock %}
+{% block metaTitle %}o-Icon | Atomic: Core{% endblock %}
 
 {% block content %}
 
-<h1 class="Article-title">Icon</h1>
+<h1 class="Article-title">o-Icon</h1>
 <p class="Text--lead">Place vector icons anywhere using our SVG sprite generator.</p>
 
 <dl class="Definition Definition--horizontal">
   <dt>Macros</dt>
-  <dd><a href="#section:macro"><span class="Badge">Icon</span></a></dd>
+  <dd><a href="#section:macro"><span class="Badge">o-Icon</span></a></dd>
 </dl>
 
 <hr>
@@ -30,13 +30,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>Drop icon svgs in the 'icon' folder in 'src' and they are automatically added to the sprite, the icon's location is indexed with a reference that matches its filename.</p>
 
 <div class="docs-example">
-  <span class="Icon Icon--navicon">
+  <span class="o-Icon o-Icon--navicon">
     <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg>
   </span>
 </div>
 
 <div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;span class="Icon Icon--navicon"&gt;
+  <pre><code class="html">&lt;span class="o-Icon o-Icon--navicon"&gt;
   &lt;svg viewBox="0 0 1 1"&gt;
     &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;
   &lt;/svg&gt;
@@ -57,7 +57,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </dl>
 
 <div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;, 'Icon--lg') &#125;&#125;</code></pre>
+  <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;, 'o-Icon--lg') &#125;&#125;</code></pre>
 </div>
 
 <div class="docs-example">
@@ -140,28 +140,28 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-Grid o-Grid--1of5 Text--center">
 
     <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--sm', '0 0 1 1') }}
-      <div><small>.Icon--sm</small></div>
+      {{ icon('eye', 'o-Icon--sm', '0 0 1 1') }}
+      <div><small>.o-Icon--sm</small></div>
     </div>
 
     <div class="o-Grid-cell Demo">
       {{ icon('eye') }}
-      <div><small>.Icon</small></div>
+      <div><small>.o-Icon</small></div>
     </div>
 
     <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--lg') }}
-      <div><small>.Icon--lg</small></div>
+      {{ icon('eye', 'o-Icon--lg') }}
+      <div><small>.o-Icon--lg</small></div>
     </div>
 
     <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--xl') }}
-      <div><small>.Icon--xl</small></div>
+      {{ icon('eye', 'o-Icon--xl') }}
+      <div><small>.o-Icon--xl</small></div>
     </div>
 
     <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--xxl') }}
-      <div><small>.Icon--xxl</small></div>
+      {{ icon('eye', 'o-Icon--xxl') }}
+      <div><small>.o-Icon--xxl</small></div>
     </div>
 
   </div>
@@ -169,11 +169,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--sm&#39; &#125;&#125;
+  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--sm&#39; &#125;&#125;
 &#123;&#123; icon(&#39;eye&#39;) &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--lg&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xl&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xxl &#125;&#125;</code></pre>
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--lg&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--xl&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-Icon--xxl &#125;&#125;</code></pre>
 </div>
 
 <h3>Spin modifier</h3>
@@ -183,8 +183,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-Grid o-Grid--gutters Text--center">
 
     <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('spinner-3', 'Icon--lg Icon--spin') }}
-      <div><small>.Icon--spin</small></div>
+      {{ icon('spinner-3', 'o-Icon--lg o-Icon--spin') }}
+      <div><small>.o-Icon--spin</small></div>
     </div>
 
   </div>
@@ -192,7 +192,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;Icon--spin Icon--lg&#39; &#125;&#125;</code></pre>
+  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;o-Icon--spin o-Icon--lg&#39; &#125;&#125;</code></pre>
 </div>
 
 

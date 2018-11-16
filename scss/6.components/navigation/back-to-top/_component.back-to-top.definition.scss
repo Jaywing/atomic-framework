@@ -3,7 +3,7 @@ $back-to-top-fixed-right: $g-spacer-xs;
 $back-to-top-fixed-bottom: 0;
 
 .BackToTop {
-    > .Icon {
+    > .o-Icon {
         margin: 0;
     }
 
@@ -13,7 +13,7 @@ $back-to-top-fixed-bottom: 0;
     }
 
     @include md {
-        > .Icon {
+        > .o-Icon {
             margin-left: $back-to-top-md-margin;
         }
 

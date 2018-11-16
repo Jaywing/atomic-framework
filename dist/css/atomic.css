@@ -1917,24 +1917,24 @@ video {
   .o-Section--short {
     padding: 0.5rem 0; }
 
-.Icon {
+.o-Icon {
   display: inline-block;
   width: 26px;
   height: 26px;
   vertical-align: middle; }
-  .Icon--lg {
+  .o-Icon--lg {
     width: 44px;
     height: 44px; }
-  .Icon--sm {
+  .o-Icon--sm {
     width: 18px;
     height: 18px; }
-  .Icon--xl {
+  .o-Icon--xl {
     width: 60px;
     height: 60px; }
-  .Icon--xxl {
+  .o-Icon--xxl {
     width: 88px;
     height: 88px; }
-  .Icon--spin {
+  .o-Icon--spin {
     display: inline-block;
     -webkit-animation: spin 1.25s infinite linear;
             animation: spin 1.25s infinite linear; }
@@ -2032,19 +2032,19 @@ video {
     position: absolute;
     top: 50%;
     left: 50%; }
-    .o-Cover-loading.Icon {
+    .o-Cover-loading.o-Icon {
       margin-top: -13px;
       margin-left: -13px; }
-    .o-Cover-loading.Icon--sm {
+    .o-Cover-loading.o-Icon--sm {
       margin-top: -9px;
       margin-left: -9px; }
-    .o-Cover-loading.Icon--lg {
+    .o-Cover-loading.o-Icon--lg {
       margin-top: -22px;
       margin-left: -22px; }
-    .o-Cover-loading.Icon--xl {
+    .o-Cover-loading.o-Icon--xl {
       margin-top: -30px;
       margin-left: -30px; }
-    .o-Cover-loading.Icon--xxl {
+    .o-Cover-loading.o-Icon--xxl {
       margin-top: -44px;
       margin-left: -44px; }
   .o-Cover--bg {
@@ -2386,7 +2386,7 @@ video {
 
 .Button--icon {
   padding: 0.47rem 1rem; }
-  .Button--icon > .Icon {
+  .Button--icon > .o-Icon {
     margin-right: -0.25rem;
     margin-left: -0.25rem; }
 
@@ -2781,7 +2781,7 @@ video {
           font-size: 1rem;
           line-height: 20px;
           line-height: 1.25rem; } }
-    .Panel-title .Icon {
+    .Panel-title .o-Icon {
       margin: -3px 0 0 -5px; }
   .Panel-badge {
     position: absolute;
@@ -3390,7 +3390,7 @@ video {
   position: relative;
   display: inline-block;
   max-width: 100%; }
-  .Form-icon [class*='Icon'] {
+  .Form-icon [class*='o-Icon'] {
     position: absolute;
     top: 50%;
     width: 30px;
@@ -3400,7 +3400,7 @@ video {
     text-align: center; }
   .Form-icon:not(.Form-icon--flip) > input {
     padding-left: 30px; }
-  .Form-icon--flip [class*='Icon'] {
+  .Form-icon--flip [class*='o-Icon'] {
     right: 0; }
   .Form-icon--flip > input {
     padding-right: 30px; }
@@ -3575,7 +3575,7 @@ video {
     .Menu-link:not(.Text--disabled):hover, .Menu-link:not(.Text--disabled):focus {
       background-color: rgba(0, 0, 0, 0.1);
       color: #1142b1; }
-  .Menu-link .Icon svg {
+  .Menu-link .o-Icon svg {
     fill: #2561ea; }
   .is-active > .Menu-link, .Menu-link.is-active {
     background-color: #2561ea;
@@ -3851,7 +3851,7 @@ video {
     height: auto;
     text-decoration: none; }
 
-.BackToTop > .Icon {
+.BackToTop > .o-Icon {
   margin: 0; }
 
 .BackToTop-text {
@@ -3859,7 +3859,7 @@ video {
   top: -9999px; }
 
 @media (min-width: 48em) {
-  .BackToTop > .Icon {
+  .BackToTop > .o-Icon {
     margin-left: -0.25rem; }
   .BackToTop-text {
     position: static;

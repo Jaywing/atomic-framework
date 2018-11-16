@@ -5,7 +5,7 @@ $button-icon-icon-margin: -($g-spacer-xs) !default;
     &--icon {
         padding: $button-icon-padding;
 
-        > .Icon {
+        > .o-Icon {
             margin-right: $button-icon-icon-margin;
             margin-left: $button-icon-icon-margin;
         }
