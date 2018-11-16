@@ -18,35 +18,35 @@
     // *     .print-hide
     // *     .print-only
 
-    .printHide {
+    .u-printHide {
         display: none !important;
     }
 
-    .printOnly {
+    .u-printOnly {
         display: block !important;
     }
 
-    table.printOnly {
+    table.u-printOnly {
         display: table !important;
     }
 
-    thead.printOnly {
+    thead.u-printOnly {
         display: table-header-group !important;
     }
 
-    tbody.printOnly {
+    tbody.u-printOnly {
         display: table-row-group !important;
     }
 
-    tr.printOnly {
+    tr.u-printOnly {
         display: table-row !important;
     }
 
-    td.printOnly {
+    td.u-printOnly {
         display: table-cell !important;
     }
 
-    th.printOnly {
+    th.u-printOnly {
         display: table-cell !important;
     }
 }

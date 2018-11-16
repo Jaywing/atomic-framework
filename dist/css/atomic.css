@@ -4229,19 +4229,19 @@ video {
     display: block; }
 
 /* visibility helpers */
-.hide {
+.u-hide {
   display: none !important; }
 
-.show {
+.u-show {
   display: block !important; }
 
-.invisible {
+.u-invisible {
   visibility: hidden !important; }
 
-.visible {
+.u-visible {
   visibility: visible !important; }
 
-.srOnly {
+.u-srOnly {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -4251,8 +4251,8 @@ video {
   margin: -1px;
   clip: rect(0, 0, 0, 0); }
 
-.srOnly--focusable:active,
-.srOnly--focusable:focus {
+.u-srOnly--focusable:active,
+.u-srOnly--focusable:focus {
   position: static;
   overflow: visible;
   width: auto;
@@ -4260,26 +4260,26 @@ video {
   margin: 0;
   clip: auto; }
 
-.printOnly {
+.u-printOnly {
   display: none !important; }
 
 /* print helpers */
 @media print {
-  .printHide {
+  .u-printHide {
     display: none !important; }
-  .printOnly {
+  .u-printOnly {
     display: block !important; }
-  table.printOnly {
+  table.u-printOnly {
     display: table !important; }
-  thead.printOnly {
+  thead.u-printOnly {
     display: table-header-group !important; }
-  tbody.printOnly {
+  tbody.u-printOnly {
     display: table-row-group !important; }
-  tr.printOnly {
+  tr.u-printOnly {
     display: table-row !important; }
-  td.printOnly {
+  td.u-printOnly {
     display: table-cell !important; }
-  th.printOnly {
+  th.u-printOnly {
     display: table-cell !important; } }
 
 /*# sourceMappingURL=atomic.css.map */

@@ -11,9 +11,9 @@
 ////
 
 // Border helpers
-// *      .radius
-// *      .round
-// *      .circle
+// *      .u-radius
+// *      .u-round
+// *      .u-circle
 
 // sass-lint:disable no-important
 
@@ -21,14 +21,14 @@ $radius: $g-border-radius !default;
 $round: $g-round-radius !default;
 $circle: $g-circular-radius !default;
 
-.radius {
+.u-radius {
     border-radius: $radius !important;
 }
 
-.round {
+.u-round {
     border-radius: $round !important;
 }
 
-.circle {
+.u-circle {
     border-radius: $circle !important;
 }

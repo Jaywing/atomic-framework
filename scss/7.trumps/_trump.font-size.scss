@@ -16,66 +16,66 @@
 /// https://github.com/bbc/gel-typography
 
 /* font-size helpers */
-.canon {
+.u-canon {
     @include canon;
 }
 
-.canonBold {
+.u-canonBold {
     @include canon-bold;
 }
 
-.trafalgar {
+.u-trafalgar {
     @include trafalgar;
 }
 
-.trafalgarBold {
+.u-trafalgarBold {
     @include trafalgar-bold;
 }
 
-.doublePica {
+.u-doublePica {
     @include double-pica;
 }
 
-.doublePicaBold {
+.u-doublePicaBold {
     @include double-pica-bold;
 }
 
-.greatPrimer {
+.u-greatPrimer {
     @include great-primer;
 }
 
-.greatPrimerBold {
+.u-greatPrimerBold {
     @include great-primer-bold;
 }
 
-.pica {
+.u-pica {
     @include pica;
 }
 
-.picaBold {
+.u-picaBold {
     @include pica-bold;
 }
 
-.longPrimer {
+.u-longPrimer {
     @include long-primer;
 }
 
-.longPrimerBold {
+.u-longPrimerBold {
     @include long-primer-bold;
 }
 
-.brevier {
+.u-brevier {
     @include brevier;
 }
 
-.brevierBold {
+.u-brevierBold {
     @include brevier-bold;
 }
 
-.minion {
+.u-minion {
     @include minion;
 }
 
-.minionBold {
+.u-minionBold {
     @include minion-bold;
 }

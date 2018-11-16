@@ -14,74 +14,74 @@
 // *  component styles and this partial should be removed for production
 // *
 //    Colour helpers
-// *      .colorDark
-// *      .colorLight
-// *      .colorPrimary
-// *      .colorSecondary
-// *      .colorHighlight
-// *      .colorError
-// *      .colorSuccess
-// *      .bgDark
-// *      .bgLight
-// *      .bgPrimary
-// *      .bgSecondary
-// *      .bgHighlight
-// *      .bgError
-// *      .bgSuccess
+// *      .u-colorDark
+// *      .u-colorLight
+// *      .u-colorPrimary
+// *      .u-colorSecondary
+// *      .u-colorHighlight
+// *      .u-colorError
+// *      .u-colorSuccess
+// *      .u-bgDark
+// *      .u-bgLight
+// *      .u-bgPrimary
+// *      .u-bgSecondary
+// *      .u-bgHighlight
+// *      .u-bgError
+// *      .u-bgSuccess
 
 // sass-lint:disable no-important
 
 // Generates classes for every color in $c-palette. Eg: .c-black, .c-purple;
 @include generate-color-classes;
 
-.colorDark {
+.u-colorDark {
     color: $c-dark !important;
 }
 
-.colorLight {
+.u-colorLight {
     color: $c-light !important;
 }
 
-.colorPrimary {
+.u-colorPrimary {
     color: $c-primary !important;
 }
 
-.colorSecondary {
+.u-colorSecondary {
     color: $c-secondary !important;
 }
 
-.colorHighlight {
+.u-colorHighlight {
     color: $c-highlight !important;
 }
 
-.colorError {
+.u-colorError {
     color: $c-danger !important;
 }
 
-.colorSuccess {
+.u-colorSuccess {
     color: $c-success !important;
 }
 
-.bgDark {
+.u-bgDark {
     background-color: $c-dark !important;
 }
 
-.bgLight {
+.u-bgLight {
     background-color: $c-light !important;
 }
 
-.bgSecondary {
+.u-bgSecondary {
     background-color: $c-secondary !important;
 }
 
-.bgHighlight {
+.u-bgHighlight {
     background-color: $c-highlight !important;
 }
 
-.bgError {
+.u-bgError {
     background-color: $c-danger !important;
 }
 
-.bgSuccess {
+.u-bgSuccess {
     background-color: $c-success !important;
 }
