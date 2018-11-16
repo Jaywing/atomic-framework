@@ -2501,13 +2501,13 @@ video {
         -ms-transform: scale(1) translateY(-50%);
             transform: scale(1) translateY(-50%); }
 
-.Overlay {
+.c-Overlay {
   position: relative;
   display: inline-block;
   overflow: hidden;
   max-width: 100%;
   margin: 0; }
-  .Overlay-panel {
+  .c-Overlay-panel {
     position: absolute;
     top: 0;
     right: 0;
@@ -2515,33 +2515,33 @@ video {
     left: 0;
     padding: 20px; }
 
-.Overlay--hover:not(:hover):not(:focus) .Overlay-panel {
+.c-Overlay--hover:not(:hover):not(:focus) .c-Overlay-panel {
   opacity: 0; }
 
-.Overlay--hover:hover, .Overlay--hover:focus {
+.c-Overlay--hover:hover, .c-Overlay--hover:focus {
   opacity: 1; }
 
-.Overlay-background {
+.c-Overlay-background {
   background: rgba(0, 0, 0, 0.8);
   color: #fff; }
-  .Overlay-background a,
-  .Overlay-background a:hover,
-  .Overlay-background a:focus {
+  .c-Overlay-background a,
+  .c-Overlay-background a:hover,
+  .c-Overlay-background a:focus {
     color: #fff; }
 
-.Overlay-position--top {
+.c-Overlay-position--top {
   bottom: auto; }
 
-.Overlay-position--bottom {
+.c-Overlay-position--bottom {
   top: auto; }
 
-.Overlay-position--right {
+.c-Overlay-position--right {
   left: auto; }
 
-.Overlay-position--left {
+.c-Overlay-position--left {
   right: auto; }
 
-.Overlay-icon {
+.c-Overlay-icon {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
