@@ -1,30 +1,30 @@
-// Name:            Grid
+// Name:            FlexGrid
 // Description:     Defines styles for flexbox based grid layout.
 //
-// Component:       `o-Grid`
+// Component:       `o-FlexGrid`
 //
-// Sub-objects:     `o-Grid-cell`
+// Sub-objects:     `o-FlexGrid-cell`
 //
-// Modifiers:       `o-Grid--flexCells`
-//                  `o-Grid--flush`
-//                  `o-Grid--full`
-//                  `o-Grid--top`
-//                  `o-Grid--bottom`
-//                  `o-Grid--center`
-//                  `o-Grid--justifyCenter`
-//                  `o-Grid--reverse`
-//                  `o-Grid--gutters`
-//                  `o-Grid--gutters\@lg`
-//                  `o-Grid--gutters\@xl`
+// Modifiers:       `o-FlexGrid--flexCells`
+//                  `o-FlexGrid--flush`
+//                  `o-FlexGrid--full`
+//                  `o-FlexGrid--top`
+//                  `o-FlexGrid--bottom`
+//                  `o-FlexGrid--center`
+//                  `o-FlexGrid--justifyCenter`
+//                  `o-FlexGrid--reverse`
+//                  `o-FlexGrid--gutters`
+//                  `o-FlexGrid--gutters\@lg`
+//                  `o-FlexGrid--gutters\@xl`
 //
-//                  `o-Grid-cell--top`
-//                  `o-Grid-cell--bottom`
-//                  `o-Grid-cell--center`
-//                  `o-Grid-cell--autoSize`
+//                  `o-FlexGrid-cell--top`
+//                  `o-FlexGrid-cell--bottom`
+//                  `o-FlexGrid-cell--center`
+//                  `o-FlexGrid-cell--autoSize`
 //
 // Markup:
 //
-// <!-- o-Grid -->
+// <!-- o-FlexGrid -->
 // <div class="o-Sidebar">
 //   <div class="o-Sidebar-column">...</div>
 //   <div class="o-Sidebar-content">...</div>
@@ -40,10 +40,10 @@ $grid-gutter-lg: $g-spacer-lg;
 $grid-gutter-xl: $g-spacer-xl;
 
 // ========================================================================
-// Component: o-Grid
+// Component: o-FlexGrid
 // ========================================================================
 
-.o-Grid {
+.o-FlexGrid {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -52,78 +52,78 @@ $grid-gutter-xl: $g-spacer-xl;
     list-style: none;
 }
 
-.o-Grid-cell {
+.o-FlexGrid-cell {
     max-width: 100%;
     flex: 1 0 auto;
 }
 
-.o-Grid--flexCells > .o-Grid-cell {
+.o-FlexGrid--flexCells > .o-FlexGrid-cell {
     display: flex;
 }
 
-.o-Grid--top {
+.o-FlexGrid--top {
     align-items: flex-start;
 }
 
-.o-Grid--bottom {
+.o-FlexGrid--bottom {
     align-items: flex-end;
 }
 
-.o-Grid--center {
+.o-FlexGrid--center {
     align-items: center;
 }
 
-.o-Grid--justifyCenter {
+.o-FlexGrid--justifyCenter {
     justify-content: center;
 }
 
-.o-Grid--reverse {
+.o-FlexGrid--reverse {
     flex-direction: row-reverse;
 }
 
-.o-Grid-cell--top {
+.o-FlexGrid-cell--top {
     align-self: flex-start;
 }
 
-.o-Grid-cell--bottom {
+.o-FlexGrid-cell--bottom {
     align-self: flex-end;
 }
 
-.o-Grid-cell--center {
+.o-FlexGrid-cell--center {
     align-self: center;
 }
 
-.o-Grid-cell--autoSize {
+.o-FlexGrid-cell--autoSize {
     flex: none;
 }
 
-.o-Grid--fit > .o-Grid-cell {
+.o-FlexGrid--fit > .o-FlexGrid-cell {
     flex: 1;
 }
 
-.o-Grid--full > .o-Grid-cell {
+.o-FlexGrid--full > .o-FlexGrid-cell {
     flex: 0 0 100%;
 }
 
-.o-Grid--1of2 > .o-Grid-cell {
+.o-FlexGrid--1of2 > .o-FlexGrid-cell {
     width: 50%;
     max-width: 50%;
     flex: auto;
 }
 
-.o-Grid--1of3 > .o-Grid-cell {
+.o-FlexGrid--1of3 > .o-FlexGrid-cell {
     width: 33.3333%;
     max-width: 33.3333%;
     flex: auto;
 }
 
-.o-Grid--1of4 > .o-Grid-cell {
+.o-FlexGrid--1of4 > .o-FlexGrid-cell {
     width: 25%;
     max-width: 25%;
     flex: auto;
 }
 
-.o-Grid--1of5 > .o-Grid-cell {
+.o-FlexGrid--1of5 > .o-FlexGrid-cell {
     width: 20%;
     max-width: 20%;
     flex: auto;
@@ -132,27 +132,27 @@ $grid-gutter-xl: $g-spacer-xl;
 // Gutters
 // ========================================================================
 
-.o-Grid--gutters {
+.o-FlexGrid--gutters {
     //margin-left: - ($grid-gutter / 2);
     //margin-right: - ($grid-gutter / 2);
 
-    > .o-Grid-cell {
+    > .o-FlexGrid-cell {
         padding: $grid-gutter / 2;
     }
 }
 
-.o-Grid--gutters\@lg {
+.o-FlexGrid--gutters\@lg {
     //margin: 0 - ($grid-gutter-lg / 2);
 
-    > .o-Grid-cell {
+    > .o-FlexGrid-cell {
         padding: $grid-gutter-lg / 2;
     }
 }
 
-.o-Grid--gutters\@xl {
+.o-FlexGrid--gutters\@xl {
     //margin: 0 - ($grid-gutter-xl / 2);
 
-    > .o-Grid-cell {
+    > .o-FlexGrid-cell {
         padding: $grid-gutter-xl / 2;
     }
 }

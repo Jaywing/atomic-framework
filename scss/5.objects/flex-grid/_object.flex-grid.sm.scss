@@ -1,53 +1,59 @@
-// Name:            Grid Extra Large
-// Description:     Defines styles for flexbox based grid layout for Extra Large devices (960px +).
+// Name:            FlexGrid \@small
+// Description:     Defines styles for flexbox based grid layout for small devices (480px).
 //
-// Component:       `o-Grid\@xl`
+// Component:       `o-FlexGrid\@sm`
 //
-// Sub-objects:     `o-Grid-cell`
+// Sub-objects:     `o-FlexGrid-cell`
 //
-// Modifiers:       `o-Grid\@xl--reverse`
-//                  `o-Grid\@xl--1of2`
-//                  `o-Grid\@xl--1of3`
-//                  `o-Grid\@xl--1of4`
-//                  `o-Grid\@xl--gutters`
-//                  `o-Grid\@xl--gutters\@lg`
-//                  `o-Grid\@xl--gutters\@xl`
-//
+// Modifiers:       `o-FlexGrid\@sm--reverse`
+//                  `o-FlexGrid\@sm--1of2`
+//                  `o-FlexGrid\@sm--1of3`
+//                  `o-FlexGrid\@sm--1of4`
+//                  `o-FlexGrid\@sm--gutters`
+//                  `o-FlexGrid\@sm--gutters\@lg`
+//                  `o-FlexGrid\@sm--gutters\@xl`
 //
 // Markup:
 //
-// <!-- o-Grid -->
-// <div class="o-Grid o-Grid\@xl o-Grid\@xl--1of3">
-//   <div class="o-Grid-cell">...</div>
-//   <div class="o-Grid-cell">...</div>
-//   <div class="o-Grid-cell">...</div>
+// <!-- o-FlexGrid -->
+// <div class="o-FlexGrid o-FlexGrid\@sm o-FlexGrid\@sm--1of3">
+//   <div class="o-FlexGrid-cell">...</div>
+//   <div class="o-FlexGrid-cell">...</div>
+//   <div class="o-FlexGrid-cell">...</div>
 // </div>
 //
 // ========================================================================
 
+// Variables
+// ========================================================================
+
+$grid-gutter: $g-spacer;
+$grid-gutter-lg: $g-spacer-lg;
+$grid-gutter-xl: $g-spacer-xl;
+
 // Breakpoints
 // ========================================================================
 
-@include xl {
-    .o-Grid\@xl {
+@include sm {
+    .o-FlexGrid\@sm {
         &--reverse {
             flex-direction: row-reverse;
         }
 
         &--fit {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 flex: 1;
             }
         }
 
         &--full {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 flex: 0 0 100%;
             }
         }
 
         &--1of2 {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 width: 50%;
                 max-width: 50%;
                 flex: auto;
@@ -55,7 +61,7 @@
         }
 
         &--1of3 {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 width: 33.3333%;
                 max-width: 33.3333%;
                 flex: auto;
@@ -63,7 +69,7 @@
         }
 
         &--1of4 {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 width: 25%;
                 max-width: 25%;
                 flex: auto;
@@ -71,7 +77,7 @@
         }
 
         &--1of5 {
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 width: 20%;
                 max-width: 20%;
                 flex: auto;
@@ -83,7 +89,7 @@
         &--gutters {
             margin: 0 - ($grid-gutter / 2);
 
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 padding: $grid-gutter / 2;
             }
         }
@@ -91,7 +97,7 @@
         &--gutters\@lg {
             margin: 0 - ($grid-gutter-lg / 2);
 
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 padding: $grid-gutter-lg / 2;
             }
         }
@@ -99,7 +105,7 @@
         &--gutters\@xl {
             margin: 0 - ($grid-gutter-xl / 2);
 
-            > .o-Grid-cell {
+            > .o-FlexGrid-cell {
                 padding: $grid-gutter-xl / 2;
             }
         }
