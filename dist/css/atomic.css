@@ -4223,9 +4223,9 @@ video {
     -webkit-transform: translateX(0);
             transform: translateX(0); } }
 
-.Switcher-content {
+.c-Switcher-content {
   display: none; }
-  .Switcher-content.is-active {
+  .c-Switcher-content.is-active {
     display: block; }
 
 /* visibility helpers */
