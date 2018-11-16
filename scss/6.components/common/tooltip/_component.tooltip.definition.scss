@@ -9,7 +9,7 @@ $tooltip-bottom: 2rem !default;
 $tooltip-popin-ani-time: 0.2s !default;
 $tooltip-popin-ani-type: linear !default;
 
-.Tooltip {
+.c-Tooltip {
     position: relative;
     display: inline-block;
 
@@ -50,12 +50,12 @@ $tooltip-popin-ani-type: linear !default;
 
     &:hover,
     &:focus {
-        .Tooltip-item {
+        .c-Tooltip-item {
             opacity: 1;
             visibility: visible;
         }
 
-        .Tooltip-itemInner {
+        .c-Tooltip-itemInner {
             animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }

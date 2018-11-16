@@ -1,5 +1,5 @@
-.Tooltip--right {
-    .Tooltip-item {
+.c-Tooltip--right {
+    .c-Tooltip-item {
         top: 50%;
         bottom: inherit;
         left: 115%;
@@ -9,7 +9,7 @@
         transform: translateY(-50%);
     }
 
-    .Tooltip-itemInner {
+    .c-Tooltip-itemInner {
         &::after {
             top: 50%;
             bottom: inherit;
@@ -22,21 +22,21 @@
 
     &:hover,
     &:focus {
-        .Tooltip-itemInner {
+        .c-Tooltip-itemInner {
             animation: popinRight $tooltip-popin-ani-time
                 $tooltip-popin-ani-type;
         }
     }
 }
 
-.Tooltip--bottom {
-    .Tooltip-item {
+.c-Tooltip--bottom {
+    .c-Tooltip-item {
         top: $tooltip-bottom;
         bottom: inherit;
         left: 0;
     }
 
-    .Tooltip-itemInner {
+    .c-Tooltip-itemInner {
         position: relative;
 
         &::after {
@@ -50,14 +50,14 @@
 
     &:hover,
     &:focus {
-        .Tooltip-itemInner {
+        .c-Tooltip-itemInner {
             animation: popinDown $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }
 }
 
-.Tooltip--left {
-    .Tooltip-item {
+.c-Tooltip--left {
+    .c-Tooltip-item {
         top: 50%;
         bottom: inherit;
         left: -115%;
@@ -67,7 +67,7 @@
         transform: translateY(-50%);
     }
 
-    .Tooltip-itemInner {
+    .c-Tooltip-itemInner {
         position: relative;
 
         &::after {
@@ -83,7 +83,7 @@
 
     &:hover,
     &:focus {
-        .Tooltip-itemInner {
+        .c-Tooltip-itemInner {
             animation: popinLeft $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }

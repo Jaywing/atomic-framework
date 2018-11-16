@@ -2613,10 +2613,10 @@ video {
   padding: 0;
   border: 0; }
 
-.Tooltip {
+.c-Tooltip {
   position: relative;
   display: inline-block; }
-  .Tooltip-item {
+  .c-Tooltip-item {
     position: absolute;
     z-index: 50;
     bottom: 2rem;
@@ -2637,7 +2637,7 @@ video {
     box-align: center;
     opacity: 0;
     visibility: hidden; }
-  .Tooltip-itemInner {
+  .c-Tooltip-itemInner {
     max-width: 10rem;
     -webkit-box-flex: 0;
     -webkit-flex: none;
@@ -2646,7 +2646,7 @@ video {
     padding: 0.5rem;
     background: #262626;
     color: #fff; }
-    .Tooltip-itemInner::after {
+    .c-Tooltip-itemInner::after {
       position: absolute;
       bottom: -10px;
       left: 50%;
@@ -2659,14 +2659,14 @@ video {
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%); }
-  .Tooltip:hover .Tooltip-item, .Tooltip:focus .Tooltip-item {
+  .c-Tooltip:hover .c-Tooltip-item, .c-Tooltip:focus .c-Tooltip-item {
     opacity: 1;
     visibility: visible; }
-  .Tooltip:hover .Tooltip-itemInner, .Tooltip:focus .Tooltip-itemInner {
+  .c-Tooltip:hover .c-Tooltip-itemInner, .c-Tooltip:focus .c-Tooltip-itemInner {
     -webkit-animation: popin 0.2s linear;
             animation: popin 0.2s linear; }
 
-.Tooltip--right .Tooltip-item {
+.c-Tooltip--right .c-Tooltip-item {
   top: 50%;
   bottom: inherit;
   left: 115%;
@@ -2683,7 +2683,7 @@ video {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.Tooltip--right .Tooltip-itemInner::after {
+.c-Tooltip--right .c-Tooltip-itemInner::after {
   top: 50%;
   bottom: inherit;
   left: -20px;
@@ -2693,29 +2693,29 @@ video {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.Tooltip--right:hover .Tooltip-itemInner, .Tooltip--right:focus .Tooltip-itemInner {
+.c-Tooltip--right:hover .c-Tooltip-itemInner, .c-Tooltip--right:focus .c-Tooltip-itemInner {
   -webkit-animation: popinRight 0.2s linear;
           animation: popinRight 0.2s linear; }
 
-.Tooltip--bottom .Tooltip-item {
+.c-Tooltip--bottom .c-Tooltip-item {
   top: 2rem;
   bottom: inherit;
   left: 0; }
 
-.Tooltip--bottom .Tooltip-itemInner {
+.c-Tooltip--bottom .c-Tooltip-itemInner {
   position: relative; }
-  .Tooltip--bottom .Tooltip-itemInner::after {
+  .c-Tooltip--bottom .c-Tooltip-itemInner::after {
     top: -20px;
     bottom: inherit;
     left: 50%;
     border: 10px solid transparent;
     border-bottom: 10px solid #262626; }
 
-.Tooltip--bottom:hover .Tooltip-itemInner, .Tooltip--bottom:focus .Tooltip-itemInner {
+.c-Tooltip--bottom:hover .c-Tooltip-itemInner, .c-Tooltip--bottom:focus .c-Tooltip-itemInner {
   -webkit-animation: popinDown 0.2s linear;
           animation: popinDown 0.2s linear; }
 
-.Tooltip--left .Tooltip-item {
+.c-Tooltip--left .c-Tooltip-item {
   top: 50%;
   bottom: inherit;
   left: -115%;
@@ -2732,9 +2732,9 @@ video {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.Tooltip--left .Tooltip-itemInner {
+.c-Tooltip--left .c-Tooltip-itemInner {
   position: relative; }
-  .Tooltip--left .Tooltip-itemInner::after {
+  .c-Tooltip--left .c-Tooltip-itemInner::after {
     top: 50%;
     right: -20px;
     bottom: inherit;
@@ -2745,7 +2745,7 @@ video {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
 
-.Tooltip--left:hover .Tooltip-itemInner, .Tooltip--left:focus .Tooltip-itemInner {
+.c-Tooltip--left:hover .c-Tooltip-itemInner, .c-Tooltip--left:focus .c-Tooltip-itemInner {
   -webkit-animation: popinLeft 0.2s linear;
           animation: popinLeft 0.2s linear; }
 
