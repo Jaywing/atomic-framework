@@ -3490,7 +3490,7 @@ video {
     text-rendering: optimizeLegibility;
     /* 3 */ }
 
-.Menu {
+.c-Menu {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -3508,107 +3508,107 @@ video {
       -ms-flex-align: center;
           align-items: center;
   margin: 1rem 0-0.5rem; }
-  .Menu:first-child {
+  .c-Menu:first-child {
     margin-top: 0; }
-  .Menu:last-child {
+  .c-Menu:last-child {
     margin-bottom: 0; }
-  .Menu input,
-  .Menu a,
-  .Menu button {
+  .c-Menu input,
+  .c-Menu a,
+  .c-Menu button {
     margin-bottom: 0; }
-  .Menu--right {
+  .c-Menu--right {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-  .Menu--center {
+  .c-Menu--center {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .Menu--expanded > .Menu-item {
+  .c-Menu--expanded > .c-Menu-item {
     min-width: 0;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 0%;
         -ms-flex: 1 1 0%;
             flex: 1 1 0%; }
-  .Menu--attached {
+  .c-Menu--attached {
     margin-bottom: 0; }
 
-.Menu-item {
+.c-Menu-item {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   padding: 0.5rem; }
-  .Menu-item--right {
+  .c-Menu-item--right {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin-left: auto !important; }
-  .Menu-item--left {
+  .c-Menu-item--left {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin-right: auto !important; }
 
-.Menu .Menu-item--flush > .Menu-link,
-.Menu .Menu-item--flush > .Menu-header {
+.c-Menu .c-Menu-item--flush > .c-Menu-link,
+.c-Menu .c-Menu-item--flush > .c-Menu-header {
   padding-right: 0;
   padding-left: 0; }
 
-.Menu-link {
+.c-Menu-link {
   display: block;
   padding: 0.5rem;
   border-radius: 4px;
   text-align: center;
   text-decoration: none; }
-  .Menu-link:not(.c-c-Text--disabled) {
+  .c-Menu-link:not(.c-c-Text--disabled) {
     background-color: transparent;
     color: #2561ea;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .Menu-link:not(.c-c-Text--disabled):hover, .Menu-link:not(.c-c-Text--disabled):focus {
+    .c-Menu-link:not(.c-c-Text--disabled):hover, .c-Menu-link:not(.c-c-Text--disabled):focus {
       background-color: rgba(0, 0, 0, 0.1);
       color: #1142b1; }
-  .Menu-link .o-Icon svg {
+  .c-Menu-link .o-Icon svg {
     fill: #2561ea; }
-  .is-active > .Menu-link, .Menu-link.is-active {
+  .is-active > .c-Menu-link, .c-Menu-link.is-active {
     background-color: #2561ea;
     color: #fff;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .is-active > .Menu-link:hover, .is-active > .Menu-link:focus, .Menu-link.is-active:hover, .Menu-link.is-active:focus {
+    .is-active > .c-Menu-link:hover, .is-active > .c-Menu-link:focus, .c-Menu-link.is-active:hover, .c-Menu-link.is-active:focus {
       background-color: #2561ea;
       color: #fff; }
 
-.Menu-header {
+.c-Menu-header {
   display: block;
   min-width: 100%;
   padding: 0.5rem;
   color: #000;
   font-weight: bold; }
-  .Menu-header a {
+  .c-Menu-header a {
     color: #000;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: color;
     transition-property: color;
     text-decoration: none; }
-    .Menu-header a:hover, .Menu-header a:focus {
+    .c-Menu-header a:hover, .c-Menu-header a:focus {
       color: #1142b1; }
 
-.Menu--vertical {
+.c-Menu--vertical {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-  .Menu--vertical .Menu-item {
+  .c-Menu--vertical .c-Menu-item {
     max-width: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;
@@ -3617,7 +3617,7 @@ video {
     padding: 0;
     margin: 0.16667rem 0;
     text-align: left; }
-  .Menu--vertical .Menu-link {
+  .c-Menu--vertical .c-Menu-link {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
@@ -3628,177 +3628,181 @@ video {
             justify-content: flex-start;
     padding: 0.5rem 0.5rem;
     text-align: inherit; }
-  .Menu--vertical .Menu-header {
+  .c-Menu--vertical .c-Menu-header {
     padding: 0.5rem 0.5rem;
     margin: 0.5rem 0 0; }
-    .Menu-item:first-child .Menu--vertical .Menu-header {
+    .c-Menu-item:first-child .c-Menu--vertical .c-Menu-header {
       margin-top: 0; }
-  .Menu--vertical .Menu {
+  .c-Menu--vertical .c-Menu {
     margin-top: 0;
     margin-left: 1rem; }
-    .Menu--vertical .Menu--flush {
+    .c-Menu--vertical .c-Menu--flush {
       margin-left: 0; }
-  .Menu--vertical.Menu--right .Menu-item,
-  .Menu--vertical.Menu--right .Menu-item--left {
+  .c-Menu--vertical.c-Menu--right .c-Menu-item,
+  .c-Menu--vertical.c-Menu--right .c-Menu-item--left {
     text-align: right; }
-    .Menu--vertical.Menu--right .Menu-item .Menu-header,
-    .Menu--vertical.Menu--right .Menu-item--left .Menu-header {
+    .c-Menu--vertical.c-Menu--right .c-Menu-item .c-Menu-header,
+    .c-Menu--vertical.c-Menu--right .c-Menu-item--left .c-Menu-header {
       display: block;
       width: 100%;
       text-align: right; }
-  .Menu--vertical.Menu--center .Menu-item {
+  .c-Menu--vertical.c-Menu--center .c-Menu-item {
     text-align: center; }
 
 @media (min-width: 30em) {
-  .Menu\@xs,
+  .c-Menu\@xs,
   .NavResponsive\@xs {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@xs > .Menu-item,
-    .NavResponsive\@xs > .Menu-item {
+    .c-Menu\@xs > .c-Menu-item,
+    .NavResponsive\@xs > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@xs > .Menu-item .Menu-link,
-    .NavResponsive\@xs > .Menu-item .Menu-link {
+    .c-Menu\@xs > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@xs > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@xs .Menu-header,
-    .NavResponsive\@xs .Menu-header {
+    .c-Menu\@xs .c-Menu-header,
+    .NavResponsive\@xs .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
 @media (min-width: 40em) {
-  .Menu\@sm,
+  .c-Menu\@sm,
   .NavResponsive\@sm {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@sm > .Menu-item,
-    .NavResponsive\@sm > .Menu-item {
+    .c-Menu\@sm > .c-Menu-item,
+    .NavResponsive\@sm > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@sm > .Menu-item .Menu-link,
-    .NavResponsive\@sm > .Menu-item .Menu-link {
+    .c-Menu\@sm > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@sm > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@sm .Menu-header,
-    .NavResponsive\@sm .Menu-header {
+    .c-Menu\@sm .c-Menu-header,
+    .NavResponsive\@sm .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
 @media (min-width: 48em) {
-  .Menu\@md, .NavResponsive\@md {
+  .c-Menu\@md,
+  .NavResponsive\@md {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@md > .Menu-item, .NavResponsive\@md > .Menu-item {
+    .c-Menu\@md > .c-Menu-item,
+    .NavResponsive\@md > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@md > .Menu-item .Menu-link, .NavResponsive\@md > .Menu-item .Menu-link {
+    .c-Menu\@md > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@md > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@md .Menu-header, .NavResponsive\@md .Menu-header {
+    .c-Menu\@md .c-Menu-header,
+    .NavResponsive\@md .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
 @media (min-width: 60em) {
-  .Menu\@lg,
+  .c-Menu\@lg,
   .NavResponsive\@lg {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@lg > .Menu-item,
-    .NavResponsive\@lg > .Menu-item {
+    .c-Menu\@lg > .c-Menu-item,
+    .NavResponsive\@lg > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@lg > .Menu-item .Menu-link,
-    .NavResponsive\@lg > .Menu-item .Menu-link {
+    .c-Menu\@lg > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@lg > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@lg .Menu-header,
-    .NavResponsive\@lg .Menu-header {
+    .c-Menu\@lg .c-Menu-header,
+    .NavResponsive\@lg .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
 @media (min-width: 73.75em) {
-  .Menu\@xl,
+  .c-Menu\@xl,
   .NavResponsive\@xl {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@xl > .Menu-item,
-    .NavResponsive\@xl > .Menu-item {
+    .c-Menu\@xl > .c-Menu-item,
+    .NavResponsive\@xl > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@xl > .Menu-item .Menu-link,
-    .NavResponsive\@xl > .Menu-item .Menu-link {
+    .c-Menu\@xl > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@xl > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@xl .Menu-header,
-    .NavResponsive\@xl .Menu-header {
+    .c-Menu\@xl .c-Menu-header,
+    .NavResponsive\@xl .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
 @media (min-width: 87.5em) {
-  .Menu\@xxl,
+  .c-Menu\@xxl,
   .NavResponsive\@xxl {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
-    .Menu\@xxl > .Menu-item,
-    .NavResponsive\@xxl > .Menu-item {
+    .c-Menu\@xxl > .c-Menu-item,
+    .NavResponsive\@xxl > .c-Menu-item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       padding: 0.5rem; }
-    .Menu\@xxl > .Menu-item .Menu-link,
-    .NavResponsive\@xxl > .Menu-item .Menu-link {
+    .c-Menu\@xxl > .c-Menu-item .c-Menu-link,
+    .NavResponsive\@xxl > .c-Menu-item .c-Menu-link {
       padding: 0.5rem; }
-    .Menu\@xxl .Menu-header,
-    .NavResponsive\@xxl .Menu-header {
+    .c-Menu\@xxl .c-Menu-header,
+    .NavResponsive\@xxl .c-Menu-header {
       padding: 0.5rem;
       margin: -0.5rem; } }
 
-.Menu--tabular {
+.c-Menu--tabular {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
-  .Menu--tabular .Menu-item {
+  .c-Menu--tabular .c-Menu-item {
     padding: 0;
     margin: 0 0.16667rem; }
-    .Menu--tabular .Menu-item:first-child {
+    .c-Menu--tabular .c-Menu-item:first-child {
       margin-left: 0; }
-    .Menu--tabular .Menu-item:last-child {
+    .c-Menu--tabular .c-Menu-item:last-child {
       margin-right: 0; }
-  .Menu--tabular .Menu-link {
+  .c-Menu--tabular .c-Menu-link {
     padding: 0.5rem 1rem;
     border: 1px solid transparent;
     border-bottom: 0;
     background: transparent;
     border-radius: 4px 4px 0 0; }
-  .Menu--tabular .is-active .Menu-link,
-  .Menu--tabular .Menu-link.is-active {
+  .c-Menu--tabular .is-active .c-Menu-link,
+  .c-Menu--tabular .c-Menu-link.is-active {
     padding-bottom: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-bottom: 0;
     margin-bottom: -2px;
     background: #fff;
     color: #1142b1; }
-  .Menu--tabular.Menu--vertical {
+  .c-Menu--tabular.c-Menu--vertical {
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     border-bottom: 0; }
-    .Menu--tabular.Menu--vertical .is-active .Menu-link,
-    .Menu--tabular.Menu--vertical .Menu-link.is-active {
+    .c-Menu--tabular.c-Menu--vertical .is-active .c-Menu-link,
+    .c-Menu--tabular.c-Menu--vertical .c-Menu-link.is-active {
       position: relative;
       left: -1px;
       border: 1px solid rgba(0, 0, 0, 0.15);
@@ -3937,12 +3941,12 @@ video {
     z-index: 50;
     top: 0;
     right: 0; }
-  .NavResponsive .Menu {
+  .NavResponsive .c-Menu {
     position: relative;
     overflow: hidden;
     max-height: 2.2rem;
     margin: 0; }
-  .NavResponsive.is-active .Menu {
+  .NavResponsive.is-active .c-Menu {
     max-height: 32.4rem; }
 
 @media (min-width: 30em) {
@@ -3952,8 +3956,8 @@ video {
     .NavResponsive\@xs .c-ToggleButton,
     .NavResponsive\@xs.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@xs .Menu,
-    .NavResponsive\@xs.is-active .Menu {
+    .NavResponsive\@xs .c-Menu,
+    .NavResponsive\@xs.is-active .c-Menu {
       max-height: none; } }
 
 @media (min-width: 40em) {
@@ -3963,8 +3967,8 @@ video {
     .NavResponsive\@sm .c-ToggleButton,
     .NavResponsive\@sm.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@sm .Menu,
-    .NavResponsive\@sm.is-active .Menu {
+    .NavResponsive\@sm .c-Menu,
+    .NavResponsive\@sm.is-active .c-Menu {
       max-height: none; } }
 
 @media (min-width: 48em) {
@@ -3974,8 +3978,8 @@ video {
     .NavResponsive\@md .c-ToggleButton,
     .NavResponsive\@md.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@md .Menu,
-    .NavResponsive\@md.is-active .Menu {
+    .NavResponsive\@md .c-Menu,
+    .NavResponsive\@md.is-active .c-Menu {
       max-height: none; } }
 
 @media (min-width: 60em) {
@@ -3985,8 +3989,8 @@ video {
     .NavResponsive\@lg .c-ToggleButton,
     .NavResponsive\@lg.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@lg .Menu,
-    .NavResponsive\@lg.is-active .Menu {
+    .NavResponsive\@lg .c-Menu,
+    .NavResponsive\@lg.is-active .c-Menu {
       max-height: none; } }
 
 @media (min-width: 73.75em) {
@@ -3996,8 +4000,8 @@ video {
     .NavResponsive\@xl .c-ToggleButton,
     .NavResponsive\@xl.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@xl .Menu,
-    .NavResponsive\@xl.is-active .Menu {
+    .NavResponsive\@xl .c-Menu,
+    .NavResponsive\@xl.is-active .c-Menu {
       max-height: none; } }
 
 @media (min-width: 87.5em) {
@@ -4007,8 +4011,8 @@ video {
     .NavResponsive\@xxl .c-ToggleButton,
     .NavResponsive\@xxl.is-active .c-ToggleButton {
       display: none; }
-    .NavResponsive\@xxl .Menu,
-    .NavResponsive\@xxl.is-active .Menu {
+    .NavResponsive\@xxl .c-Menu,
+    .NavResponsive\@xxl.is-active .c-Menu {
       max-height: none; } }
 
 @media all {

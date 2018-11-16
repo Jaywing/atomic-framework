@@ -8,10 +8,10 @@ $menu-tab-link-border-radius: $g-border-radius !default;
 $menu-tab-link-padding-x: $g-spacer !default;
 $menu-tab-link-padding-y: $g-spacer-sm !default;
 
-.Menu--tabular {
+.c-Menu--tabular {
     border-bottom: $menu-tab-border;
 
-    .Menu-item {
+    .c-Menu-item {
         padding: 0;
         margin: 0 $g-spacer-xxs;
 
@@ -24,7 +24,7 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
         }
     }
 
-    .Menu-link {
+    .c-Menu-link {
         padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
         border: $menu-tab-link-border;
         border-bottom: 0;
@@ -33,8 +33,8 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
             0 0;
     }
 
-    .is-active .Menu-link,
-    .Menu-link.is-active {
+    .is-active .c-Menu-link,
+    .c-Menu-link.is-active {
         padding-bottom: ($menu-tab-link-padding-y);
         border: $menu-tab-link-border-active;
         border-bottom: 0;
@@ -43,12 +43,12 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
         color: $menu-tab-link-active-color;
     }
 
-    &.Menu--vertical {
+    &.c-Menu--vertical {
         border-right: $menu-tab-link-border-active;
         border-bottom: 0;
 
-        .is-active .Menu-link,
-        .Menu-link.is-active {
+        .is-active .c-Menu-link,
+        .c-Menu-link.is-active {
             position: relative;
             left: -($menu-border-width);
             border: $menu-tab-link-border-active;

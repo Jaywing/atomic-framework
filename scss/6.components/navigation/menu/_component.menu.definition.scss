@@ -32,7 +32,7 @@ $menu-header-hover-color: $link-hover-color !default;
 // Component: Menu
 // ========================================================================
 
-.Menu {
+.c-Menu {
     @include trim-child-margins;
     @include reset-list;
 
@@ -59,7 +59,7 @@ $menu-header-hover-color: $link-hover-color !default;
     }
 
     &--expanded {
-        > .Menu-item {
+        > .c-Menu-item {
             min-width: 0;
             flex: 1 1 0%;
         }
@@ -70,7 +70,7 @@ $menu-header-hover-color: $link-hover-color !default;
     }
 }
 
-.Menu-item {
+.c-Menu-item {
     flex: 0 0 auto;
     padding: $menu-item-padding;
 
@@ -87,15 +87,15 @@ $menu-header-hover-color: $link-hover-color !default;
     }
 }
 
-.Menu .Menu-item--flush {
-    > .Menu-link,
-    > .Menu-header {
+.c-Menu .c-Menu-item--flush {
+    > .c-Menu-link,
+    > .c-Menu-header {
         padding-right: 0;
         padding-left: 0;
     }
 }
 
-.Menu-link {
+.c-Menu-link {
     &:not(.c-c-Text--disabled) {
         @include color-swap-on-hover(
             $menu-link-color $menu-link-bg,
@@ -124,7 +124,7 @@ $menu-header-hover-color: $link-hover-color !default;
     }
 }
 
-.Menu-header {
+.c-Menu-header {
     display: block;
     min-width: 100%;
     padding: $menu-header-padding;

@@ -86,8 +86,8 @@ index.njk         # prototype root file (homepage)
 
 <div class="docs-code docs-code--html">
   <pre><code class="html">&#123;% macro navItem(id, title, active='index', ready=false) %&#125;
-&lt;li class="Menu-item&#123;% if id == active %&#125; is-active&#123;% endif %&#125;"&gt;
-  &lt;a&#123;% if ready %&#125; href="&#123;&#123;id&#125;&#125;.html" class="Menu-link"&#123;% else %&#125; class="Menu-link c-Text--disabled"&#123;% endif %&#125;&gt;&#123;&#123;title&#125;&#125;&lt;/a&gt;
+&lt;li class="c-Menu-item&#123;% if id == active %&#125; is-active&#123;% endif %&#125;"&gt;
+  &lt;a&#123;% if ready %&#125; href="&#123;&#123;id&#125;&#125;.html" class="c-Menu-link"&#123;% else %&#125; class="c-Menu-link c-Text--disabled"&#123;% endif %&#125;&gt;&#123;&#123;title&#125;&#125;&lt;/a&gt;
 &lt;/li&gt;
 &#123;% endmacro %&#125;</code></pre>
 </div>

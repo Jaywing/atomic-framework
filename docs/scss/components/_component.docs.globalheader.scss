@@ -29,12 +29,12 @@ $doc-globalheader-bg: $c-jaywing-dark;
     }
 
     @include xs {
-        .Menu-item:not(.w-logo) {
+        .c-Menu-item:not(.w-logo) {
             max-width: 50%;
         }
     }
 
-    .Menu-link {
+    .c-Menu-link {
         display: block;
         padding: $g-spacer-sm;
         border: 1px solid rgba(#fff, 0);
@@ -62,7 +62,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
     }
 
     .is-active {
-        > .Menu-link {
+        > .c-Menu-link {
             background: rgba(#000, 0.33);
             border-color: rgba(#fff, 0.5);
             color: rgba(#fff, 1);

@@ -2,10 +2,10 @@ $menu-vertical-link-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
 
-.Menu--vertical {
+.c-Menu--vertical {
     flex-wrap: wrap;
 
-    .Menu-item {
+    .c-Menu-item {
         max-width: 100%;
         flex: 0 0 100%;
         padding: 0;
@@ -13,24 +13,24 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         text-align: left;
     }
 
-    .Menu-link {
+    .c-Menu-link {
         align-items: flex-start;
         justify-content: flex-start;
         padding: $menu-vertical-link-padding;
         text-align: inherit;
     }
 
-    .Menu-header {
+    .c-Menu-header {
         padding: $menu-vertical-title-padding;
         margin: $menu-vertical-title-margin;
 
-        .Menu-item:first-child & {
+        .c-Menu-item:first-child & {
             margin-top: 0;
         }
     }
 
     // Nested
-    .Menu {
+    .c-Menu {
         margin-top: 0;
         margin-left: $menu-margin-nested;
 
@@ -39,12 +39,12 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         }
     }
 
-    &.Menu--right {
-        .Menu-item,
-        .Menu-item--left {
+    &.c-Menu--right {
+        .c-Menu-item,
+        .c-Menu-item--left {
             text-align: right;
 
-            .Menu-header {
+            .c-Menu-header {
                 display: block;
                 width: 100%;
                 text-align: right;
@@ -52,7 +52,7 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         }
     }
 
-    &.Menu--center .Menu-item {
+    &.c-Menu--center .c-Menu-item {
         text-align: center;
     }
 }

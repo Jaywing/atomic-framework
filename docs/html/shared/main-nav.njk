@@ -7,9 +7,9 @@
 
           {{ ToggleButton('parent')}}
 
-          <ul class="Menu Menu--vertical Menu@sm">
+          <ul class="c-Menu c-Menu--vertical c-Menu@sm">
 
-            {{ menuHeader('Atomic', 'index.html', 'Menu-item--left Menu-item--flush') }}
+            {{ menuHeader('Atomic', 'index.html', 'c-Menu-item--left c-Menu-item--flush') }}
 
             {% for page in pages %}
               {{ menuLink(page.id, page.title, page.url, pageId, 'nav-item') }}
