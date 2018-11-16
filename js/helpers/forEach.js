@@ -5,8 +5,8 @@
  * @param {function} callback - Callback function (no need for explanation)
  */
 
-module.exports = function (array, callback) {
+module.exports = function(array, callback) {
   for (let i = 0, len = array.length; i < len; i++) {
-    callback(array[i])
+    callback(array[i]);
   }
-}
+};

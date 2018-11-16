@@ -1,43 +1,45 @@
 // https://gist.github.com/MoOx/8614711
-const createElement = function (options) {
-  let el,
-    a,
-    i
+const createElement = function(options) {
+  let el, a, i;
 
   if (!options.tagName) {
-    el = document.createDocumentFragment()
+    el = document.createDocumentFragment();
   } else {
-    el = document.createElement(options.tagName)
+    el = document.createElement(options.tagName);
     if (options.className) {
-      el.className = options.className
+      el.className = options.className;
     }
 
     if (options.attributes) {
       for (a in options.attributes) {
-        el.setAttribute(a, options.attributes[a])
+        el.setAttribute(a, options.attributes[a]);
       }
     }
 
     if (options.html !== undefined) {
-      el.innerHTML = options.html
+      el.innerHTML = options.html;
     }
   }
 
   if (options.text) {
-    el.appendChild(document.createTextNode(options.text))
+    el.appendChild(document.createTextNode(options.text));
   }
 
   // IE 8 doesn"t have HTMLElement
   if (window.HTMLElement === undefined) {
-    window.HTMLElement = Element
+    window.HTMLElement = Element;
   }
 
   if (options.childs && options.childs.length) {
     for (i = 0; i < options.childs.length; i++) {
-      el.appendChild(options.childs[i] instanceof window.HTMLElement ? options.childs[i] : createElement(options.childs[i]))
+      el.appendChild(
+        options.childs[i] instanceof window.HTMLElement
+          ? options.childs[i]
+          : createElement(options.childs[i])
+      );
     }
   }
-  return el
-}
+  return el;
+};
 
-module.exports = createElement
+module.exports = createElement;

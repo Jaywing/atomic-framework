@@ -1,7 +1,7 @@
-//
+//
 //    Default print styles
 //      from HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate
-//
+//
 
 // sass-lint:disable no-important
 @media print {
@@ -31,10 +31,10 @@
         }
     }
 
-    //
+    //
     // * Don't show links that are fragment identifiers,
     // * or use the `javascript:` pseudo protocol
-    //
+    //
     [href^='#']::after,
     [href^='javascript:']::after {
         content: '';
@@ -46,10 +46,10 @@
         page-break-inside: avoid;
     }
 
-    //
+    //
     // * Printing Tables:
     // * http://css-discuss.incutio.com/wiki/Printing_Tables
-    //
+    //
 
     thead {
         display: table-header-group;

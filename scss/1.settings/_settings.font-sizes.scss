@@ -21,7 +21,7 @@
 /// group-d: above 768px and a touch device (.touch)
 ///
 /// *Note: settings.media-queries.scss must be import before this one
-//
+//
 $base-font-size: $g-base-font-size !default;
 $base-line-height: 1.33 !default;
 
@@ -35,7 +35,6 @@ $fs-huge: (
     xxs: 46px,
     sm: 58px
 );
-
 $fs-h1: (
     null: (
         24px,
@@ -44,7 +43,6 @@ $fs-h1: (
     xxs: 26px,
     sm: 32px
 );
-
 $fs-h2: (
     null: (
         21px,
@@ -62,7 +60,6 @@ $fs-h3: (
     xxs: 20px,
     sm: 24px
 );
-
 $fs-h4: (
     null: (
         17px,
@@ -71,7 +68,6 @@ $fs-h4: (
     xxs: 20px,
     sm: 22px
 );
-
 $fs-body: (
     null: (
         15px,
@@ -83,7 +79,6 @@ $fs-body: (
 
 $gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs') !default;
 $gel-bp-type-c: map-get($g-mq-breakpoints, 'xxl') !default;
-
 $typography: (
     alpha: (
         base: (

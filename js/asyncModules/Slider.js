@@ -181,6 +181,8 @@ export default class Slider extends Module {
 
     // Set pip
     this.el.querySelector(".c-Slider-pip.Active").classList.remove("Active");
-    this.el.querySelectorAll(".c-Slider-pip")[sliderNum].classList.add("Active");
+    this.el
+      .querySelectorAll(".c-Slider-pip")
+      [sliderNum].classList.add("Active");
   }
 }
