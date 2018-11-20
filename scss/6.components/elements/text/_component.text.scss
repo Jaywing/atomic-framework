@@ -4,7 +4,7 @@ $text-disabled-color: $c-disabled-dark !default;
 $text-disabled-cursor: not-allowed !default;
 
 // sass-lint:disable no-important
-.c-Text {
+.c-text {
     &--lead {
         @include pica;
     }
@@ -23,7 +23,7 @@ $text-disabled-cursor: not-allowed !default;
     }
 
     /**
-   * c-Text truncation
+   * c-text truncation
    * Prevent text from wrapping onto multiple lines, and truncate with an
    * ellipsis.
    * 1. Ensure that the node has a maximum width after which truncation can

@@ -1,6 +1,6 @@
 {% macro navItem(id, title, active='index', ready=false) %}
   <li class="c-menu__item{% if id == active %} is-active{% endif %}">
-    <a{% if ready %} href="{{id}}.html" class="c-menu__link"{% else %} class="c-menu__link c-Text--disabled"{% endif %}>{{title}}</a>
+    <a{% if ready %} href="{{id}}.html" class="c-menu__link"{% else %} class="c-menu__link c-text--disabled"{% endif %}>{{title}}</a>
   </li>
 {% endmacro %}
 

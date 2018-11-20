@@ -14,11 +14,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
   <h1 class="Article-title">Font sizes</h1>
-  <p class="c-Text--lead">Overview of the default font size settings and how to use them.</p>
+  <p class="c-text--lead">Overview of the default font size settings and how to use them.</p>
 
   <hr class="Article-divider">
 
-  <h2 id="section:overview"><a herf="#section:overview" class="c-Text--resetLink">Overview</a></h2>
+  <h2 id="section:overview"><a herf="#section:overview" class="c-text--resetLink">Overview</a></h2>
 
   <p>Our approach to font sizes is inspired by <a href="http://www.bbc.co.uk/gel/guidelines/typography">BBC's gel typography guidelines</a>.</p>
   <p>We use a single type hierarchy that is scaled to work across all devices. We change type sizes based on screen size and device capabilities, such as whether it has a touch screen.</p>
@@ -29,7 +29,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <img src="/images/font-sizes.png" alt="Example of our font size hierarchy">
   </div>
 
-  <h2 id="section:size-matrix"><a herf="#section:size-matrix" class="c-Text--resetLink">Size matrix</a></h2>
+  <h2 id="section:size-matrix"><a herf="#section:size-matrix" class="c-text--resetLink">Size matrix</a></h2>
   <p>We size our type across the following four breakpoint groups to suit a range of devices and input methods:</p>
   <ul>
     <li><strong>Group A</strong> - Default sizing 0 - 319px (typically small phones)</li>
@@ -42,7 +42,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <p>The sizes shown below correspond to size and line-height (size/line-height) and are in pixels, based on a baseline of 72 pixels per inch (ppi). We recommend you set font sizes using relative units to allow for the changing nature of the user’s browser. This creates uniformity across different screen sizes and capabilities.</p>
 
   <div class="scrollXauto">
-    <table width="100%" class="c-Table c-Table--striped c-Text--left">
+    <table width="100%" class="c-Table c-Table--striped c-text--left">
       <thead>
       <tr>
         <th></th>
@@ -132,7 +132,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <p>This approach helps us easily communicate type choices in the development process, bridging the gap between designers and developers.</p>
 
-  <h2 id="section:mixins"><a herf="#section:mixins" class="c-Text--resetLink">Mixins</a></h2>
+  <h2 id="section:mixins"><a herf="#section:mixins" class="c-text--resetLink">Mixins</a></h2>
   <p>For each font-size there is a mixin to make it easy for you to set font-sizes.</p>
   <div class="c-code c-code--scss">
     <pre><code class="css">.Element {

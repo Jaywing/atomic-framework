@@ -96,7 +96,7 @@ $menu-header-hover-color: $link-hover-color !default;
 }
 
 .c-menu__link {
-    &:not(.c-c-Text--disabled) {
+    &:not(.c-c-text--disabled) {
         @include color-swap-on-hover(
             $menu-link-color $menu-link-bg,
             $menu-link-hover-color $menu-link-hover-bg,
