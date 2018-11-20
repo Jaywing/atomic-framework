@@ -2956,25 +2956,25 @@ video {
   .c-list:last-child {
     margin-bottom: 0; }
 
-.c-list__block > li, .c-list__block > a {
+.c-list--block > li, .c-list--block > a {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 0; }
 
-.c-list__block {
+.c-list--block {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
-  .c-list__block a {
+  .c-list--block a {
     display: block;
     padding: 0.5rem;
     text-decoration: none; }
-  .c-list__block > li {
+  .c-list--block > li {
     padding: 0.5rem; }
-    .c-list__block > li > a {
+    .c-list--block > li > a {
       margin: -0.5rem; }
 
-.c-list__divider > li {
+.c-list--divider > li {
   padding: 0.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
-  .c-list__divider > li:last-child {
+  .c-list--divider > li:last-child {
     border-bottom: 0; }
 
 .c-definition {
@@ -3834,7 +3834,7 @@ video {
   .c-Breadcrumbs__list::after {
     clear: both; }
 
-.c-SkipLink {
+.c-skip-link {
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -3846,7 +3846,7 @@ video {
   text-align: left;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-  .c-SkipLink:focus, .c-SkipLink:hover, .c-SkipLink:active {
+  .c-skip-link:focus, .c-skip-link:hover, .c-skip-link:active {
     z-index: 90;
     top: 0.5rem;
     left: 0.5rem;

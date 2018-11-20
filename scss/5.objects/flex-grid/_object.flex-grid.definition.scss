@@ -133,25 +133,18 @@ $grid-gutter-xl: $g-spacer-xl;
 // ========================================================================
 
 .o-flex-grid--gutters {
-    //margin-left: - ($grid-gutter / 2);
-    //margin-right: - ($grid-gutter / 2);
-
     > .o-flex-grid__cell {
         padding: $grid-gutter / 2;
     }
 }
 
 .o-flex-grid--gutters\@lg {
-    //margin: 0 - ($grid-gutter-lg / 2);
-
     > .o-flex-grid__cell {
         padding: $grid-gutter-lg / 2;
     }
 }
 
 .o-flex-grid--gutters\@xl {
-    //margin: 0 - ($grid-gutter-xl / 2);
-
     > .o-flex-grid__cell {
         padding: $grid-gutter-xl / 2;
     }
