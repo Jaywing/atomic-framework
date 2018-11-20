@@ -1,6 +1,6 @@
 $table-th-font-weight: $g-weight-bold !default;
 
-$table-cell-padding: $g-spacer-sm !default;
+$table__cell-padding: $g-spacer-sm !default;
 
 $table-caption-font-style: italic !default;
 
@@ -22,7 +22,7 @@ $table-caption-font-style: italic !default;
 
     td,
     th {
-        padding: $table-cell-padding;
+        padding: $table__cell-padding;
         text-align: left;
     }
 }

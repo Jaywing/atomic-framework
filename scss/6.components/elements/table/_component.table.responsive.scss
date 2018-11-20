@@ -41,7 +41,7 @@ $table-data-label-weight: $g-weight-bold !default;
         }
 
         td {
-            display: table-cell;
+            display: table__cell;
             text-align: left;
 
             &::before {

@@ -1,8 +1,8 @@
-$table-condensed-cell-padding: $g-spacer-xs !default;
+$table-condensed__cell-padding: $g-spacer-xs !default;
 
 .c-Table--condensed {
     td,
     th {
-        padding: $table-condensed-cell-padding;
+        padding: $table-condensed__cell-padding;
     }
 }

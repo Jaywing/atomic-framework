@@ -36,15 +36,15 @@
   {% block main %}
     <div class="o-Container o-Container--centered">
 
-      <div class="o-FlexGrid o-FlexGrid@md--reverse o-FlexGrid@md--gutters o-FlexGrid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-FlexGrid-cell o-Size@md--9">
+        <article class="o-flex-grid__cell o-Size@md--9">
           {% block content %}
 
           {% endblock %}
         </article>
 
-        <section class="o-FlexGrid-cell o-Size--full o-Size@md--3">
+        <section class="o-flex-grid__cell o-Size--full o-Size@md--3">
           {% block sidebar %}
             {% include 'shared/page-nav.njk' %}
           {% endblock %}
