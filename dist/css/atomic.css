@@ -747,14 +747,14 @@ p {
 
 a {
   text-decoration: underline; }
-  a:not(.c-c-text--disabled) {
+  a:not(.c-text--disabled) {
     color: #2561ea;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: color;
     transition-property: color;
     color: #2561ea; }
-    a:not(.c-c-text--disabled):hover, a:not(.c-c-text--disabled):focus {
+    a:not(.c-text--disabled):hover, a:not(.c-text--disabled):focus {
       color: #1142b1; }
 
 ul,
@@ -3565,14 +3565,14 @@ video {
   border-radius: 4px;
   text-align: center;
   text-decoration: none; }
-  .c-menu__link:not(.c-c-text--disabled) {
+  .c-menu__link:not(.c-text--disabled) {
     background-color: transparent;
     color: #2561ea;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
     -webkit-transition-property: background-color, color;
     transition-property: background-color, color; }
-    .c-menu__link:not(.c-c-text--disabled):hover, .c-menu__link:not(.c-c-text--disabled):focus {
+    .c-menu__link:not(.c-text--disabled):hover, .c-menu__link:not(.c-text--disabled):focus {
       background-color: rgba(0, 0, 0, 0.1);
       color: #1142b1; }
   .c-menu__link .o-icon svg {
