@@ -3023,11 +3023,11 @@ video {
     clear: both;
     content: ''; }
 
-.c-Table {
+.c-table {
   width: 100%;
   border-collapse: collapse; }
-  .c-Table caption,
-  .c-Table tfoot {
+  .c-table caption,
+  .c-table tfoot {
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 16px;
@@ -3035,33 +3035,33 @@ video {
     font-style: italic;
     text-align: left; }
     @media (min-width: 37.5em) {
-      .c-Table caption,
-      .c-Table tfoot {
+      .c-table caption,
+      .c-table tfoot {
         font-size: 13px;
         font-size: 0.8125rem; }
-        .no-touch .c-Table caption, .no-touch
-        .c-Table tfoot {
+        .no-touch .c-table caption, .no-touch
+        .c-table tfoot {
           font-size: 12px;
           font-size: 0.75rem; } }
-  .c-Table th {
+  .c-table th {
     font-weight: bold; }
-  .c-Table td,
-  .c-Table th {
+  .c-table td,
+  .c-table th {
     padding: 0.5rem;
     text-align: left; }
 
-.c-Table--divider td,
-.c-Table--divider th {
+.c-table--divider td,
+.c-table--divider th {
   border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
-.c-Table--striped tbody tr:nth-of-type(odd) {
+.c-table--striped tbody tr:nth-of-type(odd) {
   background: rgba(0, 0, 0, 0.15); }
 
-.c-Table--condensed td,
-.c-Table--condensed th {
+.c-table--condensed td,
+.c-table--condensed th {
   padding: 0.25rem; }
 
-.c-Table--yaxis {
+.c-table--yaxis {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3075,7 +3075,7 @@ video {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-  .c-Table--yaxis caption {
+  .c-table--yaxis caption {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3084,7 +3084,7 @@ video {
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%; }
-  .c-Table--yaxis thead {
+  .c-table--yaxis thead {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3095,7 +3095,7 @@ video {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0; }
-  .c-Table--yaxis tbody {
+  .c-table--yaxis tbody {
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -3108,7 +3108,7 @@ video {
             flex: 1;
     overflow-x: auto;
     overflow-y: hidden; }
-  .c-Table--yaxis tr {
+  .c-table--yaxis tr {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3129,10 +3129,10 @@ video {
         -ms-flex-negative: 0;
             flex-shrink: 0;
     white-space: nowrap; }
-  .c-Table--yaxis td {
+  .c-table--yaxis td {
     border-left: 0; }
 
-.c-Table--resp thead {
+.c-table--resp thead {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -3140,30 +3140,30 @@ video {
   padding: 0;
   margin: -1px; }
 
-.c-Table--resp tr {
+.c-table--resp tr {
   display: block; }
 
-.c-Table--resp td {
+.c-table--resp td {
   display: block;
   text-align: right; }
-  .c-Table--resp td::before {
+  .c-table--resp td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold; }
 
 @media (min-width: 48em) {
-  .c-Table--resp thead {
+  .c-table--resp thead {
     position: static;
     overflow: auto;
     width: auto;
     height: auto;
     margin: 0; }
-  .c-Table--resp tr {
+  .c-table--resp tr {
     display: table-row; }
-  .c-Table--resp td {
+  .c-table--resp td {
     display: table__cell;
     text-align: left; }
-    .c-Table--resp td::before {
+    .c-table--resp td::before {
       display: none; } }
 
 .c-form fieldset {

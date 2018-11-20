@@ -1,10 +1,10 @@
 $table-th-font-weight: $g-weight-bold !default;
 
-$table__cell-padding: $g-spacer-sm !default;
+$table-cell-padding: $g-spacer-sm !default;
 
 $table-caption-font-style: italic !default;
 
-.c-Table {
+.c-table {
     width: 100%;
     border-collapse: collapse;
 
@@ -22,7 +22,7 @@ $table-caption-font-style: italic !default;
 
     td,
     th {
-        padding: $table__cell-padding;
+        padding: $table-cell-padding;
         text-align: left;
     }
 }

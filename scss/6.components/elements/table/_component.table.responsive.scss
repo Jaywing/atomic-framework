@@ -1,6 +1,6 @@
 $table-data-label-weight: $g-weight-bold !default;
 
-.c-Table--resp {
+.c-table--resp {
     thead {
         position: absolute;
         overflow: hidden;
@@ -27,7 +27,7 @@ $table-data-label-weight: $g-weight-bold !default;
 }
 
 @include md {
-    .c-Table--resp {
+    .c-table--resp {
         thead {
             position: static;
             overflow: auto;
