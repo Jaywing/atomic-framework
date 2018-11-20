@@ -19,7 +19,7 @@ $button-hover-disabled-color: rgba($button-hover-color, 0.65) !default;
         @include color-swap-on-hover(
             transparent,
             $button-hover-hover-bg,
-            $g-trans-link-speed,
+            $g-trans__link-speed,
             true
         );
     }

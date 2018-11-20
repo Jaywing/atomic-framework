@@ -7,7 +7,7 @@ activeItem,
 activeClass) %}
 
   {% if menuItems | length %}
-    <ul class="c-Menu {{ classList }}">
+    <ul class="c-menu {{ classList }}">
       {% for item in menuItems %}
         {{ MenuItem(item, activeItem, activeClass) }}
       {% endfor %}

@@ -21,9 +21,9 @@ export default class Anchor extends Module {
 
   cacheDom() {
     return {
-      menu: this.el.querySelector("nav > .c-Menu"),
-      menuParent: this.el.querySelectorAll(".c-Menu-item"),
-      menuButton: this.el.querySelectorAll(".c-Menu-link"),
+      menu: this.el.querySelector("nav > .c-menu"),
+      menuParent: this.el.querySelectorAll(".c-menu__item"),
+      menuButton: this.el.querySelectorAll(".c-menu__link"),
       anchor: document.querySelectorAll("[data-scrollspy]")
     };
   }

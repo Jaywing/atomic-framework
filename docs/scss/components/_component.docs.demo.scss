@@ -70,13 +70,13 @@
         visibility: hidden;
     }
 
-    &.c-Sticky-item {
+    &.c-Sticky__item {
         min-width: auto;
     }
 }
 
-.c-Menu-item.is-active-alt {
-    .c-Menu-link {
+.c-menu__item.is-active-alt {
+    .c-menu__link {
         background: red;
         color: white;
         font-weight: bold;

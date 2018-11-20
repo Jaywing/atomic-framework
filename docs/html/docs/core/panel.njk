@@ -103,18 +103,18 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>It is possible to attached the panel to other attachable items, for example, the menu (in tabular format) component, to create a tab like component.</p>
 
 <div class="c-example">
-  <ul class="c-Menu c-Menu--tabular c-Menu--attached">
-    <li class="c-Menu-item is-active"><a href="#" class="c-Menu-link">One</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+  <ul class="c-menu c-menu--tabular c-menu--attached">
+    <li class="c-menu__item is-active"><a href="#" class="c-menu__link">One</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
   <div class="c-Panel c-Panel--box c-Panel--attached c-Panel--stacked">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="c-code"><pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--tabular c-Menu--attached&quot;&gt;
-  &lt;li class=&quot;c-Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+<div class="c-code"><pre><code class="html">&lt;ul class=&quot;c-menu c-menu--tabular c-menu--attached&quot;&gt;
+  &lt;li class=&quot;c-menu__item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ....
 &lt;/ul&gt;
 &lt;div class=&quot;c-Panel c-Panel--box c-Panel--attached&quot;&gt;
@@ -187,10 +187,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>The hides all of the children panels unless given a <code>is-active</code> class. This can be used with the <a href="switcher.html">switcher</a> module to create simple tabs.</p>
 
 <div class="c-example">
-  <ul class="c-Menu" data-module="Switcher">
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Panel 1</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Panel 2</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Panel 3</a></li>
+  <ul class="c-menu" data-module="Switcher">
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Panel 1</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Panel 2</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Panel 3</a></li>
   </ul>
 
   <div class="Panels Panels--hidden">
@@ -207,10 +207,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code c-code--html">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot; data-module=&quot;Switcher&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;c-Panel 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;c-Panel 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;c-Panel 3&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot; data-module=&quot;Switcher&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;Panels Panels--hidden&quot;&gt;

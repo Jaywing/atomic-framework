@@ -20,7 +20,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2 id="section:usage"><a href="#section:usage" class="c-Text--resetLink">Usage</a></h2>
 
-<p>The breadcrumb component consists of a <code>.c-Breadcrumbs</code> parent component which is in a <code>nav</code> tag. This wraps a <code>.c-Breadcrumbs-list</code> list tag with children that have the <code>.c-Breadcrumbs-item</code> class.</p>
+<p>The breadcrumb component consists of a <code>.c-Breadcrumbs</code> parent component which is in a <code>nav</code> tag. This wraps a <code>.c-Breadcrumbs__list</code> list tag with children that have the <code>.c-Breadcrumbs__item</code> class.</p>
 
 <p>Variables in component.breadcrumbs.definition.scss give you control over a great deal of parameters include spacer icon, spacing and text decoration.</p>
 
@@ -30,21 +30,21 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-code c-code--html">
 <pre><code class="html">&lt;nav class=&quot;c-Breadcrumbs&quot; aria-label=&quot;You are here:&quot; role=&quot;navigation&quot;&gt;
-  &lt;ol class=&quot;c-Breadcrumbs-list&quot; itemscope itemtype=&quot;http://schema.org/BreadcrumbList&quot; itemListOrder=&quot;Hierarchical&quot;&gt;
-    &lt;li class=&quot;c-Breadcrumbs-item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+  &lt;ol class=&quot;c-Breadcrumbs__list&quot; itemscope itemtype=&quot;http://schema.org/BreadcrumbList&quot; itemListOrder=&quot;Hierarchical&quot;&gt;
+    &lt;li class=&quot;c-Breadcrumbs__item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
       &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
         &lt;span itemprop=&quot;name&quot;&gt;Home&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;c-Breadcrumbs-item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+    &lt;li class=&quot;c-Breadcrumbs__item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
       &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
         &lt;span itemprop=&quot;name&quot;&gt;Features&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;c-Breadcrumbs-item disabled&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+    &lt;li class=&quot;c-Breadcrumbs__item disabled&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
         &lt;span itemprop=&quot;name&quot;&gt;Gene Splicing&lt;/span&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;c-Breadcrumbs-item--current&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
+    &lt;li class=&quot;c-Breadcrumbs__item--current&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
       &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
         &lt;span itemprop=&quot;name&quot; aria-label=&quot;Current:&quot;&gt;Cloning&lt;/span&gt;
       &lt;/a&gt;
@@ -56,21 +56,21 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Example</h3>
 
 <nav class="c-Breadcrumbs" aria-label="You are here:">
-  <ol class="c-Breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList" itemListOrder="Hierarchical">
-    <li class="c-Breadcrumbs-item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+  <ol class="c-Breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList" itemListOrder="Hierarchical">
+    <li class="c-Breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
       <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
         <span itemprop="name">Home</span>
       </a>
     </li>
-    <li class="c-Breadcrumbs-item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+    <li class="c-Breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
       <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
         <span itemprop="name">Features</span>
       </a>
     </li>
-    <li class="c-Breadcrumbs-item disabled" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+    <li class="c-Breadcrumbs__item disabled" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
         <span itemprop="name">Gene Splicing</span>
     </li>
-    <li class="c-Breadcrumbs-item--current" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+    <li class="c-Breadcrumbs__item--current" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
       <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
         <span itemprop="name" aria-label="Current:">Cloning</span>
       </a>

@@ -1,18 +1,18 @@
 .t-Sidenav {
     padding-right: $g-spacer;
 
-    .c-Menu-title {
+    .c-menu-title {
         display: block;
         padding: $g-spacer-sm $g-spacer-sm $g-spacer-xs;
     }
 
-    .c-Menu-item {
+    .c-menu__item {
         margin-top: 0;
         margin-bottom: 0;
         margin-left: -($g-spacer-sm);
     }
 
-    .c-Menu--vertical {
+    .c-menu--vertical {
         position: relative;
         left: $g-spacer-sm;
     }

@@ -32,17 +32,17 @@
 /// (By default, a single value will be interpreted as color.)
 ///
 /// @example scss - Usage - changes color of **text** from dark to light on hover/focus with no transition
-///   .my-link {
+///   .my__link {
 ///     @include color-swap-on-hover($color-dark, $color-light);
 ///   }
 ///
 /// @example scss - Usage - changes color of **background** from dark to light on hover/focus with 0.5 second transition
-///   .my-link {
+///   .my__link {
 ///     @include color-swap-on-hover($color-dark, $color-light, 0.5s,true);
 ///   }
 ///
 /// @example scss - Usage - changes color element from **light on dark** to **dark on light** on hover with a 300ms tranition
-///   .my-link {
+///   .my__link {
 ///     @include color-swap-on-hover($color-dark $color-light, $color-light $color-dark, 300ms);
 ///   }
 

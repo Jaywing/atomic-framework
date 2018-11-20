@@ -30,7 +30,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       {
         "text": "My simple menu",
         "header": true,
-        "classList": "c-Menu-item--left"
+        "classList": "c-menu__item--left"
       },
       {
         "text": "Home"
@@ -42,7 +42,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         "linkClassList": " "
       }
     ],
-    'c-Menu--right',
+    'c-menu--right',
     'item2'
   ) }}
 
@@ -65,8 +65,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -82,7 +82,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <h3>Item alignment</h3>
-<h4>Right align (.c-Menu--right)</h4>
+<h4>Right align (.c-menu--right)</h4>
 
 <div class="c-example">
 
@@ -93,14 +93,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--right"
+    "c-menu--right"
   ) }}
 
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--right&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--right&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -111,7 +111,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     { "text": "Three", "url": "#" },
     { "text": "Four", "url": "#" }
   ],
-  "c-Menu--right"
+  "c-menu--right"
 ) &#125;&#125;</code></pre>
 </div>
 
@@ -126,14 +126,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--center"
+    "c-menu--center"
   ) }}
 
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--center&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--center&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -144,11 +144,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     { "text": "Three", "url": "#" },
     { "text": "Four", "url": "#" }
   ],
-  "c-Menu--center"
+  "c-menu--center"
 ) &#125;&#125;</code></pre>
 </div>
 
-<h4>Expanded (.c-Menu--expanded)</h4>
+<h4>Expanded (.c-menu--expanded)</h4>
 
 <div class="c-example">
 
@@ -157,7 +157,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "One", "url": "#" },
       { "text": "Two", "url": "#" }
     ],
-    "c-Menu--expanded"
+    "c-menu--expanded"
   ) }}
 
   {{ Menu(
@@ -166,7 +166,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Two", "url": "#" },
       { "text": "Three", "url": "#" }
     ],
-    "c-Menu--expanded"
+    "c-menu--expanded"
   ) }}
 
   {{ Menu(
@@ -176,14 +176,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-  "c-Menu--expanded"
+  "c-menu--expanded"
   ) }}
 
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--expanded&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--expanded&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -194,11 +194,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     { "text": "Three", "url": "#" },
     { "text": "Four", "url": "#" }
   ],
-  "c-Menu--expanded"
+  "c-menu--expanded"
 ) &#125;&#125;</code></pre>
 </div>
 
-<h4>Menu item alignment (.c-Menu-item--right & .c-Menu-item--left)</h4>
+<h4>Menu item alignment (.c-menu__item--right & .c-menu__item--left)</h4>
 
 <div class="c-example">
 
@@ -207,43 +207,43 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "One", "url": "#" },
       { "text": "Two", "url": "#" },
       { "text": "Three", "url": "#" },
-      { "text": "Four", "url": "#", "classList": "c-Menu-item--right" }
+      { "text": "Four", "url": "#", "classList": "c-menu__item--right" }
     ]
   ) }}
 
   {{ Menu(
     [
-      { "text": "One", "url": "#", "classList": "c-Menu-item--left" },
+      { "text": "One", "url": "#", "classList": "c-menu__item--left" },
       { "text": "Two", "url": "#" },
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    'c-Menu--right'
+    'c-menu--right'
   ) }}
 
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-  &lt;li class=&quot;c-Menu-item c-Menu-item--right&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item c-menu__item--right&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;ul class=&quot;c-Menu c-Menu--right&quot;&gt;
-  &lt;li class=&quot;c-Menu-item c-Menu-item--left&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+&lt;ul class=&quot;c-menu c-menu--right&quot;&gt;
+  &lt;li class=&quot;c-menu__item c-menu__item--left&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &#123;&#123; Menu(
   [
-    { "text": "One", "url": "#", "classList": "c-Menu-item--left" },
+    { "text": "One", "url": "#", "classList": "c-menu__item--left" },
     { "text": "Two", "url": "#" },
     { "text": "Three", "url": "#" },
     { "text": "Four", "url": "#" }
   ],
-  "c-Menu--right"
+  "c-menu--right"
 ) &#125;&#125;</code></pre>
 </div>
 
@@ -265,15 +265,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;span class=&quot;c-Menu-title&quot;&gt;c-Menu title&lt;/span&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;span class=&quot;c-menu-title&quot;&gt;c-menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
 &#123;&#123; Menu(
   [
-    { "id": "one", "text": "One", "url": "#", "classList": "c-Menu-item--left" },
+    { "id": "one", "text": "One", "url": "#", "classList": "c-menu__item--left" },
     { "id": "two", "text": "Two", "url": "#" },
     { "id": "three", "text": "Three", "url": "#" },
     { "id": "four", "text": "Four", "url": "#" }
@@ -283,13 +283,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 ) &#125;&#125;</code></pre>
 </div>
 
-<h4>Menu header (.c-Menu-header)</h4>
+<h4>Menu header (.c-menu__header)</h4>
 
 <div class="c-example">
 
   {{ Menu(
     [
-      { "text": "c-Menu header", "header": true },
+      { "text": "c-menu header", "header": true },
       { "text": "One", "url": "#" },
       { "text": "Two", "url": "#" },
       { "text": "Three", "url": "#" },
@@ -300,9 +300,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;span class=&quot;c-Menu-title&quot;&gt;c-Menu title&lt;/span&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;span class=&quot;c-menu-title&quot;&gt;c-menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -329,15 +329,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--vertical"
+    "c-menu--vertical"
   ) }}
 
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--vertical&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;span class=&quot;c-Menu-header&quot;&gt;c-Menu header&lt;/span&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--vertical&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;span class=&quot;c-menu__header&quot;&gt;c-menu header&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -349,43 +349,43 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     { "text": "Three", "url": "#" },
     { "text": "Four", "url": "#" }
   ],
-  "c-Menu--vertical"
+  "c-menu--vertical"
 ) &#125;&#125;</code></pre>
 </div>
 
 <h4>Vertical nested menu</h4>
 
 <div class="c-example">
-  <ul class="c-Menu c-Menu--vertical c-Demo">
-    <li class="c-Menu-item"><span class="c-Menu-header">Menu header</span></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a>
-      <ul class="c-Menu c-Menu--vertical c-Demo">
-        <li class="c-Menu-item"><span class="c-Menu-header">Menu header</span></li>
-        <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a></li>
-        <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
+  <ul class="c-menu c-menu--vertical c-Demo">
+    <li class="c-menu__item"><span class="c-menu__header">Menu header</span></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">One</a>
+      <ul class="c-menu c-menu--vertical c-Demo">
+        <li class="c-menu__item"><span class="c-menu__header">Menu header</span></li>
+        <li class="c-menu__item"><a href="#" class="c-menu__link">One</a></li>
+        <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
       </ul>
     </li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
 </div>
 
-<h4>Vertical flush nested menu (.c-Menu--flush)</h4>
+<h4>Vertical flush nested menu (.c-menu--flush)</h4>
 
 <div class="c-example">
-  <ul class="c-Menu c-Menu--vertical c-Demo">
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a>
-      <ul class="c-Menu c-Menu--vertical c-Menu--flush c-Demo">
-        <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a></li>
-        <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
+  <ul class="c-menu c-menu--vertical c-Demo">
+    <li class="c-menu__item"><a href="#" class="c-menu__link">One</a>
+      <ul class="c-menu c-menu--vertical c-menu--flush c-Demo">
+        <li class="c-menu__item"><a href="#" class="c-menu__link">One</a></li>
+        <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
       </ul>
     </li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
 </div>
 
-<h4>Responsive menu (.c-Menu@xs, .c-Menu@sm, .c-Menu@md,. c-Menu@lg)</h4>
+<h4>Responsive menu (.c-menu@xs, .c-menu@sm, .c-menu@md,. c-menu@lg)</h4>
 
 <div class="c-example">
   {{ Menu(
@@ -396,7 +396,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--vertical c-Menu@xs"
+    "c-menu--vertical c-menu@xs"
   ) }}
   {{ Menu(
     [
@@ -406,7 +406,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--vertical c-Menu@sm"
+    "c-menu--vertical c-menu@sm"
   ) }}
   {{ Menu(
     [
@@ -416,7 +416,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--vertical c-Menu@md"
+    "c-menu--vertical c-menu@md"
   ) }}
   {{ Menu(
     [
@@ -426,7 +426,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
       { "text": "Three", "url": "#" },
       { "text": "Four", "url": "#" }
     ],
-    "c-Menu--vertical c-Menu@lg"
+    "c-menu--vertical c-menu@lg"
   ) }}
 
 </div>
@@ -447,8 +447,8 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;
 
@@ -478,10 +478,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;
-      &lt;span class="o-Icon o-Icon--sc-facebook "&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;
+      &lt;span class="o-icon o-icon--sc-facebook "&gt;
         &lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#sc-facebook"&gt;&lt;/use&gt;&lt;/svg&gt;
       &lt;/span&gt;
     &lt;/a&gt;
@@ -500,43 +500,43 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 
-<h3>Tabular menu (.c-Menu--tabular)</h3>
+<h3>Tabular menu (.c-menu--tabular)</h3>
 
 <div class="c-example">
 
-  <ul class="c-Menu c-Menu--tabular">
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a></li>
-    <li class="c-Menu-item is-active"><a href="#" class="c-Menu-link">Two</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+  <ul class="c-menu c-menu--tabular">
+    <li class="c-menu__item"><a href="#" class="c-menu__link">One</a></li>
+    <li class="c-menu__item is-active"><a href="#" class="c-menu__link">Two</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
 
   <div class="o-Section--tall o-Size--1of5">
-    <ul class="c-Menu c-Menu--vertical c-Menu--tabular">
-      <li class="c-Menu-item"><a href="#" class="c-Menu-link">One</a></li>
-      <li class="c-Menu-item is-active"><a href="#" class="c-Menu-link">Two</a></li>
-      <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+    <ul class="c-menu c-menu--vertical c-menu--tabular">
+      <li class="c-menu__item"><a href="#" class="c-menu__link">One</a></li>
+      <li class="c-menu__item is-active"><a href="#" class="c-menu__link">Two</a></li>
+      <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
     </ul>
   </div>
 
 </div>
 
-<h3>Attached menu (<code>.c-Menu--attached</code>)</h3>
+<h3>Attached menu (<code>.c-menu--attached</code>)</h3>
 
 <p>It is possible to attached the menu to other attachable items, for example, the panel component, to create a tab like component.</p>
 
 <div class="c-example">
-  <ul class="c-Menu c-Menu--tabular c-Menu--attached">
-    <li class="c-Menu-item is-active"><a href="#" class="c-Menu-link">One</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Two</a></li>
-    <li class="c-Menu-item"><a href="#" class="c-Menu-link">Three</a></li>
+  <ul class="c-menu c-menu--tabular c-menu--attached">
+    <li class="c-menu__item is-active"><a href="#" class="c-menu__link">One</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
   <div class="c-Panel c-Panel--box c-Panel--attached c-Panel--stacked">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="c-code"><pre><code class="html">&lt;ul class=&quot;c-Menu c-Menu--tabular c-Menu--attached&quot;&gt;
-  &lt;li class=&quot;c-Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+<div class="c-code"><pre><code class="html">&lt;ul class=&quot;c-menu c-menu--tabular c-menu--attached&quot;&gt;
+  &lt;li class=&quot;c-menu__item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ....
 &lt;/ul&gt;
 &lt;div class=&quot;c-Panel c-Panel--box c-Panel--attached c-Panel--stacked&quot;&gt;
@@ -544,9 +544,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 &lt;/div&gt;</code></pre></div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;ul class=&quot;c-Menu&quot;&gt;
-  &lt;li class=&quot;c-Menu-item&quot;&gt;&lt;span class=&quot;c-Menu-title&quot;&gt;c-Menu title&lt;/span&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-Menu-item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-Menu-link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+  <pre><code class="html">&lt;ul class=&quot;c-menu&quot;&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;span class=&quot;c-menu-title&quot;&gt;c-menu title&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ...
 &lt;/ul&gt;</code></pre>
 </div>
@@ -563,67 +563,67 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </thead>
     <tbody>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu</code></th>
+      <th class="c-Text--left"><code>.c-menu</code></th>
       <td>Set Menu to use flexbox and aligns items to the left by default</td>
       <td class="c-Text--right">Component</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu[@xs,@sm,@md,@lg]</code></th>
-      <td>Used in conjunction with c-Menu--vertical to break to horizonal at 480px, 640px, 768px or 960px</td>
+      <th class="c-Text--left"><code>.c-menu[@xs,@sm,@md,@lg]</code></th>
+      <td>Used in conjunction with c-menu--vertical to break to horizonal at 480px, 640px, 768px or 960px</td>
       <td class="c-Text--right">Responsive modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu--right</code></th>
+      <th class="c-Text--left"><code>.c-menu--right</code></th>
       <td>Aligns items to the right</td>
       <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu--center</code></th>
+      <th class="c-Text--left"><code>.c-menu--center</code></th>
       <td>Aligns items centrally</td>
       <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu--expanded</code></th>
+      <th class="c-Text--left"><code>.c-menu--expanded</code></th>
       <td>Menu items expand to fill the available space</td>
       <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu--vertical</code></th>
+      <th class="c-Text--left"><code>.c-menu--vertical</code></th>
       <td>Aligned menu items vertically in a stacked menu</td>
       <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu--flush</code></th>
+      <th class="c-Text--left"><code>.c-menu--flush</code></th>
       <td>Removes the left margin of a nested vertical menu</td>
       <td class="c-Text--right">Component modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-item</code></th>
+      <th class="c-Text--left"><code>.c-menu__item</code></th>
       <td>A menu item</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-item--right</code></th>
+      <th class="c-Text--left"><code>.c-menu__item--right</code></th>
       <td>Aligns menu item to the right if the menu is left aligned</td>
       <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-item--left</code></th>
+      <th class="c-Text--left"><code>.c-menu__item--left</code></th>
       <td>Aligns menu item to the left if the menu is right aligned</td>
       <td class="c-Text--right">Sub-element modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-item.is-active</code></th>
+      <th class="c-Text--left"><code>.c-menu__item.is-active</code></th>
       <td>A active menu item</td>
       <td class="c-Text--right">Active state</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-link</code></th>
+      <th class="c-Text--left"><code>.c-menu__link</code></th>
       <td>A menu link</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Menu-header</code></th>
+      <th class="c-Text--left"><code>.c-menu__header</code></th>
       <td>A menu header</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>

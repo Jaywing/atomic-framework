@@ -6,7 +6,7 @@ export default class Sticky extends Module {
     const defaults = {
       offsetTop: 0,
       bpStart: "gtBase",
-      stickyItem: "c-Sticky-item",
+      stickyItem: "c-Sticky__item",
       stickyClass: "is-sticky"
     };
     super(el, name, options, defaults);
@@ -18,7 +18,7 @@ export default class Sticky extends Module {
    * @function
    */
   init() {
-    var mySticky = new StickyJS(".c-Sticky-item");
+    var mySticky = new StickyJS(".c-Sticky__item");
     mySticky.update();
     console.log(`${this.name} has initialised`);
   }

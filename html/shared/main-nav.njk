@@ -7,12 +7,12 @@
 
           {{ ToggleButton('parent')}}
 
-          <ul class="c-Menu c-Menu--vertical c-Menu@sm">
+          <ul class="c-menu c-menu--vertical c-menu@sm">
 
-            {{ menuHeader('Atomic', 'index.html', 'c-Menu-item--left c-Menu-item--flush') }}
+            {{ menuHeader('Atomic', 'index.html', 'c-menu__item--left c-menu__item--flush') }}
 
             {% for page in pages %}
-              {{ menuLink(page.id, page.title, page.url, pageId, 'nav-item') }}
+              {{ menuLink(page.id, page.title, page.url, pageId, 'nav__item') }}
             {% endfor %}
 
           </ul>

@@ -8,7 +8,7 @@ $form-icon-margin: -15px 0 0 !default;
     display: inline-block;
     max-width: 100%;
 
-    [class*='o-Icon'] {
+    [class*='o-icon'] {
         position: absolute;
         top: 50%;
         width: $form-icon-width;
@@ -23,7 +23,7 @@ $form-icon-margin: -15px 0 0 !default;
     }
 
     &--flip {
-        [class*='o-Icon'] {
+        [class*='o-icon'] {
             right: 0;
         }
 

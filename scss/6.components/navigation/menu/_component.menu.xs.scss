@@ -1,18 +1,18 @@
 @include xs {
-    .c-Menu\@xs,
+    .c-menu\@xs,
     .c-NavResponsive\@xs {
         flex-wrap: nowrap;
 
-        > .c-Menu-item {
+        > .c-menu__item {
             flex: 0 0 auto;
             padding: $menu-item-padding;
         }
 
-        > .c-Menu-item .c-Menu-link {
+        > .c-menu__item .c-menu__link {
             padding: $menu-link-padding;
         }
 
-        .c-Menu-header {
+        .c-menu__header {
             padding: $menu-header-padding;
             margin: -($menu-header-padding);
         }

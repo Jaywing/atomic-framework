@@ -13,7 +13,7 @@ $tooltip-popin-ani-type: linear !default;
     position: relative;
     display: inline-block;
 
-    &-item {
+    &__item {
         position: absolute;
         z-index: $tooltop-z-index;
         bottom: $tooltip-bottom;
@@ -50,7 +50,7 @@ $tooltip-popin-ani-type: linear !default;
 
     &:hover,
     &:focus {
-        .c-Tooltip-item {
+        .c-Tooltip__item {
             opacity: 1;
             visibility: visible;
         }

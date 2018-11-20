@@ -18,7 +18,7 @@ $nav-responsive-menu-open-maxheight: 32.4rem;
         right: $nav-responsive-toggle-right;
     }
 
-    .c-Menu {
+    .c-menu {
         position: relative;
         overflow: hidden;
         max-height: $nav-responsive-menu-closed-maxheight;
@@ -26,7 +26,7 @@ $nav-responsive-menu-open-maxheight: 32.4rem;
     }
 
     &.is-active {
-        .c-Menu {
+        .c-menu {
             max-height: $nav-responsive-menu-open-maxheight;
         }
     }

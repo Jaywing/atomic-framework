@@ -1,17 +1,17 @@
 $menu-border-width: 1px !default;
 $menu-tab-border: $menu-border-width solid $c-border !default;
-$menu-tab-link-border: $menu-border-width solid transparent !default;
-$menu-tab-link-border-active: $menu-tab-border !default;
-$menu-tab-link-active-bg: $c-light !default;
-$menu-tab-link-active-color: $link-hover-color !default;
-$menu-tab-link-border-radius: $g-border-radius !default;
-$menu-tab-link-padding-x: $g-spacer !default;
-$menu-tab-link-padding-y: $g-spacer-sm !default;
+$menu-tab__link-border: $menu-border-width solid transparent !default;
+$menu-tab__link-border-active: $menu-tab-border !default;
+$menu-tab__link-active-bg: $c-light !default;
+$menu-tab__link-active-color: $link-hover-color !default;
+$menu-tab__link-border-radius: $g-border-radius !default;
+$menu-tab__link-padding-x: $g-spacer !default;
+$menu-tab__link-padding-y: $g-spacer-sm !default;
 
-.c-Menu--tabular {
+.c-menu--tabular {
     border-bottom: $menu-tab-border;
 
-    .c-Menu-item {
+    .c-menu__item {
         padding: 0;
         margin: 0 $g-spacer-xxs;
 
@@ -24,38 +24,38 @@ $menu-tab-link-padding-y: $g-spacer-sm !default;
         }
     }
 
-    .c-Menu-link {
-        padding: $menu-tab-link-padding-y $menu-tab-link-padding-x;
-        border: $menu-tab-link-border;
+    .c-menu__link {
+        padding: $menu-tab__link-padding-y $menu-tab__link-padding-x;
+        border: $menu-tab__link-border;
         border-bottom: 0;
         background: transparent;
-        border-radius: $menu-tab-link-border-radius $menu-tab-link-border-radius
+        border-radius: $menu-tab__link-border-radius $menu-tab__link-border-radius
             0 0;
     }
 
-    .is-active .c-Menu-link,
-    .c-Menu-link.is-active {
-        padding-bottom: ($menu-tab-link-padding-y);
-        border: $menu-tab-link-border-active;
+    .is-active .c-menu__link,
+    .c-menu__link.is-active {
+        padding-bottom: ($menu-tab__link-padding-y);
+        border: $menu-tab__link-border-active;
         border-bottom: 0;
         margin-bottom: -($menu-border-width + 1);
-        background: $menu-tab-link-active-bg;
-        color: $menu-tab-link-active-color;
+        background: $menu-tab__link-active-bg;
+        color: $menu-tab__link-active-color;
     }
 
-    &.c-Menu--vertical {
-        border-right: $menu-tab-link-border-active;
+    &.c-menu--vertical {
+        border-right: $menu-tab__link-border-active;
         border-bottom: 0;
 
-        .is-active .c-Menu-link,
-        .c-Menu-link.is-active {
+        .is-active .c-menu__link,
+        .c-menu__link.is-active {
             position: relative;
             left: -($menu-border-width);
-            border: $menu-tab-link-border-active;
+            border: $menu-tab__link-border-active;
             border-right: 0;
             margin-bottom: 0;
-            border-radius: $menu-tab-link-border-radius 0 0
-                $menu-tab-link-border-radius;
+            border-radius: $menu-tab__link-border-radius 0 0
+                $menu-tab__link-border-radius;
         }
     }
 }

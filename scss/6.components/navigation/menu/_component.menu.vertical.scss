@@ -1,11 +1,11 @@
-$menu-vertical-link-padding: $g-spacer-sm $g-spacer-sm !default;
+$menu-vertical__link-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-padding: $g-spacer-sm $g-spacer-sm !default;
 $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
 
-.c-Menu--vertical {
+.c-menu--vertical {
     flex-wrap: wrap;
 
-    .c-Menu-item {
+    .c-menu__item {
         max-width: 100%;
         flex: 0 0 100%;
         padding: 0;
@@ -13,24 +13,24 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         text-align: left;
     }
 
-    .c-Menu-link {
+    .c-menu__link {
         align-items: flex-start;
         justify-content: flex-start;
-        padding: $menu-vertical-link-padding;
+        padding: $menu-vertical__link-padding;
         text-align: inherit;
     }
 
-    .c-Menu-header {
+    .c-menu__header {
         padding: $menu-vertical-title-padding;
         margin: $menu-vertical-title-margin;
 
-        .c-Menu-item:first-child & {
+        .c-menu__item:first-child & {
             margin-top: 0;
         }
     }
 
     // Nested
-    .c-Menu {
+    .c-menu {
         margin-top: 0;
         margin-left: $menu-margin-nested;
 
@@ -39,12 +39,12 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         }
     }
 
-    &.c-Menu--right {
-        .c-Menu-item,
-        .c-Menu-item--left {
+    &.c-menu--right {
+        .c-menu__item,
+        .c-menu__item--left {
             text-align: right;
 
-            .c-Menu-header {
+            .c-menu__header {
                 display: block;
                 width: 100%;
                 text-align: right;
@@ -52,7 +52,7 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
         }
     }
 
-    &.c-Menu--center .c-Menu-item {
+    &.c-menu--center .c-menu__item {
         text-align: center;
     }
 }

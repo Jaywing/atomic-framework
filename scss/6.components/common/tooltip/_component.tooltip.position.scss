@@ -1,5 +1,5 @@
 .c-Tooltip--right {
-    .c-Tooltip-item {
+    .c-Tooltip__item {
         top: 50%;
         bottom: inherit;
         left: 115%;
@@ -30,7 +30,7 @@
 }
 
 .c-Tooltip--bottom {
-    .c-Tooltip-item {
+    .c-Tooltip__item {
         top: $tooltip-bottom;
         bottom: inherit;
         left: 0;
@@ -57,7 +57,7 @@
 }
 
 .c-Tooltip--left {
-    .c-Tooltip-item {
+    .c-Tooltip__item {
         top: 50%;
         bottom: inherit;
         left: -115%;

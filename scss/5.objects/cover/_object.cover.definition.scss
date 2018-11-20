@@ -75,27 +75,27 @@ $cover-loading-icon-xxl-adj: -($icon-size-xxl / 2) !default;
         top: 50%;
         left: 50%;
 
-        &.o-Icon {
+        &.o-icon {
             margin-top: $cover-loading-icon-adj;
             margin-left: $cover-loading-icon-adj;
         }
 
-        &.o-Icon--sm {
+        &.o-icon--sm {
             margin-top: $cover-loading-icon-sm-adj;
             margin-left: $cover-loading-icon-sm-adj;
         }
 
-        &.o-Icon--lg {
+        &.o-icon--lg {
             margin-top: $cover-loading-icon-lg-adj;
             margin-left: $cover-loading-icon-lg-adj;
         }
 
-        &.o-Icon--xl {
+        &.o-icon--xl {
             margin-top: $cover-loading-icon-xl-adj;
             margin-left: $cover-loading-icon-xl-adj;
         }
 
-        &.o-Icon--xxl {
+        &.o-icon--xxl {
             margin-top: $cover-loading-icon-xxl-adj;
             margin-left: $cover-loading-icon-xxl-adj;
         }

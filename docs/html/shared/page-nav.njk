@@ -1,21 +1,21 @@
 {% macro navItem(id, title, active='index', ready=false) %}
-  <li class="c-Menu-item{% if id == active %} is-active{% endif %}">
-    <a{% if ready %} href="{{id}}.html" class="c-Menu-link"{% else %} class="c-Menu-link c-Text--disabled"{% endif %}>{{title}}</a>
+  <li class="c-menu__item{% if id == active %} is-active{% endif %}">
+    <a{% if ready %} href="{{id}}.html" class="c-menu__link"{% else %} class="c-menu__link c-Text--disabled"{% endif %}>{{title}}</a>
   </li>
 {% endmacro %}
 
-<nav id="t-page-nav" class="t-Sidenav c-Sticky-item" data-margin-top="20">
+<nav id="t-page-nav" class="t-Sidenav c-Sticky__item" data-margin-top="20">
 
-  <ul class="c-Menu c-Menu--flush c-Menu--vertical">
+  <ul class="c-menu c-menu--flush c-menu--vertical">
 
     {% for cat in docs_pages %}
 
       {% if cat.section == sectionid %}
 
-        <li class="c-Menu-item">
-          {% if cat.category != "" %}<strong class="c-Menu-title">{{ cat.category }}</strong>{% endif %}
+        <li class="c-menu__item">
+          {% if cat.category != "" %}<strong class="c-menu-title">{{ cat.category }}</strong>{% endif %}
           {% if cat.items %}
-            <ul class="c-Menu c-Menu--vertical c-Menu--flush">
+            <ul class="c-menu c-menu--vertical c-menu--flush">
               {% for comp in cat.items %}
                 {% if comp.section == sectionid %}
                   {{navItem(comp.id, comp.title, pageid, comp.ready)}}
