@@ -28,11 +28,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Background images</h3>
 <p>To make a background image cover it's container, use the modifier <code>o-Cover--bg</code>.</p>
 
-<div class="t-example">
+<div class="c-example">
   <div class="o-Cover o-Cover--bg" style="height: 300px; background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--bg&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
@@ -40,7 +40,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Videos</h3>
 <p>To make a video cover it's container, use the <code>o-Cover-object</code> sub-element on the video tag.</p>
 
-<div class="t-example">
+<div class="c-example">
   <div class="o-Cover" style="height: 300px;">
     <video class="o-Cover-object" width="600" height="400" autoplay="" loop="" muted="" controls="">
       <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
@@ -49,7 +49,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;o-Cover&quot;&gt;
   &lt;video class=&quot;o-Cover-object&quot; width=&quot;&quot; height=&quot;&quot;&gt;
     &lt;source src=&quot;&quot; type=&quot;&quot;&gt;
@@ -59,20 +59,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Responsive video</h3>
 <h4>Standard video</h4>
-<div class="t-example">
+<div class="c-example">
   <div class="o-Cover o-Cover--video">
     <iframe class="o-Cover-object" width="560" height="315" src="https://www.youtube.com/embed/1Tko1G6XRiQ" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--video&quot;&gt;
   &lt;iframe class=&quot;o-Cover-object&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1Tko1G6XRiQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 <h4>Widescreen video</h4>
-<div class="t-example">
+<div class="c-example">
   <div class="o-Cover o-Cover--videoWide">
     <div class="o-Cover-object">
       <iframe src="https://player.vimeo.com/video/67476280?color=9a151b&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -80,7 +80,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </div>
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--videoWide&quot;&gt;
   &lt;div class=&quot;o-Cover-object&quot;&gt;
     &lt;iframe src=&quot;https://player.vimeo.com/video/67476280?color=9a151b&amp;title=0&amp;byline=0&amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -90,7 +90,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h4>Ratio modifiers</h4>
 
-<div class="t-example">
+<div class="c-example">
   <h5>16 x 9 (.o-Cover--ratio16x9)</h5>
   <div class="o-Cover o-Cover--bg o-Cover--ratio16x9" style="background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
   <h5>4 x 3 (.o-Cover--ratio4x3)</h5>
@@ -99,7 +99,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-Cover o-Cover--bg o-Cover--ratio21x9" style="background-image: url('/images/placeholder/img_600x400.svg');">&nbsp;</div>
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio16x9&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio4x3&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;o-Cover o-Cover--bg o-Cover--ratio21x9&quot;&gt;&lt;/div&gt;</code></pre>
@@ -108,14 +108,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Loading cover</h3>
 <p>This can be used with the <a href="docs/components/responsive-img.html">Responsive image</a> component when lazy loading images.</p>
 
-<div class="t-example">
-  <div class="o-Cover o-Cover--ratio21x9 Demo">
+<div class="c-example">
+  <div class="o-Cover o-Cover--ratio21x9 c-Demo">
     {{ icon('spinner-3', 'o-Icon--spin o-Icon--xl o-Cover-loading') }}
   </div>
 </div>
 
-<div class="t-code t-code--html">
-  <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--ratio21x9 Demo&quot;&gt;
+<div class="c-code c-code--html">
+  <pre><code class="html">&lt;div class=&quot;o-Cover o-Cover--ratio21x9 c-Demo&quot;&gt;
   &#123;&#123; icon(&#39;spinner&#39;, &#39o-Icon--spin o-Icon--xl o-Cover-loading&#39;) &#125;&#125;
 &lt;/div&gt;</code></pre>
 </div>

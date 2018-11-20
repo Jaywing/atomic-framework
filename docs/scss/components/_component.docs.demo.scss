@@ -1,4 +1,4 @@
-.Demo {
+.c-Demo {
     width: 100%;
     min-height: $g-spacer-lg;
     background: rgba(0, 0, 0, 0.05);
@@ -57,7 +57,7 @@
     }
 }
 
-.o-FlexGrid-cell > .Demo {
+.o-FlexGrid-cell > .c-Demo {
     display: block;
     min-width: 100%;
     padding: $g-spacer $g-spacer 0;

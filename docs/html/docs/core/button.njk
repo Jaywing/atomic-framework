@@ -22,13 +22,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h2 id="section:usage"><a href="section:usage" class="c-Text--resetLink">Usage</a></h2>
 
-<div class="t-example">
+<div class="c-example">
   <a href="#" class="c-Button">Link</a>
   <button class="c-Button">c-Button</button>
   <button class="c-Button" disabled>Disabled</button>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;c-Button&quot;&gt;Link&lt;/a&gt;
 &lt;button class=&quot;c-Button&quot;&gt;c-Button&lt;/button&gt;
 &lt;button class=&quot;c-Button&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
@@ -36,7 +36,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Sizing modifiers</h3>
 
-<div class="t-example">
+<div class="c-example">
   <a href="#" class="c-Button c-Button--xs">Extra small</a>
   <a href="#" class="c-Button c-Button--sm">Small</a>
   <a href="#" class="c-Button">Standard</a>
@@ -45,7 +45,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <a href="#" class="c-Button c-Button--block">Block button</a>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--xs&quot;&gt;Extra small&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--sm&quot;&gt;Small&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button&quot;&gt;Standard&lt;/a&gt;
@@ -56,7 +56,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Priority modifiers</h3>
 
-<div class="t-example">
+<div class="c-example">
   <a href="#" class="c-Button c-Button--primary">Primary</a>
   <a href="#" class="c-Button c-Button--secondary">Secondary</a>
   <a href="#" class="c-Button c-Button--basic">Basic</a>
@@ -66,7 +66,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <a href="#" class="c-Button c-Button--error">Error</a>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--primary&quot;&gt;Primary&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--secondary&quot;&gt;Secondary&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--basic&quot;&gt;Basic&lt;/a&gt;
@@ -77,13 +77,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <h3>Icon buttons</h3>
-<div class="t-example">
+<div class="c-example">
   <a href="#" class="c-Button c-Button--icon">{{ icon('gear') }}<small class="srOnly"> Settings</small></a>
   <a href="#" class="c-Button c-Button--icon">Dropdown {{ icon('chevron-down') }}</a>
   <a href="#" class="c-Button c-Button--icon">{{ icon('arrow-left') }} Back</a>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--icon&quot;&gt;&#123;&#123; icon(&#39;gear&#39;) &#125;&#125;&lt;small class=&quot;srOnly&quot;&gt; Settings&lt;/small&gt;&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--icon&quot;&gt;Dropdown &#123;&#123; icon(&#39;chevron-down&#39;) &#125;&#125;&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;c-Button c-Button--icon&quot;&gt;&#123;&#123; icon(&#39;arrow-left&#39;) &#125;&#125; Back&lt;/a&gt;</code></pre>
@@ -91,7 +91,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Content swap buttons</h3>
 
-<div class="t-example">
+<div class="c-example">
 
   <button class="c-Button c-Button--swap">
     <div class="c-Button-content">Hover on me</div>
@@ -115,7 +115,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;button class=&quot;c-Button c-Button--swap&quot;&gt;
   &lt;div class=&quot;c-Button-content&quot;&gt;Hover on me&lt;/div&gt;
   &lt;div class=&quot;c-Button-content c-Button-content--hidden&quot;&gt;More stuff&lt;/div&gt;
@@ -139,7 +139,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Javascript: Toggle module</h3>
 <p>You can toggle states via an asynchronously loaded javascript <a href="toggle.html">Toggle module</a>. Just add the data attribute <code>data-module="Toggle"</code></p>
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button" data-module="Toggle">Toggle me</button>
   <button class="c-Button c-Button--primary" data-module="Toggle">Toggle me</button>
   <button class="c-Button c-Button--hover" data-module="Toggle">Toggle me</button>
@@ -149,7 +149,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </button>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;button class=&quot;c-Button&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
 &lt;button class=&quot;c-Button c-Button--primary&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
 &lt;button class=&quot;c-Button c-Button--hover&quot; data-module=&quot;Toggle&quot;&gt;Toggle me&lt;/button&gt;
@@ -161,14 +161,14 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h4>Loading submit button</h4>
 <p>The 'content swap button' and the <a href="toggle.html">'Toggle module'</a> can be used together to create a button that when clicked once, shows a loading icon and it can not be clicked again.</p>
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button c-Button--primary c-Button--swap c-Button--aniFade c-Button--swapToggle" data-module="Toggle" data-options='{"once":true}'>
     <div class="c-Button-content">Submit me</div>
     <div class="c-Button-content c-Button-content--hidden">{{ icon('spinner', 'o-Icon--spin') }}</div>
   </button>
 </div>
 
-<div class="t-code">
+<div class="c-code">
   <pre><code class="html">&lt;button class=&quot;c-Button c-Button--primary c-Button--swap c-Button--aniFade c-Button--swapToggle&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;
   &lt;div class=&quot;c-Button-content&quot;&gt;Submit me&lt;/div&gt;
   &lt;div class=&quot;c-Button-content c-Button-content--hidden&quot;&gt;&#123;&#123; icon(&#39;spinner&#39;, &#39;o-Icon--spin&#39;) &#125;&#125;&lt;/div&gt;

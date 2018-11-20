@@ -24,7 +24,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>By default, the switcher works by linking the indexes of the toggle items and target items. So you need to make sure both are in the same order.</p>
 <p>Typically the switcher is combined with other components, some of which will be shown here.</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <div class="c-Menu c-Menu--attached" data-module="Switcher">
     <a href="#" class="c-Menu-item c-Menu-link">Section #1</a>
@@ -55,7 +55,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;c-Menu c-Menu--attached&quot; data-module=&quot;Switcher&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;c-Menu-item c-Menu-link&quot;&gt;Section #1&lt;/a&gt;&lt;/li&gt;
   &lt;a href=&quot;#&quot; class=&quot;c-Menu-item c-Menu-link&quot;&gt;Section #2&lt;/a&gt;&lt;/li&gt;
@@ -84,7 +84,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>If you are not sure that the target items will come directly after the toggler items or you just want to be sure (probably best), you can specifically the target using <code>data-options='{"target" : "#switcher-content1"}</code>.</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <div class="c-Menu c-Menu--attached" data-module="Switcher" data-options='{"target":"#switcher-content1"}'>
     <a href="#" class="c-Menu-item c-Menu-link">Section #1</a>
@@ -117,7 +117,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;c-Menu c-Menu--attached&quot; data-module=&quot;Switcher&quot; data-options=&#39;{&quot;target&quot;:&quot;#switcher-content1&quot;}&gt;
   &lt;a href=&quot;#&quot; class=&quot;c-Menu-item c-Menu-link&quot;&gt;Section #1&lt;/a&gt;&lt;/li&gt;
   &lt;a href=&quot;#&quot; class=&quot;c-Menu-item c-Menu-link&quot;&gt;Section #2&lt;/a&gt;&lt;/li&gt;
@@ -145,7 +145,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Multiple targets</h4>
 <p>You can also switch multiple targets by passing in an array <code>data-options='{"target" : ["#switcher-content2" , "#switcher-content3"]}</code>.</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <ul class="c-Menu c-Menu--attached" data-module="Switcher" data-options='{"target":["#switcher-content2","#switcher-content3"]}'>
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Section #1</a></li>
@@ -197,7 +197,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>ARIA Accessibility</h4>
 <p>When this method is activated, the module also add relevant ARIA rules to enhance accessibility. (Ref: <a href="https://24ways.org/2015/how-tabs-should-work/">24 ways: How tabs should work</a>)</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <ul class="c-Menu c-Menu--tabular c-Menu--attached" data-module="Switcher" data-options='{"hide":true}'>
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Tab #1</a></li>
@@ -225,7 +225,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h3>Active index</h3>
 <p>You set which pane is initially active by setting <code>data-options='{"activeIndex":1}'</code>, which results in the second tab being initially active (zero based index).</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <ul class="c-Menu c-Menu--tabular c-Menu--attached" data-module="Switcher" data-options='{"target":"#switcher-content5","hide":true,"activeIndex": 1}'>
     <li class="c-Menu-item"><a href="#" class="c-Menu-link">Tab #1</a></li>
@@ -256,7 +256,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>Using url hashes means you can link to a page a set and certain tab to be open. It also means that tab changes are in the browser history.</p>
 <p><strong class="c-Badge">Note</strong> If you are using the hash setting you can not switch multiple targets.</p>
 
-<div class="t-example">
+<div class="c-example">
 
   <ul class="c-Menu c-Menu--tabular c-Menu--attached" data-module="Switcher" data-options='{"hash":true,"hide":true}'>
     <li class="c-Menu-item"><a href="#tab1" class="c-Menu-link">Section #1</a></li>

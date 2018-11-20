@@ -78,7 +78,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <h3>Mixins</h3>
   <p>Each breakpoint has its own mixin.</p>
-  <div class="t-code t-code--scss">
+  <div class="c-code c-code--scss">
     <pre><code class="css">@include md { .... }
 @include xl { .... }
 // gets compiled to
@@ -86,7 +86,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 @media screen and (min-width: 1180px) { .... }</code></pre>
   </div>
     <p>For more complicated media queries use the <code>mq</code> mixin from <a href="https://github.com/sass-mq/sass-mq">sass-mq</a> plugin which is installed</p>
-  <div class="t-code t-code--scss">
+  <div class="c-code c-code--scss">
     <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
 // gets compiled to
 @media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>

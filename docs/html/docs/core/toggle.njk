@@ -23,11 +23,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>The toggle module is loaded asynchronously and is initialised using <code>data-module="Toggle"</code> on the toggler element.</p>
 <p>By default the module toggles the default active class (<code>is-active</code>) on itself.</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button" data-module="Toggle">Click me to toggle me</button>
   <button class="c-Button is-active" data-module="Toggle">Click me to toggle me</button>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button&quot; data-module=&quot;Toggle&quot;&gt;Click to toggle me&lt;/button&gt;</code></pre>
 </div>
 
@@ -36,22 +36,22 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Once</h4>
 <p>You can set the toggle module to only toggle once (<code>data-options='{"once":true}'</code>).</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button" data-module="Toggle" data-options='{"once":true}'>You can only turn me on</button>
   <button class="c-Button is-active" data-module="Toggle" data-options='{"once":true}'>You can only turn me off</button>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;once&quot;:true}&#39;&gt;You can only turn me on&lt;/button&gt;</code></pre>
 </div>
 
 <h4>Target</h4>
 <p>You can also toggle an active class on another element using the target option (<code>data-options='{"target":"#mydiv"}'</code>).</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button myButton" data-module="Toggle" data-options='{"target":"#mydiv"}'>Click me to toggle the div</button>
-  <div class="Demo Demo--fat" id="mydiv"></div>
+  <div class="c-Demo c-Demo--fat" id="mydiv"></div>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
     Click to toggle the div
 &lt;/button&gt;
@@ -59,12 +59,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 </div>
 
 <p>You can also pass in the string 'parent' to specifically target source element's direct parent element.</p>
-<div class="t-example">
-  <div class="Demo Demo--fat">
+<div class="c-example">
+  <div class="c-Demo c-Demo--fat">
     <button class="c-Button myButton" data-module="Toggle" data-options='{"target":"parent"}'>Click me to toggle the div</button>
   </div>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;div id=&quot;mydiv&quot;&gt;
   &lt;button class=&quot;c-Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;parent&quot;}&#39;&gt;
     Click to toggle the div
@@ -74,19 +74,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <p>You can also multiple element by passing in an array (<code>data-options='{"target":["#mydiv1","#mydiv2"]}'</code>).</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button myButton" data-module="Toggle" data-options='{"target":["#mydiv1","#mydiv2"]}'>Click to toggle the both divs</button>
   <div class="o-FlexGrid o-FlexGrid--gutters">
     <div class="o-FlexGrid-cell">
-      <div class="Demo Demo--fat" id="mydiv1"></div>
+      <div class="c-Demo c-Demo--fat" id="mydiv1"></div>
     </div>
     <div class="o-FlexGrid-cell">
-      <div class="Demo Demo--fat" id="mydiv2"></div>
+      <div class="c-Demo c-Demo--fat" id="mydiv2"></div>
     </div>
   </div>
 
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:[&quot;#mydiv1&quot;,&quot;#mydiv2&quot;]}&#39;&gt;
     Click to toggle both divs
 &lt;/button&gt;
@@ -97,11 +97,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <h4>Active class</h4>
 <p>You can also toggle an custom active class using the 'activeClass' option (<code>data-options='{"activeClass":"is-alt-active"}'</code>).</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button myButton" data-module="Toggle" data-options='{"target":"#mydiv3","activeClass":"is-alt-active"}'>Click to toggle the div</button>
-  <div class="Demo Demo--fat" id="mydiv3"></div>
+  <div class="c-Demo c-Demo--fat" id="mydiv3"></div>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;activeClass&quot;:&quot;is-alt-active&quot;,&quot;target&quot;:&quot;#mydiv3&quot;}&#39;&gt;
     Click to toggle the div
 &lt;/button&gt;
@@ -112,11 +112,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <p>Instead of toggling an active class, you can toggle an elements display property by using the 'hide' option (<code>data-options='{"hide":true}</code>). This toggles the 'hidden' attribute on the target(s).</p>
 <p><strong class="c-Badge">Note</strong> If you use this option, the active class is no longer toggled.</p>
 
-<div class="t-example">
+<div class="c-example">
   <button class="c-Button myButton" data-module="Toggle" data-options='{"target":"#mydiv4", "hide":true}'>Click to hide/show the div</button>
-  <div class="Demo Demo--fat" id="mydiv4"></div>
+  <div class="c-Demo c-Demo--fat" id="mydiv4"></div>
 </div>
-<div class="t-code t-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">&lt;button class=&quot;c-Button myButton&quot; data-module=&quot;Toggle&quot; data-options=&#39;{&quot;target&quot;:&quot;#mydiv&quot;}&#39;&gt;
     Click to hide/show the div
 &lt;/button&gt;
