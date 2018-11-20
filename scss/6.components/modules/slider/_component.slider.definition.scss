@@ -43,11 +43,11 @@
         content: '';
     }
 
-    &.Active {
+    &.is-active {
         display: block;
     }
 
-    &.Active--next {
+    &.is-active--next {
         .c-slider__picture {
             .c-slider__image {
                 animation: slider-background-next 0.5s;
@@ -59,7 +59,7 @@
         }
     }
 
-    &.Active--previous {
+    &.is-active--previous {
         .c-slider__picture {
             .c-slider__image {
                 animation: slider-background-previous 0.5s;
@@ -97,7 +97,7 @@
     border-radius: 2px;
     transform: translateY(-50%);
 
-    &.Active {
+    &.is-active {
         background: $c-dark;
     }
 }

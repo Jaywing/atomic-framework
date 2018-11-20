@@ -58,7 +58,10 @@ export default class Slider extends Module {
     }
 
     for (let i = 0; i < slidesTotal; i++) {
-      if (slidesTotal > 1 && this.dom.slide[i].classList.contains("Active")) {
+      if (
+        slidesTotal > 1 &&
+        this.dom.slide[i].classList.contains("is-active")
+      ) {
         sliderNum = i;
       }
 
@@ -74,7 +77,7 @@ export default class Slider extends Module {
       // Create pips
       if (slidesTotal > 1) {
         if (i == 0) {
-          this.dom.pips.innerHTML += `<div class="c-slider__pip Active"></div>`;
+          this.dom.pips.innerHTML += `<div class="c-slider__pip is-active"></div>`;
         } else {
           this.dom.pips.innerHTML += `<div class="c-slider__pip"></div>`;
         }
@@ -147,24 +150,24 @@ export default class Slider extends Module {
     if (!this.settings.slidesToShow) {
       for (let i = 0; i < slidesTotal; i++) {
         this.dom.slide[i].classList.remove(
-          "Active",
-          "Active--next",
-          "Active--previous",
-          "Next",
-          "Previous"
+          "is-active",
+          "is-active--next",
+          "is-active--previous",
+          "is-next",
+          "is-previous"
         );
       }
 
-      this.dom.slide[sliderNum].classList.add("Active");
+      this.dom.slide[sliderNum].classList.add("is-active");
       if (direction == 1)
-        this.dom.slide[sliderNum].classList.add("Active--next");
+        this.dom.slide[sliderNum].classList.add("is-active--next");
       if (direction == 0)
-        this.dom.slide[sliderNum].classList.add("Active--previous");
+        this.dom.slide[sliderNum].classList.add("is-active--previous");
       if (this.dom.slide[sliderNum].nextElementSibling)
-        this.dom.slide[sliderNum].nextElementSibling.classList.add("Next");
+        this.dom.slide[sliderNum].nextElementSibling.classList.add("is-next");
       if (this.dom.slide[sliderNum].previousElementSibling)
         this.dom.slide[sliderNum].previousElementSibling.classList.add(
-          "Previous"
+          "is-previous"
         );
     }
 
@@ -182,9 +185,11 @@ export default class Slider extends Module {
     }
 
     // Set pip
-    this.el.querySelector(".c-slider__pip.Active").classList.remove("Active");
+    this.el
+      .querySelector(".c-slider__pip.is-active")
+      .classList.remove("is-active");
     this.el
       .querySelectorAll(".c-slider__pip")
-      [sliderNum].classList.add("Active");
+      [sliderNum].classList.add("is-active");
   }
 }
