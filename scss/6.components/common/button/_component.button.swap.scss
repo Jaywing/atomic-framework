@@ -3,17 +3,17 @@ $button-swap-ani-easing: ease !default;
 $button-swap-horizontal-padding: $g-spacer !default;
 
 // scss-lint:disable NestingDepth
-.c-Button--swap {
+.c-button--swap {
     position: relative;
     overflow: hidden;
     text-align: center;
 
-    .c-Button-content:not(&-content--hidden) {
+    .c-button__content:not(&-content--hidden) {
         position: relative;
         will-change: transform, opacity;
     }
 
-    .c-Button-content--hidden {
+    .c-button__content--hidden {
         position: absolute;
         width: 100%;
         padding-right: $button-swap-horizontal-padding;
@@ -21,8 +21,8 @@ $button-swap-horizontal-padding: $g-spacer !default;
     }
 
     // Horizontal
-    .c-Button-content {
-        &:not(.c-Button-content--hidden) {
+    .c-button__content {
+        &:not(.c-button__content--hidden) {
             right: 0;
             left: auto;
         }
@@ -36,35 +36,35 @@ $button-swap-horizontal-padding: $g-spacer !default;
     }
 
     // Animated
-    &.c-Button--ani {
-        .c-Button-content {
+    &.c-button--ani {
+        .c-button__content {
             transition: right $button-swap-ani-speed $button-swap-ani-easing 0s;
         }
     }
 
-    &:not(.c-Button--swapToggle) {
+    &:not(.c-button--swapToggle) {
         &:hover,
         &:focus {
-            .c-Button-content:not(.c-Button-content--hidden) {
+            .c-button__content:not(.c-button__content--hidden) {
                 right: 200%;
                 left: auto;
             }
 
-            .c-Button-content--hidden {
+            .c-button__content--hidden {
                 right: 0;
                 left: auto;
             }
         }
     }
 
-    &.c-Button--swapToggle {
+    &.c-button--swapToggle {
         &.is-active {
-            .c-Button-content:not(.c-Button-content--hidden) {
+            .c-button__content:not(.c-button__content--hidden) {
                 right: 200%;
                 left: auto;
             }
 
-            .c-Button-content--hidden {
+            .c-button__content--hidden {
                 top: 50%;
                 right: 0;
                 left: auto;
@@ -72,34 +72,34 @@ $button-swap-horizontal-padding: $g-spacer !default;
         }
     }
 
-    &.c-Button--vertical {
+    &.c-button--vertical {
         // Animated
-        &.c-Button--ani .c-Button-content {
+        &.c-button--ani .c-button__content {
             transition: top $button-swap-ani-speed $button-swap-ani-easing,
                 transform $button-swap-ani-speed $button-swap-ani-easing;
         }
 
-        .c-Button-content:not(.c-Button-content--hidden) {
+        .c-button__content:not(.c-button__content--hidden) {
             right: auto;
             text-align: center;
             transform: translateY(0%);
         }
 
-        .c-Button-content--hidden {
+        .c-button__content--hidden {
             top: -50%;
             right: auto;
             left: 0;
         }
 
-        &:not(.c-Button--swapToggle) {
-            &.c-Button--vertical:hover,
-            &.c-Button--vertical:focus {
-                .c-Button-content:not(.c-Button-content--hidden) {
+        &:not(.c-button--swapToggle) {
+            &.c-button--vertical:hover,
+            &.c-button--vertical:focus {
+                .c-button__content:not(.c-button__content--hidden) {
                     right: auto;
                     transform: translateY(200%);
                 }
 
-                .c-Button-content--hidden {
+                .c-button__content--hidden {
                     top: 50%;
                     right: auto;
                     left: 0;
@@ -108,37 +108,37 @@ $button-swap-horizontal-padding: $g-spacer !default;
         }
     }
 
-    &.c-Button--aniFade {
-        .c-Button-content {
+    &.c-button--aniFade {
+        .c-button__content {
             transition: opacity $button-swap-ani-speed $button-swap-ani-easing,
                 transform $button-swap-ani-speed $button-swap-ani-easing;
         }
 
-        .c-Button-content:not(.c-Button-content--hidden) {
+        .c-button__content:not(.c-button__content--hidden) {
             right: auto;
             left: auto;
             opacity: 1;
             transform: scale(1);
         }
 
-        .c-Button-content--hidden {
+        .c-button__content--hidden {
             right: auto;
             left: 0;
             opacity: 0;
             transform: scale(0);
         }
 
-        &:not(.c-Button--swapToggle) {
+        &:not(.c-button--swapToggle) {
             &:hover,
             &:focus {
-                .c-Button-content:not(.c-Button-content--hidden) {
+                .c-button__content:not(.c-button__content--hidden) {
                     right: auto;
                     left: auto;
                     opacity: 0;
                     transform: scale(0);
                 }
 
-                .c-Button-content--hidden {
+                .c-button__content--hidden {
                     right: auto;
                     left: 0;
                     opacity: 1;
@@ -147,16 +147,16 @@ $button-swap-horizontal-padding: $g-spacer !default;
             }
         }
 
-        &.c-Button--swapToggle {
+        &.c-button--swapToggle {
             &.is-active {
-                .c-Button-content:not(.c-Button-content--hidden) {
+                .c-button__content:not(.c-button__content--hidden) {
                     right: auto;
                     left: auto;
                     opacity: 0;
                     transform: scale(0);
                 }
 
-                .c-Button-content--hidden {
+                .c-button__content--hidden {
                     top: 50%;
                     right: auto;
                     left: 0;

@@ -3,19 +3,19 @@ $panel-box-warning-color: $c-warning-dark !default;
 $panel-box-warning-bg: $c-warning-light-50 !default;
 $panel-box-warning-border-color: $c-warning-dark !default;
 
-.c-Panel--warning {
+.c-panel--warning {
     color: $panel-warning-color;
 
-    .c-Panel-title {
+    .c-panel__title {
         color: $panel-warning-color;
     }
 
-    &.c-Panel--box {
+    &.c-panel--box {
         background: $panel-box-warning-bg;
         border-color: $panel-box-warning-border-color;
         color: $panel-box-warning-color;
 
-        .c-Panel-title {
+        .c-panel__title {
             color: $panel-box-warning-color;
         }
     }

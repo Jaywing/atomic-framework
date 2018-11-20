@@ -20,11 +20,11 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <dl class="c-definition c-definition__horizontal">
     <dt>Modules</dt>
-    <dd><a href="/docs/core/toggle.html"><span class="c-Badge">Toggle</span></a></dd>
+    <dd><a href="/docs/core/toggle.html"><span class="c-badge">Toggle</span></a></dd>
     <dt>Components</dt>
-    <dd><a href="/docs/extended/toggle-button.html"><span class="c-Badge">Toggle c-Button</span></a> <a href="/docs/core/menu.html"><span class="c-Badge">Menu</span></a></dd>
+    <dd><a href="/docs/extended/toggle-button.html"><span class="c-badge">Toggle c-button</span></a> <a href="/docs/core/menu.html"><span class="c-badge">Menu</span></a></dd>
     <dt>Macros</dt>
-    <dd><a href="#section:macro"><span class="c-Badge">ToggleButton</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-Badge">MenuHeader</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-Badge">MenuLink</span></a></dd>
+    <dd><a href="#section:macro"><span class="c-badge">ToggleButton</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-badge">MenuHeader</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-badge">MenuLink</span></a></dd>
   </dl>
 
   <hr class="Article-divider">
@@ -32,19 +32,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <h2 id="section:usage"><a href="#section:usage" class="c-Text--resetLink">Usage</a></h2>
 
   <p>The example below switches patterns when the browser window width passes 480px (xs breakpoint).</p>
-  <p><span class="c-Badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>c-nav-responsive[@xs|@sm|@md|@lg|@xl|@xxl]</code>.</p>
+  <p><span class="c-badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>c-nav-responsive[@xs|@sm|@md|@lg|@xl|@xxl]</code>.</p>
 
   <div class="c-example">
 
     <nav class="c-nav-responsive c-nav-responsive@xs">
       <button class="c-toggle-button" data-module="Toggle" data-options='{"target":"parent"}'>
-        <div class="c-toggle-button-init">
+        <div class="c-toggle-button__init">
           <span class="o-icon o-icon--navicon c-toggle-button-icon--init"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg></span>
-          <span class="c-toggle-button-text">Menu</span>
+          <span class="c-toggle-button__text">Menu</span>
         </div>
-        <div class="c-toggle-button-close">
+        <div class="c-toggle-button__close">
           <span class="o-icon o-icon--close c-toggle-button-icon--close"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"></use></svg></span>
-          <span class="c-toggle-button-text">Close</span>
+          <span class="c-toggle-button__text">Close</span>
         </div>
       </button>
       <ul class="c-menu c-menu--vertical">
@@ -61,13 +61,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="c-code c-code--html">
     <pre><code class="html">&lt;nav class="c-nav-responsive c-nav-responsive@xs"&gt;
   &lt;button class="c-toggle-button" data-module="Toggle" data-options='{"target":"parent"}'&gt;
-    &lt;div class="c-toggle-button-init"&gt;
+    &lt;div class="c-toggle-button__init"&gt;
       &lt;span class="o-icon o-icon--navicon c-toggle-button-icon--init"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
-      &lt;span class="c-toggle-button-text"&gt;c-menu&lt;/span&gt;
+      &lt;span class="c-toggle-button__text"&gt;c-menu&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="c-toggle-button-close"&gt;
+    &lt;div class="c-toggle-button__close"&gt;
       &lt;span class="o-icon o-icon--close c-toggle-button-icon--close"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
-      &lt;span class="c-toggle-button-text"&gt;Close&lt;/span&gt;
+      &lt;span class="c-toggle-button__text"&gt;Close&lt;/span&gt;
     &lt;/div&gt;
   &lt;/button&gt;
   &lt;ul class="c-menu c-menu--vertical"&gt;

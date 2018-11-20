@@ -1,5 +1,5 @@
-.c-Tooltip--right {
-    .c-Tooltip__item {
+.c-tooltip--right {
+    .c-tooltip__item {
         top: 50%;
         bottom: inherit;
         left: 115%;
@@ -9,7 +9,7 @@
         transform: translateY(-50%);
     }
 
-    .c-Tooltip-itemInner {
+    .c-tooltip__item-inner {
         &::after {
             top: 50%;
             bottom: inherit;
@@ -22,21 +22,21 @@
 
     &:hover,
     &:focus {
-        .c-Tooltip-itemInner {
+        .c-tooltip__item-inner {
             animation: popinRight $tooltip-popin-ani-time
                 $tooltip-popin-ani-type;
         }
     }
 }
 
-.c-Tooltip--bottom {
-    .c-Tooltip__item {
+.c-tooltip--bottom {
+    .c-tooltip__item {
         top: $tooltip-bottom;
         bottom: inherit;
         left: 0;
     }
 
-    .c-Tooltip-itemInner {
+    .c-tooltip__item-inner {
         position: relative;
 
         &::after {
@@ -50,14 +50,14 @@
 
     &:hover,
     &:focus {
-        .c-Tooltip-itemInner {
+        .c-tooltip__item-inner {
             animation: popinDown $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }
 }
 
-.c-Tooltip--left {
-    .c-Tooltip__item {
+.c-tooltip--left {
+    .c-tooltip__item {
         top: 50%;
         bottom: inherit;
         left: -115%;
@@ -67,7 +67,7 @@
         transform: translateY(-50%);
     }
 
-    .c-Tooltip-itemInner {
+    .c-tooltip__item-inner {
         position: relative;
 
         &::after {
@@ -83,7 +83,7 @@
 
     &:hover,
     &:focus {
-        .c-Tooltip-itemInner {
+        .c-tooltip__item-inner {
             animation: popinLeft $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }

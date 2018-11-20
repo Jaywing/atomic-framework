@@ -1,11 +1,11 @@
-.c-Overlay {
+.c-overlay {
     position: relative;
     display: inline-block;
     overflow: hidden;
     max-width: 100%;
     margin: 0;
 
-    &-panel {
+    &__panel {
         position: absolute;
         top: 0;
         right: 0;

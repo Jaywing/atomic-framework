@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-// Components: c-Button Hover
+// Components: c-button Hover
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ $button-hover-hover-bg: $c-light-30 !default;
 $button-hover-color: $base-text-color !default;
 $button-hover-disabled-color: rgba($button-hover-color, 0.65) !default;
 
-.c-Button--hover {
+.c-button--hover {
     &:not([disabled]) {
         @include color-swap-on-hover(
             transparent,

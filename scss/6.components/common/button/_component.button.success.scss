@@ -3,7 +3,7 @@ $button-success-color: $c-light !default;
 $button-success-hover-bg: darken($button-success-bg, 10%) !default;
 $button-success-disabled-color: rgba($button-success-color, 0.8);
 
-.c-Button--success {
+.c-button--success {
     border-color: $button-success-bg;
 
     &:not([disabled]) {

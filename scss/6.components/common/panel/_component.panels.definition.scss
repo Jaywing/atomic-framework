@@ -1,7 +1,7 @@
 .Panels {
     margin: $panels-margin;
 
-    > .c-Panel {
+    > .c-panel {
         margin: 0;
     }
 }
@@ -11,11 +11,11 @@
     flex-wrap: nowrap;
     align-items: stretch;
 
-    > .c-Panel {
+    > .c-panel {
         flex: 1;
     }
 
-    > .c-Panel--box {
+    > .c-panel--box {
         border-right: 0;
         border-radius: 0;
 
@@ -31,7 +31,7 @@
 }
 
 .Panels--hidden {
-    > .c-Panel {
+    > .c-panel {
         display: none;
 
         &.is-active {
@@ -41,7 +41,7 @@
 }
 
 .Panels:not(.Panels--horizontal, .Panels--hidden) {
-    > .c-Panel--box:not(.c-Panel--attached) {
+    > .c-panel--box:not(.c-panel--attached) {
         border-bottom: 0;
         border-radius: 0;
 

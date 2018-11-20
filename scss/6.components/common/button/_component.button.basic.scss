@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-// Components: c-Button Basic Theme
+// Components: c-button Basic Theme
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ $button-basic-bg-color-active: $c-very-strong-trans-dark !default;
 $button-basic-trans-speed: $button-trans-speed !default;
 $button-basic-disabled-color: rgba($button-basic-color, 0.65) !default;
 
-.c-Button--basic {
+.c-button--basic {
     box-shadow: $button-basic-box-shadow;
 
     &:not([disabled]) {

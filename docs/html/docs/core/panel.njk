@@ -23,83 +23,83 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="c-example">
   <div class="o-flex-grid o-flex-grid--gutters@lg o-flex-grid--1of3">
     <div class="o-flex-grid__cell">
-      <div class="c-Panel">
-        <span class="c-Badge c-Badge--danger c-Panel-badge">+3</span>
-        <h3 class="c-Panel-title">Panel title</h3>
+      <div class="c-panel">
+        <span class="c-badge c-badge--danger c-panel__badge">+3</span>
+        <h3 class="c-panel__title">Panel title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eius eligendi, esse.</p>
       </div>
     </div>
   </div>
 </div>
-<p><strong class="c-Badge">Note</strong> By default, a panel is blank and has no styling. Use the modifiers to alter its appearance. Like with the <code>.c-Panel--box</code> below.</p>
+<p><strong class="c-badge">Note</strong> By default, a panel is blank and has no styling. Use the modifiers to alter its appearance. Like with the <code>.c-panel--box</code> below.</p>
 <div class="c-code c-code--html">
-<pre><code class="html">&lt;div class=&quot;c-Panel&quot;&gt;
-  &lt;span class=&quot;c-Badge c-Badge--danger c-Panel-badge&quot;&gt;+3&lt;/span&gt;
-  &lt;h3 class=&quot;c-Panel-title&quot;&gt;c-Panel title&lt;/h3&gt;
+<pre><code class="html">&lt;div class=&quot;c-panel&quot;&gt;
+  &lt;span class=&quot;c-badge c-badge--danger c-panel__badge&quot;&gt;+3&lt;/span&gt;
+  &lt;h3 class=&quot;c-panel__title&quot;&gt;c-panel title&lt;/h3&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eius eligendi, esse.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
-<h3>Panel box (.c-Panel--box)</h3>
+<h3>Panel box (.c-panel--box)</h3>
 
 <div class="c-example">
   <div class="o-flex-grid o-flex-grid--gutters@lg o-flex-grid--1of3">
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box">
-        <span class="c-Badge c-Badge--danger c-Panel-badge">+3</span>
-        <h3 class="c-Panel-title">{{ icon("trophy") }} This is the panel title</h3>
+      <div class="c-panel c-panel--box">
+        <span class="c-badge c-badge--danger c-panel__badge">+3</span>
+        <h3 class="c-panel__title">{{ icon("trophy") }} This is the panel title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
     </div>
     <article class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box">
-        <span class="c-Badge c-Badge--success c-Panel-badge">Up</span>
-        <h3 class="c-Panel-title">{{ icon("envelope") }} This is the second panel title</h3>
+      <div class="c-panel c-panel--box">
+        <span class="c-badge c-badge--success c-panel__badge">Up</span>
+        <h3 class="c-panel__title">{{ icon("envelope") }} This is the second panel title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eius eligendi, esse.</p>
       </div>
     </article>
     <section class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box">
-        <span class="c-Badge c-Badge--danger c-Panel-badge">+3</span>
-        <h3 class="c-Panel-title">{{ icon("tag") }} Third panel title</h3>
+      <div class="c-panel c-panel--box">
+        <span class="c-badge c-badge--danger c-panel__badge">+3</span>
+        <h3 class="c-panel__title">{{ icon("tag") }} Third panel title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eius eligendi, esse consectetur adipisicing elit.</p>
       </div>
     </section>
   </div>
 </div>
 <div class="c-code c-code--html">
-  <pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;...&lt;/div&gt;</code></pre>
+  <pre><code class="html">&lt;div class=&quot;c-panel c-panel--box&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
-<h3>Stacked panels (<code>.c-Panel--stacked</code>)</h3>
+<h3>Stacked panels (<code>.c-panel--stacked</code>)</h3>
 <p>It is possible to make a panel box look as though it is stack on top of others. Useful for tabs and such like.</p>
-<p><strong class="c-Badge">Note</strong> This class musts be used in conjuction with <code>.c-Panel--box</code>.</p>
+<p><strong class="c-badge">Note</strong> This class musts be used in conjuction with <code>.c-panel--box</code>.</p>
 
 <div class="c-example">
-  <div class="c-Panel c-Panel--box c-Panel--stacked">
+  <div class="c-panel c-panel--box c-panel--stacked">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="c-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--stacked&quot;&gt;
+<div class="c-code"><pre><code class="html">&lt;div class=&quot;c-panel c-panel--box c-panel--stacked&quot;&gt;
   ....
 &lt;/div&gt;</code></pre></div>
 
-<h3>Piled panels (<code>.c-Panel--piled</code>)</h3>
+<h3>Piled panels (<code>.c-panel--piled</code>)</h3>
 <p>It is possible to make a panel box look as though it is on top of a pile of others.</p>
-<p><strong class="c-Badge">Note</strong> This class musts be used in conjuction with <code>.c-Panel--box</code>.</p>
+<p><strong class="c-badge">Note</strong> This class musts be used in conjuction with <code>.c-panel--box</code>.</p>
 
 <div class="c-example">
-  <div class="c-Panel c-Panel--box c-Panel--piled">
+  <div class="c-panel c-panel--box c-panel--piled">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
 
-<div class="c-code"><pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--box c-Panel--piled&quot;&gt;
+<div class="c-code"><pre><code class="html">&lt;div class=&quot;c-panel c-panel--box c-panel--piled&quot;&gt;
   ....
 &lt;/div&gt;</code></pre></div>
 
-<h3>Attached panel (<code>.c-Panel--attached</code>)</h3>
+<h3>Attached panel (<code>.c-panel--attached</code>)</h3>
 <p>It is possible to attached the panel to other attachable items, for example, the menu (in tabular format) component, to create a tab like component.</p>
 
 <div class="c-example">
@@ -108,7 +108,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <li class="c-menu__item"><a href="#" class="c-menu__link">Two</a></li>
     <li class="c-menu__item"><a href="#" class="c-menu__link">Three</a></li>
   </ul>
-  <div class="c-Panel c-Panel--box c-Panel--attached c-Panel--stacked">
+  <div class="c-panel c-panel--box c-panel--attached c-panel--stacked">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error illum magnam minima placeat rem! Ab at beatae culpa deleniti excepturi, exercitationem illo laboriosam nostrum officia perspiciatis recusandae sequi tempora voluptates.</p>
   </div>
 </div>
@@ -117,7 +117,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &lt;li class=&quot;c-menu__item is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
   ....
 &lt;/ul&gt;
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--attached&quot;&gt;
+&lt;div class=&quot;c-panel c-panel--box c-panel--attached&quot;&gt;
   ....
 &lt;/div&gt;</code></pre></div>
 
@@ -126,13 +126,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-example">
   <div class="Panels">
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Top panel</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Middle panel</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Bottom panel</p>
     </div>
   </div>
@@ -140,13 +140,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;Panels&quot;&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Top panel&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Middle panel&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Bottom panel&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -156,13 +156,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-example">
   <div class="Panels Panels--horizontal">
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Top panel<br>With more content</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Middle panel</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Bottom panel</p>
     </div>
   </div>
@@ -170,13 +170,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-code c-code--html">
   <pre><code class="html">&lt;div class=&quot;Panels Panels--horizontal&quot;&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Top panel<br>With more content&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Middle panel&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
     &lt;p&gt;Bottom panel&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -194,13 +194,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   </ul>
 
   <div class="Panels Panels--hidden">
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Panel 1</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Panel 2</p>
     </div>
-    <div class="c-Panel c-Panel--box">
+    <div class="c-panel c-panel--box">
       <p>Panel 3</p>
     </div>
   </div>
@@ -208,20 +208,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-code c-code--html">
   <pre><code class="html">&lt;ul class=&quot;c-menu&quot; data-module=&quot;Switcher&quot;&gt;
-  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-Panel 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-panel 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-panel 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;c-panel 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;Panels Panels--hidden&quot;&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
-    &lt;p&gt;c-Panel 1&lt;/p&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
+    &lt;p&gt;c-panel 1&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
-    &lt;p&gt;c-Panel 2&lt;/p&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
+    &lt;p&gt;c-panel 2&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;c-Panel c-Panel--box&quot;&gt;
-    &lt;p&gt;c-Panel 3&lt;/p&gt;
+  &lt;div class=&quot;c-panel c-panel--box&quot;&gt;
+    &lt;p&gt;c-panel 3&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -231,94 +231,94 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="c-example">
   <div class="o-flex-grid o-flex-grid--gutters@lg o-flex-grid--1of5">
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--primary">
-        <h3 class="c-Panel-title">Primary panel</h3>
+      <div class="c-panel c-panel--primary">
+        <h3 class="c-panel__title">Primary panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--secondary">
-        <h3 class="c-Panel-title">Secondary panel</h3>
+      <div class="c-panel c-panel--secondary">
+        <h3 class="c-panel__title">Secondary panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--success">
-        <h3 class="c-Panel-title">Success panel</h3>
+      <div class="c-panel c-panel--success">
+        <h3 class="c-panel__title">Success panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--warning">
-        <h3 class="c-Panel-title">Warning panel</h3>
+      <div class="c-panel c-panel--warning">
+        <h3 class="c-panel__title">Warning panel</h3>
         <p>Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--error">
-        <h3 class="c-Panel-title">Error panel</h3>
+      <div class="c-panel c-panel--error">
+        <h3 class="c-panel__title">Error panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box c-Panel--primary">
-        <h3 class="c-Panel-title">Primary panel</h3>
+      <div class="c-panel c-panel--box c-panel--primary">
+        <h3 class="c-panel__title">Primary panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box c-Panel--secondary">
-        <h3 class="c-Panel-title">Secondary panel</h3>
+      <div class="c-panel c-panel--box c-panel--secondary">
+        <h3 class="c-panel__title">Secondary panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box c-Panel--success">
-        <h3 class="c-Panel-title">Success panel</h3>
+      <div class="c-panel c-panel--box c-panel--success">
+        <h3 class="c-panel__title">Success panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box c-Panel--warning">
-        <h3 class="c-Panel-title">Warning panel</h3>
+      <div class="c-panel c-panel--box c-panel--warning">
+        <h3 class="c-panel__title">Warning panel</h3>
         <p>Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
     </div>
     <div class="o-flex-grid__cell">
-      <div class="c-Panel c-Panel--box c-Panel--error">
-        <h3 class="c-Panel-title">Error panel</h3>
+      <div class="c-panel c-panel--box c-panel--error">
+        <h3 class="c-panel__title">Error panel</h3>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
   </div>
 </div>
 <div class="c-code c-code--html">
-  <pre><code class="html">&lt;div class=&quot;c-Panel c-Panel--primary&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--secondary&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--success&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--warning&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--error&quot;&gt;...&lt;/div&gt;
+  <pre><code class="html">&lt;div class=&quot;c-panel c-panel--primary&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--secondary&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--error&quot;&gt;...&lt;/div&gt;
 
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--primary&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--secondary&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--success&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--warning&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;c-Panel c-Panel--box c-Panel--error&quot;&gt;...&lt;/div&gt;</code></pre>
+&lt;div class=&quot;c-panel c-panel--box c-panel--primary&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--box c-panel--secondary&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--box c-panel--success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--box c-panel--warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;c-panel c-panel--box c-panel--error&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
-<h3>Panel teaser image (<code>.c-Panel-teaser</code>)</h3>
+<h3>Panel teaser image (<code>.c-panel__teaser</code>)</h3>
 
 <div class="c-example">
   <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--1of3">
     <div class="o-flex-grid__cell">
-      <div class="c-Panel">
-        <div class="c-Panel-teaser"><img src="/images/placeholder/img_800x280.svg" alt=""></div>
+      <div class="c-panel">
+        <div class="c-panel__teaser"><img src="/images/placeholder/img_800x280.svg" alt=""></div>
         <p>Amet at, debitis delectus dolore eligendi</p>
       </div>
     </div>
     <div class="o-flex-grid__cell o-size--1of3">
-      <div class="c-Panel c-Panel--box">
-        <div class="c-Panel-teaser"><img src="/images/placeholder/img_800x280.svg" alt=""></div>
+      <div class="c-panel c-panel--box">
+        <div class="c-panel__teaser"><img src="/images/placeholder/img_800x280.svg" alt=""></div>
         <p>Amet at, debitis delectus dolore eligendi</p>
       </div>
     </div>
@@ -336,57 +336,57 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </thead>
     <tbody>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel</code></th>
-      <td>This defines a c-Panel component</td>
+      <th class="c-Text--left"><code>.c-panel</code></th>
+      <td>This defines a c-panel component</td>
       <td class="c-Text--right">Component</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel-title</code></th>
+      <th class="c-Text--left"><code>.c-panel__title</code></th>
       <td>This creates the panel title</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel-badge</code></th>
+      <th class="c-Text--left"><code>.c-panel__badge</code></th>
       <td>This positions the panel in the top right</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel-teaser</code></th>
+      <th class="c-Text--left"><code>.c-panel__teaser</code></th>
       <td>Image associated with the panel</td>
       <td class="c-Text--right">Sub-element</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--box</code></th>
+      <th class="c-Text--left"><code>.c-panel--box</code></th>
       <td>This creates some box styling</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--primary</code></th>
+      <th class="c-Text--left"><code>.c-panel--primary</code></th>
       <td>This creates some styling with primary colour</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--primary</code></th>
+      <th class="c-Text--left"><code>.c-panel--primary</code></th>
       <td>This creates some styling with primary colour</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--success</code></th>
+      <th class="c-Text--left"><code>.c-panel--success</code></th>
       <td>This creates some styling with success colour</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--warning</code></th>
+      <th class="c-Text--left"><code>.c-panel--warning</code></th>
       <td>This creates some styling with warning colour</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--error</code></th>
+      <th class="c-Text--left"><code>.c-panel--error</code></th>
       <td>This creates some styling with error colour</td>
       <td class="c-Text--right">Modifier</td>
     </tr>
     <tr>
-      <th class="c-Text--left"><code>.c-Panel--attached</code></th>
+      <th class="c-Text--left"><code>.c-panel--attached</code></th>
       <td>Changes the styles so a panel can be seamlessly attached to another attachable component</td>
       <td class="c-Text--right">Modifier</td>
     </tr>

@@ -9,7 +9,7 @@ $tooltip-bottom: 2rem !default;
 $tooltip-popin-ani-time: 0.2s !default;
 $tooltip-popin-ani-type: linear !default;
 
-.c-Tooltip {
+.c-tooltip {
     position: relative;
     display: inline-block;
 
@@ -27,7 +27,7 @@ $tooltip-popin-ani-type: linear !default;
         visibility: hidden;
     }
 
-    &-itemInner {
+    &__item-inner {
         max-width: $tooltip-max-width;
         flex: none;
         padding: $tooltip-padding;
@@ -50,12 +50,12 @@ $tooltip-popin-ani-type: linear !default;
 
     &:hover,
     &:focus {
-        .c-Tooltip__item {
+        .c-tooltip__item {
             opacity: 1;
             visibility: visible;
         }
 
-        .c-Tooltip-itemInner {
+        .c-tooltip__item-inner {
             animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
         }
     }

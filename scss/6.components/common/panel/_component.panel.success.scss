@@ -3,19 +3,19 @@ $panel-box-success-color: $c-success-dark !default;
 $panel-box-success-bg: $c-success-light-50 !default;
 $panel-box-success-border-color: $c-success-dark !default;
 
-.c-Panel--success {
+.c-panel--success {
     color: $panel-success-color;
 
-    .c-Panel-title {
+    .c-panel__title {
         color: $panel-success-color;
     }
 
-    &.c-Panel--box {
+    &.c-panel--box {
         background: $panel-box-success-bg;
         border-color: $panel-box-success-border-color;
         color: $panel-box-success-color;
 
-        .c-Panel-title {
+        .c-panel__title {
             color: $panel-box-success-color;
         }
     }

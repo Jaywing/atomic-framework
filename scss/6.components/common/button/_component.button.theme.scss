@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-// Components: c-Button Theme
+// Components: c-button Theme
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ $button-color-active: $c-dark !default;
 
 $button-disabled-color: $c-disabled-dark !default;
 
-.c-Button {
+.c-button {
     border-radius: $button-radius;
     font-family: $button-font-family;
     font-weight: $button-font-weight;

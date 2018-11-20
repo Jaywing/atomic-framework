@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-// Components: c-Button Primary Theme
+// Components: c-button Primary Theme
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ $button-primary-color-active: $button-primary-color !default;
 $button-primary-trans-speed: $button-trans-speed !default;
 $button-primary-disabled-color: rgba($button-primary-color, 0.65);
 
-.c-Button--primary {
+.c-button--primary {
     border-color: $button-primary-bg-color;
 
     &:not([disabled]) {

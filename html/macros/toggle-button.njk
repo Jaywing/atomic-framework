@@ -23,17 +23,17 @@
 
   <button class="c-toggle-button {{ classes }}" data-module="Toggle"{% if target !== false %} data-options='{"target":"{{ target }}"}'{% endif %}>
 
-    <div class="c-toggle-button-init">
+    <div class="c-toggle-button__init">
       {{ icon(content.offIcon, 'c-toggle-button-icon--init') }}
       {% if content.offText %}
-        <span class="c-toggle-button-text">{{ content.offText | safe }}</span>
+        <span class="c-toggle-button__text">{{ content.offText | safe }}</span>
       {% endif %}
     </div>
 
-    <div class="c-toggle-button-close">
+    <div class="c-toggle-button__close">
       {{ icon(content.onIcon, 'c-toggle-button-icon--close') }}
       {% if content.onText %}
-        <span class="c-toggle-button-text">{{ content.onText | safe }}</span>
+        <span class="c-toggle-button__text">{{ content.onText | safe }}</span>
       {% endif %}
     </div>
 

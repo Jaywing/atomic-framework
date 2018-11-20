@@ -9,24 +9,24 @@ $toggle-button-radius: $g-border-radius !default;
     background: $toggle-button-bg;
     border-radius: $toggle-button-radius;
 
-    .c-toggle-button-close {
+    .c-toggle-button__close {
         display: none;
     }
 
     &.is-active,
     .is-active > & {
-        .c-toggle-button-close {
+        .c-toggle-button__close {
             display: inline-block;
         }
 
-        .c-toggle-button-init {
+        .c-toggle-button__init {
             display: none;
         }
     }
 }
 
 .c-toggle-button--hideText {
-    .c-toggle-button-text {
+    .c-toggle-button__text {
         @include hide-visually(true);
     }
 }

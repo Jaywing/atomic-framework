@@ -25,8 +25,8 @@ html {
     border-radius: $g-border-radius;
 }
 
-.is-active > .c-Panel,
-.c-Panel.is-active {
+.is-active > .c-panel,
+.c-panel.is-active {
     &::before {
         @include minion;
 
@@ -39,12 +39,12 @@ html {
     }
 }
 
-.t-PanelList {
-    .c-Panel {
+.c-panel-list {
+    .c-panel {
         margin-bottom: $g-spacer;
     }
 
-    .c-Panel-title {
+    .c-panel__title {
         font-weight: bold;
     }
 

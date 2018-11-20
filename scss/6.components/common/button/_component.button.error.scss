@@ -4,7 +4,7 @@ $button-error-hover-bg: darken($button-error-bg, 10%) !default;
 $button-error-trans-speed: $g-trans__link-speed !default;
 $button-error-disabled-color: rgba($button-error-color, 0.8) !default;
 
-.c-Button--error {
+.c-button--error {
     border-color: $button-error-bg;
 
     &:not([disabled]) {
