@@ -7,7 +7,7 @@ $ddh-dt-margin: 0 !default;
 $ddh-dt-padding: 0 $g-spacer-sm 0 0 !default;
 
 //Horizontal list variant
-.c-Definition--horizontal {
+.c-definition__horizontal {
     @include clearfix;
 
     dt {

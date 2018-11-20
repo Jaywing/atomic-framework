@@ -3,22 +3,22 @@
 //                  Sticky the footer to the bottom of the page
 //                  when there is not enough content for a scrollbar.
 //
-// Component:       `o-Site`
+// Component:       `o-site`
 //
-// Sub-objects:     `o-Site-header`
-//                  `o-Site-content`
-//                  `o-Site-footer`
+// Sub-objects:     `o-site__header`
+//                  `o-site__content`
+//                  `o-site__footer`
 //
-// Modifiers:       `o-Site--collapse`
+// Modifiers:       `o-site--collapse`
 //
 //
 // Markup:
 //
-// <!-- o-Site -->
-// <body class="o-Site">
-//    <header class="o-Site-header">...</header>
-//    <main class="o-Site-content">...</main>
-//    <footer class="o-Site-footer">...</footer>
+// <!-- o-site -->
+// <body class="o-site">
+//    <header class="o-site__header">...</header>
+//    <main class="o-site__content">...</main>
+//    <footer class="o-site__footer">...</footer>
 // </body>
 //
 // ========================================================================
@@ -41,17 +41,17 @@ $site-content-padding-md: $g-spacer-xxl !default;
 // * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
 // *
 
-.o-Site {
+.o-site {
     display: flex;
     min-height: 100%; // 1, 3 */
     flex-direction: column;
 
-    &-header,
-    &-footer {
+    &__header,
+    &__footer {
         flex: none; // 2 */
     }
 
-    &-content {
+    &__content {
         width: 100%;
         flex: 1 0 auto; // 2 */
         padding: $site-content-padding 0 0;
@@ -70,24 +70,24 @@ $site-content-padding-md: $g-spacer-xxl !default;
 // ========================================================================
 
 @include md {
-    .o-Site-content {
+    .o-site__content {
         padding-top: $site-content-padding-md;
     }
 
-    .o-Site-content::after {
+    .o-site__content::after {
         margin-top: $site-content-padding-md;
     }
 }
 
-// Modifier: o-Site--collapse
+// Modifier: o-site--collapse
 // ========================================================================
 
-.o-Site--collapse {
-    .o-Site-content {
+.o-site--collapse {
+    .o-site__content {
         padding: 0;
     }
 
-    .o-Site-content::after {
+    .o-site__content::after {
         content: none;
     }
 }

@@ -2,7 +2,7 @@ $container-max-width: $g-site-max-width !default;
 $container-side-padding: $g-spacer !default;
 $container-thin-max-width: 800px !default;
 
-.o-Container {
+.o-container {
     @include clearfix;
 
     max-width: $container-max-width;

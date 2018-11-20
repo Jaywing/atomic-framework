@@ -1,7 +1,7 @@
 $dd-bullet-display: list__item !default;
 $dd-bullet-list-style: disc !default;
 
-.c-Definition--bullets {
+.c-definition__bullets {
     dd {
         display: $dd-bullet-display;
         list-style: $dd-bullet-list-style;

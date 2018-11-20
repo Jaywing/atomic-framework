@@ -3,7 +3,7 @@ $form-icon-width: 30px !default;
 $form-icon-indent: $form-icon-width !default;
 $form-icon-margin: -15px 0 0 !default;
 
-.c-Form-icon {
+.c-form-icon {
     position: relative;
     display: inline-block;
     max-width: 100%;
@@ -18,7 +18,7 @@ $form-icon-margin: -15px 0 0 !default;
         text-align: center;
     }
 
-    &:not(.c-Form-icon--flip) > input {
+    &:not(.c-form-icon--flip) > input {
         padding-left: $form-icon-indent;
     }
 

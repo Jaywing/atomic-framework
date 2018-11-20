@@ -4,10 +4,10 @@ $form-flabel-left: $g-spacer-sm !default;
 $form-flabel-active-top: 0 !default;
 $form-flabel-transition: all 0.1s linear !default;
 
-.c-Form-flabel {
+.c-form-flabel {
     position: relative;
 
-    .c-Form-label {
+    .c-form__label {
         @include minion;
 
         position: absolute;
@@ -18,7 +18,7 @@ $form-flabel-transition: all 0.1s linear !default;
         transition: $form-flabel-transition;
     }
 
-    .c-Form-input {
+    .c-form__input {
         &:focus ~ label {
             top: $form-flabel-active-top;
         }

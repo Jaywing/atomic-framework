@@ -12,11 +12,11 @@
 
 /// @example HTML
 /// ```
-/// <article class="o-Media">
-///   <figure class="o-Media-figure">
+/// <article class="o-media">
+///   <figure class="o-media__figure">
 ///     <img ....
 ///   </figure>
-///   <div class="o-Media-body">
+///   <div class="o-media__body">
 ///     ...
 ///   </div>
 /// </article>
@@ -25,7 +25,7 @@
 $media-spacing: $g-spacer !default;
 $media-golden-sml: $g-golden-sm !default;
 
-.o-Media {
+.o-media {
     display: flex;
     align-items: flex-start;
 
@@ -46,38 +46,38 @@ $media-golden-sml: $g-golden-sm !default;
     }
 
     &--golden {
-        > .o-Media-figure {
+        > .o-media__figure {
             width: $media-golden-sml;
         }
     }
 
-    &-body {
+    &__body {
         flex: 1;
         padding-bottom: $media-spacing;
         margin-top: 0;
     }
 }
 
-.o-Media-figure {
+.o-media__figure {
     padding-right: $media-spacing;
     padding-bottom: $media-spacing;
 
-    .o-Media--reverse &,
-    .o-Media--alternate:nth-of-type(even) & {
+    .o-media--reverse &,
+    .o-media--alternate:nth-of-type(even) & {
         padding-right: 0;
         padding-left: $media-spacing;
     }
 
-    .o-Media--center & {
+    .o-media--center & {
         img {
             vertical-align: middle;
         }
     }
 }
 
-.o-Media--collapse {
-    > .o-Media-figure,
-    > .o-Media-body {
+.o-media--collapse {
+    > .o-media__figure,
+    > .o-media__body {
         padding: 0;
     }
 }

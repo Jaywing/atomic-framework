@@ -1,7 +1,7 @@
 // Name:            Cover
 // Description:     Defines styles for images and videos to cover their container in a centered position
 //
-// Component:       `o-Cover-*`
+// Component:       `o-cover-*`
 //
 // ========================================================================
 
@@ -39,7 +39,7 @@ $cover-loading-icon-xxl-adj: -($icon-size-xxl / 2) !default;
 //*
 
 // 1 */
-.o-Cover {
+.o-cover {
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -118,7 +118,7 @@ $cover-loading-icon-xxl-adj: -($icon-size-xxl / 2) !default;
         height: 0;
         margin: $cover-video-margin;
 
-        > .o-Cover-object {
+        > .o-cover-object {
             position: absolute;
             top: 0;
             left: 0;

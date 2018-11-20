@@ -14,7 +14,7 @@ $dd-last-child-margin: 0 0 $g-spacer 0 !default;
 $dd-font-style: italic !default;
 $dd-font-weight: normal !default;
 
-.c-Definition {
+.c-definition {
     @include trim-child-margins;
 
     margin: $dl-margin;
