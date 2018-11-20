@@ -1,9 +1,9 @@
 @include xxl {
-    .c-NavResponsive\@xxl,
-    .c-NavResponsive\@xxl.is-active {
+    .c-nav-responsive\@xxl,
+    .c-nav-responsive\@xxl.is-active {
         padding: 0;
 
-        .c-ToggleButton {
+        .c-toggle-button {
             display: none;
         }
 

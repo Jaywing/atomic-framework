@@ -1,9 +1,9 @@
 @include md {
-    .c-NavResponsive\@md,
-    .c-NavResponsive\@md.is-active {
+    .c-nav-responsive\@md,
+    .c-nav-responsive\@md.is-active {
         padding: 0;
 
-        .c-ToggleButton {
+        .c-toggle-button {
             display: none;
         }
 

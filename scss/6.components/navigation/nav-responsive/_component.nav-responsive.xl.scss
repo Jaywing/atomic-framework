@@ -1,9 +1,9 @@
 @include xl {
-    .c-NavResponsive\@xl,
-    .c-NavResponsive\@xl.is-active {
+    .c-nav-responsive\@xl,
+    .c-nav-responsive\@xl.is-active {
         padding: 0;
 
-        .c-ToggleButton {
+        .c-toggle-button {
             display: none;
         }
 

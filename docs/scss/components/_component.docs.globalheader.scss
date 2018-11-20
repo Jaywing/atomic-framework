@@ -9,7 +9,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
         margin: -12px 0 0 -7px;
     }
 
-    .c-NavResponsive {
+    .c-nav-responsive {
         padding-top: $g-spacer;
         overflow-x: visible;
 
@@ -18,7 +18,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
         }
     }
 
-    .c-ToggleButton {
+    .c-toggle-button {
         top: 7px;
         right: 7px;
         border-color: rgba(#fff, 0.2);
@@ -76,7 +76,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
             margin: 0;
         }
 
-        .c-NavResponsive {
+        .c-nav-responsive {
             padding-top: 0;
         }
     }

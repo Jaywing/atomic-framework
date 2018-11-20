@@ -1,4 +1,4 @@
-.c-Slider-picture {
+.c-slider__picture {
     position: absolute;
     top: 0;
     right: 0;
@@ -6,7 +6,7 @@
     left: 0;
     overflow: hidden;
 
-    .c-Slider-image {
+    .c-slider__image {
         position: absolute;
         top: 50%;
         right: 0;
@@ -16,13 +16,13 @@
     }
 }
 
-.c-Slider-content {
+.c-slider__content {
     position: relative;
     z-index: 1;
     height: 10rem;
 }
 
-.c-Slider-text {
+.c-slider__text {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -31,7 +31,7 @@
     color: $c-light;
 }
 
-.c-Slider-slide {
+.c-slider__slide {
     position: relative;
     display: none;
     height: 100%;
@@ -48,46 +48,46 @@
     }
 
     &.Active--next {
-        .c-Slider-picture {
-            .c-Slider-image {
+        .c-slider__picture {
+            .c-slider__image {
                 animation: slider-background-next 0.5s;
             }
         }
 
-        .c-Slider-text {
+        .c-slider__text {
             animation: slider-content-next 0.5s;
         }
     }
 
     &.Active--previous {
-        .c-Slider-picture {
-            .c-Slider-image {
+        .c-slider__picture {
+            .c-slider__image {
                 animation: slider-background-previous 0.5s;
             }
         }
 
-        .c-Slider-text {
+        .c-slider__text {
             animation: slider-content-previous 0.5s;
         }
     }
 }
 
-.c-Slider-controls {
+.c-slider__controls {
     display: flex;
 }
 
-.c-Slider-previous,
-.c-Slider-next {
+.c-slider__previous,
+.c-slider__next {
     cursor: pointer;
 }
 
-.c-Slider-pips {
+.c-slider__pips {
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
-.c-Slider-pip {
+.c-slider__pip {
     position: relative;
     top: 50%;
     width: 10px;
@@ -102,15 +102,15 @@
     }
 }
 
-.c-Slider--scroll {
+.c-slider--scroll {
     overflow: hidden;
 
-    .c-Slider-slides {
+    .c-slider__slides {
         display: flex;
         flex-wrap: nowrap;
     }
 
-    .c-Slider-slide {
+    .c-slider__slide {
         display: block;
         height: auto;
         padding: 0 $g-spacer-sm;
@@ -118,7 +118,7 @@
 }
 
 @include md {
-    .c-Slider-content {
+    .c-slider__content {
         position: absolute;
         top: 0;
         right: 0;

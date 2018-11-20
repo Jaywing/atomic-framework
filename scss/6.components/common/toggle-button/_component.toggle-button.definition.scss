@@ -2,31 +2,31 @@ $toggle-button-border: 1px solid $c-strong-trans-dark !default;
 $toggle-button-bg: transparent !default;
 $toggle-button-radius: $g-border-radius !default;
 
-.c-ToggleButton {
+.c-toggle-button {
     min-width: 44px;
     min-height: 44px;
     border: $toggle-button-border;
     background: $toggle-button-bg;
     border-radius: $toggle-button-radius;
 
-    .c-ToggleButton-close {
+    .c-toggle-button-close {
         display: none;
     }
 
     &.is-active,
     .is-active > & {
-        .c-ToggleButton-close {
+        .c-toggle-button-close {
             display: inline-block;
         }
 
-        .c-ToggleButton-init {
+        .c-toggle-button-init {
             display: none;
         }
     }
 }
 
-.c-ToggleButton--hideText {
-    .c-ToggleButton-text {
+.c-toggle-button--hideText {
+    .c-toggle-button-text {
         @include hide-visually(true);
     }
 }
