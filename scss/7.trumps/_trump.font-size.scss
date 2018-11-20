@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Font Sizes
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  13/06/2016
+////
+
+/// Helper classes for font sizes *- should only be used for rapid
+/// prototyping, remove for production)*
+/// These classes match up with the BBC GEL Typography definitions
+/// https://github.com/bbc/gel-typography
+
+/* font-size helpers */
+.u-canon {
+    @include canon;
+}
+
+.u-canonBold {
+    @include canon-bold;
+}
+
+.u-trafalgar {
+    @include trafalgar;
+}
+
+.u-trafalgarBold {
+    @include trafalgar-bold;
+}
+
+.u-doublePica {
+    @include double-pica;
+}
+
+.u-doublePicaBold {
+    @include double-pica-bold;
+}
+
+.u-greatPrimer {
+    @include great-primer;
+}
+
+.u-greatPrimerBold {
+    @include great-primer-bold;
+}
+
+.u-pica {
+    @include pica;
+}
+
+.u-picaBold {
+    @include pica-bold;
+}
+
+.u-longPrimer {
+    @include long-primer;
+}
+
+.u-longPrimerBold {
+    @include long-primer-bold;
+}
+
+.u-brevier {
+    @include brevier;
+}
+
+.u-brevierBold {
+    @include brevier-bold;
+}
+
+.u-minion {
+    @include minion;
+}
+
+.u-minionBold {
+    @include minion-bold;
+}

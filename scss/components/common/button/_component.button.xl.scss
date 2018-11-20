@@ -1,9 +1,0 @@
-$button-xl-padding: ($g-spacer * 1.25) $g-spacer-xl !default;
-
-.Button {
-    &--xl {
-        @include great-primer;
-
-        padding: $button-xl-padding;
-    }
-}

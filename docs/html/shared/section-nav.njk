@@ -1,21 +1,21 @@
 {% macro navbarItem(id, title, active, ready) %}
-<li class="Menu-item{% if id == active %} is-active{% endif %}">
+<li class="c-menu__item{% if id == active %} is-active{% endif %}">
   {% if ready %}
-    <a href="/docs/{{id}}" class="Menu-link">{{title}}</a>
+    <a href="/docs/{{id}}" class="c-menu__link">{{title}}</a>
   {% else %}
-    <a class="Menu-link is-disabled" disabled>{{title}}</a>
+    <a class="c-menu__link is-disabled" disabled>{{title}}</a>
   {% endif %}
 </li>
 {% endmacro %}
 
 {% from 'macros/toggle-button.njk' import ToggleButton %}
 
-<nav class="o-Container o-Container--centered NavResponsive NavResponsiveMd">
+<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
 
-  {{ ToggleButton("parent", "ToggleButton--hideText") }}
+  {{ ToggleButton("parent", "c-toggle-button--hideText") }}
 
-  <ul class="Menu Menu--vertical MenuMd">
-    <li class="Menu-item Menu-item--left w-logo">
+  <ul class="c-menu c-menu--vertical c-menu@md">
+    <li class="c-menu__item c-menu__item--left w-logo">
       <a href="/docs/">
         <img src="/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
       </a>

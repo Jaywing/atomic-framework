@@ -1,0 +1,13 @@
+$button-icon-padding: ($g-spacer-sm * 0.94) $g-spacer !default;
+$button-icon-icon-margin: -($g-spacer-xs) !default;
+
+.c-button {
+    &--icon {
+        padding: $button-icon-padding;
+
+        > .o-icon {
+            margin-right: $button-icon-icon-margin;
+            margin-left: $button-icon-icon-margin;
+        }
+    }
+}

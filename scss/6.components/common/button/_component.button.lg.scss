@@ -1,0 +1,7 @@
+$button-lg-padding: $g-spacer $g-spacer-lg !default;
+
+.c-button {
+    &--lg {
+        padding: $button-lg-padding;
+    }
+}

@@ -1,0 +1,8 @@
+$table-border: 1px solid $c-very-strong-trans-dark !default;
+
+.c-table--divider {
+    td,
+    th {
+        border-top: $table-border;
+    }
+}

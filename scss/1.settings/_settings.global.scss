@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------------
+
+// Settings: Global
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+$g-base-font-size: 16px !default;
+$g-base-line-height: 24px !default;
+
+$g-site-max-width: 1200px !default;
+
+$g-scrollbar-width: 17px !default;
+$g-min-touch-size: 44px !default;
+
+$g-text-direction: ltr !default;
+
+$g-body-antialiased: true !default;
+$g-body-no-horizontal-scroll: true !default;
+
+// CSS Healthcheck - coloured borders around layers
+$css-healthcheck-outline: true !default;
+
+// CSS Debugging - coloured borders around elements
+$css-debug-outline: false !default;
+$css-debug-depth: false !default;
+
+// GEL settings (typography) - https://github.com/bbc/gel-typography
+$gel-namespace: '' !default; // removes the 'gel-' prefix
+$gel-base-font-size: $g-base-font-size !default; // set the gel base font-size to equal ours

@@ -1,0 +1,41 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Miscellaneous
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @create   15/06/2016
+////
+
+// sass-lint:disable no-important
+
+// can be used on body to lock scrolling when an overlay is
+// used
+.u-scrollNone {
+    overflow: hidden !important;
+}
+
+.u-scrollXauto,
+.u-scrollX {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: none;
+}
+
+.u-scrollX {
+    overflow-x: scroll;
+}
+
+.u-scrollYauto,
+.u-scrollY {
+    width: 100%;
+    overflow-x: none;
+    overflow-y: auto;
+}
+
+.u-scrollY {
+    overflow-y: scroll;
+}

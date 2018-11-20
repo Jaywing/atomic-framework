@@ -4,7 +4,7 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% set pageid = 'skip-link' %}
+{% set pageid = 'skip__link' %}
 {% set sectionid = 'core' %}
 
 {% extends 'layouts/application.njk' %}
@@ -14,15 +14,15 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Skip link</h1>
-<p class="Text--lead">Hidden skip link that appears when it gains focus (usually by tabbing to it)</p>
+<p class="c-text--lead">Hidden skip link that appears when it gains focus (usually by tabbing to it)</p>
 <p>You can see an example of the skip link by reloading this page and pressing <key>TAB</key>.</p>
 
 <hr>
 
-<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+<h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
 
-<div class="docs-code">
-  <pre><code class="html">&lt;a href=&quot;#content&quot; class=&quot;SkipLink&quot;&gt;Skip to content&lt;/a&gt;</code></pre>
+<div class="c-code">
+  <pre><code class="html">&lt;a href=&quot;#content&quot; class=&quot;c-skip-link&quot;&gt;Skip to content&lt;/a&gt;</code></pre>
 </div>
 
 <p>The skip link must be the first focus-able element on the page, so the that it is activated by pressing tab for the first time.</p>

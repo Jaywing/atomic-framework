@@ -1,5 +1,5 @@
 {
-  "version": "2.2.6",
+  "version": "3.0.0",
   "lang": "en-GB",
   "author": {
     "name": "Jaywing",
@@ -61,42 +61,6 @@
           "title": "Installation",
           "section": "getting-started",
           "ready": true
-        },
-        {
-          "id": "environment",
-          "title": "Dev environment",
-          "section": "getting-started",
-          "ready": true
-        },
-        {
-          "id": "file-structure",
-          "title": "File structure",
-          "section": "getting-started",
-          "ready": true
-        },
-        {
-          "id": "stylesheets",
-          "title": "Stylesheets",
-          "section": "getting-started",
-          "ready": true
-        },
-        {
-          "id": "javascript",
-          "title": "Javascript",
-          "section": "getting-started",
-          "ready": true
-        },
-        {
-          "id": "html-templates",
-          "title": "HTML templates",
-          "section": "getting-started",
-          "ready": true
-        },
-        {
-          "id": "support",
-          "title": "Browser & device support",
-          "section": "getting-started",
-          "ready": true
         }
       ]
     },
@@ -147,10 +111,16 @@
           "ready": true
         },
         {
+          "id": "flex-grid",
+          "title": "Flexbox Grid",
+          "section": "core",
+          "ready": true
+        },
+        {
           "id": "grid",
           "title": "Grid",
           "section": "core",
-          "ready": true
+          "ready": false
         },
         {
           "id": "size",

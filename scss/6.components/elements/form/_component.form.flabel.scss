@@ -1,0 +1,26 @@
+$form-flabel-bg: $c-light !default;
+$form-flabel-top: 50% !default;
+$form-flabel-left: $g-spacer-sm !default;
+$form-flabel-active-top: 0 !default;
+$form-flabel-transition: all 0.1s linear !default;
+
+.c-form-flabel {
+    position: relative;
+
+    .c-form__label {
+        @include minion;
+
+        position: absolute;
+        top: $form-flabel-top;
+        left: $form-flabel-left;
+        background: $form-flabel-bg;
+        transform: translateY(-50%);
+        transition: $form-flabel-transition;
+    }
+
+    .c-form__input {
+        &:focus ~ label {
+            top: $form-flabel-active-top;
+        }
+    }
+}

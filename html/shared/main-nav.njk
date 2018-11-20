@@ -2,17 +2,17 @@
 {% from 'macros/toggle-button.njk' import ToggleButton %}
 
     <div class="NavMain">
-      <div class="o-Container o-Container--centered">
-        <nav role="navigation" class="NavResponsive NavResponsiveSm">
+      <div class="o-container o-container--centered">
+        <nav class="c-nav-responsive c-nav-responsive@sm">
 
           {{ ToggleButton('parent')}}
 
-          <ul class="Menu Menu--vertical MenuSm">
+          <ul class="c-menu c-menu--vertical c-menu@sm">
 
-            {{ menuHeader('Atomic', 'index.html', 'Menu-item--left Menu-item--flush') }}
+            {{ menuHeader('Atomic', 'index.html', 'c-menu__item--left c-menu__item--flush') }}
 
             {% for page in pages %}
-              {{ menuLink(page.id, page.title, page.url, pageId, 'nav-item') }}
+              {{ menuLink(page.id, page.title, page.url, pageId, 'nav__item') }}
             {% endfor %}
 
           </ul>

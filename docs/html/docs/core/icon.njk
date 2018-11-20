@@ -11,41 +11,41 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 {% extends 'layouts/application.njk' %}
 
-{% block metaTitle %}Icon | Atomic: Core{% endblock %}
+{% block metaTitle %}o-icon | Atomic: Core{% endblock %}
 
 {% block content %}
 
-<h1 class="Article-title">Icon</h1>
-<p class="Text--lead">Place vector icons anywhere using our SVG sprite generator.</p>
+<h1 class="Article-title">o-icon</h1>
+<p class="c-text--lead">Place vector icons anywhere using our SVG sprite generator.</p>
 
-<dl class="Definition Definition--horizontal">
+<dl class="c-definition c-definition__horizontal">
   <dt>Macros</dt>
-  <dd><a href="#section:macro"><span class="Badge">Icon</span></a></dd>
+  <dd><a href="#section:macro"><span class="c-badge">o-icon</span></a></dd>
 </dl>
 
 <hr>
 
-<h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+<h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
 
 <p>Drop icon svgs in the 'icon' folder in 'src' and they are automatically added to the sprite, the icon's location is indexed with a reference that matches its filename.</p>
 
-<div class="docs-example">
-  <span class="Icon Icon--navicon">
+<div class="c-example">
+  <span class="o-icon o-icon--navicon">
     <svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg>
   </span>
 </div>
 
-<div class="docs-code docs-code--html">
-  <pre><code class="html">&lt;span class="Icon Icon--navicon"&gt;
+<div class="c-code c-code--html">
+  <pre><code class="html">&lt;span class="o-icon o-icon--navicon"&gt;
   &lt;svg viewBox="0 0 1 1"&gt;
     &lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;
   &lt;/svg&gt;
 &lt;/span&gt;</code></pre>
 </div>
 
-<h3 id="section:macro"><a href="#section:macro" class="Text--resetLink">Macro</a></h3>
+<h3 id="section:macro"><a href="#section:macro" class="c-text--resetLink">Macro</a></h3>
 
-<dl class="definition Definition--horizontal">
+<dl class="c-definition c-definition__horizontal">
   <dt>Macro</dt>
   <dd>icon</dd>
   <dt>Import</dt>
@@ -56,12 +56,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <dd><strong>viewbox</strong> (string: '0 0 1 1') - <a href="https://developer.mozilla.org/en/docs/Web/SVG/Attribute/viewBox" target="_blank">Viewbox</a> preserves the aspect ratio of the sprite so that only the required sprite is shown</dd>
 </dl>
 
-<div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;, 'Icon--lg') &#125;&#125;</code></pre>
+<div class="c-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;[icon_ref]&#39;, 'o-icon--lg') &#125;&#125;</code></pre>
 </div>
 
-<div class="docs-example">
-  <div class="o-Grid o-Grid--gutters Text--center">
+<div class="c-example">
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
   {{ icon('archive') }}
   {{ icon('arrow-down') }}
   {{ icon('arrow-left') }}
@@ -84,7 +84,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   {{ icon('credit-card') }}
   {{ icon('envelope') }}
   {{ icon('exclamation') }}
-  {{ icon('external-link') }}
+  {{ icon('external__link') }}
   {{ icon('eye') }}
   {{ icon('gear') }}
   {{ icon('heart') }}
@@ -135,64 +135,64 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Size modifiers</h3>
 
-<div class="docs-example">
+<div class="c-example">
 
-  <div class="o-Grid o-Grid--1of5 Text--center">
+  <div class="o-flex-grid o-flex-grid--1of5 c-text--center">
 
-    <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--sm', '0 0 1 1') }}
-      <div><small>.Icon--sm</small></div>
+    <div class="o-flex-grid__cell c-demo">
+      {{ icon('eye', 'o-icon--sm', '0 0 1 1') }}
+      <div><small>.o-icon--sm</small></div>
     </div>
 
-    <div class="o-Grid-cell Demo">
+    <div class="o-flex-grid__cell c-demo">
       {{ icon('eye') }}
-      <div><small>.Icon</small></div>
+      <div><small>.o-icon</small></div>
     </div>
 
-    <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--lg') }}
-      <div><small>.Icon--lg</small></div>
+    <div class="o-flex-grid__cell c-demo">
+      {{ icon('eye', 'o-icon--lg') }}
+      <div><small>.o-icon--lg</small></div>
     </div>
 
-    <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--xl') }}
-      <div><small>.Icon--xl</small></div>
+    <div class="o-flex-grid__cell c-demo">
+      {{ icon('eye', 'o-icon--xl') }}
+      <div><small>.o-icon--xl</small></div>
     </div>
 
-    <div class="o-Grid-cell Demo">
-      {{ icon('eye', 'Icon--xxl') }}
-      <div><small>.Icon--xxl</small></div>
+    <div class="o-flex-grid__cell c-demo">
+      {{ icon('eye', 'o-icon--xxl') }}
+      <div><small>.o-icon--xxl</small></div>
     </div>
 
   </div>
 
 </div>
 
-<div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--sm&#39; &#125;&#125;
+<div class="c-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;eye&#39;, &#39;o-icon--sm&#39; &#125;&#125;
 &#123;&#123; icon(&#39;eye&#39;) &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--lg&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xl&#39; &#125;&#125;
-&#123;&#123; icon(&#39;eye&#39;, &#39;Icon--xxl &#125;&#125;</code></pre>
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-icon--lg&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-icon--xl&#39; &#125;&#125;
+&#123;&#123; icon(&#39;eye&#39;, &#39;o-icon--xxl &#125;&#125;</code></pre>
 </div>
 
 <h3>Spin modifier</h3>
 
-<div class="docs-example">
+<div class="c-example">
 
-  <div class="o-Grid o-Grid--gutters Text--center">
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
 
-    <div class="o-Grid-cell o-Size--1of5 Demo">
-      {{ icon('spinner-3', 'Icon--lg Icon--spin') }}
-      <div><small>.Icon--spin</small></div>
+    <div class="o-flex-grid__cell o-size--1of5 c-demo">
+      {{ icon('spinner-3', 'o-icon--lg o-icon--spin') }}
+      <div><small>.o-icon--spin</small></div>
     </div>
 
   </div>
 
 </div>
 
-<div class="docs-code">
-  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;Icon--spin Icon--lg&#39; &#125;&#125;</code></pre>
+<div class="c-code">
+  <pre><code class="html">&#123;&#123; icon(&#39;spinner-3&#39;, &#39;o-icon--spin o-icon--lg&#39; &#125;&#125;</code></pre>
 </div>
 
 

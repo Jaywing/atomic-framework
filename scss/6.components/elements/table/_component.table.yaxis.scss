@@ -1,0 +1,39 @@
+.c-table--yaxis {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    caption {
+        display: flex;
+        flex: 0 1 100%;
+    }
+
+    thead {
+        display: flex;
+        min-width: min-content;
+        flex-shrink: 0;
+    }
+
+    tbody {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    tr {
+        display: flex;
+        min-width: min-content;
+        flex: 1;
+        flex-direction: column;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    td {
+        border-left: 0;
+    }
+}

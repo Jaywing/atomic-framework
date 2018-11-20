@@ -1,15 +1,15 @@
-import Module from '../modules/Module'
-import StickyJS from 'sticky-js'
+import Module from "../modules/Module";
+import StickyJS from "sticky-js";
 
 export default class Sticky extends Module {
-  constructor (el, name, options) {
-    const defaults  = {
+  constructor(el, name, options) {
+    const defaults = {
       offsetTop: 0,
-      bpStart: 'gtBase',
-      stickyItem: 'Sticky-item',
-      stickyClass: 'is-sticky'
-    }
-    super(el, name, options, defaults)
+      bpStart: "gtBase",
+      stickyItem: "c-Sticky__item",
+      stickyClass: "is-sticky"
+    };
+    super(el, name, options, defaults);
   }
 
   /**
@@ -17,9 +17,9 @@ export default class Sticky extends Module {
    * every sticky element found with specified selector
    * @function
    */
-  init () {
-    var mySticky = new StickyJS('.Sticky-item')
-    mySticky.update()
-    console.log(`${this.name} has initialised`)
+  init() {
+    var mySticky = new StickyJS(".c-Sticky__item");
+    mySticky.update();
+    console.log(`${this.name} has initialised`);
   }
 }

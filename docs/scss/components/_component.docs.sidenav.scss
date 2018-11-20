@@ -1,18 +1,18 @@
-.docs-Sidenav {
+.t-side-nav {
     padding-right: $g-spacer;
 
-    .Menu-title {
+    .c-menu-title {
         display: block;
         padding: $g-spacer-sm $g-spacer-sm $g-spacer-xs;
     }
 
-    .Menu-item {
+    .c-menu__item {
         margin-top: 0;
         margin-bottom: 0;
         margin-left: -($g-spacer-sm);
     }
 
-    .Menu--vertical {
+    .c-menu--vertical {
         position: relative;
         left: $g-spacer-sm;
     }

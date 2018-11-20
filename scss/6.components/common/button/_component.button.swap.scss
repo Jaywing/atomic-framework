@@ -1,0 +1,169 @@
+$button-swap-ani-speed: $g-trans__link-speed !default;
+$button-swap-ani-easing: ease !default;
+$button-swap-horizontal-padding: $g-spacer !default;
+
+// scss-lint:disable NestingDepth
+.c-button--swap {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    .c-button__content:not(&-content--hidden) {
+        position: relative;
+        will-change: transform, opacity;
+    }
+
+    .c-button__content--hidden {
+        position: absolute;
+        width: 100%;
+        padding-right: $button-swap-horizontal-padding;
+        padding-left: $button-swap-horizontal-padding;
+    }
+
+    // Horizontal
+    .c-button__content {
+        &:not(.c-button__content--hidden) {
+            right: 0;
+            left: auto;
+        }
+
+        &--hidden {
+            top: 50%;
+            right: -100%;
+            left: auto;
+            transform: translateY(-50%);
+        }
+    }
+
+    // Animated
+    &.c-button--ani {
+        .c-button__content {
+            transition: right $button-swap-ani-speed $button-swap-ani-easing 0s;
+        }
+    }
+
+    &:not(.c-button--swapToggle) {
+        &:hover,
+        &:focus {
+            .c-button__content:not(.c-button__content--hidden) {
+                right: 200%;
+                left: auto;
+            }
+
+            .c-button__content--hidden {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &.c-button--swapToggle {
+        &.is-active {
+            .c-button__content:not(.c-button__content--hidden) {
+                right: 200%;
+                left: auto;
+            }
+
+            .c-button__content--hidden {
+                top: 50%;
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &.c-button--vertical {
+        // Animated
+        &.c-button--ani .c-button__content {
+            transition: top $button-swap-ani-speed $button-swap-ani-easing,
+                transform $button-swap-ani-speed $button-swap-ani-easing;
+        }
+
+        .c-button__content:not(.c-button__content--hidden) {
+            right: auto;
+            text-align: center;
+            transform: translateY(0%);
+        }
+
+        .c-button__content--hidden {
+            top: -50%;
+            right: auto;
+            left: 0;
+        }
+
+        &:not(.c-button--swapToggle) {
+            &.c-button--vertical:hover,
+            &.c-button--vertical:focus {
+                .c-button__content:not(.c-button__content--hidden) {
+                    right: auto;
+                    transform: translateY(200%);
+                }
+
+                .c-button__content--hidden {
+                    top: 50%;
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &.c-button--aniFade {
+        .c-button__content {
+            transition: opacity $button-swap-ani-speed $button-swap-ani-easing,
+                transform $button-swap-ani-speed $button-swap-ani-easing;
+        }
+
+        .c-button__content:not(.c-button__content--hidden) {
+            right: auto;
+            left: auto;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .c-button__content--hidden {
+            right: auto;
+            left: 0;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        &:not(.c-button--swapToggle) {
+            &:hover,
+            &:focus {
+                .c-button__content:not(.c-button__content--hidden) {
+                    right: auto;
+                    left: auto;
+                    opacity: 0;
+                    transform: scale(0);
+                }
+
+                .c-button__content--hidden {
+                    right: auto;
+                    left: 0;
+                    opacity: 1;
+                    transform: scale(1) translateY(-50%);
+                }
+            }
+        }
+
+        &.c-button--swapToggle {
+            &.is-active {
+                .c-button__content:not(.c-button__content--hidden) {
+                    right: auto;
+                    left: auto;
+                    opacity: 0;
+                    transform: scale(0);
+                }
+
+                .c-button__content--hidden {
+                    top: 50%;
+                    right: auto;
+                    left: 0;
+                    opacity: 1;
+                    transform: scale(1) translateY(-50%);
+                }
+            }
+        }
+    }
+}

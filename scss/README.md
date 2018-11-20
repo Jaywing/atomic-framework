@@ -1,5 +1,7 @@
 # CSS Architecture
+
 ## File structure
+
 ```
 scss/
 |-- settings/                           # global variables
@@ -17,27 +19,27 @@ scss/
 |   |-- mixins/                         # custom mixins (authored by us)
 |   |   |-- tools.center-block.scss
 |   |   |-- tools.hide-visually.scss
-|   |   ... 
+|   |   ...
 |-- generic/                            # high level global styles eg. box-sizing, reset, fonts, html & body etc.
 |   |-- generic.fonts.scss              # Importing any custom fonts
 |   |-- generic.base.scss               # Settings for HTML and BODY elements
-|   ... 
+|   ...
 |-- vendor/                             # any styles relating to third-party plugins etc.
 |   |-- vendor.pluginName.scss
 |   ...
 |-- base/                               # Unclassed basic html elements
-|   |-- typography/                     # all the typographical elements            
+|   |-- typography/                     # all the typographical elements
 |   |   |-- base.headings.scss      # base styles for headings
 |   |   |-- base.lists.scss         # base styles for lists
-|   |   ... 
-|   |-- forms/                          # all the form related elements 
+|   |   ...
+|   |-- forms/                          # all the form related elements
 |   |   |-- base.text-inputs.scss   # base styles for text inputs
 |   |   |-- base.range.scss         # base styles for html5 range input
-|   |   ... 
+|   |   ...
 |   ...                                 # any other base elements
 |-- components/                         # UI specific components
 |-- |-- common/
-|   |   |-- button/                                 # Complicated components can be split into separate file and put in a directory            
+|   |   |-- button/                                 # Complicated components can be split into separate file and put in a directory
 |   |   |   |-- component.button.scss               # Button master file (imports others)
 |   |   |   |-- component.button.definition.scss    # Button global definition
 |   |   |   |-- component.button.theme.scss         # Presentation style
@@ -46,7 +48,7 @@ scss/
 |-- |-- objects/
 |   |   |-- media/                      # Object are layout specific components
 |   |   |   |-- object.media.scss       # Object styles
-|   ... 
+|   ...
 |-- trumps/                             # Utilities, helpers, overrides and browser hacks
 |   |-- trumps.typography.scss          # typography utilities like .t-nobr or .t-textCenter
     |-- trumps.print.scss               # any print specific styles
@@ -66,14 +68,14 @@ This format allows us to write our styles in an order that only ever adds to and
 
 Each of these layers has it own directory in the file system.
 
-1. **Settings**     (Global variables (must be prefixed with 'g-' eg. g-base-font-size) - component/object specific variables should be in the partial it relates to)
-2. **Tools**        (Global mixins and functions - component/object specific mixins/functions should be in the partial it relates to)
-3. **Generic**	    (High level global styles - Eg. Reset, box-sizing)
-4. **Vendor**       (Third party styles for plugins -included before our custom styles so they can be over-written)
-5. **Elements**	    (Base styling for bare un-classed HTML elements)
-6. **Objects**	    (Non-cosmetic design patterns often concerned with layout, should be re-usable - eg. o-Wrapper)
-7. **Components**	(UI specific component styling)
-8. **Trumps**	    (Utilities, helpers, overrides and browser hacks. These should be minimal if everything above is correct. Eg. .t-clearfix)
+1. **Settings** (Global variables (must be prefixed with 'g-' eg. g-base-font-size) - component/object specific variables should be in the partial it relates to)
+2. **Tools** (Global mixins and functions - component/object specific mixins/functions should be in the partial it relates to)
+3. **Generic** (High level global styles - Eg. Reset, box-sizing)
+4. **Vendor** (Third party styles for plugins -included before our custom styles so they can be over-written)
+5. **Elements** (Base styling for bare un-classed HTML elements)
+6. **Objects** (Non-cosmetic design patterns often concerned with layout, should be re-usable - eg. o-Wrapper)
+7. **Components** (UI specific component styling)
+8. **Trumps** (Utilities, helpers, overrides and browser hacks. These should be minimal if everything above is correct. Eg. .t-clearfix)
 
 ## Class names
 
@@ -81,27 +83,27 @@ The naming convention for classes is based on [SUIT.CSS](https://github.com/suit
 
 ### Objects
 
-Syntax: o-&lt;ObjectName&gt;[Xxs|Xs|Sm|Md|Lg|Xl|Xxl][-decendentName][--modifierName]
+Syntax: o-&lt;ObjectName&gt;[@xxs|@xs|@sm|@md|@lg|@xl|@xxl][-decendentname][--modifierName]
 
 Object class names consist of:
 
-* Object prefix (o-)                - **Mandatory**     - *to easily distinguish between Object classes and Component classes (which don't have a prefix)*
-* Object name (ObjectName)          - **Mandatory**     - *must be pascal case*
-* Responsive utility (Sm)           - **Not Mandatory** - *corresponds to the responsive breakpoints defined in the Settings folder*
-* Descendant name (-descendantName) - **Not Mandatory** - *is attached to a decendant node of an object - must be camel case*
-* Modifier name (--modifierName)    - **Not Mandatory** - *modifies the presentation of the base component in some form - must be camel case*
+- Object prefix (o-) - **Mandatory** - _to easily distinguish between Object classes and Component classes (which don't have a prefix)_
+- Object name (ObjectName) - **Mandatory** - _must be pascal case_
+- Responsive utility (@sm) - **Not Mandatory** - _corresponds to the responsive breakpoints defined in the Settings folder_
+- Descendant name (-descendantName) - **Not Mandatory** - _is attached to a decendant node of an object - must be camel case_
+- Modifier name (--modifierName) - **Not Mandatory** - _modifies the presentation of the base component in some form - must be camel case_
 
-Example object class name: **o-GridSm-cell--wide**
+Example object class name: **o-Grid@sm-cell--wide**
 
 ### Components
 
-Syntax: &lt;ComponentName&gt;[-decendentName][--modifierName]
+Syntax: &lt;ComponentName&gt;[-decendentName][--modifiername]
 
 Components class names consist of:
 
-* Component name (ComponentName)    - **Mandatory**     - *must be pascal case*
-* Descendant name (-descendantName) - **Not Mandatory** - *is attached to a decendant node of an object - must be camel case*
-* Modifier name (--modifierName)    - **Not Mandatory** - *modifies the presentation of the base component in some form - must be camel case*
+- Component name (ComponentName) - **Mandatory** - _must be pascal case_
+- Descendant name (-descendantName) - **Not Mandatory** - _is attached to a decendant node of an object - must be camel case_
+- Modifier name (--modifierName) - **Not Mandatory** - _modifies the presentation of the base component in some form - must be camel case_
 
 Example component class name: **Media-figure--wide**
 
@@ -111,7 +113,7 @@ Syntax: trumpName
 
 Trump class names consist of:
 
-* Trump name (trumpName) - **Mandatory** - *must be camel case*
+- Trump name (trumpName) - **Mandatory** - _must be camel case_
 
 Example trump class name: **textCenter**
 
@@ -119,17 +121,16 @@ Example trump class name: **textCenter**
 
 Syntax: [ComponentName|o-ObjectName][--is|--has]-<stateName>
 
-State class names must always be used as joining classes to components or objects. 
+State class names must always be used as joining classes to components or objects.
 This means that the same state names can be used in multiple contexts, but every component must define its own styles for the state (as they are scoped to the component).
 
 State class names consist of:
 
-* **Component/object name (o-ObjectName)** - *Mandatory* - must be pascal case
-* **State prefix (--is)** - *Mandatory* - can be 'is' or 'has' (is-active or has-children)
-* **State name (active)** - *Mandatory* - descriptive title (eg. active)
+- **Component/object name (o-ObjectName)** - _Mandatory_ - must be pascal case
+- **State prefix (--is)** - _Mandatory_ - can be 'is' or 'has' (is-active or has-children)
+- **State name (active)** - _Mandatory_ - descriptive title (eg. active)
 
 Example state class name: **.NavBar--is-active**
-
 
 ### Theme class names
 
@@ -139,15 +140,13 @@ To keep a separation between structural styles and presentational styles, it rec
 
 This is to make it easier to re-skin, or make style adjustments.
 
-
-
 ## Coding style
 
-### Anatomy of a css class: 
+### Anatomy of a css class:
 
-1. $varibles - should always appear at the top and should only be relative to this particular class
+1. \$varibles - should always appear at the top and should only be relative to this particular class
 2. @extend(s) - although these should be avoided, if needed, should be placed at the top (after any variables)
-3. @include(s) - mixins, should be placed at the top too (after any variables or extends) 
+3. @include(s) - mixins, should be placed at the top too (after any variables or extends)
 4. Properties of the selector - in no particular order
 5. Pseudo selectors (eg. :hover, :last-child etc.)
 6. Child element selectors - remember not to nest more than 2 deep. Add a sub class if there is too much nesting
@@ -161,32 +160,33 @@ This is to make it easier to re-skin, or make style adjustments.
 
   // Any @extends - remember these should be avoided as much as possible
   @extend %myPlaceholder;
-  
-  // Any @includes - mixins 
+
+  // Any @includes - mixins
   @include center-block(75%);
-  @include clearfix;  
-  
+  @include clearfix;
+
   // Properties of the selector  (in no particular order)
   color: $color-fore;
   background: $color-back;
   padding: $myVariable;
-  
+
   // Pseudo selectors
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
   &:last-child {
     margin-right: 0;
   }
   &::after {
-    content: 'Hey';
+    content: "Hey";
   }
-  
+
   // Child element selectors (remember we should avoid nesting as much as possible)
   & > li {
     margin: 10px;
   }
-  
+
   // State classes
   &--is-active {
     color: $color-active;
@@ -198,8 +198,8 @@ This is to make it easier to re-skin, or make style adjustments.
 
 #### Global variables
 
-* Prefix global variable with `g-` to differentiate them from component specific variables
-* When utilising a global variable within a component, assign it to local variable at the top of the page or class. This help to decouple a component for re-use in other projects.
+- Prefix global variable with `g-` to differentiate them from component specific variables
+- When utilising a global variable within a component, assign it to local variable at the top of the page or class. This help to decouple a component for re-use in other projects.
 
 #### Variablise all common numbers and numbers with meaning
 
@@ -228,10 +228,10 @@ $g-z-Message: 5050;
 
 #### Mixins
 
-* Mixins that output selectors should be capital-case: @mixin GridBuilder
-* Mixins that output only properties should be camel-case: @mixin borderBox
-* Private mixins that are not used outside of the current file should be prefixed with a dash: @mixin -gridHelper
-* Mixins should be documented
+- Mixins that output selectors should be capital-case: @mixin GridBuilder
+- Mixins that output only properties should be camel-case: @mixin borderBox
+- Private mixins that are not used outside of the current file should be prefixed with a dash: @mixin -gridHelper
+- Mixins should be documented
 
 ```scss
 /*
@@ -266,13 +266,7 @@ $g-z-Message: 5050;
     }
 */
 
-@mixin color-swap-on-hover (
-  $off,
-  $on,
-  $duration: 0,
-  $bg: false
-) {
-
+@mixin color-swap-on-hover($off, $on, $duration: 0, $bg: false) {
   $transition-properties: null;
   $off-is-list: type-of($off) == list;
   $on-is-list: type-of($on) == list;
@@ -285,15 +279,15 @@ $g-z-Message: 5050;
     $transition-properties: background-color, color;
   }
 
-    // If $off IS NOT a list and $bg is TRUE,
-    // assign background-color.
+  // If $off IS NOT a list and $bg is TRUE,
+  // assign background-color.
   @else if $bg and not($off-is-list) {
     background-color: $off;
     $transition-properties: background-color;
   }
 
-    // If $off IS NOT a list and $bg is FALSE,
-    // assign color.
+  // If $off IS NOT a list and $bg is FALSE,
+  // assign color.
   @else {
     color: $off;
     $transition-properties: color;
@@ -307,28 +301,22 @@ $g-z-Message: 5050;
 
   &:hover,
   &:focus {
-
     // $on is treated the same as $off, above.
     @if $on-is-list {
       color: nth($on, 1);
       background-color: nth($on, 2);
-    }
-
-    @else if $bg and not($on-is-list) {
+    } @else if $bg and not($on-is-list) {
       background-color: $on;
-    }
-
-    @else {
+    } @else {
       color: $on;
     }
   }
-
 }
 ```
 
 ### Rules
 
-Writing good Sass code starts with correctly dividing and modularizing your objects. 
+Writing good Sass code starts with correctly dividing and modularizing your objects.
 It is arguably more important than any other aspect of writing CSS.
 
 #### SCSS Lint
@@ -343,7 +331,7 @@ Folders that don't get linted are 'vendor' and 'trumps'.
 
 ##### Decoupled
 
-Objects should never manipulate other objects. eg. .Message would never change the style of a nested object called .List. 
+Objects should never manipulate other objects. eg. .Message would never change the style of a nested object called .List.
 Instead use child selectors like .Message-list and use both classes in the markup `<div class="List Message-list">` or use a modifier `<div class="Message"><div class="List List--small"></div></div>`
 
 ##### Specific
@@ -376,7 +364,6 @@ Indentation should be 2 spaces
 
 ##### File structure
 
-* Each logical module of code should belong in its own file. Avoiding putting multiple objects in the same file. This allows you to use the filesystem to navigate your Sass rather than relying on comment blocks.
-* Mixins/placeholders/functions should, if possible, belong in their own file.
-* Files should be named for the component they are housing. A BlockList object will live in a BlockList.scss file.
-
+- Each logical module of code should belong in its own file. Avoiding putting multiple objects in the same file. This allows you to use the filesystem to navigate your Sass rather than relying on comment blocks.
+- Mixins/placeholders/functions should, if possible, belong in their own file.
+- Files should be named for the component they are housing. A BlockList object will live in a BlockList.scss file.

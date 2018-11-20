@@ -1,0 +1,14 @@
+@include md {
+    .c-nav-responsive\@md,
+    .c-nav-responsive\@md.is-active {
+        padding: 0;
+
+        .c-toggle-button {
+            display: none;
+        }
+
+        .c-menu {
+            max-height: none;
+        }
+    }
+}

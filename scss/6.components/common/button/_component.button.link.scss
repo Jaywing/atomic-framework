@@ -1,0 +1,27 @@
+$button__link-bg: transparent !default;
+$button__link-color: $link-color !default;
+$button__link-hover-color: $link-hover-color !default;
+$button__link-trans-speed: $link-trans-speed !default;
+$button__link-underline: $link-underline !default;
+
+.c-button-__link {
+    background: $button__link-bg;
+    text-decoration: $button__link-underline;
+
+    &:not([disabled]) {
+        @include color-swap-on-hover(
+            $button__link-color $button__link-bg,
+            $button__link-hover-color $button__link-bg,
+            $button__link-trans-speed
+        );
+    }
+
+    &[disabled] {
+        color: lighten($button__link-color, 15%);
+        text-decoration: none;
+    }
+
+    svg {
+        fill: $button__link-color;
+    }
+}

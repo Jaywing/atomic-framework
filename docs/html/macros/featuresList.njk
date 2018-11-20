@@ -10,11 +10,11 @@
     <div class="FeaturesList {{ classList }}">
 
       {% for feature in features %}
-        <div class="o-Media o-Section--short">
-          <div class="o-Media-figure">
-            {{ icon(feature.icon, 'Icon--xxl') }}
+        <div class="o-media o-section--short">
+          <div class="o-media__figure">
+            {{ icon(feature.icon, 'o-icon--xxl') }}
           </div>
-          <div class="o-Media-body">
+          <div class="o-media__body">
             <h3>{{ feature.title }}</h3>
             {{ feature.description | safe }}
           </div>

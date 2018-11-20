@@ -2,13 +2,13 @@
 
 {% macro MenuLink(item) %}
 
-  {% set classList="Menu-link" %}
+  {% set classList="c-menu__link" %}
   {% if item.linkClassList %}
     {% set classList = item.linkClassList %}
   {% endif %}
 
   {% if item.disabled %}
-    {% set classList = classList + ' Menu-link--disabled' %}
+    {% set classList = classList + ' c-menu__link--disabled' %}
   {% endif %}
 
   <a href="{{ item.url }}" class="{{ classList }}">

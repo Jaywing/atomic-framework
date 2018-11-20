@@ -24,8 +24,8 @@
     {%  set activeClass = "" %}
   {% endif %}
 
-  <li class="Menu-item {{ classes }} {{ activeClass }}">
-    <a href="{{url}}" class="Menu-link">{{ title | safe }}</a>
+  <li class="c-menu__item {{ classes }} {{ activeClass }}">
+    <a href="{{url}}" class="c-menu__link">{{ title | safe }}</a>
   </li>
 {% endmacro %}
 
@@ -47,8 +47,8 @@
     {% set header= '<a href="{{ url }}">{{ title | safe }}</a>' %}
   {% endif %}
 
-  <li class="Menu-item {{ classes }}">
-    <span class="Menu-header">
+  <li class="c-menu__item {{ classes }}">
+    <span class="c-menu__header">
       {%  if url %}
         <a href="{{ url }}">
       {% endif %}

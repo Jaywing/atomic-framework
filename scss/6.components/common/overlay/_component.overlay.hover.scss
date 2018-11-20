@@ -1,0 +1,12 @@
+.c-overlay--hover {
+    &:not(:hover):not(:focus) {
+        .c-overlay__panel {
+            opacity: 0;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}

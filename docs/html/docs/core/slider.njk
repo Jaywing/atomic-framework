@@ -15,61 +15,61 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
 <h1 class="Article-title">Slider</h1>
-<p class="Text--lead">Slide between content.</p>
+<p class="c-text--lead">Slide between content.</p>
 
 <hr class="Article-divider">
 
-<h2 id="section-usage"><a href="#section-usage" class="Text--resetLink">Usage</a></h2>
+<h2 id="section-usage"><a href="#section-usage" class="c-text--resetLink">Usage</a></h2>
 
-<p>The slider module is loaded asynchronously and is initialised using <code>data-module="Slider"</code> on the element.</p>
+<p>The slider module is loaded asynchronously and is initialised using <code>data-module="c-slider"</code> on the element.</p>
 
-<div class="docs-example">
+<div class="c-example">
 
-  <div class="Slider" data-module="Slider">
-    <div class="Slider-slides">
-      <div class="Slider-slide Active">
-        <picture class="Slider-picture">
+  <div class="c-slider" data-module="Slider">
+    <div class="c-slider__slides">
+      <div class="c-slider__slide is-active">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Lorem ipsum</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Lorem ipsum</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
-      <div class="Slider-slide Next">
-        <picture class="Slider-picture">
+      <div class="c-slider__slide is-next">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/sepia" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/sepia" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/sepia" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Cras</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Cras</h1>
             <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
           </div>
         </div>
       </div>
-      <div class="Slider-slide">
-        <picture class="Slider-picture">
+      <div class="c-slider__slide">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Cras</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Cras</h1>
             <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="Slider-controls">
-      <div class="Slider-previous">
+    <div class="c-slider__controls">
+      <div class="c-slider__previous">
         {{ icon('chevron-left') }}
       </div>
-      <div class="Slider-pips"></div>
-      <div class="Slider-next">
+      <div class="c-slider__pips"></div>
+      <div class="c-slider__next">
         {{ icon('chevron-right') }}
       </div>
     </div>
@@ -77,26 +77,26 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
-<div class="docs-code docs-code--html">
+<div class="c-code c-code--html">
   <pre><code class="html">
-  &lt;div class=&quot;Slider&quot; data-module=&quot;Slider&quot;&gt;
-    &lt;div class=&quot;Slider-slides&quot;&gt;
-      &lt;div class=&quot;Slider-slide Active&quot;&gt;
+  &lt;div class=&quot;c-slider&quot; data-module=&quot;c-slider&quot;&gt;
+    &lt;div class=&quot;c-slider__slides&quot;&gt;
+      &lt;div class=&quot;c-slider__slide is-active&quot;&gt;
         Slide 1
       &lt;/div&gt;
-      &lt;div class=&quot;Slider-slide Next&quot;&gt;
+      &lt;div class=&quot;c-slider__slide is-next&quot;&gt;
         Slide 2
       &lt;/div&gt;
-      &lt;div class=&quot;Slider-slide Active&quot;&gt;
+      &lt;div class=&quot;c-slider__slide is-active&quot;&gt;
         Slide 3
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;Slider-controls&quot;&gt;
-      &lt;div class=&quot;Slider-previous&quot;&gt;
-        &lt; Previous
+    &lt;div class=&quot;c-slider__controls&quot;&gt;
+      &lt;div class=&quot;c-slider__previous&quot;&gt;
+        Previous
       &lt;/div&gt;
-      &lt;div class=&quot;Slider-next&quot;&gt;
-        Next &gt;
+      &lt;div class=&quot;c-slider__next&quot;&gt;
+        Next
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -105,53 +105,53 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Slides to show</h3>
 
-<div class="docs-example">
+<div class="c-example">
 
-  <div class="Slider Slider--scroll" data-module="Slider" data-options='{"slidesToShow": 2}'>
-    <div class="Slider-slides">
-      <div class="Slider-slide Active">
-        <picture class="Slider-picture">
+  <div class="c-slider c-slider--scroll" data-module="Slider" data-options='{"slidesToShow": 2}'>
+    <div class="c-slider__slides">
+      <div class="c-slider__slide is-active">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Lorem ipsum</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Lorem ipsum</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
-      <div class="Slider-slide">
-        <picture class="Slider-picture">
+      <div class="c-slider__slide">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/sepia" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/sepia" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/sepia" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Cras</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Cras</h1>
             <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
           </div>
         </div>
       </div>
-      <div class="Slider-slide">
-        <picture class="Slider-picture">
+      <div class="c-slider__slide">
+        <picture class="c-slider__picture">
           <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-          <img class="Slider-image" src="//placeimg.com/600/600/tech/grayscale" alt="">
+          <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
         </picture>
-        <div class="Slider-content">
-          <div class="Slider-text">
-            <h1 class="Hero-title">Cras</h1>
+        <div class="c-slider__content">
+          <div class="c-slider__text">
+            <h1>Cras</h1>
             <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="Slider-controls">
-      <div class="Slider-previous">
+    <div class="c-slider__controls">
+      <div class="c-slider__previous">
         {{ icon('chevron-left') }}
       </div>
-      <div class="Slider-pips"></div>
-      <div class="Slider-next">
+      <div class="c-slider__pips"></div>
+      <div class="c-slider__next">
         {{ icon('chevron-right') }}
       </div>
     </div>

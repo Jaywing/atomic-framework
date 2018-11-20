@@ -1,0 +1,14 @@
+@include sm {
+    .c-nav-responsive\@sm,
+    .c-nav-responsive\@sm.is-active {
+        padding-top: 0;
+
+        .c-toggle-button {
+            display: none;
+        }
+
+        .c-menu {
+            max-height: none;
+        }
+    }
+}

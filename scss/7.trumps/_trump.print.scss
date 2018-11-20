@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Print
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  13/06/2016
+////
+
+// sass-lint:disable no-important no-qualifying-elements
+
+/* print helpers */
+@media print {
+    // * Print visibility classes
+    // *     .print-hide
+    // *     .print-only
+
+    .u-printHide {
+        display: none !important;
+    }
+
+    .u-printOnly {
+        display: block !important;
+    }
+
+    table.u-printOnly {
+        display: table !important;
+    }
+
+    thead.u-printOnly {
+        display: table-header-group !important;
+    }
+
+    tbody.u-printOnly {
+        display: table-row-group !important;
+    }
+
+    tr.u-printOnly {
+        display: table-row !important;
+    }
+
+    td.u-printOnly {
+        display: table__cell !important;
+    }
+
+    th.u-printOnly {
+        display: table__cell !important;
+    }
+}

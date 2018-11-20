@@ -14,7 +14,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
   <h1 class="Article-title">Breakpoints</h1>
-  <p class="Text--lead">Overview of the default breakpoint settings and how to use them.</p>
+  <p class="c-text--lead">Overview of the default breakpoint settings and how to use them.</p>
 
   <hr class="Article-divider">
 
@@ -23,12 +23,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <p>Settings for the default breakpoints can be found in <code>stylesheets/settings/_settings.media-queries.scss</code>.</p>
 
   <div class="scrollXauto">
-    <table class="Table Table--striped Text--left">
+    <table class="c-table c-table--striped c-text--left">
       <thead>
       <tr>
-        <th class="o-Size--1of4">Breakpoint</th>
-        <th class="o-Size--1of4">Width</th>
-        <th class="o-Size--1of2">Example device</th>
+        <th class="o-size--1of4">Breakpoint</th>
+        <th class="o-size--1of4">Width</th>
+        <th class="o-size--1of2">Example device</th>
       </tr>
       </thead>
       <tbody>
@@ -78,7 +78,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <h3>Mixins</h3>
   <p>Each breakpoint has its own mixin.</p>
-  <div class="docs-code docs-code--scss">
+  <div class="c-code c-code--scss">
     <pre><code class="css">@include md { .... }
 @include xl { .... }
 // gets compiled to
@@ -86,7 +86,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 @media screen and (min-width: 1180px) { .... }</code></pre>
   </div>
     <p>For more complicated media queries use the <code>mq</code> mixin from <a href="https://github.com/sass-mq/sass-mq">sass-mq</a> plugin which is installed</p>
-  <div class="docs-code docs-code--scss">
+  <div class="c-code c-code--scss">
     <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
 // gets compiled to
 @media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>
@@ -98,5 +98,5 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% endblock %}
 
 {% block javascript %}
-  
+
 {% endblock %}

@@ -1,0 +1,14 @@
+@include xs {
+    .c-nav-responsive\@xs,
+    .c-nav-responsive\@xs.is-active {
+        padding-top: 0;
+
+        .c-toggle-button {
+            display: none;
+        }
+
+        .c-menu {
+            max-height: none;
+        }
+    }
+}

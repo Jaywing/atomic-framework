@@ -1,0 +1,136 @@
+$form-field-padding: $g-spacer-sm 0 !default;
+
+$form-label-weight: $g-weight-bold !default;
+
+$form-input-padding: $g-spacer-sm !default;
+$form-input-bg: $c-light !default;
+$form-input-border: 1px solid $c-light-15 !default;
+$form-input-color: $c-dark-15 !default;
+$form-input-radius: $g-border-radius !default;
+
+$form-blank-bg: transparent !default;
+$form-blank-border-color: transparent !default;
+$form-blank-border-style: dashed !default;
+$form-blank-focus-border-color: $c-light-15 !default;
+
+$form-disabled-bg: $c-disabled !default;
+$form-disabled-border-color: $c-light-30 !default;
+$form-disabled-color: $c-light-75 !default;
+
+$form-danger-border-color: $c-danger !default;
+$form-danger-color: $c-danger !default;
+
+$form-success-border-color: $c-success !default;
+$form-success-color: $c-success !default;
+
+$form-status-padding: $g-spacer-sm 0 !default;
+
+.c-form {
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin: 0;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0 0 $g-spacer;
+        line-height: 2;
+
+        &::after {
+            display: block;
+            border-bottom: 1px solid $c-dark-30;
+            content: '';
+        }
+    }
+
+    input:not([type='radio']):not([type='checkbox']),
+    select {
+        vertical-align: middle;
+    }
+}
+
+.c-form__input,
+.c-form__select,
+.c-form__text,
+.c-form__check,
+.c-form__radio {
+    max-width: 100%;
+    padding: $form-input-padding;
+    border: $form-input-border;
+    background: $form-input-bg;
+    border-radius: $form-input-radius;
+    color: $form-input-color;
+
+    &--blank {
+        background: $form-blank-bg;
+        border-color: $form-blank-border-color;
+        border-style: $form-blank-border-style;
+        outline: none;
+
+        &:focus {
+            border-color: $form-blank-focus-border-color;
+        }
+    }
+
+    &:disabled {
+        background-color: $form-disabled-bg;
+        border-color: $form-disabled-border-color;
+        color: $form-disabled-color;
+    }
+
+    &--danger {
+        border-color: $form-danger-border-color;
+    }
+
+    &--success {
+        border-color: $form-success-border-color;
+    }
+}
+
+.c-form__input,
+.c-form__select,
+.c-form__text {
+    width: 100%;
+
+    &--inline {
+        width: auto;
+    }
+}
+
+.c-form__text {
+    height: auto;
+}
+
+.c-form__label {
+    display: block;
+    font-weight: $form-label-weight;
+}
+
+.c-form__field {
+    padding: $form-field-padding;
+
+    .c-panel {
+        margin: $g-spacer-xs 0;
+    }
+
+    &--list {
+        > label {
+            display: block;
+            padding: $g-spacer-sm 0 0;
+        }
+    }
+}
+
+.c-form__status {
+    padding: $form-status-padding;
+
+    &--danger {
+        color: $form-danger-color;
+    }
+
+    &--success {
+        color: $form-success-color;
+    }
+}

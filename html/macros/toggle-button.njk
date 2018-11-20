@@ -21,19 +21,19 @@
   }
 ) %}
 
-  <button class="ToggleButton {{ classes }}" data-module="Toggle"{% if target !== false %} data-options='{"target":"{{ target }}"}'{% endif %}>
+  <button class="c-toggle-button {{ classes }}" data-module="Toggle"{% if target !== false %} data-options='{"target":"{{ target }}"}'{% endif %}>
 
-    <div class="ToggleButton-init">
-      {{ icon(content.offIcon, 'ToggleButton-icon--init') }}
+    <div class="c-toggle-button__init">
+      {{ icon(content.offIcon, 'c-toggle-button-icon--init') }}
       {% if content.offText %}
-        <span class="ToggleButton-text">{{ content.offText | safe }}</span>
+        <span class="c-toggle-button__text">{{ content.offText | safe }}</span>
       {% endif %}
     </div>
 
-    <div class="ToggleButton-close">
-      {{ icon(content.onIcon, 'ToggleButton-icon--close') }}
+    <div class="c-toggle-button__close">
+      {{ icon(content.onIcon, 'c-toggle-button-icon--close') }}
       {% if content.onText %}
-        <span class="ToggleButton-text">{{ content.onText | safe }}</span>
+        <span class="c-toggle-button__text">{{ content.onText | safe }}</span>
       {% endif %}
     </div>
 

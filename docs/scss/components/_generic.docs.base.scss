@@ -12,7 +12,7 @@ html {
     }
 }
 
-.docs-footer {
+.t-footer {
     padding: $g-spacer-sm 0;
     background: $c-light-15;
 }
@@ -25,8 +25,8 @@ html {
     border-radius: $g-border-radius;
 }
 
-.is-active > .Panel,
-.Panel.is-active {
+.is-active > .c-panel,
+.c-panel.is-active {
     &::before {
         @include minion;
 
@@ -39,12 +39,12 @@ html {
     }
 }
 
-.docs-PanelList {
-    .Panel {
+.c-panel-list {
+    .c-panel {
         margin-bottom: $g-spacer;
     }
 
-    .Panel-title {
+    .c-panel__title {
         font-weight: bold;
     }
 

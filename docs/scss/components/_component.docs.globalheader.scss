@@ -1,6 +1,6 @@
 $doc-globalheader-bg: $c-jaywing-dark;
 
-.docs-GlobalHeader {
+.t-global-header {
     background: $doc-globalheader-bg;
 
     .w-logo a {
@@ -9,16 +9,16 @@ $doc-globalheader-bg: $c-jaywing-dark;
         margin: -12px 0 0 -7px;
     }
 
-    .NavResponsive {
+    .c-nav-responsive {
         padding-top: $g-spacer;
         overflow-x: visible;
 
-        .Icon svg {
+        .o-icon svg {
             fill: rgba(#fff, 0.5);
         }
     }
 
-    .ToggleButton {
+    .c-toggle-button {
         top: 7px;
         right: 7px;
         border-color: rgba(#fff, 0.2);
@@ -29,18 +29,18 @@ $doc-globalheader-bg: $c-jaywing-dark;
     }
 
     @include xs {
-        .Menu-item:not(.w-logo) {
+        .c-menu__item:not(.w-logo) {
             max-width: 50%;
         }
     }
 
-    .Menu-link {
+    .c-menu__link {
         display: block;
         padding: $g-spacer-sm;
         border: 1px solid rgba(#fff, 0);
         margin: $g-spacer-xs 0;
         color: rgba(#fff, 0.6);
-        transition: all $g-trans-link-speed ease-in-out;
+        transition: all $g-trans__link-speed ease-in-out;
 
         &:hover,
         &:focus {
@@ -62,7 +62,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
     }
 
     .is-active {
-        > .Menu-link {
+        > .c-menu__link {
             background: rgba(#000, 0.33);
             border-color: rgba(#fff, 0.5);
             color: rgba(#fff, 1);
@@ -76,7 +76,7 @@ $doc-globalheader-bg: $c-jaywing-dark;
             margin: 0;
         }
 
-        .NavResponsive {
+        .c-nav-responsive {
             padding-top: 0;
         }
     }

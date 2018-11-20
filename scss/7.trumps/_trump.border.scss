@@ -1,0 +1,34 @@
+// ----------------------------------------------------------------------
+
+// Trumps: Border
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  13/06/2016
+////
+
+// Border helpers
+// *      .u-radius
+// *      .u-round
+// *      .u-circle
+
+// sass-lint:disable no-important
+
+$radius: $g-border-radius !default;
+$round: $g-round-radius !default;
+$circle: $g-circular-radius !default;
+
+.u-radius {
+    border-radius: $radius !important;
+}
+
+.u-round {
+    border-radius: $round !important;
+}
+
+.u-circle {
+    border-radius: $circle !important;
+}

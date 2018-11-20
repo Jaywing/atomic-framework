@@ -21,21 +21,21 @@
   {% block metaHead %}{% endblock %}
 </head>
 
-<body id="top" class="o-Site">
+<body id="top" class="o-site">
 
-  <a href="#content" class="SkipLink">Skip to content</a>
+  <a href="#content" class="c-skip-link">Skip to content</a>
 
-  <header role="banner" class="o-Site-header">
+  <header class="o-site__header">
     {% block pageHead %}{% endblock %}
     {% include 'shared/main-nav.njk' %}
   </header>
 
-  <main id="content" class="o-Site-content">
+  <main id="content" class="o-site__content">
     {% block content %}{% endblock %}
   </main>
 
-  <footer role="contentinfo" class="o-Site-footer">
-    <div class="o-Container o-Container--centered">
+  <footer class="o-site__footer">
+    <div class="o-container o-container--centered">
       <p>&copy; <u id="copyright-year">{{ author.createdYear }}</u> - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
     </div>
   </footer>

@@ -10,22 +10,22 @@
   closeText: false
 }) %}
 
-  <button class="ToggleButton {{ classList }}" data-module="Toggle"
+  <button class="c-toggle-button {{ classList }}" data-module="Toggle"
       {% if settings %}
         data-options='{{ settings }}'
       {% endif %}>
 
-    <div class="ToggleButton-init">
-      {{ icon(content.initIcon, 'ToggleButton-icon--init') }}
+    <div class="c-toggle-button__init">
+      {{ icon(content.initIcon, 'c-toggle-button-icon--init') }}
       {% if content.initText %}
-        <span class="ToggleButton-text">{{ content.initText }}</span>
+        <span class="c-toggle-button__text">{{ content.initText }}</span>
       {% endif %}
     </div>
 
-    <div class="ToggleButton-close">
-      {{ icon(content.closeIcon, 'ToggleButton-icon--close') }}
+    <div class="c-toggle-button__close">
+      {{ icon(content.closeIcon, 'c-toggle-button-icon--close') }}
       {% if content.closeText %}
-        <span class="ToggleButton-text">{{ content.closeText }}</span>
+        <span class="c-toggle-button__text">{{ content.closeText }}</span>
       {% endif %}
     </div>
 

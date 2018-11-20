@@ -1,0 +1,34 @@
+$form-icon-color: $c-light-50 !default;
+$form-icon-width: 30px !default;
+$form-icon-indent: $form-icon-width !default;
+$form-icon-margin: -15px 0 0 !default;
+
+.c-form-icon {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+
+    [class*='o-icon'] {
+        position: absolute;
+        top: 50%;
+        width: $form-icon-width;
+        margin: $form-icon-margin;
+        color: $form-icon-color;
+        pointer-events: none;
+        text-align: center;
+    }
+
+    &:not(.c-form-icon--flip) > input {
+        padding-left: $form-icon-indent;
+    }
+
+    &--flip {
+        [class*='o-icon'] {
+            right: 0;
+        }
+
+        > input {
+            padding-right: $form-icon-indent;
+        }
+    }
+}

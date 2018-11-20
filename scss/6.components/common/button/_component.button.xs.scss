@@ -1,0 +1,9 @@
+$button-xs-padding: $g-spacer-sm $g-spacer !default;
+
+.c-button {
+    &--xs {
+        @include minion;
+
+        padding: $button-xs-padding;
+    }
+}

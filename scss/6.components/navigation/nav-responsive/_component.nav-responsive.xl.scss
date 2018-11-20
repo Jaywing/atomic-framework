@@ -1,0 +1,14 @@
+@include xl {
+    .c-nav-responsive\@xl,
+    .c-nav-responsive\@xl.is-active {
+        padding: 0;
+
+        .c-toggle-button {
+            display: none;
+        }
+
+        .c-menu {
+            max-height: none;
+        }
+    }
+}

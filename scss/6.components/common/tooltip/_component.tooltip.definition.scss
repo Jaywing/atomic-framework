@@ -1,0 +1,62 @@
+$tooltip-bg: $c-dark-15 !default;
+$tooltip-color: $c-light !default;
+$tooltop-z-index: $g-z-5;
+$tooltip-pointer-size: 10px !default;
+$tooltip-pointer-bg: $tooltip-bg !default;
+$tooltip-padding: $g-spacer-sm !default;
+$tooltip-max-width: 10rem !default;
+$tooltip-bottom: 2rem !default;
+$tooltip-popin-ani-time: 0.2s !default;
+$tooltip-popin-ani-type: linear !default;
+
+.c-tooltip {
+    position: relative;
+    display: inline-block;
+
+    &__item {
+        position: absolute;
+        z-index: $tooltop-z-index;
+        bottom: $tooltip-bottom;
+        left: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        box-align: center;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__item-inner {
+        max-width: $tooltip-max-width;
+        flex: none;
+        padding: $tooltip-padding;
+        background: $tooltip-bg;
+        color: $tooltip-color;
+
+        &::after {
+            position: absolute;
+            bottom: -$tooltip-pointer-size;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-top: $tooltip-pointer-size solid $tooltip-pointer-bg;
+            border-right: $tooltip-pointer-size solid transparent;
+            border-left: $tooltip-pointer-size solid transparent;
+            content: ' ';
+            transform: translateX(-50%);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .c-tooltip__item {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .c-tooltip__item-inner {
+            animation: popin $tooltip-popin-ani-time $tooltip-popin-ani-type;
+        }
+    }
+}

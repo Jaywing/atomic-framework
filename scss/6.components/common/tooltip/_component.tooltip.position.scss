@@ -1,0 +1,90 @@
+.c-tooltip--right {
+    .c-tooltip__item {
+        top: 50%;
+        bottom: inherit;
+        left: 115%;
+        align-items: center;
+        justify-content: flex-start;
+        box-align: flex-start;
+        transform: translateY(-50%);
+    }
+
+    .c-tooltip__item-inner {
+        &::after {
+            top: 50%;
+            bottom: inherit;
+            left: -($tooltip-pointer-size * 2);
+            border: $tooltip-pointer-size solid transparent;
+            border-right: $tooltip-pointer-size solid $tooltip-pointer-bg;
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .c-tooltip__item-inner {
+            animation: popinRight $tooltip-popin-ani-time
+                $tooltip-popin-ani-type;
+        }
+    }
+}
+
+.c-tooltip--bottom {
+    .c-tooltip__item {
+        top: $tooltip-bottom;
+        bottom: inherit;
+        left: 0;
+    }
+
+    .c-tooltip__item-inner {
+        position: relative;
+
+        &::after {
+            top: -($tooltip-pointer-size * 2);
+            bottom: inherit;
+            left: 50%;
+            border: $tooltip-pointer-size solid transparent;
+            border-bottom: $tooltip-pointer-size solid $tooltip-pointer-bg;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .c-tooltip__item-inner {
+            animation: popinDown $tooltip-popin-ani-time $tooltip-popin-ani-type;
+        }
+    }
+}
+
+.c-tooltip--left {
+    .c-tooltip__item {
+        top: 50%;
+        bottom: inherit;
+        left: -115%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        box-align: flex-end;
+        transform: translateY(-50%);
+    }
+
+    .c-tooltip__item-inner {
+        position: relative;
+
+        &::after {
+            top: 50%;
+            right: -($tooltip-pointer-size * 2);
+            bottom: inherit;
+            left: inherit;
+            border: $tooltip-pointer-size solid transparent;
+            border-left: $tooltip-pointer-size solid $tooltip-pointer-bg;
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .c-tooltip__item-inner {
+            animation: popinLeft $tooltip-popin-ani-time $tooltip-popin-ani-type;
+        }
+    }
+}

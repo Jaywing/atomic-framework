@@ -14,17 +14,17 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
   <h1 class="Article-title">Base</h1>
-  <p class="Text--lead">Provides the default style for all HTML elements.</p>
+  <p class="c-text--lead">Provides the default style for all HTML elements.</p>
   <p><strong>Version:</strong> {{component_version}}</p>
 
   <p>This component defines the base look of your page. It offers great typography by setting the default colors, margins, font-sizes and more for each HTML element. This page is a short guide on how to use basic HTML elements and how Atomic styles them.</p>
 
   <hr class="Article-divider">
 
-  <h2 id="section:headings"><a href="#section:headings" class="Text--resetLink">Headings</a></h2>
+  <h2 id="section:headings"><a href="#section:headings" class="c-text--resetLink">Headings</a></h2>
   <p>Use the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements to define your headings.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <h1>h1 Trafalgar</h1>
     <h2>h2 Double pica</h2>
     <h3>h3 Great primer</h3>
@@ -36,7 +36,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <h3>Small header segments</h3>
   <p>By inserting a <code>&lt;small&gt;</code> element into a header Foundation will scale the header font size down for an inline element, allowing you to use this for subtitles or other secondary header text.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
 
     <h1>Atomic by Jaywing <small>- Version {{version}}</small></h1>
 
@@ -44,21 +44,21 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <hr class="Article-divider">
 
-  <h2 id="section:paragraphs"><a href="#section:paragraphs" class="Text--resetLink">Paragraphs</a></h2>
+  <h2 id="section:paragraphs"><a href="#section:paragraphs" class="c-text--resetLink">Paragraphs</a></h2>
 
-  <div class="docs-example">
+  <div class="c-example">
     <p>The global font-size, line-height and regular margins between elements are set through variables, which can be customized. Paragraphs and other block elements stick to these values.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis cupiditate deleniti illo incidunt iste molestiae quam quia, quidem sapiente sit voluptate! Aut ipsa iste nesciunt praesentium quisquam repudiandae tenetur.</p>
   </div>
 
   <hr class="Article-divider">
 
-  <h2 id="section:text-level-semantics"><a href="#section:text-level-semantics" class="Text--resetLink">Text Level Semantics</a></h2>
+  <h2 id="section:text-level-semantics"><a href="#section:text-level-semantics" class="c-text--resetLink">c-text Level Semantics</a></h2>
   <p>The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.</p>
 
-  <div class="docs-example">
-    <div class="o-Container o-Container--fluid o-Container--collapse o-Container--overflow">
-      <table class="Table Table--hover Table--condensed textNoWrap">
+  <div class="c-example">
+    <div class="o-container o-container--fluid o-container--collapse o-container--overflow">
+      <table class="c-table c-table--hover c-table--condensed textNoWrap">
         <thead>
           <tr>
             <th class="width--1-4">Element</th>
@@ -117,19 +117,19 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <hr class="Article-divider">
 
-  <h2 id="section:horizontal-rule"><a href="#section:horizontal-rule" class="Text--resetLink">Horizontal rule</a></h2>
+  <h2 id="section:horizontal-rule"><a href="#section:horizontal-rule" class="c-text--resetLink">Horizontal rule</a></h2>
   <p>Create a horizontal rule by using the <code>&lt;hr&gt;</code> element.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <hr>
   </div>
 
   <hr class="Article-divider">
 
-  <h2 id="section:blockquotes"><a href="#section:blockquotes" class="Text--resetLink">Blockquotes</a></h2>
+  <h2 id="section:blockquotes"><a href="#section:blockquotes" class="c-text--resetLink">Blockquotes</a></h2>
   <p>For quoting multiple lines of content from another source within your document, use the <code>&lt;blockquote&gt;</code> element.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <blockquote>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       <cite>Someone famous</cite>
@@ -138,10 +138,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <hr class="Article-divider">
 
-  <h2 id="section:lists"><a href="#section:lists" class="Text--resetLink">Lists</a></h2>
+  <h2 id="section:lists"><a href="#section:lists" class="c-text--resetLink">Lists</a></h2>
   <p>Create an unordered list using the <code>&lt;ul&gt;</code> element and the <code>&lt;ol&gt;</code> element for ordered lists. The <code>&lt;li&gt;</code> element defines the list item.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <ul>
       <li>Item 1</li>
       <li>Item 2
@@ -179,10 +179,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <hr class="Article-divider">
 
-  <h2 id="section:definition-lists"><a href="#section:definition-lists" class="Text--resetLink">Definition lists</a></h2>
+  <h2 id="section:definition-lists"><a href="#section:definition-lists" class="c-text--resetLink">Definition lists</a></h2>
   <p>Create a description list using the <code>&lt;dl&gt;</code> element. Use <code>&lt;dt&gt;</code> to define the term and <code>&lt;dd&gt;</code> for the description.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <dl>
       <dt>Description lists</dt>
       <dd>A description list defines terms and their corresponding descriptions.</dd>
@@ -195,20 +195,20 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <hr class="Article-divider">
 
-  <h2 id="section:fluid-images"><a href="#section:fluid-images" class="Text--resetLink">Fluid images</a></h2>
+  <h2 id="section:fluid-images"><a href="#section:fluid-images" class="c-text--resetLink">Fluid images</a></h2>
   <p>All images are fluid by default. If the layout is narrowed, images adjust their size and keep their proportions. Images shouldn't stretch to bigger than their natural size.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <img src="/images/placeholder/img_480x260.svg" alt="">
   </div>
 
   <hr class="Article-divider">
 
-  <h2 id="section:code-blocks"><a href="#section:code-blocks" class="Text--resetLink">Code blocks</a></h2>
+  <h2 id="section:code-blocks"><a href="#section:code-blocks" class="c-text--resetLink">Code blocks</a></h2>
   <p>For multiple lines of code, use the <code>&lt;pre&gt;</code> element which defines preformatTed text. It creates a new text block that preserves spaces, tabs and line breaks. Nest a <code>&lt;code&gt;</code> element inside to define the code block.</p>
-  <p><span class="Badge">IMPORTANT</span> Be sure to escape any angle brackets in the code for proper rendering.</p>
+  <p><span class="c-badge">IMPORTANT</span> Be sure to escape any angle brackets in the code for proper rendering.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
     <pre><code class="xml">&lt;pre&gt;
   &lt;code&gt;...&lt;/code&gt;
 &lt;/pre&gt;</code></pre>

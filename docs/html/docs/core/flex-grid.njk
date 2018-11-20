@@ -1,0 +1,502 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'flex-grid' %}
+{% set sectionid = 'core' %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}Flexbox Grid | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Flexbox Grid</h1>
+<p class="c-text--lead">Create a fully responsive, fluid and nestable grid layout.</p>
+
+<p>Atomic's grid system follows the mobile-first approach, accommodates up to 10 grid columns and is built using flexbox.<br>For explicit control over the widths and responsiveness, use the <a href="size.html">Size component</a>.</p>
+
+<hr class="Article-divider">
+
+<h2 id="section:features"><a href="#section:features" class="c-text--resetLink">Features</a></h2>
+
+<p>Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell?</p>
+<p>Listed below are some of my criteria for an ideal grid system. Fortunately, with Flexbox we get most of these features for free.</p>
+<ul>
+  <li>By default, each grid cell is the same width and height as every other cell in the row. Basically they all size to fit by default.</li>
+  <li>For finer control, you can add sizing classes to individual cells. Without these classes, the cells simply divide up the available space as usual.</li>
+  <li>For responsive grids, you can add media query-specific classes to the cells.</li>
+  <li>Individual cells can be aligned vertically to the top, bottom, or middle.</li>
+  <li>When you want all of the cells in a grid to have the same sizing, media, or alignment values, you should be able to just add a single class to the container to avoid unnecessary repetition.</li>
+  <li>Grids can be nested as many levels deep as needed.</li>
+</ul>
+
+<hr class="Article-divider">
+
+<h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
+
+<h3>Basic grids</h3>
+
+<p>The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They’re also equal height by default.</p>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/2</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/2</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/3</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/3</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/3</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/4</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/4</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/4</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">1/4</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--flexCells">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full height, even when content doesn't fill the space.</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Animi corporis dolores eos, eum excepturi explicabo harum inventore ipsam ipsum magnam, magni numquam odit omnis quibusdam quo reiciendis sapiente sint, vero?</div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Individual sizing</h3>
+<p>When equal widths aren’t what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.</p>
+<p>The cells below labeled “auto” do not have sizing classes specified.</p>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell o-size--6">
+      <div class="c-demo">1/2</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">auto</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">auto</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">auto</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--4">
+      <div class="c-demo">1/3</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">1/4</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">auto</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">1/3</div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Responsive</h3>
+<p>Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.</p>
+<p>The cells below should be full width by default and scaled to fit above <code>768px</code> (`md` breakpoint). Resize your browser to see them in action.</p>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--full o-flex-grid@md--fit c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full &amp; Halves</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full &amp; Halves</div>
+    </div>
+  </div>
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--full o-flex-grid@md--fit c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full &amp; Thirds</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full &amp; Thirds</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Full &amp; Thirds</div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Grid-ception!</h3>
+<p>Grid components are infinitely nestable inside other grid components.</p>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--flexCells c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">
+        <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+          <div class="o-flex-grid__cell o-size--4">
+            <div class="c-demo">1/3</div>
+          </div>
+          <div class="o-flex-grid__cell">
+            <div class="c-demo">
+              <div class="o-flex-grid o-flex-grid--gutters c-text--center">
+                <div class="o-flex-grid__cell">
+                  <div class="c-demo">1/2</div>
+                </div>
+                <div class="o-flex-grid__cell">
+                  <div class="c-demo">1/2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="o-flex-grid__cell o-size--4">
+      <div class="c-demo">1/3</div>
+    </div>
+  </div>
+
+</div>
+
+<h3>Alignment features</h3>
+
+<h4>Top-aligned grid cells</h4>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--top">
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be top-aligned.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--6">
+      <div class="c-demo">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be top-aligned.</div>
+    </div>
+  </div>
+
+</div>
+
+<h4>Bottom-aligned grid cells</h4>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--bottom">
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be bottom-aligned.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--6">
+      <div class="c-demo">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be bottom-aligned.</div>
+    </div>
+  </div>
+
+</div>
+
+<h4>Vertically centred grid cells</h4>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--center">
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be vertically-centred with the cell to it's right.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--6">
+      <div class="c-demo">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--3">
+      <div class="c-demo">This cell should be vertically-centred with the cell to it's right.</div>
+    </div>
+  </div>
+
+</div>
+
+<h4>Mixed vertical alignment</h4>
+
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters">
+    <div class="o-flex-grid__cell o-size--2 o-flex-grid__cell--top">
+      <div class="c-demo">This cell should be top aligned.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--6">
+      <div class="c-demo">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--2 o-flex-grid__cell--center">
+      <div class="c-demo">This cell should be center-aligned.</div>
+    </div>
+    <div class="o-flex-grid__cell o-size--2 o-flex-grid__cell--bottom">
+      <div class="c-demo">This cell should be bottom-aligned.</div>
+    </div>
+  </div>
+
+</div>
+
+<h4>Equal size column layouts</h4>
+<h5>1 of 2</h5>
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--1of2 c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
+<h5>1 of 3</h5>
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--1of3 c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
+<h5>1 of 4</h5>
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--1of4 c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+
+  </div>
+
+</div>
+
+<h5>1 of 5</h5>
+<div class="c-example">
+
+  <div class="o-flex-grid o-flex-grid--gutters o-flex-grid--1of5 c-text--center">
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+    <div class="o-flex-grid__cell">
+      <div class="c-demo">Grid cell</div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="Article-divider">
+
+<div class="c-code c-code--html">
+<pre><code class="html">&lt;div class=&quot;o-flex-grid&quot;&gt;
+  &lt;div class=&quot;o-flex-grid__cell&quot;&gt;…&lt;/div&gt;
+  &lt;div class=&quot;o-flex-grid__cell&quot;&gt;…&lt;/div&gt;
+  &lt;div class=&quot;o-flex-grid__cell&quot;&gt;…&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h3 id="section:classes"><a href="#section:classes" class="c-text--resetLink">Classes</a></h3>
+
+<div class="scrollXauto">
+  <table class="c-table c-table--striped">
+    <thead>
+    <tr>
+      <th class="c-text--left o-size--1of4">Class</th>
+      <th class="c-text--left">Description</th>
+      <th class="c-text--right o-size--1of5">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid</code></th>
+      <td>Object component</td>
+      <td class="c-text--right">Component</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--full</code></th>
+      <td>Stacks all grid cells (ready to be over-ridden with responsive modifiers)</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--flexCells</code></th>
+      <td>All grid cells will fill the available vertical space (vertical alignment)</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--top</code></th>
+      <td>Vertically aligns all grid cells to the top</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--bottom</code></th>
+      <td>Vertically aligns all grid cells to the bottom</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--center</code></th>
+      <td>Vertically aligns all grid cells to the center</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--justifyCenter</code></th>
+      <td>Horizontally aligns the grid cells to the center</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--reverse</code></th>
+      <td>Reverses the order of the grid cells</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--1of2</code></th>
+      <td>Divides grid cells into 2 columns per row</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--1of3</code></th>
+      <td>Divides grid cells into 3 columns per row</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--1of4</code></th>
+      <td>Divides grid cells into 4 columns per row</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid--1of5</code></th>
+      <td>Divides grid cells into 5 columns per row</td>
+      <td class="c-text--right">Component modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid@sm</code></th>
+      <td>This classname, combined with any of the modifiers associated with the <code>o-flex-grid</code> component, (e.g <code>o-flex-grid@sm--reverse</code>) have the same effect but only at that particular breakpoint and above</td>
+      <td class="c-text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid@md</code></th>
+      <td>As above</td>
+      <td class="c-text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid@lg</code></th>
+      <td>As above</td>
+      <td class="c-text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid@xl</code></th>
+      <td>As above</td>
+      <td class="c-text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid@xxl</code></th>
+      <td>As above</td>
+      <td class="c-text--right">Responsive modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid__cell</code></th>
+      <td>Grid cells</td>
+      <td class="c-text--right">Sub-element</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid__cell--top</code></th>
+      <td>Vertically aligns individual grid cell to the top</td>
+      <td class="c-text--right">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid__cell--bottom</code></th>
+      <td>Vertically aligns individual grid cell to the bottom</td>
+      <td class="c-text--right">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid__cell--center</code></th>
+      <td>Vertically aligns individual grid cell to the centre</td>
+      <td class="c-text--right">Sub-element modifier</td>
+    </tr>
+    <tr>
+      <th class="c-text--left"><code>.o-flex-grid__cell--autoSize</code></th>
+      <td>Instructs the individual grid cell to fill the available space</td>
+      <td class="c-text--right">Sub-element modifier</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

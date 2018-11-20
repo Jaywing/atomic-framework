@@ -2,8 +2,8 @@ code {
     color: $c-danger;
 }
 
-.docs-code {
-    @extend %docs-block;
+.c-code {
+    @extend %t-block;
 
     border: 1px solid $c-light-15;
     margin-top: $g-spacer-xl;

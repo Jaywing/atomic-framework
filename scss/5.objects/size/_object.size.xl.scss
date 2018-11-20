@@ -1,0 +1,69 @@
+// sass-lint:disable no-important
+@include xl {
+    .o-size\@xl {
+        &--full {
+            width: 100% !important;
+            flex: none !important;
+        }
+
+        &--12 {
+            width: 100% !important;
+            flex: none !important;
+        }
+
+        &--1 {
+            width: 8.3333% !important;
+            flex: none !important;
+        }
+
+        &--2 {
+            width: 16.6667% !important;
+            flex: none !important;
+        }
+
+        &--3 {
+            width: 25% !important;
+            flex: none !important;
+        }
+
+        &--4 {
+            width: 33.3333% !important;
+            flex: none !important;
+        }
+
+        &--5 {
+            width: 41.6667% !important;
+            flex: none !important;
+        }
+
+        &--6 {
+            width: 50% !important;
+            flex: none !important;
+        }
+
+        &--7 {
+            width: 58.3333% !important;
+            flex: none !important;
+        }
+
+        &--8 {
+            width: 66.6667% !important;
+            flex: none !important;
+        }
+
+        &--9 {
+            width: 75% !important;
+            flex: none !important;
+        }
+
+        &--10 {
+            width: 83.3333% !important;
+            flex: none !important;
+        }
+
+        &--11 {
+            width: 91.6667% !important;
+            flex: none !important;
+        }
+    }
+}

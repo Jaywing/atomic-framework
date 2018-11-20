@@ -1,0 +1,93 @@
+// ----------------------------------------------------------------------
+
+// Tools: color-swap-on-hover
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+/// Swaps the color/bg color of an element when the use hovers/focuses on it
+///
+/// @param {Hex code | Array} $off
+/// Sets the colors of the "off" state. If only one value is passed,
+/// it is set as the text color (unless $bg is true), if an array of 2 value is passed,
+/// the second is set as the background color
+///
+/// @param {Hex code | Array} $on
+/// Sets the colors of the "on" state. If only one value is passed,
+/// it is set as the text color (unless $bg is true), if an array of 2 value is passed,
+/// the second is set as the background color
+///
+/// @param {Number (with unit)} $duration [0]
+/// The transition-duration between $off and $on states.
+///
+/// @param {boolean} $bg [false]
+/// The transition-duration between $off and $on states.
+/// Set to true if you want to pass a single color value for the $off and $on
+/// arguments and you want that value interpreted as background-color.
+/// (By default, a single value will be interpreted as color.)
+///
+/// @example scss - Usage - changes color of **text** from dark to light on hover/focus with no transition
+///   .my__link {
+///     @include color-swap-on-hover($color-dark, $color-light);
+///   }
+///
+/// @example scss - Usage - changes color of **background** from dark to light on hover/focus with 0.5 second transition
+///   .my__link {
+///     @include color-swap-on-hover($color-dark, $color-light, 0.5s,true);
+///   }
+///
+/// @example scss - Usage - changes color element from **light on dark** to **dark on light** on hover with a 300ms tranition
+///   .my__link {
+///     @include color-swap-on-hover($color-dark $color-light, $color-light $color-dark, 300ms);
+///   }
+
+@mixin color-swap-on-hover($off, $on, $duration: 0, $bg: false) {
+    $transition-properties: null;
+    $off-is-list: type-of($off) == list;
+    $on-is-list: type-of($on) == list; // If $off IS a list,
+    // assign color and background-color.
+    @if $off-is-list {
+        background-color: nth($off, 2);
+        color: nth($off, 1);
+        $transition-properties: background-color, color;
+    }
+
+ @else if $bg and not($off-is-list) {
+        // If $off IS NOT a list and $bg is TRUE, assign background-color.
+        background-color: $off;
+        $transition-properties: background-color;
+    }
+
+ @else {
+        // If $off IS NOT a list and $bg is FALSE, assign color.
+        color: $off;
+        $transition-properties: color;
+    }
+    // Only set-up transition if $duration != 0.
+    @if $duration != 0 {
+        transition-duration: $duration;
+        transition-property: $transition-properties;
+    }
+
+    &:hover,
+    &:focus {
+        // $on is treated the same as $off, above.
+        @if $on-is-list {
+            background-color: nth($on, 2);
+            color: nth($on, 1);
+        }
+
+ @else if $bg and not($on-is-list) {
+            background-color: $on;
+        }
+
+ @else {
+            color: $on;
+        }
+    }
+}

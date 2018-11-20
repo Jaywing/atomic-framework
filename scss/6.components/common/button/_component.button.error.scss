@@ -1,0 +1,35 @@
+$button-error-bg: $c-danger !default;
+$button-error-color: $c-light !default;
+$button-error-hover-bg: darken($button-error-bg, 10%) !default;
+$button-error-trans-speed: $g-trans__link-speed !default;
+$button-error-disabled-color: rgba($button-error-color, 0.8) !default;
+
+.c-button--error {
+    border-color: $button-error-bg;
+
+    &:not([disabled]) {
+        @include color-swap-on-hover(
+            $button-error-color $button-error-bg,
+            $button-error-color $button-error-hover-bg,
+            $button-error-trans-speed
+        );
+    }
+
+    &.is-active {
+        background: darken($button-error-hover-bg, 5%);
+
+        &:hover,
+        &:focus {
+            background: darken($button-error-hover-bg, 5%);
+        }
+    }
+
+    &[disabled] {
+        background: lighten($button-error-bg, 15%);
+        color: $button-error-disabled-color;
+    }
+
+    svg {
+        fill: $button-error-color;
+    }
+}

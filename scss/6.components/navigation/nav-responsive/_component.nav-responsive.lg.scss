@@ -1,0 +1,14 @@
+@include lg {
+    .c-nav-responsive\@lg,
+    .c-nav-responsive\@lg.is-active {
+        padding: 0;
+
+        .c-toggle-button {
+            display: none;
+        }
+
+        .c-menu {
+            max-height: none;
+        }
+    }
+}

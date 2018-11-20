@@ -1,0 +1,33 @@
+$nav-responsive-padding: $g-spacer-sm 0;
+
+$nav-responsive-toggle-top: 0;
+$nav-responsive-toggle-right: 0;
+$nav-responsive-toggle-zindex: $g-z-5;
+
+$nav-responsive-menu-closed-maxheight: 2.2rem;
+$nav-responsive-menu-open-maxheight: 32.4rem;
+
+.c-nav-responsive {
+    position: relative;
+    padding: $nav-responsive-padding;
+
+    .c-toggle-button {
+        position: absolute;
+        z-index: $nav-responsive-toggle-zindex;
+        top: $nav-responsive-toggle-top;
+        right: $nav-responsive-toggle-right;
+    }
+
+    .c-menu {
+        position: relative;
+        overflow: hidden;
+        max-height: $nav-responsive-menu-closed-maxheight;
+        margin: 0;
+    }
+
+    &.is-active {
+        .c-menu {
+            max-height: $nav-responsive-menu-open-maxheight;
+        }
+    }
+}

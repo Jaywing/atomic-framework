@@ -16,71 +16,71 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% block content %}
 
   <h1 class="Article-title">Responsive Standard Navigation</h1>
-  <p class="Text--lead">This is a simple responsive navigation pattern, which switches from a collapsible vertical menu, triggered by a toggle button, to a standard horizontal menu when the browser passes a certain breakpoint.</p>
+  <p class="c-text--lead">This is a simple responsive navigation pattern, which switches from a collapsible vertical menu, triggered by a toggle button, to a standard horizontal menu when the browser passes a certain breakpoint.</p>
 
-  <dl class="Definition Definition--horizontal">
+  <dl class="c-definition c-definition__horizontal">
     <dt>Modules</dt>
-    <dd><a href="/docs/core/toggle.html"><span class="Badge">Toggle</span></a></dd>
+    <dd><a href="/docs/core/toggle.html"><span class="c-badge">Toggle</span></a></dd>
     <dt>Components</dt>
-    <dd><a href="/docs/extended/toggle-button.html"><span class="Badge">Toggle Button</span></a> <a href="/docs/core/menu.html"><span class="Badge">Menu</span></a></dd>
+    <dd><a href="/docs/extended/toggle-button.html"><span class="c-badge">Toggle c-button</span></a> <a href="/docs/core/menu.html"><span class="c-badge">Menu</span></a></dd>
     <dt>Macros</dt>
-    <dd><a href="#section:macro"><span class="Badge">ToggleButton</span></a> <a href="/docs/core/menu.html#section:macro"><span class="Badge">MenuHeader</span></a> <a href="/docs/core/menu.html#section:macro"><span class="Badge">MenuLink</span></a></dd>
+    <dd><a href="#section:macro"><span class="c-badge">ToggleButton</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-badge">MenuHeader</span></a> <a href="/docs/core/menu.html#section:macro"><span class="c-badge">MenuLink</span></a></dd>
   </dl>
 
   <hr class="Article-divider">
 
-  <h2 id="section:usage"><a href="#section:usage" class="Text--resetLink">Usage</a></h2>
+  <h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
 
   <p>The example below switches patterns when the browser window width passes 480px (xs breakpoint).</p>
-  <p><span class="Badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>NavResponsive[Xs|Sm|Md|Lg|Xl|Xxl]</code>.</p>
+  <p><span class="c-badge">Note</span> You can set it to any of the <a href="/docs/core/breakpoints.html">breakpoints</a> <strong>except xxs</strong> by setting repsonsive class, eg: <code>c-nav-responsive[@xs|@sm|@md|@lg|@xl|@xxl]</code>.</p>
 
-  <div class="docs-example">
+  <div class="c-example">
 
-    <nav role="navigation" class="NavResponsive NavResponsiveXs">
-      <button class="ToggleButton" data-module="Toggle" data-options='{"target":"parent"}'>
-        <div class="ToggleButton-init">
-          <span class="Icon Icon--navicon ToggleButton-icon--init"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg></span>
-          <span class="ToggleButton-text">Menu</span>
+    <nav class="c-nav-responsive c-nav-responsive@xs">
+      <button class="c-toggle-button" data-module="Toggle" data-options='{"target":"parent"}'>
+        <div class="c-toggle-button__init">
+          <span class="o-icon o-icon--navicon c-toggle-button-icon--init"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"></use></svg></span>
+          <span class="c-toggle-button__text">Menu</span>
         </div>
-        <div class="ToggleButton-close">
-          <span class="Icon Icon--close ToggleButton-icon--close"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"></use></svg></span>
-          <span class="ToggleButton-text">Close</span>
+        <div class="c-toggle-button__close">
+          <span class="o-icon o-icon--close c-toggle-button-icon--close"><svg viewBox="0 0 1 1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"></use></svg></span>
+          <span class="c-toggle-button__text">Close</span>
         </div>
       </button>
-      <ul class="Menu Menu--vertical">
-        <li class="Menu-item Menu-item--left Menu-item--flush"><span class="Menu-header"><a href="index.html">Atomic</a></span></li>
-        <li class="Menu-item nav-item "><a href="index.html" class="Menu-link">Home</a></li>
-        <li class="Menu-item nav-item "><a href="features.html" class="Menu-link">Features</a></li>
-        <li class="Menu-item nav-item "><a href="docs/" class="Menu-link">Docs</a></li>
-        <li class="Menu-item nav-item "><a href="https://github.com/jaywing/atomic" class="Menu-link">Github</a></li>
+      <ul class="c-menu c-menu--vertical">
+        <li class="c-menu__item c-menu__item--left c-menu__item--flush"><span class="c-menu__header"><a href="index.html">Atomic</a></span></li>
+        <li class="c-menu__item nav__item "><a href="index.html" class="c-menu__link">Home</a></li>
+        <li class="c-menu__item nav__item "><a href="features.html" class="c-menu__link">Features</a></li>
+        <li class="c-menu__item nav__item "><a href="docs/" class="c-menu__link">Docs</a></li>
+        <li class="c-menu__item nav__item "><a href="https://github.com/jaywing/atomic" class="c-menu__link">Github</a></li>
       </ul>
     </nav>
 
   </div>
 
-  <div class="docs-code docs-code--html">
-    <pre><code class="html">&lt;nav role="navigation" class="NavResponsive NavResponsiveXs"&gt;
-  &lt;button class="ToggleButton" data-module="Toggle" data-options='{"target":"parent"}'&gt;
-    &lt;div class="ToggleButton-init"&gt;
-      &lt;span class="Icon Icon--navicon ToggleButton-icon--init"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
-      &lt;span class="ToggleButton-text"&gt;Menu&lt;/span&gt;
+  <div class="c-code c-code--html">
+    <pre><code class="html">&lt;nav class="c-nav-responsive c-nav-responsive@xs"&gt;
+  &lt;button class="c-toggle-button" data-module="Toggle" data-options='{"target":"parent"}'&gt;
+    &lt;div class="c-toggle-button__init"&gt;
+      &lt;span class="o-icon o-icon--navicon c-toggle-button-icon--init"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#navicon"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+      &lt;span class="c-toggle-button__text"&gt;c-menu&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="ToggleButton-close"&gt;
-      &lt;span class="Icon Icon--close ToggleButton-icon--close"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
-      &lt;span class="ToggleButton-text"&gt;Close&lt;/span&gt;
+    &lt;div class="c-toggle-button__close"&gt;
+      &lt;span class="o-icon o-icon--close c-toggle-button-icon--close"&gt;&lt;svg viewBox="0 0 1 1"&gt;&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#close"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+      &lt;span class="c-toggle-button__text"&gt;Close&lt;/span&gt;
     &lt;/div&gt;
   &lt;/button&gt;
-  &lt;ul class="Menu Menu--vertical"&gt;
-    &lt;li class="Menu-item Menu-item--left Menu-item--flush"&gt;&lt;span class="Menu-header"&gt;&lt;a href="index.html"&gt;Atomic&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li class="Menu-item nav-item "&gt;&lt;a href="index.html" class="Menu-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="Menu-item nav-item "&gt;&lt;a href="features.html" class="Menu-link"&gt;Features&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="Menu-item nav-item "&gt;&lt;a href="docs/" class="Menu-link"&gt;Docs&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="Menu-item nav-item "&gt;&lt;a href="https://github.com/jaywing/atomic" class="Menu-link"&gt;Github&lt;/a&gt;&lt;/li&gt;
+  &lt;ul class="c-menu c-menu--vertical"&gt;
+    &lt;li class="c-menu__item c-menu__item--left c-menu__item--flush"&gt;&lt;span class="c-menu__header"&gt;&lt;a href="index.html"&gt;Atomic&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="c-menu__item nav__item "&gt;&lt;a href="index.html" class="c-menu__link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="c-menu__item nav__item "&gt;&lt;a href="features.html" class="c-menu__link"&gt;Features&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="c-menu__item nav__item "&gt;&lt;a href="docs/" class="c-menu__link"&gt;Docs&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="c-menu__item nav__item "&gt;&lt;a href="https://github.com/jaywing/atomic" class="c-menu__link"&gt;Github&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
   </div>
 
-  <div class="docs-code docs-code--macro">
+  <div class="c-code c-code--macro">
     <pre><code class="html">&#123;% from 'macros/toggle-button.njk' import ToggleButton %&#125;
 &#123;% from 'macros/menu.njk' import menuLink, menuHeader %&#125;
 &#123;% set items = [
@@ -90,10 +90,10 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   &#123; id: 'repo', title: 'Github', url: 'https://github.com/jaywing/atomic', null &#125;
 ]
 %&#125;
-&lt;nav class="NavResponsive NavResponsiveXs"&gt;
-  &#123;&#123; ToggleButton("parent", "ToggleButton--hideText") &#125;&#125;
-  &lt;ul class="Menu Menu--vertical"&gt;
-    &#123;&#123; menuHeader('Atomic', 'index.html', 'Menu-item--left Menu-item--flush') &#125;&#125;
+&lt;nav class="c-nav-responsive c-nav-responsive@xs"&gt;
+  &#123;&#123; ToggleButton("parent", "c-toggle-button--hideText") &#125;&#125;
+  &lt;ul class="c-menu c-menu--vertical"&gt;
+    &#123;&#123; menuHeader('Atomic', 'index.html', 'c-menu__item--left c-menu__item--flush') &#125;&#125;
     &#123;% for item in items %&#125;
       &#123;&#123; menuLink(item.id, item.title, item.url, itemId) &#125;&#125;
     &#123;% endfor %&#125;

@@ -1,0 +1,52 @@
+$table-data-label-weight: $g-weight-bold !default;
+
+.c-table--resp {
+    thead {
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+    }
+
+    tr {
+        display: block;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+
+        &::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: $table-data-label-weight;
+        }
+    }
+}
+
+@include md {
+    .c-table--resp {
+        thead {
+            position: static;
+            overflow: auto;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+
+        tr {
+            display: table-row;
+        }
+
+        td {
+            display: table__cell;
+            text-align: left;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

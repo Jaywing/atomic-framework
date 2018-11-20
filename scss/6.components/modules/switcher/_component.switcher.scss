@@ -1,0 +1,7 @@
+.c-switcher__content {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}

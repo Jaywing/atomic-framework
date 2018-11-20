@@ -1,17 +1,17 @@
-const moduleElements = document.querySelectorAll('[data-module]')
+const moduleElements = document.querySelectorAll("[data-module]");
 
 for (var i = 0; i < moduleElements.length; i++) {
-  const el = moduleElements[i]
-  const name = el.getAttribute('data-module')
-  let options = {}
-  const dataOptions = el.getAttribute('data-options')
+  const el = moduleElements[i];
+  const name = el.getAttribute("data-module");
+  let options = {};
+  const dataOptions = el.getAttribute("data-options");
   if (dataOptions) {
-    options = JSON.parse(dataOptions)
+    options = JSON.parse(dataOptions);
   }
-  require.ensure([], function () {
-    const Module = require(`./${name}`).default
+  require.ensure([], function() {
+    const Module = require(`./${name}`).default;
     if (Module) {
-      new Module(el, name, options) // eslint-disable-line no-new
+      new Module(el, name, options); // eslint-disable-line no-new
     }
-  })
+  });
 }

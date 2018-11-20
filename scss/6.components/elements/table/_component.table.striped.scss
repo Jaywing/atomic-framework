@@ -1,0 +1,7 @@
+$table-striped-tr-background: $c-very-strong-trans-dark !default;
+
+.c-table--striped {
+    tbody tr:nth-of-type(odd) {
+        background: $table-striped-tr-background;
+    }
+}

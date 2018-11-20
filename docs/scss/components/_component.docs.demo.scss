@@ -1,4 +1,4 @@
-.Demo {
+.c-demo {
     width: 100%;
     min-height: $g-spacer-lg;
     background: rgba(0, 0, 0, 0.05);
@@ -57,7 +57,7 @@
     }
 }
 
-.o-Grid-cell > .Demo {
+.o-flex-grid__cell > .c-demo {
     display: block;
     min-width: 100%;
     padding: $g-spacer $g-spacer 0;
@@ -70,13 +70,13 @@
         visibility: hidden;
     }
 
-    &.Sticky-item {
+    &.c-Sticky__item {
         min-width: auto;
     }
 }
 
-.Menu-item.is-active-alt {
-    .Menu-link {
+.c-menu__item.is-active-alt {
+    .c-menu__link {
         background: red;
         color: white;
         font-weight: bold;

@@ -1,0 +1,150 @@
+// Name:            Cover
+// Description:     Defines styles for images and videos to cover their container in a centered position
+//
+// Component:       `o-cover-*`
+//
+// ========================================================================
+
+//=========================================================================
+//   Component: Cover
+//=========================================================================
+
+//   Variables
+//=========================================================================
+
+$cover-video-margin: $g-spacer 0 !default;
+
+$cover-ratio-16-9: 56.25% !default;
+$cover-ratio-4-3: 75% !default;
+$cover-ratio-21-9: 42.85% !default;
+
+$cover-video-ratio: 67.5% !default;
+$cover-video-wide-ratio: 56.34% !default;
+
+$cover-loading-z: $g-z-1 !default;
+$cover-object-z: $g-z-2 !default;
+
+$cover-loading-icon-adj: -($icon-size / 2) !default;
+$cover-loading-icon-sm-adj: -($icon-size-sm / 2) !default;
+$cover-loading-icon-lg-adj: -($icon-size-lg / 2) !default;
+$cover-loading-icon-xl-adj: -($icon-size-xl / 2) !default;
+$cover-loading-icon-xxl-adj: -($icon-size-xxl / 2) !default;
+
+//*
+// * Emulates image cover, works with video and image elements
+// * 1. Parent container which clips resized object
+// * 2. Resizes the object to always covers its container
+// * 3. Reset the responsive image CSS
+// * 4. Center object
+//*
+
+// 1 */
+.o-cover {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    &-object {
+        // 4 */
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        min-width: 100%;
+        // 3 */
+        max-width: none;
+        // 2 */
+        height: auto;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+
+        > iframe,
+        > object,
+        > embed,
+        > video,
+        > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        &.o-icon {
+            margin-top: $cover-loading-icon-adj;
+            margin-left: $cover-loading-icon-adj;
+        }
+
+        &.o-icon--sm {
+            margin-top: $cover-loading-icon-sm-adj;
+            margin-left: $cover-loading-icon-sm-adj;
+        }
+
+        &.o-icon--lg {
+            margin-top: $cover-loading-icon-lg-adj;
+            margin-left: $cover-loading-icon-lg-adj;
+        }
+
+        &.o-icon--xl {
+            margin-top: $cover-loading-icon-xl-adj;
+            margin-left: $cover-loading-icon-xl-adj;
+        }
+
+        &.o-icon--xxl {
+            margin-top: $cover-loading-icon-xxl-adj;
+            margin-left: $cover-loading-icon-xxl-adj;
+        }
+    }
+
+    &--bg {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &--video,
+    &--videoWide,
+    &--ratio16x9,
+    &--ratio4x3,
+    &--ratio21x9 {
+        @include trim-child-margins;
+
+        position: relative;
+        height: 0;
+        margin: $cover-video-margin;
+
+        > .o-cover-object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(0, 0);
+        }
+    }
+
+    &--video {
+        padding-bottom: $cover-video-ratio;
+    }
+
+    &--videoWide {
+        padding-bottom: $cover-video-wide-ratio;
+    }
+
+    &--ratio16x9 {
+        padding-bottom: $cover-ratio-16-9;
+    }
+
+    &--ratio4x3 {
+        padding-bottom: $cover-ratio-4-3;
+    }
+
+    &--ratio21x9 {
+        padding-bottom: $cover-ratio-21-9;
+    }
+}

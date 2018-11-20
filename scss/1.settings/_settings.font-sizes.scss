@@ -1,0 +1,275 @@
+// ----------------------------------------------------------------------
+
+// Settings: Font Sizes
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  13/06/2016
+////
+
+/// Helper classes for font sizes *- should only be used for rapid
+/// prototyping, remove for production)*
+/// These classes match up with the BBC GEL Typography definitions
+/// https://github.com/bbc/gel-typography
+///
+/// group-a: anything below 320px (xxs)
+/// group-b: between 320px (xxs) and 768px (md)
+/// group-c: above 768px
+/// group-d: above 768px and a touch device (.touch)
+///
+/// *Note: settings.media-queries.scss must be import before this one
+//
+$base-font-size: $g-base-font-size !default;
+$base-line-height: 1.33 !default;
+
+/// set up breakpoint variables for responsive typography
+
+$fs-huge: (
+    null: (
+        36px,
+        1.2
+    ),
+    xxs: 46px,
+    sm: 58px
+);
+$fs-h1: (
+    null: (
+        24px,
+        1.2
+    ),
+    xxs: 26px,
+    sm: 32px
+);
+$fs-h2: (
+    null: (
+        21px,
+        1.2
+    ),
+    xxs: 24px,
+    sm: 28px
+);
+
+$fs-h3: (
+    null: (
+        19px,
+        1.2
+    ),
+    xxs: 20px,
+    sm: 24px
+);
+$fs-h4: (
+    null: (
+        17px,
+        1.2
+    ),
+    xxs: 20px,
+    sm: 22px
+);
+$fs-body: (
+    null: (
+        15px,
+        1.4
+    ),
+    xxs: 16px,
+    md: 18px
+);
+
+$gel-bp-type-b: map-get($g-mq-breakpoints, 'xxs') !default;
+$gel-bp-type-c: map-get($g-mq-breakpoints, 'xxl') !default;
+$typography: (
+    alpha: (
+        base: (
+            font-size: 20px
+        ),
+        sm: (
+            font-size: 24px
+        ),
+        md: (
+            font-size: 32px
+        ),
+        xl: (
+            font-size: 55px
+        )
+    )
+);
+// sass-lint:disable indentation
+$gel-type-settings: (
+    'canon': (
+        'group-a': (
+            'font-size': 28px,
+            'line-height': 32px
+        ),
+        'group-b': (
+            'font-size': 32px,
+            'line-height': 36px
+        ),
+        'group-c': (
+            'font-size': 52px,
+            'line-height': 56px
+        ),
+        'group-d': (
+            'font-size': 44px,
+            'line-height': 48px
+        )
+    ),
+    'canon-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
+    'trafalgar': (
+        'group-a': (
+            'font-size': 20px,
+            'line-height': 24px
+        ),
+        'group-b': (
+            'font-size': 24px,
+            'line-height': 28px
+        ),
+        'group-c': (
+            'font-size': 36px,
+            'line-height': 40px
+        ),
+        'group-d': (
+            'font-size': 32px,
+            'line-height': 36px
+        )
+    ),
+    'trafalgar-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
+    'double-pica': (
+        'group-a': (
+            'font-size': 20px,
+            'line-height': 24px
+        ),
+        'group-c': (
+            'font-size': 26px,
+            'line-height': 30px
+        ),
+        'group-d': (
+            'font-size': 24px,
+            'line-height': 28px
+        )
+    ),
+    'double-pica-bold': (
+        'group-a': (
+            'font-weight': bold,
+            'letter-spacing': -1px
+        )
+    ),
+    'great-primer': (
+        'group-a': (
+            'font-size': 18px,
+            'line-height': 22px
+        ),
+        'group-c': (
+            'font-size': 21px,
+            'line-height': 24px
+        ),
+        'group-d': (
+            'font-size': 20px
+        )
+    ),
+    'great-primer-bold': (
+        'group-a': (
+            'font-weight': bold
+        ),
+        'group-b': (
+            'letter-spacing': -1px
+        )
+    ),
+    'pica': (
+        'group-a': (
+            'font-size': 15px,
+            'line-height': 20px
+        ),
+        'group-b': (
+            'font-size': 16px,
+            'line-height': 20px
+        ),
+        'group-c': (
+            'font-size': 18px,
+            'line-height': 22px
+        ),
+        'group-d': (
+            'font-size': 16px,
+            'line-height': 20px
+        )
+    ),
+    'pica-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
+    'long-primer': (
+        'group-a': (
+            'font-size': 15px,
+            'line-height': 18px
+        ),
+        'group-c': (
+            'line-height': 20px
+        ),
+        'group-d': (
+            'font-size': 14px,
+            'line-height': 18px
+        )
+    ),
+    'long-primer-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
+    'brevier': (
+        'group-a': (
+            'font-size': 14px,
+            'line-height': 16px
+        ),
+        'group-b': (
+            'line-height': 18px
+        ),
+        'group-d': (
+            'font-size': 13px,
+            'line-height': 16px
+        )
+    ),
+    'brevier-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
+    'minion': (
+        'group-a': (
+            'font-size': 12px,
+            'line-height': 16px
+        ),
+        'group-c': (
+            'font-size': 13px
+        ),
+        'group-d': (
+            'font-size': 12px
+        )
+    ),
+    'minion-bold': (
+        'group-a': (
+            'font-weight': bold
+        )
+    ),
+    'body-copy': (
+        'group-a': (
+            'font-size': 15px,
+            'line-height': 20px
+        ),
+        'group-b': (
+            'font-size': 16px,
+            'line-height': 22px
+        )
+    )
+) !default;

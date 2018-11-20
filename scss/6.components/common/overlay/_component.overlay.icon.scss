@@ -1,0 +1,11 @@
+$overlay-icon-color: $c-light !default;
+
+.c-overlay__icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    fill: $overlay-icon-color;
+}

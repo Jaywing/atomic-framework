@@ -1,0 +1,33 @@
+$container-max-width: $g-site-max-width !default;
+$container-side-padding: $g-spacer !default;
+$container-thin-max-width: 800px !default;
+
+.o-container {
+    @include clearfix;
+
+    max-width: $container-max-width;
+    padding-right: $container-side-padding;
+    padding-left: $container-side-padding;
+
+    &--centered {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &--fluid {
+        max-width: 100%;
+    }
+
+    &--collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &--absolute {
+        position: relative;
+    }
+
+    &--thin {
+        max-width: $container-thin-max-width;
+    }
+}
