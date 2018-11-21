@@ -1,3 +1,773 @@
-<!doctype html><!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" --><html lang="en-GB" class="fonts-loaded"><!--#else --><html lang="en-GB"><!--#endif --><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="[object Object]"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Base | Atomic: Core</title><base href="https://jaywing.github.io/atomic-framework/"><!-- standard styles - hidden from < ie10 --><link rel="stylesheet" href="/css/docs.css"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"></head><body id="top" class="o-site u-scrollY"><a href="#content" class="c-skip-link">Skip to content</a><header class="o-site__header t-global-header"><a href="#content" class="c-skip-link c-button"><span class="o-icon o-icon--arrow-down"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#arrow-down"></use></svg> </span>Skip to content</a><nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md"><button class="c-toggle-button c-toggle-button--hideText" data-module="Toggle" data-options='{"target":"parent"}'><div class="c-toggle-button__init"><span class="o-icon o-icon--navicon c-toggle-button-icon--init"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#navicon"></use></svg> </span><span class="c-toggle-button__text">Menu</span></div><div class="c-toggle-button__close"><span class="o-icon o-icon--close c-toggle-button-icon--close"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#close"></use></svg> </span><span class="c-toggle-button__text">Close</span></div></button><ul class="c-menu c-menu--vertical c-menu@md"><li class="c-menu__item c-menu__item--left w-logo"><a href="/docs/"><img src="/images/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li><li class="c-menu__item"><a href="/docs/getting-started" class="c-menu__link">Getting Started</a></li><li class="c-menu__item is-active"><a href="/docs/core" class="c-menu__link">Core</a></li><li class="c-menu__item"><a href="/docs/extended" class="c-menu__link">Extended</a></li><li class="c-menu__item"><a class="c-menu__link is-disabled" disabled="disabled">Roadmap</a></li></ul></nav></header><main id="content" class="o-site__content"><div class="o-container o-container--centered"><div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container><article class="o-flex-grid__cell o-size@md--9"><h1 class="Article-title">Base</h1><p class="c-text--lead">Provides the default style for all HTML elements.</p><p><strong>Version:</strong></p><p>This component defines the base look of your page. It offers great typography by setting the default colors, margins, font-sizes and more for each HTML element. This page is a short guide on how to use basic HTML elements and how Atomic styles them.</p><hr class="Article-divider"><h2 id="section:headings"><a href="#section:headings" class="c-text--resetLink">Headings</a></h2><p>Use the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements to define your headings.</p><div class="c-example"><h1>h1 Trafalgar</h1><h2>h2 Double pica</h2><h3>h3 Great primer</h3><h4>h4 Pica</h4><h5>h5 Brevier bold</h5><h6>h6 Brevier</h6></div><h3>Small header segments</h3><p>By inserting a <code>&lt;small&gt;</code> element into a header Foundation will scale the header font size down for an inline element, allowing you to use this for subtitles or other secondary header text.</p><div class="c-example"><h1>Atomic by Jaywing <small>- Version 3.0.0</small></h1></div><hr class="Article-divider"><h2 id="section:paragraphs"><a href="#section:paragraphs" class="c-text--resetLink">Paragraphs</a></h2><div class="c-example"><p>The global font-size, line-height and regular margins between elements are set through variables, which can be customized. Paragraphs and other block elements stick to these values.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis cupiditate deleniti illo incidunt iste molestiae quam quia, quidem sapiente sit voluptate! Aut ipsa iste nesciunt praesentium quisquam repudiandae tenetur.</p></div><hr class="Article-divider"><h2 id="section:text-level-semantics"><a href="#section:text-level-semantics" class="c-text--resetLink">c-text Level Semantics</a></h2><p>The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.</p><div class="c-example"><div class="o-container o-container--fluid o-container--collapse o-container--overflow"><table class="c-table c-table--hover c-table--condensed textNoWrap"><thead><tr><th class="width--1-4">Element</th><th class="width--3-4">Description</th></tr></thead><tbody><tr><td><code>&lt;a&gt;</code></td><td>Turn text into hypertext using the <a href="#">a element</a>.</td></tr><tr><td><code>&lt;em&gt;</code></td><td>Emphasize text using the <em>em element</em>.</td></tr><tr><td><code>&lt;strong&gt;</code></td><td>Imply any extra importance using the <strong>strong element</strong>.</td></tr><tr><td><code>&lt;code&gt;</code></td><td>Define inline code snippets using the <code>code element</code>.</td></tr><tr><td><code>&lt;del&gt;</code></td><td>Mark document changes as deleted text using the <del>del element</del>.</td></tr><tr><td><code>&lt;ins&gt;</code></td><td>Mark document changes as inserted text using the <ins>ins element</ins>.</td></tr><tr><td><code>&lt;mark&gt;</code></td><td>Highlight text with no semantic meaning using the <mark>mark element</mark>.</td></tr><tr><td><code>&lt;q&gt;</code></td><td>Define inline quotations using <q>q element <q>inside</q> a q element</q>.</td></tr><tr><td><code>&lt;abbr&gt;</code></td><td>Define an abbreviation using the <abbr title="Abbreviation Element">abbr element</abbr> with a title.</td></tr><tr><td><code>&lt;dfn&gt;</code></td><td>Define a definition term using the <dfn title="Defines a definition term">dfn element</dfn> with a title.</td></tr><tr><td><code>&lt;small&gt;</code></td><td>De-emphasize text for small print using the <small>small element</small>.</td></tr></tbody></table></div></div><hr class="Article-divider"><h2 id="section:horizontal-rule"><a href="#section:horizontal-rule" class="c-text--resetLink">Horizontal rule</a></h2><p>Create a horizontal rule by using the <code>&lt;hr&gt;</code> element.</p><div class="c-example"><hr></div><hr class="Article-divider"><h2 id="section:blockquotes"><a href="#section:blockquotes" class="c-text--resetLink">Blockquotes</a></h2><p>For quoting multiple lines of content from another source within your document, use the <code>&lt;blockquote&gt;</code> element.</p><div class="c-example"><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><cite>Someone famous</cite></blockquote></div><hr class="Article-divider"><h2 id="section:lists"><a href="#section:lists" class="c-text--resetLink">Lists</a></h2><p>Create an unordered list using the <code>&lt;ul&gt;</code> element and the <code>&lt;ol&gt;</code> element for ordered lists. The <code>&lt;li&gt;</code> element defines the list item.</p><div class="c-example"><ul><li>Item 1</li><li>Item 2<ul><li>Item 1</li><li>Item 2<ul><li>Item 1</li><li>Item 2</li></ul></li></ul></li><li>Item 3</li><li>Item 4</li></ul><ol><li>Item 1</li><li>Item 2<ol><li>Item 1</li><li>Item 2<ol><li>Item 1</li><li>Item 2</li></ol></li></ol></li><li>Item 3</li><li>Item 4</li></ol></div><hr class="Article-divider"><h2 id="section:definition-lists"><a href="#section:definition-lists" class="c-text--resetLink">Definition lists</a></h2><p>Create a description list using the <code>&lt;dl&gt;</code> element. Use <code>&lt;dt&gt;</code> to define the term and <code>&lt;dd&gt;</code> for the description.</p><div class="c-example"><dl><dt>Description lists</dt><dd>A description list defines terms and their corresponding descriptions.</dd><dt>This is a term</dt><dd>This is a description.</dd><dt>This is a term</dt><dd>This is a description.</dd></dl></div><hr class="Article-divider"><h2 id="section:fluid-images"><a href="#section:fluid-images" class="c-text--resetLink">Fluid images</a></h2><p>All images are fluid by default. If the layout is narrowed, images adjust their size and keep their proportions. Images shouldn't stretch to bigger than their natural size.</p><div class="c-example"><img src="/images/placeholder/img_480x260.svg" alt=""></div><hr class="Article-divider"><h2 id="section:code-blocks"><a href="#section:code-blocks" class="c-text--resetLink">Code blocks</a></h2><p>For multiple lines of code, use the <code>&lt;pre&gt;</code> element which defines preformatTed text. It creates a new text block that preserves spaces, tabs and line breaks. Nest a <code>&lt;code&gt;</code> element inside to define the code block.</p><p><span class="c-badge">IMPORTANT</span> Be sure to escape any angle brackets in the code for proper rendering.</p><div class="c-example"><pre><code class="xml">&lt;pre&gt;
+
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="en-GB" class="fonts-loaded">
+<!--#else -->
+<html lang="en-GB">
+<!--#endif -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="Jaywing"/>
+  <title>Base | Atomic: Core</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+  <link rel="stylesheet" href="https://jaywing.github.io/atomic-framework/css/docs.css">
+
+  <script>if(document.documentElement){document.documentElement.classList.add('js');}</script>
+
+  
+</head>
+<body id="top" class="o-site u-scrollY">
+
+  <a href="#content" class="c-skip-link">Skip to content</a>
+
+  <header class="o-site__header t-global-header">
+
+    <a href="#content" class="c-skip-link c-button ">
+
+  
+
+  <span class='o-icon o-icon--arrow-down '>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#arrow-down'></use></svg>
+  </span>
+ Skip to content</a>
+
+    
+
+
+
+<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+
+  
+
+  <button class="c-toggle-button c-toggle-button--hideText" data-module="Toggle" data-options='{"target":"parent"}'>
+
+    <div class="c-toggle-button__init">
+      
+
+  
+
+  <span class='o-icon o-icon--navicon c-toggle-button-icon--init'>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#navicon'></use></svg>
+  </span>
+
+      
+        <span class="c-toggle-button__text">Menu</span>
+      
+    </div>
+
+    <div class="c-toggle-button__close">
+      
+
+  
+
+  <span class='o-icon o-icon--close c-toggle-button-icon--close'>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#close'></use></svg>
+  </span>
+
+      
+        <span class="c-toggle-button__text">Close</span>
+      
+    </div>
+
+  </button>
+
+
+
+  <ul class="c-menu c-menu--vertical c-menu@md">
+    <li class="c-menu__item c-menu__item--left w-logo">
+      <a href="https://jaywing.github.io/atomic-framework/docs/">
+        <img src="https://jaywing.github.io/atomic-framework/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
+      </a>
+    </li>
+    
+      
+<li class="c-menu__item">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/getting-started" class="c-menu__link">Getting Started</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item is-active">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/core" class="c-menu__link">Core</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/extended" class="c-menu__link">Extended</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item">
+  
+    <a class="c-menu__link is-disabled" disabled>Roadmap</a>
+  
+</li>
+
+    
+  </ul>
+
+</nav>
+
+  </header>
+
+  <main id="content" class="o-site__content">
+  
+    <div class="o-container o-container--centered">
+
+      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+
+        <article class="o-flex-grid__cell o-size@md--9">
+          
+
+  <h1 class="Article-title">Base</h1>
+  <p class="c-text--lead">Provides the default style for all HTML elements.</p>
+  <p><strong>Version:</strong> </p>
+
+  <p>This component defines the base look of your page. It offers great typography by setting the default colors, margins, font-sizes and more for each HTML element. This page is a short guide on how to use basic HTML elements and how Atomic styles them.</p>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:headings"><a href="#section:headings" class="c-text--resetLink">Headings</a></h2>
+  <p>Use the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements to define your headings.</p>
+
+  <div class="c-example">
+    <h1>h1 Trafalgar</h1>
+    <h2>h2 Double pica</h2>
+    <h3>h3 Great primer</h3>
+    <h4>h4 Pica</h4>
+    <h5>h5 Brevier bold</h5>
+    <h6>h6 Brevier</h6>
+  </div>
+
+  <h3>Small header segments</h3>
+  <p>By inserting a <code>&lt;small&gt;</code> element into a header Foundation will scale the header font size down for an inline element, allowing you to use this for subtitles or other secondary header text.</p>
+
+  <div class="c-example">
+
+    <h1>Atomic by Jaywing <small>- Version 3.0.0</small></h1>
+
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:paragraphs"><a href="#section:paragraphs" class="c-text--resetLink">Paragraphs</a></h2>
+
+  <div class="c-example">
+    <p>The global font-size, line-height and regular margins between elements are set through variables, which can be customized. Paragraphs and other block elements stick to these values.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis cupiditate deleniti illo incidunt iste molestiae quam quia, quidem sapiente sit voluptate! Aut ipsa iste nesciunt praesentium quisquam repudiandae tenetur.</p>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:text-level-semantics"><a href="#section:text-level-semantics" class="c-text--resetLink">c-text Level Semantics</a></h2>
+  <p>The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.</p>
+
+  <div class="c-example">
+    <div class="o-container o-container--fluid o-container--collapse o-container--overflow">
+      <table class="c-table c-table--hover c-table--condensed textNoWrap">
+        <thead>
+          <tr>
+            <th class="width--1-4">Element</th>
+            <th class="width--3-4">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>Turn text into hypertext using the <a href="#">a element</a>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>Emphasize text using the <em>em element</em>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;strong&gt;</code></td>
+            <td>Imply any extra importance using the <strong>strong element</strong>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;code&gt;</code></td>
+            <td>Define inline code snippets using the <code>code element</code>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;del&gt;</code></td>
+            <td>Mark document changes as deleted text using the <del>del element</del>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ins&gt;</code></td>
+            <td>Mark document changes as inserted text using the <ins>ins element</ins>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;mark&gt;</code></td>
+            <td>Highlight text with no semantic meaning using the <mark>mark element</mark>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;q&gt;</code></td>
+            <td>Define inline quotations using <q>q element <q>inside</q> a q element</q>.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;abbr&gt;</code></td>
+            <td>Define an abbreviation using the <abbr title="Abbreviation Element">abbr element</abbr> with a title.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;dfn&gt;</code></td>
+            <td>Define a definition term using the <dfn title="Defines a definition term">dfn element</dfn> with a title.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;small&gt;</code></td>
+            <td>De-emphasize text for small print using the <small>small element</small>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:horizontal-rule"><a href="#section:horizontal-rule" class="c-text--resetLink">Horizontal rule</a></h2>
+  <p>Create a horizontal rule by using the <code>&lt;hr&gt;</code> element.</p>
+
+  <div class="c-example">
+    <hr>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:blockquotes"><a href="#section:blockquotes" class="c-text--resetLink">Blockquotes</a></h2>
+  <p>For quoting multiple lines of content from another source within your document, use the <code>&lt;blockquote&gt;</code> element.</p>
+
+  <div class="c-example">
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <cite>Someone famous</cite>
+    </blockquote>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:lists"><a href="#section:lists" class="c-text--resetLink">Lists</a></h2>
+  <p>Create an unordered list using the <code>&lt;ul&gt;</code> element and the <code>&lt;ol&gt;</code> element for ordered lists. The <code>&lt;li&gt;</code> element defines the list item.</p>
+
+  <div class="c-example">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:definition-lists"><a href="#section:definition-lists" class="c-text--resetLink">Definition lists</a></h2>
+  <p>Create a description list using the <code>&lt;dl&gt;</code> element. Use <code>&lt;dt&gt;</code> to define the term and <code>&lt;dd&gt;</code> for the description.</p>
+
+  <div class="c-example">
+    <dl>
+      <dt>Description lists</dt>
+      <dd>A description list defines terms and their corresponding descriptions.</dd>
+      <dt>This is a term</dt>
+      <dd>This is a description.</dd>
+      <dt>This is a term</dt>
+      <dd>This is a description.</dd>
+    </dl>
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:fluid-images"><a href="#section:fluid-images" class="c-text--resetLink">Fluid images</a></h2>
+  <p>All images are fluid by default. If the layout is narrowed, images adjust their size and keep their proportions. Images shouldn't stretch to bigger than their natural size.</p>
+
+  <div class="c-example">
+    <img src="/images/placeholder/img_480x260.svg" alt="">
+  </div>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:code-blocks"><a href="#section:code-blocks" class="c-text--resetLink">Code blocks</a></h2>
+  <p>For multiple lines of code, use the <code>&lt;pre&gt;</code> element which defines preformatTed text. It creates a new text block that preserves spaces, tabs and line breaks. Nest a <code>&lt;code&gt;</code> element inside to define the code block.</p>
+  <p><span class="c-badge">IMPORTANT</span> Be sure to escape any angle brackets in the code for proper rendering.</p>
+
+  <div class="c-example">
+    <pre><code class="xml">&lt;pre&gt;
   &lt;code&gt;...&lt;/code&gt;
-&lt;/pre&gt;</code></pre></div></article><section class="o-flex-grid__cell o-size--full o-size@md--3"><nav id="t-page-nav" class="t-side-nav c-Sticky__item" data-margin-top="20"><ul class="c-menu c-menu--flush c-menu--vertical"><li class="c-menu__item"><strong class="c-menu-title">Defaults</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item is-active"><a href="base.html" class="c-menu__link">Base</a></li><li class="c-menu__item"><a href="breakpoints.html" class="c-menu__link">Breakpoints</a></li><li class="c-menu__item"><a href="font-sizes.html" class="c-menu__link">Font sizes</a></li><li class="c-menu__item"><a href="print.html" class="c-menu__link">Print</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Objects</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="site.html" class="c-menu__link">Site</a></li><li class="c-menu__item"><a href="container.html" class="c-menu__link">Container</a></li><li class="c-menu__item"><a href="flex-grid.html" class="c-menu__link">Flexbox Grid</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Grid</a></li><li class="c-menu__item"><a href="size.html" class="c-menu__link">Size</a></li><li class="c-menu__item"><a href="section.html" class="c-menu__link">Section</a></li><li class="c-menu__item"><a href="media.html" class="c-menu__link">Media</a></li><li class="c-menu__item"><a href="cover.html" class="c-menu__link">Cover</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Elements</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="list.html" class="c-menu__link">List</a></li><li class="c-menu__item"><a href="table.html" class="c-menu__link">Table</a></li><li class="c-menu__item"><a href="form.html" class="c-menu__link">Form</a></li><li class="c-menu__item"><a href="definition.html" class="c-menu__link">Definition</a></li><li class="c-menu__item"><a href="text.html" class="c-menu__link">Text</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Common</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="icon.html" class="c-menu__link">Icon</a></li><li class="c-menu__item"><a href="button.html" class="c-menu__link">Button</a></li><li class="c-menu__item"><a href="panel.html" class="c-menu__link">Panel</a></li><li class="c-menu__item"><a href="close.html" class="c-menu__link">Close</a></li><li class="c-menu__item"><a href="badge.html" class="c-menu__link">Badge</a></li><li class="c-menu__item"><a href="overlay.html" class="c-menu__link">Overlay</a></li><li class="c-menu__item"><a href="tooltip.html" class="c-menu__link">Tooltip</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Navigation</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="menu.html" class="c-menu__link">Menu</a></li><li class="c-menu__item"><a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a></li><li class="c-menu__item"><a href="skip-link.html" class="c-menu__link">Skip link</a></li><li class="c-menu__item"><a href="back-to-top.html" class="c-menu__link">Back to top</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Modules</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="helpers.html" class="c-menu__link">Helpers</a></li><li class="c-menu__item"><a href="breakpoint-mod.html" class="c-menu__link">Breakpoint</a></li><li class="c-menu__item"><a href="toggle.html" class="c-menu__link">Toggle</a></li><li class="c-menu__item"><a href="slider.html" class="c-menu__link">Slider</a></li><li class="c-menu__item"><a href="switcher.html" class="c-menu__link">Switcher</a></li><li class="c-menu__item"><a href="anchor.html" class="c-menu__link">Anchor</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Load Image</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Validate</a></li></ul></li></ul></nav></section></div></div></main><footer class="o-site__footer t-footer"><div class="o-container o-container--centered"><p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p></div></footer><script src="/js/app.js" async></script></body></html></html>
+&lt;/pre&gt;</code></pre>
+  </div>
+
+
+        </article>
+
+        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+          
+            
+
+<nav id="t-page-nav" class="t-side-nav c-Sticky__item" data-margin-top="20">
+
+  <ul class="c-menu c-menu--flush c-menu--vertical">
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Defaults</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item is-active">
+    <a href="base.html" class="c-menu__link">Base</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breakpoints.html" class="c-menu__link">Breakpoints</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="font-sizes.html" class="c-menu__link">Font sizes</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="print.html" class="c-menu__link">Print</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Objects</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="site.html" class="c-menu__link">Site</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="container.html" class="c-menu__link">Container</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="flex-grid.html" class="c-menu__link">Flexbox Grid</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Grid</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="size.html" class="c-menu__link">Size</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="section.html" class="c-menu__link">Section</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="media.html" class="c-menu__link">Media</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="cover.html" class="c-menu__link">Cover</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Elements</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="form.html" class="c-menu__link">Form</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="definition.html" class="c-menu__link">Definition</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Common</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="button.html" class="c-menu__link">Button</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="badge.html" class="c-menu__link">Badge</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Navigation</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="skip-link.html" class="c-menu__link">Skip link</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Modules</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breakpoint-mod.html" class="c-menu__link">Breakpoint</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="slider.html" class="c-menu__link">Slider</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="switcher.html" class="c-menu__link">Switcher</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Load Image</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Validate</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+  </ul>
+</nav>
+
+          
+        </section>
+
+      </div>
+
+    </div>
+
+  
+  </main>
+
+  <footer class="o-site__footer t-footer">
+    <div class="o-container o-container--centered">
+      <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
+    </div>
+  </footer>
+
+  
+
+  <script src="https://jaywing.github.io/atomic-framework/js/app.js" async></script>
+
+  
+
+
+
+</body>
+</html>

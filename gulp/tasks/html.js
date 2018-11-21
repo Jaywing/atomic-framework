@@ -9,6 +9,7 @@ var fs = require("fs");
 var path = require("path");
 var mergeJson = require("merge-json");
 var htmlmin = require("gulp-htmlmin");
+var replace = require("gulp-token-replace");
 
 var CONFIG = require("../config.js");
 
@@ -64,14 +65,17 @@ gulp.task("html:docs", function() {
     return pageData;
   };
 
-  return gulp
-    .src([
-      "./_docs/html/**/*.njk",
-      "!./_docs/html/{components,layouts,shared,macros,data}/**"
-    ])
-    .pipe(data(dataFunction))
-    .pipe(nunjucksRender({ path: ["./_docs/html"] }))
-    .pipe(gulpif(!global.production, gulp.dest("./_build")))
-    .pipe(gulpif(global.production, htmlmin({ collapseWhitespace: true })))
-    .pipe(gulpif(global.production, gulp.dest("./docs")));
+  return (
+    gulp
+      .src([
+        "./_docs/html/**/*.njk",
+        "!./_docs/html/{components,layouts,shared,macros,data}/**"
+      ])
+      .pipe(data(dataFunction))
+      .pipe(nunjucksRender({ path: ["./_docs/html"] }))
+      .pipe(gulpif(!global.production, gulp.dest("./_build")))
+      // .pipe(gulpif(global.production, htmlmin({ collapseWhitespace: true })))
+      // .pipe(gulpif(global.production, replace({ global: CONFIG })))
+      .pipe(gulpif(global.production, gulp.dest("./docs")))
+  );
 });

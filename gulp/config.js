@@ -1,4 +1,8 @@
 module.exports = {
+  tokens: {
+    baseurl: "https://jaywing.github.io/atomic-framework"
+  },
+
   SASS_PATHS: ["node_modules", "scss"],
 
   SASS_DOC_PATHS: ["node_modules", "scss", "docs/scss"],

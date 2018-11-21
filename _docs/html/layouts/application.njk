@@ -9,18 +9,18 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="{{ author }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="{{ author.name }}"/>
   <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
-  <base href="https://jaywing.github.io/atomic-framework/"/>
-
-  <!-- standard styles - hidden from < ie10 -->
-  <link rel="stylesheet" href="/css/docs.css">
 
   {% include 'shared/app-icons.njk' %}
 
-  {% block head %}{% endblock %}
+  <link rel="stylesheet" href="{{ baseurl }}/css/docs.css">
 
+  <script>if(document.documentElement){document.documentElement.classList.add('js');}</script>
+
+  {% block head %}{% endblock %}
 </head>
 <body id="top" class="o-site u-scrollY">
 
@@ -67,7 +67,7 @@
   {# <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> #}
 
-  <script src="/js/app.js" async></script>
+  <script src="{{ baseurl }}/js/app.js" async></script>
 
   {% block javascript %}{% endblock %}
 

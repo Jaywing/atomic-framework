@@ -1,1 +1,587 @@
-<!doctype html><!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" --><html lang="en-GB" class="fonts-loaded"><!--#else --><html lang="en-GB"><!--#endif --><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="[object Object]"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Skip link | Atomic: Core</title><base href="https://jaywing.github.io/atomic-framework/"><!-- standard styles - hidden from < ie10 --><link rel="stylesheet" href="/css/docs.css"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"></head><body id="top" class="o-site u-scrollY"><a href="#content" class="c-skip-link">Skip to content</a><header class="o-site__header t-global-header"><a href="#content" class="c-skip-link c-button"><span class="o-icon o-icon--arrow-down"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#arrow-down"></use></svg> </span>Skip to content</a><nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md"><button class="c-toggle-button c-toggle-button--hideText" data-module="Toggle" data-options='{"target":"parent"}'><div class="c-toggle-button__init"><span class="o-icon o-icon--navicon c-toggle-button-icon--init"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#navicon"></use></svg> </span><span class="c-toggle-button__text">Menu</span></div><div class="c-toggle-button__close"><span class="o-icon o-icon--close c-toggle-button-icon--close"><svg viewBox="0 0 1 1"><use xlink:href="/images/icons.svg#close"></use></svg> </span><span class="c-toggle-button__text">Close</span></div></button><ul class="c-menu c-menu--vertical c-menu@md"><li class="c-menu__item c-menu__item--left w-logo"><a href="/docs/"><img src="/images/jaywing-logo.png" width="65" height="65" alt="Jaywing"></a></li><li class="c-menu__item"><a href="/docs/getting-started" class="c-menu__link">Getting Started</a></li><li class="c-menu__item is-active"><a href="/docs/core" class="c-menu__link">Core</a></li><li class="c-menu__item"><a href="/docs/extended" class="c-menu__link">Extended</a></li><li class="c-menu__item"><a class="c-menu__link is-disabled" disabled="disabled">Roadmap</a></li></ul></nav></header><main id="content" class="o-site__content"><div class="o-container o-container--centered"><div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container><article class="o-flex-grid__cell o-size@md--9"><h1 class="Article-title">Skip link</h1><p class="c-text--lead">Hidden skip link that appears when it gains focus (usually by tabbing to it)</p><p>You can see an example of the skip link by reloading this page and pressing<key>TAB</key>.</p><hr><h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2><div class="c-code"><pre><code class="html">&lt;a href=&quot;#content&quot; class=&quot;c-skip-link&quot;&gt;Skip to content&lt;/a&gt;</code></pre></div><p>The skip link must be the first focus-able element on the page, so the that it is activated by pressing tab for the first time.</p></article><section class="o-flex-grid__cell o-size--full o-size@md--3"><nav id="t-page-nav" class="t-side-nav c-Sticky__item" data-margin-top="20"><ul class="c-menu c-menu--flush c-menu--vertical"><li class="c-menu__item"><strong class="c-menu-title">Defaults</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="base.html" class="c-menu__link">Base</a></li><li class="c-menu__item"><a href="breakpoints.html" class="c-menu__link">Breakpoints</a></li><li class="c-menu__item"><a href="font-sizes.html" class="c-menu__link">Font sizes</a></li><li class="c-menu__item"><a href="print.html" class="c-menu__link">Print</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Objects</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="site.html" class="c-menu__link">Site</a></li><li class="c-menu__item"><a href="container.html" class="c-menu__link">Container</a></li><li class="c-menu__item"><a href="flex-grid.html" class="c-menu__link">Flexbox Grid</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Grid</a></li><li class="c-menu__item"><a href="size.html" class="c-menu__link">Size</a></li><li class="c-menu__item"><a href="section.html" class="c-menu__link">Section</a></li><li class="c-menu__item"><a href="media.html" class="c-menu__link">Media</a></li><li class="c-menu__item"><a href="cover.html" class="c-menu__link">Cover</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Elements</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="list.html" class="c-menu__link">List</a></li><li class="c-menu__item"><a href="table.html" class="c-menu__link">Table</a></li><li class="c-menu__item"><a href="form.html" class="c-menu__link">Form</a></li><li class="c-menu__item"><a href="definition.html" class="c-menu__link">Definition</a></li><li class="c-menu__item"><a href="text.html" class="c-menu__link">Text</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Common</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="icon.html" class="c-menu__link">Icon</a></li><li class="c-menu__item"><a href="button.html" class="c-menu__link">Button</a></li><li class="c-menu__item"><a href="panel.html" class="c-menu__link">Panel</a></li><li class="c-menu__item"><a href="close.html" class="c-menu__link">Close</a></li><li class="c-menu__item"><a href="badge.html" class="c-menu__link">Badge</a></li><li class="c-menu__item"><a href="overlay.html" class="c-menu__link">Overlay</a></li><li class="c-menu__item"><a href="tooltip.html" class="c-menu__link">Tooltip</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Navigation</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="menu.html" class="c-menu__link">Menu</a></li><li class="c-menu__item"><a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a></li><li class="c-menu__item"><a href="skip-link.html" class="c-menu__link">Skip link</a></li><li class="c-menu__item"><a href="back-to-top.html" class="c-menu__link">Back to top</a></li></ul></li><li class="c-menu__item"><strong class="c-menu-title">Modules</strong><ul class="c-menu c-menu--vertical c-menu--flush"><li class="c-menu__item"><a href="helpers.html" class="c-menu__link">Helpers</a></li><li class="c-menu__item"><a href="breakpoint-mod.html" class="c-menu__link">Breakpoint</a></li><li class="c-menu__item"><a href="toggle.html" class="c-menu__link">Toggle</a></li><li class="c-menu__item"><a href="slider.html" class="c-menu__link">Slider</a></li><li class="c-menu__item"><a href="switcher.html" class="c-menu__link">Switcher</a></li><li class="c-menu__item"><a href="anchor.html" class="c-menu__link">Anchor</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Load Image</a></li><li class="c-menu__item"><a class="c-menu__link c-text--disabled">Validate</a></li></ul></li></ul></nav></section></div></div></main><footer class="o-site__footer t-footer"><div class="o-container o-container--centered"><p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p></div></footer><script src="/js/app.js" async></script></body></html></html>
+
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="en-GB" class="fonts-loaded">
+<!--#else -->
+<html lang="en-GB">
+<!--#endif -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="Jaywing"/>
+  <title>Skip link | Atomic: Core</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+  <link rel="stylesheet" href="https://jaywing.github.io/atomic-framework/css/docs.css">
+
+  <script>if(document.documentElement){document.documentElement.classList.add('js');}</script>
+
+  
+</head>
+<body id="top" class="o-site u-scrollY">
+
+  <a href="#content" class="c-skip-link">Skip to content</a>
+
+  <header class="o-site__header t-global-header">
+
+    <a href="#content" class="c-skip-link c-button ">
+
+  
+
+  <span class='o-icon o-icon--arrow-down '>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#arrow-down'></use></svg>
+  </span>
+ Skip to content</a>
+
+    
+
+
+
+<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+
+  
+
+  <button class="c-toggle-button c-toggle-button--hideText" data-module="Toggle" data-options='{"target":"parent"}'>
+
+    <div class="c-toggle-button__init">
+      
+
+  
+
+  <span class='o-icon o-icon--navicon c-toggle-button-icon--init'>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#navicon'></use></svg>
+  </span>
+
+      
+        <span class="c-toggle-button__text">Menu</span>
+      
+    </div>
+
+    <div class="c-toggle-button__close">
+      
+
+  
+
+  <span class='o-icon o-icon--close c-toggle-button-icon--close'>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#close'></use></svg>
+  </span>
+
+      
+        <span class="c-toggle-button__text">Close</span>
+      
+    </div>
+
+  </button>
+
+
+
+  <ul class="c-menu c-menu--vertical c-menu@md">
+    <li class="c-menu__item c-menu__item--left w-logo">
+      <a href="https://jaywing.github.io/atomic-framework/docs/">
+        <img src="https://jaywing.github.io/atomic-framework/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
+      </a>
+    </li>
+    
+      
+<li class="c-menu__item">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/getting-started" class="c-menu__link">Getting Started</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item is-active">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/core" class="c-menu__link">Core</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item">
+  
+    <a href="https://jaywing.github.io/atomic-framework/docs/extended" class="c-menu__link">Extended</a>
+  
+</li>
+
+    
+      
+<li class="c-menu__item">
+  
+    <a class="c-menu__link is-disabled" disabled>Roadmap</a>
+  
+</li>
+
+    
+  </ul>
+
+</nav>
+
+  </header>
+
+  <main id="content" class="o-site__content">
+  
+    <div class="o-container o-container--centered">
+
+      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+
+        <article class="o-flex-grid__cell o-size@md--9">
+          
+
+<h1 class="Article-title">Skip link</h1>
+<p class="c-text--lead">Hidden skip link that appears when it gains focus (usually by tabbing to it)</p>
+<p>You can see an example of the skip link by reloading this page and pressing <key>TAB</key>.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
+
+<div class="c-code">
+  <pre><code class="html">&lt;a href=&quot;#content&quot; class=&quot;c-skip-link&quot;&gt;Skip to content&lt;/a&gt;</code></pre>
+</div>
+
+<p>The skip link must be the first focus-able element on the page, so the that it is activated by pressing tab for the first time.</p>
+
+
+
+        </article>
+
+        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+          
+            
+
+<nav id="t-page-nav" class="t-side-nav c-Sticky__item" data-margin-top="20">
+
+  <ul class="c-menu c-menu--flush c-menu--vertical">
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Defaults</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="base.html" class="c-menu__link">Base</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breakpoints.html" class="c-menu__link">Breakpoints</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="font-sizes.html" class="c-menu__link">Font sizes</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="print.html" class="c-menu__link">Print</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Objects</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="site.html" class="c-menu__link">Site</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="container.html" class="c-menu__link">Container</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="flex-grid.html" class="c-menu__link">Flexbox Grid</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Grid</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="size.html" class="c-menu__link">Size</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="section.html" class="c-menu__link">Section</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="media.html" class="c-menu__link">Media</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="cover.html" class="c-menu__link">Cover</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Elements</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="form.html" class="c-menu__link">Form</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="definition.html" class="c-menu__link">Definition</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Common</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="button.html" class="c-menu__link">Button</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="badge.html" class="c-menu__link">Badge</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Navigation</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="skip-link.html" class="c-menu__link">Skip link</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+      
+
+        <li class="c-menu__item">
+          <strong class="c-menu-title">Modules</strong>
+          
+            <ul class="c-menu c-menu--vertical c-menu--flush">
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="breakpoint-mod.html" class="c-menu__link">Breakpoint</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="slider.html" class="c-menu__link">Slider</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="switcher.html" class="c-menu__link">Switcher</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Load Image</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Validate</a>
+  </li>
+
+                
+              
+            </ul>
+          
+        </li>
+
+      
+
+    
+
+      
+
+    
+
+  </ul>
+</nav>
+
+          
+        </section>
+
+      </div>
+
+    </div>
+
+  
+  </main>
+
+  <footer class="o-site__footer t-footer">
+    <div class="o-container o-container--centered">
+      <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
+    </div>
+  </footer>
+
+  
+
+  <script src="https://jaywing.github.io/atomic-framework/js/app.js" async></script>
+
+  
+
+
+
+</body>
+</html>

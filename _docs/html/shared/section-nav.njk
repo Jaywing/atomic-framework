@@ -1,7 +1,7 @@
 {% macro navbarItem(id, title, active, ready) %}
 <li class="c-menu__item{% if id == active %} is-active{% endif %}">
   {% if ready %}
-    <a href="/docs/{{id}}" class="c-menu__link">{{title}}</a>
+    <a href="{{ baseurl }}/docs/{{id}}" class="c-menu__link">{{title}}</a>
   {% else %}
     <a class="c-menu__link is-disabled" disabled>{{title}}</a>
   {% endif %}
@@ -16,8 +16,8 @@
 
   <ul class="c-menu c-menu--vertical c-menu@md">
     <li class="c-menu__item c-menu__item--left w-logo">
-      <a href="/docs/">
-        <img src="/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
+      <a href="{{ baseurl }}/docs/">
+        <img src="{{ baseurl }}/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
       </a>
     </li>
     {% for section in docs_sections %}
