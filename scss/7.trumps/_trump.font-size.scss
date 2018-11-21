@@ -20,7 +20,7 @@
     @include canon;
 }
 
-.u-canonBold {
+.u-canon-bold {
     @include canon-bold;
 }
 
@@ -28,23 +28,23 @@
     @include trafalgar;
 }
 
-.u-trafalgarBold {
+.u-trafalgar-bold {
     @include trafalgar-bold;
 }
 
-.u-doublePica {
+.u-double-pica {
     @include double-pica;
 }
 
-.u-doublePicaBold {
+.u-double-pica-bold {
     @include double-pica-bold;
 }
 
-.u-greatPrimer {
+.u-great-primer {
     @include great-primer;
 }
 
-.u-greatPrimerBold {
+.u-great-primer-bold {
     @include great-primer-bold;
 }
 
@@ -52,15 +52,15 @@
     @include pica;
 }
 
-.u-picaBold {
+.u-pica-bold {
     @include pica-bold;
 }
 
-.u-longPrimer {
+.u-long-primer {
     @include long-primer;
 }
 
-.u-longPrimerBold {
+.u-long-primer-bold {
     @include long-primer-bold;
 }
 
@@ -68,7 +68,7 @@
     @include brevier;
 }
 
-.u-brevierBold {
+.u-brevier-bold {
     @include brevier-bold;
 }
 
@@ -76,6 +76,6 @@
     @include minion;
 }
 
-.u-minionBold {
+.u-minion-bold {
     @include minion-bold;
 }
