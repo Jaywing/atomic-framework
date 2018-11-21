@@ -34,10 +34,41 @@ var webpackConfig = {
   }
 };
 
+var webpackConfig_dist = {
+  context: path.resolve("js/"),
+  entry: {
+    app: ["babel-polyfill", "app.js"]
+  },
+  output: {
+    path: path.resolve("docs/js/"),
+    filename: "app.js",
+    publicPath: "https://jaywing.github.io/atomic-framework/js/"
+  },
+  plugins: [
+    // new UglifyJsPlugin()
+  ],
+  resolve: {
+    modules: [path.resolve("js/"), path.resolve("node_modules")]
+  },
+  module: {
+    loaders: [
+      {
+        loader: "babel-loader",
+        test: /\.js$/,
+        exclude: path.resolve("node_modules"),
+        query: {
+          presets: [["es2015", { modules: false }], "stage-1"]
+        }
+      }
+    ]
+  }
+};
+
 gulp.task("webpack", function() {
   return gulp
     .src("./js/app.js")
-    .pipe(webpack(webpackConfig, webpack2))
+    .pipe(gulpif(!global.production, webpack(webpackConfig, webpack2)))
+    .pipe(gulpif(global.production, webpack(webpackConfig_dist, webpack2)))
     .pipe(gulpif(!global.production, gulp.dest("./_build/js")))
     .pipe(gulpif(global.production, gulp.dest("./docs/js")));
 });
