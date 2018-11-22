@@ -7,9 +7,9 @@
       "cta": {
         "url": "http://atomic.preview8.jaywing.com/docs/",
         "title": "Check out the docs",
-        "classes": "Button Button--primary Button--xl"
+        "classes": "c-button c-button--primary c-button--xl"
       }
     },
-    "classes": "Hero--jumbo Text--center"
+    "classes": "c-hero--jumbo c-text--center"
   }
 }
