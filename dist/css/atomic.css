@@ -3810,6 +3810,18 @@ video {
       margin-bottom: 0;
       border-radius: 4px 0 0 4px; }
 
+.is-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: auto;
+  left: 0;
+  display: none; }
+
+.is-dropdown-menu-parent {
+  position: relative; }
+  .is-dropdown-menu-parent.is-active > .is-dropdown-menu {
+    display: block; }
+
 .c-Breadcrumbs__list {
   margin: 0 0 1rem 0;
   list-style: none; }

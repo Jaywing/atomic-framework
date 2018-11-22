@@ -1,0 +1,17 @@
+.is-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: auto;
+    left: 0;
+    display: none;
+}
+
+.is-dropdown-menu-parent {
+    position: relative;
+
+    &.is-active {
+        > .is-dropdown-menu {
+            display: block;
+        }
+    }
+}

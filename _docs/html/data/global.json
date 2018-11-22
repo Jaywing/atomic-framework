@@ -1,5 +1,5 @@
 {
-  "baseurl": "https://jaywing.github.io/atomic-framework",
+  "_baseurl": "https://jaywing.github.io/atomic-framework",
   "version": "3.0.0",
   "lang": "en-GB",
   "author": {
@@ -258,6 +258,12 @@
         {
           "id": "menu",
           "title": "Menu",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "dropdown-menu",
+          "title": "Dropdown Menu",
           "section": "core",
           "ready": true
         },

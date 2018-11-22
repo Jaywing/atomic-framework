@@ -1,0 +1,84 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageid = 'dropdown-menu' %}
+{% set sectionid = 'core' %}
+
+{% from 'macros/icon.njk' import icon %}
+{% from 'components/Menu/Menu.component.njk' import Menu %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}Dropdown Menu | Atomic: Core{% endblock %}
+
+{% block content %}
+
+<h1 class="Article-title">Dropdown Menu</h1>
+<p class="c-text--lead">Our flexible menu component makes it easy to build many common navigation patterns.</p>
+
+<hr>
+
+<h2 id="section:usage"><a href="#section:usage" class="c-text--resetLink">Usage</a></h2>
+
+<div class="c-example">
+
+  {{ Menu(
+    [
+      {
+        "text": "Dropdown menu",
+        "header": true,
+        "classList": "c-menu__item--left"
+      },
+      {
+        "id": "",
+        "url": "#",
+        "text": "Item 1",
+        "linkClassList": "",
+        "children": [
+          {
+          "id": "",
+          "url": "#",
+          "text": "Item 1 - 1",
+          "linkClassList": ""
+          },
+          {
+          "id": "",
+          "url": "#",
+          "text": "Item 1 - 2",
+          "linkClassList": ""
+          },
+          {
+          "id": "",
+          "url": "#",
+          "text": "Item 1 - 3",
+          "linkClassList": ""
+          }
+        ]
+      },
+      {
+        "id": "",
+        "url": "#",
+        "text": "Item 2",
+        "linkClassList": ""
+      },
+      {
+        "id": "",
+        "url": "#",
+        "text": "Item 3",
+        "linkClassList": ""
+      }
+    ],
+    'c-menu--dropdown',
+    'DropdownMenu'
+  ) }}
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

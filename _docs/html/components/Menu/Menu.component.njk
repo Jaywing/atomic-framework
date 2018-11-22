@@ -3,11 +3,12 @@
 {% macro Menu(
 menuItems,
 classList,
+dataModule,
 activeItem,
 activeClass) %}
 
   {% if menuItems | length %}
-    <ul class="c-menu {{ classList }}">
+    <ul class="c-menu {{ classList }}" {% if dataModule %}data-module='{{dataModule}}'{% endif %}>
       {% for item in menuItems %}
         {{ MenuItem(item, activeItem, activeClass) }}
       {% endfor %}
