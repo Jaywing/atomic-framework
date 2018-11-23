@@ -76,6 +76,38 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
+<div class="c-code">
+  <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--dropdown&quot;&gt;
+  &lt;li class=&quot;c-menu__item is-dropdown-menu-parent&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;
+    &lt;ul class=&quot;c-menu is-dropdown-menu&quot;&gt;
+      &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One sub item&lt;/a&gt;&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  ...
+  &lt;/ul&gt;
+
+  &#123;&#123; Menu(
+    [
+      { "text": "One", "url": "#"
+        "children": [
+          {
+          "id": "",
+          "url": "#",
+          "text": "One sub item",
+          "linkClassList": ""
+          }
+        ]
+      },
+      { "text": "Two", "url": "#" },
+      { "text": "Three", "url": "#" },
+      { "text": "Four", "url": "#" }
+    ]
+  ) &#125;&#125;
+  </code></pre>
+</div>
+
 {% endblock %}
 
 {% block javascript %}
