@@ -164,7 +164,6 @@
   <span class="c-menu__header">Dropdown menu</span>
 
     
-    
   </li>
 
 
@@ -194,11 +193,15 @@
     Item 1
   </a>
 
+ <button class="c-button is-dropdown-button">
 
-      
-    
-    
-      
+  
+
+  <span class='o-icon o-icon--chevron-down '>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#chevron-down'></use></svg>
+  </span>
+</button>
+        
     <ul class="c-menu is-dropdown-menu c-menu--vertical ">
       
         
@@ -226,7 +229,6 @@
 
 
       
-    
     
   </li>
 
@@ -258,7 +260,6 @@
 
       
     
-    
   </li>
 
 
@@ -289,13 +290,13 @@
 
       
     
-    
   </li>
 
 
       
     </ul>
 
+      
     
   </li>
 
@@ -327,7 +328,6 @@
 
       
     
-    
   </li>
 
 
@@ -358,7 +358,6 @@
 
       
     
-    
   </li>
 
 
@@ -370,10 +369,20 @@
 
 </div>
 
+<button class="c-button is-dropdown-button">
+
+  
+
+  <span class='o-icon o-icon--chevron-down '>
+    <svg viewBox="0 0 1 1"><use xlink:href='/images/icons.svg#chevron-down'></use></svg>
+  </span>
+</button>
+
 <div class="c-code">
   <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--dropdown&quot;&gt;
   &lt;li class=&quot;c-menu__item is-dropdown-menu-parent&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;
+    &lt;button class=&quot;c-button is-dropdown-button&quot;&gt;...&lt;/button&gt;
     &lt;ul class=&quot;c-menu is-dropdown-menu&quot;&gt;
       &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One sub item&lt;/a&gt;&lt;/li&gt;
       ...

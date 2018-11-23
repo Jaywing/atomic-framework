@@ -488,8 +488,14 @@ var DropdownMenu = function (_Module) {
     key: "cacheDom",
     value: function cacheDom() {
       return {
-        dropdownMenuParent: this.el.querySelectorAll(".is-dropdown-menu-parent > .c-menu__link"),
-        accordionMenuParent: this.el.querySelectorAll(".is-accordion-menu-parent > .c-menu__link")
+        dropdownMenuParent: this.el.querySelectorAll(".is-dropdown-button"),
+        accordionMenuParent: this.el.querySelectorAll(".is-accordion-button")
+        // dropdownMenuParent: this.el.querySelectorAll(
+        //   ".is-dropdown-menu-parent > .c-menu__link"
+        // ),
+        // accordionMenuParent: this.el.querySelectorAll(
+        //   ".is-accordion-menu-parent > .c-menu__link"
+        // )
       };
     }
   }, {
@@ -510,6 +516,17 @@ var DropdownMenu = function (_Module) {
           _this2.handleParentClick(e, index, _this2.dom.accordionMenuParent[index].parentNode);
         });
       });
+
+      // forEach(this.dom.accordionMenuParent, (menuItemParent, index) => {
+      //   menuItemParent.addEventListener("click", e => {
+      //     e.preventDefault();
+      //     this.handleParentClick(
+      //       e,
+      //       index,
+      //       this.dom.accordionMenuParent[index].parentNode
+      //     );
+      //   });
+      // });
     }
   }, {
     key: "handleParentClick",
