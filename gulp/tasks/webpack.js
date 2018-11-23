@@ -68,7 +68,7 @@ gulp.task("webpack", function() {
   return gulp
     .src("./js/app.js")
     .pipe(gulpif(!global.production, webpack(webpackConfig, webpack2)))
-    .pipe(gulpif(global.production, webpack(webpackConfig_dist, webpack2)))
+    .pipe(gulpif(global.production, webpack(webpackConfig, webpack2)))
     .pipe(gulpif(!global.production, gulp.dest("./_build/js")))
     .pipe(gulpif(global.production, gulp.dest("./docs/js")));
 });

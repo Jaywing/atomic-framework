@@ -1,4 +1,4 @@
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% macro MenuLink(item) %}
 
@@ -13,7 +13,7 @@
 
   <a href="{{ item.url }}" class="{{ classList }}">
     {% if item.icon %}
-      {{ icon(item.icon) }}
+      {{ Icon(item.icon) }}
     {% endif %}
     {{ item.text }}
   </a>

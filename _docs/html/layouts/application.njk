@@ -1,4 +1,4 @@
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 <!doctype html>
 <!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
 <html lang="{{ lang }}" class="fonts-loaded">
@@ -28,7 +28,7 @@
 
   <header class="o-site__header t-global-header">
 
-    <a href="#content" class="c-skip-link c-button ">{{ icon('arrow-down') }} Skip to content</a>
+    <a href="#content" class="c-skip-link c-button ">{{ Icon('arrow-down') }} Skip to content</a>
 
     {% include 'shared/section-nav.njk' %}
   </header>

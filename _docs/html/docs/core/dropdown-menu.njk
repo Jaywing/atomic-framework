@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'dropdown-menu' %}
 {% set sectionid = 'core' %}
 
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 {% from 'components/DropdownMenu/DropdownMenu.component.njk' import Menu %}
 
 {% extends 'layouts/application.njk' %}
@@ -76,10 +76,13 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 </div>
 
+<button class="c-button is-dropdown-button">{{ Icon('chevron-down') }}</button>
+
 <div class="c-code">
   <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--dropdown&quot;&gt;
   &lt;li class=&quot;c-menu__item is-dropdown-menu-parent&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;
+    &lt;button class=&quot;c-button is-dropdown-button&quot;&gt;...&lt;/button&gt;
     &lt;ul class=&quot;c-menu is-dropdown-menu&quot;&gt;
       &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One sub item&lt;/a&gt;&lt;/li&gt;
       ...

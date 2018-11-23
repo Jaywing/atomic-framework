@@ -7,10 +7,23 @@ $accordion-menu-border: none !default;
     background: $accordion-menu-bg;
 }
 
+.is-accordion-button {
+    padding: 0;
+    margin: 0;
+}
+
 .is-accordion-menu-parent {
+    display: flex;
+    flex-wrap: wrap;
+
     &.is-active {
         > .is-accordion-menu {
             display: block;
+            flex: none;
+        }
+
+        > .is-accordion-button {
+            transform: rotate(-180deg);
         }
     }
 }

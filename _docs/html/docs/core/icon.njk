@@ -4,7 +4,7 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% set pageid = 'icon' %}
 {% set sectionid = 'core' %}
@@ -49,7 +49,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <dt>Macro</dt>
   <dd>icon</dd>
   <dt>Import</dt>
-  <dd><pre><code class="html">&#123;% from 'macros/icon.njk' import icon %&#125;</code></pre></dd>
+  <dd><pre><code class="html">&#123;% from 'macros/icon.njk' import Icon %&#125;</code></pre></dd>
   <dt>Parameters</dt>
   <dd><strong>id</strong> (string) - corresponds to the filename of icon svg</dd>
   <dd><strong>classes</strong> (string) - any extran classes to be put on icon container span</dd>
@@ -62,74 +62,74 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <div class="c-example">
   <div class="o-flex-grid o-flex-grid--gutters c-text--center">
-  {{ icon('archive') }}
-  {{ icon('arrow-down') }}
-  {{ icon('arrow-left') }}
-  {{ icon('arrow-right') }}
-  {{ icon('arrow-up') }}
-  {{ icon('bell') }}
-  {{ icon('calendar') }}
-  {{ icon('camera') }}
-  {{ icon('cart') }}
-  {{ icon('chart') }}
-  {{ icon('check') }}
-  {{ icon('chevron-down') }}
-  {{ icon('chevron-left') }}
-  {{ icon('chevron-right') }}
-  {{ icon('chevron-up') }}
-  {{ icon('clock') }}
-  {{ icon('close') }}
-  {{ icon('close-o') }}
-  {{ icon('comment') }}
-  {{ icon('credit-card') }}
-  {{ icon('envelope') }}
-  {{ icon('exclamation') }}
-  {{ icon('external__link') }}
-  {{ icon('eye') }}
-  {{ icon('gear') }}
-  {{ icon('heart') }}
-  {{ icon('image') }}
-  {{ icon('like') }}
-  {{ icon('link') }}
-  {{ icon('location') }}
-  {{ icon('lock') }}
-  {{ icon('minus') }}
-  {{ icon('navicon') }}
-  {{ icon('paperclip') }}
-  {{ icon('pencil') }}
-  {{ icon('play') }}
-  {{ icon('plus') }}
-  {{ icon('pointer') }}
-  {{ icon('question') }}
-  {{ icon('redo') }}
-  {{ icon('refresh') }}
-  {{ icon('retweet') }}
-  {{ icon('sc-facebook') }}
-  {{ icon('sc-github') }}
-  {{ icon('sc-google-plus') }}
-  {{ icon('sc-instagram') }}
-  {{ icon('sc-linkedin') }}
-  {{ icon('sc-pinterest') }}
-  {{ icon('sc-skype') }}
-  {{ icon('sc-soundcloud') }}
-  {{ icon('sc-telegram') }}
-  {{ icon('sc-tumblr') }}
-  {{ icon('sc-twitter') }}
-  {{ icon('sc-vimeo') }}
-  {{ icon('sc-youtube') }}
-  {{ icon('search') }}
-  {{ icon('share-apple') }}
-  {{ icon('share-google') }}
-  {{ icon('spinner') }}
-  {{ icon('spinner-2') }}
-  {{ icon('spinner-3') }}
-  {{ icon('star') }}
-  {{ icon('tag') }}
-  {{ icon('trash') }}
-  {{ icon('trophy') }}
-  {{ icon('undo') }}
-  {{ icon('unlock') }}
-  {{ icon('user') }}
+  {{ Icon('archive') }}
+  {{ Icon('arrow-down') }}
+  {{ Icon('arrow-left') }}
+  {{ Icon('arrow-right') }}
+  {{ Icon('arrow-up') }}
+  {{ Icon('bell') }}
+  {{ Icon('calendar') }}
+  {{ Icon('camera') }}
+  {{ Icon('cart') }}
+  {{ Icon('chart') }}
+  {{ Icon('check') }}
+  {{ Icon('chevron-down') }}
+  {{ Icon('chevron-left') }}
+  {{ Icon('chevron-right') }}
+  {{ Icon('chevron-up') }}
+  {{ Icon('clock') }}
+  {{ Icon('close') }}
+  {{ Icon('close-o') }}
+  {{ Icon('comment') }}
+  {{ Icon('credit-card') }}
+  {{ Icon('envelope') }}
+  {{ Icon('exclamation') }}
+  {{ Icon('external__link') }}
+  {{ Icon('eye') }}
+  {{ Icon('gear') }}
+  {{ Icon('heart') }}
+  {{ Icon('image') }}
+  {{ Icon('like') }}
+  {{ Icon('link') }}
+  {{ Icon('location') }}
+  {{ Icon('lock') }}
+  {{ Icon('minus') }}
+  {{ Icon('navicon') }}
+  {{ Icon('paperclip') }}
+  {{ Icon('pencil') }}
+  {{ Icon('play') }}
+  {{ Icon('plus') }}
+  {{ Icon('pointer') }}
+  {{ Icon('question') }}
+  {{ Icon('redo') }}
+  {{ Icon('refresh') }}
+  {{ Icon('retweet') }}
+  {{ Icon('sc-facebook') }}
+  {{ Icon('sc-github') }}
+  {{ Icon('sc-google-plus') }}
+  {{ Icon('sc-instagram') }}
+  {{ Icon('sc-linkedin') }}
+  {{ Icon('sc-pinterest') }}
+  {{ Icon('sc-skype') }}
+  {{ Icon('sc-soundcloud') }}
+  {{ Icon('sc-telegram') }}
+  {{ Icon('sc-tumblr') }}
+  {{ Icon('sc-twitter') }}
+  {{ Icon('sc-vimeo') }}
+  {{ Icon('sc-youtube') }}
+  {{ Icon('search') }}
+  {{ Icon('share-apple') }}
+  {{ Icon('share-google') }}
+  {{ Icon('spinner') }}
+  {{ Icon('spinner-2') }}
+  {{ Icon('spinner-3') }}
+  {{ Icon('star') }}
+  {{ Icon('tag') }}
+  {{ Icon('trash') }}
+  {{ Icon('trophy') }}
+  {{ Icon('undo') }}
+  {{ Icon('unlock') }}
+  {{ Icon('user') }}
   </div>
 </div>
 
@@ -140,27 +140,27 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-flex-grid o-flex-grid--1of5 c-text--center">
 
     <div class="o-flex-grid__cell c-demo">
-      {{ icon('eye', 'o-icon--sm', '0 0 1 1') }}
+      {{ Icon('eye', 'o-icon--sm', '0 0 1 1') }}
       <div><small>.o-icon--sm</small></div>
     </div>
 
     <div class="o-flex-grid__cell c-demo">
-      {{ icon('eye') }}
+      {{ Icon('eye') }}
       <div><small>.o-icon</small></div>
     </div>
 
     <div class="o-flex-grid__cell c-demo">
-      {{ icon('eye', 'o-icon--lg') }}
+      {{ Icon('eye', 'o-icon--lg') }}
       <div><small>.o-icon--lg</small></div>
     </div>
 
     <div class="o-flex-grid__cell c-demo">
-      {{ icon('eye', 'o-icon--xl') }}
+      {{ Icon('eye', 'o-icon--xl') }}
       <div><small>.o-icon--xl</small></div>
     </div>
 
     <div class="o-flex-grid__cell c-demo">
-      {{ icon('eye', 'o-icon--xxl') }}
+      {{ Icon('eye', 'o-icon--xxl') }}
       <div><small>.o-icon--xxl</small></div>
     </div>
 
@@ -183,7 +183,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <div class="o-flex-grid o-flex-grid--gutters c-text--center">
 
     <div class="o-flex-grid__cell o-size--1of5 c-demo">
-      {{ icon('spinner-3', 'o-icon--lg o-icon--spin') }}
+      {{ Icon('spinner-3', 'o-icon--lg o-icon--spin') }}
       <div><small>.o-icon--spin</small></div>
     </div>
 

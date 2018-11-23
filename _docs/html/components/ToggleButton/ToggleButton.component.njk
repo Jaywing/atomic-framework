@@ -1,4 +1,4 @@
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% macro ToggleButton(
   settings = false,
@@ -16,14 +16,14 @@
       {% endif %}>
 
     <div class="c-toggle-button__init">
-      {{ icon(content.initIcon, 'c-toggle-button-icon--init') }}
+      {{ Icon(content.initIcon, 'c-toggle-button-icon--init') }}
       {% if content.initText %}
         <span class="c-toggle-button__text">{{ content.initText }}</span>
       {% endif %}
     </div>
 
     <div class="c-toggle-button__close">
-      {{ icon(content.closeIcon, 'c-toggle-button-icon--close') }}
+      {{ Icon(content.closeIcon, 'c-toggle-button-icon--close') }}
       {% if content.closeText %}
         <span class="c-toggle-button__text">{{ content.closeText }}</span>
       {% endif %}

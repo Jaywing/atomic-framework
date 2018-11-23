@@ -7,7 +7,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 {% set pageid = 'accordion-menu' %}
 {% set sectionid = 'core' %}
 
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 {% from 'components/AccordionMenu/AccordionMenu.component.njk' import Menu %}
 
 {% extends 'layouts/application.njk' %}
@@ -80,6 +80,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   <pre><code class="html">&lt;ul class=&quot;c-menu c-menu--accordion c-menu--vertical&quot;&gt;
   &lt;li class=&quot;c-menu__item is-accordion-menu-parent&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One&lt;/a&gt;
+    &lt;button class=&quot;c-button is-accordion-button&quot;&gt;...&lt;/button&gt;
     &lt;ul class=&quot;c-menu is-accordion-menu&quot;&gt;
       &lt;li class=&quot;c-menu__item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-menu__link&quot;&gt;One sub item&lt;/a&gt;&lt;/li&gt;
       ...

@@ -1,4 +1,4 @@
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% macro FeaturesList(
   features = [],
@@ -12,7 +12,7 @@
       {% for feature in features %}
         <div class="o-media o-section--short">
           <div class="o-media__figure">
-            {{ icon(feature.icon, 'o-icon--xxl') }}
+            {{ Icon(feature.icon, 'o-icon--xxl') }}
           </div>
           <div class="o-media__body">
             <h3>{{ feature.title }}</h3>

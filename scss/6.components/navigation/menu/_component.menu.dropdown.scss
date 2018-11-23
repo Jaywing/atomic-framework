@@ -4,6 +4,7 @@ $dropdown-menu-border: $c-dark 1px solid !default;
 
 .is-dropdown-menu {
     position: absolute;
+    z-index: 1;
     top: 100%;
     right: auto;
     left: 0;
@@ -13,14 +14,31 @@ $dropdown-menu-border: $c-dark 1px solid !default;
     border: $dropdown-menu-border;
     margin: 0;
     background: $dropdown-menu-bg;
+
+    .c-menu__link {
+        padding-right: $g-spacer;
+        padding-left: $g-spacer;
+    }
+}
+
+.is-dropdown-button {
+    padding: 0;
+    margin: 0;
 }
 
 .is-dropdown-menu-parent {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 
     &.is-active {
         > .is-dropdown-menu {
             display: block;
+            flex: none;
+        }
+
+        > .is-dropdown-button {
+            transform: rotate(-180deg);
         }
     }
 }

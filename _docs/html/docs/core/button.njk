@@ -4,7 +4,7 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% from 'macros/icon.njk' import icon %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% set pageid = 'button' %}
 {% set sectionid = 'core' %}
@@ -78,9 +78,9 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
 <h3>Icon buttons</h3>
 <div class="c-example">
-  <a href="#" class="c-button c-button--icon">{{ icon('gear') }}<small class="srOnly"> Settings</small></a>
-  <a href="#" class="c-button c-button--icon">Dropdown {{ icon('chevron-down') }}</a>
-  <a href="#" class="c-button c-button--icon">{{ icon('arrow-left') }} Back</a>
+  <a href="#" class="c-button c-button--icon">{{ Icon('gear') }}<small class="srOnly"> Settings</small></a>
+  <a href="#" class="c-button c-button--icon">Dropdown {{ Icon('chevron-down') }}</a>
+  <a href="#" class="c-button c-button--icon">{{ Icon('arrow-left') }} Back</a>
 </div>
 
 <div class="c-code">
@@ -100,12 +100,12 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 
   <button class="c-button c-button--swap c-button--ani">
     <div class="c-button__content">Next</div>
-    <div class="c-button__content c-button__content--hidden">{{ icon('arrow-right') }}</div>
+    <div class="c-button__content c-button__content--hidden">{{ Icon('arrow-right') }}</div>
   </button>
 
   <button class="c-button c-button--swap c-button--vertical c-button--ani">
     <div class="c-button__content">Top</div>
-    <div class="c-button__content c-button__content--hidden">{{ icon('arrow-up') }}</div>
+    <div class="c-button__content c-button__content--hidden">{{ Icon('arrow-up') }}</div>
   </button>
 
   <button class="c-button c-button--swap c-button--aniFade">
@@ -164,7 +164,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 <div class="c-example">
   <button class="c-button c-button--primary c-button--swap c-button--aniFade c-button--swapToggle" data-module="Toggle" data-options='{"once":true}'>
     <div class="c-button__content">Submit me</div>
-    <div class="c-button__content c-button__content--hidden">{{ icon('spinner', 'o-icon--spin') }}</div>
+    <div class="c-button__content c-button__content--hidden">{{ Icon('spinner', 'o-icon--spin') }}</div>
   </button>
 </div>
 

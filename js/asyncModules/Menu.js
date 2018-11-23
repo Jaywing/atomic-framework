@@ -20,12 +20,14 @@ export default class DropdownMenu extends Module {
 
   cacheDom() {
     return {
-      dropdownMenuParent: this.el.querySelectorAll(
-        ".is-dropdown-menu-parent > .c-menu__link"
-      ),
-      accordionMenuParent: this.el.querySelectorAll(
-        ".is-accordion-menu-parent > .c-menu__link"
-      )
+      dropdownMenuParent: this.el.querySelectorAll(".is-dropdown-button"),
+      accordionMenuParent: this.el.querySelectorAll(".is-accordion-button")
+      // dropdownMenuParent: this.el.querySelectorAll(
+      //   ".is-dropdown-menu-parent > .c-menu__link"
+      // ),
+      // accordionMenuParent: this.el.querySelectorAll(
+      //   ".is-accordion-menu-parent > .c-menu__link"
+      // )
     };
   }
 
@@ -51,6 +53,17 @@ export default class DropdownMenu extends Module {
         );
       });
     });
+
+    // forEach(this.dom.accordionMenuParent, (menuItemParent, index) => {
+    //   menuItemParent.addEventListener("click", e => {
+    //     e.preventDefault();
+    //     this.handleParentClick(
+    //       e,
+    //       index,
+    //       this.dom.accordionMenuParent[index].parentNode
+    //     );
+    //   });
+    // });
   }
 
   handleParentClick(e, item, itemParent) {

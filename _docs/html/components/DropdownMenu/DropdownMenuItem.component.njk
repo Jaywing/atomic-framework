@@ -1,5 +1,6 @@
 {% from "components/Menu/MenuHeader.component.njk" import MenuHeader %}
 {% from "components/Menu/MenuLink.component.njk" import MenuLink %}
+{% from 'macros/icon.njk' import Icon %}
 
 {% macro SubMenu(items) %}
     <ul class="c-menu is-dropdown-menu c-menu--vertical {{ classList }}">
@@ -36,14 +37,14 @@ activeClass)
     {% if item.header %}
       {{ MenuHeader(item) }}
     {% else %}
-      {% if item.url %}
+      {% if item.children %}
+        {{ MenuLink(item) }} <button class="c-button is-dropdown-button">{{ Icon('chevron-down') }}</button>
+        {{ SubMenu(item.children) }}
+      {% elseif item.url %}
         {{ MenuLink(item) }}
       {% else %}
         {{ item.text }}
       {% endif %}
-    {% endif %}
-    {% if item.children %}
-      {{ SubMenu(item.children) }}
     {% endif %}
   </li>
 
