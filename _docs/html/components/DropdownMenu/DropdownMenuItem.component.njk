@@ -1,7 +1,7 @@
 {% from "components/Menu/MenuHeader.component.njk" import MenuHeader %}
 {% from "components/Menu/MenuLink.component.njk" import MenuLink %}
 
-{% macro MenuDropdown(items) %}
+{% macro SubMenu(items) %}
     <ul class="c-menu is-dropdown-menu c-menu--vertical {{ classList }}">
       {% for item in items %}
         {{ MenuItem(item, activeItem, activeClass) }}
@@ -43,7 +43,7 @@ activeClass)
       {% endif %}
     {% endif %}
     {% if item.children %}
-      {{ MenuDropdown(item.children) }}
+      {{ SubMenu(item.children) }}
     {% endif %}
   </li>
 

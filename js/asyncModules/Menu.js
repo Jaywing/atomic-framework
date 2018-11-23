@@ -54,7 +54,6 @@ export default class DropdownMenu extends Module {
   }
 
   handleParentClick(e, item, itemParent) {
-    // let itemParent = this.dom.dropdownMenuParent[item].parentNode;
     if (itemParent.classList.contains("is-active")) {
       itemParent.classList.remove("is-active");
     } else {
