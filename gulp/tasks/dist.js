@@ -27,7 +27,7 @@ gulp.task("dist", function(cb) {
 
 gulp.task("sass_dist", function() {
   return gulp
-    .src("./_docs/scss/docs.scss")
+    .src("./_docs/scss/app.scss")
     .pipe(plumber())
     .pipe(
       sass({

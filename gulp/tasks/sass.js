@@ -44,7 +44,7 @@ gulp.task("sass:atomic", function() {
 
 gulp.task("sass:docs", function() {
   return gulp
-    .src("./_docs/scss/docs.scss")
+    .src("./_docs/scss/app.scss")
     .pipe(sourcemaps.init())
     .pipe(
       sass({
