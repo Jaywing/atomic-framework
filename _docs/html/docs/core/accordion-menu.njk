@@ -4,19 +4,19 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
-{% set pageid = 'dropdown-menu' %}
+{% set pageid = 'accordion-menu' %}
 {% set sectionid = 'core' %}
 
 {% from 'macros/icon.njk' import icon %}
-{% from 'components/DropdownMenu/DropdownMenu.component.njk' import Menu %}
+{% from 'components/AccordionMenu/AccordionMenu.component.njk' import Menu %}
 
 {% extends 'layouts/application.njk' %}
 
-{% block metaTitle %}Dropdown Menu | Atomic: Core{% endblock %}
+{% block metaTitle %}Accordion Menu | Atomic: Core{% endblock %}
 
 {% block content %}
 
-<h1 class="Article-title">Dropdown Menu</h1>
+<h1 class="Article-title">Accordion Menu</h1>
 <p class="c-text--lead">Our flexible menu component makes it easy to build many common navigation patterns.</p>
 
 <hr>
@@ -28,7 +28,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
   {{ Menu(
     [
       {
-        "text": "Dropdown menu",
+        "text": "Accordion menu",
         "header": true,
         "classList": "c-menu__item--left"
       },
@@ -71,7 +71,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
         "linkClassList": ""
       }
     ],
-    ''
+    'c-menu--accordion'
   ) }}
 
 </div>

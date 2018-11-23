@@ -2,7 +2,7 @@
 {% from "components/Menu/MenuLink.component.njk" import MenuLink %}
 
 {% macro MenuDropdown(items) %}
-    <ul class="c-menu c-menu--vertical {{ classList }}">
+    <ul class="c-menu is-dropdown-menu c-menu--vertical {{ classList }}">
       {% for item in items %}
         {{ MenuItem(item, activeItem, activeClass) }}
       {% endfor %}
@@ -29,7 +29,7 @@ activeClass)
   {% endif %}
 
   {% if item.children %}
-    {% set classList = classList + ' ' + "" %}
+    {% set classList = classList + ' ' + "is-dropdown-menu-parent" %}
   {% endif %}
 
   <li class="c-menu__item {{ classList }}">

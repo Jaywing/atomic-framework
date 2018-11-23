@@ -1,9 +1,18 @@
+$dropdown-menu-min-width: 200px !default;
+$dropdown-menu-bg: $c-light !default;
+$dropdown-menu-border: $c-dark 1px solid !default;
+
 .is-dropdown-menu {
     position: absolute;
     top: 100%;
     right: auto;
     left: 0;
     display: none;
+    width: auto;
+    min-width: $dropdown-menu-min-width;
+    border: $dropdown-menu-border;
+    margin: 0;
+    background: $dropdown-menu-bg;
 }
 
 .is-dropdown-menu-parent {

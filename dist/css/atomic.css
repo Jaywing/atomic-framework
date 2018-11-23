@@ -3815,7 +3815,12 @@ video {
   top: 100%;
   right: auto;
   left: 0;
-  display: none; }
+  display: none;
+  width: auto;
+  min-width: 200px;
+  border: #000 1px solid;
+  margin: 0;
+  background: #fff; }
 
 .is-dropdown-menu-parent {
   position: relative; }

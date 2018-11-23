@@ -1,4 +1,4 @@
-{% from 'components/Menu/MenuItem.component.njk' import MenuItem %}
+{% from 'components/DropdownMenu/DropdownMenuItem.component.njk' import MenuItem %}
 
 {% macro Menu(
 menuItems,
@@ -7,7 +7,7 @@ activeItem,
 activeClass) %}
 
   {% if menuItems | length %}
-    <ul class="c-menu {{ classList }}" data-module="Menu">
+    <ul class="c-menu c-menu--dropdown {{ classList }}" data-module="Menu">
       {% for item in menuItems %}
         {{ MenuItem(item, activeItem, activeClass) }}
       {% endfor %}
