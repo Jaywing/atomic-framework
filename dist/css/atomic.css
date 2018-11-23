@@ -512,7 +512,7 @@ html {
   color: #000;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: normal; }
+  font-weight: 400; }
   html.fonts-loaded {
     font-family: Helvetica, Arial, sans-serif; }
 
@@ -769,7 +769,7 @@ ol {
     margin-left: 1.5rem; }
 
 dl dt {
-  font-weight: bold; }
+  font-weight: 700; }
 
 dl dd {
   margin: 0; }
@@ -2177,7 +2177,7 @@ video {
 .c-button {
   border-radius: 4px;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
   text-decoration: none; }
   .c-button:not([disabled]) {
@@ -2980,7 +2980,7 @@ video {
   .c-definition dt {
     margin: 1rem 0 0.5rem 0;
     font-style: normal;
-    font-weight: bold; }
+    font-weight: 700; }
     .c-definition dt:first-child {
       margin-top: 0; }
   .c-definition dd {
@@ -3038,7 +3038,7 @@ video {
           font-size: 12px;
           font-size: 0.75rem; } }
   .c-table th {
-    font-weight: bold; }
+    font-weight: 700; }
   .c-table td,
   .c-table th {
     padding: 0.5rem;
@@ -3143,7 +3143,7 @@ video {
   .c-table--resp td::before {
     content: attr(data-label);
     float: left;
-    font-weight: bold; }
+    font-weight: 700; }
 
 @media (min-width: 48em) {
   .c-table--resp thead {
@@ -3240,7 +3240,7 @@ video {
 
 .c-form__label {
   display: block;
-  font-weight: bold; }
+  font-weight: 700; }
 
 .c-form__field {
   padding: 0.5rem 0; }
@@ -3587,7 +3587,7 @@ video {
   min-width: 100%;
   padding: 0.5rem;
   color: #000;
-  font-weight: bold; }
+  font-weight: 700; }
   .c-menu__header a {
     color: #000;
     -webkit-transition-duration: 0.5s;
