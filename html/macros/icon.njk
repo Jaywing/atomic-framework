@@ -3,6 +3,6 @@
   {% set viewBox = viewBox or "0 0 1 1"%}
 
   <span class='o-icon o-icon--{{id}} {{classes}}'>
-    <svg viewBox="{{viewBox}}"><use xlink:href='https://jaywing.github.io/atomic-framework/images/icons.svg#{{id}}'></use></svg>
+    <svg viewBox="{{viewBox}}"><use xlink:href='{{baseurl}}/images/icons.svg#{{id}}'></use></svg>
   </span>
 {% endmacro %}
