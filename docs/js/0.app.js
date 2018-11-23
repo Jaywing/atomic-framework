@@ -5,22 +5,24 @@ webpackJsonp([0],{
 
 var map = {
 	"./": 125,
-	"./Anchor": 341,
-	"./Anchor.js": 341,
+	"./Anchor": 342,
+	"./Anchor.js": 342,
 	"./LoadImage": 343,
 	"./LoadImage.js": 343,
-	"./ResImg": 344,
-	"./ResImg.js": 344,
-	"./Slider": 345,
-	"./Slider.js": 345,
-	"./Sticky": 346,
-	"./Sticky.js": 346,
-	"./Switcher": 347,
-	"./Switcher.js": 347,
-	"./Toggle": 348,
-	"./Toggle.js": 348,
-	"./Validate": 349,
-	"./Validate.js": 349,
+	"./Menu": 344,
+	"./Menu.js": 344,
+	"./ResImg": 345,
+	"./ResImg.js": 345,
+	"./Slider": 346,
+	"./Slider.js": 346,
+	"./Sticky": 347,
+	"./Sticky.js": 347,
+	"./Switcher": 348,
+	"./Switcher.js": 348,
+	"./Toggle": 349,
+	"./Toggle.js": 349,
+	"./Validate": 350,
+	"./Validate.js": 350,
 	"./index": 125,
 	"./index.js": 125
 };
@@ -46,7 +48,7 @@ webpackContext.id = 338;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_shortid__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_shortid__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_shortid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_shortid__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -113,7 +115,7 @@ var Module = function () {
 "use strict";
 
 
-var randomFromSeed = __webpack_require__(352);
+var randomFromSeed = __webpack_require__(353);
 
 var ORIGINAL = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
 var alphabet;
@@ -219,12 +221,30 @@ module.exports = {
 /***/ }),
 
 /***/ 341:
+/***/ (function(module, exports) {
+
+/**
+ * Helper function for loops
+ * @helper
+ * @param {array}
+ * @param {function} callback - Callback function (no need for explanation)
+ */
+
+module.exports = function (array, callback) {
+  for (var i = 0, len = array.length; i < len; i++) {
+    callback(array[i], i);
+  }
+};
+
+/***/ }),
+
+/***/ 342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__helpers_forEach__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -324,31 +344,13 @@ var Anchor = function (_Module) {
 
 /***/ }),
 
-/***/ 342:
-/***/ (function(module, exports) {
-
-/**
- * Helper function for loops
- * @helper
- * @param {array}
- * @param {function} callback - Callback function (no need for explanation)
- */
-
-module.exports = function (array, callback) {
-  for (var i = 0, len = array.length; i < len; i++) {
-    callback(array[i]);
-  }
-};
-
-/***/ }),
-
 /***/ 343:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_verge__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_verge__ = __webpack_require__(360);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_verge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_verge__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_throttleit__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_throttleit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_throttleit__);
@@ -445,7 +447,95 @@ var LoadImage = function (_Module) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_layzr_js__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__helpers_forEach__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var DropdownMenu = function (_Module) {
+  _inherits(DropdownMenu, _Module);
+
+  function DropdownMenu(el, name, options) {
+    _classCallCheck(this, DropdownMenu);
+
+    var defaults = {};
+    return _possibleConstructorReturn(this, (DropdownMenu.__proto__ || Object.getPrototypeOf(DropdownMenu)).call(this, el, name, options, defaults));
+  }
+
+  /**
+   * Function that waits for page to be fully loaded and then renders & activates
+   * every sticky element found with specified selector
+   * @function
+   */
+
+
+  _createClass(DropdownMenu, [{
+    key: "init",
+    value: function init() {
+      console.log(this.name + " has initialised");
+      this.dom = this.cacheDom();
+      this.addEventListeners();
+    }
+  }, {
+    key: "cacheDom",
+    value: function cacheDom() {
+      return {
+        dropdownMenuParent: this.el.querySelectorAll(".is-dropdown-menu-parent > .c-menu__link"),
+        accordionMenuParent: this.el.querySelectorAll(".is-accordion-menu-parent > .c-menu__link")
+      };
+    }
+  }, {
+    key: "addEventListeners",
+    value: function addEventListeners() {
+      var _this2 = this;
+
+      __WEBPACK_IMPORTED_MODULE_1__helpers_forEach___default()(this.dom.dropdownMenuParent, function (menuItemParent, index) {
+        menuItemParent.addEventListener("click", function (e) {
+          e.preventDefault();
+          _this2.handleParentClick(e, index, _this2.dom.dropdownMenuParent[index].parentNode);
+        });
+      });
+
+      __WEBPACK_IMPORTED_MODULE_1__helpers_forEach___default()(this.dom.accordionMenuParent, function (menuItemParent, index) {
+        menuItemParent.addEventListener("click", function (e) {
+          e.preventDefault();
+          _this2.handleParentClick(e, index, _this2.dom.accordionMenuParent[index].parentNode);
+        });
+      });
+    }
+  }, {
+    key: "handleParentClick",
+    value: function handleParentClick(e, item, itemParent) {
+      if (itemParent.classList.contains("is-active")) {
+        itemParent.classList.remove("is-active");
+      } else {
+        itemParent.classList.add("is-active");
+      }
+    }
+  }]);
+
+  return DropdownMenu;
+}(__WEBPACK_IMPORTED_MODULE_0__modules_Module__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["default"] = (DropdownMenu);
+
+/***/ }),
+
+/***/ 345:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_layzr_js__ = __webpack_require__(361);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -500,7 +590,7 @@ var ResImg = function (_Module) {
 
 /***/ }),
 
-/***/ 345:
+/***/ 346:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -704,13 +794,13 @@ var Slider = function (_Module) {
 
 /***/ }),
 
-/***/ 346:
+/***/ 347:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sticky_js__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sticky_js__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sticky_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_sticky_js__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -761,13 +851,13 @@ var Sticky = function (_Module) {
 
 /***/ }),
 
-/***/ 347:
+/***/ 348:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_sibling__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_sibling__ = __webpack_require__(364);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -995,13 +1085,13 @@ var Switcher = function (_Module) {
 
 /***/ }),
 
-/***/ 348:
+/***/ 349:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Module__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_forEach___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__helpers_forEach__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1127,7 +1217,7 @@ var Toggle = function (_Module) {
 
 /***/ }),
 
-/***/ 349:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1347,31 +1437,31 @@ var Validate = function (_Module) {
 
 /***/ }),
 
-/***/ 350:
+/***/ 351:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-module.exports = __webpack_require__(351);
+module.exports = __webpack_require__(352);
 
 
 /***/ }),
 
-/***/ 351:
+/***/ 352:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var alphabet = __webpack_require__(340);
-var build = __webpack_require__(353);
-var isValid = __webpack_require__(357);
+var build = __webpack_require__(354);
+var isValid = __webpack_require__(358);
 
 // if you are using cluster or multiple servers use this to make each instance
 // has a unique value for worker
 // Note: I don't know if this is automatically set when using third
 // party cluster solutions such as pm2.
-var clusterWorkerId = __webpack_require__(358) || 0;
+var clusterWorkerId = __webpack_require__(359) || 0;
 
 /**
  * Set the seed.
@@ -1427,7 +1517,7 @@ module.exports.isValid = isValid;
 
 /***/ }),
 
-/***/ 352:
+/***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1460,13 +1550,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var generate = __webpack_require__(354);
+var generate = __webpack_require__(355);
 var alphabet = __webpack_require__(340);
 
 // Ignore all milliseconds before a certain time to reduce the size of the date entropy without sacrificing uniqueness.
@@ -1514,15 +1604,15 @@ module.exports = build;
 
 /***/ }),
 
-/***/ 354:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var alphabet = __webpack_require__(340);
-var random = __webpack_require__(355);
-var format = __webpack_require__(356);
+var random = __webpack_require__(356);
+var format = __webpack_require__(357);
 
 function generate(number) {
     var loopCounter = 0;
@@ -1543,7 +1633,7 @@ module.exports = generate;
 
 /***/ }),
 
-/***/ 355:
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1572,7 +1662,7 @@ module.exports = randomByte;
 
 /***/ }),
 
-/***/ 356:
+/***/ 357:
 /***/ (function(module, exports) {
 
 /**
@@ -1629,7 +1719,7 @@ module.exports = function (random, alphabet, size) {
 
 /***/ }),
 
-/***/ 357:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1652,7 +1742,7 @@ module.exports = isShortId;
 
 /***/ }),
 
-/***/ 358:
+/***/ 359:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1663,7 +1753,7 @@ module.exports = 0;
 
 /***/ }),
 
-/***/ 359:
+/***/ 360:
 /***/ (function(module, exports) {
 
 /*!
@@ -1831,7 +1921,7 @@ module.exports = 0;
 
 /***/ }),
 
-/***/ 360:
+/***/ 361:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2038,18 +2128,18 @@ var layzr = (function () {
 
 /***/ }),
 
-/***/ 361:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var Sticky = __webpack_require__(362);
+var Sticky = __webpack_require__(363);
 
 module.exports = Sticky;
 
 
 /***/ }),
 
-/***/ 362:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2520,7 +2610,7 @@ var Sticky = function () {
 
 /***/ }),
 
-/***/ 363:
+/***/ 364:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
