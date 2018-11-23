@@ -19,4 +19,4 @@ Do you want to start a new project? Stop! You need our [Atomic Framework Templat
 npm install --save atomic-framework
 ```
 
-View the [Atomic documentation](https://jaywing.github.io/atomic-framework-docs/).
+View the [Atomic documentation](https://jaywing.github.io/atomic-framework/).
