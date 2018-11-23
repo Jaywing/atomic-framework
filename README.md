@@ -8,7 +8,7 @@ up development time.
 
 ## Before you start
 
-![](https://jaywing.github.io/atomic-framework-docs/images/stop.jpg)
+![](https://jaywing.github.io/atomic-framework/images/stop.jpg)
 
 
 Do you want to start a new project? Stop! You need our [Atomic Framework Template](https://github.com/Jaywing/atomic-framework-template)!
