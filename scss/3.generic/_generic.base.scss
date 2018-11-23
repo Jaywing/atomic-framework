@@ -13,8 +13,7 @@
 // Base styles for HTML and BODY elements
 $base-bg-color: $c-light !default;
 $base-text-color: $c-dark !default;
-$base-font-family-fb: $g-font-sans-fb !default;
-$base-font-family: $g-font-sans !default;
+$base-font-family: $g-font !default;
 $base-font-weight: $g-weight-normal !default;
 // Highlighted c-text colors
 $base-highlight-bg: $c-primary-pale !default;
@@ -41,7 +40,7 @@ body {
 html {
     background-color: $base-bg-color;
     color: $base-text-color;
-    font-family: $base-font-family-fb;
+    font-family: $base-font-family;
     font-size: $base-font-size;
     font-weight: $base-font-weight;
 

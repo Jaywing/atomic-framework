@@ -7,7 +7,6 @@ $doc-globalheader-bg: $c-dark;
         display: block;
         width: 150px;
         padding: 0 $g-spacer;
-        // margin: -12px 0 0 0;
     }
 
     .c-nav-responsive {
@@ -26,12 +25,6 @@ $doc-globalheader-bg: $c-dark;
 
         @include xxs {
             right: $g-spacer;
-        }
-    }
-
-    @include xs {
-        .c-menu__item:not(.w-logo) {
-            max-width: 50%;
         }
     }
 
