@@ -1,4 +1,5 @@
 import Module from "../modules/Module";
+import forEach from "../helpers/forEach";
 
 export default class DropdownMenu extends Module {
   constructor(el, name, options) {
@@ -21,21 +22,39 @@ export default class DropdownMenu extends Module {
     return {
       dropdownMenuParent: this.el.querySelectorAll(
         ".is-dropdown-menu-parent > .c-menu__link"
+      ),
+      accordionMenuParent: this.el.querySelectorAll(
+        ".is-accordion-menu-parent > .c-menu__link"
       )
     };
   }
 
   addEventListeners() {
-    for (let i = 0; i < this.dom.dropdownMenuParent.length; i++) {
-      this.dom.dropdownMenuParent[i].addEventListener("click", e => {
+    forEach(this.dom.dropdownMenuParent, (menuItemParent, index) => {
+      menuItemParent.addEventListener("click", e => {
         e.preventDefault();
-        this.handleParentClick(e, i);
+        this.handleParentClick(
+          e,
+          index,
+          this.dom.dropdownMenuParent[index].parentNode
+        );
       });
-    }
+    });
+
+    forEach(this.dom.accordionMenuParent, (menuItemParent, index) => {
+      menuItemParent.addEventListener("click", e => {
+        e.preventDefault();
+        this.handleParentClick(
+          e,
+          index,
+          this.dom.accordionMenuParent[index].parentNode
+        );
+      });
+    });
   }
 
-  handleParentClick(e, item) {
-    let itemParent = this.dom.dropdownMenuParent[item].parentNode;
+  handleParentClick(e, item, itemParent) {
+    // let itemParent = this.dom.dropdownMenuParent[item].parentNode;
     if (itemParent.classList.contains("is-active")) {
       itemParent.classList.remove("is-active");
     } else {

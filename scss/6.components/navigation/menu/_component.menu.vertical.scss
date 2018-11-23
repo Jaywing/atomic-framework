@@ -32,11 +32,11 @@ $menu-vertical-title-margin: $g-spacer-sm 0 0 !default;
     // Nested
     .c-menu {
         margin-top: 0;
-        margin-left: $menu-margin-nested;
+        // margin-left: $menu-margin-nested;
 
-        &--flush {
-            margin-left: 0;
-        }
+        // &--flush {
+        //     margin-left: 0;
+        // }
     }
 
     &.c-menu--right {

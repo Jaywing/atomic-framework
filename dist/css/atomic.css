@@ -3634,10 +3634,7 @@ video {
     .c-menu__item:first-child .c-menu--vertical .c-menu__header {
       margin-top: 0; }
   .c-menu--vertical .c-menu {
-    margin-top: 0;
-    margin-left: 1rem; }
-    .c-menu--vertical .c-menu--flush {
-      margin-left: 0; }
+    margin-top: 0; }
   .c-menu--vertical.c-menu--right .c-menu__item,
   .c-menu--vertical.c-menu--right .c-menu__item--left {
     text-align: right; }
@@ -3826,6 +3823,15 @@ video {
   position: relative; }
   .is-dropdown-menu-parent.is-active > .is-dropdown-menu {
     display: block; }
+
+.is-accordion-menu {
+  display: none;
+  border: none;
+  margin: 0;
+  background: #fff; }
+
+.is-accordion-menu-parent.is-active > .is-accordion-menu {
+  display: block; }
 
 .c-Breadcrumbs__list {
   margin: 0 0 1rem 0;

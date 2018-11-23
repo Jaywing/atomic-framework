@@ -1,0 +1,17 @@
+$accordion-menu-bg: $c-light !default;
+$accordion-menu-border: none !default;
+
+.is-accordion-menu {
+    display: none;
+    border: $accordion-menu-border;
+    margin: 0;
+    background: $accordion-menu-bg;
+}
+
+.is-accordion-menu-parent {
+    &.is-active {
+        > .is-accordion-menu {
+            display: block;
+        }
+    }
+}
