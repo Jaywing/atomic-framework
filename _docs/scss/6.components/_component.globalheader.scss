@@ -31,35 +31,35 @@ $doc-globalheader-bg: $c-dark;
     .c-menu__link {
         display: block;
         padding: $g-spacer-sm;
-        border: 1px solid rgba(#fff, 0);
+        border-bottom: 1px solid transparent;
         margin: $g-spacer-xs 0;
-        color: rgba(#fff, 0.6);
+        border-radius: 0;
+        color: $c-light;
         transition: all $g-trans__link-speed ease-in-out;
 
         &:hover,
         &:focus {
             background: none;
-            border-color: rgba(#fff, 0.25);
-            color: rgba(#fff, 0.8);
+            border-color: $c-light;
+            color: $c-light;
         }
 
         &.is-disabled,
         .is-disabled > & {
-            color: rgba(#fff, 0.25);
+            color: $c-dove-gray;
 
             &:hover,
             &:focus {
-                border-color: rgba(#fff, 0);
-                color: rgba(#fff, 0.25);
+                border-color: transparent;
+                color: $c-dove-gray;
             }
         }
     }
 
     .is-active {
         > .c-menu__link {
-            background: rgba(#000, 0.33);
-            border-color: rgba(#fff, 0.5);
-            color: rgba(#fff, 1);
+            border-color: $c-light;
+            color: $c-light;
         }
     }
 

@@ -14,15 +14,12 @@ html {
 
 .t-footer {
     padding: $g-spacer-sm 0;
-    background: $c-light-15;
-}
+    background: $c-dark;
+    color: $c-light;
 
-.asciiArt {
-    display: inline-block;
-    padding: $g-spacer;
-    margin: 0;
-    background: $c-strong-trans-dark;
-    border-radius: $g-border-radius;
+    a {
+        color: $c-light;
+    }
 }
 
 .is-active > .c-panel,
@@ -42,10 +39,6 @@ html {
 .c-panel-list {
     .c-panel {
         margin-bottom: $g-spacer;
-    }
-
-    .c-panel__title {
-        font-weight: bold;
     }
 
     p {

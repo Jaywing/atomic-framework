@@ -1,1 +1,11 @@
-@import 'settings.fonts';
+// Fonts
+$g-font: 'Roboto', sans-serif;
+
+// Colours
+
+$c-dove-gray: #666;
+$c-dune: #322e2d;
+
+// Base
+$base-text-color: $c-dove-gray;
+$heading-color: $c-dune;
