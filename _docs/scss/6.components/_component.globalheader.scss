@@ -30,9 +30,9 @@ $doc-globalheader-bg: $c-dark;
 
     .c-menu__link {
         display: block;
-        padding: $g-spacer-sm;
+        padding: $g-spacer-sm $g-spacer;
         border-bottom: 1px solid transparent;
-        margin: $g-spacer-xs 0;
+        margin: 0;
         border-radius: 0;
         color: $c-light;
         transition: all $g-trans__link-speed ease-in-out;
@@ -58,12 +58,15 @@ $doc-globalheader-bg: $c-dark;
 
     .is-active {
         > .c-menu__link {
+            background: transparent;
             border-color: $c-light;
             color: $c-light;
         }
     }
+}
 
-    @include md {
+@include md {
+    .t-global-header {
         .w-logo a {
             display: inline-block;
             margin: 0;
@@ -71,6 +74,15 @@ $doc-globalheader-bg: $c-dark;
 
         .c-nav-responsive {
             padding-top: 0;
+        }
+
+        .c-menu__item {
+            padding: $g-spacer;
+            margin: 0;
+
+            .c-menu__link {
+                padding: 0;
+            }
         }
     }
 }
