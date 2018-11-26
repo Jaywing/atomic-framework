@@ -15,9 +15,9 @@ gulp.task("dist", function(cb) {
 
   gulpSequence(
     "clean:dist",
-    "sass_dist",
+    "sass:dist",
     "html",
-    "webpack",
+    "webpack:dist",
     "images",
     "icons",
     "fonts",
@@ -25,7 +25,7 @@ gulp.task("dist", function(cb) {
   );
 });
 
-gulp.task("sass_dist", function() {
+gulp.task("sass:dist", function() {
   return gulp
     .src("./_docs/scss/app.scss")
     .pipe(plumber())
