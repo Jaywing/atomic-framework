@@ -2083,7 +2083,6 @@ video {
   padding: 0.16667rem 0.5rem 0.25rem;
   border: 1px solid #4d4d4d;
   background: #2561ea;
-  border-radius: 4px;
   color: #fff;
   line-height: 1;
   text-align: center;
@@ -2095,8 +2094,6 @@ video {
       .no-touch .c-badge {
         font-size: 12px;
         font-size: 0.75rem; } }
-  .c-badge--notification {
-    border-radius: 2000px; }
   .c-badge--success {
     background: #10db65;
     border-color: #0b9444; }
@@ -2175,7 +2172,6 @@ video {
         font-size: 1.25rem; } }
 
 .c-button {
-  border-radius: 4px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -2578,7 +2574,6 @@ video {
       fill: gray; }
 
 .c-close--alt {
-  border-radius: 100%;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3); }
 
@@ -2586,8 +2581,7 @@ video {
   min-width: 44px;
   min-height: 44px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: transparent;
-  border-radius: 4px; }
+  background: transparent; }
   .c-toggle-button .c-toggle-button__close {
     display: none; }
   .c-toggle-button.is-active .c-toggle-button__close,
@@ -2789,8 +2783,7 @@ video {
 .c-panel--box {
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;
-  border-radius: 4px; }
+  background: #fff; }
   .c-panel--box .c-panel__badge {
     top: 0.5rem;
     right: 0.5rem; }
@@ -2800,8 +2793,7 @@ video {
     overflow: hidden;
     margin-top: -1rem;
     margin-right: -1rem;
-    margin-left: -1rem;
-    border-radius: 4px 4px 0 0; }
+    margin-left: -1rem; }
     .c-panel--box .c-panel__teaser img,
     .c-panel--box .c-panel__teaser object,
     .c-panel--box .c-panel__teaser video {
@@ -2809,8 +2801,7 @@ video {
       max-width: 100%;
       height: auto; }
   .c-panel--box.c-panel--attached {
-    border-top: 0;
-    border-radius: 0 0 4px 4px; }
+    border-top: 0; }
   .c-panel--box.c-panel--stacked::after {
     position: absolute;
     bottom: -3px;
@@ -2915,13 +2906,9 @@ video {
         -ms-flex: 1;
             flex: 1; }
   .Panels--horizontal > .c-panel--box {
-    border-right: 0;
-    border-radius: 0; }
-    .Panels--horizontal > .c-panel--box:first-child {
-      border-radius: 4px 0 0 4px; }
+    border-right: 0; }
     .Panels--horizontal > .c-panel--box:last-child {
-      border-right: 1px solid rgba(0, 0, 0, 0.15);
-      border-radius: 0 4px 4px 0; }
+      border-right: 1px solid rgba(0, 0, 0, 0.15); }
 
 .Panels--hidden > .c-panel {
   display: none; }
@@ -2929,13 +2916,9 @@ video {
     display: block; }
 
 .Panels > .c-panel--box:not(.c-panel--attached) {
-  border-bottom: 0;
-  border-radius: 0; }
-  .Panels > .c-panel--box:not(.c-panel--attached):first-child {
-    border-radius: 4px 4px 0 0; }
+  border-bottom: 0; }
   .Panels > .c-panel--box:not(.c-panel--attached):last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0 0 4px 4px; }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
 .Panels--attached {
   margin-top: 0; }
@@ -3188,7 +3171,6 @@ video {
   padding: 0.5rem;
   border: 1px solid #d9d9d9;
   background: #fff;
-  border-radius: 4px;
   color: #262626; }
   .c-form__input--blank,
   .c-form__select--blank,
@@ -3556,7 +3538,6 @@ video {
 .c-menu__link {
   display: block;
   padding: 0.5rem;
-  border-radius: 4px;
   text-align: center;
   text-decoration: none; }
   .c-menu__link:not(.c-text--disabled) {
@@ -3781,8 +3762,7 @@ video {
     padding: 0.5rem 1rem;
     border: 1px solid transparent;
     border-bottom: 0;
-    background: transparent;
-    border-radius: 4px 4px 0 0; }
+    background: transparent; }
   .c-menu--tabular .is-active .c-menu__link,
   .c-menu--tabular .c-menu__link.is-active {
     padding-bottom: 0.5rem;
@@ -3800,8 +3780,7 @@ video {
       left: -1px;
       border: 1px solid rgba(0, 0, 0, 0.15);
       border-right: 0;
-      margin-bottom: 0;
-      border-radius: 4px 0 0 4px; }
+      margin-bottom: 0; }
 
 .is-dropdown-menu {
   position: absolute;

@@ -2,14 +2,12 @@ $panel-box-bg: $c-light !default;
 $panel-box-border: 1px solid $c-border !default;
 $panel-box-badge-pos: $g-spacer-sm !default;
 $panel-box-padding: $g-spacer !default;
-$panel-box-border-radius: $g-border-radius !default;
 $panel-box-stacked-bg: rgba($c-dark, 0.03) !default;
 
 .c-panel--box {
     padding: $panel-box-padding;
     border: $panel-box-border;
     background: $panel-box-bg;
-    border-radius: $panel-box-border-radius;
 
     .c-panel__badge {
         top: $panel-box-badge-pos;
@@ -23,7 +21,6 @@ $panel-box-stacked-bg: rgba($c-dark, 0.03) !default;
         margin-top: -($panel-box-padding);
         margin-right: -($panel-box-padding);
         margin-left: -($panel-box-padding);
-        border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
 
         img,
         object,
@@ -36,7 +33,6 @@ $panel-box-stacked-bg: rgba($c-dark, 0.03) !default;
 
     &.c-panel--attached {
         border-top: 0;
-        border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
     }
 
     &.c-panel--stacked {

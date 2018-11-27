@@ -3,7 +3,6 @@
 
 $menu-link-color: $link-color !default;
 $menu-link-bg: transparent !default;
-$menu-link-border-radius: $g-border-radius !default;
 $menu-link-hover-color: $link-hover-color !default;
 $menu-link-hover-bg: $c-strong-trans-dark !default;
 $menu-link-text-decoration: none !default;
@@ -106,7 +105,6 @@ $menu-header-hover-color: $link-hover-color !default;
 
     display: block;
     padding: $menu-link-padding;
-    border-radius: $menu-link-border-radius;
     text-align: $menu-link-text-align;
     text-decoration: $menu-link-text-decoration;
 

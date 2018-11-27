@@ -17,15 +17,9 @@
 
     > .c-panel--box {
         border-right: 0;
-        border-radius: 0;
-
-        &:first-child {
-            border-radius: $panel-box-border-radius 0 0 $panel-box-border-radius;
-        }
 
         &:last-child {
             border-right: $panel-box-border;
-            border-radius: 0 $panel-box-border-radius $panel-box-border-radius 0;
         }
     }
 }
@@ -43,15 +37,12 @@
 .Panels:not(.Panels--horizontal, .Panels--hidden) {
     > .c-panel--box:not(.c-panel--attached) {
         border-bottom: 0;
-        border-radius: 0;
 
         &:first-child {
-            border-radius: $panel-box-border-radius $panel-box-border-radius 0 0;
         }
 
         &:last-child {
             border-bottom: $panel-box-border;
-            border-radius: 0 0 $panel-box-border-radius $panel-box-border-radius;
         }
     }
 }

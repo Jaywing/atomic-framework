@@ -4,7 +4,6 @@ $menu-tab__link-border: $menu-border-width solid transparent !default;
 $menu-tab__link-border-active: $menu-tab-border !default;
 $menu-tab__link-active-bg: $c-light !default;
 $menu-tab__link-active-color: $link-hover-color !default;
-$menu-tab__link-border-radius: $g-border-radius !default;
 $menu-tab__link-padding-x: $g-spacer !default;
 $menu-tab__link-padding-y: $g-spacer-sm !default;
 
@@ -29,8 +28,6 @@ $menu-tab__link-padding-y: $g-spacer-sm !default;
         border: $menu-tab__link-border;
         border-bottom: 0;
         background: transparent;
-        border-radius: $menu-tab__link-border-radius $menu-tab__link-border-radius
-            0 0;
     }
 
     .is-active .c-menu__link,
@@ -54,8 +51,6 @@ $menu-tab__link-padding-y: $g-spacer-sm !default;
             border: $menu-tab__link-border-active;
             border-right: 0;
             margin-bottom: 0;
-            border-radius: $menu-tab__link-border-radius 0 0
-                $menu-tab__link-border-radius;
         }
     }
 }

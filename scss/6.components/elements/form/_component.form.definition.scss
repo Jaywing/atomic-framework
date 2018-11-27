@@ -6,7 +6,6 @@ $form-input-padding: $g-spacer-sm !default;
 $form-input-bg: $c-light !default;
 $form-input-border: 1px solid $c-light-15 !default;
 $form-input-color: $c-dark-15 !default;
-$form-input-radius: $g-border-radius !default;
 
 $form-blank-bg: transparent !default;
 $form-blank-border-color: transparent !default;
@@ -60,7 +59,6 @@ $form-status-padding: $g-spacer-sm 0 !default;
     padding: $form-input-padding;
     border: $form-input-border;
     background: $form-input-bg;
-    border-radius: $form-input-radius;
     color: $form-input-color;
 
     &--blank {

@@ -12,7 +12,6 @@
 
 $button-font-family: $g-font !default;
 $button-font-weight: $g-weight-normal !default;
-$button-radius: $g-border-radius !default;
 
 $button-trans-speed: $g-trans__link-speed !default;
 
@@ -28,7 +27,6 @@ $button-color-active: $c-dark !default;
 $button-disabled-color: $c-disabled-dark !default;
 
 .c-button {
-    border-radius: $button-radius;
     font-family: $button-font-family;
     font-weight: $button-font-weight;
     text-align: center;
