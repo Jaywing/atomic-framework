@@ -96,6 +96,7 @@
     margin: 0 $g-spacer-xs;
     border-radius: 2px;
     transform: translateY(-50%);
+    cursor: pointer;
 
     &.is-active {
         background: $c-dark;
