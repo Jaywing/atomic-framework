@@ -1,12 +1,15 @@
 code {
+    background: $c-alto;
+}
+
+pre code {
+    padding: $g-spacer-lg;
     color: $c-dark;
 }
 
 .c-code {
-    @extend %t-block;
-
-    border: 1px solid $c-light-15;
-    margin-top: $g-spacer-xl;
+    position: relative;
+    border: 1px solid $c-alto;
 
     > pre {
         overflow: auto;

@@ -1,12 +1,7 @@
-%t-block {
-    position: relative;
-    border: 1px solid rgba($c-light-30, 0.5);
-    margin: $g-spacer-xxl 0 $g-spacer;
-}
-
 .c-example {
-    @extend %t-block;
-
-    padding: $g-spacer-lg $g-spacer;
+    position: relative;
+    padding: $g-spacer-lg;
+    border: 1px solid $c-alto;
+    margin: $g-spacer-xxl 0 0;
     background: $c-light;
 }
