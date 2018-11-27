@@ -1,22 +1,7 @@
 %t-block {
     position: relative;
-    border-top: 1px solid rgba($c-light-30, 0.5);
-    border-bottom: 1px solid rgba($c-light-30, 0.5);
+    border: 1px solid rgba($c-light-30, 0.5);
     margin: $g-spacer-xxl 0 $g-spacer;
-
-    &::before {
-        @include minion-bold;
-
-        position: absolute;
-        top: -($g-spacer-lg);
-        left: 0;
-        display: inline-block;
-        padding: $g-spacer-xxs $g-spacer-sm;
-        border: 1px solid $c-light-30;
-        background: rgba($c-light-30, 0.5);
-        color: $c-dark-30;
-        text-transform: capitalize;
-    }
 }
 
 .c-example {
@@ -24,8 +9,4 @@
 
     padding: $g-spacer-lg $g-spacer;
     background: $c-light;
-
-    &::before {
-        content: 'Example';
-    }
 }
