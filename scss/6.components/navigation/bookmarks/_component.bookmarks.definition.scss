@@ -14,7 +14,7 @@ $bookmarks-menu-padding: $g-spacer-sm !default;
 $bookmarks-menu-bg: rgba($c-light, 0.85) !default;
 $bookmarks-menu-z: $g-z-8 !default;
 
-.c-Bookmarks {
+.c-bookmarks {
     &-menu {
         @include reset-list;
     }
@@ -24,14 +24,14 @@ $bookmarks-menu-z: $g-z-8 !default;
     }
 }
 
-.js .c-Bookmarks {
+.js .c-bookmarks {
     position: fixed;
     z-index: $bookmarks-z;
     top: $bookmarks-top;
     right: $bookmarks-right;
     text-align: right;
 
-    .c-Bookmarks-toggler {
+    .c-bookmarks__toggler {
         display: inline-block;
         border: $bookmarks-toggler-border;
         margin-top: 2px;
@@ -39,7 +39,7 @@ $bookmarks-menu-z: $g-z-8 !default;
         color: $bookmarks-toggler-color;
     }
 
-    .c-Bookmarks-menu {
+    .c-bookmarks__menu {
         display: inline-block;
         overflow: hidden;
         height: auto;
@@ -52,12 +52,12 @@ $bookmarks-menu-z: $g-z-8 !default;
     }
 
     &.is-active {
-        .c-Bookmarks-toggler {
+        .c-bookmarks__toggler {
             background: $c-light;
             color: $c-dark;
         }
 
-        .c-Bookmarks-menu {
+        .c-bookmarks__menu {
             z-index: $bookmarks-menu-z;
             max-height: 90%;
             padding: $bookmarks-menu-padding;
