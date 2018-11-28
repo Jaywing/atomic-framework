@@ -10,6 +10,7 @@ pre code {
 .c-code {
     position: relative;
     border: 1px solid $c-alto;
+    margin-bottom: $g-spacer-xxl;
 
     > pre {
         overflow: auto;

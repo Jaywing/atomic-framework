@@ -2923,6 +2923,106 @@ video {
 .Panels--attached {
   margin-top: 0; }
 
+.c-hamburger {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none; }
+  .c-hamburger:hover .c-hamburger__inner,
+  .c-hamburger:hover ::before,
+  .c-hamburger:hover ::after, .c-hamburger:focus .c-hamburger__inner,
+  .c-hamburger:focus ::before,
+  .c-hamburger:focus ::after {
+    background-color: #000; }
+  .c-hamburger.is-active .c-hamburger__inner {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    .c-hamburger.is-active .c-hamburger__inner::before {
+      top: 0;
+      opacity: 0; }
+    .c-hamburger.is-active .c-hamburger__inner::after {
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+
+.c-hamburger__inner {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background-color: #000; }
+  .c-hamburger__inner::before, .c-hamburger__inner::after {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    content: ''; }
+  .c-hamburger__inner::before {
+    top: -10px; }
+  .c-hamburger__inner::after {
+    bottom: -10px; }
+
+.c-hamburger--animate .c-hamburger--inner,
+.c-hamburger--animate ::before,
+.c-hamburger--animate ::after {
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+.c-hamburger--animate .c-hamburger--inner {
+  -webkit-transition-duration: 75ms;
+          transition-duration: 75ms;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.c-hamburger--animate ::before {
+  -webkit-transition: top 75ms ease 0.12s, opacity 75ms ease;
+  transition: top 75ms ease 0.12s, opacity 75ms ease; }
+
+.c-hamburger--animate ::after {
+  -webkit-transition: bottom 75ms ease 0.12s, -webkit-transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 75ms ease 0.12s, -webkit-transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.c-hamburger--animate.is-active .c-hamburger--inner {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.c-hamburger--animate.is-active ::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 75ms ease, opacity 75ms ease 0.12s;
+  transition: top 75ms ease, opacity 75ms ease 0.12s; }
+
+.c-hamburger--animate.is-active ::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transition: bottom 75ms ease, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s, -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s; }
+
 .c-list {
   padding: 0;
   margin: 0;
@@ -4175,7 +4275,8 @@ video {
   border-radius: 2px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  cursor: pointer; }
   .c-slider__pip.is-active {
     background: #000; }
 
