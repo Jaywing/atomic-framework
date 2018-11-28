@@ -11,7 +11,7 @@ $menu-link-trans-speed: $g-trans__link-speed !default;
 $menu-link-active-color: $c-light !default;
 $menu-link-active-bg: $menu-link-color !default;
 
-$menu-margin: $g-spacer 0 !default;
+$menu-margin: 0 !default;
 $menu-margin-nested: $g-spacer !default;
 
 $menu-item-padding: $g-spacer-sm !default;
@@ -40,7 +40,7 @@ $menu-header-hover-color: $link-hover-color !default;
     max-width: 100%;
     flex-wrap: nowrap;
     align-items: center;
-    margin: $menu-margin - ($menu-item-padding);
+    margin: $menu-margin;
 
     input,
     a,
