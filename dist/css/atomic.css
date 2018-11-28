@@ -3950,28 +3950,28 @@ video {
         -ms-transform: rotate(-180deg);
             transform: rotate(-180deg); }
 
-.c-Breadcrumbs__list {
-  margin: 0 0 1rem 0;
+.c-breadcrumbs__list {
+  margin: 0;
   list-style: none; }
-  .c-Breadcrumbs__list li {
+  .c-breadcrumbs__list li {
     cursor: default;
     float: left;
     font-size: 16px; }
-    .c-Breadcrumbs__list li:not(:last-child)::after {
+    .c-breadcrumbs__list li:not(:last-child)::after {
       content: "/";
       position: relative;
       top: 1px;
       margin: 0 0.75rem;
       opacity: 1; }
-  .c-Breadcrumbs__list a {
+  .c-breadcrumbs__list a {
     text-decoration: none; }
-  .c-Breadcrumbs__list .disabled {
+  .c-breadcrumbs__list .disabled {
     color: rgba(0, 0, 0, 0.5);
     cursor: not-allowed; }
-  .c-Breadcrumbs__list::before, .c-Breadcrumbs__list::after {
+  .c-breadcrumbs__list::before, .c-breadcrumbs__list::after {
     display: table;
     content: ''; }
-  .c-Breadcrumbs__list::after {
+  .c-breadcrumbs__list::after {
     clear: both; }
 
 .c-skip-link {
@@ -3995,46 +3995,46 @@ video {
     height: auto;
     text-decoration: none; }
 
-.c-BackToTop > .o-icon {
+.c-back-to-top > .o-icon {
   margin: 0; }
 
-.c-BackToTop-text {
+.c-back-to-top-text {
   position: absolute;
   top: -9999px; }
 
 @media (min-width: 48em) {
-  .c-BackToTop > .o-icon {
+  .c-back-to-top > .o-icon {
     margin-left: -0.25rem; }
-  .c-BackToTop-text {
+  .c-back-to-top-text {
     position: static;
     top: auto; } }
 
-.c-BackToTop--fixed {
+.c-back-to-top--fixed {
   position: fixed;
   right: 0.25rem;
   bottom: 0; }
 
-.c-Bookmarks-menu {
+.c-bookmarks-menu {
   padding: 0;
   margin: 0;
   list-style: none; }
 
-.c-Bookmarks-toggler {
+.c-bookmarks-toggler {
   display: none; }
 
-.js .c-Bookmarks {
+.js .c-bookmarks {
   position: fixed;
   z-index: 1000;
   top: 0.5rem;
   right: 1rem;
   text-align: right; }
-  .js .c-Bookmarks .c-Bookmarks-toggler {
+  .js .c-bookmarks .c-bookmarks__toggler {
     display: inline-block;
     border: 1px solid #4d4d4d;
     margin-top: 2px;
     background: rgba(255, 255, 255, 0.85);
     color: #262626; }
-  .js .c-Bookmarks .c-Bookmarks-menu {
+  .js .c-bookmarks .c-bookmarks__menu {
     display: inline-block;
     overflow: hidden;
     height: auto;
@@ -4049,10 +4049,10 @@ video {
             transform-origin: right top;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in; }
-  .js .c-Bookmarks.is-active .c-Bookmarks-toggler {
+  .js .c-bookmarks.is-active .c-bookmarks__toggler {
     background: #fff;
     color: #000; }
-  .js .c-Bookmarks.is-active .c-Bookmarks-menu {
+  .js .c-bookmarks.is-active .c-bookmarks__menu {
     z-index: 80;
     max-height: 90%;
     padding: 0.5rem;
