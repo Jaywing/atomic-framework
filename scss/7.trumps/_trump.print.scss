@@ -22,31 +22,31 @@
         display: none !important;
     }
 
-    .u-printOnly {
+    .u-print-only {
         display: block !important;
     }
 
-    table.u-printOnly {
+    table.u-print-only {
         display: table !important;
     }
 
-    thead.u-printOnly {
+    thead.u-print-only {
         display: table-header-group !important;
     }
 
-    tbody.u-printOnly {
+    tbody.u-print-only {
         display: table-row-group !important;
     }
 
-    tr.u-printOnly {
+    tr.u-print-only {
         display: table-row !important;
     }
 
-    td.u-printOnly {
+    td.u-print-only {
         display: table__cell !important;
     }
 
-    th.u-printOnly {
+    th.u-print-only {
         display: table__cell !important;
     }
 }

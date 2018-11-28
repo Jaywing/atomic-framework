@@ -15,9 +15,9 @@
 // *    .u-show
 // *    .u-invisible
 // *    .u-visible
-// *    .u-srOnly
-// *    .u-srOnly--focusable
-// *    .u-printOnly
+// *    .u-sr-only
+// *    .u-sr-only--focusable
+// *    .u-print-only
 
 /* visibility helpers */
 
@@ -39,7 +39,7 @@
 }
 
 // screen readers only
-.u-srOnly {
+.u-sr-only {
     position: absolute;
     overflow: hidden;
     width: 1px;
@@ -51,8 +51,8 @@
 }
 
 // allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
-.u-srOnly--focusable:active,
-.u-srOnly--focusable:focus {
+.u-sr-only--focusable:active,
+.u-sr-only--focusable:focus {
     position: static;
     overflow: visible;
     width: auto;
@@ -63,6 +63,6 @@
 
 // Print visibility class
 // sass-lint:disable no-important
-.u-printOnly {
+.u-print-only {
     display: none !important;
 }

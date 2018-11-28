@@ -4386,7 +4386,7 @@ video {
 .u-visible {
   visibility: visible !important; }
 
-.u-srOnly {
+.u-sr-only {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -4396,8 +4396,8 @@ video {
   margin: -1px;
   clip: rect(0, 0, 0, 0); }
 
-.u-srOnly--focusable:active,
-.u-srOnly--focusable:focus {
+.u-sr-only--focusable:active,
+.u-sr-only--focusable:focus {
   position: static;
   overflow: visible;
   width: auto;
@@ -4405,26 +4405,26 @@ video {
   margin: 0;
   clip: auto; }
 
-.u-printOnly {
+.u-print-only {
   display: none !important; }
 
 /* print helpers */
 @media print {
   .u-printHide {
     display: none !important; }
-  .u-printOnly {
+  .u-print-only {
     display: block !important; }
-  table.u-printOnly {
+  table.u-print-only {
     display: table !important; }
-  thead.u-printOnly {
+  thead.u-print-only {
     display: table-header-group !important; }
-  tbody.u-printOnly {
+  tbody.u-print-only {
     display: table-row-group !important; }
-  tr.u-printOnly {
+  tr.u-print-only {
     display: table-row !important; }
-  td.u-printOnly {
+  td.u-print-only {
     display: table__cell !important; }
-  th.u-printOnly {
+  th.u-print-only {
     display: table__cell !important; } }
 
 /*# sourceMappingURL=atomic.css.map */

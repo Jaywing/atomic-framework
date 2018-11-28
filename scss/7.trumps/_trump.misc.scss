@@ -14,11 +14,11 @@
 
 // can be used on body to lock scrolling when an overlay is
 // used
-.u-scrollNone {
+.u-scroll-none {
     overflow: hidden !important;
 }
 
-.u-scrollXauto,
+.u-scroll-x-auto,
 .u-scrollX {
     width: 100%;
     overflow-x: auto;
@@ -29,13 +29,13 @@
     overflow-x: scroll;
 }
 
-.u-scrollYauto,
-.u-scrollY {
+.u-scroll-y-auto,
+.u-scroll-y {
     width: 100%;
     overflow-x: none;
     overflow-y: auto;
 }
 
-.u-scrollY {
+.u-scroll-y {
     overflow-y: scroll;
 }
