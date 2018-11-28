@@ -3,7 +3,7 @@
   "hero": {
     "content": {
       "title": "Jaywing's front-end component repository and development environment",
-      "description": "A'tom'ic: of or forming a single irreducible unit or component in a larger system",
+      "_description": "",
       "cta": {
         "url": "docs/",
         "title": "Check out the docs",
