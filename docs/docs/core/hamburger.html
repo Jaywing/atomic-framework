@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
   <meta name="format-detection" content="telephone=no">
   <meta name="author" content="Jaywing"/>
-  <title>Section | Atomic: Core</title>
+  <title>Hamburger | Atomic: Core</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -134,123 +134,40 @@
         <article class="o-flex-grid__cell o-size@md--9">
           
 
-<h1 class="Article-title">Section</h1>
-<p class="c-text--lead">Provides control over the spacing of sections.</p>
+<h1 class="Article-title">Hamburger</h1>
+<p class="c-text--lead">A useful hamburger icon with a close animation.</p>
 
 <hr class="Article-divider">
 
-<h2 id="section:usage"><a href="#section:usages" class="c-text--resetLink">Usage</a></h2>
+<h2 id="section:usage"><a href="section:usage" class="c-text--resetLink">Usage</a></h2>
 
-<h3>Section (.Section)</h3>
 <div class="c-example">
-
-  <div class="o-section o-flex-grid o-flex-grid--gutters c-demo">
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </div>
-
+  <button class="c-hamburger" data-module="Toggle"><span class="c-hamburger__inner"></span><span class="u-srOnly">Hamburger</span></button>
 </div>
 
 <div class="c-code">
-  <pre><code class="html">&lt;div class=&quot;o-section o-flex-grid o-flex-grid--gutters c-demo&quot;&gt;
-  ...
-&lt;/div&gt;</code></pre>
+  <pre><code class="html">
+  &lt;button class=&quot;c-hamburger&quot;&gt;
+    &lt;span class="c-hamburger__inner">&lt;/span&gt;
+    &lt;span class="u-srOnly"&gt;Hamburger&lt;/span&gt;
+  &lt;/button&gt;
+  </code></pre>
 </div>
 
-<h3>Section tall (.o-section--tall)</h3>
+<h3>Animated</h3>
+
 <div class="c-example">
-
-  <div class="o-section--tall o-flex-grid o-flex-grid--gutters c-demo">
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </div>
-
+  <button class="c-hamburger c-hamburger--animate" data-module="Toggle"><span class="c-hamburger__inner"></span><span class="u-srOnly">Hamburger</span></button>
 </div>
 
-<h3>Section short (.o-section--short)</h3>
-<div class="c-example">
-
-  <div class="o-section--short o-flex-grid o-flex-grid--gutters c-demo">
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </div>
-
+<div class="c-code">
+  <pre><code class="html">
+  &lt;button class=&quot;c-hamburger c-hamburger--animate&quot;&gt;
+    &lt;span class="c-hamburger__inner">&lt;/span&gt;
+    &lt;span class="u-srOnly"&gt;Hamburger&lt;/span&gt;
+  &lt;/button&gt;
+  </code></pre>
 </div>
-
-<h3>Section collapse (.o-section--collapse)</h3>
-<div class="c-example">
-
-  <div class="o-section--collapse o-flex-grid o-flex-grid--gutters c-demo">
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-    <div class="o-flex-grid__cell">
-      <div class="c-demo">
-        <h3>Consectetur adipisicing elit</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
 
 
         </article>
@@ -365,7 +282,7 @@
               
                 
                   
-  <li class="c-menu__item is-active">
+  <li class="c-menu__item">
     <a href="section.html" class="c-menu__link">Section</a>
   </li>
 
@@ -475,7 +392,7 @@
               
                 
                   
-  <li class="c-menu__item">
+  <li class="c-menu__item is-active">
     <a href="hamburger.html" class="c-menu__link">Hamburger</a>
   </li>
 
