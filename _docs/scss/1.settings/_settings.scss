@@ -3,6 +3,7 @@ $g-font: 'Roboto', sans-serif;
 
 // Colours
 $c-alto: #dbdbdb;
+$c-amaranth: #e7255f;
 $c-dove-gray: #666;
 $c-dune: #322e2d;
 $c-gallery: #f0f0f0;
@@ -10,3 +11,7 @@ $c-gallery: #f0f0f0;
 // Base
 $base-text-color: $c-dove-gray;
 $heading-color: $c-dune;
+
+// Elements
+$link-color: $c-amaranth;
+$link-hover-color: $c-dune;

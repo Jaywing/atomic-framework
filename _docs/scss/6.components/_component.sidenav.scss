@@ -10,6 +10,34 @@
         margin-top: 0;
         margin-bottom: 0;
         margin-left: -($g-spacer-sm);
+
+        &.is-active {
+            .c-menu__link {
+                @include color-swap-on-hover(
+                    $menu-link-active-color $menu-link-active-bg,
+                    $menu-link-active-color $menu-link-active-bg,
+                    $menu-link-trans-speed
+                );
+            }
+        }
+    }
+
+    .c-menu__link {
+        &:not(.c-text--disabled) {
+            @include color-swap-on-hover(
+                $c-dune $menu-link-bg,
+                $menu-link-hover-color $menu-link-hover-bg,
+                $menu-link-trans-speed
+            );
+        }
+
+        &.is-active {
+            @include color-swap-on-hover(
+                $menu-link-active-color $menu-link-active-bg,
+                $menu-link-active-color $menu-link-active-bg,
+                $menu-link-trans-speed
+            );
+        }
     }
 
     .c-menu--vertical {

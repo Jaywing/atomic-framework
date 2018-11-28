@@ -149,8 +149,31 @@
 
 <p>Microformats meta can be validated using <a href="https://search.google.com/structured-data/testing-tool" target="_blank">this Google tool.</a></p>
 
+<div class="c-example">
+  <nav class="c-breadcrumbs" aria-label="You are here:">
+    <ol class="c-breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList" itemListOrder="Hierarchical">
+      <li class="c-breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+        <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+          <span itemprop="name">Home</span>
+        </a>
+      </li>
+      <li class="c-breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+        <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+          <span itemprop="name">Features</span>
+        </a>
+      </li>
+      <li class="c-breadcrumbs__item disabled" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+          <span itemprop="name">Gene Splicing</span>
+      </li>
+      <li class="c-breadcrumbs__item--current" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
+        <span itemprop="name" aria-label="Current:">Cloning</span>
+      </li>
+    </ol>
+  </nav>
+</div>
+
 <div class="c-code c-code--html">
-<pre><code class="html">&lt;nav class=&quot;c-breadcrumbs&quot; aria-label=&quot;You are here:&quot; role=&quot;navigation&quot;&gt;
+<pre><code class="html">&lt;nav class=&quot;c-breadcrumbs&quot; aria-label=&quot;You are here:&quot;&gt;
   &lt;ol class=&quot;c-breadcrumbs__list&quot; itemscope itemtype=&quot;http://schema.org/BreadcrumbList&quot; itemListOrder=&quot;Hierarchical&quot;&gt;
     &lt;li class=&quot;c-breadcrumbs__item&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
       &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
@@ -163,41 +186,14 @@
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li class=&quot;c-breadcrumbs__item disabled&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
-        &lt;span itemprop=&quot;name&quot;&gt;Gene Splicing&lt;/span&gt;
+      &lt;span itemprop=&quot;name&quot;&gt;Gene Splicing&lt;/span&gt;
     &lt;/li&gt;
     &lt;li class=&quot;c-breadcrumbs__item--current&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot; itemprop=&quot;ItemListElement&quot;&gt;
-      &lt;a href=&quot;#&quot; itemscope itemtype=&quot;http://schema.org/Thing&quot; itemprop=&quot;item&quot;&gt;
-        &lt;span itemprop=&quot;name&quot; aria-label=&quot;Current:&quot;&gt;Cloning&lt;/span&gt;
-      &lt;/a&gt;
+      &lt;span itemprop=&quot;name&quot; aria-label=&quot;Current:&quot;&gt;Cloning&lt;/span&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/nav&gt;</code></pre>
 </div>
-
-<h3>Example</h3>
-
-<nav class="c-breadcrumbs" aria-label="You are here:">
-  <ol class="c-breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList" itemListOrder="Hierarchical">
-    <li class="c-breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
-      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-        <span itemprop="name">Home</span>
-      </a>
-    </li>
-    <li class="c-breadcrumbs__item" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
-      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-        <span itemprop="name">Features</span>
-      </a>
-    </li>
-    <li class="c-breadcrumbs__item disabled" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
-        <span itemprop="name">Gene Splicing</span>
-    </li>
-    <li class="c-breadcrumbs__item--current" itemscope itemtype="http://schema.org/ListItem" itemprop="ItemListElement">
-      <a href="#" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-        <span itemprop="name" aria-label="Current:">Cloning</span>
-      </a>
-    </li>
-  </ol>
-</nav>
 
 
         </article>
