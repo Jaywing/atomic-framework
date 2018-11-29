@@ -42,7 +42,7 @@
 
 
 
-<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+<nav class="o-container o-container--centered o-container--fluid c-nav-responsive c-nav-responsive@md">
 
   
 
@@ -127,99 +127,11 @@
 
   <main id="content" class="o-site__content">
   
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
 
-      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+      <div class="o-flex-grid o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-flex-grid__cell o-size@md--9">
-          
-
-  <h1 class="Article-title">Breakpoints</h1>
-  <p class="c-text--lead">Overview of the default breakpoint settings and how to use them.</p>
-
-  <hr class="Article-divider">
-
-  <h2>Usage</h2>
-
-  <p>Settings for the default breakpoints can be found in <code>stylesheets/settings/_settings.media-queries.scss</code>.</p>
-
-  <div class="scrollXauto">
-    <table class="c-table c-table--striped c-text--left">
-      <thead>
-      <tr>
-        <th class="o-size--1of4">Breakpoint</th>
-        <th class="o-size--1of4">Width</th>
-        <th class="o-size--1of2">Example device</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>None</td>
-        <td>0px</td>
-        <td>Wearables, very small phones</td>
-      </tr>
-      <tr>
-        <td>xxs</td>
-        <td>320px</td>
-        <td>Smart phones</td>
-      </tr>
-      <tr>
-        <td>xs</td>
-        <td>480px</td>
-        <td>Large phones, phone in landscape</td>
-      </tr>
-      <tr>
-        <td>sm</td>
-        <td>640px</td>
-        <td>Small tablets</td>
-      </tr>
-      <tr>
-        <td>md</td>
-        <td>768px</td>
-        <td>Larger tablets</td>
-      </tr>
-      <tr>
-        <td>lg</td>
-        <td>960px</td>
-        <td>Small desktop, tablets in landscape</td>
-      </tr>
-      <tr>
-        <td>xl</td>
-        <td>1180px</td>
-        <td>Medium desktop, tablets in landscape</td>
-      </tr>
-      <tr>
-        <td>xxl</td>
-        <td>1400px</td>
-        <td>Large desktop, widescreens</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Mixins</h3>
-  <p>Each breakpoint has its own mixin.</p>
-  <div class="c-code c-code--scss">
-    <pre><code class="css">@include md { .... }
-@include xl { .... }
-// gets compiled to
-@media screen and (min-width: 768px) { .... }
-@media screen and (min-width: 1180px) { .... }</code></pre>
-  </div>
-    <p>For more complicated media queries use the <code>mq</code> mixin from <a href="https://github.com/sass-mq/sass-mq">sass-mq</a> plugin which is installed</p>
-  <div class="c-code c-code--scss">
-    <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
-// gets compiled to
-@media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>
-  </div>
-
-  <h3>Javascript: Breakpoint module</h3>
-  <p>The <a href="breakpoint-mod.njk">Breakpoint module</a> is built in by default and emits an custom event <code>bpupdate</code> that components can listen for to react to changes in breakpoints.</p>
-
-
-        </article>
-
-        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+        <section class="o-flex-grid__cell o-size--full o-size@md--3 c-sidebar">
           
             
 
@@ -362,14 +274,14 @@
       
 
         <li class="c-menu__item">
-          <strong class="c-menu-title">Elements</strong>
+          <strong class="c-menu-title">Components</strong>
           
             <ul class="c-menu c-menu--vertical c-menu--flush">
               
                 
                   
   <li class="c-menu__item">
-    <a href="list.html" class="c-menu__link">List</a>
+    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
   </li>
 
                 
@@ -377,86 +289,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="table.html" class="c-menu__link">Table</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="form.html" class="c-menu__link">Form</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="definition.html" class="c-menu__link">Definition</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="text.html" class="c-menu__link">Text</a>
-  </li>
-
-                
-              
-            </ul>
-          
-        </li>
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Common</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="icon.html" class="c-menu__link">Icon</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="button.html" class="c-menu__link">Button</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="panel.html" class="c-menu__link">Panel</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="close.html" class="c-menu__link">Close</a>
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
   </li>
 
                 
@@ -472,7 +305,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="overlay.html" class="c-menu__link">Overlay</a>
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
   </li>
 
                 
@@ -480,34 +313,23 @@
                 
                   
   <li class="c-menu__item">
-    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+    <a href="button.html" class="c-menu__link">Button</a>
   </li>
 
                 
               
-            </ul>
-          
-        </li>
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
 
-      
-
-    
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Navigation</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
+                
               
                 
                   
   <li class="c-menu__item">
-    <a href="menu.html" class="c-menu__link">Menu</a>
+    <a href="definition.html" class="c-menu__link">Definition</a>
   </li>
 
                 
@@ -523,7 +345,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
+    <a href="form.html" class="c-menu__link">Form</a>
   </li>
 
                 
@@ -531,7 +353,39 @@
                 
                   
   <li class="c-menu__item">
-    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
   </li>
 
                 
@@ -547,7 +401,31 @@
                 
                   
   <li class="c-menu__item">
-    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
   </li>
 
                 
@@ -555,6 +433,10 @@
             </ul>
           
         </li>
+
+      
+
+    
 
       
 
@@ -574,7 +456,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="helpers.html" class="c-menu__link">Helpers</a>
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
   </li>
 
                 
@@ -590,7 +472,15 @@
                 
                   
   <li class="c-menu__item">
-    <a href="toggle.html" class="c-menu__link">Toggle</a>
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Load Image</a>
   </li>
 
                 
@@ -614,15 +504,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="anchor.html" class="c-menu__link">Anchor</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a class="c-menu__link c-text--disabled">Load Image</a>
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
   </li>
 
                 
@@ -653,6 +535,94 @@
           
         </section>
 
+        <article class="o-flex-grid__cell o-size@md--9 c-content">
+          
+
+  <h1 class="Article-title">Breakpoints</h1>
+  <p class="c-text--lead">Overview of the default breakpoint settings and how to use them.</p>
+
+  <hr class="Article-divider">
+
+  <h2>Usage</h2>
+
+  <p>Settings for the default breakpoints can be found in <code>stylesheets/settings/_settings.media-queries.scss</code>.</p>
+
+  <div class="scrollXauto">
+    <table class="c-table c-table--striped c-text--left">
+      <thead>
+      <tr>
+        <th class="o-size--1of4">Breakpoint</th>
+        <th class="o-size--1of4">Width</th>
+        <th class="o-size--1of2">Example device</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>None</td>
+        <td>0px</td>
+        <td>Wearables, very small phones</td>
+      </tr>
+      <tr>
+        <td>xxs</td>
+        <td>320px</td>
+        <td>Smart phones</td>
+      </tr>
+      <tr>
+        <td>xs</td>
+        <td>480px</td>
+        <td>Large phones, phone in landscape</td>
+      </tr>
+      <tr>
+        <td>sm</td>
+        <td>640px</td>
+        <td>Small tablets</td>
+      </tr>
+      <tr>
+        <td>md</td>
+        <td>768px</td>
+        <td>Larger tablets</td>
+      </tr>
+      <tr>
+        <td>lg</td>
+        <td>960px</td>
+        <td>Small desktop, tablets in landscape</td>
+      </tr>
+      <tr>
+        <td>xl</td>
+        <td>1180px</td>
+        <td>Medium desktop, tablets in landscape</td>
+      </tr>
+      <tr>
+        <td>xxl</td>
+        <td>1400px</td>
+        <td>Large desktop, widescreens</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Mixins</h3>
+  <p>Each breakpoint has its own mixin.</p>
+  <div class="c-code c-code--scss">
+    <pre><code class="css">@include md { .... }
+@include xl { .... }
+// gets compiled to
+@media screen and (min-width: 768px) { .... }
+@media screen and (min-width: 1180px) { .... }</code></pre>
+  </div>
+    <p>For more complicated media queries use the <code>mq</code> mixin from <a href="https://github.com/sass-mq/sass-mq">sass-mq</a> plugin which is installed</p>
+  <div class="c-code c-code--scss">
+    <pre><code class="css">@include mq($from: map-get($mq-breakpoints, 'xxs'), $until: map-get($mq-breakpoints, 'md') { .... }
+// gets compiled to
+@media (min-width: 320px) and (max-width: 768px) { .... }</code></pre>
+  </div>
+
+  <h3>Javascript: Breakpoint module</h3>
+  <p>The <a href="breakpoint-mod.njk">Breakpoint module</a> is built in by default and emits an custom event <code>bpupdate</code> that components can listen for to react to changes in breakpoints.</p>
+
+
+        </article>
+
       </div>
 
     </div>
@@ -661,7 +631,7 @@
   </main>
 
   <footer class="o-site__footer t-footer">
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
       <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
     </div>
   </footer>

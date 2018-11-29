@@ -42,7 +42,7 @@
 
 
 
-<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+<nav class="o-container o-container--centered o-container--fluid c-nav-responsive c-nav-responsive@md">
 
   
 
@@ -127,144 +127,11 @@
 
   <main id="content" class="o-site__content">
   
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
 
-      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+      <div class="o-flex-grid o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-flex-grid__cell o-size@md--9">
-          
-
-<h1 class="Article-title">Helpers</h1>
-<p class="c-text--lead">A collection of individually importable modules aimed at making coding easier</p>
-
-<div class="c-bookmarks" data-module="Bookmarks"></div>
-
-<hr class="Article-divider">
-
-<h2 id="section-create-element"><a href="#section-create-element" class="c-text--resetLink">Create Element</a></h2>
-<p>This is shortcut for the long winded <code>document.createElement()</code> method of creating elements on the fly.</p>
-<p>You pass in an object with all values you need.</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import createElement from &quot;../helpers/createElement&quot;
-
-document.body.appendChild(createElement({
-  tagName: &quot;div&quot;,
-  className: &quot;my-class&quot;,
-  text: &quot;Blah blah&quot;,
-  attributes: {
-    &quot;id&quot;: &quot;element id&quot;,
-    &quot;data-truc&quot;: &quot;value&quot;
-  },
-  childs: [{ /* recursif call **/}]
-}))
-</code></pre>
-</div>
-
-<h2 id="section-sibling"><a href="#section-sibling" class="c-text--resetLink">Sibling</a></h2>
-<p>When traversing sibling elements in the DOM using <code>nextSibling</code> and <code>prevSibling</code>, if there is any white space in the HTML in between elements, then the white-space is treated as the next/prev sibling (#text).</p>
-<p>This function checks the nodeType property of the next/prev sibling and traverses until it finds the next/prev actual DOM element.</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import sibling from &quot;../helpers/sibling&quot;
-
-const nextEle = sibling(this.el, 'nextSibling')</code></pre>
-</div>
-
-<h2 id="section-for-each"><a href="#section-for-each" class="c-text--resetLink">For Each</a></h2>
-<p>Function that loops through an array (or node list) and executes a callback on each one.</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import forEach from &quot;../helpers/forEach&quot;
-
-const </code></pre>
-</div>
-
-<h2 id="section-dom"><a href="#section-dom" class="c-text--resetLink">DOM</a></h2>
-<p>A few DOM shortcut functions that provide a jQuery like syntax (without the bloat).</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import {$} from &quot;../helpers/dom&quot;
-
-$(&quot;.addClass&quot;).addClass(&quot;passed&quot;);
-$(&quot;.removeClass&quot;).removeClass(&quot;failed&quot;);
-$(&quot;.toggleClass&quot;).toggleClass(&quot;is-active&quot;);
-
-if ($(&quot;.hasClass&quot;).hasClass(&quot;hasClass&quot;)) {
-  $(&quot;.hasClass&quot;).addClass(&quot;passed&quot;);
-}
-
-$(&quot;a&quot;).on(&quot;click&quot;, function(e) {
-  e.preventDefault();
-  alert(&quot;clicked&quot;);
-});</code></pre>
-</div>
-
-<dl>
-  <dt>Functions include:</dt>
-  <dd>addClass - <code>$('.link').addClass('newClass')</code></dd>
-  <dd>removeClass - <code>$('.link').removeClass('oldClass')</code></dd>
-  <dd>hasClass - <code>if ($('.link').hasClass('class')( {...}</code></dd>
-  <dd>toggle - <code>if ($('.link').toggle('class')( {...}</code></dd>
-  <dd>each - <code>$('.link').each(function () {})</code></dd>
-  <dd>on - <code>$('.link').on('click', function () {})</code></dd>
-  <dd>find - <code>$('.container').find('.child')</code></dd>
-</dl>
-
-<h2 id="section-css"><a href="#section-css" class="c-text--resetLink">CSS</a></h2>
-<p>Function that allows you to pass in an javascript object of css styles and they are then applied to the target element.</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import css from &quot;../helpers/css&quot;
-
-var target = document.getElementById('target')
-css(target, {
-  background: '#000',
-  marginTop: '20px'
-})</code></pre>
-</div>
-
-<h2 id="section-ready"><a href="#section-ready" class="c-text--resetLink">Ready</a></h2>
-<p>Function that wait until the whole DOM is loaded and then executes the callback. Much like jquery's $(document).ready()</p>
-
-<div class="c-code c-code--js">
-  <pre><code class="javascript">import ready from &quot;../helpers/ready&quot;
-
-</code></pre>
-</div>
-
-<h2 id="section-vergejs"><a href="#section-vergejs" class="c-text--resetLink">Verge.js</a></h2>
-<p><a href="https://github.com/ryanve/verge">Verge</a> is a set of viewport utilities written in native JavaScript. It includes the ability to detect if an element is in the current viewport.</p>
-<p>It is installed via NPM and can be included in your modules by adding <code>import verge from 'verge'</code></p>
-<dl>
-  <dt>API:</dt>
-  <dd><a href="https://github.com/ryanve/verge#viewportw">viewportW()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#viewporth">viewportH()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#viewport">viewport()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#inviewport">inViewport()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#inx">inX()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#iny">inY()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#scrollx">scrollX()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#scrolly">scrollY()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#mq">mq()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#rectangle">rectangle()</a></dd>
-  <dd><a href="https://github.com/ryanve/verge#aspect">aspect()</a></dd>
-</dl>
-
-<h2 id="section-cookies"><a href="#section-cookies" class="c-text--resetLink">Cookies</a></h2>
-<p><a href="https://github.com/ScottHamper/Cookies">Cookies</a> is a set of cookie utilities written in native JavaScript.</p>
-<p>It is installed via NPM and can be included in your modules by adding <code>import Cookies from 'js-cookie'</code>.</p>
-<dl>
-  <dt>API:</dt>
-  <dd>set - <code>Cookies.set('name', 'value')</code></dd>
-  <dd>get - <code>Cookies.get('name')</code></dd>
-  <dd>remove - <code>Cookies.remove('name')</code></dd>
-</dl>
-
-
-        </article>
-
-        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+        <section class="o-flex-grid__cell o-size--full o-size@md--3 c-sidebar">
           
             
 
@@ -407,14 +274,14 @@ css(target, {
       
 
         <li class="c-menu__item">
-          <strong class="c-menu-title">Elements</strong>
+          <strong class="c-menu-title">Components</strong>
           
             <ul class="c-menu c-menu--vertical c-menu--flush">
               
                 
                   
   <li class="c-menu__item">
-    <a href="list.html" class="c-menu__link">List</a>
+    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
   </li>
 
                 
@@ -422,86 +289,7 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="table.html" class="c-menu__link">Table</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="form.html" class="c-menu__link">Form</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="definition.html" class="c-menu__link">Definition</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="text.html" class="c-menu__link">Text</a>
-  </li>
-
-                
-              
-            </ul>
-          
-        </li>
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Common</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="icon.html" class="c-menu__link">Icon</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="button.html" class="c-menu__link">Button</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="panel.html" class="c-menu__link">Panel</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="close.html" class="c-menu__link">Close</a>
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
   </li>
 
                 
@@ -517,7 +305,7 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="overlay.html" class="c-menu__link">Overlay</a>
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
   </li>
 
                 
@@ -525,34 +313,23 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+    <a href="button.html" class="c-menu__link">Button</a>
   </li>
 
                 
               
-            </ul>
-          
-        </li>
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
 
-      
-
-    
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Navigation</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
+                
               
                 
                   
   <li class="c-menu__item">
-    <a href="menu.html" class="c-menu__link">Menu</a>
+    <a href="definition.html" class="c-menu__link">Definition</a>
   </li>
 
                 
@@ -568,7 +345,7 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
+    <a href="form.html" class="c-menu__link">Form</a>
   </li>
 
                 
@@ -576,7 +353,39 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
   </li>
 
                 
@@ -592,7 +401,31 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
   </li>
 
                 
@@ -600,6 +433,10 @@ css(target, {
             </ul>
           
         </li>
+
+      
+
+    
 
       
 
@@ -618,8 +455,8 @@ css(target, {
               
                 
                   
-  <li class="c-menu__item is-active">
-    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  <li class="c-menu__item">
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
   </li>
 
                 
@@ -634,8 +471,16 @@ css(target, {
               
                 
                   
+  <li class="c-menu__item is-active">
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
   <li class="c-menu__item">
-    <a href="toggle.html" class="c-menu__link">Toggle</a>
+    <a class="c-menu__link c-text--disabled">Load Image</a>
   </li>
 
                 
@@ -659,15 +504,7 @@ css(target, {
                 
                   
   <li class="c-menu__item">
-    <a href="anchor.html" class="c-menu__link">Anchor</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a class="c-menu__link c-text--disabled">Load Image</a>
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
   </li>
 
                 
@@ -698,6 +535,139 @@ css(target, {
           
         </section>
 
+        <article class="o-flex-grid__cell o-size@md--9 c-content">
+          
+
+<h1 class="Article-title">Helpers</h1>
+<p class="c-text--lead">A collection of individually importable modules aimed at making coding easier</p>
+
+<div class="c-bookmarks" data-module="Bookmarks"></div>
+
+<hr class="Article-divider">
+
+<h2 id="section-create-element"><a href="#section-create-element" class="c-text--resetLink">Create Element</a></h2>
+<p>This is shortcut for the long winded <code>document.createElement()</code> method of creating elements on the fly.</p>
+<p>You pass in an object with all values you need.</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import createElement from &quot;../helpers/createElement&quot;
+
+document.body.appendChild(createElement({
+  tagName: &quot;div&quot;,
+  className: &quot;my-class&quot;,
+  text: &quot;Blah blah&quot;,
+  attributes: {
+    &quot;id&quot;: &quot;element id&quot;,
+    &quot;data-truc&quot;: &quot;value&quot;
+  },
+  childs: [{ /* recursif call **/}]
+}))
+</code></pre>
+</div>
+
+<h2 id="section-sibling"><a href="#section-sibling" class="c-text--resetLink">Sibling</a></h2>
+<p>When traversing sibling elements in the DOM using <code>nextSibling</code> and <code>prevSibling</code>, if there is any white space in the HTML in between elements, then the white-space is treated as the next/prev sibling (#text).</p>
+<p>This function checks the nodeType property of the next/prev sibling and traverses until it finds the next/prev actual DOM element.</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import sibling from &quot;../helpers/sibling&quot;
+
+const nextEle = sibling(this.el, 'nextSibling')</code></pre>
+</div>
+
+<h2 id="section-for-each"><a href="#section-for-each" class="c-text--resetLink">For Each</a></h2>
+<p>Function that loops through an array (or node list) and executes a callback on each one.</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import forEach from &quot;../helpers/forEach&quot;
+
+const </code></pre>
+</div>
+
+<h2 id="section-dom"><a href="#section-dom" class="c-text--resetLink">DOM</a></h2>
+<p>A few DOM shortcut functions that provide a jQuery like syntax (without the bloat).</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import {$} from &quot;../helpers/dom&quot;
+
+$(&quot;.addClass&quot;).addClass(&quot;passed&quot;);
+$(&quot;.removeClass&quot;).removeClass(&quot;failed&quot;);
+$(&quot;.toggleClass&quot;).toggleClass(&quot;is-active&quot;);
+
+if ($(&quot;.hasClass&quot;).hasClass(&quot;hasClass&quot;)) {
+  $(&quot;.hasClass&quot;).addClass(&quot;passed&quot;);
+}
+
+$(&quot;a&quot;).on(&quot;click&quot;, function(e) {
+  e.preventDefault();
+  alert(&quot;clicked&quot;);
+});</code></pre>
+</div>
+
+<dl>
+  <dt>Functions include:</dt>
+  <dd>addClass - <code>$('.link').addClass('newClass')</code></dd>
+  <dd>removeClass - <code>$('.link').removeClass('oldClass')</code></dd>
+  <dd>hasClass - <code>if ($('.link').hasClass('class')( {...}</code></dd>
+  <dd>toggle - <code>if ($('.link').toggle('class')( {...}</code></dd>
+  <dd>each - <code>$('.link').each(function () {})</code></dd>
+  <dd>on - <code>$('.link').on('click', function () {})</code></dd>
+  <dd>find - <code>$('.container').find('.child')</code></dd>
+</dl>
+
+<h2 id="section-css"><a href="#section-css" class="c-text--resetLink">CSS</a></h2>
+<p>Function that allows you to pass in an javascript object of css styles and they are then applied to the target element.</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import css from &quot;../helpers/css&quot;
+
+var target = document.getElementById('target')
+css(target, {
+  background: '#000',
+  marginTop: '20px'
+})</code></pre>
+</div>
+
+<h2 id="section-ready"><a href="#section-ready" class="c-text--resetLink">Ready</a></h2>
+<p>Function that wait until the whole DOM is loaded and then executes the callback. Much like jquery's $(document).ready()</p>
+
+<div class="c-code c-code--js">
+  <pre><code class="javascript">import ready from &quot;../helpers/ready&quot;
+
+</code></pre>
+</div>
+
+<h2 id="section-vergejs"><a href="#section-vergejs" class="c-text--resetLink">Verge.js</a></h2>
+<p><a href="https://github.com/ryanve/verge">Verge</a> is a set of viewport utilities written in native JavaScript. It includes the ability to detect if an element is in the current viewport.</p>
+<p>It is installed via NPM and can be included in your modules by adding <code>import verge from 'verge'</code></p>
+<dl>
+  <dt>API:</dt>
+  <dd><a href="https://github.com/ryanve/verge#viewportw">viewportW()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#viewporth">viewportH()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#viewport">viewport()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#inviewport">inViewport()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#inx">inX()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#iny">inY()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#scrollx">scrollX()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#scrolly">scrollY()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#mq">mq()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#rectangle">rectangle()</a></dd>
+  <dd><a href="https://github.com/ryanve/verge#aspect">aspect()</a></dd>
+</dl>
+
+<h2 id="section-cookies"><a href="#section-cookies" class="c-text--resetLink">Cookies</a></h2>
+<p><a href="https://github.com/ScottHamper/Cookies">Cookies</a> is a set of cookie utilities written in native JavaScript.</p>
+<p>It is installed via NPM and can be included in your modules by adding <code>import Cookies from 'js-cookie'</code>.</p>
+<dl>
+  <dt>API:</dt>
+  <dd>set - <code>Cookies.set('name', 'value')</code></dd>
+  <dd>get - <code>Cookies.get('name')</code></dd>
+  <dd>remove - <code>Cookies.remove('name')</code></dd>
+</dl>
+
+
+        </article>
+
       </div>
 
     </div>
@@ -706,7 +676,7 @@ css(target, {
   </main>
 
   <footer class="o-site__footer t-footer">
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
       <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
     </div>
   </footer>

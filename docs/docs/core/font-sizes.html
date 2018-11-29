@@ -42,7 +42,7 @@
 
 
 
-<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+<nav class="o-container o-container--centered o-container--fluid c-nav-responsive c-nav-responsive@md">
 
   
 
@@ -127,145 +127,11 @@
 
   <main id="content" class="o-site__content">
   
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
 
-      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+      <div class="o-flex-grid o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-flex-grid__cell o-size@md--9">
-          
-
-  <h1 class="Article-title">Font sizes</h1>
-  <p class="c-text--lead">Overview of the default font size settings and how to use them.</p>
-
-  <hr class="Article-divider">
-
-  <h2 id="section:overview"><a herf="#section:overview" class="c-text--resetLink">Overview</a></h2>
-
-  <p>Our approach to font sizes is inspired by <a href="http://www.bbc.co.uk/gel/guidelines/typography">BBC's gel typography guidelines</a>.</p>
-  <p>We use a single type hierarchy that is scaled to work across all devices. We change type sizes based on screen size and device capabilities, such as whether it has a touch screen.</p>
-
-  <p>Settings for the default font-sizes can be found in <code>stylesheets/settings/_settings.font-sizes.scss</code>.</p>
-
-  <div class="c-example">
-    <img src="/images/font-sizes.png" alt="Example of our font size hierarchy">
-  </div>
-
-  <h2 id="section:size-matrix"><a herf="#section:size-matrix" class="c-text--resetLink">Size matrix</a></h2>
-  <p>We size our type across the following four breakpoint groups to suit a range of devices and input methods:</p>
-  <ul>
-    <li><strong>Group A</strong> - Default sizing 0 - 319px (typically small phones)</li>
-    <li><strong>Group B</strong> - 320px - 767px (smart phones & small tablets)</li>
-    <li><strong>Group C</strong> - 768px and above (typically large tablets and touch enabled laptops)</li>
-    <li><strong>Group D</strong> - 768px and above when touch is not available (desktops and laptops)</li>
-  </ul>
-
-  <p>To make the type styles reuseable across different page-types and contexts, we've set up a naming convention that comes from traditional type measuring techniques.</p>
-  <p>The sizes shown below correspond to size and line-height (size/line-height) and are in pixels, based on a baseline of 72 pixels per inch (ppi). We recommend you set font sizes using relative units to allow for the changing nature of the user’s browser. This creates uniformity across different screen sizes and capabilities.</p>
-
-  <div class="scrollXauto">
-    <table width="100%" class="c-table c-table--striped c-text--left">
-      <thead>
-      <tr>
-        <th></th>
-        <th>Example Usage</th>
-        <th>Group A</th>
-        <th>Group B</th>
-        <th>Group C</th>
-        <th>Group D</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th>Canon</th>
-        <td>Hero or blog post title</td>
-        <td>28/32</td>
-        <td>32/36</td>
-        <td>52/56</td>
-        <td>44/48</td>
-      </tr>
-      <tr>
-        <th>Trafalgar</th>
-        <td>Article title or section header</td>
-        <td>20/24</td>
-        <td>24/28</td>
-        <td>36/40</td>
-        <td>32/36</td>
-      </tr>
-      <tr>
-        <th>Double Pica</th>
-        <td>Sub header</td>
-        <td>20/24</td>
-        <td>20/24</td>
-        <td>26/30</td>
-        <td>24/28</td>
-      </tr>
-      <tr>
-        <th>Great Primer</th>
-        <td>Headline title of sub title</td>
-        <td>18/22</td>
-        <td>18/22</td>
-        <td>21/24</td>
-        <td>20/24</td>
-      </tr>
-      <tr>
-        <th>Pica</th>
-        <td>Index links, titles &amp; headlines</td>
-        <td>15/20</td>
-        <td>16/20</td>
-        <td>18/22</td>
-        <td>16/20</td>
-      </tr>
-      <tr>
-        <th>Long Primer</th>
-        <td>Index body copy & image captions</td>
-        <td>15/18</td>
-        <td>15/18</td>
-        <td>15/20</td>
-        <td>14/18</td>
-      </tr>
-      <tr>
-        <th>Brevier</th>
-        <td>Time stamps and bylines</td>
-        <td>14/16</td>
-        <td>14/18</td>
-        <td>14/18</td>
-        <td>13/16</td>
-      </tr>
-      <tr>
-        <th>Minion</th>
-        <td>Small header capitals</td>
-        <td>12/16</td>
-        <td>12/16</td>
-        <td>13/16</td>
-        <td>12/16</td>
-      </tr>
-      <tr>
-        <th>Body copy</th>
-        <td>Standard font size</td>
-        <td>15/20</td>
-        <td>16/22</td>
-        <td>16/24</td>
-        <td>16/22</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>This approach helps us easily communicate type choices in the development process, bridging the gap between designers and developers.</p>
-
-  <h2 id="section:mixins"><a herf="#section:mixins" class="c-text--resetLink">Mixins</a></h2>
-  <p>For each font-size there is a mixin to make it easy for you to set font-sizes.</p>
-  <div class="c-code c-code--scss">
-    <pre><code class="css">.Element {
-  @include trafalgar;
-}</code></pre>
-
-  </div>
-
-
-        </article>
-
-        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+        <section class="o-flex-grid__cell o-size--full o-size@md--3 c-sidebar">
           
             
 
@@ -408,14 +274,14 @@
       
 
         <li class="c-menu__item">
-          <strong class="c-menu-title">Elements</strong>
+          <strong class="c-menu-title">Components</strong>
           
             <ul class="c-menu c-menu--vertical c-menu--flush">
               
                 
                   
   <li class="c-menu__item">
-    <a href="list.html" class="c-menu__link">List</a>
+    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
   </li>
 
                 
@@ -423,86 +289,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="table.html" class="c-menu__link">Table</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="form.html" class="c-menu__link">Form</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="definition.html" class="c-menu__link">Definition</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="text.html" class="c-menu__link">Text</a>
-  </li>
-
-                
-              
-            </ul>
-          
-        </li>
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Common</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="icon.html" class="c-menu__link">Icon</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="button.html" class="c-menu__link">Button</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="panel.html" class="c-menu__link">Panel</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="close.html" class="c-menu__link">Close</a>
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
   </li>
 
                 
@@ -518,7 +305,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="overlay.html" class="c-menu__link">Overlay</a>
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
   </li>
 
                 
@@ -526,34 +313,23 @@
                 
                   
   <li class="c-menu__item">
-    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+    <a href="button.html" class="c-menu__link">Button</a>
   </li>
 
                 
               
-            </ul>
-          
-        </li>
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
 
-      
-
-    
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Navigation</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
+                
               
                 
                   
   <li class="c-menu__item">
-    <a href="menu.html" class="c-menu__link">Menu</a>
+    <a href="definition.html" class="c-menu__link">Definition</a>
   </li>
 
                 
@@ -569,7 +345,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
+    <a href="form.html" class="c-menu__link">Form</a>
   </li>
 
                 
@@ -577,7 +353,39 @@
                 
                   
   <li class="c-menu__item">
-    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
   </li>
 
                 
@@ -593,7 +401,31 @@
                 
                   
   <li class="c-menu__item">
-    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
   </li>
 
                 
@@ -601,6 +433,10 @@
             </ul>
           
         </li>
+
+      
+
+    
 
       
 
@@ -620,7 +456,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="helpers.html" class="c-menu__link">Helpers</a>
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
   </li>
 
                 
@@ -636,7 +472,15 @@
                 
                   
   <li class="c-menu__item">
-    <a href="toggle.html" class="c-menu__link">Toggle</a>
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Load Image</a>
   </li>
 
                 
@@ -660,15 +504,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="anchor.html" class="c-menu__link">Anchor</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a class="c-menu__link c-text--disabled">Load Image</a>
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
   </li>
 
                 
@@ -699,6 +535,140 @@
           
         </section>
 
+        <article class="o-flex-grid__cell o-size@md--9 c-content">
+          
+
+  <h1 class="Article-title">Font sizes</h1>
+  <p class="c-text--lead">Overview of the default font size settings and how to use them.</p>
+
+  <hr class="Article-divider">
+
+  <h2 id="section:overview"><a herf="#section:overview" class="c-text--resetLink">Overview</a></h2>
+
+  <p>Our approach to font sizes is inspired by <a href="http://www.bbc.co.uk/gel/guidelines/typography">BBC's gel typography guidelines</a>.</p>
+  <p>We use a single type hierarchy that is scaled to work across all devices. We change type sizes based on screen size and device capabilities, such as whether it has a touch screen.</p>
+
+  <p>Settings for the default font-sizes can be found in <code>stylesheets/settings/_settings.font-sizes.scss</code>.</p>
+
+  <div class="c-example">
+    <img src="/images/font-sizes.png" alt="Example of our font size hierarchy">
+  </div>
+
+  <h2 id="section:size-matrix"><a herf="#section:size-matrix" class="c-text--resetLink">Size matrix</a></h2>
+  <p>We size our type across the following four breakpoint groups to suit a range of devices and input methods:</p>
+  <ul>
+    <li><strong>Group A</strong> - Default sizing 0 - 319px (typically small phones)</li>
+    <li><strong>Group B</strong> - 320px - 767px (smart phones & small tablets)</li>
+    <li><strong>Group C</strong> - 768px and above (typically large tablets and touch enabled laptops)</li>
+    <li><strong>Group D</strong> - 768px and above when touch is not available (desktops and laptops)</li>
+  </ul>
+
+  <p>To make the type styles reuseable across different page-types and contexts, we've set up a naming convention that comes from traditional type measuring techniques.</p>
+  <p>The sizes shown below correspond to size and line-height (size/line-height) and are in pixels, based on a baseline of 72 pixels per inch (ppi). We recommend you set font sizes using relative units to allow for the changing nature of the user’s browser. This creates uniformity across different screen sizes and capabilities.</p>
+
+  <div class="scrollXauto">
+    <table width="100%" class="c-table c-table--striped c-text--left">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Example Usage</th>
+        <th>Group A</th>
+        <th>Group B</th>
+        <th>Group C</th>
+        <th>Group D</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>Canon</th>
+        <td>Hero or blog post title</td>
+        <td>28/32</td>
+        <td>32/36</td>
+        <td>52/56</td>
+        <td>44/48</td>
+      </tr>
+      <tr>
+        <th>Trafalgar</th>
+        <td>Article title or section header</td>
+        <td>20/24</td>
+        <td>24/28</td>
+        <td>36/40</td>
+        <td>32/36</td>
+      </tr>
+      <tr>
+        <th>Double Pica</th>
+        <td>Sub header</td>
+        <td>20/24</td>
+        <td>20/24</td>
+        <td>26/30</td>
+        <td>24/28</td>
+      </tr>
+      <tr>
+        <th>Great Primer</th>
+        <td>Headline title of sub title</td>
+        <td>18/22</td>
+        <td>18/22</td>
+        <td>21/24</td>
+        <td>20/24</td>
+      </tr>
+      <tr>
+        <th>Pica</th>
+        <td>Index links, titles &amp; headlines</td>
+        <td>15/20</td>
+        <td>16/20</td>
+        <td>18/22</td>
+        <td>16/20</td>
+      </tr>
+      <tr>
+        <th>Long Primer</th>
+        <td>Index body copy & image captions</td>
+        <td>15/18</td>
+        <td>15/18</td>
+        <td>15/20</td>
+        <td>14/18</td>
+      </tr>
+      <tr>
+        <th>Brevier</th>
+        <td>Time stamps and bylines</td>
+        <td>14/16</td>
+        <td>14/18</td>
+        <td>14/18</td>
+        <td>13/16</td>
+      </tr>
+      <tr>
+        <th>Minion</th>
+        <td>Small header capitals</td>
+        <td>12/16</td>
+        <td>12/16</td>
+        <td>13/16</td>
+        <td>12/16</td>
+      </tr>
+      <tr>
+        <th>Body copy</th>
+        <td>Standard font size</td>
+        <td>15/20</td>
+        <td>16/22</td>
+        <td>16/24</td>
+        <td>16/22</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>This approach helps us easily communicate type choices in the development process, bridging the gap between designers and developers.</p>
+
+  <h2 id="section:mixins"><a herf="#section:mixins" class="c-text--resetLink">Mixins</a></h2>
+  <p>For each font-size there is a mixin to make it easy for you to set font-sizes.</p>
+  <div class="c-code c-code--scss">
+    <pre><code class="css">.Element {
+  @include trafalgar;
+}</code></pre>
+
+  </div>
+
+
+        </article>
+
       </div>
 
     </div>
@@ -707,7 +677,7 @@
   </main>
 
   <footer class="o-site__footer t-footer">
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
       <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
     </div>
   </footer>

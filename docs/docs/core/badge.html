@@ -42,7 +42,7 @@
 
 
 
-<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+<nav class="o-container o-container--centered o-container--fluid c-nav-responsive c-nav-responsive@md">
 
   
 
@@ -127,68 +127,11 @@
 
   <main id="content" class="o-site__content">
   
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
 
-      <div class="o-flex-grid o-flex-grid@md--reverse o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
+      <div class="o-flex-grid o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
-        <article class="o-flex-grid__cell o-size@md--9">
-          
-
-<h1 class="Article-title">Badge</h1>
-<p class="c-text--lead">Easily create badges to label and highlight your content.</p>
-
-<hr class="Article-divider">
-
-<h2>Usage</h2>
-
-<p>To create a badge, just add the <code>.c-badge</code> class to an element.</p>
-
-<div class="c-example">
-  <strong class="c-badge">c-badge</strong>
-</div>
-
-<div class="c-code c-code--html">
-<pre><code class="html">&lt;strong class="c-badge"&gt;...&lt;/strong&gt;</code></pre>
-</div>
-
-<h2>Modifiers</h2>
-
-<h4>Notification</h4>
-
-<p>Add the <code>.c-badge-notification</code> class to indicate a notification, typically it is used with numbers.</p>
-
-<div class="c-example">
-  <span class="c-badge c-badge--notification">1</span>
-  <div class="c-badge c-badge--notification">2</div>
-  <div class="c-badge c-badge--notification">3</div>
-  <div class="c-badge c-badge--notification">10</div>
-  <div class="c-badge c-badge--notification">100</div>
-</div>
-
-<div class="c-code c-code--html">
-  <pre><code class="html">&lt;span class="c-badge c-badge--notification"&gt;...&lt;/span&gt;</code></pre>
-</div>
-
-<h4>Color modifier</h4>
-
-<p>Add the <code>.c-badge-success</code>, <code>.c-badge-warning</code> or <code>.c-badge-danger</code> class for additional colors.</p>
-
-<div class="c-example">
-  <div class="c-badge c-badge--success">sucess</div>
-  <div class="c-badge c-badge--warning">Warning</div>
-  <div class="c-badge c-badge--danger">Danger</div>
-</div>
-
-<div class="c-code c-code--html">
-  <pre><code class="html">&lt;div class="c-badge c-badge--success"&gt;...&lt;/div&gt;
-&lt;div class="c-badge c-badge--warning"&gt;...&lt;/div&gt;
-&lt;div class="c-badge c-badge--danger"&gt;...&lt;/div&gt;</code></pre>
-</div>
-
-
-        </article>
-
-        <section class="o-flex-grid__cell o-size--full o-size@md--3">
+        <section class="o-flex-grid__cell o-size--full o-size@md--3 c-sidebar">
           
             
 
@@ -331,14 +274,14 @@
       
 
         <li class="c-menu__item">
-          <strong class="c-menu-title">Elements</strong>
+          <strong class="c-menu-title">Components</strong>
           
             <ul class="c-menu c-menu--vertical c-menu--flush">
               
                 
                   
   <li class="c-menu__item">
-    <a href="list.html" class="c-menu__link">List</a>
+    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
   </li>
 
                 
@@ -346,86 +289,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="table.html" class="c-menu__link">Table</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="form.html" class="c-menu__link">Form</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="definition.html" class="c-menu__link">Definition</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="text.html" class="c-menu__link">Text</a>
-  </li>
-
-                
-              
-            </ul>
-          
-        </li>
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Common</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="icon.html" class="c-menu__link">Icon</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="button.html" class="c-menu__link">Button</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="panel.html" class="c-menu__link">Panel</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a href="close.html" class="c-menu__link">Close</a>
+    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
   </li>
 
                 
@@ -441,7 +305,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="overlay.html" class="c-menu__link">Overlay</a>
+    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
   </li>
 
                 
@@ -449,34 +313,23 @@
                 
                   
   <li class="c-menu__item">
-    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+    <a href="button.html" class="c-menu__link">Button</a>
   </li>
 
                 
               
-            </ul>
-          
-        </li>
+                
+                  
+  <li class="c-menu__item">
+    <a href="close.html" class="c-menu__link">Close</a>
+  </li>
 
-      
-
-    
-
-      
-
-    
-
-      
-
-        <li class="c-menu__item">
-          <strong class="c-menu-title">Navigation</strong>
-          
-            <ul class="c-menu c-menu--vertical c-menu--flush">
+                
               
                 
                   
   <li class="c-menu__item">
-    <a href="menu.html" class="c-menu__link">Menu</a>
+    <a href="definition.html" class="c-menu__link">Definition</a>
   </li>
 
                 
@@ -492,7 +345,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="accordion-menu.html" class="c-menu__link">Accordion Menu</a>
+    <a href="form.html" class="c-menu__link">Form</a>
   </li>
 
                 
@@ -500,7 +353,39 @@
                 
                   
   <li class="c-menu__item">
-    <a href="breadcrumbs.html" class="c-menu__link">Breadcrumbs</a>
+    <a href="hamburger.html" class="c-menu__link">Hamburger</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="icon.html" class="c-menu__link">Icon</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="list.html" class="c-menu__link">List</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="overlay.html" class="c-menu__link">Overlay</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="panel.html" class="c-menu__link">Panel</a>
   </li>
 
                 
@@ -516,7 +401,31 @@
                 
                   
   <li class="c-menu__item">
-    <a href="back-to-top.html" class="c-menu__link">Back to top</a>
+    <a href="table.html" class="c-menu__link">Table</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="text.html" class="c-menu__link">Text</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="tooltip.html" class="c-menu__link">Tooltip</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a href="menu.html" class="c-menu__link">Menu</a>
   </li>
 
                 
@@ -524,6 +433,10 @@
             </ul>
           
         </li>
+
+      
+
+    
 
       
 
@@ -543,7 +456,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="helpers.html" class="c-menu__link">Helpers</a>
+    <a href="anchor.html" class="c-menu__link">Anchor</a>
   </li>
 
                 
@@ -559,7 +472,15 @@
                 
                   
   <li class="c-menu__item">
-    <a href="toggle.html" class="c-menu__link">Toggle</a>
+    <a href="helpers.html" class="c-menu__link">Helpers</a>
+  </li>
+
+                
+              
+                
+                  
+  <li class="c-menu__item">
+    <a class="c-menu__link c-text--disabled">Load Image</a>
   </li>
 
                 
@@ -583,15 +504,7 @@
                 
                   
   <li class="c-menu__item">
-    <a href="anchor.html" class="c-menu__link">Anchor</a>
-  </li>
-
-                
-              
-                
-                  
-  <li class="c-menu__item">
-    <a class="c-menu__link c-text--disabled">Load Image</a>
+    <a href="toggle.html" class="c-menu__link">Toggle</a>
   </li>
 
                 
@@ -622,6 +535,63 @@
           
         </section>
 
+        <article class="o-flex-grid__cell o-size@md--9 c-content">
+          
+
+<h1 class="Article-title">Badge</h1>
+<p class="c-text--lead">Easily create badges to label and highlight your content.</p>
+
+<hr class="Article-divider">
+
+<h2>Usage</h2>
+
+<p>To create a badge, just add the <code>.c-badge</code> class to an element.</p>
+
+<div class="c-example">
+  <strong class="c-badge">c-badge</strong>
+</div>
+
+<div class="c-code c-code--html">
+<pre><code class="html">&lt;strong class="c-badge"&gt;...&lt;/strong&gt;</code></pre>
+</div>
+
+<h2>Modifiers</h2>
+
+<h4>Notification</h4>
+
+<p>Add the <code>.c-badge-notification</code> class to indicate a notification, typically it is used with numbers.</p>
+
+<div class="c-example">
+  <span class="c-badge c-badge--notification">1</span>
+  <div class="c-badge c-badge--notification">2</div>
+  <div class="c-badge c-badge--notification">3</div>
+  <div class="c-badge c-badge--notification">10</div>
+  <div class="c-badge c-badge--notification">100</div>
+</div>
+
+<div class="c-code c-code--html">
+  <pre><code class="html">&lt;span class="c-badge c-badge--notification"&gt;...&lt;/span&gt;</code></pre>
+</div>
+
+<h4>Color modifier</h4>
+
+<p>Add the <code>.c-badge-success</code>, <code>.c-badge-warning</code> or <code>.c-badge-danger</code> class for additional colors.</p>
+
+<div class="c-example">
+  <div class="c-badge c-badge--success">sucess</div>
+  <div class="c-badge c-badge--warning">Warning</div>
+  <div class="c-badge c-badge--danger">Danger</div>
+</div>
+
+<div class="c-code c-code--html">
+  <pre><code class="html">&lt;div class="c-badge c-badge--success"&gt;...&lt;/div&gt;
+&lt;div class="c-badge c-badge--warning"&gt;...&lt;/div&gt;
+&lt;div class="c-badge c-badge--danger"&gt;...&lt;/div&gt;</code></pre>
+</div>
+
+
+        </article>
+
       </div>
 
     </div>
@@ -630,7 +600,7 @@
   </main>
 
   <footer class="o-site__footer t-footer">
-    <div class="o-container o-container--centered">
+    <div class="o-container o-container--centered o-container--fluid">
       <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v3.0.0</small></p>
     </div>
   </footer>
