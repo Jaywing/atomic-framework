@@ -13,7 +13,30 @@
 
 {% block main %}
 
-  {{ Hero(hero.content, hero.classes) }}
+  <div class="o-container o-container--centered o-container--fluid">
+
+    {{ Hero(hero.content, hero.classes) }}
+
+    <div class="o-container o-container--centered o-container--thin">
+
+      <h2>Requirements</h2>
+
+      <p>Requires at least version 6 of Node. We reccomend using <a href="https://github.com/creationix/nvm" target="blank">nvm</a> to install and manage your Node versions.</p>
+
+      <h2>Installation</h2>
+
+      <p>Clone from github, install node modules and run atomic.</p>
+
+      <div class="c-code c-code--cmd">
+          <pre><code>
+          yarn install
+          yarn start
+          </code></pre>
+      </div>
+
+    </div>
+
+  </div>
 
 {% endblock %}
 

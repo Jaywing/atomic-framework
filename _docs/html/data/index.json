@@ -5,7 +5,7 @@
       "title": "Jaywing's front-end component repository and development environment",
       "_description": "",
       "cta": {
-        "url": "docs/",
+        "url": "docs/core",
         "title": "Check out the docs",
         "classes": "c-button c-button--primary c-button--xl"
       }

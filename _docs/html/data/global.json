@@ -32,11 +32,6 @@
   ],
   "docs_sections": [
     {
-      "id": "getting-started",
-      "title": "Getting Started",
-      "ready": true
-    },
-    {
       "id": "core",
       "title": "Core",
       "ready": true

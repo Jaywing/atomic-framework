@@ -27,16 +27,14 @@
   <a href="#content" class="c-skip-link">Skip to content</a>
 
   <header class="o-site__header t-global-header">
-
     <a href="#content" class="c-skip-link c-button ">{{ Icon('arrow-down') }} Skip to content</a>
-
     {% include 'shared/section-nav.njk' %}
   </header>
 
   <main id="content" class="o-site__content">
   {% block main %}
-    <div class="o-container o-container--centered o-container--fluid">
 
+    <div class="o-container o-container--centered o-container--fluid">
       <div class="o-flex-grid o-flex-grid@md--gutters o-flex-grid@xl--gutters@xl" data-module="Sticky" data-sticky-container>
 
         <section class="o-flex-grid__cell o-size--full o-size@md--3 c-sidebar">
@@ -47,12 +45,10 @@
 
         <article class="o-flex-grid__cell o-size@md--9 o-size@xl--8 c-content">
           {% block content %}
-
           {% endblock %}
         </article>
 
       </div>
-
     </div>
 
   {% endblock %}
@@ -63,9 +59,6 @@
       <p>&copy; Made with ♥ at <a href="http://jaywing.com">Jaywing</a>. <small>v{{version}}</small></p>
     </div>
   </footer>
-
-  {# <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> #}
 
   <script src="{{baseurl}}/js/app.js" async></script>
 
