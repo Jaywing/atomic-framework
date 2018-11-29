@@ -150,72 +150,18 @@
       ]
     },
     {
-      "category": "Elements",
+      "category": "Components",
       "section": "core",
       "items": [
         {
-          "id": "list",
-          "title": "List",
+          "id": "accordion-menu",
+          "title": "Accordion Menu",
           "section": "core",
           "ready": true
         },
         {
-          "id": "table",
-          "title": "Table",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "form",
-          "title": "Form",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "definition",
-          "title": "Definition",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "text",
-          "title": "Text",
-          "section": "core",
-          "ready": true
-        }
-      ]
-    },
-    {
-      "category": "Common",
-      "section": "core",
-      "items": [
-        {
-          "id": "icon",
-          "title": "Icon",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "button",
-          "title": "Button",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "hamburger",
-          "title": "Hamburger",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "panel",
-          "title": "Panel",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "close",
-          "title": "Close",
+          "id": "back-to-top",
+          "title": "Back to top",
           "section": "core",
           "ready": true
         },
@@ -226,14 +172,98 @@
           "ready": true
         },
         {
+          "id": "breadcrumbs",
+          "title": "Breadcrumbs",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "button",
+          "title": "Button",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "close",
+          "title": "Close",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "definition",
+          "title": "Definition",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "dropdown-menu",
+          "title": "Dropdown Menu",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "form",
+          "title": "Form",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "hamburger",
+          "title": "Hamburger",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "icon",
+          "title": "Icon",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "list",
+          "title": "List",
+          "section": "core",
+          "ready": true
+        },
+        {
           "id": "overlay",
           "title": "Overlay",
           "section": "core",
           "ready": true
         },
         {
+          "id": "panel",
+          "title": "Panel",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "skip-link",
+          "title": "Skip link",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "table",
+          "title": "Table",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "text",
+          "title": "Text",
+          "section": "core",
+          "ready": true
+        },
+        {
           "id": "tooltip",
           "title": "Tooltip",
+          "section": "core",
+          "ready": true
+        },
+        {
+          "id": "menu",
+          "title": "Menu",
           "section": "core",
           "ready": true
         }
@@ -259,48 +289,6 @@
     },
     {
       "category": "Navigation",
-      "section": "core",
-      "items": [
-        {
-          "id": "menu",
-          "title": "Menu",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "dropdown-menu",
-          "title": "Dropdown Menu",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "accordion-menu",
-          "title": "Accordion Menu",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "breadcrumbs",
-          "title": "Breadcrumbs",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "skip-link",
-          "title": "Skip link",
-          "section": "core",
-          "ready": true
-        },
-        {
-          "id": "back-to-top",
-          "title": "Back to top",
-          "section": "core",
-          "ready": true
-        }
-      ]
-    },
-    {
-      "category": "Navigation",
       "section": "extended",
       "items": [
         {
@@ -316,8 +304,8 @@
       "section": "core",
       "items": [
         {
-          "id": "helpers",
-          "title": "Helpers",
+          "id": "anchor",
+          "title": "Anchor",
           "section": "core",
           "ready": true
         },
@@ -328,10 +316,16 @@
           "ready": true
         },
         {
-          "id": "toggle",
-          "title": "Toggle",
+          "id": "helpers",
+          "title": "Helpers",
           "section": "core",
           "ready": true
+        },
+        {
+          "id": "load-img",
+          "title": "Load Image",
+          "section": "core",
+          "ready": false
         },
         {
           "id": "slider",
@@ -346,16 +340,10 @@
           "ready": true
         },
         {
-          "id": "anchor",
-          "title": "Anchor",
+          "id": "toggle",
+          "title": "Toggle",
           "section": "core",
           "ready": true
-        },
-        {
-          "id": "load-img",
-          "title": "Load Image",
-          "section": "core",
-          "ready": false
         },
         {
           "id": "validate",
