@@ -1,7 +1,16 @@
-.t-side-nav {
-    padding-right: $g-spacer;
+.c-sidenav {
+    padding-right: $g-spacer-sm;
+    padding-left: $g-spacer-sm;
+    border-bottom: 1px solid $c-alto;
+    margin-right: -15px;
+    margin-bottom: $g-spacer;
+    margin-left: -15px;
 
-    .c-menu-title {
+    .c-toggle-button {
+        right: $g-spacer;
+    }
+
+    .c-menu__title {
         display: block;
         padding: $g-spacer-sm $g-spacer-sm $g-spacer-xs;
     }
@@ -9,7 +18,6 @@
     .c-menu__item {
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: -($g-spacer-sm);
 
         &.is-active {
             .c-menu__link {
@@ -39,9 +47,15 @@
             );
         }
     }
+}
 
-    .c-menu--vertical {
-        position: relative;
-        left: $g-spacer-sm;
+@include md {
+    .c-sidenav {
+        border-bottom: none;
+        margin: 0;
+    }
+
+    .c-sidenav__title {
+        display: none;
     }
 }

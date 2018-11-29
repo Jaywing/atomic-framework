@@ -4087,7 +4087,7 @@ video {
     max-height: 2.2rem;
     margin: 0; }
   .c-nav-responsive.is-active .c-menu {
-    max-height: 32.4rem; }
+    max-height: 100%; }
 
 @media (min-width: 30em) {
   .c-nav-responsive\@xs,

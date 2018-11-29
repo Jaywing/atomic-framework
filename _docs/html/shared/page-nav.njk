@@ -4,16 +4,20 @@
   </li>
 {% endmacro %}
 
-<nav id="t-page-nav" class="t-side-nav c-Sticky__item" data-margin-top="20">
+{% from 'macros/toggle-button.njk' import ToggleButton %}
+
+<nav id="t-page-nav" class="c-sidenav c-Sticky__item@md c-nav-responsive c-nav-responsive@md" data-margin-top="20">
+
+  {{ ToggleButton("parent", "c-toggle-button--hideText") }}
 
   <ul class="c-menu c-menu--flush c-menu--vertical">
-
+    <li class="c-menu__item c-sidenav__title">
+        <strong class="c-menu__link c-menu__title">What's inside</strong>
+    </li>
     {% for cat in docs_pages %}
-
       {% if cat.section == sectionid %}
-
         <li class="c-menu__item">
-          {% if cat.category != "" %}<strong class="c-menu-title">{{ cat.category }}</strong>{% endif %}
+          {% if cat.category != "" %}<strong class="c-menu__title">{{ cat.category }}</strong>{% endif %}
           {% if cat.items %}
             <ul class="c-menu c-menu--vertical c-menu--flush">
               {% for comp in cat.items %}
@@ -24,10 +28,7 @@
             </ul>
           {% endif %}
         </li>
-
       {% endif %}
-
     {% endfor %}
-
   </ul>
 </nav>
